@@ -3,7 +3,8 @@ import { createServer, type Server } from "http";
 import * as fs from "fs";
 import * as path from "path";
 import { bleachText } from "./bleach";
-import { bleachRequestSchema, sentenceBankRequestSchema } from "@shared/schema";
+import { bleachRequestSchema, sentenceBankRequestSchema, matchRequestSchema } from "@shared/schema";
+import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
 import { z } from "zod";
 
 const SENTENCE_BANK_PATH = path.join(process.cwd(), "sentence_bank.jsonl");
@@ -219,6 +220,116 @@ export async function registerRoutes(app: Express): Promise<Server> {
     } catch (error) {
       console.error("Error reading sentence bank:", error);
       res.status(500).json({ error: "Failed to read sentence bank" });
+    }
+  });
+
+  // Match AI text to human patterns (Step 2)
+  app.post("/api/match", async (req, res) => {
+    try {
+      const validatedData = matchRequestSchema.parse(req.body);
+      
+      // Check sentence bank exists
+      const bank = loadSentenceBank();
+      if (bank.length === 0) {
+        return res.status(400).json({
+          error: "Empty sentence bank",
+          message: "Please add human text patterns to the sentence bank first.",
+        });
+      }
+      
+      // Split text into sentences
+      const sentences = splitIntoSentences(validatedData.text);
+      
+      if (sentences.length === 0) {
+        return res.status(400).json({
+          error: "No sentences found",
+          message: "Could not find any sentences in the provided text.",
+        });
+      }
+      
+      console.log(`Matching ${sentences.length} AI sentences against ${bank.length} patterns...`);
+      
+      // Process sentences in parallel batches
+      const BATCH_SIZE = 5;
+      const matches: Array<{
+        original: string;
+        pattern: string | null;
+        matchedEntry: any | null;
+        inputMetadata: {
+          char_length: number;
+          token_length: number;
+          clause_count: number;
+          punctuation_pattern: string;
+          bleached: string;
+        };
+      }> = [];
+      
+      for (let i = 0; i < sentences.length; i += BATCH_SIZE) {
+        const batch = sentences.slice(i, i + BATCH_SIZE);
+        console.log(`Matching batch ${Math.floor(i/BATCH_SIZE) + 1}/${Math.ceil(sentences.length/BATCH_SIZE)}`);
+        
+        const batchResults = await Promise.all(
+          batch.map(async (sentence) => {
+            try {
+              const metadata = await computeMetadata(sentence, validatedData.level);
+              const match = await findBestMatch(sentence, validatedData.level);
+              
+              return {
+                original: sentence,
+                pattern: match?.bleached || null,
+                matchedEntry: match,
+                inputMetadata: {
+                  char_length: metadata.char_length,
+                  token_length: metadata.token_length,
+                  clause_count: metadata.clause_count,
+                  punctuation_pattern: metadata.punctuation_pattern,
+                  bleached: metadata.bleached,
+                },
+              };
+            } catch (error) {
+              console.error(`Error matching sentence: ${sentence.substring(0, 50)}...`, error);
+              return {
+                original: sentence,
+                pattern: null,
+                matchedEntry: null,
+                inputMetadata: {
+                  char_length: sentence.length,
+                  token_length: countTokens(sentence),
+                  clause_count: countClauses(sentence),
+                  punctuation_pattern: extractPunctuationPattern(sentence),
+                  bleached: "",
+                },
+              };
+            }
+          })
+        );
+        
+        matches.push(...batchResults);
+      }
+      
+      const matchedCount = matches.filter(m => m.pattern !== null).length;
+      console.log(`Matched ${matchedCount}/${sentences.length} sentences`);
+      
+      res.json({
+        matches,
+        totalSentences: sentences.length,
+        matchedCount,
+        bankSize: bank.length,
+      });
+    } catch (error) {
+      console.error("Match API error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Matching failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
     }
   });
 

@@ -20,7 +20,7 @@ import {
   CircleStackIcon,
   EyeIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult } from "@shared/schema";
 
 interface BankEntry {
   original: string;
@@ -47,6 +47,8 @@ export default function Home() {
   const [bankDialogOpen, setBankDialogOpen] = useState(false);
   const [aiTextInput, setAiTextInput] = useState("");
   const [aiUploadedFile, setAiUploadedFile] = useState<{ name: string } | null>(null);
+  const [matchResults, setMatchResults] = useState<MatchResult[] | null>(null);
+  const [matchStats, setMatchStats] = useState<{ total: number; matched: number } | null>(null);
   const { toast } = useToast();
 
   // Fetch sentence bank status
@@ -111,6 +113,30 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "An error occurred while building the sentence bank.";
       toast({
         title: "JSONL generation failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Match mutation (Step 2 - find human patterns for AI text)
+  const matchMutation = useMutation({
+    mutationFn: async (data: { text: string; level: BleachingLevel }) => {
+      const response = await apiRequest("POST", "/api/match", data);
+      return await response.json() as MatchResponse;
+    },
+    onSuccess: (data) => {
+      setMatchResults(data.matches);
+      setMatchStats({ total: data.totalSentences, matched: data.matchedCount });
+      toast({
+        title: "Matching complete",
+        description: `Found patterns for ${data.matchedCount} of ${data.totalSentences} sentences.`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "An error occurred while matching.";
+      toast({
+        title: "Matching failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -182,6 +208,16 @@ export default function Home() {
   const handleClearAiText = () => {
     setAiTextInput("");
     setAiUploadedFile(null);
+    setMatchResults(null);
+    setMatchStats(null);
+  };
+
+  const handleMatch = () => {
+    if (!aiTextInput.trim()) return;
+    matchMutation.mutate({
+      text: aiTextInput,
+      level: bleachingLevel,
+    });
   };
 
   // Action handlers
@@ -674,8 +710,8 @@ export default function Home() {
                 <SparklesIcon className="w-4 h-4 text-primary" />
               </div>
               <div>
-                <h2 className="text-lg font-semibold">Humanizer</h2>
-                <p className="text-sm text-muted-foreground">Paste AI-written text to humanize (coming soon)</p>
+                <h2 className="text-lg font-semibold">Pattern Matcher</h2>
+                <p className="text-sm text-muted-foreground">Find human sentence patterns for AI text (Step 2)</p>
               </div>
             </div>
             {aiTextInput && (
@@ -725,23 +761,71 @@ export default function Home() {
               )}
             </div>
 
-            {/* Humanizer Output (placeholder) */}
+            {/* Match Results */}
             <div className="flex-1 flex flex-col gap-3">
-              <div className="flex-1 min-h-[200px] bg-muted/50 rounded-lg p-4 flex items-center justify-center">
-                <div className="text-center text-muted-foreground">
-                  <SparklesIcon className="w-12 h-12 mx-auto mb-3 opacity-20" />
-                  <p className="font-medium">Humanized output will appear here</p>
-                  <p className="text-sm mt-1">This feature is under development</p>
-                  <p className="text-xs mt-3 max-w-xs mx-auto">
-                    The humanizer will match your AI sentences to human patterns from the bank and rewrite them.
-                  </p>
+              {matchResults && matchResults.length > 0 ? (
+                <div className="flex-1 min-h-[200px] bg-muted/50 rounded-lg p-4 overflow-auto">
+                  <div className="flex items-center justify-between mb-3">
+                    <p className="text-sm font-medium">
+                      Matched <span className="text-primary">{matchStats?.matched}</span> of {matchStats?.total} sentences
+                    </p>
+                  </div>
+                  <div className="space-y-4">
+                    {matchResults.map((result, index) => (
+                      <div key={index} className="border-b border-border pb-3 last:border-0" data-testid={`match-result-${index}`}>
+                        <div className="mb-2">
+                          <p className="text-xs text-muted-foreground mb-1">AI Sentence #{index + 1}</p>
+                          <p className="text-sm">{result.original}</p>
+                        </div>
+                        {result.pattern ? (
+                          <div className="bg-primary/5 rounded p-2 mt-2">
+                            <p className="text-xs text-primary mb-1">Matched Human Pattern</p>
+                            <p className="text-sm font-mono">{result.pattern}</p>
+                          </div>
+                        ) : (
+                          <div className="bg-destructive/10 rounded p-2 mt-2">
+                            <p className="text-xs text-destructive">No matching pattern found</p>
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              ) : (
+                <div className="flex-1 min-h-[200px] bg-muted/50 rounded-lg p-4 flex items-center justify-center">
+                  {matchMutation.isPending ? (
+                    <div className="text-center text-muted-foreground">
+                      <SparklesIcon className="w-12 h-12 mx-auto mb-3 animate-pulse" />
+                      <p className="font-medium">Finding matches...</p>
+                      <p className="text-sm mt-1">Analyzing AI sentences against human patterns</p>
+                    </div>
+                  ) : (
+                    <div className="text-center text-muted-foreground">
+                      <SparklesIcon className="w-12 h-12 mx-auto mb-3 opacity-20" />
+                      <p className="font-medium">Match results will appear here</p>
+                      <p className="text-sm mt-1">Enter AI text and click "Find Matches"</p>
+                      <p className="text-xs mt-3 max-w-xs mx-auto">
+                        Step 2 finds human sentence patterns that match your AI text structure.
+                      </p>
+                    </div>
+                  )}
+                </div>
+              )}
 
-              <Button disabled className="w-full" data-testid="button-humanize">
+              <Button 
+                onClick={handleMatch}
+                disabled={!aiTextInput.trim() || matchMutation.isPending || totalBankSize === 0}
+                className="w-full" 
+                data-testid="button-find-matches"
+              >
                 <SparklesIcon className="w-4 h-4 mr-2" />
-                Humanize Text (Coming Soon)
+                {matchMutation.isPending ? "Finding Matches..." : "Find Matches (Step 2)"}
               </Button>
+              {totalBankSize === 0 && (
+                <p className="text-xs text-center text-muted-foreground">
+                  Add human text to the sentence bank first using the bleacher above
+                </p>
+              )}
             </div>
           </div>
         </div>

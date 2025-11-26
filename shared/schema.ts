@@ -54,21 +54,34 @@ export type SentenceBankEntry = z.infer<typeof sentenceBankEntrySchema>;
 
 // Match request schema (for Step 2 matching engine)
 export const matchRequestSchema = z.object({
-  sentence: z.string().min(1, "Sentence is required"),
+  text: z.string().min(1, "Text is required"),
   level: z.enum(bleachingLevels).optional().default("Heavy"),
 });
 
 export type MatchRequest = z.infer<typeof matchRequestSchema>;
 
-// Match response schema
-export const matchResponseSchema = z.object({
-  match: sentenceBankEntrySchema.nullable(),
+// Individual match result
+export const matchResultSchema = z.object({
+  original: z.string(),
+  pattern: z.string().nullable(),
+  matchedEntry: sentenceBankEntrySchema.nullable(),
   inputMetadata: z.object({
     char_length: z.number(),
     token_length: z.number(),
     clause_count: z.number(),
     punctuation_pattern: z.string(),
+    bleached: z.string(),
   }),
+});
+
+export type MatchResult = z.infer<typeof matchResultSchema>;
+
+// Match response schema
+export const matchResponseSchema = z.object({
+  matches: z.array(matchResultSchema),
+  totalSentences: z.number(),
+  matchedCount: z.number(),
+  bankSize: z.number(),
 });
 
 export type MatchResponse = z.infer<typeof matchResponseSchema>;
