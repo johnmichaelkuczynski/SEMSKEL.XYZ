@@ -4,6 +4,24 @@
 
 The Semantic Bleacher App is a professional text processing utility that "semantically bleaches" text by replacing semantic content words with placeholder variables while preserving exact syntax, punctuation, and grammatical structure. The application provides four levels of bleaching intensity (Light, Moderate, Heavy, Very Heavy) and uses AI to perform intelligent word substitution while maintaining the original text's structural integrity.
 
+## Current Status (November 26, 2025)
+
+**MVP COMPLETE AND WORKING**
+
+All core features implemented and tested:
+- Split-panel UI with professional design (VS Code-inspired aesthetic)
+- Text input via typing, pasting, or drag-and-drop .txt file upload
+- Four bleaching levels: Light, Moderate, Heavy (default), Very Heavy
+- Anthropic Claude integration via Replit AI Integrations (no API key needed, billed to credits)
+- Output operations: Copy to clipboard, Download as .txt, Clear
+- Proper error handling with toast notifications
+- Loading states during bleaching operations
+
+**Recent Fixes:**
+- Fixed API response parsing (apiRequest returns Response object that must be parsed with .json())
+- Activated Anthropic AI Integration for bleaching functionality
+- All end-to-end tests passing
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
