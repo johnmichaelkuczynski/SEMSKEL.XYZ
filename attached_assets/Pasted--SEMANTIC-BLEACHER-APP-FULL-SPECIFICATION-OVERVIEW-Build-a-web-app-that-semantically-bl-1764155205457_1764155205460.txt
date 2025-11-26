@@ -1,0 +1,286 @@
+# SEMANTIC BLEACHER APP — FULL SPECIFICATION
+
+## OVERVIEW
+
+Build a web app that "semantically bleaches" text. 
+
+**Definition:** "Semantically bleach" means replacing semantic content words with placeholder variables while preserving ALL syntax, punctuation, and grammatical structure exactly.
+
+---
+
+## USER INTERFACE REQUIREMENTS
+
+### Input Section (Left Panel)
+
+1. **Text Input Area**
+   - Large textarea for copy/paste or direct typing
+   - Support for `.txt` file upload (drag-and-drop AND file picker button)
+   - When file is uploaded, its contents populate the textarea
+   - "Clear" button (top-right of input area) to empty the input
+
+2. **Bleaching Level Selector**
+   - Dropdown or radio buttons with four options:
+     - Light
+     - Moderate
+     - Heavy ← **DEFAULT**
+     - Very Heavy
+
+3. **Bleach Button**
+   - Large, prominent button below input area
+   - Label: "Bleach Text"
+
+### Output Section (Right Panel)
+
+1. **Output Display Area**
+   - Read-only textarea showing bleached result
+   - Same size as input area
+
+2. **Output Controls** (top-right of output area, in a row)
+   - "Copy" button — copies output to clipboard
+   - "Download" button — downloads output as `.txt` file (filename: `bleached_output.txt` or `[original_filename]_bleached.txt`)
+   - "Clear" button — clears output area only
+
+### Global Controls
+
+- **"Clear All" button** — clears BOTH input and output areas, resets file upload state
+
+---
+
+## CORE RULES — CRITICAL
+
+**RULE 1: BLEACHING IS PURELY SUBTRACTIVE**
+
+Bleaching ONLY replaces semantic content words with variable placeholders. It NEVER:
+- Adds new words
+- Removes words
+- Changes word order
+- Alters punctuation
+- Modifies sentence structure
+- Rewrites or paraphrases anything
+
+**RULE 2: PRESERVE EVERYTHING EXCEPT CONTENT WORDS**
+
+The following must remain EXACTLY as in the original:
+- All punctuation (commas, periods, semicolons, dashes, quotes, parentheses)
+- All sentence structure
+- All word order
+- All grammatical particles (articles, prepositions, conjunctions)
+- All spacing and line breaks
+
+**RULE 3: VARIABLE ASSIGNMENT MUST BE CONSISTENT**
+
+If "philosopher" → A, then EVERY instance of "philosopher" in the text becomes "A". Same word = same variable throughout the entire document.
+
+**RULE 4: PRESERVE GRAMMATICAL INFLECTIONS**
+
+When replacing a word, preserve its grammatical form:
+- "doubts" (plural noun) → "P's" (not "P")
+- "doubting" (gerund) → "P-ing" (not "P")
+- "doubted" (past tense) → "P-ed" (not "P")
+- "rationalize" → "R" but "rationalization" → "R-ation"
+
+**RULE 5: USE ANTHROPIC API FOR BLEACHING**
+
+The bleaching logic should be powered by Claude via the Anthropic API. The prompt to Claude must be extremely explicit about the mechanical, non-creative nature of the task.
+
+---
+
+## WHAT GETS BLEACHED AT EACH LEVEL
+
+### Light Bleaching
+Replace ONLY:
+- Named entities (people, places, schools of thought): "Hume" → "A", "Cartesian" → "C-ian"
+- Domain-specific category nouns: "philosopher" → "A-type", "obsessive-compulsive" → "B-type"
+
+Preserve: All common nouns, verbs, adjectives, adverbs
+
+### Moderate Bleaching
+Replace everything in Light, PLUS:
+- Key domain nouns: "world" → "X-domain", "mind" → "Y-domain", "thought" → "Y-activity"
+- Key domain verbs: "doubt" → "P", "believe" → "Q"
+- Key domain adjectives: "impotent" → "S", "fearful" → "T"
+- Psychological/technical vocabulary
+
+Preserve: Common descriptive words, basic verbs, everyday nouns
+
+### Heavy Bleaching (DEFAULT)
+Replace everything in Moderate, PLUS:
+- Most content nouns: "person" → "F", "material" → "O"
+- Most content adjectives: "invidious" → "E", "primal" → "Ω8"
+- Most content verbs
+
+Preserve: Only function words (articles, prepositions, conjunctions, pronouns), basic copulas (is, are, being, have, has), logical connectives
+
+### Very Heavy Bleaching
+Replace virtually ALL content words:
+- Every noun, verb, adjective, adverb with semantic weight
+- Use Greek letters (α, β, γ, δ, ε, ζ, η, θ, ι, κ, λ, μ, ν, ξ, π, ρ, σ, τ, υ, φ, χ, ψ, ω) and indexed Omegas (Ω1, Ω2, etc.) when Latin alphabet exhausted
+
+Preserve ONLY: 
+- Articles (a, an, the)
+- Prepositions (of, in, to, by, on, with, for, at, from)
+- Conjunctions (and, but, or, that, which, when, where, if, because, although)
+- Pronouns (they, their, it, one, oneself, themselves, this, that)
+- Basic copulas and auxiliaries (is, are, was, were, being, have, has, had, do, does, did, can, could, would, should, must)
+- Quantifiers (all, some, any, both, neither, more, less, most, few, many, much, every, each)
+- Logical/discourse markers (indeed, of course, in fact, however, therefore, thus, hence)
+- Demonstratives and deictics (here, there, now, then)
+
+---
+
+## PROMPT FOR ANTHROPIC API
+
+When calling Claude to perform bleaching, use a prompt structured like this:
+
+```
+You are a semantic bleaching engine. Your task is to replace content words with variable placeholders while preserving ALL syntax, punctuation, and grammatical structure EXACTLY.
+
+CRITICAL RULES:
+1. This is MECHANICAL SUBSTITUTION only. Do NOT rewrite, rephrase, or restructure anything.
+2. Every comma, period, dash, semicolon, parenthesis, and quotation mark must remain EXACTLY where it is.
+3. Word order must remain EXACTLY the same.
+4. When you replace a word, preserve its grammatical form:
+   - Plural nouns: "cats" → "X's" 
+   - Gerunds: "running" → "X-ing"
+   - Past tense: "jumped" → "X-ed"
+   - Derived forms: "rationalize" → "R" but "rationalization" → "R-ation"
+5. Same word = same variable throughout. If "doubt" = P, then every "doubt" becomes "P".
+6. NEVER add words. NEVER remove words. NEVER change punctuation.
+
+BLEACHING LEVEL: [Heavy/Light/Moderate/Very Heavy]
+
+[Include level-specific instructions here]
+
+INPUT TEXT:
+"""
+[user's text here]
+"""
+
+OUTPUT: Provide ONLY the bleached text. No explanations, no commentary.
+```
+
+---
+
+## EXAMPLES
+
+### Example A: Simple Sentence
+
+**Input:**
+"Sam loved Sally and wanted to marry her; but she was so mercurial that, even when she wasn't cheating on him, her behavior was too unpredictable for her to be a viable wife, let alone a viable mother. For all Sam knew, Sally would probably eat her own children."
+
+**Very Heavy Bleaching Output:**
+"A R-ed B and wanted to G B; but B was so φ that, even when B wasn't X-ing A, B's behavior was too ψ for B to be a γ-style β, let alone a γ-style θ. For all A knew, B would probably δ B's own ω's."
+
+Note: Punctuation (semicolons, commas, periods) is EXACTLY preserved. Sentence structure is EXACTLY preserved.
+
+---
+
+### Example B: Extended Passage — All Four Levels
+
+**Source Text (Non-Bleached):**
+
+Obsessive-compulsives and philosophers have a lot in common. First of all, they are both compulsive doubters. They doubt the obvious. They rationalize their doing so by saying that they are trying to be rigorous and that they are trying not to believe things that are false. But that is, indeed, a mere rationalization. Both the obsessive-compulsive and the philosopher are impotent, being too fearful to engage the world. And to the extent that they have potency, it lies in their ability to manipulate linguistic or otherwise symbolic proxies of reality. So instead of dealing with the world on its own terms—instead of dealing with the world in the world—they try to internalize as much of the world as possible into the sphere of their own thought, where they are dominant. And they are dominant there both because they are more inclined towards thought than towards action and also, more importantly, because it is their own mind where, of course, they ipso facto have total power.
+
+Or at least the illusion thereof—more on this in a moment.
+
+Then there is the fact that both the philosopher and the obsessive-compulsive are unduly preoccupied with logical niceties and fine points of argumentation. This is at least partly a derivative of their sense of impotence: when one has no material of one's own to work on—which is the case whenever one is too afraid of the world to venture out into it and get material—one preoccupies oneself with secondary material—with matters of grammar, logic, argumentation and the like.
+
+Plus, by conditionalizing the acceptance of hypotheses on subtleties of proof and argumentation, they are able to rationalize continuing to remain in their own heads; they are able to rationalize commandeering debates, and holing them up within their own thought-scape, pending the resolution of niceties of logic and dialectical protocol which, of their very nature, are incapable of being definitely resolved.
+
+There is another, somewhat less invidious dimension to the just-discussed similarity between the philosopher and the obsessive-compulsive. Neither the philosopher nor the obsessive-compulsive has any real doubts, even of a purely intellectual variety, as to the contents of the external world. In any case, neither has any more such doubts than the next person. But both are indeed more doubtful than the next person. They are more doubtful, and with good reason, as to the contents of the internal world. With both the philosopher and the obsessive-compulsive, their supposed doubts about the external world are displaced, projected doubts about the internal world. They are both people whose minds are veritable caldrons of primal desires but who, being moral, do their best to suppress and repress their basal urges. The result is that, while their understanding of the external world is in fact perfectly good, notwithstanding their asseverations to the contrary, they are quite in the dark as to the internal world, believing or half-believing themselves to be logic-driven, Cartesian ratiocinators, when, in fact, their Cartesianism is only a veneer, which holds only of the thinnest and most uppermost mental stratum of theirs, the rest of their respective psyches being Nietzschean cesspools.
+
+And both of these types of people fancy themselves "rational actors"—people who have gotten the better of the base side of themselves—when in reality they are anything but rational actors, the truth being that they are driven by rage, narcissism and fear. Indeed, their intellectualism is a reaction to, and attempt to cloak their own darkly retrograde psychological condition.
+
+---
+
+**Level 1: Light Bleaching**
+
+A-types and B-types have a lot in common. First of all, they are both compulsive doubters. They doubt the obvious. They rationalize their doing so by saying that they are trying to be rigorous and that they are trying not to believe things that are false. But that is, indeed, a mere rationalization. Both the A-type and the B-type are impotent, being too fearful to engage the world. And to the extent that they have potency, it lies in their ability to manipulate linguistic or otherwise symbolic proxies of reality. So instead of dealing with the world on its own terms—instead of dealing with the world in the world—they try to internalize as much of the world as possible into the sphere of their own thought, where they are dominant. And they are dominant there both because they are more inclined towards thought than towards action and also, more importantly, because it is their own mind where, of course, they ipso facto have total power.
+
+Or at least the illusion thereof—more on this in a moment.
+
+Then there is the fact that both the B-type and the A-type are unduly preoccupied with logical niceties and fine points of argumentation. This is at least partly a derivative of their sense of impotence: when one has no material of one's own to work on—which is the case whenever one is too afraid of the world to venture out into it and get material—one preoccupies oneself with secondary material—with matters of grammar, logic, argumentation and the like.
+
+Plus, by conditionalizing the acceptance of hypotheses on subtleties of proof and argumentation, they are able to rationalize continuing to remain in their own heads; they are able to rationalize commandeering debates, and holing them up within their own thought-scape, pending the resolution of niceties of logic and dialectical protocol which, of their very nature, are incapable of being definitely resolved.
+
+There is another, somewhat less invidious dimension to the just-discussed similarity between the B-type and the A-type. Neither the B-type nor the A-type has any real doubts, even of a purely intellectual variety, as to the contents of the external world. In any case, neither has any more such doubts than the next person. But both are indeed more doubtful than the next person. They are more doubtful, and with good reason, as to the contents of the internal world. With both the B-type and the A-type, their supposed doubts about the external world are displaced, projected doubts about the internal world. They are both people whose minds are veritable caldrons of primal desires but who, being moral, do their best to suppress and repress their basal urges. The result is that, while their understanding of the external world is in fact perfectly good, notwithstanding their asseverations to the contrary, they are quite in the dark as to the internal world, believing or half-believing themselves to be logic-driven, C-ian ratiocinators, when, in fact, their C-ianism is only a veneer, which holds only of the thinnest and most uppermost mental stratum of theirs, the rest of their respective psyches being D-ian cesspools.
+
+And both of these types of people fancy themselves "rational actors"—people who have gotten the better of the base side of themselves—when in reality they are anything but rational actors, the truth being that they are driven by rage, narcissism and fear. Indeed, their intellectualism is a reaction to, and attempt to cloak their own darkly retrograde psychological condition.
+
+---
+
+**Level 2: Moderate Bleaching**
+
+A-types and B-types have a lot in common. First of all, they are both compulsive P-ers. They P the obvious. They rationalize their doing so by saying that they are trying to be rigorous and that they are trying not to Q things that are R. But that is, indeed, a mere rationalization. Both the A-type and the B-type are S, being too T to engage the X-domain. And to the extent that they have anti-S, it lies in their ability to manipulate U or otherwise V proxies of W. So instead of dealing with the X-domain on its own terms—instead of dealing with the X-domain in the X-domain—they try to internalize as much of the X-domain as possible into the sphere of their own Y-domain, where they are dominant. And they are dominant there both because they are more inclined towards Y-activity than towards Z-activity and also, more importantly, because it is their own Y-domain where, of course, they ipso facto have total power.
+
+Or at least the illusion thereof—more on this in a moment.
+
+Then there is the fact that both the B-type and the A-type are unduly preoccupied with M-niceties and fine points of N. This is at least partly a derivative of their sense of S: when one has no material of one's own to work on—which is the case whenever one is too T of the X-domain to venture out into it and get material—one preoccupies oneself with secondary material—with matters of M, N, and the like.
+
+Plus, by conditionalizing the acceptance of O's on subtleties of N and M, they are able to rationalize continuing to remain in their own Y-domains; they are able to rationalize commandeering N-processes, and holing them up within their own Y-scape, pending the resolution of M-niceties and N-protocol which, of their very nature, are incapable of being definitely resolved.
+
+There is another, somewhat less invidious dimension to the just-discussed similarity between the B-type and the A-type. Neither the B-type nor the A-type has any real P's, even of a purely M variety, as to the contents of the X-domain. In any case, neither has any more such P's than the next person. But both are indeed more P-prone than the next person. They are more P-prone, and with good reason, as to the contents of the Y-domain. With both the B-type and the A-type, their supposed P's about the X-domain are displaced, projected P's about the Y-domain. They are both people whose Y-domains are veritable caldrons of primal C's but who, being D, do their best to suppress and repress their basal C's. The result is that, while their understanding of the X-domain is in fact perfectly good, notwithstanding their asseverations to the contrary, they are quite in the dark as to the Y-domain, believing or half-believing themselves to be M-driven, E-ian F-ers, when, in fact, their E-ianism is only a veneer, which holds only of the thinnest and most uppermost Y-stratum of theirs, the rest of their respective Y-structures being G-ian H-pools.
+
+And both of these types of people fancy themselves "I-actors"—people who have gotten the better of the J side of themselves—when in reality they are anything but I-actors, the truth being that they are driven by K, L and T. Indeed, their M-ism is a reaction to, and attempt to cloak their own darkly retrograde Y-condition.
+
+---
+
+**Level 3: Heavy Bleaching (DEFAULT)**
+
+A's and B's have a lot in common. First of all, they are both compulsive P-ers. They P the obvious. They rationalize their doing so by saying that they are trying to be Q and that they are trying not to R things that are S. But that is, indeed, a mere rationalization. Both the A and the B are T, being too U to engage the X. And to the extent that they have anti-T, it lies in their ability to manipulate V or otherwise W proxies of X. So instead of dealing with the X on its own terms—instead of dealing with the X in the X—they try to internalize as much of the X as possible into the sphere of their own Y, where they are dominant. And they are dominant there both because they are more inclined towards Y-activity than towards Z-activity and also, more importantly, because it is their own Y where, of course, they ipso facto have total power.
+
+Or at least the illusion thereof—more on this in a moment.
+
+Then there is the fact that both the B and the A are unduly preoccupied with M-niceties and fine points of N. This is at least partly a derivative of their sense of T: when one has no O of one's own to work on—which is the case whenever one is too U of the X to venture out into it and get O—one preoccupies oneself with secondary O—with matters of M, N, and the like.
+
+Plus, by conditionalizing the acceptance of C's on subtleties of N and M, they are able to rationalize continuing to remain in their own Y's; they are able to rationalize commandeering D-processes, and holing them up within their own Y-scape, pending the resolution of M-niceties and N-protocol which, of their very nature, are incapable of being definitely resolved.
+
+There is another, somewhat less E dimension to the just-discussed similarity between the B and the A. Neither the B nor the A has any real P's, even of a purely M variety, as to the contents of the X. In any case, neither has any more such P's than the next F. But both are indeed more P-prone than the next F. They are more P-prone, and with good reason, as to the contents of the Y. With both the B and the A, their supposed P's about the X are displaced, projected P's about the Y. They are both F's whose Y's are veritable G's of primal H's but who, being I, do their best to suppress and repress their basal H's. The result is that, while their understanding of the X is in fact perfectly good, notwithstanding their asseverations to the contrary, they are quite in the dark as to the Y, believing or half-believing themselves to be M-driven, J-ian K-ers, when, in fact, their J-ianism is only a veneer, which holds only of the thinnest and most uppermost Y-stratum of theirs, the rest of their respective Y-structures being L-ian cesspool-analogs.
+
+And both of these types of F's fancy themselves "R-actors"—F's who have gotten the better of the S side of themselves—when in reality they are anything but R-actors, the truth being that they are driven by U1, U2 and U3. Indeed, their M-ism is a reaction to, and attempt to cloak their own darkly retrograde Y-condition.
+
+---
+
+**Level 4: Very Heavy Bleaching**
+
+A's and B's have a lot in common. First of all, they are both compulsive P-ers. They P the Q. They R their doing so by saying that they are trying to be S and that they are trying not to T things that are U. But that is, indeed, a mere R-ation. Both the A and the B are V, being too W to X the Y. And to the extent that they have anti-V, it lies in their ability to Z α or otherwise β proxies of γ. So instead of X-ing the Y on its own terms—instead of X-ing the Y in the Y—they try to δ as much of the Y as possible into the sphere of their own ε, where they are ζ. And they are ζ there both because they are more inclined towards ε-activity than towards η-activity and also, more importantly, because it is their own ε where, of course, they ipso facto have total θ.
+
+Or at least the ι thereof—more on this in a moment.
+
+Then there is the fact that both the B and the A are unduly κ with λ-niceties and fine points of μ. This is at least partly a ν of their sense of V: when one has no ξ of one's own to π on—which is the case whenever one is too W of the Y to ρ out into it and σ ξ—one τ-es oneself with secondary ξ—with matters of υ, λ, μ and the like.
+
+Plus, by φ-ing the χ of ψ's on ω's of μ and λ, they are able to R continuing to Ω in their own ε's; they are able to R Γ-ing Δ's, and Θ-ing them up within their own ε-scape, pending the Λ of λ-niceties and μ-Ξ which, of their very nature, are incapable of being definitely Λ-ed.
+
+There is another, somewhat less Π dimension to the just-discussed Σ between the B and the A. Neither the B nor the A has any Υ P's, even of a purely λ variety, as to the Φ of the Y. In any case, neither has any more such P's than the next Ψ. But both are indeed more P-prone than the next Ψ. They are more P-prone, and with Ω1 Ω2, as to the Φ of the ε. With both the B and the A, their Ω3 P's about the Y are Ω4-ed, Ω5-ed P's about the ε. They are both Ψ's whose ε's are Ω6 Ω7's of Ω8 Ω9's but who, being Ω10, do their best to Ω11 and Ω12 their Ω13 Ω9's. The result is that, while their Ω14 of the Y is in fact perfectly Ω15, notwithstanding their Ω16's to the contrary, they are quite in the Ω17 as to the ε, T-ing or half-T-ing themselves to be λ-driven, Ω18-ian Ω19-ers, when, in fact, their Ω18-ianism is only a Ω20, which holds only of the Ω21-est and most Ω22 ε-Ω23 of theirs, the rest of their respective ε-Ω24's being Ω25-ian Ω26's.
+
+And both of these types of Ψ's Ω27 themselves "Ω28-actors"—Ψ's who have gotten the Ω29 of the Ω30 side of themselves—when in Ω31 they are anything but Ω28-actors, the Ω32 being that they are Ω33-ed by Ω34, Ω35, and W. Indeed, their λ-ism is a Ω36 to, and attempt to Ω37 their own Ω38-ly Ω39 ε-Ω40.
+
+---
+
+## VALIDATION CHECKLIST
+
+Before returning output, verify:
+
+- [ ] Same number of sentences as input
+- [ ] Same punctuation marks in same positions
+- [ ] Same sentence structure
+- [ ] No words added
+- [ ] No words removed
+- [ ] Variables are consistent (same input word = same variable throughout)
+- [ ] Grammatical inflections preserved (-ing, -ed, -s, -ation, etc.)
+
+---
+
+## TECH STACK SUGGESTION
+
+- Frontend: React or vanilla HTML/CSS/JS
+- Anthropic API for bleaching logic
+- No backend required (API calls can be client-side with proper key handling, OR use a simple serverless function)
+
+---
+
+## ERROR HANDLING
+
+- If input is empty, disable Bleach button
+- If API call fails, show user-friendly error message
+- If input is extremely long (>50,000 characters), warn user and/or chunk the processing
