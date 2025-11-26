@@ -1,4 +1,4 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
@@ -7,15 +7,16 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { useMutation } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import { useMutation, useQuery } from "@tanstack/react-query";
+import { apiRequest, queryClient } from "@/lib/queryClient";
 import { 
   ArrowUpTrayIcon, 
   ClipboardDocumentIcon, 
   ArrowDownTrayIcon, 
   XMarkIcon,
   SparklesIcon,
-  DocumentTextIcon
+  DocumentTextIcon,
+  CircleStackIcon
 } from "@heroicons/react/24/outline";
 import type { BleachingLevel, BleachResponse, SentenceBankResponse } from "@shared/schema";
 
@@ -29,7 +30,19 @@ export default function Home() {
   const [outputMode, setOutputMode] = useState<OutputMode>("bleach");
   const [jsonlContent, setJsonlContent] = useState<string | null>(null);
   const [sentenceCount, setSentenceCount] = useState<number>(0);
+  const [totalBankSize, setTotalBankSize] = useState<number>(0);
   const { toast } = useToast();
+
+  // Fetch sentence bank status
+  const bankStatusQuery = useQuery<{ count: number }>({
+    queryKey: ["/api/sentence-bank/status"],
+  });
+
+  useEffect(() => {
+    if (bankStatusQuery.data) {
+      setTotalBankSize(bankStatusQuery.data.count);
+    }
+  }, [bankStatusQuery.data]);
 
   // Bleaching mutation
   const bleachMutation = useMutation({
@@ -63,9 +76,13 @@ export default function Home() {
     onSuccess: (data) => {
       setJsonlContent(data.jsonlContent);
       setSentenceCount(data.sentenceCount);
+      if (data.totalBankSize) {
+        setTotalBankSize(data.totalBankSize);
+      }
+      queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
       toast({
-        title: "JSONL generated",
-        description: `Created ${data.sentenceCount} sentence entries. Ready to download.`,
+        title: "Saved to sentence bank",
+        description: `Added ${data.sentenceCount} sentences. Bank now has ${data.totalBankSize || data.sentenceCount} total entries.`,
       });
     },
     onError: (error: any) => {
@@ -223,15 +240,21 @@ export default function Home() {
           <SparklesIcon className="w-6 h-6 text-primary" />
           <h1 className="text-xl font-bold">Semantic Bleacher</h1>
         </div>
-        <Button
-          variant="outline"
-          size="default"
-          onClick={handleClearAll}
-          data-testid="button-clear-all"
-        >
-          <XMarkIcon className="w-4 h-4 mr-2" />
-          Clear All
-        </Button>
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 text-sm text-muted-foreground" data-testid="bank-status">
+            <CircleStackIcon className="w-4 h-4" />
+            <span><strong className="text-foreground">{totalBankSize}</strong> patterns in bank</span>
+          </div>
+          <Button
+            variant="outline"
+            size="default"
+            onClick={handleClearAll}
+            data-testid="button-clear-all"
+          >
+            <XMarkIcon className="w-4 h-4 mr-2" />
+            Clear All
+          </Button>
+        </div>
       </header>
 
       {/* Main Content - Split Panel */}

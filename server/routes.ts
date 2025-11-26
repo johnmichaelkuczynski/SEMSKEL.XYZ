@@ -1,8 +1,12 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
+import * as fs from "fs";
+import * as path from "path";
 import { bleachText } from "./bleach";
 import { bleachRequestSchema, sentenceBankRequestSchema } from "@shared/schema";
 import { z } from "zod";
+
+const SENTENCE_BANK_PATH = path.join(process.cwd(), "sentence_bank.jsonl");
 
 const CLAUSE_TRIGGERS = ['when', 'because', 'although', 'if', 'while', 'since', 'but'];
 
@@ -129,9 +133,26 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const jsonlContent = results.join('\n');
       
+      // Save to sentence bank file (append)
+      let totalBankSize = results.length;
+      try {
+        if (fs.existsSync(SENTENCE_BANK_PATH)) {
+          fs.appendFileSync(SENTENCE_BANK_PATH, '\n' + jsonlContent, 'utf-8');
+          // Count total lines in bank
+          const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
+          totalBankSize = content.split('\n').filter(line => line.trim()).length;
+        } else {
+          fs.writeFileSync(SENTENCE_BANK_PATH, jsonlContent, 'utf-8');
+        }
+        console.log(`Saved ${results.length} entries to sentence bank. Total: ${totalBankSize}`);
+      } catch (fileError) {
+        console.error("Error saving to sentence bank file:", fileError);
+      }
+      
       res.json({
         jsonlContent,
         sentenceCount: results.length,
+        totalBankSize,
       });
     } catch (error) {
       console.error("Sentence bank API error:", error);
@@ -147,6 +168,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
         error: "Sentence bank generation failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
       });
+    }
+  });
+
+  // Get sentence bank status
+  app.get("/api/sentence-bank/status", (req, res) => {
+    try {
+      if (!fs.existsSync(SENTENCE_BANK_PATH)) {
+        return res.json({ count: 0 });
+      }
+      const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
+      const count = content.split('\n').filter(line => line.trim()).length;
+      res.json({ count });
+    } catch (error) {
+      res.json({ count: 0 });
     }
   });
 

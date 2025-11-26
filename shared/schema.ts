@@ -33,6 +33,7 @@ export type SentenceBankRequest = z.infer<typeof sentenceBankRequestSchema>;
 export const sentenceBankResponseSchema = z.object({
   jsonlContent: z.string(),
   sentenceCount: z.number(),
+  totalBankSize: z.number().optional(),
 });
 
 export type SentenceBankResponse = z.infer<typeof sentenceBankResponseSchema>;
