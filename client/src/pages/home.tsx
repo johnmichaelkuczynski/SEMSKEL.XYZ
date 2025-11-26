@@ -211,6 +211,46 @@ export default function Home() {
     });
   };
 
+  const handleDownloadTxt = () => {
+    if (!jsonlContent) return;
+    
+    const lines = jsonlContent.trim().split("\n");
+    let txtContent = "";
+    
+    lines.forEach((line, index) => {
+      try {
+        const entry = JSON.parse(line);
+        txtContent += `--- Sentence ${index + 1} ---\n`;
+        txtContent += `Original: ${entry.original}\n`;
+        txtContent += `Bleached: ${entry.bleached}\n`;
+        txtContent += `Length: ${entry.length} | Clauses: ${entry.clauseCount} | Punctuation: ${entry.punctuation}\n`;
+        txtContent += `\n`;
+      } catch {
+        // Skip invalid lines
+      }
+    });
+    
+    const timestamp = Date.now();
+    const filename = uploadedFile?.name 
+      ? uploadedFile.name.replace(/\.txt$/, `_${timestamp}_bank.txt`)
+      : `sentence_bank_${timestamp}.txt`;
+    
+    const blob = new Blob([txtContent], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Download started",
+      description: `Downloading ${filename}`,
+    });
+  };
+
   const handleClearInput = () => {
     setInputText("");
     setUploadedFile(null);
@@ -404,16 +444,28 @@ export default function Home() {
                     </Button>
                   </>
                 ) : (
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={handleDownloadJsonl}
-                    disabled={!jsonlContent}
-                    data-testid="button-download-jsonl"
-                  >
-                    <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
-                    Download JSONL
-                  </Button>
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleDownloadJsonl}
+                      disabled={!jsonlContent}
+                      data-testid="button-download-jsonl"
+                    >
+                      <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                      JSONL
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleDownloadTxt}
+                      disabled={!jsonlContent}
+                      data-testid="button-download-txt"
+                    >
+                      <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                      TXT
+                    </Button>
+                  </>
                 )}
                 <Button
                   variant="ghost"
