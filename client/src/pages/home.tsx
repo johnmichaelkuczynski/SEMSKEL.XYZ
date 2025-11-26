@@ -16,6 +16,7 @@ import {
   SparklesIcon,
   DocumentTextIcon
 } from "@heroicons/react/24/outline";
+import { Link } from "wouter";
 import type { BleachingLevel, BleachResponse, SentenceBankResponse } from "@shared/schema";
 
 export default function Home() {
@@ -190,15 +191,23 @@ export default function Home() {
           <SparklesIcon className="w-7 h-7 text-primary" />
           <h1 className="text-xl font-bold">Semantic Bleacher</h1>
         </div>
-        <Button
-          variant="outline"
-          size="default"
-          onClick={handleClearAll}
-          data-testid="button-clear-all"
-        >
-          <XMarkIcon className="w-4 h-4 mr-2" />
-          Clear All
-        </Button>
+        <div className="flex items-center gap-3">
+          <Link href="/make-json">
+            <Button variant="outline" size="default" data-testid="button-make-json">
+              <DocumentTextIcon className="w-4 h-4 mr-2" />
+              JSONL Generator
+            </Button>
+          </Link>
+          <Button
+            variant="outline"
+            size="default"
+            onClick={handleClearAll}
+            data-testid="button-clear-all"
+          >
+            <XMarkIcon className="w-4 h-4 mr-2" />
+            Clear All
+          </Button>
+        </div>
       </header>
 
       {/* Main Content - Split Panel */}
