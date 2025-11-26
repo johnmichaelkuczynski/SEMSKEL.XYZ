@@ -13,9 +13,10 @@ import {
   ClipboardDocumentIcon, 
   ArrowDownTrayIcon, 
   XMarkIcon,
-  SparklesIcon 
+  SparklesIcon,
+  DocumentTextIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse } from "@shared/schema";
 
 export default function Home() {
   const [inputText, setInputText] = useState("");
@@ -41,6 +42,42 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "An error occurred while bleaching the text.";
       toast({
         title: "Bleaching failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Sentence bank mutation
+  const sentenceBankMutation = useMutation({
+    mutationFn: async (data: { text: string; level: BleachingLevel }) => {
+      const response = await apiRequest("POST", "/api/build-sentence-bank", data);
+      return await response.json() as SentenceBankResponse;
+    },
+    onSuccess: (data) => {
+      const filename = uploadedFile?.name 
+        ? uploadedFile.name.replace(/\.txt$/, "_sentence_bank.jsonl")
+        : "sentence_bank.jsonl";
+      
+      const blob = new Blob([data.jsonlContent], { type: "application/jsonl" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      toast({
+        title: "Sentence bank created",
+        description: `Generated ${data.sentenceCount} sentences. Downloading ${filename}`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "An error occurred while building the sentence bank.";
+      toast({
+        title: "Sentence bank failed",
         description: errorMessage,
         variant: "destructive",
       });

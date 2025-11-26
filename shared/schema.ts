@@ -20,3 +20,19 @@ export const bleachResponseSchema = z.object({
 });
 
 export type BleachResponse = z.infer<typeof bleachResponseSchema>;
+
+// Sentence bank request schema
+export const sentenceBankRequestSchema = z.object({
+  text: z.string().min(1, "Text is required"),
+  level: z.enum(bleachingLevels),
+});
+
+export type SentenceBankRequest = z.infer<typeof sentenceBankRequestSchema>;
+
+// Sentence bank response schema
+export const sentenceBankResponseSchema = z.object({
+  jsonlContent: z.string(),
+  sentenceCount: z.number(),
+});
+
+export type SentenceBankResponse = z.infer<typeof sentenceBankResponseSchema>;

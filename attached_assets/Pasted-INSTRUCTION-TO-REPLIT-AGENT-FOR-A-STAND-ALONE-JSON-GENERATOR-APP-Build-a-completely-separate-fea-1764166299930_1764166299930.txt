@@ -1,0 +1,102 @@
+INSTRUCTION TO REPLIT AGENT (FOR A STAND-ALONE JSON GENERATOR APP)
+
+“Build a completely separate feature in this app whose ONLY purpose is to take any uploaded text file and convert it into a downloadable JSONL file of bleached sentences with metadata.
+Nothing is stored permanently inside the app.
+The user must be able to download the JSONL file directly to their computer.
+The app will NOT keep or save any data after download.
+This tool must work for any text input.”
+
+THE FEATURE MUST DO THIS EXACTLY:
+1. Add a front-end upload interface
+
+A simple page with:
+
+a file upload button
+
+a “Process Text” button
+
+a link/button to download the generated JSONL output
+
+Call the page:
+/make-json
+
+2. Back end: create a processor route
+
+Create a server route (e.g., /api/process-text) that:
+
+receives the uploaded text file
+
+reads its contents
+
+splits the text into individual sentences
+
+processes each sentence using the logic below
+
+outputs a downloadable JSONL file
+
+3. For each sentence, generate the following fields:
+
+original
+
+bleached (use existing bleach(sentence) function)
+
+char_length
+
+token_length
+
+clause_count
+
+clause_order
+
+punctuation_pattern
+
+structure
+
+4. Write ALL results into a temporary file
+
+Create a file:
+
+output_<timestamp>.jsonl
+
+
+Write one JSON object per line.
+
+Use EXACTLY this format (examples below):
+
+🔥 EXAMPLE LINES THE MODEL MUST MATCH EXACTLY
+Example 1:
+{"original":"When the engine overheated, the system crashed.","bleached":"When X Y, Z.","char_length":49,"token_length":7,"clause_count":2,"clause_order":"subordinate → main","punctuation_pattern":",.","structure":"When X Y, Z."}
+
+Example 2:
+{"original":"He left early.","bleached":"X V1-ed A1.","char_length":14,"token_length":3,"clause_count":1,"clause_order":"main → subordinate","punctuation_pattern":".","structure":"X V1-ed A1."}
+
+Example 3:
+{"original":"Although the rain stopped, the streets stayed wet.","bleached":"Although X, Y.","char_length":53,"token_length":8,"clause_count":2,"clause_order":"subordinate → main","punctuation_pattern":",.","structure":"Although X, Y."}
+
+Example 4:
+{"original":"People moved slowly through the streets.","bleached":"F1 V1-ed A1 through the F2.","char_length":43,"token_length":6,"clause_count":1,"clause_order":"main → subordinate","punctuation_pattern":".","structure":"F1 V1-ed A1 through the F2."}
+
+Example 5:
+{"original":"Nothing unusual happened.","bleached":"Nothing A1 V1-ed.","char_length":25,"token_length":3,"clause_count":1,"clause_order":"main → subordinate","punctuation_pattern":".","structure":"Nothing A1 V1-ed."}
+
+5. After the file is generated
+
+Return a link so the user can download the JSONL file directly to their computer.
+
+After the download, the temporary file may be deleted.
+
+6. NOTHING is stored inside the app.
+
+No permanent DB
+
+No saving inside the project
+
+No accumulation
+
+Each run is independent
+
+🎯 FINAL PURPOSE (TELL THE AGENT THIS)
+
+“This tool must function as a UNIVERSAL JSONL generator:
+I upload any text → I get a download link for a JSONL file.
+Nothing is saved, nothing is stored, nothing is trapped.”
