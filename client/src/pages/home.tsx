@@ -45,6 +45,8 @@ export default function Home() {
   const [sentenceCount, setSentenceCount] = useState<number>(0);
   const [totalBankSize, setTotalBankSize] = useState<number>(0);
   const [bankDialogOpen, setBankDialogOpen] = useState(false);
+  const [aiTextInput, setAiTextInput] = useState("");
+  const [aiUploadedFile, setAiUploadedFile] = useState<{ name: string } | null>(null);
   const { toast } = useToast();
 
   // Fetch sentence bank status
@@ -145,6 +147,42 @@ export default function Home() {
     multiple: false,
     noClick: false,
   });
+
+  // Humanizer file upload handling
+  const onDropAiText = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0];
+    if (file && file.name.endsWith(".txt")) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const text = e.target?.result as string;
+        setAiTextInput(text);
+        setAiUploadedFile({ name: file.name });
+        toast({
+          title: "AI text uploaded",
+          description: `${file.name} loaded successfully.`,
+        });
+      };
+      reader.readAsText(file);
+    } else {
+      toast({
+        title: "Invalid file type",
+        description: "Please upload a .txt file.",
+        variant: "destructive",
+      });
+    }
+  }, [toast]);
+
+  const { getRootProps: getAiRootProps, getInputProps: getAiInputProps, isDragActive: isAiDragActive } = useDropzone({
+    onDrop: onDropAiText,
+    accept: { "text/plain": [".txt"] },
+    multiple: false,
+    noClick: false,
+  });
+
+  const handleClearAiText = () => {
+    setAiTextInput("");
+    setAiUploadedFile(null);
+  };
 
   // Action handlers
   const handleBleach = () => {
@@ -329,9 +367,9 @@ export default function Home() {
   const isProcessing = bleachMutation.isPending || sentenceBankMutation.isPending;
 
   return (
-    <div className="flex flex-col h-screen bg-background">
+    <div className="flex flex-col min-h-screen bg-background">
       {/* Header */}
-      <header className="h-16 border-b flex items-center justify-between px-8">
+      <header className="h-16 border-b flex items-center justify-between px-8 sticky top-0 bg-background z-50">
         <div className="flex items-center gap-3">
           <SparklesIcon className="w-6 h-6 text-primary" />
           <h1 className="text-xl font-bold">Semantic Bleacher</h1>
@@ -624,6 +662,88 @@ export default function Home() {
               )}
             </TabsContent>
           </Tabs>
+        </div>
+      </div>
+
+      {/* Humanizer Section */}
+      <div className="border-t bg-muted/30">
+        <div className="p-6">
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                <SparklesIcon className="w-4 h-4 text-primary" />
+              </div>
+              <div>
+                <h2 className="text-lg font-semibold">Humanizer</h2>
+                <p className="text-sm text-muted-foreground">Paste AI-written text to humanize (coming soon)</p>
+              </div>
+            </div>
+            {aiTextInput && (
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={handleClearAiText}
+                data-testid="button-clear-ai-text"
+              >
+                <XMarkIcon className="w-4 h-4 mr-1" />
+                Clear
+              </Button>
+            )}
+          </div>
+
+          <div className="flex gap-4">
+            {/* AI Text Input */}
+            <div className="flex-1 flex flex-col gap-3">
+              {/* Drop zone for AI text */}
+              <div
+                {...getAiRootProps()}
+                className={`h-16 border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer transition-colors hover-elevate ${
+                  isAiDragActive ? "border-primary bg-primary/5" : "border-border"
+                }`}
+                data-testid="dropzone-ai-text"
+              >
+                <input {...getAiInputProps()} data-testid="input-ai-file" />
+                <ArrowUpTrayIcon className="w-5 h-5 text-muted-foreground mr-2" />
+                <p className="text-sm text-muted-foreground">
+                  {aiUploadedFile ? aiUploadedFile.name : "Drag .txt file here or click to upload AI text"}
+                </p>
+              </div>
+
+              {/* AI Text Textarea */}
+              <Textarea
+                placeholder="Or type/paste your AI-written text here..."
+                value={aiTextInput}
+                onChange={(e) => setAiTextInput(e.target.value)}
+                className="min-h-[150px] resize-none text-sm"
+                data-testid="textarea-ai-input"
+              />
+
+              {aiTextInput && (
+                <p className="text-xs text-muted-foreground">
+                  {aiTextInput.length.toLocaleString()} characters
+                </p>
+              )}
+            </div>
+
+            {/* Humanizer Output (placeholder) */}
+            <div className="flex-1 flex flex-col gap-3">
+              <div className="flex-1 min-h-[200px] bg-muted/50 rounded-lg p-4 flex items-center justify-center">
+                <div className="text-center text-muted-foreground">
+                  <SparklesIcon className="w-12 h-12 mx-auto mb-3 opacity-20" />
+                  <p className="font-medium">Humanized output will appear here</p>
+                  <p className="text-sm mt-1">This feature is under development</p>
+                  <p className="text-xs mt-3 max-w-xs mx-auto">
+                    The humanizer will match your AI sentences to human patterns from the bank and rewrite them.
+                  </p>
+                </div>
+              </div>
+
+              <Button disabled className="w-full" data-testid="button-humanize">
+                <SparklesIcon className="w-4 h-4 mr-2" />
+                Humanize Text (Coming Soon)
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
