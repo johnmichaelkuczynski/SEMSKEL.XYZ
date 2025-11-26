@@ -108,29 +108,44 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
+      console.log(`Processing ${sentences.length} sentences in parallel batches...`);
+      
+      // Process sentences in parallel batches of 10
+      const BATCH_SIZE = 10;
       const results: string[] = [];
       
-      for (const sentence of sentences) {
-        try {
-          const bleached = await bleachText(sentence, validatedData.level);
-          
-          const entry = {
-            original: sentence,
-            bleached: bleached,
-            char_length: sentence.length,
-            token_length: countTokens(sentence),
-            clause_count: countClauses(sentence),
-            clause_order: getClauseOrder(sentence),
-            punctuation_pattern: extractPunctuationPattern(sentence),
-            structure: bleached
-          };
-          
-          results.push(JSON.stringify(entry));
-        } catch (error) {
-          console.error(`Error processing sentence: ${sentence}`, error);
-        }
+      for (let i = 0; i < sentences.length; i += BATCH_SIZE) {
+        const batch = sentences.slice(i, i + BATCH_SIZE);
+        console.log(`Processing batch ${Math.floor(i/BATCH_SIZE) + 1}/${Math.ceil(sentences.length/BATCH_SIZE)} (${batch.length} sentences)`);
+        
+        const batchResults = await Promise.all(
+          batch.map(async (sentence) => {
+            try {
+              const bleached = await bleachText(sentence, validatedData.level);
+              
+              const entry = {
+                original: sentence,
+                bleached: bleached,
+                char_length: sentence.length,
+                token_length: countTokens(sentence),
+                clause_count: countClauses(sentence),
+                clause_order: getClauseOrder(sentence),
+                punctuation_pattern: extractPunctuationPattern(sentence),
+                structure: bleached
+              };
+              
+              return JSON.stringify(entry);
+            } catch (error) {
+              console.error(`Error processing sentence: ${sentence}`, error);
+              return null;
+            }
+          })
+        );
+        
+        results.push(...batchResults.filter((r): r is string => r !== null));
       }
       
+      console.log(`Completed processing ${results.length} sentences`);
       const jsonlContent = results.join('\n');
       
       // Save to sentence bank file (append)
