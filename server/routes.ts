@@ -121,7 +121,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         
         return JSON.stringify(entry);
       } catch (error: any) {
-        const isRateLimit = error?.status === 429 || error?.message?.includes('rate');
+        const errorMessage = (error?.message || '').toLowerCase();
+        const isRateLimit = error?.status === 429 || 
+          errorMessage.includes('rate') || 
+          errorMessage.includes('limit') ||
+          errorMessage.includes('overloaded');
         
         if (isRateLimit && attempt < maxRetries) {
           const waitTime = Math.pow(2, attempt) * 1000;
