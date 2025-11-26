@@ -1,0 +1,70 @@
+NSTRUCTION TO REPLIT AGENT — FULL PURPOSE + WHY THE BLEACHER EXISTS + WHAT COMES NEXT
+
+“This project is building a GPT-bypass humanizer.
+The core idea is: AI text must be rewritten using REAL HUMAN sentence geometry so that it passes detectors while preserving the user’s meaning.
+
+To accomplish this, the project has three layers.
+Everything you build must support these three layers.
+
+LAYER 1 — WHY THE BLEACHING TOOL EXISTS (WHAT IT IS FOR)
+
+The bleaching tool you already built is NOT the humanizer.
+It is the tool that extracts the structural patterns of real human sentences.
+
+When the user uploads ANY human-written text, the bleaching tool:
+
+splits the text into individual sentences
+
+bleaches each sentence (variables instead of content)
+
+computes sentence metadata (length, tokens, clause count, punctuation, etc.)
+
+returns each sentence as a JSON object
+
+The purpose of this is to build a growing library of human sentence patterns.
+This file will be called sentence_bank.jsonl.
+It will live inside THIS SAME APP.
+It will be used later for humanization.
+
+This is the “raw material” the humanizer needs.
+
+LAYER 2 — WHAT WILL HAPPEN NEXT (MATCHING ENGINE)
+
+Once the sentence bank exists inside the app, the next major feature will be:
+
+A matching system that takes one AI sentence and finds the closest human sentence pattern in the sentence bank.
+
+It matches by:
+
+similar length
+
+identical clause count
+
+identical punctuation
+
+similar bleached structure
+
+This finds a human sentence that has the same overall shape as the AI sentence.
+
+This prevents distortion.
+
+LAYER 3 — FINAL PURPOSE (THE ACTUAL HUMANIZER)
+
+After a match is found, the final feature will:
+
+take the human sentence pattern
+
+take the original AI sentence meaning
+
+ask the LLM to rewrite the AI sentence INTO that pattern while keeping meaning intact
+
+This produces human-like, detector-safe text with full content preservation.
+
+This is the final output of the app.
+
+SUMMARY FOR YOU (THE AGENT)
+
+The bleaching tool is Step 1.
+It exists so the app can build its own library of human sentence patterns.
+Steps 2 and 3 (matching + rewriting) will use that library to produce humanized text.
+All development should move toward this three-layer pipeline.
