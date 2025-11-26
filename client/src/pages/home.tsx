@@ -510,13 +510,8 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="flex-1 bg-muted/50 rounded-lg p-4 font-mono text-xs overflow-auto">
-                    <pre className="whitespace-pre-wrap break-all">
-                      {jsonlContent.split('\n').slice(0, 10).join('\n')}
-                      {jsonlContent.split('\n').length > 10 && (
-                        <span className="text-muted-foreground block mt-2">
-                          ... and {jsonlContent.split('\n').length - 10} more lines
-                        </span>
-                      )}
+                    <pre className="whitespace-pre-wrap break-all" data-testid="jsonl-content">
+                      {jsonlContent}
                     </pre>
                   </div>
                 </div>
