@@ -704,17 +704,19 @@ export default function Home() {
       {/* Humanizer Section */}
       <div className="border-t bg-muted/30">
         <div className="p-6">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
-                <SparklesIcon className="w-4 h-4 text-primary" />
-              </div>
-              <div>
-                <h2 className="text-lg font-semibold">Pattern Matcher</h2>
-                <p className="text-sm text-muted-foreground">Find human sentence patterns for AI text (Step 2)</p>
-              </div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+              <SparklesIcon className="w-4 h-4 text-primary" />
             </div>
-            {aiTextInput && (
+            <div>
+              <h2 className="text-lg font-semibold">Pattern Matcher</h2>
+              <p className="text-sm text-muted-foreground">Find human sentence patterns for AI text (Step 2)</p>
+            </div>
+          </div>
+
+          {/* Clear button row */}
+          {(aiTextInput || matchResults) && (
+            <div className="flex justify-end mb-3">
               <Button
                 variant="ghost"
                 size="sm"
@@ -724,8 +726,8 @@ export default function Home() {
                 <XMarkIcon className="w-4 h-4 mr-1" />
                 Clear
               </Button>
-            )}
-          </div>
+            </div>
+          )}
 
           <div className="flex gap-4">
             {/* AI Text Input */}
