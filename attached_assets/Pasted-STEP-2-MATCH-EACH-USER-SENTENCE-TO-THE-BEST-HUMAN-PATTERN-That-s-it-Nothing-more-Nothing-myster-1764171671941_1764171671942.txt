@@ -1,0 +1,120 @@
+STEP 2 = MATCH EACH USER SENTENCE TO THE BEST HUMAN PATTERN
+
+That’s it.
+Nothing more.
+Nothing mysterious.
+
+Your database already contains entries like:
+
+{
+  "original": "...",
+  "bleached": "When X does Y, Z happens.",
+  "char_length": 124,
+  "token_length": 23,
+  "clause_count": 1,
+  "clause_order": "subordinate → main",
+  "punctuation_pattern": ",.",
+  "structure": "When X does Y, Z happens."
+}
+
+
+Step 2’s job is to:
+Take a user sentence → analyze it → find the closest bleached pattern in the sentence bank.
+
+✔️ STEP 2 BROKEN DOWN (ULTRA-SIMPLE)
+1. Split user text into sentences
+
+Example:
+User gives 10 sentences → you get S1, S2, …, S10.
+
+2. Analyze each sentence
+
+For each sentence Si, compute:
+
+char_length
+
+token_length
+
+clause_count
+
+punctuation_pattern
+
+approximate syntactic shape (you can get this by bleaching the user sentence too)
+
+This analysis is identical to what you already did on the human sentences.
+
+3. Compare Si to EVERY sentence in the database
+
+You already have thousands of bleached sentences in the DB, each with metadata.
+
+Now run this matching filter:
+
+Step A — Length filter
+
+Keep only sentences where:
+
+abs(Z.char_length - S.char_length) <= 10%
+
+
+Throw away the rest.
+
+Step B — Clause count filter
+
+Now keep only ones where:
+
+Z.clause_count === S.clause_count
+
+Step C — Punctuation pattern filter
+
+Now keep only ones where:
+
+Z.punctuation_pattern === S.punctuation_pattern
+
+Step D — Skeleton similarity
+
+Now evaluate which remaining bleached pattern is most similar to the user sentence’s bleached version.
+
+Use something like:
+
+same variables?
+
+similar placement?
+
+same number of variables?
+
+same clause order?
+
+Pick the closest one.
+
+4. Result of Step 2
+
+For each user sentence Si, Step 2 gives you:
+
+bestMatch(Si) = a bleached human pattern Zi
+
+
+This is the pattern you will use in Step 3 to rewrite the user’s sentence.
+
+✔️ WHAT STEP 2 DOES NOT DO
+
+It does not rewrite the text
+
+It does not humanize
+
+It does not create output
+
+Step 2 only picks a human structure for each user sentence.
+
+✔️ WHAT COMES NEXT
+
+Step 2 results in pairs:
+
+Si → Zi
+Si → Zi
+Si → Zi
+...
+
+
+Step 3 will do the rewriting:
+
+write a new sentence that follows Zi but preserves the meaning of Si

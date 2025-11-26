@@ -1,0 +1,144 @@
+INSTRUCTION TO REPLIT AGENT — IMPLEMENT STEP 2 (MATCHING ENGINE)
+
+(copy/paste exactly as written)
+
+Implement STEP 2 of the Humanizer pipeline.
+The goal of this step is to take each user sentence and find the closest matching bleached pattern from the sentence bank.
+Do NOT rewrite anything yet.
+Do NOT humanize anything yet.
+Just match.
+
+1. Load the sentence-bank file
+
+Create a new module:
+
+/utils/sentenceBank.ts
+
+
+This module must:
+
+Read the JSONL file containing entries with fields:
+bleached, char_length, token_length, clause_count, clause_order, punctuation_pattern, structure.
+
+Store them in memory as an array of objects.
+
+Example format each entry looks like:
+
+{"bleached":"When X V-ed Y, Z happened.","char_length":124,"token_length":23,"clause_count":1,"clause_order":"subordinate → main","punctuation_pattern":",.","structure":"When X V-ed Y, Z happened."}
+
+2. Implement a sentence-analysis function
+
+Create:
+
+/utils/analyzeSentence.ts
+
+
+This function must take a raw user sentence and return:
+
+char_length
+
+token_length (split on whitespace)
+
+clause_count (count commas + subordinators like “when”, “although”, “because”)
+
+punctuation_pattern (like ".", ",.", ",,,.")
+
+bleached (use the existing bleaching function you already built)
+
+Example return:
+
+{
+  char_length: 87,
+  token_length: 16,
+  clause_count: 2,
+  punctuation_pattern: ",.",
+  bleached: "When A V-ed B, C V-ed D."
+}
+
+3. Implement the MATCHING FUNCTION
+
+Create a new module:
+
+/utils/findBestMatch.ts
+
+
+Inside it, export:
+
+export function findBestMatch(userAnalysis, sentenceBankEntry[])
+
+
+This function must:
+
+Step A — Length filter
+
+Filter bank to entries where:
+
+abs(entry.char_length - user.char_length) <= user.char_length * 0.10
+
+
+(±10% length tolerance)
+
+Step B — Clause count filter
+entry.clause_count === user.clause_count
+
+Step C — Punctuation pattern filter
+entry.punctuation_pattern === user.punctuation_pattern
+
+Step D — Skeleton similarity scoring
+
+For each remaining entry:
+
+Compare user bleached vs entry bleached:
+
+same number of variables
+
+similar placement of variables
+
+same clause order
+
+similar structure length
+
+Produce a score:
+
+score = 
+  + 3 * (same clause_order)
+  + 2 * (same variable count)
+  + 1 * (similar token_length)
+  + 1 * (string similarity bleached→structure)
+
+
+Pick the highest scoring entry.
+
+Return:
+
+{
+  bestPattern: entry.bleached,
+  metadata: entry
+}
+
+4. Integrate into the Humanizer endpoint
+
+In the main humanizer route, after splitting text into sentences and analyzing each one:
+
+For each sentence:
+
+const userAnalysis = analyzeSentence(sentence);
+const match = findBestMatch(userAnalysis, sentenceBank);
+results.push({ original: sentence, pattern: match.bestPattern });
+
+
+Do NOT rewrite the sentence.
+Do NOT humanize.
+Just return an array of:
+
+[
+  { original: "User sentence 1", pattern: "Human bleached pattern 1" },
+  { original: "User sentence 2", pattern: "Human bleached pattern 2" },
+  ...
+]
+
+
+This completes Step 2.
+
+5. DO NOT CHANGE STEP 1 AND DO NOT IMPLEMENT STEP 3 YET
+END OF INSTRUCTIONS
