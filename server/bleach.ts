@@ -50,6 +50,16 @@ PRESERVE: All common nouns, verbs, adjectives, adverbs`;
 PRESERVE: Common descriptive words, basic verbs, everyday nouns`;
       break;
 
+    case "Moderate-Heavy":
+      levelInstructions = `MODERATE-HEAVY BLEACHING - Replace everything in Moderate, PLUS:
+- Most specific nouns: "person" → "F", "behavior" → "G", "relationship" → "H"
+- Most specific verbs: "love" → "V1", "want" → "V2", "cheat" → "V3"
+- Most descriptive adjectives: "mercurial" → "A1", "unpredictable" → "A2", "viable" → "A3"
+- Adverbs with semantic weight
+
+PRESERVE: Common/basic nouns (man, woman, thing, way, time), common verbs (go, come, make, take, get, give), basic adjectives (good, bad, big, small), function words, copulas, logical connectives`;
+      break;
+
     case "Heavy":
       levelInstructions = `HEAVY BLEACHING (DEFAULT) - Replace everything in Moderate, PLUS:
 - Most content nouns: "person" → "F", "material" → "O"

@@ -233,6 +233,12 @@ export default function Home() {
                   </Label>
                 </div>
                 <div className="flex items-center space-x-3">
+                  <RadioGroupItem value="Moderate-Heavy" id="moderate-heavy" data-testid="radio-moderate-heavy" />
+                  <Label htmlFor="moderate-heavy" className="font-normal cursor-pointer">
+                    Moderate-Heavy
+                  </Label>
+                </div>
+                <div className="flex items-center space-x-3">
                   <RadioGroupItem value="Heavy" id="heavy" data-testid="radio-heavy" />
                   <Label htmlFor="heavy" className="font-normal cursor-pointer">
                     Heavy <span className="text-xs text-muted-foreground ml-2">(Default)</span>

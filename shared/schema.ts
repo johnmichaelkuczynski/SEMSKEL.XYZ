@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 // Bleaching level options
-export const bleachingLevels = ["Light", "Moderate", "Heavy", "Very Heavy"] as const;
+export const bleachingLevels = ["Light", "Moderate", "Moderate-Heavy", "Heavy", "Very Heavy"] as const;
 export type BleachingLevel = typeof bleachingLevels[number];
 
 // Request schema for bleaching API
