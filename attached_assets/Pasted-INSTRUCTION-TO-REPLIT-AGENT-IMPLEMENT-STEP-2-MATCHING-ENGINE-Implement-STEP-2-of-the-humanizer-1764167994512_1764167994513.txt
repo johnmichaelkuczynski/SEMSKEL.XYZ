@@ -1,0 +1,91 @@
+INSTRUCTION TO REPLIT AGENT — IMPLEMENT STEP 2 (MATCHING ENGINE)
+
+“Implement STEP 2 of the humanizer pipeline:
+Given an AI-written sentence, find the closest human sentence pattern in sentence_bank.jsonl.
+This will be a new function called findBestMatch(sentence: string).”
+
+WHAT THE FUNCTION MUST DO
+1. Load the sentence bank
+
+Load sentence_bank.jsonl from the project root.
+
+Each line is one JSON object containing:
+bleached, char_length, token_length, clause_count, punctuation_pattern, and structure.
+
+2. Compute metadata for the input sentence
+
+Use the SAME functions used when building the bank:
+
+char_length
+
+token_length
+
+clause_count
+
+punctuation_pattern
+
+bleached (via the existing bleach function)
+
+3. Apply the matching filters IN ORDER
+
+Filter A — Length match (mandatory)
+Keep all entries where:
+
+abs(entry.char_length - input.char_length) <= 0.10 * input.char_length
+
+
+Filter B — Clause count match (mandatory)
+Keep entries where:
+
+entry.clause_count === input.clause_count
+
+
+Filter C — Punctuation pattern (prefer exact)
+First try exact match:
+
+entry.punctuation_pattern === input.punctuation_pattern
+
+
+If that yields zero results, fall back to the remaining candidates from Filter B.
+
+Filter D — Syntactic skeleton similarity (choose best candidate)
+Compare entry.bleached with input.bleached using a simple similarity heuristic:
+
+same number of variables (X, Y, Z, etc.)
+
+same clause markers (“although”, “when”, “because”)
+
+similar clause ordering
+
+similar punctuation locations
+
+Choose the single entry with the highest similarity score.
+
+4. Return the chosen entry
+
+The function should return the ENTIRE matching JSON object from sentence_bank.jsonl.
+
+OUTPUT SIGNATURE
+{
+  bleached: string,
+  char_length: number,
+  token_length: number,
+  clause_count: number,
+  punctuation_pattern: string,
+  structure: string,
+  original: string   // included in case needed
+}
+
+INTEGRATION REQUIREMENTS
+
+Do NOT build rewriting logic yet.
+Do NOT integrate with the UI.
+Do NOT modify Step 1.
+
+Just create:
+
+findBestMatch(sentence: string)
+
+internal utilities if needed (computeMetadata, etc.)
+
+This completes the entire matching stage.

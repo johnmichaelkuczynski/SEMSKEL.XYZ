@@ -36,3 +36,38 @@ export const sentenceBankResponseSchema = z.object({
 });
 
 export type SentenceBankResponse = z.infer<typeof sentenceBankResponseSchema>;
+
+// Sentence bank entry schema (single entry in sentence_bank.jsonl)
+export const sentenceBankEntrySchema = z.object({
+  original: z.string(),
+  bleached: z.string(),
+  char_length: z.number(),
+  token_length: z.number(),
+  clause_count: z.number(),
+  clause_order: z.string(),
+  punctuation_pattern: z.string(),
+  structure: z.string(),
+});
+
+export type SentenceBankEntry = z.infer<typeof sentenceBankEntrySchema>;
+
+// Match request schema (for Step 2 matching engine)
+export const matchRequestSchema = z.object({
+  sentence: z.string().min(1, "Sentence is required"),
+  level: z.enum(bleachingLevels).optional().default("Heavy"),
+});
+
+export type MatchRequest = z.infer<typeof matchRequestSchema>;
+
+// Match response schema
+export const matchResponseSchema = z.object({
+  match: sentenceBankEntrySchema.nullable(),
+  inputMetadata: z.object({
+    char_length: z.number(),
+    token_length: z.number(),
+    clause_count: z.number(),
+    punctuation_pattern: z.string(),
+  }),
+});
+
+export type MatchResponse = z.infer<typeof matchResponseSchema>;
