@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
 import { apiRequest } from "@/lib/queryClient";
@@ -16,14 +17,18 @@ import {
   SparklesIcon,
   DocumentTextIcon
 } from "@heroicons/react/24/outline";
-import { Link } from "wouter";
 import type { BleachingLevel, BleachResponse, SentenceBankResponse } from "@shared/schema";
+
+type OutputMode = "bleach" | "jsonl";
 
 export default function Home() {
   const [inputText, setInputText] = useState("");
   const [outputText, setOutputText] = useState("");
   const [bleachingLevel, setBleachingLevel] = useState<BleachingLevel>("Heavy");
   const [uploadedFile, setUploadedFile] = useState<{ name: string } | null>(null);
+  const [outputMode, setOutputMode] = useState<OutputMode>("bleach");
+  const [jsonlContent, setJsonlContent] = useState<string | null>(null);
+  const [sentenceCount, setSentenceCount] = useState<number>(0);
   const { toast } = useToast();
 
   // Bleaching mutation
@@ -56,29 +61,17 @@ export default function Home() {
       return await response.json() as SentenceBankResponse;
     },
     onSuccess: (data) => {
-      const filename = uploadedFile?.name 
-        ? uploadedFile.name.replace(/\.txt$/, "_sentence_bank.jsonl")
-        : "sentence_bank.jsonl";
-      
-      const blob = new Blob([data.jsonlContent], { type: "application/jsonl" });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement("a");
-      link.href = url;
-      link.download = filename;
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      URL.revokeObjectURL(url);
-      
+      setJsonlContent(data.jsonlContent);
+      setSentenceCount(data.sentenceCount);
       toast({
-        title: "Sentence bank created",
-        description: `Generated ${data.sentenceCount} sentences. Downloading ${filename}`,
+        title: "JSONL generated",
+        description: `Created ${data.sentenceCount} sentence entries. Ready to download.`,
       });
     },
     onError: (error: any) => {
       const errorMessage = error?.error || error?.message || "An error occurred while building the sentence bank.";
       toast({
-        title: "Sentence bank failed",
+        title: "JSONL generation failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -127,6 +120,15 @@ export default function Home() {
     });
   };
 
+  const handleGenerateJsonl = () => {
+    if (!inputText.trim()) return;
+    
+    sentenceBankMutation.mutate({
+      text: inputText,
+      level: bleachingLevel,
+    });
+  };
+
   const handleCopyOutput = async () => {
     if (!outputText) return;
     
@@ -168,6 +170,30 @@ export default function Home() {
     });
   };
 
+  const handleDownloadJsonl = () => {
+    if (!jsonlContent) return;
+    
+    const timestamp = Date.now();
+    const filename = uploadedFile?.name 
+      ? uploadedFile.name.replace(/\.txt$/, `_${timestamp}.jsonl`)
+      : `sentence_bank_${timestamp}.jsonl`;
+    
+    const blob = new Blob([jsonlContent], { type: "application/jsonl" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Download started",
+      description: `Downloading ${filename}`,
+    });
+  };
+
   const handleClearInput = () => {
     setInputText("");
     setUploadedFile(null);
@@ -175,68 +201,63 @@ export default function Home() {
 
   const handleClearOutput = () => {
     setOutputText("");
+    setJsonlContent(null);
+    setSentenceCount(0);
   };
 
   const handleClearAll = () => {
     setInputText("");
     setOutputText("");
     setUploadedFile(null);
+    setJsonlContent(null);
+    setSentenceCount(0);
   };
+
+  const isProcessing = bleachMutation.isPending || sentenceBankMutation.isPending;
 
   return (
     <div className="flex flex-col h-screen bg-background">
       {/* Header */}
-      <header className="h-20 border-b flex items-center justify-between px-12">
+      <header className="h-16 border-b flex items-center justify-between px-8">
         <div className="flex items-center gap-3">
-          <SparklesIcon className="w-7 h-7 text-primary" />
+          <SparklesIcon className="w-6 h-6 text-primary" />
           <h1 className="text-xl font-bold">Semantic Bleacher</h1>
         </div>
-        <div className="flex items-center gap-3">
-          <Link href="/make-json">
-            <Button variant="outline" size="default" data-testid="button-make-json">
-              <DocumentTextIcon className="w-4 h-4 mr-2" />
-              JSONL Generator
-            </Button>
-          </Link>
-          <Button
-            variant="outline"
-            size="default"
-            onClick={handleClearAll}
-            data-testid="button-clear-all"
-          >
-            <XMarkIcon className="w-4 h-4 mr-2" />
-            Clear All
-          </Button>
-        </div>
+        <Button
+          variant="outline"
+          size="default"
+          onClick={handleClearAll}
+          data-testid="button-clear-all"
+        >
+          <XMarkIcon className="w-4 h-4 mr-2" />
+          Clear All
+        </Button>
       </header>
 
       {/* Main Content - Split Panel */}
       <div className="flex-1 flex overflow-hidden">
         {/* Left Panel - Input */}
         <div className="flex-1 flex flex-col border-r">
-          <div className="flex-1 flex flex-col p-6 gap-6 overflow-auto">
+          <div className="flex-1 flex flex-col p-6 gap-4 overflow-auto">
             {/* File Upload Zone */}
             <div
               {...getRootProps()}
-              className={`h-32 border-2 border-dashed rounded-lg flex flex-col items-center justify-center cursor-pointer transition-colors hover-elevate ${
+              className={`h-24 border-2 border-dashed rounded-lg flex flex-col items-center justify-center cursor-pointer transition-colors hover-elevate ${
                 isDragActive ? "border-primary bg-primary/5" : "border-border"
               }`}
               data-testid="dropzone-file-upload"
             >
               <input {...getInputProps()} data-testid="input-file" />
-              <ArrowUpTrayIcon className="w-8 h-8 text-muted-foreground mb-2" />
+              <ArrowUpTrayIcon className="w-6 h-6 text-muted-foreground mb-1" />
               <p className="text-sm font-medium text-foreground">
-                {uploadedFile ? uploadedFile.name : "Drag .txt file here"}
-              </p>
-              <p className="text-xs text-muted-foreground">
-                {uploadedFile ? "Click to upload a different file" : "or click to browse"}
+                {uploadedFile ? uploadedFile.name : "Drag .txt file here or click to browse"}
               </p>
             </div>
 
             {/* Text Input Area */}
-            <div className="flex-1 flex flex-col">
-              <div className="flex items-center justify-between mb-3">
-                <Label className="text-lg font-semibold">Input Text</Label>
+            <div className="flex-1 flex flex-col min-h-0">
+              <div className="flex items-center justify-between mb-2">
+                <Label className="text-base font-semibold">Input Text</Label>
                 <Button
                   variant="ghost"
                   size="sm"
@@ -252,124 +273,189 @@ export default function Home() {
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
                 placeholder="Type or paste your text here..."
-                className="flex-1 resize-none font-mono text-sm leading-relaxed"
+                className="flex-1 resize-none font-mono text-sm leading-relaxed min-h-[200px]"
                 data-testid="textarea-input"
               />
             </div>
 
             {/* Bleaching Level Selector */}
-            <Card className="p-6">
-              <Label className="text-base font-semibold mb-4 block">Bleaching Level</Label>
+            <Card className="p-4">
+              <Label className="text-sm font-semibold mb-3 block">Bleaching Level</Label>
               <RadioGroup
                 value={bleachingLevel}
                 onValueChange={(value) => setBleachingLevel(value as BleachingLevel)}
-                className="space-y-3"
+                className="flex flex-wrap gap-4"
                 data-testid="radiogroup-bleaching-level"
               >
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Light" id="light" data-testid="radio-light" />
-                  <Label htmlFor="light" className="font-normal cursor-pointer">
-                    Light
-                  </Label>
+                  <Label htmlFor="light" className="font-normal cursor-pointer text-sm">Light</Label>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Moderate" id="moderate" data-testid="radio-moderate" />
-                  <Label htmlFor="moderate" className="font-normal cursor-pointer">
-                    Moderate
-                  </Label>
+                  <Label htmlFor="moderate" className="font-normal cursor-pointer text-sm">Moderate</Label>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Moderate-Heavy" id="moderate-heavy" data-testid="radio-moderate-heavy" />
-                  <Label htmlFor="moderate-heavy" className="font-normal cursor-pointer">
-                    Moderate-Heavy
-                  </Label>
+                  <Label htmlFor="moderate-heavy" className="font-normal cursor-pointer text-sm">Moderate-Heavy</Label>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Heavy" id="heavy" data-testid="radio-heavy" />
-                  <Label htmlFor="heavy" className="font-normal cursor-pointer">
-                    Heavy <span className="text-xs text-muted-foreground ml-2">(Default)</span>
+                  <Label htmlFor="heavy" className="font-normal cursor-pointer text-sm">
+                    Heavy <span className="text-xs text-muted-foreground">(Default)</span>
                   </Label>
                 </div>
-                <div className="flex items-center space-x-3">
+                <div className="flex items-center space-x-2">
                   <RadioGroupItem value="Very Heavy" id="very-heavy" data-testid="radio-very-heavy" />
-                  <Label htmlFor="very-heavy" className="font-normal cursor-pointer">
-                    Very Heavy
-                  </Label>
+                  <Label htmlFor="very-heavy" className="font-normal cursor-pointer text-sm">Very Heavy</Label>
                 </div>
               </RadioGroup>
             </Card>
 
-            {/* Bleach Button */}
-            <Button
-              onClick={handleBleach}
-              disabled={!inputText.trim() || bleachMutation.isPending}
-              size="lg"
-              className="h-12 text-base font-semibold"
-              data-testid="button-bleach"
-            >
-              {bleachMutation.isPending ? "Bleaching..." : "Bleach Text"}
-            </Button>
+            {/* Action Buttons */}
+            <div className="flex gap-3">
+              <Button
+                onClick={handleBleach}
+                disabled={!inputText.trim() || isProcessing}
+                size="lg"
+                className="flex-1 h-11 text-base font-semibold"
+                data-testid="button-bleach"
+              >
+                <SparklesIcon className="w-5 h-5 mr-2" />
+                {bleachMutation.isPending ? "Bleaching..." : "Bleach Text"}
+              </Button>
+              <Button
+                onClick={handleGenerateJsonl}
+                disabled={!inputText.trim() || isProcessing}
+                variant="secondary"
+                size="lg"
+                className="flex-1 h-11 text-base font-semibold"
+                data-testid="button-generate-jsonl"
+              >
+                <DocumentTextIcon className="w-5 h-5 mr-2" />
+                {sentenceBankMutation.isPending ? "Generating..." : "Generate JSONL"}
+              </Button>
+            </div>
           </div>
         </div>
 
         {/* Right Panel - Output */}
         <div className="flex-1 flex flex-col">
-          {/* Panel Header with Controls */}
-          <div className="h-14 border-b px-6 flex items-center justify-between">
-            <Label className="text-lg font-semibold">Output</Label>
-            <div className="flex gap-2">
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleCopyOutput}
-                disabled={!outputText}
-                data-testid="button-copy"
-              >
-                <ClipboardDocumentIcon className="w-4 h-4 mr-1" />
-                Copy
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleDownloadOutput}
-                disabled={!outputText}
-                data-testid="button-download"
-              >
-                <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
-                Download
-              </Button>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={handleClearOutput}
-                disabled={!outputText}
-                data-testid="button-clear-output"
-              >
-                <XMarkIcon className="w-4 h-4 mr-1" />
-                Clear
-              </Button>
-            </div>
-          </div>
-
-          {/* Output Text Area */}
-          <div className="flex-1 p-6">
-            {outputText ? (
-              <Textarea
-                value={outputText}
-                readOnly
-                className="w-full h-full resize-none font-mono text-sm leading-relaxed"
-                data-testid="textarea-output"
-              />
-            ) : (
-              <div className="h-full flex items-center justify-center text-muted-foreground">
-                <div className="text-center">
-                  <SparklesIcon className="w-16 h-16 mx-auto mb-4 opacity-20" />
-                  <p className="text-base">Bleached text will appear here</p>
-                  <p className="text-sm mt-2">Select your text and bleaching level, then click "Bleach Text"</p>
-                </div>
+          <Tabs 
+            value={outputMode} 
+            onValueChange={(v) => setOutputMode(v as OutputMode)} 
+            className="flex-1 flex flex-col"
+          >
+            {/* Tab Header */}
+            <div className="h-14 border-b px-6 flex items-center justify-between">
+              <TabsList className="h-9">
+                <TabsTrigger value="bleach" className="text-sm" data-testid="tab-bleach">
+                  Bleached Text
+                </TabsTrigger>
+                <TabsTrigger value="jsonl" className="text-sm" data-testid="tab-jsonl">
+                  JSONL Output
+                </TabsTrigger>
+              </TabsList>
+              <div className="flex gap-2">
+                {outputMode === "bleach" ? (
+                  <>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleCopyOutput}
+                      disabled={!outputText}
+                      data-testid="button-copy"
+                    >
+                      <ClipboardDocumentIcon className="w-4 h-4 mr-1" />
+                      Copy
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleDownloadOutput}
+                      disabled={!outputText}
+                      data-testid="button-download"
+                    >
+                      <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                      Download
+                    </Button>
+                  </>
+                ) : (
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleDownloadJsonl}
+                    disabled={!jsonlContent}
+                    data-testid="button-download-jsonl"
+                  >
+                    <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                    Download JSONL
+                  </Button>
+                )}
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={handleClearOutput}
+                  disabled={!outputText && !jsonlContent}
+                  data-testid="button-clear-output"
+                >
+                  <XMarkIcon className="w-4 h-4 mr-1" />
+                  Clear
+                </Button>
               </div>
-            )}
-          </div>
+            </div>
+
+            {/* Bleach Output Tab */}
+            <TabsContent value="bleach" className="flex-1 p-6 m-0 overflow-hidden">
+              {outputText ? (
+                <Textarea
+                  value={outputText}
+                  readOnly
+                  className="w-full h-full resize-none font-mono text-sm leading-relaxed"
+                  data-testid="textarea-output"
+                />
+              ) : (
+                <div className="h-full flex items-center justify-center text-muted-foreground">
+                  <div className="text-center">
+                    <SparklesIcon className="w-16 h-16 mx-auto mb-4 opacity-20" />
+                    <p className="text-base">Bleached text will appear here</p>
+                    <p className="text-sm mt-2">Enter text and click "Bleach Text"</p>
+                  </div>
+                </div>
+              )}
+            </TabsContent>
+
+            {/* JSONL Output Tab */}
+            <TabsContent value="jsonl" className="flex-1 p-6 m-0 overflow-hidden">
+              {jsonlContent ? (
+                <div className="h-full flex flex-col gap-4">
+                  <div className="flex items-center justify-between">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-medium text-foreground">{sentenceCount}</span> sentences processed
+                    </p>
+                  </div>
+                  <div className="flex-1 bg-muted/50 rounded-lg p-4 font-mono text-xs overflow-auto">
+                    <pre className="whitespace-pre-wrap break-all">
+                      {jsonlContent.split('\n').slice(0, 10).join('\n')}
+                      {jsonlContent.split('\n').length > 10 && (
+                        <span className="text-muted-foreground block mt-2">
+                          ... and {jsonlContent.split('\n').length - 10} more lines
+                        </span>
+                      )}
+                    </pre>
+                  </div>
+                </div>
+              ) : (
+                <div className="h-full flex items-center justify-center text-muted-foreground">
+                  <div className="text-center">
+                    <DocumentTextIcon className="w-16 h-16 mx-auto mb-4 opacity-20" />
+                    <p className="text-base">JSONL output will appear here</p>
+                    <p className="text-sm mt-2">Enter text and click "Generate JSONL"</p>
+                  </div>
+                </div>
+              )}
+            </TabsContent>
+          </Tabs>
         </div>
       </div>
     </div>
