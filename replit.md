@@ -36,6 +36,7 @@ This produces human-like, detector-safe text with full content preservation.
 
 **LAYER 1 COMPLETE** ✅
 **LAYER 2 COMPLETE** ✅
+**LARGE TEXT HANDLING COMPLETE** ✅
 
 ### Layer 1 Features:
 - Single-page UI with split panels (input | output)
