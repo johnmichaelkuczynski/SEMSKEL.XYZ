@@ -6,6 +6,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
@@ -16,9 +17,21 @@ import {
   XMarkIcon,
   SparklesIcon,
   DocumentTextIcon,
-  CircleStackIcon
+  CircleStackIcon,
+  EyeIcon
 } from "@heroicons/react/24/outline";
 import type { BleachingLevel, BleachResponse, SentenceBankResponse } from "@shared/schema";
+
+interface BankEntry {
+  original: string;
+  bleached: string;
+  char_length: number;
+  token_length: number;
+  clause_count: number;
+  clause_order: string;
+  punctuation_pattern: string;
+  structure: string;
+}
 
 type OutputMode = "bleach" | "jsonl";
 
@@ -31,11 +44,18 @@ export default function Home() {
   const [jsonlContent, setJsonlContent] = useState<string | null>(null);
   const [sentenceCount, setSentenceCount] = useState<number>(0);
   const [totalBankSize, setTotalBankSize] = useState<number>(0);
+  const [bankDialogOpen, setBankDialogOpen] = useState(false);
   const { toast } = useToast();
 
   // Fetch sentence bank status
   const bankStatusQuery = useQuery<{ count: number }>({
     queryKey: ["/api/sentence-bank/status"],
+  });
+
+  // Fetch full bank when dialog opens
+  const bankContentQuery = useQuery<{ entries: BankEntry[]; count: number }>({
+    queryKey: ["/api/sentence-bank"],
+    enabled: bankDialogOpen,
   });
 
   useEffect(() => {
@@ -270,6 +290,42 @@ export default function Home() {
     setSentenceCount(0);
   };
 
+  const handleDownloadBankTxt = () => {
+    if (!bankContentQuery.data?.entries?.length) return;
+    
+    let txtContent = `=== SENTENCE BANK ===\n`;
+    txtContent += `Total Patterns: ${bankContentQuery.data.count}\n`;
+    txtContent += `Downloaded: ${new Date().toLocaleString()}\n\n`;
+    
+    bankContentQuery.data.entries.forEach((entry, index) => {
+      txtContent += `--- Pattern ${index + 1} ---\n`;
+      txtContent += `Original: ${entry.original}\n`;
+      txtContent += `Bleached: ${entry.bleached}\n`;
+      txtContent += `Chars: ${entry.char_length} | Tokens: ${entry.token_length} | Clauses: ${entry.clause_count}\n`;
+      txtContent += `Clause Order: ${entry.clause_order}\n`;
+      txtContent += `Punctuation: ${entry.punctuation_pattern || '(none)'}\n`;
+      txtContent += `\n`;
+    });
+    
+    const timestamp = Date.now();
+    const filename = `sentence_bank_full_${timestamp}.txt`;
+    
+    const blob = new Blob([txtContent], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Download started",
+      description: `Downloading full bank as ${filename}`,
+    });
+  };
+
   const isProcessing = bleachMutation.isPending || sentenceBankMutation.isPending;
 
   return (
@@ -281,10 +337,52 @@ export default function Home() {
           <h1 className="text-xl font-bold">Semantic Bleacher</h1>
         </div>
         <div className="flex items-center gap-4">
-          <div className="flex items-center gap-2 text-sm text-muted-foreground" data-testid="bank-status">
-            <CircleStackIcon className="w-4 h-4" />
-            <span><strong className="text-foreground">{totalBankSize}</strong> patterns in bank</span>
-          </div>
+          <Dialog open={bankDialogOpen} onOpenChange={setBankDialogOpen}>
+            <DialogTrigger asChild>
+              <Button variant="ghost" size="sm" data-testid="button-view-bank">
+                <CircleStackIcon className="w-4 h-4 mr-2" />
+                <strong>{totalBankSize}</strong>&nbsp;patterns
+                <EyeIcon className="w-4 h-4 ml-2" />
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl max-h-[80vh] flex flex-col">
+              <DialogHeader>
+                <DialogTitle className="flex items-center justify-between">
+                  <span>Sentence Bank ({bankContentQuery.data?.count || 0} patterns)</span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleDownloadBankTxt}
+                    disabled={!bankContentQuery.data?.entries?.length}
+                    data-testid="button-download-bank-txt"
+                  >
+                    <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+                    Download TXT
+                  </Button>
+                </DialogTitle>
+              </DialogHeader>
+              <div className="flex-1 overflow-auto bg-muted/50 rounded-lg p-4 font-mono text-xs">
+                {bankContentQuery.isLoading ? (
+                  <div className="text-center text-muted-foreground py-8">Loading bank...</div>
+                ) : bankContentQuery.data?.entries?.length ? (
+                  <div className="space-y-4">
+                    {bankContentQuery.data.entries.map((entry, index) => (
+                      <div key={index} className="border-b border-border pb-3 last:border-0">
+                        <div className="text-muted-foreground mb-1">--- Pattern {index + 1} ---</div>
+                        <div><span className="text-muted-foreground">Original:</span> {entry.original}</div>
+                        <div><span className="text-muted-foreground">Bleached:</span> {entry.bleached}</div>
+                        <div className="text-muted-foreground text-[10px] mt-1">
+                          Chars: {entry.char_length} | Tokens: {entry.token_length} | Clauses: {entry.clause_count} | {entry.clause_order} | Punct: {entry.punctuation_pattern || '(none)'}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center text-muted-foreground py-8">Bank is empty. Generate some JSONL to add patterns.</div>
+                )}
+              </div>
+            </DialogContent>
+          </Dialog>
           <Button
             variant="outline"
             size="default"

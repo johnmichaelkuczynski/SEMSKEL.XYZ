@@ -185,6 +185,28 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get full sentence bank content
+  app.get("/api/sentence-bank", (req, res) => {
+    try {
+      if (!fs.existsSync(SENTENCE_BANK_PATH)) {
+        return res.json({ entries: [], count: 0 });
+      }
+      const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
+      const lines = content.split('\n').filter(line => line.trim());
+      const entries = lines.map(line => {
+        try {
+          return JSON.parse(line);
+        } catch {
+          return null;
+        }
+      }).filter(Boolean);
+      res.json({ entries, count: entries.length });
+    } catch (error) {
+      console.error("Error reading sentence bank:", error);
+      res.status(500).json({ error: "Failed to read sentence bank" });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;
