@@ -96,4 +96,5 @@ This produces human-like, detector-safe text with full content preservation.
 ### Important Notes
 - `apiRequest` returns a Response object that must be parsed with `.json()`
 - Replit AI Integration uses `AI_INTEGRATIONS_ANTHROPIC_BASE_URL` and `AI_INTEGRATIONS_ANTHROPIC_API_KEY`
-- Max input: 50,000 characters
+- Max input: 5 million characters (10MB payload limit)
+- Automatic chunking with rate limit handling for large texts

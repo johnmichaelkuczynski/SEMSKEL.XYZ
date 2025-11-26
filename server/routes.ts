@@ -57,10 +57,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = bleachRequestSchema.parse(req.body);
 
       // Check text length
-      if (validatedData.text.length > 50000) {
+      if (validatedData.text.length > 5000000) {
         return res.status(400).json({
           error: "Text too long",
-          message: "Please limit your text to 50,000 characters or less.",
+          message: "Please limit your text to 5 million characters or less.",
         });
       }
 
@@ -95,6 +95,47 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Helper: delay function
+  const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+
+  // Helper: process a single sentence with retry logic
+  async function processSentenceWithRetry(
+    sentence: string,
+    level: any,
+    maxRetries = 3
+  ): Promise<string | null> {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        const bleached = await bleachText(sentence, level);
+        
+        const entry = {
+          original: sentence,
+          bleached: bleached,
+          char_length: sentence.length,
+          token_length: countTokens(sentence),
+          clause_count: countClauses(sentence),
+          clause_order: getClauseOrder(sentence),
+          punctuation_pattern: extractPunctuationPattern(sentence),
+          structure: bleached
+        };
+        
+        return JSON.stringify(entry);
+      } catch (error: any) {
+        const isRateLimit = error?.status === 429 || error?.message?.includes('rate');
+        
+        if (isRateLimit && attempt < maxRetries) {
+          const waitTime = Math.pow(2, attempt) * 1000;
+          console.log(`Rate limited, waiting ${waitTime}ms before retry ${attempt + 1}/${maxRetries}`);
+          await delay(waitTime);
+        } else if (attempt === maxRetries) {
+          console.error(`Failed after ${maxRetries} attempts: ${sentence.substring(0, 50)}...`, error);
+          return null;
+        }
+      }
+    }
+    return null;
+  }
+
   // Sentence Bank API endpoint
   app.post("/api/build-sentence-bank", async (req, res) => {
     try {
@@ -109,44 +150,36 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      console.log(`Processing ${sentences.length} sentences in parallel batches...`);
+      const totalSentences = sentences.length;
+      console.log(`Processing ${totalSentences} sentences in chunked batches...`);
       
-      // Process sentences in parallel batches of 10
-      const BATCH_SIZE = 10;
+      // Process in smaller batches with delays to avoid rate limits
+      // Use batch size of 5 for better rate limit handling
+      const BATCH_SIZE = 5;
+      const DELAY_BETWEEN_BATCHES = 500; // 500ms between batches
       const results: string[] = [];
       
       for (let i = 0; i < sentences.length; i += BATCH_SIZE) {
         const batch = sentences.slice(i, i + BATCH_SIZE);
-        console.log(`Processing batch ${Math.floor(i/BATCH_SIZE) + 1}/${Math.ceil(sentences.length/BATCH_SIZE)} (${batch.length} sentences)`);
+        const batchNum = Math.floor(i / BATCH_SIZE) + 1;
+        const totalBatches = Math.ceil(sentences.length / BATCH_SIZE);
         
+        console.log(`Processing batch ${batchNum}/${totalBatches} (${batch.length} sentences, ${results.length}/${totalSentences} complete)`);
+        
+        // Process batch in parallel
         const batchResults = await Promise.all(
-          batch.map(async (sentence) => {
-            try {
-              const bleached = await bleachText(sentence, validatedData.level);
-              
-              const entry = {
-                original: sentence,
-                bleached: bleached,
-                char_length: sentence.length,
-                token_length: countTokens(sentence),
-                clause_count: countClauses(sentence),
-                clause_order: getClauseOrder(sentence),
-                punctuation_pattern: extractPunctuationPattern(sentence),
-                structure: bleached
-              };
-              
-              return JSON.stringify(entry);
-            } catch (error) {
-              console.error(`Error processing sentence: ${sentence}`, error);
-              return null;
-            }
-          })
+          batch.map(sentence => processSentenceWithRetry(sentence, validatedData.level))
         );
         
         results.push(...batchResults.filter((r): r is string => r !== null));
+        
+        // Add delay between batches to avoid rate limits (except for last batch)
+        if (i + BATCH_SIZE < sentences.length) {
+          await delay(DELAY_BETWEEN_BATCHES);
+        }
       }
       
-      console.log(`Completed processing ${results.length} sentences`);
+      console.log(`Completed processing ${results.length}/${totalSentences} sentences`);
       const jsonlContent = results.join('\n');
       
       // Save to sentence bank file (append)
@@ -154,7 +187,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       try {
         if (fs.existsSync(SENTENCE_BANK_PATH)) {
           fs.appendFileSync(SENTENCE_BANK_PATH, '\n' + jsonlContent, 'utf-8');
-          // Count total lines in bank
           const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
           totalBankSize = content.split('\n').filter(line => line.trim()).length;
         } else {

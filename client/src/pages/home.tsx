@@ -567,8 +567,8 @@ export default function Home() {
                 className="flex-1 h-11 text-base font-semibold"
                 data-testid="button-generate-jsonl"
               >
-                <DocumentTextIcon className="w-5 h-5 mr-2" />
-                {sentenceBankMutation.isPending ? "Generating..." : "Generate JSONL"}
+                <DocumentTextIcon className={`w-5 h-5 mr-2 ${sentenceBankMutation.isPending ? "animate-pulse" : ""}`} />
+                {sentenceBankMutation.isPending ? "Processing... (this may take a while)" : "Generate JSONL"}
               </Button>
             </div>
           </div>
