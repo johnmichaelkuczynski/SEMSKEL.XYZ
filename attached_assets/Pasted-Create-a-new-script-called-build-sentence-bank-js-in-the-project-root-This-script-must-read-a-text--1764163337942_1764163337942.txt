@@ -1,0 +1,92 @@
+Create a new script called build_sentence_bank.js in the project root.
+This script must read a text file that I upload, split it into sentences, bleach each sentence using my existing bleach(sentence) function, compute metadata, and write OUT a JSONL output file.
+A JSONL file is just a plain text file with one JSON object per line.
+Use the examples provided below to understand exactly what the output should look like.
+
+THE SCRIPT MUST DO THE FOLLOWING:
+1. Read input
+
+Read a file named input_document.txt from the project root.
+(I will upload this file manually.)
+
+2. Split into sentences
+
+Split the entire text into individual sentences.
+A simple period-based sentence split is fine.
+
+3. For each sentence, compute these fields exactly:
+
+original → the exact sentence text
+
+bleached → output of my existing function bleach(sentence)
+
+char_length → number of characters in the original sentence
+
+token_length → number of space-separated tokens in the original sentence
+
+clause_count → count how many of these words appear:
+when, because, although, if, while, since, but
+
+clause_order →
+If the sentence starts with a clause trigger word: "subordinate → main"
+Otherwise: "main → subordinate"
+
+punctuation_pattern → extract all punctuation characters in order
+
+structure → should be identical to the bleached version
+
+4. Write output file
+
+Create a file named:
+
+sentence_bank.jsonl
+
+in the project root.
+
+Each sentence must be written as one JSON object per line.
+
+Nothing else.
+No arrays.
+No brackets.
+No indentation.
+No surrounding JSON.
+Each line = one sentence.
+
+🔥 ABSOLUTE REQUIRED OUTPUT FORMAT (MULTIPLE EXAMPLES)
+
+The agent must study these examples and produce output exactly like them.
+
+EXAMPLE LINE 1
+{"original":"When the engine overheated, the system crashed.","bleached":"When X Y, Z.","char_length":49,"token_length":7,"clause_count":2,"clause_order":"subordinate → main","punctuation_pattern":",.","structure":"When X Y, Z."}
+
+EXAMPLE LINE 2
+{"original":"He left early.","bleached":"X V1-ed A1.","char_length":14,"token_length":3,"clause_count":1,"clause_order":"main → subordinate","punctuation_pattern":".","structure":"X V1-ed A1."}
+
+EXAMPLE LINE 3
+{"original":"Although the rain stopped, the streets stayed wet.","bleached":"Although X, Y.","char_length":53,"token_length":8,"clause_count":2,"clause_order":"subordinate → main","punctuation_pattern":",.","structure":"Although X, Y."}
+
+EXAMPLE LINE 4 (ANOTHER FORMAT)
+{"original":"People moved slowly through the streets.","bleached":"F1 V1-ed A1 through the F2.","char_length":43,"token_length":6,"clause_count":1,"clause_order":"main → subordinate","punctuation_pattern":".","structure":"F1 V1-ed A1 through the F2."}
+
+EXAMPLE LINE 5 (SIMPLE SENTENCE)
+{"original":"Nothing unusual happened.","bleached":"Nothing A1 V1-ed.","char_length":25,"token_length":3,"clause_count":1,"clause_order":"main → subordinate","punctuation_pattern":".","structure":"Nothing A1 V1-ed."}
+
+5. Final step
+
+After writing the file, the script must print:
+
+"Finished. Run: node build_sentence_bank.js"
+
+DO NOT:
+
+Do not modify the bleaching function.
+
+Do not change any existing project files except to add this new script.
+
+Do not wrap the JSON in arrays.
+
+Do not indent.
+
+Do not use multiline JSON.
+
+Do not include extra text.
