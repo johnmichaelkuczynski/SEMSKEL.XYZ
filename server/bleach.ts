@@ -56,7 +56,7 @@ PRESERVE: Common descriptive words, basic verbs, everyday nouns`;
 - Most content adjectives: "invidious" → "E", "primal" → "Ω8"
 - Most content verbs
 
-PRESERVE: Only function words (articles, preposations, conjunctions, pronouns), basic copulas (is, are, being, have, has), logical connectives`;
+PRESERVE: Only function words (articles, prepositions, conjunctions, pronouns), basic copulas (is, are, being, have, has), logical connectives`;
       break;
 
     case "Very Heavy":

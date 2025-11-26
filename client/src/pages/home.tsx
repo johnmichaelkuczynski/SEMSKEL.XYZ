@@ -27,7 +27,8 @@ export default function Home() {
   // Bleaching mutation
   const bleachMutation = useMutation({
     mutationFn: async (data: { text: string; level: BleachingLevel; filename?: string }) => {
-      return await apiRequest<BleachResponse>("POST", "/api/bleach", data);
+      const response = await apiRequest("POST", "/api/bleach", data);
+      return await response.json() as BleachResponse;
     },
     onSuccess: (data) => {
       setOutputText(data.bleachedText);
@@ -37,9 +38,10 @@ export default function Home() {
       });
     },
     onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "An error occurred while bleaching the text.";
       toast({
         title: "Bleaching failed",
-        description: error.message || "An error occurred while bleaching the text.",
+        description: errorMessage,
         variant: "destructive",
       });
     },
@@ -48,7 +50,7 @@ export default function Home() {
   // File upload handling
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
-    if (file && file.type === "text/plain") {
+    if (file && file.name.endsWith(".txt")) {
       const reader = new FileReader();
       reader.onload = (e) => {
         const text = e.target?.result as string;
