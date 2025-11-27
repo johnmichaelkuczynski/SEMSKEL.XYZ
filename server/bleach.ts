@@ -1,12 +1,10 @@
 // Anthropic integration for semantic bleaching
-// Using Replit's AI Integrations service (blueprint:javascript_anthropic_ai_integrations)
 import Anthropic from "@anthropic-ai/sdk";
 import type { BleachingLevel } from "@shared/schema";
 
-// Initialize Anthropic client with Replit AI Integrations
+// Initialize Anthropic client with your API key
 const anthropic = new Anthropic({
-  apiKey: process.env.AI_INTEGRATIONS_ANTHROPIC_API_KEY,
-  baseURL: process.env.AI_INTEGRATIONS_ANTHROPIC_BASE_URL,
+  apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
 // Build level-specific prompts based on specification
