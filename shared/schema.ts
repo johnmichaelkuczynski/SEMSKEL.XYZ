@@ -78,12 +78,12 @@ export type SentenceBankResponse = z.infer<typeof sentenceBankResponseSchema>;
 export const sentenceBankEntrySchema = z.object({
   original: z.string(),
   bleached: z.string(),
-  char_length: z.number(),
-  token_length: z.number(),
-  clause_count: z.number(),
-  clause_order: z.string(),
-  punctuation_pattern: z.string(),
-  structure: z.string(),
+  char_length: z.coerce.number(),
+  token_length: z.coerce.number(),
+  clause_count: z.coerce.number(),
+  clause_order: z.string().optional().default('main → subordinate'),
+  punctuation_pattern: z.string().optional().default(''),
+  structure: z.string().optional(),
 });
 
 export type SentenceBankEntry = z.infer<typeof sentenceBankEntrySchema>;

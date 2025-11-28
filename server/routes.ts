@@ -366,9 +366,9 @@ export async function registerRoutes(app: Express): Promise<Server> {
               charLength: validated.char_length,
               tokenLength: validated.token_length,
               clauseCount: validated.clause_count,
-              clauseOrder: validated.clause_order,
-              punctuationPattern: validated.punctuation_pattern,
-              structure: validated.structure,
+              clauseOrder: validated.clause_order || 'main → subordinate',
+              punctuationPattern: validated.punctuation_pattern || '',
+              structure: validated.structure || validated.bleached,
               userId: userId,
             });
           } catch (parseError) {
