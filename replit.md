@@ -32,11 +32,19 @@ After a match is found:
 
 This produces human-like, detector-safe text with full content preservation.
 
-## Current Status (November 26, 2025)
+## Current Status (November 28, 2025)
 
 **LAYER 1 COMPLETE** ✅
 **LAYER 2 COMPLETE** ✅
 **LARGE TEXT HANDLING COMPLETE** ✅
+**DATABASE & USER SYSTEM COMPLETE** ✅
+
+### Database Features:
+- PostgreSQL (Neon) database for persistent storage
+- Users table (simple username-only login, no password)
+- Sentence entries table with user association
+- Upload custom JSONL files to append to the bank
+- Per-user sentence tracking and stats
 
 ### Layer 1 Features:
 - Single-page UI with split panels (input | output)

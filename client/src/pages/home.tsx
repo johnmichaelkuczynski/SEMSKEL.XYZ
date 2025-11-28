@@ -7,6 +7,7 @@ import { Label } from "@/components/ui/label";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { apiRequest, queryClient } from "@/lib/queryClient";
@@ -18,9 +19,17 @@ import {
   SparklesIcon,
   DocumentTextIcon,
   CircleStackIcon,
-  EyeIcon
+  EyeIcon,
+  UserIcon,
+  ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
 import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult } from "@shared/schema";
+
+interface LoggedInUser {
+  id: number;
+  username: string;
+  createdAt: string;
+}
 
 interface BankEntry {
   original: string;
@@ -49,7 +58,23 @@ export default function Home() {
   const [aiUploadedFile, setAiUploadedFile] = useState<{ name: string } | null>(null);
   const [matchResults, setMatchResults] = useState<MatchResult[] | null>(null);
   const [matchStats, setMatchStats] = useState<{ total: number; matched: number } | null>(null);
+  const [currentUser, setCurrentUser] = useState<LoggedInUser | null>(null);
+  const [usernameInput, setUsernameInput] = useState("");
+  const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
+  const [uploadJsonlContent, setUploadJsonlContent] = useState("");
   const { toast } = useToast();
+
+  // Load user from localStorage on mount
+  useEffect(() => {
+    const savedUser = localStorage.getItem("semantic_bleacher_user");
+    if (savedUser) {
+      try {
+        setCurrentUser(JSON.parse(savedUser));
+      } catch {
+        localStorage.removeItem("semantic_bleacher_user");
+      }
+    }
+  }, []);
 
   // Fetch sentence bank status
   const bankStatusQuery = useQuery<{ count: number }>({
@@ -137,6 +162,57 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "An error occurred while matching.";
       toast({
         title: "Matching failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Login mutation
+  const loginMutation = useMutation({
+    mutationFn: async (username: string) => {
+      const response = await apiRequest("POST", "/api/login", { username });
+      return await response.json() as LoggedInUser;
+    },
+    onSuccess: (data) => {
+      setCurrentUser(data);
+      localStorage.setItem("semantic_bleacher_user", JSON.stringify(data));
+      setUsernameInput("");
+      toast({
+        title: `Welcome, ${data.username}!`,
+        description: "You can now upload your own sentence bank files.",
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "Login failed.";
+      toast({
+        title: "Login failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Upload JSONL mutation
+  const uploadMutation = useMutation({
+    mutationFn: async (data: { jsonlContent: string; userId?: number }) => {
+      const response = await apiRequest("POST", "/api/sentence-bank/upload", data);
+      return await response.json() as { uploadedCount: number; totalBankSize: number };
+    },
+    onSuccess: (data) => {
+      setTotalBankSize(data.totalBankSize);
+      setUploadJsonlContent("");
+      setUploadDialogOpen(false);
+      queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+      toast({
+        title: "Upload successful",
+        description: `Added ${data.uploadedCount} patterns. Bank now has ${data.totalBankSize} total.`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "Upload failed.";
+      toast({
+        title: "Upload failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -364,6 +440,58 @@ export default function Home() {
     setSentenceCount(0);
   };
 
+  const handleLogin = () => {
+    if (usernameInput.trim()) {
+      loginMutation.mutate(usernameInput.trim());
+    }
+  };
+
+  const handleLogout = () => {
+    setCurrentUser(null);
+    localStorage.removeItem("semantic_bleacher_user");
+    toast({
+      title: "Logged out",
+      description: "You've been logged out successfully.",
+    });
+  };
+
+  const handleUploadJsonl = () => {
+    if (!uploadJsonlContent.trim()) return;
+    uploadMutation.mutate({
+      jsonlContent: uploadJsonlContent,
+      userId: currentUser?.id,
+    });
+  };
+
+  // Dropzone for JSONL upload
+  const onUploadDrop = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0];
+    if (file && file.name.endsWith(".jsonl")) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const text = e.target?.result as string;
+        setUploadJsonlContent(text);
+        toast({
+          title: "File loaded",
+          description: `Loaded ${file.name} for upload`,
+        });
+      };
+      reader.readAsText(file);
+    } else {
+      toast({
+        title: "Invalid file",
+        description: "Please upload a .jsonl file",
+        variant: "destructive",
+      });
+    }
+  }, [toast]);
+
+  const { getRootProps: getUploadRootProps, getInputProps: getUploadInputProps, isDragActive: isUploadDragActive } = useDropzone({
+    onDrop: onUploadDrop,
+    accept: { "application/json": [".jsonl"] },
+    multiple: false,
+  });
+
   const handleDownloadBankTxt = () => {
     if (!bankContentQuery.data?.entries?.length) return;
     
@@ -411,6 +539,91 @@ export default function Home() {
           <h1 className="text-xl font-bold">Semantic Bleacher</h1>
         </div>
         <div className="flex items-center gap-4">
+          {/* Login Widget */}
+          {currentUser ? (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-muted-foreground">
+                <UserIcon className="w-4 h-4 inline mr-1" />
+                {currentUser.username}
+              </span>
+              <Button variant="ghost" size="sm" onClick={handleLogout} data-testid="button-logout">
+                <ArrowRightStartOnRectangleIcon className="w-4 h-4" />
+              </Button>
+            </div>
+          ) : (
+            <div className="flex items-center gap-2">
+              <Input
+                type="text"
+                placeholder="Username"
+                value={usernameInput}
+                onChange={(e) => setUsernameInput(e.target.value)}
+                onKeyDown={(e) => e.key === "Enter" && handleLogin()}
+                className="w-32 h-8 text-sm"
+                data-testid="input-username"
+              />
+              <Button 
+                variant="outline" 
+                size="sm" 
+                onClick={handleLogin}
+                disabled={!usernameInput.trim() || loginMutation.isPending}
+                data-testid="button-login"
+              >
+                {loginMutation.isPending ? "..." : "Login"}
+              </Button>
+            </div>
+          )}
+
+          {/* Upload Button (only when logged in) */}
+          {currentUser && (
+            <Dialog open={uploadDialogOpen} onOpenChange={setUploadDialogOpen}>
+              <DialogTrigger asChild>
+                <Button variant="outline" size="sm" data-testid="button-upload-bank">
+                  <ArrowUpTrayIcon className="w-4 h-4 mr-2" />
+                  Upload Bank
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>Upload Sentence Bank</DialogTitle>
+                </DialogHeader>
+                <div className="space-y-4">
+                  <div
+                    {...getUploadRootProps()}
+                    className={`h-24 border-2 border-dashed rounded-lg flex flex-col items-center justify-center cursor-pointer transition-colors hover-elevate ${
+                      isUploadDragActive ? "border-primary bg-primary/5" : "border-border"
+                    }`}
+                    data-testid="dropzone-upload-jsonl"
+                  >
+                    <input {...getUploadInputProps()} data-testid="input-upload-jsonl" />
+                    <ArrowUpTrayIcon className="w-6 h-6 text-muted-foreground mb-1" />
+                    <p className="text-sm text-muted-foreground">
+                      Drag a .jsonl file here or click to browse
+                    </p>
+                  </div>
+                  <Textarea
+                    value={uploadJsonlContent}
+                    onChange={(e) => setUploadJsonlContent(e.target.value)}
+                    placeholder="Or paste JSONL content here..."
+                    className="h-40 font-mono text-xs"
+                    data-testid="textarea-upload-jsonl"
+                  />
+                  <div className="flex justify-end gap-2">
+                    <Button variant="outline" onClick={() => setUploadDialogOpen(false)}>
+                      Cancel
+                    </Button>
+                    <Button 
+                      onClick={handleUploadJsonl}
+                      disabled={!uploadJsonlContent.trim() || uploadMutation.isPending}
+                      data-testid="button-confirm-upload"
+                    >
+                      {uploadMutation.isPending ? "Uploading..." : "Upload"}
+                    </Button>
+                  </div>
+                </div>
+              </DialogContent>
+            </Dialog>
+          )}
+
           <Dialog open={bankDialogOpen} onOpenChange={setBankDialogOpen}>
             <DialogTrigger asChild>
               <Button variant="ghost" size="sm" data-testid="button-view-bank">
