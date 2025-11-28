@@ -463,10 +463,10 @@ export default function Home() {
     });
   };
 
-  // Dropzone for JSONL upload
+  // Dropzone for JSONL/TXT upload
   const onUploadDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
-    if (file && file.name.endsWith(".jsonl")) {
+    if (file && (file.name.endsWith(".jsonl") || file.name.endsWith(".txt"))) {
       const reader = new FileReader();
       reader.onload = (e) => {
         const text = e.target?.result as string;
@@ -480,7 +480,7 @@ export default function Home() {
     } else {
       toast({
         title: "Invalid file",
-        description: "Please upload a .jsonl file",
+        description: "Please upload a .jsonl or .txt file",
         variant: "destructive",
       });
     }
@@ -488,7 +488,10 @@ export default function Home() {
 
   const { getRootProps: getUploadRootProps, getInputProps: getUploadInputProps, isDragActive: isUploadDragActive } = useDropzone({
     onDrop: onUploadDrop,
-    accept: { "application/json": [".jsonl"] },
+    accept: { 
+      "application/json": [".jsonl"],
+      "text/plain": [".txt"]
+    },
     multiple: false,
   });
 
@@ -525,6 +528,42 @@ export default function Home() {
     toast({
       title: "Download started",
       description: `Downloading full bank as ${filename}`,
+    });
+  };
+
+  const handleDownloadBankJsonl = () => {
+    if (!bankContentQuery.data?.entries?.length) return;
+    
+    const jsonlLines = bankContentQuery.data.entries.map((entry) => {
+      return JSON.stringify({
+        original: entry.original,
+        bleached: entry.bleached,
+        char_length: entry.char_length,
+        token_length: entry.token_length,
+        clause_count: entry.clause_count,
+        clause_order: entry.clause_order,
+        punctuation_pattern: entry.punctuation_pattern,
+        structure: entry.structure || entry.bleached,
+      });
+    });
+    
+    const jsonlContent = jsonlLines.join("\n");
+    const timestamp = Date.now();
+    const filename = `sentence_bank_${timestamp}.jsonl`;
+    
+    const blob = new Blob([jsonlContent], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Download started",
+      description: `Downloading bank as ${filename}`,
     });
   };
 
@@ -597,13 +636,13 @@ export default function Home() {
                     <input {...getUploadInputProps()} data-testid="input-upload-jsonl" />
                     <ArrowUpTrayIcon className="w-6 h-6 text-muted-foreground mb-1" />
                     <p className="text-sm text-muted-foreground">
-                      Drag a .jsonl file here or click to browse
+                      Drag a .jsonl or .txt file here or click to browse
                     </p>
                   </div>
                   <Textarea
                     value={uploadJsonlContent}
                     onChange={(e) => setUploadJsonlContent(e.target.value)}
-                    placeholder="Or paste JSONL content here..."
+                    placeholder="Or paste JSONL/TXT content here..."
                     className="h-40 font-mono text-xs"
                     data-testid="textarea-upload-jsonl"
                   />
@@ -636,6 +675,16 @@ export default function Home() {
               <DialogHeader>
                 <DialogTitle className="flex items-center justify-between">
                   <span>Sentence Bank ({bankContentQuery.data?.count || 0} patterns)</span>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleDownloadBankJsonl}
+                    disabled={!bankContentQuery.data?.entries?.length}
+                    data-testid="button-download-bank-jsonl"
+                  >
+                    <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+                    Download JSONL
+                  </Button>
                   <Button
                     variant="outline"
                     size="sm"

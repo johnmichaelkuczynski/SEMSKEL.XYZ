@@ -296,41 +296,96 @@ export async function registerRoutes(app: Express): Promise<Server> {
   });
 
   // Upload JSONL file to sentence bank
+  // Helper: Parse TXT format (readable format with "--- Pattern X ---")
+  function parseTxtFormat(content: string): { entries: InsertSentenceEntry[], errors: string[] } {
+    const entries: InsertSentenceEntry[] = [];
+    const errors: string[] = [];
+    
+    // Split by pattern markers
+    const patternBlocks = content.split(/---\s*Pattern\s*\d+\s*---/i).filter(block => block.trim());
+    
+    for (let i = 0; i < patternBlocks.length; i++) {
+      const block = patternBlocks[i];
+      
+      // Extract fields from each block
+      const originalMatch = block.match(/Original:\s*(.+?)(?:\n|$)/i);
+      const bleachedMatch = block.match(/Bleached:\s*(.+?)(?:\n|$)/i);
+      const statsMatch = block.match(/Chars:\s*(\d+)\s*\|\s*Tokens:\s*(\d+)\s*\|\s*Clauses:\s*(\d+)/i);
+      const clauseOrderMatch = block.match(/Clause Order:\s*(.+?)(?:\n|$)/i);
+      const punctMatch = block.match(/Punctuation:\s*(.+?)(?:\n|$)/i);
+      
+      if (originalMatch && bleachedMatch) {
+        const original = originalMatch[1].trim();
+        const bleached = bleachedMatch[1].trim();
+        
+        entries.push({
+          original,
+          bleached,
+          charLength: statsMatch ? parseInt(statsMatch[1]) : original.length,
+          tokenLength: statsMatch ? parseInt(statsMatch[2]) : original.split(/\s+/).length,
+          clauseCount: statsMatch ? parseInt(statsMatch[3]) : 1,
+          clauseOrder: clauseOrderMatch ? clauseOrderMatch[1].trim() : 'main → subordinate',
+          punctuationPattern: punctMatch && punctMatch[1].trim() !== '(none)' ? punctMatch[1].trim() : '',
+          structure: bleached,
+          userId: null,
+        });
+      } else if (block.trim() && !block.includes('SENTENCE BANK') && !block.includes('Total Patterns')) {
+        errors.push(`Block ${i + 1}: Missing Original or Bleached field`);
+      }
+    }
+    
+    return { entries, errors };
+  }
+
   app.post("/api/sentence-bank/upload", async (req, res) => {
     try {
       const { jsonlContent, filename } = uploadJsonlRequestSchema.parse(req.body);
       const userId = req.body.userId ? parseInt(req.body.userId) : null;
       
-      // Parse JSONL content
-      const lines = jsonlContent.split('\n').filter(line => line.trim());
       const entries: InsertSentenceEntry[] = [];
       const errors: string[] = [];
       
-      for (let i = 0; i < lines.length; i++) {
-        try {
-          const parsed = JSON.parse(lines[i]);
-          const validated = sentenceBankEntrySchema.parse(parsed);
-          
-          entries.push({
-            original: validated.original,
-            bleached: validated.bleached,
-            charLength: validated.char_length,
-            tokenLength: validated.token_length,
-            clauseCount: validated.clause_count,
-            clauseOrder: validated.clause_order,
-            punctuationPattern: validated.punctuation_pattern,
-            structure: validated.structure,
-            userId: userId,
-          });
-        } catch (parseError) {
-          errors.push(`Line ${i + 1}: Invalid entry`);
+      // Detect format: JSONL or TXT
+      const isJsonl = jsonlContent.trim().startsWith('{') || 
+        (jsonlContent.split('\n').filter(l => l.trim()).some(line => {
+          try { JSON.parse(line); return true; } catch { return false; }
+        }));
+      
+      if (isJsonl) {
+        // Parse JSONL content
+        const lines = jsonlContent.split('\n').filter(line => line.trim());
+        
+        for (let i = 0; i < lines.length; i++) {
+          try {
+            const parsed = JSON.parse(lines[i]);
+            const validated = sentenceBankEntrySchema.parse(parsed);
+            
+            entries.push({
+              original: validated.original,
+              bleached: validated.bleached,
+              charLength: validated.char_length,
+              tokenLength: validated.token_length,
+              clauseCount: validated.clause_count,
+              clauseOrder: validated.clause_order,
+              punctuationPattern: validated.punctuation_pattern,
+              structure: validated.structure,
+              userId: userId,
+            });
+          } catch (parseError) {
+            errors.push(`Line ${i + 1}: Invalid entry`);
+          }
         }
+      } else {
+        // Parse TXT format
+        const result = parseTxtFormat(jsonlContent);
+        entries.push(...result.entries.map(e => ({ ...e, userId })));
+        errors.push(...result.errors);
       }
       
       if (entries.length === 0) {
         return res.status(400).json({
           error: "No valid entries",
-          message: "Could not parse any valid entries from the JSONL file.",
+          message: "Could not parse any valid entries from the file.",
           errors,
         });
       }
