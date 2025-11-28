@@ -1,10 +1,9 @@
 // Matching Engine for finding best human sentence pattern
 // Step 2 of the humanizer pipeline
 
-import * as fs from "fs";
-import * as path from "path";
 import { bleachText } from "./bleach";
-import type { BleachingLevel, SentenceBankEntry } from "@shared/schema";
+import { storage } from "./storage";
+import type { BleachingLevel, SentenceBankEntry, SentenceEntry } from "@shared/schema";
 
 // Re-export for convenience
 export type { SentenceBankEntry };
@@ -59,24 +58,29 @@ function extractPunctuationPattern(sentence: string): string {
 }
 
 // ============================================
-// SENTENCE BANK LOADING
+// SENTENCE BANK LOADING (from database)
 // ============================================
 
-const SENTENCE_BANK_PATH = path.join(process.cwd(), "sentence_bank.jsonl");
+// Convert database entry to SentenceBankEntry format
+function dbEntryToSentenceBankEntry(entry: SentenceEntry): SentenceBankEntry {
+  return {
+    original: entry.original,
+    bleached: entry.bleached,
+    char_length: entry.charLength,
+    token_length: entry.tokenLength,
+    clause_count: entry.clauseCount,
+    clause_order: entry.clauseOrder,
+    punctuation_pattern: entry.punctuationPattern,
+    structure: entry.structure,
+  };
+}
 
-export function loadSentenceBank(): SentenceBankEntry[] {
+export async function loadSentenceBank(): Promise<SentenceBankEntry[]> {
   try {
-    if (!fs.existsSync(SENTENCE_BANK_PATH)) {
-      console.warn("sentence_bank.jsonl not found. Creating empty bank.");
-      return [];
-    }
-
-    const content = fs.readFileSync(SENTENCE_BANK_PATH, "utf-8");
-    const lines = content.split("\n").filter((line) => line.trim());
-
-    return lines.map((line) => JSON.parse(line) as SentenceBankEntry);
+    const entries = await storage.getAllSentenceEntries();
+    return entries.map(dbEntryToSentenceBankEntry);
   } catch (error) {
-    console.error("Error loading sentence bank:", error);
+    console.error("Error loading sentence bank from database:", error);
     return [];
   }
 }
@@ -252,8 +256,8 @@ export async function findBestMatch(
   sentence: string,
   level: BleachingLevel = "Heavy"
 ): Promise<SentenceBankEntry | null> {
-  // Step 1: Load the sentence bank
-  const bank = loadSentenceBank();
+  // Step 1: Load the sentence bank from database
+  const bank = await loadSentenceBank();
 
   if (bank.length === 0) {
     console.warn("Sentence bank is empty. Cannot find match.");
@@ -311,19 +315,4 @@ export async function findBestMatch(
   }
 
   return bestMatch;
-}
-
-// ============================================
-// APPEND TO SENTENCE BANK (utility for saving)
-// ============================================
-
-export function appendToSentenceBank(entries: SentenceBankEntry[]): void {
-  const lines = entries.map((entry) => JSON.stringify(entry)).join("\n");
-  const content = fs.existsSync(SENTENCE_BANK_PATH)
-    ? fs.readFileSync(SENTENCE_BANK_PATH, "utf-8")
-    : "";
-
-  const newContent = content ? content + "\n" + lines : lines;
-  fs.writeFileSync(SENTENCE_BANK_PATH, newContent, "utf-8");
-  console.log(`Appended ${entries.length} entries to sentence bank`);
 }

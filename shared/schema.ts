@@ -1,4 +1,40 @@
 import { z } from "zod";
+import { pgTable, text, serial, integer, timestamp, varchar } from "drizzle-orm/pg-core";
+import { createInsertSchema } from "drizzle-zod";
+
+// ==================== DATABASE TABLES ====================
+
+// Users table - simple username-only auth
+export const users = pgTable("users", {
+  id: serial("id").primaryKey(),
+  username: varchar("username", { length: 100 }).notNull().unique(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertUserSchema = createInsertSchema(users).omit({ id: true, createdAt: true });
+export type InsertUser = z.infer<typeof insertUserSchema>;
+export type User = typeof users.$inferSelect;
+
+// Sentence entries table - stores sentence bank data
+export const sentenceEntries = pgTable("sentence_entries", {
+  id: serial("id").primaryKey(),
+  original: text("original").notNull(),
+  bleached: text("bleached").notNull(),
+  charLength: integer("char_length").notNull(),
+  tokenLength: integer("token_length").notNull(),
+  clauseCount: integer("clause_count").notNull(),
+  clauseOrder: text("clause_order").notNull(),
+  punctuationPattern: text("punctuation_pattern").notNull(),
+  structure: text("structure").notNull(),
+  userId: integer("user_id").references(() => users.id),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertSentenceEntrySchema = createInsertSchema(sentenceEntries).omit({ id: true, createdAt: true });
+export type InsertSentenceEntry = z.infer<typeof insertSentenceEntrySchema>;
+export type SentenceEntry = typeof sentenceEntries.$inferSelect;
+
+// ==================== API SCHEMAS ====================
 
 // Bleaching level options
 export const bleachingLevels = ["Light", "Moderate", "Moderate-Heavy", "Heavy", "Very Heavy"] as const;
@@ -85,3 +121,18 @@ export const matchResponseSchema = z.object({
 });
 
 export type MatchResponse = z.infer<typeof matchResponseSchema>;
+
+// Login request schema
+export const loginRequestSchema = z.object({
+  username: z.string().min(1, "Username is required").max(100, "Username too long"),
+});
+
+export type LoginRequest = z.infer<typeof loginRequestSchema>;
+
+// Upload JSONL request schema  
+export const uploadJsonlRequestSchema = z.object({
+  jsonlContent: z.string().min(1, "JSONL content is required"),
+  filename: z.string().optional(),
+});
+
+export type UploadJsonlRequest = z.infer<typeof uploadJsonlRequestSchema>;

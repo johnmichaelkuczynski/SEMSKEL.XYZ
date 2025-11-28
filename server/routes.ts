@@ -1,13 +1,18 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
-import * as fs from "fs";
-import * as path from "path";
 import { bleachText } from "./bleach";
-import { bleachRequestSchema, sentenceBankRequestSchema, matchRequestSchema } from "@shared/schema";
+import { storage } from "./storage";
+import { 
+  bleachRequestSchema, 
+  sentenceBankRequestSchema, 
+  matchRequestSchema,
+  loginRequestSchema,
+  uploadJsonlRequestSchema,
+  sentenceBankEntrySchema,
+  type InsertSentenceEntry,
+} from "@shared/schema";
 import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
 import { z } from "zod";
-
-const SENTENCE_BANK_PATH = path.join(process.cwd(), "sentence_bank.jsonl");
 
 const CLAUSE_TRIGGERS = ['when', 'because', 'although', 'if', 'while', 'since', 'but'];
 
@@ -50,51 +55,6 @@ function countTokens(sentence: string): number {
 }
 
 export async function registerRoutes(app: Express): Promise<Server> {
-  // Bleaching API endpoint
-  app.post("/api/bleach", async (req, res) => {
-    try {
-      // Validate request body
-      const validatedData = bleachRequestSchema.parse(req.body);
-
-      // Check text length
-      if (validatedData.text.length > 5000000) {
-        return res.status(400).json({
-          error: "Text too long",
-          message: "Please limit your text to 5 million characters or less.",
-        });
-      }
-
-      // Perform bleaching
-      const bleachedText = await bleachText(
-        validatedData.text,
-        validatedData.level
-      );
-
-      // Return result
-      res.json({
-        bleachedText,
-        originalFilename: validatedData.filename,
-      });
-    } catch (error) {
-      console.error("Bleaching API error:", error);
-
-      if (error instanceof z.ZodError) {
-        return res.status(400).json({
-          error: "Validation error",
-          message: error.errors.map((e) => e.message).join(", "),
-        });
-      }
-
-      res.status(500).json({
-        error: "Bleaching failed",
-        message:
-          error instanceof Error
-            ? error.message
-            : "An unexpected error occurred.",
-      });
-    }
-  });
-
   // Helper: delay function
   const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -103,23 +63,22 @@ export async function registerRoutes(app: Express): Promise<Server> {
     sentence: string,
     level: any,
     maxRetries = 3
-  ): Promise<string | null> {
+  ): Promise<InsertSentenceEntry | null> {
     for (let attempt = 1; attempt <= maxRetries; attempt++) {
       try {
         const bleached = await bleachText(sentence, level);
         
-        const entry = {
+        return {
           original: sentence,
           bleached: bleached,
-          char_length: sentence.length,
-          token_length: countTokens(sentence),
-          clause_count: countClauses(sentence),
-          clause_order: getClauseOrder(sentence),
-          punctuation_pattern: extractPunctuationPattern(sentence),
-          structure: bleached
+          charLength: sentence.length,
+          tokenLength: countTokens(sentence),
+          clauseCount: countClauses(sentence),
+          clauseOrder: getClauseOrder(sentence),
+          punctuationPattern: extractPunctuationPattern(sentence),
+          structure: bleached,
+          userId: null,
         };
-        
-        return JSON.stringify(entry);
       } catch (error: any) {
         const errorMessage = (error?.message || '').toLowerCase();
         const isRateLimit = error?.status === 429 || 
@@ -140,10 +99,114 @@ export async function registerRoutes(app: Express): Promise<Server> {
     return null;
   }
 
-  // Sentence Bank API endpoint
+  // ==================== AUTH ENDPOINTS ====================
+
+  // Login/Register endpoint (simple username-only auth)
+  app.post("/api/login", async (req, res) => {
+    try {
+      const { username } = loginRequestSchema.parse(req.body);
+      
+      // Check if user exists, create if not
+      let user = await storage.getUserByUsername(username);
+      
+      if (!user) {
+        user = await storage.createUser({ username });
+        console.log(`Created new user: ${username}`);
+      } else {
+        console.log(`User logged in: ${username}`);
+      }
+      
+      res.json({
+        id: user.id,
+        username: user.username,
+        createdAt: user.createdAt,
+      });
+    } catch (error) {
+      console.error("Login error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Login failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Get user stats
+  app.get("/api/user/:username/stats", async (req, res) => {
+    try {
+      const user = await storage.getUserByUsername(req.params.username);
+      
+      if (!user) {
+        return res.status(404).json({ error: "User not found" });
+      }
+      
+      const sentenceCount = await storage.getUserSentenceCount(user.id);
+      
+      res.json({
+        username: user.username,
+        sentenceCount,
+        createdAt: user.createdAt,
+      });
+    } catch (error) {
+      console.error("User stats error:", error);
+      res.status(500).json({ error: "Failed to get user stats" });
+    }
+  });
+
+  // ==================== BLEACHING ENDPOINTS ====================
+
+  // Bleaching API endpoint
+  app.post("/api/bleach", async (req, res) => {
+    try {
+      const validatedData = bleachRequestSchema.parse(req.body);
+
+      if (validatedData.text.length > 5000000) {
+        return res.status(400).json({
+          error: "Text too long",
+          message: "Please limit your text to 5 million characters or less.",
+        });
+      }
+
+      const bleachedText = await bleachText(
+        validatedData.text,
+        validatedData.level
+      );
+
+      res.json({
+        bleachedText,
+        originalFilename: validatedData.filename,
+      });
+    } catch (error) {
+      console.error("Bleaching API error:", error);
+
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+
+      res.status(500).json({
+        error: "Bleaching failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // ==================== SENTENCE BANK ENDPOINTS ====================
+
+  // Sentence Bank API endpoint (build from text)
   app.post("/api/build-sentence-bank", async (req, res) => {
     try {
       const validatedData = sentenceBankRequestSchema.parse(req.body);
+      const userId = req.body.userId ? parseInt(req.body.userId) : null;
       
       const sentences = splitIntoSentences(validatedData.text);
       
@@ -157,53 +220,62 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const totalSentences = sentences.length;
       console.log(`Processing ${totalSentences} sentences in chunked batches...`);
       
-      // Process in smaller batches with delays to avoid rate limits
-      // Use batch size of 5 for better rate limit handling
       const BATCH_SIZE = 5;
-      const DELAY_BETWEEN_BATCHES = 500; // 500ms between batches
-      const results: string[] = [];
+      const DELAY_BETWEEN_BATCHES = 500;
+      const entries: InsertSentenceEntry[] = [];
       
       for (let i = 0; i < sentences.length; i += BATCH_SIZE) {
         const batch = sentences.slice(i, i + BATCH_SIZE);
         const batchNum = Math.floor(i / BATCH_SIZE) + 1;
         const totalBatches = Math.ceil(sentences.length / BATCH_SIZE);
         
-        console.log(`Processing batch ${batchNum}/${totalBatches} (${batch.length} sentences, ${results.length}/${totalSentences} complete)`);
+        console.log(`Processing batch ${batchNum}/${totalBatches} (${batch.length} sentences, ${entries.length}/${totalSentences} complete)`);
         
-        // Process batch in parallel
         const batchResults = await Promise.all(
           batch.map(sentence => processSentenceWithRetry(sentence, validatedData.level))
         );
         
-        results.push(...batchResults.filter((r): r is string => r !== null));
+        const validResults = batchResults.filter((r): r is InsertSentenceEntry => r !== null);
         
-        // Add delay between batches to avoid rate limits (except for last batch)
+        // Associate with user if logged in
+        if (userId) {
+          validResults.forEach(entry => entry.userId = userId);
+        }
+        
+        entries.push(...validResults);
+        
         if (i + BATCH_SIZE < sentences.length) {
           await delay(DELAY_BETWEEN_BATCHES);
         }
       }
       
-      console.log(`Completed processing ${results.length}/${totalSentences} sentences`);
-      const jsonlContent = results.join('\n');
+      console.log(`Completed processing ${entries.length}/${totalSentences} sentences`);
       
-      // Save to sentence bank file (append)
-      let totalBankSize = results.length;
+      // Save to database
+      let totalBankSize = 0;
       try {
-        if (fs.existsSync(SENTENCE_BANK_PATH)) {
-          fs.appendFileSync(SENTENCE_BANK_PATH, '\n' + jsonlContent, 'utf-8');
-          const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
-          totalBankSize = content.split('\n').filter(line => line.trim()).length;
-        } else {
-          fs.writeFileSync(SENTENCE_BANK_PATH, jsonlContent, 'utf-8');
-        }
-        console.log(`Saved ${results.length} entries to sentence bank. Total: ${totalBankSize}`);
-      } catch (fileError) {
-        console.error("Error saving to sentence bank file:", fileError);
+        await storage.addSentenceEntries(entries);
+        totalBankSize = await storage.getSentenceEntryCount();
+        console.log(`Saved ${entries.length} entries to database. Total: ${totalBankSize}`);
+      } catch (dbError) {
+        console.error("Error saving to database:", dbError);
       }
+      
+      // Generate JSONL for display
+      const jsonlContent = entries.map(entry => JSON.stringify({
+        original: entry.original,
+        bleached: entry.bleached,
+        char_length: entry.charLength,
+        token_length: entry.tokenLength,
+        clause_count: entry.clauseCount,
+        clause_order: entry.clauseOrder,
+        punctuation_pattern: entry.punctuationPattern,
+        structure: entry.structure,
+      })).join('\n');
       
       res.json({
         jsonlContent,
-        sentenceCount: results.length,
+        sentenceCount: entries.length,
         totalBankSize,
       });
     } catch (error) {
@@ -223,41 +295,144 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Get sentence bank status
-  app.get("/api/sentence-bank/status", (req, res) => {
+  // Upload JSONL file to sentence bank
+  app.post("/api/sentence-bank/upload", async (req, res) => {
     try {
-      if (!fs.existsSync(SENTENCE_BANK_PATH)) {
-        return res.json({ count: 0 });
+      const { jsonlContent, filename } = uploadJsonlRequestSchema.parse(req.body);
+      const userId = req.body.userId ? parseInt(req.body.userId) : null;
+      
+      // Parse JSONL content
+      const lines = jsonlContent.split('\n').filter(line => line.trim());
+      const entries: InsertSentenceEntry[] = [];
+      const errors: string[] = [];
+      
+      for (let i = 0; i < lines.length; i++) {
+        try {
+          const parsed = JSON.parse(lines[i]);
+          const validated = sentenceBankEntrySchema.parse(parsed);
+          
+          entries.push({
+            original: validated.original,
+            bleached: validated.bleached,
+            charLength: validated.char_length,
+            tokenLength: validated.token_length,
+            clauseCount: validated.clause_count,
+            clauseOrder: validated.clause_order,
+            punctuationPattern: validated.punctuation_pattern,
+            structure: validated.structure,
+            userId: userId,
+          });
+        } catch (parseError) {
+          errors.push(`Line ${i + 1}: Invalid entry`);
+        }
       }
-      const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
-      const count = content.split('\n').filter(line => line.trim()).length;
+      
+      if (entries.length === 0) {
+        return res.status(400).json({
+          error: "No valid entries",
+          message: "Could not parse any valid entries from the JSONL file.",
+          errors,
+        });
+      }
+      
+      // Save to database
+      const insertedCount = await storage.addSentenceEntries(entries);
+      const totalBankSize = await storage.getSentenceEntryCount();
+      
+      console.log(`Uploaded ${insertedCount} entries from ${filename || 'file'}. Total: ${totalBankSize}`);
+      
+      res.json({
+        message: "Upload successful",
+        uploadedCount: entries.length,
+        totalBankSize,
+        errors: errors.length > 0 ? errors : undefined,
+      });
+    } catch (error) {
+      console.error("Upload error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Upload failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Get sentence bank status
+  app.get("/api/sentence-bank/status", async (req, res) => {
+    try {
+      const count = await storage.getSentenceEntryCount();
       res.json({ count });
     } catch (error) {
+      console.error("Error getting bank status:", error);
       res.json({ count: 0 });
     }
   });
 
   // Get full sentence bank content
-  app.get("/api/sentence-bank", (req, res) => {
+  app.get("/api/sentence-bank", async (req, res) => {
     try {
-      if (!fs.existsSync(SENTENCE_BANK_PATH)) {
-        return res.json({ entries: [], count: 0 });
-      }
-      const content = fs.readFileSync(SENTENCE_BANK_PATH, 'utf-8');
-      const lines = content.split('\n').filter(line => line.trim());
-      const entries = lines.map(line => {
-        try {
-          return JSON.parse(line);
-        } catch {
-          return null;
-        }
-      }).filter(Boolean);
-      res.json({ entries, count: entries.length });
+      const entries = await storage.getAllSentenceEntries();
+      
+      // Convert to expected format
+      const formattedEntries = entries.map(entry => ({
+        original: entry.original,
+        bleached: entry.bleached,
+        char_length: entry.charLength,
+        token_length: entry.tokenLength,
+        clause_count: entry.clauseCount,
+        clause_order: entry.clauseOrder,
+        punctuation_pattern: entry.punctuationPattern,
+        structure: entry.structure,
+      }));
+      
+      res.json({ entries: formattedEntries, count: entries.length });
     } catch (error) {
       console.error("Error reading sentence bank:", error);
       res.status(500).json({ error: "Failed to read sentence bank" });
     }
   });
+
+  // Get user's sentence bank entries
+  app.get("/api/sentence-bank/user/:username", async (req, res) => {
+    try {
+      const user = await storage.getUserByUsername(req.params.username);
+      
+      if (!user) {
+        return res.status(404).json({ error: "User not found" });
+      }
+      
+      const entries = await storage.getSentenceEntriesByUser(user.id);
+      
+      const formattedEntries = entries.map(entry => ({
+        original: entry.original,
+        bleached: entry.bleached,
+        char_length: entry.charLength,
+        token_length: entry.tokenLength,
+        clause_count: entry.clauseCount,
+        clause_order: entry.clauseOrder,
+        punctuation_pattern: entry.punctuationPattern,
+        structure: entry.structure,
+      }));
+      
+      res.json({ 
+        username: user.username,
+        entries: formattedEntries, 
+        count: entries.length 
+      });
+    } catch (error) {
+      console.error("Error reading user sentence bank:", error);
+      res.status(500).json({ error: "Failed to read user sentence bank" });
+    }
+  });
+
+  // ==================== MATCHING ENDPOINTS ====================
 
   // Match AI text to human patterns (Step 2)
   app.post("/api/match", async (req, res) => {
@@ -265,7 +440,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const validatedData = matchRequestSchema.parse(req.body);
       
       // Check sentence bank exists
-      const bank = loadSentenceBank();
+      const bank = await loadSentenceBank();
       if (bank.length === 0) {
         return res.status(400).json({
           error: "Empty sentence bank",
@@ -285,7 +460,6 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       console.log(`Matching ${sentences.length} AI sentences against ${bank.length} patterns...`);
       
-      // Process sentences in parallel batches
       const BATCH_SIZE = 5;
       const matches: Array<{
         original: string;
