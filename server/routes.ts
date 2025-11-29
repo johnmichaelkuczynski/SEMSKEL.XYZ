@@ -10,11 +10,16 @@ import {
   uploadJsonlRequestSchema,
   sentenceBankEntrySchema,
   humanizeRequestSchema,
+  gptzeroRequestSchema,
   type InsertSentenceEntry,
 } from "@shared/schema";
 import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
 import { humanizeText } from "./humanizer";
 import { z } from "zod";
+
+// GPTZero API configuration
+const GPTZERO_API_URL = "https://api.gptzero.me/v2/predict/text";
+const GPTZERO_API_KEY = process.env.GPTZERO_API_KEY;
 
 const CLAUSE_TRIGGERS = ['when', 'because', 'although', 'if', 'while', 'since', 'but'];
 
@@ -625,6 +630,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         clauseCount: c.clauseCount,
         clauseOrder: c.clauseOrder,
         punctuationPattern: c.punctuationPattern,
+        char_length: c.charLength,
+        token_length: c.tokenLength,
+        clause_count: c.clauseCount,
+        clause_order: c.clauseOrder,
+        punctuation_pattern: c.punctuationPattern,
       }));
       
       if (prefilteredCandidates) {
@@ -648,6 +658,83 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.status(500).json({
         error: "Humanization failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // ==================== GPTZERO AI DETECTION ====================
+
+  // GPTZero AI detection endpoint
+  app.post("/api/detect-ai", async (req, res) => {
+    try {
+      if (!GPTZERO_API_KEY) {
+        return res.status(500).json({
+          error: "GPTZero API key not configured",
+          message: "Please add your GPTZERO_API_KEY to secrets.",
+        });
+      }
+
+      const { text } = gptzeroRequestSchema.parse(req.body);
+
+      console.log(`Running GPTZero detection on ${text.length} chars`);
+
+      const response = await fetch(GPTZERO_API_URL, {
+        method: "POST",
+        headers: {
+          "Accept": "application/json",
+          "Content-Type": "application/json",
+          "x-api-key": GPTZERO_API_KEY,
+        },
+        body: JSON.stringify({
+          document: text,
+          multilingual: false,
+        }),
+      });
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error("GPTZero API error:", response.status, errorText);
+        return res.status(response.status).json({
+          error: "GPTZero API error",
+          message: `API returned ${response.status}: ${errorText}`,
+        });
+      }
+
+      const data = await response.json();
+      console.log("GPTZero response:", JSON.stringify(data).substring(0, 200));
+
+      // Extract relevant fields from GPTZero response
+      const result = {
+        documentClassification: data.documents?.[0]?.class_probabilities ? 
+          (data.documents[0].completely_generated_prob > 0.7 ? "AI_ONLY" :
+           data.documents[0].completely_generated_prob > 0.3 ? "MIXED" : "HUMAN_ONLY") :
+          (data.completely_generated_prob > 0.7 ? "AI_ONLY" :
+           data.completely_generated_prob > 0.3 ? "MIXED" : "HUMAN_ONLY"),
+        averageGeneratedProb: data.documents?.[0]?.average_generated_prob ?? data.average_generated_prob ?? 0,
+        completelyGeneratedProb: data.documents?.[0]?.completely_generated_prob ?? data.completely_generated_prob ?? 0,
+        confidenceCategory: data.documents?.[0]?.confidence_category ?? data.confidence_category ?? "unknown",
+        sentences: data.documents?.[0]?.sentences?.map((s: any) => ({
+          sentence: s.sentence,
+          generatedProb: s.generated_prob,
+          perplexity: s.perplexity,
+          highlightForAi: s.highlight_sentence_for_ai ?? (s.generated_prob > 0.5),
+        })) ?? [],
+      };
+
+      res.json(result);
+    } catch (error) {
+      console.error("AI detection error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "AI detection failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
       });
     }

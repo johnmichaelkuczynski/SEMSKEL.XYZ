@@ -23,7 +23,8 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse } from "@shared/schema";
+import { ShieldCheckIcon } from "@heroicons/react/24/solid";
 
 interface LoggedInUser {
   id: number;
@@ -64,6 +65,7 @@ export default function Home() {
   const [usernameInput, setUsernameInput] = useState("");
   const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
   const [uploadJsonlContent, setUploadJsonlContent] = useState("");
+  const [aiDetectionResult, setAiDetectionResult] = useState<GPTZeroResponse | null>(null);
   const { toast } = useToast();
 
   // Load user from localStorage on mount
@@ -188,6 +190,31 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "An error occurred while humanizing.";
       toast({
         title: "Humanization failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // AI Detection mutation (GPTZero)
+  const aiDetectMutation = useMutation({
+    mutationFn: async (text: string) => {
+      const response = await apiRequest("POST", "/api/detect-ai", { text });
+      return await response.json() as GPTZeroResponse;
+    },
+    onSuccess: (data) => {
+      setAiDetectionResult(data);
+      const classification = data.documentClassification;
+      const prob = Math.round(data.completelyGeneratedProb * 100);
+      toast({
+        title: `Detection: ${classification.replace("_", " ")}`,
+        description: `${prob}% AI probability (${data.confidenceCategory} confidence)`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "AI detection failed.";
+      toast({
+        title: "Detection failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -330,6 +357,19 @@ export default function Home() {
       text: aiTextInput,
       level: bleachingLevel,
     });
+  };
+
+  const handleDetectAI = () => {
+    if (!humanizeResults || humanizeResults.length === 0) {
+      toast({
+        title: "No text to analyze",
+        description: "Humanize your text first before running AI detection.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
+    aiDetectMutation.mutate(humanizedText);
   };
 
   const handleCopyHumanized = async () => {
@@ -1247,6 +1287,38 @@ export default function Home() {
                     </div>
                   </div>
                   
+                  {/* AI Detector Button */}
+                  <div className="flex items-center justify-between mb-4">
+                    <Button
+                      onClick={handleDetectAI}
+                      disabled={aiDetectMutation.isPending}
+                      variant="outline"
+                      className="gap-2"
+                      data-testid="button-detect-ai"
+                    >
+                      <ShieldCheckIcon className="w-4 h-4" />
+                      {aiDetectMutation.isPending ? "Detecting..." : "AI Detector (GPTZero)"}
+                    </Button>
+                    
+                    {aiDetectionResult && (
+                      <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium ${
+                        aiDetectionResult.documentClassification === "HUMAN_ONLY" 
+                          ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
+                          : aiDetectionResult.documentClassification === "MIXED"
+                          ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
+                          : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
+                      }`} data-testid="ai-detection-result">
+                        <span>
+                          {aiDetectionResult.documentClassification === "HUMAN_ONLY" ? "Human" :
+                           aiDetectionResult.documentClassification === "MIXED" ? "Mixed" : "AI Detected"}
+                        </span>
+                        <span className="text-xs opacity-75">
+                          ({Math.round(aiDetectionResult.completelyGeneratedProb * 100)}% AI)
+                        </span>
+                      </div>
+                    )}
+                  </div>
+
                   {/* Combined humanized text */}
                   <div className="bg-primary/5 rounded-lg p-4 mb-4">
                     <p className="text-xs text-primary font-medium mb-2">HUMANIZED OUTPUT</p>

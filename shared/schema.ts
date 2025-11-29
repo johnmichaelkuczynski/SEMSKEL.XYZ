@@ -197,3 +197,26 @@ export const uploadJsonlRequestSchema = z.object({
 });
 
 export type UploadJsonlRequest = z.infer<typeof uploadJsonlRequestSchema>;
+
+// GPTZero AI detection request schema
+export const gptzeroRequestSchema = z.object({
+  text: z.string().min(1, "Text is required"),
+});
+
+export type GPTZeroRequest = z.infer<typeof gptzeroRequestSchema>;
+
+// GPTZero AI detection response schema
+export const gptzeroResponseSchema = z.object({
+  documentClassification: z.enum(["HUMAN_ONLY", "MIXED", "AI_ONLY"]),
+  averageGeneratedProb: z.number(),
+  completelyGeneratedProb: z.number(),
+  confidenceCategory: z.string(),
+  sentences: z.array(z.object({
+    sentence: z.string(),
+    generatedProb: z.number(),
+    perplexity: z.number(),
+    highlightForAi: z.boolean(),
+  })).optional(),
+});
+
+export type GPTZeroResponse = z.infer<typeof gptzeroResponseSchema>;
