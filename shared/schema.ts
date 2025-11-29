@@ -129,6 +129,50 @@ export const loginRequestSchema = z.object({
 
 export type LoginRequest = z.infer<typeof loginRequestSchema>;
 
+// ==================== HUMANIZER SCHEMAS (Step 3) ====================
+
+// Humanize request schema
+export const humanizeRequestSchema = z.object({
+  text: z.string().min(1, "Text is required"),
+  level: z.enum(bleachingLevels).optional().default("Heavy"),
+});
+
+export type HumanizeRequest = z.infer<typeof humanizeRequestSchema>;
+
+// Matched pattern in response
+export const matchedPatternSchema = z.object({
+  original: z.string(),
+  bleached: z.string(),
+  score: z.number(),
+  rank: z.number(),
+});
+
+export type MatchedPattern = z.infer<typeof matchedPatternSchema>;
+
+// Individual humanized sentence result
+export const humanizedSentenceSchema = z.object({
+  aiSentence: z.string(),
+  matchedPatterns: z.array(matchedPatternSchema),
+  humanizedRewrite: z.string(),
+  bestPattern: z.object({
+    original: z.string(),
+    bleached: z.string(),
+    score: z.number(),
+  }),
+});
+
+export type HumanizedSentence = z.infer<typeof humanizedSentenceSchema>;
+
+// Humanize response schema
+export const humanizeResponseSchema = z.object({
+  sentences: z.array(humanizedSentenceSchema),
+  totalSentences: z.number(),
+  successfulRewrites: z.number(),
+  bankSize: z.number(),
+});
+
+export type HumanizeResponse = z.infer<typeof humanizeResponseSchema>;
+
 // Upload JSONL request schema  
 export const uploadJsonlRequestSchema = z.object({
   jsonlContent: z.string().min(1, "JSONL content is required"),

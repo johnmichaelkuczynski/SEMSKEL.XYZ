@@ -23,7 +23,7 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence } from "@shared/schema";
 
 interface LoggedInUser {
   id: number;
@@ -58,6 +58,8 @@ export default function Home() {
   const [aiUploadedFile, setAiUploadedFile] = useState<{ name: string } | null>(null);
   const [matchResults, setMatchResults] = useState<MatchResult[] | null>(null);
   const [matchStats, setMatchStats] = useState<{ total: number; matched: number } | null>(null);
+  const [humanizeResults, setHumanizeResults] = useState<HumanizedSentence[] | null>(null);
+  const [humanizeStats, setHumanizeStats] = useState<{ total: number; successful: number } | null>(null);
   const [currentUser, setCurrentUser] = useState<LoggedInUser | null>(null);
   const [usernameInput, setUsernameInput] = useState("");
   const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
@@ -162,6 +164,30 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "An error occurred while matching.";
       toast({
         title: "Matching failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Humanize mutation (Step 3 - rewrite AI text using human patterns)
+  const humanizeMutation = useMutation({
+    mutationFn: async (data: { text: string; level: BleachingLevel }) => {
+      const response = await apiRequest("POST", "/api/humanize", data);
+      return await response.json() as HumanizeResponse;
+    },
+    onSuccess: (data) => {
+      setHumanizeResults(data.sentences);
+      setHumanizeStats({ total: data.totalSentences, successful: data.successfulRewrites });
+      toast({
+        title: "Humanization complete",
+        description: `Rewrote ${data.successfulRewrites} of ${data.totalSentences} sentences.`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "An error occurred while humanizing.";
+      toast({
+        title: "Humanization failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -286,6 +312,8 @@ export default function Home() {
     setAiUploadedFile(null);
     setMatchResults(null);
     setMatchStats(null);
+    setHumanizeResults(null);
+    setHumanizeStats(null);
   };
 
   const handleMatch = () => {
@@ -293,6 +321,57 @@ export default function Home() {
     matchMutation.mutate({
       text: aiTextInput,
       level: bleachingLevel,
+    });
+  };
+
+  const handleHumanize = () => {
+    if (!aiTextInput.trim()) return;
+    humanizeMutation.mutate({
+      text: aiTextInput,
+      level: bleachingLevel,
+    });
+  };
+
+  const handleCopyHumanized = async () => {
+    if (!humanizeResults) return;
+    
+    const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
+    
+    try {
+      await navigator.clipboard.writeText(humanizedText);
+      toast({
+        title: "Copied to clipboard",
+        description: "Humanized text copied successfully.",
+      });
+    } catch (error) {
+      toast({
+        title: "Copy failed",
+        description: "Could not copy to clipboard.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleDownloadHumanized = () => {
+    if (!humanizeResults) return;
+    
+    const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
+    const timestamp = Date.now();
+    const filename = `humanized_text_${timestamp}.txt`;
+    
+    const blob = new Blob([humanizedText], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Download started",
+      description: `Downloading ${filename}`,
     });
   };
 
@@ -1089,6 +1168,166 @@ export default function Home() {
                 <p className="text-xs text-center text-muted-foreground">
                   Add human text to the sentence bank first using the bleacher above
                 </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Step 3: Humanizer Section */}
+      <div className="border-t bg-primary/5">
+        <div className="p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
+              <SparklesIcon className="w-4 h-4 text-primary" />
+            </div>
+            <div>
+              <h2 className="text-lg font-semibold">Humanizer</h2>
+              <p className="text-sm text-muted-foreground">Rewrite AI text using human sentence patterns (Step 3)</p>
+            </div>
+          </div>
+
+          <div className="flex gap-4">
+            {/* Left side - Input (uses same AI text as Step 2) */}
+            <div className="flex-1 flex flex-col gap-3">
+              <div className="bg-muted/50 rounded-lg p-4">
+                <p className="text-sm text-muted-foreground mb-2">Uses the same AI text from Step 2 above</p>
+                {aiTextInput ? (
+                  <p className="text-sm line-clamp-3">{aiTextInput}</p>
+                ) : (
+                  <p className="text-sm text-muted-foreground italic">No AI text entered yet</p>
+                )}
+              </div>
+              
+              <Button 
+                onClick={handleHumanize}
+                disabled={!aiTextInput.trim() || humanizeMutation.isPending || totalBankSize === 0}
+                className="w-full"
+                size="lg"
+                data-testid="button-humanize"
+              >
+                <SparklesIcon className="w-5 h-5 mr-2" />
+                {humanizeMutation.isPending ? "Humanizing... (this may take a while)" : "Humanize Text (Step 3)"}
+              </Button>
+              
+              {totalBankSize === 0 && (
+                <p className="text-xs text-center text-muted-foreground">
+                  Add human text to the sentence bank first
+                </p>
+              )}
+            </div>
+
+            {/* Right side - Humanized Results */}
+            <div className="flex-[2] flex flex-col gap-3">
+              {humanizeResults && humanizeResults.length > 0 ? (
+                <div className="flex-1 min-h-[300px] bg-background rounded-lg border p-4 overflow-auto">
+                  <div className="flex items-center justify-between mb-4">
+                    <p className="text-sm font-medium">
+                      Humanized <span className="text-primary">{humanizeStats?.successful}</span> of {humanizeStats?.total} sentences
+                    </p>
+                    <div className="flex gap-2">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleCopyHumanized}
+                        data-testid="button-copy-humanized"
+                      >
+                        <ClipboardDocumentIcon className="w-4 h-4 mr-1" />
+                        Copy All
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleDownloadHumanized}
+                        data-testid="button-download-humanized"
+                      >
+                        <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                        Download
+                      </Button>
+                    </div>
+                  </div>
+                  
+                  {/* Combined humanized text */}
+                  <div className="bg-primary/5 rounded-lg p-4 mb-4">
+                    <p className="text-xs text-primary font-medium mb-2">HUMANIZED OUTPUT</p>
+                    <p className="text-sm leading-relaxed" data-testid="humanized-output">
+                      {humanizeResults.map(r => r.humanizedRewrite).join(" ")}
+                    </p>
+                  </div>
+
+                  {/* Detailed breakdown */}
+                  <div className="space-y-4">
+                    <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Sentence-by-Sentence Breakdown</p>
+                    {humanizeResults.map((result, index) => (
+                      <div key={index} className="border rounded-lg p-3 bg-muted/30" data-testid={`humanize-result-${index}`}>
+                        <div className="grid gap-3">
+                          {/* AI Sentence */}
+                          <div>
+                            <p className="text-xs text-muted-foreground mb-1">AI Sentence #{index + 1}</p>
+                            <p className="text-sm">{result.aiSentence}</p>
+                          </div>
+                          
+                          {/* Best Matched Pattern */}
+                          {result.bestPattern.original && (
+                            <div className="bg-muted rounded p-2">
+                              <p className="text-xs text-muted-foreground mb-1">
+                                Matched Human Pattern (Score: {result.bestPattern.score})
+                              </p>
+                              <p className="text-sm font-mono text-xs">{result.bestPattern.bleached}</p>
+                              <p className="text-xs text-muted-foreground mt-1">From: "{result.bestPattern.original.substring(0, 80)}..."</p>
+                            </div>
+                          )}
+                          
+                          {/* Humanized Rewrite */}
+                          <div className="bg-primary/10 rounded p-2">
+                            <p className="text-xs text-primary mb-1">Humanized Rewrite</p>
+                            <p className="text-sm font-medium">{result.humanizedRewrite}</p>
+                          </div>
+                          
+                          {/* Top 3 Patterns (collapsible info) */}
+                          {result.matchedPatterns.length > 1 && (
+                            <details className="text-xs">
+                              <summary className="cursor-pointer text-muted-foreground hover:text-foreground">
+                                Show top {result.matchedPatterns.length} matched patterns
+                              </summary>
+                              <div className="mt-2 space-y-1 pl-2 border-l-2 border-muted">
+                                {result.matchedPatterns.map((pattern, pIdx) => (
+                                  <div key={pIdx} className="text-muted-foreground">
+                                    <span className="font-medium">#{pattern.rank}</span> (Score: {pattern.score}): {pattern.original.substring(0, 60)}...
+                                  </div>
+                                ))}
+                              </div>
+                            </details>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div className="flex-1 min-h-[300px] bg-background rounded-lg border p-4 flex items-center justify-center">
+                  {humanizeMutation.isPending ? (
+                    <div className="text-center text-muted-foreground">
+                      <SparklesIcon className="w-16 h-16 mx-auto mb-4 animate-pulse text-primary" />
+                      <p className="font-medium text-lg">Humanizing your text...</p>
+                      <p className="text-sm mt-2">Matching patterns and rewriting sentences</p>
+                      <p className="text-xs mt-4 max-w-md mx-auto">
+                        This process bleaches each AI sentence, finds the best human pattern matches, 
+                        and rewrites using human sentence geometry.
+                      </p>
+                    </div>
+                  ) : (
+                    <div className="text-center text-muted-foreground">
+                      <SparklesIcon className="w-16 h-16 mx-auto mb-4 opacity-20" />
+                      <p className="font-medium text-lg">Humanized text will appear here</p>
+                      <p className="text-sm mt-2">Enter AI text above and click "Humanize Text"</p>
+                      <p className="text-xs mt-4 max-w-md mx-auto">
+                        Step 3 takes each AI sentence, finds matching human patterns, 
+                        and rewrites the sentence using real human sentence structures.
+                      </p>
+                    </div>
+                  )}
+                </div>
               )}
             </div>
           </div>

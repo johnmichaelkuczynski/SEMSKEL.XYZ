@@ -24,7 +24,7 @@ A matching system that takes one AI sentence and finds the closest human sentenc
 
 This finds a human sentence with the same "shape" as the AI sentence to prevent distortion.
 
-### Layer 3 — Final Humanizer (NEXT)
+### Layer 3 — Final Humanizer ✅ COMPLETE
 After a match is found:
 - Takes the human sentence pattern
 - Takes the original AI sentence meaning
@@ -32,10 +32,11 @@ After a match is found:
 
 This produces human-like, detector-safe text with full content preservation.
 
-## Current Status (November 28, 2025)
+## Current Status (November 29, 2025)
 
 **LAYER 1 COMPLETE** ✅
 **LAYER 2 COMPLETE** ✅
+**LAYER 3 COMPLETE** ✅
 **LARGE TEXT HANDLING COMPLETE** ✅
 **DATABASE & USER SYSTEM COMPLETE** ✅
 
@@ -65,6 +66,15 @@ This produces human-like, detector-safe text with full content preservation.
 - Shows match statistics (X of Y sentences matched)
 - 4-stage filtering: length → clause count → punctuation → similarity
 
+### Layer 3 Features:
+- Humanizer section below Pattern Matcher
+- "Humanize Text" button → rewrites AI sentences using matched human patterns
+- Weighted similarity scoring: structure (40%), token length (15%), clause count (15%), clause order (15%), punctuation (15%)
+- Returns top 3 closest-matching patterns for each sentence
+- Slot-fill rewriting via Claude to transfer AI meaning into human sentence structure
+- Combined output display with copy/download options
+- Sentence-by-sentence breakdown showing: AI sentence → matched pattern → humanized rewrite
+
 ## User Preferences
 
 - Simple, everyday language
@@ -91,6 +101,7 @@ This produces human-like, detector-safe text with full content preservation.
 - `POST /api/bleach` — Bleaches text, returns bleached string
 - `POST /api/build-sentence-bank` — Splits into sentences, bleaches each, returns JSONL
 - `POST /api/match` — Matches AI text sentences to human patterns from the bank
+- `POST /api/humanize` — Humanizes AI text using matched human patterns (Step 3)
 - `GET /api/sentence-bank/status` — Returns count of entries in the bank
 - `GET /api/sentence-bank` — Returns all entries in the bank
 
@@ -98,9 +109,10 @@ This produces human-like, detector-safe text with full content preservation.
 - `client/src/pages/home.tsx` — Main UI (all features on one page)
 - `server/bleach.ts` — Bleaching logic + Claude integration
 - `server/matcher.ts` — Pattern matching engine (Layer 2)
+- `server/humanizer.ts` — Humanizer module (Layer 3) with weighted similarity and slot-fill rewriting
 - `server/routes.ts` — API endpoints
 - `shared/schema.ts` — Types and validation schemas
-- `sentence_bank.jsonl` — Stored human sentence patterns
+- `sentence_bank.jsonl` — Stored human sentence patterns (backup file)
 
 ### Important Notes
 - `apiRequest` returns a Response object that must be parsed with `.json()`
