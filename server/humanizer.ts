@@ -2,9 +2,8 @@
 // Pattern matching + slot-fill rewriting to humanize AI text
 
 import Anthropic from "@anthropic-ai/sdk";
-import { bleachText } from "./bleach";
-import { storage } from "./storage";
-import type { BleachingLevel, SentenceBankEntry, SentenceEntry } from "@shared/schema";
+import { loadSentenceBank, computeMetadata, type SentenceMetadata } from "./matcher";
+import type { BleachingLevel, SentenceBankEntry } from "@shared/schema";
 
 const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -37,16 +36,6 @@ export interface HumanizeResult {
   bankSize: number;
 }
 
-interface SentenceMetadata {
-  original: string;
-  bleached: string;
-  char_length: number;
-  token_length: number;
-  clause_count: number;
-  clause_order: string;
-  punctuation_pattern: string;
-}
-
 interface ScoredEntry {
   entry: SentenceBankEntry;
   score: number;
@@ -56,8 +45,6 @@ interface ScoredEntry {
 // UTILITY FUNCTIONS
 // ============================================
 
-const CLAUSE_TRIGGERS = ["when", "because", "although", "if", "while", "since", "but"];
-
 function splitIntoSentences(text: string): string[] {
   return text
     .split(/(?<=[.!?])\s+/)
@@ -65,82 +52,70 @@ function splitIntoSentences(text: string): string[] {
     .filter((s) => s.length > 0);
 }
 
-function countTokens(sentence: string): number {
-  return sentence.split(/\s+/).filter((t) => t.length > 0).length;
+const CLAUSE_TRIGGERS = ["when", "because", "although", "if", "while", "since", "but"];
+
+const FUNCTION_WORDS = new Set([
+  "the", "a", "an", "is", "are", "was", "were", "be", "been", "being",
+  "have", "has", "had", "do", "does", "did", "will", "would", "could",
+  "should", "may", "might", "must", "shall", "can", "to", "of", "in",
+  "for", "on", "with", "at", "by", "from", "as", "into", "through",
+  "during", "before", "after", "above", "below", "between", "under",
+  "again", "further", "then", "once", "here", "there", "when", "where",
+  "why", "how", "all", "each", "few", "more", "most", "other", "some",
+  "such", "no", "nor", "not", "only", "own", "same", "so", "than",
+  "too", "very", "just", "and", "but", "if", "or", "because", "until",
+  "while", "although", "since", "that", "this", "these", "those", "it",
+  "its", "their", "they", "them", "we", "us", "our", "you", "your",
+  "he", "she", "him", "her", "his", "hers"
+]);
+
+// ============================================
+// SKELETON EXTRACTION FOR GEOMETRIC COMPARISON
+// ============================================
+
+interface SkeletonFeatures {
+  variableCount: number;
+  variablePositions: number[];
+  clauseMarkers: string[];
+  clauseMarkerPositions: number[];
+  functionWordSequence: string;
+  wordCount: number;
 }
 
-function countClauses(sentence: string): number {
-  const lowerSentence = sentence.toLowerCase();
-  let count = 0;
+function extractSkeletonFeatures(bleached: string, original: string): SkeletonFeatures {
+  const varPattern = /\b[A-Z](?:-[a-z]+)?\b|\b[A-Z]\d+\b|[αβγδεζηθικλμνξπρστυφχψω]|Ω\d+/g;
+  const variables = [...bleached.matchAll(varPattern)];
+  
+  const variablePositions = variables.map((m) => 
+    Math.round((m.index! / Math.max(bleached.length, 1)) * 100)
+  );
+
+  const lowerOriginal = original.toLowerCase();
+  const clauseMarkers: string[] = [];
+  const clauseMarkerPositions: number[] = [];
+  
   for (const trigger of CLAUSE_TRIGGERS) {
     const regex = new RegExp(`\\b${trigger}\\b`, "gi");
-    const matches = lowerSentence.match(regex);
-    if (matches) {
-      count += matches.length;
+    let match;
+    while ((match = regex.exec(lowerOriginal)) !== null) {
+      clauseMarkers.push(trigger);
+      clauseMarkerPositions.push(Math.round((match.index / Math.max(original.length, 1)) * 100));
     }
   }
-  return Math.max(1, count);
-}
 
-function getClauseOrder(sentence: string): string {
-  const lowerSentence = sentence.toLowerCase().trim();
-  for (const trigger of CLAUSE_TRIGGERS) {
-    if (lowerSentence.startsWith(trigger + " ") || lowerSentence.startsWith(trigger + ",")) {
-      return "subordinate → main";
-    }
-  }
-  return "main → subordinate";
-}
-
-function extractPunctuationPattern(sentence: string): string {
-  return sentence.replace(/[^.,;:!?'"()\-—]/g, "");
-}
-
-// ============================================
-// DATABASE LOADING
-// ============================================
-
-function dbEntryToSentenceBankEntry(entry: SentenceEntry): SentenceBankEntry {
-  return {
-    original: entry.original,
-    bleached: entry.bleached,
-    char_length: entry.charLength,
-    token_length: entry.tokenLength,
-    clause_count: entry.clauseCount,
-    clause_order: entry.clauseOrder,
-    punctuation_pattern: entry.punctuationPattern,
-    structure: entry.structure,
-  };
-}
-
-async function loadSentenceBank(): Promise<SentenceBankEntry[]> {
-  try {
-    const entries = await storage.getAllSentenceEntries();
-    return entries.map(dbEntryToSentenceBankEntry);
-  } catch (error) {
-    console.error("Error loading sentence bank from database:", error);
-    return [];
-  }
-}
-
-// ============================================
-// METADATA COMPUTATION
-// ============================================
-
-async function computeMetadata(
-  sentence: string,
-  level: BleachingLevel = "Heavy"
-): Promise<SentenceMetadata> {
-  const bleached = await bleachText(sentence, level);
+  const words = bleached.toLowerCase().split(/\s+/);
+  const functionWordSequence = words
+    .filter((w) => FUNCTION_WORDS.has(w))
+    .slice(0, 10)
+    .join(" ");
 
   return {
-    original: sentence,
-    bleached: bleached,
-    char_length: sentence.length,
-    token_length: countTokens(sentence),
-    clause_count: countClauses(sentence),
-    clause_order: getClauseOrder(sentence),
-    punctuation_pattern: extractPunctuationPattern(sentence),
+    variableCount: variables.length,
+    variablePositions,
+    clauseMarkers,
+    clauseMarkerPositions,
+    functionWordSequence,
+    wordCount: words.length,
   };
 }
 
@@ -148,14 +123,32 @@ async function computeMetadata(
 // WEIGHTED SIMILARITY SCORING
 // ============================================
 
-// Weights for similarity scoring (total = 100)
 const WEIGHTS = {
-  structure: 40,      // Structure string match (highest weight)
-  token_length: 15,   // Token length range
-  clause_count: 15,   // Clause count
-  clause_order: 15,   // Clause order
-  punctuation: 15,    // Punctuation pattern
+  skeleton: 40,
+  token_length: 15,
+  clause_count: 15,
+  clause_order: 15,
+  punctuation: 15,
 };
+
+function comparePositionArrays(a: number[], b: number[]): number {
+  if (a.length === 0 && b.length === 0) return 1;
+  if (a.length === 0 || b.length === 0) return 0;
+  
+  const minLen = Math.min(a.length, b.length);
+  const maxLen = Math.max(a.length, b.length);
+  
+  let positionDiffSum = 0;
+  for (let i = 0; i < minLen; i++) {
+    positionDiffSum += Math.abs(a[i] - b[i]);
+  }
+  
+  const avgDiff = positionDiffSum / minLen;
+  const positionScore = 1 - avgDiff / 100;
+  const countRatio = minLen / maxLen;
+  
+  return positionScore * countRatio;
+}
 
 function levenshteinDistance(a: string, b: string): number {
   if (a.length === 0) return b.length;
@@ -203,37 +196,50 @@ function calculateWeightedSimilarity(
 ): number {
   let score = 0;
 
-  // 1. Structure string match (highest weight - 40 points)
-  const structureSimilarity = normalizedStringSimilarity(
-    inputMeta.bleached,
-    entry.structure || entry.bleached
+  const inputSkeleton = extractSkeletonFeatures(inputMeta.bleached, inputMeta.original);
+  const entrySkeleton = extractSkeletonFeatures(
+    entry.structure || entry.bleached,
+    entry.original
   );
-  score += structureSimilarity * WEIGHTS.structure;
 
-  // 2. Token length range (15 points) - within 20% gets full score
+  const varPosScore = comparePositionArrays(
+    inputSkeleton.variablePositions,
+    entrySkeleton.variablePositions
+  );
+  
+  const clausePosScore = comparePositionArrays(
+    inputSkeleton.clauseMarkerPositions,
+    entrySkeleton.clauseMarkerPositions
+  );
+  
+  const funcWordScore = normalizedStringSimilarity(
+    inputSkeleton.functionWordSequence,
+    entrySkeleton.functionWordSequence
+  );
+  
+  const varCountDiff = Math.abs(inputSkeleton.variableCount - entrySkeleton.variableCount);
+  const maxVarCount = Math.max(inputSkeleton.variableCount, entrySkeleton.variableCount, 1);
+  const varCountScore = 1 - Math.min(varCountDiff / maxVarCount, 1);
+  
+  score += (varPosScore * 15 + clausePosScore * 10 + funcWordScore * 10 + varCountScore * 5);
+
   const tokenDiff = Math.abs(inputMeta.token_length - entry.token_length);
-  const tokenTolerance = Math.max(inputMeta.token_length, entry.token_length) * 0.2;
-  if (tokenDiff <= tokenTolerance) {
-    score += WEIGHTS.token_length;
-  } else {
-    const tokenPenalty = Math.min(tokenDiff / Math.max(1, inputMeta.token_length), 1);
-    score += Math.max(0, WEIGHTS.token_length * (1 - tokenPenalty));
-  }
+  const maxTokens = Math.max(inputMeta.token_length, entry.token_length, 1);
+  const tokenSimilarity = 1 - Math.min(tokenDiff / maxTokens, 1);
+  score += tokenSimilarity * WEIGHTS.token_length;
 
-  // 3. Clause count (15 points) - exact match or partial
   if (inputMeta.clause_count === entry.clause_count) {
     score += WEIGHTS.clause_count;
   } else {
     const clauseDiff = Math.abs(inputMeta.clause_count - entry.clause_count);
-    score += Math.max(0, WEIGHTS.clause_count * (1 - clauseDiff * 0.25));
+    const maxClauses = Math.max(inputMeta.clause_count, entry.clause_count, 1);
+    score += Math.max(0, WEIGHTS.clause_count * (1 - clauseDiff / maxClauses));
   }
 
-  // 4. Clause order (15 points) - exact match only
   if (inputMeta.clause_order === entry.clause_order) {
     score += WEIGHTS.clause_order;
   }
 
-  // 5. Punctuation pattern (15 points)
   const punctSimilarity = normalizedStringSimilarity(
     inputMeta.punctuation_pattern,
     entry.punctuation_pattern
@@ -252,27 +258,231 @@ function findTopMatches(
   bank: SentenceBankEntry[],
   topN: number = 3
 ): ScoredEntry[] {
-  // Score ALL entries in the bank
   const scored: ScoredEntry[] = bank.map((entry) => ({
     entry,
     score: calculateWeightedSimilarity(inputMeta, entry),
   }));
 
-  // Sort by score descending, then by clause_count descending (tiebreaker)
   scored.sort((a, b) => {
     if (b.score !== a.score) {
       return b.score - a.score;
     }
-    // Tiebreaker: pick longest (highest clause_count)
     return b.entry.clause_count - a.entry.clause_count;
   });
 
-  // Return top N (always return at least the best match even if low score)
   return scored.slice(0, topN);
 }
 
 // ============================================
-// SLOT-FILL REWRITING (THE MAGIC)
+// DETERMINISTIC SLOT-FILL FALLBACK
+// Uses the structure template with variable placeholders
+// Maps AI content to template slots, preserving human skeleton
+// ============================================
+
+interface SlotInfo {
+  placeholder: string;
+  startIndex: number;
+  endIndex: number;
+}
+
+function findSlotPositions(structure: string): SlotInfo[] {
+  // Find all variable placeholders in the structure
+  const varPattern = /\b[A-Z](?:-[a-z]+)?(?:\d+)?\b|[αβγδεζηθικλμνξπρστυφχψω]|Ω\d+/g;
+  const slots: SlotInfo[] = [];
+  let match;
+  
+  while ((match = varPattern.exec(structure)) !== null) {
+    slots.push({
+      placeholder: match[0],
+      startIndex: match.index,
+      endIndex: match.index + match[0].length,
+    });
+  }
+  
+  return slots;
+}
+
+function alignStructureToOriginal(
+  structure: string,
+  original: string
+): Map<string, string> {
+  // Align the bleached structure with the original to find what each variable maps to
+  const mapping = new Map<string, string>();
+  
+  const structWords = structure.split(/\s+/);
+  const origWords = original.split(/\s+/);
+  
+  // Build alignment based on matching function words
+  let origIdx = 0;
+  
+  for (let i = 0; i < structWords.length; i++) {
+    const structWord = structWords[i];
+    const varMatch = structWord.match(/^([^a-zA-Z]*)?([A-Z](?:-[a-z]+)?(?:\d+)?|[αβγδεζηθικλμνξπρστυφχψω]|Ω\d+)([^a-zA-Z]*)?$/);
+    
+    if (varMatch) {
+      // This is a variable placeholder
+      const placeholder = varMatch[2];
+      if (origIdx < origWords.length) {
+        mapping.set(placeholder, origWords[origIdx]);
+        origIdx++;
+      }
+    } else {
+      // Function word - advance original pointer to align
+      while (origIdx < origWords.length) {
+        const origClean = origWords[origIdx].toLowerCase().replace(/[^a-z]/g, "");
+        const structClean = structWord.toLowerCase().replace(/[^a-z]/g, "");
+        if (origClean === structClean || origIdx >= origWords.length - 1) {
+          origIdx++;
+          break;
+        }
+        origIdx++;
+      }
+    }
+  }
+  
+  return mapping;
+}
+
+function extractContentPhrases(sentence: string): string[] {
+  // Extract meaningful content words (nouns, verbs, adjectives)
+  const words = sentence.match(/\S+/g) || [];
+  return words.filter((word) => {
+    const clean = word.toLowerCase().replace(/[^a-z]/g, "");
+    return clean.length > 2 && !FUNCTION_WORDS.has(clean);
+  });
+}
+
+function deterministicSlotFill(
+  aiSentence: string,
+  humanPattern: SentenceBankEntry
+): string {
+  const structure = humanPattern.structure || humanPattern.bleached;
+  const original = humanPattern.original;
+  
+  // Extract content words from AI sentence (these carry the meaning to preserve)
+  const aiContent = extractContentPhrases(aiSentence);
+  
+  if (aiContent.length === 0) {
+    // No content words in AI sentence - still transform using pattern structure
+    // Replace variables in structure with original pattern's content words
+    return buildFromStructure(structure, extractContentPhrases(original));
+  }
+
+  // Find slots in the structure
+  const slots = findSlotPositions(structure);
+  
+  if (slots.length === 0) {
+    // No variable slots found - pattern is already fully function words
+    // Append key AI content to convey meaning
+    const keyTerms = aiContent.slice(0, 3).join(", ");
+    return `${original.replace(/[.!?]$/, "")} involving ${keyTerms}.`;
+  }
+
+  // Get unique placeholder names in order
+  const placeholders = [...new Set(slots.map((s) => s.placeholder))];
+  const numSlots = placeholders.length;
+  const numAiWords = aiContent.length;
+  
+  // Strategy: distribute AI content across slots
+  // If more AI words than slots, group them into phrases
+  const replacements = new Map<string, string>();
+  
+  if (numAiWords <= numSlots) {
+    // Fewer or equal AI words than slots: one-to-one mapping
+    for (let i = 0; i < numAiWords; i++) {
+      replacements.set(placeholders[i], aiContent[i]);
+    }
+    // Fill remaining slots with original pattern content
+    const origContent = extractContentPhrases(original);
+    for (let i = numAiWords; i < numSlots; i++) {
+      const origWord = origContent[i % origContent.length] || "element";
+      replacements.set(placeholders[i], origWord);
+    }
+  } else {
+    // More AI words than slots: group AI words into slot-sized chunks
+    const wordsPerSlot = Math.ceil(numAiWords / numSlots);
+    for (let i = 0; i < numSlots; i++) {
+      const startIdx = i * wordsPerSlot;
+      const endIdx = Math.min(startIdx + wordsPerSlot, numAiWords);
+      const chunk = aiContent.slice(startIdx, endIdx);
+      // Join with space to form a phrase, clean up punctuation
+      const phrase = chunk.map((w) => w.replace(/[.,;:!?]/g, "")).join(" ");
+      replacements.set(placeholders[i], phrase);
+    }
+  }
+
+  // Build result by replacing placeholders in structure
+  let result = structure;
+  
+  for (const [placeholder, replacement] of replacements) {
+    const regex = new RegExp(
+      placeholder.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+      "g"
+    );
+    result = result.replace(regex, replacement);
+  }
+
+  // Clean up any remaining variable patterns (shouldn't be many after above)
+  result = result.replace(/\b[A-Z]\d+\b/g, "item");
+  result = result.replace(/\b[A-Z](?:-[a-z]+)?\b/g, "element");
+  result = result.replace(/[αβγδεζηθικλμνξπρστυφχψω]/g, "aspect");
+  result = result.replace(/Ω\d+/g, "factor");
+
+  // Clean up formatting
+  result = result.replace(/\s+/g, " ").trim();
+  result = result.replace(/\s+([.,;:!?])/g, "$1");
+  
+  // Capitalize first letter
+  if (result.length > 0) {
+    result = result.charAt(0).toUpperCase() + result.slice(1);
+  }
+  
+  // Ensure proper ending punctuation
+  if (!/[.!?]$/.test(result)) {
+    result += ".";
+  }
+
+  return result;
+}
+
+// Helper: build sentence from structure template using content words
+function buildFromStructure(structure: string, contentWords: string[]): string {
+  const slots = findSlotPositions(structure);
+  const placeholders = [...new Set(slots.map((s) => s.placeholder))];
+  
+  let result = structure;
+  for (let i = 0; i < placeholders.length; i++) {
+    const replacement = contentWords[i % Math.max(contentWords.length, 1)] || "element";
+    const regex = new RegExp(
+      placeholders[i].replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
+      "g"
+    );
+    result = result.replace(regex, replacement);
+  }
+  
+  // Clean up remaining placeholders
+  result = result.replace(/\b[A-Z]\d+\b/g, "item");
+  result = result.replace(/\b[A-Z](?:-[a-z]+)?\b/g, "element");
+  result = result.replace(/[αβγδεζηθικλμνξπρστυφχψω]/g, "aspect");
+  result = result.replace(/Ω\d+/g, "factor");
+  
+  result = result.replace(/\s+/g, " ").trim();
+  result = result.replace(/\s+([.,;:!?])/g, "$1");
+  
+  if (result.length > 0) {
+    result = result.charAt(0).toUpperCase() + result.slice(1);
+  }
+  
+  if (!/[.!?]$/.test(result)) {
+    result += ".";
+  }
+  
+  return result;
+}
+
+// ============================================
+// SLOT-FILL REWRITING WITH CLAUDE
+// Falls back to deterministic fill if Claude fails
 // ============================================
 
 async function rewriteWithPattern(
@@ -313,14 +523,17 @@ OUTPUT: Provide ONLY the rewritten sentence. No explanations, no quotes, no comm
 
     const content = message.content[0];
     if (content.type === "text") {
-      return content.text.trim();
+      const rewrite = content.text.trim();
+      if (rewrite.length > 0 && rewrite !== aiSentence) {
+        return rewrite;
+      }
     }
 
-    throw new Error("Unexpected response type from Claude");
+    console.log("Claude returned empty/unchanged, using deterministic fallback");
+    return deterministicSlotFill(aiSentence, humanPattern);
   } catch (error: any) {
-    console.error("Rewrite error:", error);
-    // Fallback: return original AI sentence
-    return aiSentence;
+    console.error("Rewrite error, using deterministic fallback:", error.message);
+    return deterministicSlotFill(aiSentence, humanPattern);
   }
 }
 
@@ -332,7 +545,6 @@ export async function humanizeText(
   inputText: string,
   level: BleachingLevel = "Heavy"
 ): Promise<HumanizeResult> {
-  // Load the sentence bank
   const bank = await loadSentenceBank();
   
   if (bank.length === 0) {
@@ -341,7 +553,6 @@ export async function humanizeText(
 
   console.log(`Humanizing text against ${bank.length} patterns...`);
 
-  // Split into sentences
   const sentences = splitIntoSentences(inputText);
   
   if (sentences.length === 0) {
@@ -363,10 +574,7 @@ export async function humanizeText(
     const batchResults = await Promise.all(
       batch.map(async (sentence) => {
         try {
-          // Step 1: Compute metadata (bleach the AI sentence)
           const metadata = await computeMetadata(sentence, level);
-
-          // Step 2: Find top 3 matching patterns
           const topMatches = findTopMatches(metadata, bank, 3);
 
           if (topMatches.length === 0) {
@@ -382,10 +590,7 @@ export async function humanizeText(
             };
           }
 
-          // Step 3: Use the best pattern for rewriting
           const bestMatch = topMatches[0];
-          
-          // Step 4: Rewrite the AI sentence using the human pattern
           const humanizedRewrite = await rewriteWithPattern(sentence, bestMatch.entry);
 
           return {
@@ -405,6 +610,24 @@ export async function humanizeText(
           };
         } catch (error) {
           console.error(`Error processing sentence: ${sentence.substring(0, 50)}...`, error);
+          if (bank.length > 0) {
+            const fallbackPattern = bank[0];
+            return {
+              aiSentence: sentence,
+              matchedPatterns: [{
+                original: fallbackPattern.original,
+                bleached: fallbackPattern.bleached,
+                score: 0,
+                rank: 1,
+              }],
+              humanizedRewrite: deterministicSlotFill(sentence, fallbackPattern),
+              bestPattern: {
+                original: fallbackPattern.original,
+                bleached: fallbackPattern.bleached,
+                score: 0,
+              },
+            };
+          }
           return {
             aiSentence: sentence,
             matchedPatterns: [],
@@ -421,7 +644,6 @@ export async function humanizeText(
 
     results.push(...batchResults);
 
-    // Delay between batches to avoid rate limits
     if (i + BATCH_SIZE < sentences.length) {
       await delay(DELAY_BETWEEN_BATCHES);
     }
@@ -440,6 +662,3 @@ export async function humanizeText(
     bankSize: bank.length,
   };
 }
-
-// Export for use in routes
-export { loadSentenceBank, computeMetadata, findTopMatches, calculateWeightedSimilarity };
