@@ -44,7 +44,12 @@ This produces human-like, detector-safe text with full content preservation.
 - **Weighted similarity scoring**: Structure (40%), token length (15%), clause count (15%), clause order (15%), punctuation (15%)
 - **Skeleton feature extraction**: Variable positions, clause markers, function word sequences
 - **Claude-powered slot-fill**: Rewrites AI sentences using matched human patterns
-- **Deterministic fallback**: Template-based slot-fill when Claude unavailable - distributes AI content across pattern slots
+- **Deterministic fallback**: Content-word replacement preserving:
+  - Proper noun casing (NASA, OpenAI stay uppercase)
+  - Internal punctuation (apostrophes in can't, COVID-19 hyphens)
+  - Original sentence-ending punctuation
+  - AI content distributed across human content word slots
+- **Layer 2 candidate reuse**: humanize API accepts prefiltered candidates to skip full bank scan
 - **Match scores typically 92-95**: High-quality geometric matching
 
 ### Database Features:

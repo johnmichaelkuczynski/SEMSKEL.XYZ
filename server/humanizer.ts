@@ -294,14 +294,16 @@ function findContentWordPositions(sentence: string): ContentWordInfo[] {
   
   for (let i = 0; i < words.length; i++) {
     const word = words[i];
-    // Extract punctuation
-    const leadingPunct = word.match(/^[^a-zA-Z]*/)?.[0] || "";
-    const trailingPunct = word.match(/[^a-zA-Z]*$/)?.[0] || "";
-    const cleanWord = word.replace(/^[^a-zA-Z]*/, "").replace(/[^a-zA-Z]*$/, "");
-    const lowerWord = cleanWord.toLowerCase();
+    // Extract leading/trailing punctuation, preserve internal hyphens, digits, apostrophes
+    const leadingPunct = word.match(/^[^a-zA-Z0-9]*/)?.[0] || "";
+    const trailingPunct = word.match(/[^a-zA-Z0-9]*$/)?.[0] || "";
+    // Keep full word content including digits, hyphens, apostrophes (e.g., F-16, COVID-19, can't)
+    const cleanWord = word.replace(/^[^a-zA-Z0-9]*/, "").replace(/[^a-zA-Z0-9]*$/, "");
+    // For function word check, use only letters
+    const lowerWordForCheck = cleanWord.replace(/[^a-zA-Z]/g, "").toLowerCase();
     
     // Check if it's a content word (not a function word, not too short)
-    if (cleanWord.length > 2 && !FUNCTION_WORDS.has(lowerWord)) {
+    if (lowerWordForCheck.length > 2 && !FUNCTION_WORDS.has(lowerWordForCheck)) {
       positions.push({
         word: cleanWord,
         index: i,
@@ -321,12 +323,12 @@ function extractAIContentWords(sentence: string): string[] {
   const contentWords: string[] = [];
   
   for (const word of words) {
-    // Only remove leading/trailing punctuation, preserve internal (like apostrophes, hyphens)
-    const cleanWord = word.replace(/^[^a-zA-Z']+/, "").replace(/[^a-zA-Z']+$/, "");
-    // For function word check, remove apostrophes too
-    const lowerWordForCheck = cleanWord.replace(/'/g, "").toLowerCase();
+    // Only remove leading/trailing punctuation, preserve internal (apostrophes, hyphens, digits)
+    const cleanWord = word.replace(/^[^a-zA-Z0-9]+/, "").replace(/[^a-zA-Z0-9]+$/, "");
+    // For function word check, use only letters
+    const lowerWordForCheck = cleanWord.replace(/[^a-zA-Z]/g, "").toLowerCase();
     
-    if (cleanWord.length > 2 && !FUNCTION_WORDS.has(lowerWordForCheck)) {
+    if (lowerWordForCheck.length > 2 && !FUNCTION_WORDS.has(lowerWordForCheck)) {
       contentWords.push(cleanWord);
     }
   }
@@ -404,9 +406,16 @@ function deterministicSlotFill(
   // Clean up any double spaces
   result = result.replace(/\s+/g, " ").trim();
   
-  // Ensure proper ending punctuation
-  if (!/[.!?]$/.test(result)) {
-    result += ".";
+  // Preserve original ending punctuation - only add period if original had one and we lost it
+  const originalEndPunct = original.match(/[.!?;:—\-–]$/)?.[0];
+  const resultEndPunct = result.match(/[.!?;:—\-–]$/)?.[0];
+  
+  if (originalEndPunct && !resultEndPunct) {
+    // Original had ending punctuation but result lost it - restore it
+    result += originalEndPunct;
+  } else if (!originalEndPunct && !resultEndPunct) {
+    // Neither had ending punctuation - don't add one
+    // (the original human sentence may have been a fragment or had special formatting)
   }
   
   return result;
@@ -473,6 +482,29 @@ OUTPUT: Provide ONLY the rewritten sentence. No explanations, no quotes, no comm
 // MAIN HUMANIZE FUNCTION
 // ============================================
 
+// Helper to normalize a candidate with all required fields
+function normalizeCandidate(candidate: Partial<SentenceBankEntry>): SentenceBankEntry {
+  const original = candidate.original || "";
+  const bleached = candidate.bleached || original;
+  
+  return {
+    original,
+    bleached,
+    structure: candidate.structure || bleached,
+    charLength: candidate.charLength ?? original.length,
+    tokenLength: candidate.tokenLength ?? original.split(/\s+/).filter(Boolean).length,
+    clauseCount: candidate.clauseCount ?? 1,
+    clauseOrder: candidate.clauseOrder || "main → subordinate",
+    punctuationPattern: candidate.punctuationPattern || (original.match(/[.,;:!?'"()\-—]/g) || []).join(""),
+    // Alias fields for compatibility
+    char_length: candidate.charLength ?? original.length,
+    token_length: candidate.tokenLength ?? original.split(/\s+/).filter(Boolean).length,
+    clause_count: candidate.clauseCount ?? 1,
+    clause_order: candidate.clauseOrder || "main → subordinate",
+    punctuation_pattern: candidate.punctuationPattern || (original.match(/[.,;:!?'"()\-—]/g) || []).join(""),
+  };
+}
+
 export async function humanizeText(
   inputText: string,
   level: BleachingLevel = "Heavy",
@@ -482,8 +514,9 @@ export async function humanizeText(
   let bank: SentenceBankEntry[];
   
   if (prefilteredCandidates && prefilteredCandidates.length > 0) {
-    bank = prefilteredCandidates;
-    console.log(`Using ${bank.length} prefiltered candidates from Layer 2`);
+    // Normalize candidates to ensure all required fields exist
+    bank = prefilteredCandidates.map(normalizeCandidate);
+    console.log(`Using ${bank.length} normalized prefiltered candidates from Layer 2`);
   } else {
     bank = await loadSentenceBank();
     console.log(`Loaded full sentence bank with ${bank.length} patterns`);
