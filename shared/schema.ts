@@ -131,10 +131,27 @@ export type LoginRequest = z.infer<typeof loginRequestSchema>;
 
 // ==================== HUMANIZER SCHEMAS (Step 3) ====================
 
+// Prefiltered candidate from Layer 2
+export const prefilteredCandidateSchema = z.object({
+  original: z.string(),
+  bleached: z.string(),
+  structure: z.string().optional(),
+  charLength: z.number(),
+  tokenLength: z.number(),
+  clauseCount: z.number(),
+  clauseOrder: z.string(),
+  punctuationPattern: z.string(),
+  score: z.number().optional(),
+});
+
+export type PrefilteredCandidate = z.infer<typeof prefilteredCandidateSchema>;
+
 // Humanize request schema
 export const humanizeRequestSchema = z.object({
   text: z.string().min(1, "Text is required"),
   level: z.enum(bleachingLevels).optional().default("Heavy"),
+  // Optional prefiltered candidates from Layer 2 to avoid rescanning entire bank
+  prefilteredCandidates: z.array(prefilteredCandidateSchema).optional(),
 });
 
 export type HumanizeRequest = z.infer<typeof humanizeRequestSchema>;

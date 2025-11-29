@@ -275,204 +275,136 @@ function findTopMatches(
 
 // ============================================
 // DETERMINISTIC SLOT-FILL FALLBACK
-// Uses the structure template with variable placeholders
-// Maps AI content to template slots, preserving human skeleton
+// Simpler approach: replace content words in original with AI content words
+// preserving exact punctuation and structure from original human sentence
 // ============================================
 
-interface SlotInfo {
-  placeholder: string;
-  startIndex: number;
-  endIndex: number;
+interface ContentWordInfo {
+  word: string;
+  index: number;
+  leadingPunct: string;
+  trailingPunct: string;
+  isCapitalized: boolean;
 }
 
-function findSlotPositions(structure: string): SlotInfo[] {
-  // Find all variable placeholders in the structure
-  const varPattern = /\b[A-Z](?:-[a-z]+)?(?:\d+)?\b|[αβγδεζηθικλμνξπρστυφχψω]|Ω\d+/g;
-  const slots: SlotInfo[] = [];
-  let match;
+// Identify content word positions in original sentence
+function findContentWordPositions(sentence: string): ContentWordInfo[] {
+  const words = sentence.split(/\s+/);
+  const positions: ContentWordInfo[] = [];
   
-  while ((match = varPattern.exec(structure)) !== null) {
-    slots.push({
-      placeholder: match[0],
-      startIndex: match.index,
-      endIndex: match.index + match[0].length,
-    });
-  }
-  
-  return slots;
-}
-
-function alignStructureToOriginal(
-  structure: string,
-  original: string
-): Map<string, string> {
-  // Align the bleached structure with the original to find what each variable maps to
-  const mapping = new Map<string, string>();
-  
-  const structWords = structure.split(/\s+/);
-  const origWords = original.split(/\s+/);
-  
-  // Build alignment based on matching function words
-  let origIdx = 0;
-  
-  for (let i = 0; i < structWords.length; i++) {
-    const structWord = structWords[i];
-    const varMatch = structWord.match(/^([^a-zA-Z]*)?([A-Z](?:-[a-z]+)?(?:\d+)?|[αβγδεζηθικλμνξπρστυφχψω]|Ω\d+)([^a-zA-Z]*)?$/);
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i];
+    // Extract punctuation
+    const leadingPunct = word.match(/^[^a-zA-Z]*/)?.[0] || "";
+    const trailingPunct = word.match(/[^a-zA-Z]*$/)?.[0] || "";
+    const cleanWord = word.replace(/^[^a-zA-Z]*/, "").replace(/[^a-zA-Z]*$/, "");
+    const lowerWord = cleanWord.toLowerCase();
     
-    if (varMatch) {
-      // This is a variable placeholder
-      const placeholder = varMatch[2];
-      if (origIdx < origWords.length) {
-        mapping.set(placeholder, origWords[origIdx]);
-        origIdx++;
-      }
-    } else {
-      // Function word - advance original pointer to align
-      while (origIdx < origWords.length) {
-        const origClean = origWords[origIdx].toLowerCase().replace(/[^a-z]/g, "");
-        const structClean = structWord.toLowerCase().replace(/[^a-z]/g, "");
-        if (origClean === structClean || origIdx >= origWords.length - 1) {
-          origIdx++;
-          break;
-        }
-        origIdx++;
-      }
+    // Check if it's a content word (not a function word, not too short)
+    if (cleanWord.length > 2 && !FUNCTION_WORDS.has(lowerWord)) {
+      positions.push({
+        word: cleanWord,
+        index: i,
+        leadingPunct,
+        trailingPunct,
+        isCapitalized: /^[A-Z]/.test(cleanWord),
+      });
     }
   }
   
-  return mapping;
+  return positions;
 }
 
-function extractContentPhrases(sentence: string): string[] {
-  // Extract meaningful content words (nouns, verbs, adjectives)
-  const words = sentence.match(/\S+/g) || [];
-  return words.filter((word) => {
-    const clean = word.toLowerCase().replace(/[^a-z]/g, "");
-    return clean.length > 2 && !FUNCTION_WORDS.has(clean);
-  });
+// Extract content words from AI sentence (preserving order, casing, and internal punctuation)
+function extractAIContentWords(sentence: string): string[] {
+  const words = sentence.split(/\s+/);
+  const contentWords: string[] = [];
+  
+  for (const word of words) {
+    // Only remove leading/trailing punctuation, preserve internal (like apostrophes, hyphens)
+    const cleanWord = word.replace(/^[^a-zA-Z']+/, "").replace(/[^a-zA-Z']+$/, "");
+    // For function word check, remove apostrophes too
+    const lowerWordForCheck = cleanWord.replace(/'/g, "").toLowerCase();
+    
+    if (cleanWord.length > 2 && !FUNCTION_WORDS.has(lowerWordForCheck)) {
+      contentWords.push(cleanWord);
+    }
+  }
+  
+  return contentWords;
 }
 
 function deterministicSlotFill(
   aiSentence: string,
   humanPattern: SentenceBankEntry
 ): string {
-  const structure = humanPattern.structure || humanPattern.bleached;
   const original = humanPattern.original;
   
-  // Extract content words from AI sentence (these carry the meaning to preserve)
-  const aiContent = extractContentPhrases(aiSentence);
+  // Find content word positions in the original human sentence
+  const humanContentPositions = findContentWordPositions(original);
   
-  if (aiContent.length === 0) {
-    // No content words in AI sentence - still transform using pattern structure
-    // Replace variables in structure with original pattern's content words
-    return buildFromStructure(structure, extractContentPhrases(original));
+  // Extract content words from AI sentence (preserving original casing and internal punctuation)
+  const aiContentWords = extractAIContentWords(aiSentence);
+  
+  if (humanContentPositions.length === 0) {
+    // No content words to replace - return original as-is
+    return original;
   }
-
-  // Find slots in the structure
-  const slots = findSlotPositions(structure);
   
-  if (slots.length === 0) {
-    // No variable slots found - pattern is already fully function words
-    // Append key AI content to convey meaning
-    const keyTerms = aiContent.slice(0, 3).join(", ");
-    return `${original.replace(/[.!?]$/, "")} involving ${keyTerms}.`;
+  if (aiContentWords.length === 0) {
+    // No AI content words - return original as-is  
+    return original;
   }
-
-  // Get unique placeholder names in order
-  const placeholders = [...new Set(slots.map((s) => s.placeholder))];
-  const numSlots = placeholders.length;
-  const numAiWords = aiContent.length;
   
-  // Strategy: distribute AI content across slots
-  // If more AI words than slots, group them into phrases
-  const replacements = new Map<string, string>();
+  // Build the result by replacing content words
+  const originalWords = original.split(/\s+/);
+  const resultWords = [...originalWords];
   
-  if (numAiWords <= numSlots) {
-    // Fewer or equal AI words than slots: one-to-one mapping
-    for (let i = 0; i < numAiWords; i++) {
-      replacements.set(placeholders[i], aiContent[i]);
+  // Distribute AI content words across human content positions
+  const numSlots = humanContentPositions.length;
+  const numAI = aiContentWords.length;
+  
+  // Calculate how many AI words per slot (at least 1 per slot)
+  const wordsPerSlot = Math.max(1, Math.floor(numAI / numSlots));
+  let aiIdx = 0;
+  
+  for (let i = 0; i < numSlots && aiIdx < numAI; i++) {
+    const pos = humanContentPositions[i];
+    
+    // Calculate how many AI words to use for this slot
+    // For the last slot, use all remaining words
+    const isLastSlot = i === numSlots - 1;
+    const wordsToUse = isLastSlot ? numAI - aiIdx : Math.min(wordsPerSlot, numAI - aiIdx);
+    
+    // Collect AI words for this slot
+    const slotWords: string[] = [];
+    for (let j = 0; j < wordsToUse && aiIdx < numAI; j++) {
+      slotWords.push(aiContentWords[aiIdx]);
+      aiIdx++;
     }
-    // Fill remaining slots with original pattern content
-    const origContent = extractContentPhrases(original);
-    for (let i = numAiWords; i < numSlots; i++) {
-      const origWord = origContent[i % origContent.length] || "element";
-      replacements.set(placeholders[i], origWord);
-    }
-  } else {
-    // More AI words than slots: group AI words into slot-sized chunks
-    const wordsPerSlot = Math.ceil(numAiWords / numSlots);
-    for (let i = 0; i < numSlots; i++) {
-      const startIdx = i * wordsPerSlot;
-      const endIdx = Math.min(startIdx + wordsPerSlot, numAiWords);
-      const chunk = aiContent.slice(startIdx, endIdx);
-      // Join with space to form a phrase, clean up punctuation
-      const phrase = chunk.map((w) => w.replace(/[.,;:!?]/g, "")).join(" ");
-      replacements.set(placeholders[i], phrase);
+    
+    if (slotWords.length > 0) {
+      // Join AI words - preserve their original casing and internal punctuation
+      let replacement = slotWords.join(" ");
+      
+      // Only apply sentence-start capitalization if this is the first word
+      // Otherwise preserve AI word casing (for proper nouns like NASA, OpenAI)
+      if (pos.index === 0 && replacement.length > 0 && /^[a-z]/.test(replacement)) {
+        replacement = replacement.charAt(0).toUpperCase() + replacement.slice(1);
+      }
+      
+      // Preserve leading/trailing punctuation from original position
+      resultWords[pos.index] = pos.leadingPunct + replacement + pos.trailingPunct;
     }
   }
-
-  // Build result by replacing placeholders in structure
-  let result = structure;
   
-  for (const [placeholder, replacement] of replacements) {
-    const regex = new RegExp(
-      placeholder.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-      "g"
-    );
-    result = result.replace(regex, replacement);
-  }
-
-  // Clean up any remaining variable patterns (shouldn't be many after above)
-  result = result.replace(/\b[A-Z]\d+\b/g, "item");
-  result = result.replace(/\b[A-Z](?:-[a-z]+)?\b/g, "element");
-  result = result.replace(/[αβγδεζηθικλμνξπρστυφχψω]/g, "aspect");
-  result = result.replace(/Ω\d+/g, "factor");
-
-  // Clean up formatting
+  // Join back into sentence
+  let result = resultWords.join(" ");
+  
+  // Clean up any double spaces
   result = result.replace(/\s+/g, " ").trim();
-  result = result.replace(/\s+([.,;:!?])/g, "$1");
-  
-  // Capitalize first letter
-  if (result.length > 0) {
-    result = result.charAt(0).toUpperCase() + result.slice(1);
-  }
   
   // Ensure proper ending punctuation
-  if (!/[.!?]$/.test(result)) {
-    result += ".";
-  }
-
-  return result;
-}
-
-// Helper: build sentence from structure template using content words
-function buildFromStructure(structure: string, contentWords: string[]): string {
-  const slots = findSlotPositions(structure);
-  const placeholders = [...new Set(slots.map((s) => s.placeholder))];
-  
-  let result = structure;
-  for (let i = 0; i < placeholders.length; i++) {
-    const replacement = contentWords[i % Math.max(contentWords.length, 1)] || "element";
-    const regex = new RegExp(
-      placeholders[i].replace(/[.*+?^${}()|[\]\\]/g, "\\$&"),
-      "g"
-    );
-    result = result.replace(regex, replacement);
-  }
-  
-  // Clean up remaining placeholders
-  result = result.replace(/\b[A-Z]\d+\b/g, "item");
-  result = result.replace(/\b[A-Z](?:-[a-z]+)?\b/g, "element");
-  result = result.replace(/[αβγδεζηθικλμνξπρστυφχψω]/g, "aspect");
-  result = result.replace(/Ω\d+/g, "factor");
-  
-  result = result.replace(/\s+/g, " ").trim();
-  result = result.replace(/\s+([.,;:!?])/g, "$1");
-  
-  if (result.length > 0) {
-    result = result.charAt(0).toUpperCase() + result.slice(1);
-  }
-  
   if (!/[.!?]$/.test(result)) {
     result += ".";
   }
@@ -543,15 +475,23 @@ OUTPUT: Provide ONLY the rewritten sentence. No explanations, no quotes, no comm
 
 export async function humanizeText(
   inputText: string,
-  level: BleachingLevel = "Heavy"
+  level: BleachingLevel = "Heavy",
+  prefilteredCandidates?: SentenceBankEntry[]
 ): Promise<HumanizeResult> {
-  const bank = await loadSentenceBank();
+  // Use prefiltered candidates if provided, otherwise load full bank
+  let bank: SentenceBankEntry[];
+  
+  if (prefilteredCandidates && prefilteredCandidates.length > 0) {
+    bank = prefilteredCandidates;
+    console.log(`Using ${bank.length} prefiltered candidates from Layer 2`);
+  } else {
+    bank = await loadSentenceBank();
+    console.log(`Loaded full sentence bank with ${bank.length} patterns`);
+  }
   
   if (bank.length === 0) {
     throw new Error("Sentence bank is empty. Please add human text patterns first.");
   }
-
-  console.log(`Humanizing text against ${bank.length} patterns...`);
 
   const sentences = splitIntoSentences(inputText);
   

@@ -615,9 +615,25 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      console.log(`Humanizing text (${validatedData.text.length} chars) with level: ${validatedData.level}`);
+      // Convert prefiltered candidates to SentenceBankEntry format if provided
+      const prefilteredCandidates = validatedData.prefilteredCandidates?.map((c) => ({
+        original: c.original,
+        bleached: c.bleached,
+        structure: c.structure || c.bleached,
+        charLength: c.charLength,
+        tokenLength: c.tokenLength,
+        clauseCount: c.clauseCount,
+        clauseOrder: c.clauseOrder,
+        punctuationPattern: c.punctuationPattern,
+      }));
       
-      const result = await humanizeText(validatedData.text, validatedData.level);
+      if (prefilteredCandidates) {
+        console.log(`Humanizing text (${validatedData.text.length} chars) with ${prefilteredCandidates.length} prefiltered candidates`);
+      } else {
+        console.log(`Humanizing text (${validatedData.text.length} chars) with level: ${validatedData.level}`);
+      }
+      
+      const result = await humanizeText(validatedData.text, validatedData.level, prefilteredCandidates);
       
       res.json(result);
     } catch (error) {

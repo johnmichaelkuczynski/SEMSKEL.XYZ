@@ -40,6 +40,13 @@ This produces human-like, detector-safe text with full content preservation.
 **LARGE TEXT HANDLING COMPLETE** ✅
 **DATABASE & USER SYSTEM COMPLETE** ✅
 
+### Implementation Details:
+- **Weighted similarity scoring**: Structure (40%), token length (15%), clause count (15%), clause order (15%), punctuation (15%)
+- **Skeleton feature extraction**: Variable positions, clause markers, function word sequences
+- **Claude-powered slot-fill**: Rewrites AI sentences using matched human patterns
+- **Deterministic fallback**: Template-based slot-fill when Claude unavailable - distributes AI content across pattern slots
+- **Match scores typically 92-95**: High-quality geometric matching
+
 ### Database Features:
 - PostgreSQL (Neon) database for persistent storage
 - Users table (simple username-only login, no password)
