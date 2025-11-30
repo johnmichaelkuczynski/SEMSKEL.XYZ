@@ -32,13 +32,14 @@ After a match is found:
 
 This produces human-like, detector-safe text with full content preservation.
 
-## Current Status (November 29, 2025)
+## Current Status (November 30, 2025)
 
 **LAYER 1 COMPLETE** ✅
 **LAYER 2 COMPLETE** ✅
 **LAYER 3 COMPLETE** ✅
 **LARGE TEXT HANDLING COMPLETE** ✅
 **DATABASE & USER SYSTEM COMPLETE** ✅
+**STYLE TRANSFER FEATURE COMPLETE** ✅
 
 ### Implementation Details:
 - **Weighted similarity scoring**: Structure (40%), token length (15%), clause count (15%), clause order (15%), punctuation (15%)
@@ -89,6 +90,17 @@ This produces human-like, detector-safe text with full content preservation.
 - Combined output display with copy/download options
 - Sentence-by-sentence breakdown showing: AI sentence → matched pattern → humanized rewrite
 
+### Style Transfer Feature:
+- "Rewrite in Same Style" section at bottom of page
+- Takes target text (what to rewrite) and style sample (reference for patterns)
+- Bleaches style sample ephemerally (patterns not stored to database)
+- Matches target sentences to extracted style patterns using same weighted similarity scoring
+- Rewrites target using matched style patterns via Claude slot-fill
+- Tip displayed: style sample should be longer than target for better results
+- Side-by-side layout: Target Text (left) | Rewritten Text (right)
+- Style Sample input below with word count display
+- Sentence-by-sentence breakdown showing original, matched pattern, and rewrite
+
 ## User Preferences
 
 - Simple, everyday language
@@ -116,6 +128,7 @@ This produces human-like, detector-safe text with full content preservation.
 - `POST /api/build-sentence-bank` — Splits into sentences, bleaches each, returns JSONL
 - `POST /api/match` — Matches AI text sentences to human patterns from the bank
 - `POST /api/humanize` — Humanizes AI text using matched human patterns (Step 3)
+- `POST /api/rewrite-style` — Rewrites target text using ephemeral style patterns (Style Transfer)
 - `GET /api/sentence-bank/status` — Returns count of entries in the bank
 - `GET /api/sentence-bank` — Returns all entries in the bank
 
@@ -124,6 +137,7 @@ This produces human-like, detector-safe text with full content preservation.
 - `server/bleach.ts` — Bleaching logic + Claude integration
 - `server/matcher.ts` — Pattern matching engine (Layer 2)
 - `server/humanizer.ts` — Humanizer module (Layer 3) with weighted similarity and slot-fill rewriting
+- `server/rewriteInStyle.ts` — Style Transfer service (ephemeral pattern extraction and rewriting)
 - `server/routes.ts` — API endpoints
 - `shared/schema.ts` — Types and validation schemas
 - `sentence_bank.jsonl` — Stored human sentence patterns (backup file)
