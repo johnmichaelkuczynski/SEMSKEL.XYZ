@@ -220,3 +220,38 @@ export const gptzeroResponseSchema = z.object({
 });
 
 export type GPTZeroResponse = z.infer<typeof gptzeroResponseSchema>;
+
+// ==================== REWRITE IN STYLE SCHEMAS ====================
+
+// Rewrite in style request schema
+export const rewriteStyleRequestSchema = z.object({
+  targetText: z.string().min(1, "Target text is required"),
+  styleSample: z.string().min(1, "Style sample is required"),
+  level: z.enum(bleachingLevels).optional().default("Heavy"),
+});
+
+export type RewriteStyleRequest = z.infer<typeof rewriteStyleRequestSchema>;
+
+// Individual rewritten sentence
+export const rewrittenSentenceSchema = z.object({
+  original: z.string(),
+  rewrite: z.string(),
+  matchedPattern: z.object({
+    original: z.string(),
+    bleached: z.string(),
+    score: z.number(),
+  }).nullable(),
+});
+
+export type RewrittenSentence = z.infer<typeof rewrittenSentenceSchema>;
+
+// Rewrite in style response schema
+export const rewriteStyleResponseSchema = z.object({
+  sentences: z.array(rewrittenSentenceSchema),
+  combinedRewrite: z.string(),
+  totalSentences: z.number(),
+  successfulRewrites: z.number(),
+  stylePatternsExtracted: z.number(),
+});
+
+export type RewriteStyleResponse = z.infer<typeof rewriteStyleResponseSchema>;
