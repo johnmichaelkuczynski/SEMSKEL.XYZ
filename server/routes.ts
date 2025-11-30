@@ -1007,6 +1007,56 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Get sentence bank content paginated (for large downloads in installments)
+  app.get("/api/sentence-bank/download/:installment", async (req, res) => {
+    try {
+      const INSTALLMENT_SIZE = 10000;
+      const installment = parseInt(req.params.installment, 10);
+      
+      if (isNaN(installment) || installment < 1) {
+        return res.status(400).json({ error: "Invalid installment number. Must be 1 or greater." });
+      }
+      
+      const totalCount = await storage.getSentenceEntryCount();
+      const totalInstallments = Math.ceil(totalCount / INSTALLMENT_SIZE);
+      
+      if (installment > totalInstallments) {
+        return res.status(404).json({ 
+          error: "Installment not found",
+          message: `Only ${totalInstallments} installment(s) available for ${totalCount} patterns.`
+        });
+      }
+      
+      const offset = (installment - 1) * INSTALLMENT_SIZE;
+      const entries = await storage.getSentenceEntriesPaginated(offset, INSTALLMENT_SIZE);
+      
+      // Convert to expected format
+      const formattedEntries = entries.map(entry => ({
+        original: entry.original,
+        bleached: entry.bleached,
+        char_length: entry.charLength,
+        token_length: entry.tokenLength,
+        clause_count: entry.clauseCount,
+        clause_order: entry.clauseOrder,
+        punctuation_pattern: entry.punctuationPattern,
+        structure: entry.structure,
+      }));
+      
+      res.json({ 
+        entries: formattedEntries, 
+        count: entries.length,
+        installment,
+        totalInstallments,
+        totalCount,
+        rangeStart: offset + 1,
+        rangeEnd: offset + entries.length,
+      });
+    } catch (error) {
+      console.error("Error reading sentence bank installment:", error);
+      res.status(500).json({ error: "Failed to read sentence bank installment" });
+    }
+  });
+
   // Get user's sentence bank entries
   app.get("/api/sentence-bank/user/:username", async (req, res) => {
     try {
