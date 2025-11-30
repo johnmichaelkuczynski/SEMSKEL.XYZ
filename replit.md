@@ -101,6 +101,11 @@ This produces human-like, detector-safe text with full content preservation.
 - Style Sample input below with word count display
 - Sentence-by-sentence breakdown showing original, matched pattern, and rewrite
 - Toast notification shows how many patterns were saved for logged-in users
+- **Content Similarity**: Verifies that target text and rewritten text preserve the same meaning
+  - Compares semantic content between original and rewritten text
+  - Returns 0-100 similarity score with Excellent/Good/Fair/Low rating
+  - Shows preserved content summary and any discrepancies
+  - Result automatically clears when text changes or new rewrite runs
 
 ## User Preferences
 
@@ -130,6 +135,7 @@ This produces human-like, detector-safe text with full content preservation.
 - `POST /api/match` — Matches AI text sentences to human patterns from the bank
 - `POST /api/humanize` — Humanizes AI text using matched human patterns (Step 3)
 - `POST /api/rewrite-style` — Rewrites target text using ephemeral style patterns (Style Transfer)
+- `POST /api/content-similarity` — Compares original and rewritten text for semantic similarity (0-100 score)
 - `GET /api/sentence-bank/status` — Returns count of entries in the bank
 - `GET /api/sentence-bank` — Returns all entries in the bank
 
