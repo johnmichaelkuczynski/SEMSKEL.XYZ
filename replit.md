@@ -93,13 +93,14 @@ This produces human-like, detector-safe text with full content preservation.
 ### Style Transfer Feature:
 - "Rewrite in Same Style" section at bottom of page
 - Takes target text (what to rewrite) and style sample (reference for patterns)
-- Bleaches style sample ephemerally (patterns not stored to database)
+- **Auto-save patterns**: When logged in, extracted style patterns are automatically saved to user's personal sentence bank (with deduplication)
 - Matches target sentences to extracted style patterns using same weighted similarity scoring
 - Rewrites target using matched style patterns via Claude slot-fill
 - Tip displayed: style sample should be longer than target for better results
 - Side-by-side layout: Target Text (left) | Rewritten Text (right)
 - Style Sample input below with word count display
 - Sentence-by-sentence breakdown showing original, matched pattern, and rewrite
+- Toast notification shows how many patterns were saved for logged-in users
 
 ## User Preferences
 
