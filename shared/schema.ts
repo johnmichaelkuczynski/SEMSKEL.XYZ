@@ -228,6 +228,7 @@ export const rewriteStyleRequestSchema = z.object({
   targetText: z.string().min(1, "Target text is required"),
   styleSample: z.string().min(1, "Style sample is required"),
   level: z.enum(bleachingLevels).optional().default("Heavy"),
+  userId: z.number().optional(), // If logged in, patterns will be saved to user's bank
 });
 
 export type RewriteStyleRequest = z.infer<typeof rewriteStyleRequestSchema>;
@@ -252,6 +253,7 @@ export const rewriteStyleResponseSchema = z.object({
   totalSentences: z.number(),
   successfulRewrites: z.number(),
   stylePatternsExtracted: z.number(),
+  patternsSavedToBank: z.number().optional(), // How many new patterns were saved (for logged-in users)
 });
 
 export type RewriteStyleResponse = z.infer<typeof rewriteStyleResponseSchema>;
