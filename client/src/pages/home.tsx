@@ -23,7 +23,7 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence } from "@shared/schema";
 import { ShieldCheckIcon } from "@heroicons/react/24/solid";
 
 interface LoggedInUser {
@@ -76,6 +76,15 @@ export default function Home() {
   const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
   const [uploadJsonlContent, setUploadJsonlContent] = useState("");
   const [aiDetectionResult, setAiDetectionResult] = useState<GPTZeroResponse | null>(null);
+  
+  // Style Transfer state
+  const [styleTargetText, setStyleTargetText] = useState("");
+  const [styleSampleText, setStyleSampleText] = useState("");
+  const [styleTargetFile, setStyleTargetFile] = useState<{ name: string } | null>(null);
+  const [styleSampleFile, setStyleSampleFile] = useState<{ name: string } | null>(null);
+  const [styleRewriteResults, setStyleRewriteResults] = useState<RewrittenSentence[] | null>(null);
+  const [styleRewriteStats, setStyleRewriteStats] = useState<{ total: number; successful: number; patternsExtracted: number } | null>(null);
+  
   const { toast } = useToast();
   
   // Calculate word count and estimated chunks for the input text
@@ -293,6 +302,34 @@ export default function Home() {
     },
   });
 
+  // Style Transfer mutation
+  const styleRewriteMutation = useMutation({
+    mutationFn: async (data: { targetText: string; styleSample: string; level: BleachingLevel }) => {
+      const response = await apiRequest("POST", "/api/rewrite-style", data);
+      return await response.json() as RewriteStyleResponse;
+    },
+    onSuccess: (data) => {
+      setStyleRewriteResults(data.sentences);
+      setStyleRewriteStats({
+        total: data.totalSentences,
+        successful: data.successfulRewrites,
+        patternsExtracted: data.stylePatternsExtracted,
+      });
+      toast({
+        title: "Style transfer complete",
+        description: `Rewrote ${data.successfulRewrites} of ${data.totalSentences} sentences using ${data.stylePatternsExtracted} extracted patterns.`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "Style transfer failed.";
+      toast({
+        title: "Style transfer failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
   // File upload handling
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
@@ -434,6 +471,128 @@ export default function Home() {
       title: "Download started",
       description: `Downloading ${filename}`,
     });
+  };
+
+  // Style Transfer file handlers
+  const onDropStyleTarget = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0];
+    if (file && file.name.endsWith(".txt")) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const text = e.target?.result as string;
+        setStyleTargetText(text);
+        setStyleTargetFile({ name: file.name });
+        toast({
+          title: "Target text uploaded",
+          description: `${file.name} loaded successfully.`,
+        });
+      };
+      reader.readAsText(file);
+    } else {
+      toast({
+        title: "Invalid file type",
+        description: "Please upload a .txt file.",
+        variant: "destructive",
+      });
+    }
+  }, [toast]);
+
+  const onDropStyleSample = useCallback((acceptedFiles: File[]) => {
+    const file = acceptedFiles[0];
+    if (file && file.name.endsWith(".txt")) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const text = e.target?.result as string;
+        setStyleSampleText(text);
+        setStyleSampleFile({ name: file.name });
+        toast({
+          title: "Style sample uploaded",
+          description: `${file.name} loaded successfully.`,
+        });
+      };
+      reader.readAsText(file);
+    } else {
+      toast({
+        title: "Invalid file type",
+        description: "Please upload a .txt file.",
+        variant: "destructive",
+      });
+    }
+  }, [toast]);
+
+  const { getRootProps: getStyleTargetProps, getInputProps: getStyleTargetInputProps, isDragActive: isStyleTargetDragActive } = useDropzone({
+    onDrop: onDropStyleTarget,
+    accept: { "text/plain": [".txt"] },
+    multiple: false,
+    noClick: false,
+  });
+
+  const { getRootProps: getStyleSampleProps, getInputProps: getStyleSampleInputProps, isDragActive: isStyleSampleDragActive } = useDropzone({
+    onDrop: onDropStyleSample,
+    accept: { "text/plain": [".txt"] },
+    multiple: false,
+    noClick: false,
+  });
+
+  const handleStyleRewrite = () => {
+    if (!styleTargetText.trim() || !styleSampleText.trim()) return;
+    styleRewriteMutation.mutate({
+      targetText: styleTargetText,
+      styleSample: styleSampleText,
+      level: bleachingLevel,
+    });
+  };
+
+  const handleCopyStyleRewrite = async () => {
+    if (!styleRewriteResults) return;
+    
+    const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
+    
+    try {
+      await navigator.clipboard.writeText(rewrittenText);
+      toast({
+        title: "Copied to clipboard",
+        description: "Rewritten text copied successfully.",
+      });
+    } catch (error) {
+      toast({
+        title: "Copy failed",
+        description: "Could not copy to clipboard.",
+        variant: "destructive",
+      });
+    }
+  };
+
+  const handleDownloadStyleRewrite = () => {
+    if (!styleRewriteResults) return;
+    
+    const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
+    const timestamp = Date.now();
+    const filename = `style_rewrite_${timestamp}.txt`;
+    
+    const blob = new Blob([rewrittenText], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Download started",
+      description: `Downloading ${filename}`,
+    });
+  };
+
+  const handleClearStyleTransfer = () => {
+    setStyleTargetText("");
+    setStyleSampleText("");
+    setStyleTargetFile(null);
+    setStyleSampleFile(null);
+    setStyleRewriteResults(null);
+    setStyleRewriteStats(null);
   };
 
   // Action handlers
@@ -589,6 +748,13 @@ export default function Home() {
     setHumanizeStats(null);
     // Clear AI detection
     setAiDetectionResult(null);
+    // Clear style transfer
+    setStyleTargetText("");
+    setStyleSampleText("");
+    setStyleTargetFile(null);
+    setStyleSampleFile(null);
+    setStyleRewriteResults(null);
+    setStyleRewriteStats(null);
   };
 
   const handleLogin = () => {
@@ -1451,6 +1617,215 @@ export default function Home() {
               )}
             </div>
           </div>
+        </div>
+
+        {/* Style Transfer Section */}
+        <div className="border-t p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <SparklesIcon className="w-6 h-6 text-primary" />
+            <h2 className="text-lg font-semibold">Rewrite in Same Style</h2>
+            <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">Style Transfer</span>
+          </div>
+          <p className="text-sm text-muted-foreground mb-4">
+            Rewrite your target text using the sentence patterns from a style sample. 
+            <span className="text-primary font-medium"> Tip: Use a style sample much longer than your target</span> to increase the likelihood of natural pattern matches.
+          </p>
+
+          {/* Top Row: Target Text (Left) | Rewrite (Right) */}
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            {/* Target Text Box (Left) */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <Label className="text-sm font-medium">Target Text</Label>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => { setStyleTargetText(""); setStyleTargetFile(null); }}
+                  disabled={!styleTargetText}
+                  data-testid="button-clear-style-target"
+                >
+                  <XMarkIcon className="w-4 h-4" />
+                </Button>
+              </div>
+              <div
+                {...getStyleTargetProps()}
+                className={`h-16 border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer transition-colors hover-elevate ${
+                  isStyleTargetDragActive ? "border-primary bg-primary/5" : "border-border"
+                }`}
+                data-testid="dropzone-style-target"
+              >
+                <input {...getStyleTargetInputProps()} data-testid="input-style-target-file" />
+                <p className="text-xs text-muted-foreground">
+                  {styleTargetFile ? styleTargetFile.name : "Drop target .txt or click to browse"}
+                </p>
+              </div>
+              <Textarea
+                placeholder="Paste or type the text you want rewritten..."
+                value={styleTargetText}
+                onChange={(e) => setStyleTargetText(e.target.value)}
+                className="min-h-[200px] resize-none"
+                data-testid="textarea-style-target"
+              />
+              {styleTargetText && (
+                <p className="text-xs text-muted-foreground">
+                  {getWordCount(styleTargetText)} words
+                </p>
+              )}
+            </div>
+
+            {/* Rewrite Output Box (Right) */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <Label className="text-sm font-medium">Rewritten Text</Label>
+                {styleRewriteResults && (
+                  <div className="flex gap-1">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleCopyStyleRewrite}
+                      data-testid="button-copy-style-rewrite"
+                    >
+                      <ClipboardDocumentIcon className="w-4 h-4" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      onClick={handleDownloadStyleRewrite}
+                      data-testid="button-download-style-rewrite"
+                    >
+                      <ArrowDownTrayIcon className="w-4 h-4" />
+                    </Button>
+                  </div>
+                )}
+              </div>
+              <div className="flex-1 min-h-[200px] border rounded-lg p-3 bg-muted/30 overflow-auto">
+                {styleRewriteResults && styleRewriteResults.length > 0 ? (
+                  <div className="space-y-2">
+                    {styleRewriteStats && (
+                      <p className="text-xs text-muted-foreground mb-2">
+                        Rewrote <span className="text-primary font-medium">{styleRewriteStats.successful}</span> of {styleRewriteStats.total} sentences using {styleRewriteStats.patternsExtracted} extracted patterns
+                      </p>
+                    )}
+                    <p className="text-sm leading-relaxed" data-testid="style-rewrite-output">
+                      {styleRewriteResults.map(r => r.rewrite).join(" ")}
+                    </p>
+                  </div>
+                ) : styleRewriteMutation.isPending ? (
+                  <div className="flex items-center justify-center h-full">
+                    <div className="text-center text-muted-foreground">
+                      <SparklesIcon className="w-12 h-12 mx-auto mb-2 animate-pulse text-primary" />
+                      <p className="text-sm font-medium">Transferring style...</p>
+                      <p className="text-xs mt-1">Extracting patterns and rewriting</p>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex items-center justify-center h-full text-muted-foreground text-sm">
+                    Rewritten text will appear here
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Row: Style Sample */}
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <Label className="text-sm font-medium">Style Sample (reference text for sentence patterns)</Label>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => { setStyleSampleText(""); setStyleSampleFile(null); }}
+                disabled={!styleSampleText}
+                data-testid="button-clear-style-sample"
+              >
+                <XMarkIcon className="w-4 h-4" />
+              </Button>
+            </div>
+            <div
+              {...getStyleSampleProps()}
+              className={`h-16 border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer transition-colors hover-elevate ${
+                isStyleSampleDragActive ? "border-primary bg-primary/5" : "border-border"
+              }`}
+              data-testid="dropzone-style-sample"
+            >
+              <input {...getStyleSampleInputProps()} data-testid="input-style-sample-file" />
+              <p className="text-xs text-muted-foreground">
+                {styleSampleFile ? styleSampleFile.name : "Drop style sample .txt or click to browse"}
+              </p>
+            </div>
+            <Textarea
+              placeholder="Paste or type a style sample text (ideally longer than your target)..."
+              value={styleSampleText}
+              onChange={(e) => setStyleSampleText(e.target.value)}
+              className="min-h-[150px] resize-none"
+              data-testid="textarea-style-sample"
+            />
+            {styleSampleText && (
+              <p className="text-xs text-muted-foreground">
+                {getWordCount(styleSampleText)} words
+                {styleTargetText && getWordCount(styleSampleText) < getWordCount(styleTargetText) && (
+                  <span className="text-yellow-600 ml-2">
+                    (Consider using a longer style sample for better results)
+                  </span>
+                )}
+              </p>
+            )}
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex gap-3 mt-4">
+            <Button
+              onClick={handleStyleRewrite}
+              disabled={!styleTargetText.trim() || !styleSampleText.trim() || styleRewriteMutation.isPending}
+              className="flex-1"
+              data-testid="button-style-rewrite"
+            >
+              <SparklesIcon className="w-4 h-4 mr-2" />
+              {styleRewriteMutation.isPending ? "Rewriting..." : "Rewrite in Same Style"}
+            </Button>
+            <Button
+              variant="outline"
+              onClick={handleClearStyleTransfer}
+              disabled={!styleTargetText && !styleSampleText && !styleRewriteResults}
+              data-testid="button-clear-style-transfer"
+            >
+              <XMarkIcon className="w-4 h-4 mr-2" />
+              Clear
+            </Button>
+          </div>
+
+          {/* Sentence-by-sentence breakdown */}
+          {styleRewriteResults && styleRewriteResults.length > 0 && (
+            <div className="mt-4 border-t pt-4">
+              <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide mb-3">
+                Sentence-by-Sentence Breakdown
+              </p>
+              <div className="space-y-3 max-h-[400px] overflow-auto">
+                {styleRewriteResults.map((result, index) => (
+                  <div key={index} className="border rounded-lg p-3 bg-muted/30" data-testid={`style-result-${index}`}>
+                    <div className="grid gap-2">
+                      <div>
+                        <p className="text-xs text-muted-foreground mb-1">Original #{index + 1}</p>
+                        <p className="text-sm">{result.original}</p>
+                      </div>
+                      {result.matchedPattern && (
+                        <div className="bg-muted rounded p-2">
+                          <p className="text-xs text-muted-foreground mb-1">
+                            Matched Style Pattern (Score: {result.matchedPattern.score})
+                          </p>
+                          <p className="text-xs font-mono">{result.matchedPattern.bleached}</p>
+                        </div>
+                      )}
+                      <div className="bg-primary/10 rounded p-2">
+                        <p className="text-xs text-primary mb-1">Rewritten</p>
+                        <p className="text-sm font-medium">{result.rewrite}</p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
