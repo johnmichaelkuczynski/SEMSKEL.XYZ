@@ -82,11 +82,12 @@ interface SkeletonFeatures {
 
 function extractSkeletonFeatures(bleached: string, original: string): SkeletonFeatures {
   const varPattern = /\b[A-Z](?:-[a-z]+)?\b|\b[A-Z]\d+\b|[αβγδεζηθικλμνξπρστυφχψω]|Ω\d+/g;
-  const variables = [...bleached.matchAll(varPattern)];
-  
-  const variablePositions = variables.map((m) => 
-    Math.round((m.index! / Math.max(bleached.length, 1)) * 100)
-  );
+  const variablePositions: number[] = [];
+  let match;
+  while ((match = varPattern.exec(bleached)) !== null) {
+    variablePositions.push(Math.round((match.index / Math.max(bleached.length, 1)) * 100));
+  }
+  const variableCount = variablePositions.length;
 
   const lowerOriginal = original.toLowerCase();
   const clauseMarkers: string[] = [];
@@ -108,7 +109,7 @@ function extractSkeletonFeatures(bleached: string, original: string): SkeletonFe
     .join(" ");
 
   return {
-    variableCount: variables.length,
+    variableCount,
     variablePositions,
     clauseMarkers,
     clauseMarkerPositions,

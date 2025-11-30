@@ -11,10 +11,12 @@ import {
   sentenceBankEntrySchema,
   humanizeRequestSchema,
   gptzeroRequestSchema,
+  rewriteStyleRequestSchema,
   type InsertSentenceEntry,
 } from "@shared/schema";
 import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
 import { humanizeText } from "./humanizer";
+import { rewriteInStyle } from "./rewriteInStyle";
 import { z } from "zod";
 
 // GPTZero API configuration
@@ -882,6 +884,49 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.status(500).json({
         error: "AI detection failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // ==================== REWRITE IN STYLE ENDPOINT ====================
+
+  app.post("/api/rewrite-style", async (req, res) => {
+    try {
+      console.log("Received rewrite-style request");
+      
+      const validatedData = rewriteStyleRequestSchema.parse(req.body);
+      
+      // Check text size limits
+      const targetWordCount = validatedData.targetText.split(/\s+/).filter(w => w.length > 0).length;
+      const styleWordCount = validatedData.styleSample.split(/\s+/).filter(w => w.length > 0).length;
+      
+      console.log(`Target: ${targetWordCount} words, Style sample: ${styleWordCount} words`);
+      
+      // Warn if style sample is shorter than target
+      if (styleWordCount < targetWordCount) {
+        console.warn("Style sample is shorter than target - may result in pattern reuse");
+      }
+      
+      const result = await rewriteInStyle(
+        validatedData.targetText,
+        validatedData.styleSample,
+        validatedData.level
+      );
+      
+      res.json(result);
+    } catch (error) {
+      console.error("Rewrite style error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Style rewrite failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
       });
     }
