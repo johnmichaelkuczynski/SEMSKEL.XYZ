@@ -31,6 +31,7 @@ export interface IStorage {
   
   // Sentence entry operations
   getAllSentenceEntries(): Promise<SentenceEntry[]>;
+  getSentenceEntriesPaginated(offset: number, limit: number): Promise<SentenceEntry[]>;
   getSentenceEntriesByUser(userId: number): Promise<SentenceEntry[]>;
   getSentenceEntryCount(): Promise<number>;
   getUserSentenceCount(userId: number): Promise<number>;
@@ -69,6 +70,13 @@ export class DatabaseStorage implements IStorage {
   // Sentence entry operations
   async getAllSentenceEntries(): Promise<SentenceEntry[]> {
     return await db.select().from(sentenceEntries).orderBy(desc(sentenceEntries.id));
+  }
+
+  async getSentenceEntriesPaginated(offset: number, limit: number): Promise<SentenceEntry[]> {
+    return await db.select().from(sentenceEntries)
+      .orderBy(sentenceEntries.id)
+      .offset(offset)
+      .limit(limit);
   }
 
   async getSentenceEntriesByUser(userId: number): Promise<SentenceEntry[]> {
