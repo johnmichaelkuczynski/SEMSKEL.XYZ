@@ -23,7 +23,8 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse, AuthorStyleWithCount } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse, AuthorStyleWithCount, ChunkMetadata, ChunkPreviewResponse } from "@shared/schema";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ShieldCheckIcon } from "@heroicons/react/24/solid";
 
@@ -91,6 +92,11 @@ export default function Home() {
   // Author Style state (for Style Transfer)
   const [selectedAuthorStyleId, setSelectedAuthorStyleId] = useState<number | null>(null);
   
+  // Chunk Selection state
+  const [chunks, setChunks] = useState<ChunkMetadata[]>([]);
+  const [selectedChunkIds, setSelectedChunkIds] = useState<Set<number>>(new Set());
+  const [showChunkSelection, setShowChunkSelection] = useState(false);
+  
   const { toast } = useToast();
   
   // Calculate word count and estimated chunks for the input text
@@ -131,6 +137,13 @@ export default function Home() {
       setTotalBankSize(bankStatusQuery.data.count);
     }
   }, [bankStatusQuery.data]);
+  
+  // Reset chunk selection when input text changes significantly
+  useEffect(() => {
+    setChunks([]);
+    setSelectedChunkIds(new Set());
+    setShowChunkSelection(false);
+  }, [inputText]);
 
   // Clear similarity result when style texts change
   useEffect(() => {
@@ -189,6 +202,85 @@ export default function Home() {
       toast({
         title: "JSONL generation failed",
         description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Chunk preview mutation - fetches chunk metadata for selection
+  const chunkPreviewMutation = useMutation({
+    mutationFn: async (text: string) => {
+      const response = await apiRequest("POST", "/api/chunk-preview", { text, chunkSize: 2000 });
+      return await response.json() as ChunkPreviewResponse;
+    },
+    onSuccess: (data) => {
+      setChunks(data.chunks);
+      // Select all chunks by default
+      setSelectedChunkIds(new Set(data.chunks.map(c => c.id)));
+      setShowChunkSelection(true);
+      
+      if (!data.needsChunking) {
+        toast({
+          title: "Text loaded",
+          description: `${data.totalWords.toLocaleString()} words, ${data.totalSentences} sentences - no chunking needed.`,
+        });
+      } else {
+        toast({
+          title: "Text divided into chunks",
+          description: `${data.chunks.length} chunks created from ${data.totalWords.toLocaleString()} words. Select which chunks to process.`,
+        });
+      }
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Failed to preview chunks",
+        description: error?.message || "Could not divide text into chunks.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Bleach selected chunks mutation
+  const bleachChunksMutation = useMutation({
+    mutationFn: async (data: { chunks: { id: number; text: string }[]; level: BleachingLevel }) => {
+      const response = await apiRequest("POST", "/api/bleach-chunks", data);
+      return await response.json() as { bleachedText: string; chunksProcessed: number; totalChunks: number };
+    },
+    onSuccess: (data) => {
+      setOutputText(data.bleachedText);
+      toast({
+        title: "Text bleached successfully",
+        description: `Processed ${data.chunksProcessed} of ${data.totalChunks} chunks.`,
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Bleaching failed",
+        description: error?.message || "An error occurred.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Build sentence bank from selected chunks mutation
+  const sentenceBankChunksMutation = useMutation({
+    mutationFn: async (data: { chunks: { id: number; text: string }[]; level: BleachingLevel; userId?: number }) => {
+      const response = await apiRequest("POST", "/api/build-sentence-bank-chunks", data);
+      return await response.json() as { jsonl: string; entries: number; chunksProcessed: number; savedToBank: number };
+    },
+    onSuccess: (data) => {
+      setJsonlContent(data.jsonl);
+      setSentenceCount(data.entries);
+      queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+      toast({
+        title: "Saved to sentence bank",
+        description: `Added ${data.entries} sentences from ${data.chunksProcessed} chunks.${data.savedToBank > 0 ? ` Saved ${data.savedToBank} to your bank.` : ""}`,
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "JSONL generation failed",
+        description: error?.message || "An error occurred.",
         variant: "destructive",
       });
     },
@@ -736,23 +828,92 @@ export default function Home() {
   };
 
   // Action handlers
+  // Chunk selection helpers
+  const handlePreviewChunks = () => {
+    if (!inputText.trim()) return;
+    chunkPreviewMutation.mutate(inputText);
+  };
+
+  const handleToggleChunk = (chunkId: number) => {
+    setSelectedChunkIds(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(chunkId)) {
+        newSet.delete(chunkId);
+      } else {
+        newSet.add(chunkId);
+      }
+      return newSet;
+    });
+  };
+
+  const handleSelectAllChunks = () => {
+    setSelectedChunkIds(new Set(chunks.map(c => c.id)));
+  };
+
+  const handleDeselectAllChunks = () => {
+    setSelectedChunkIds(new Set());
+  };
+
+  const getSelectedChunks = () => {
+    return chunks
+      .filter(c => selectedChunkIds.has(c.id))
+      .map(c => ({ id: c.id, text: c.text }));
+  };
+
   const handleBleach = () => {
     if (!inputText.trim()) return;
     
-    bleachMutation.mutate({
-      text: inputText,
-      level: bleachingLevel,
-      filename: uploadedFile?.name,
-    });
+    // If chunks are loaded and we have selections, use chunk-based processing
+    if (showChunkSelection && chunks.length > 0) {
+      const selectedChunks = getSelectedChunks();
+      if (selectedChunks.length === 0) {
+        toast({
+          title: "No chunks selected",
+          description: "Please select at least one chunk to process.",
+          variant: "destructive",
+        });
+        return;
+      }
+      bleachChunksMutation.mutate({
+        chunks: selectedChunks,
+        level: bleachingLevel,
+      });
+    } else {
+      // Standard processing for small texts or when chunks not loaded
+      bleachMutation.mutate({
+        text: inputText,
+        level: bleachingLevel,
+        filename: uploadedFile?.name,
+      });
+    }
   };
 
   const handleGenerateJsonl = () => {
     if (!inputText.trim()) return;
     
-    sentenceBankMutation.mutate({
-      text: inputText,
-      level: bleachingLevel,
-    });
+    // If chunks are loaded and we have selections, use chunk-based processing
+    if (showChunkSelection && chunks.length > 0) {
+      const selectedChunks = getSelectedChunks();
+      if (selectedChunks.length === 0) {
+        toast({
+          title: "No chunks selected",
+          description: "Please select at least one chunk to process.",
+          variant: "destructive",
+        });
+        return;
+      }
+      sentenceBankChunksMutation.mutate({
+        chunks: selectedChunks,
+        level: bleachingLevel,
+        userId: currentUser?.id,
+      });
+    } else {
+      // Standard processing
+      sentenceBankMutation.mutate({
+        text: inputText,
+        level: bleachingLevel,
+      });
+    }
   };
 
   const handleCopyOutput = async () => {
@@ -878,6 +1039,10 @@ export default function Home() {
     setUploadedFile(null);
     setJsonlContent(null);
     setSentenceCount(0);
+    // Clear chunk selection
+    setChunks([]);
+    setSelectedChunkIds(new Set());
+    setShowChunkSelection(false);
     // Clear pattern matcher section
     setAiTextInput("");
     setAiUploadedFile(null);
@@ -1025,7 +1190,8 @@ export default function Home() {
     });
   };
 
-  const isProcessing = bleachMutation.isPending || sentenceBankMutation.isPending;
+  const isProcessing = bleachMutation.isPending || sentenceBankMutation.isPending || 
+    chunkPreviewMutation.isPending || bleachChunksMutation.isPending || sentenceBankChunksMutation.isPending;
 
   return (
     <div className="flex flex-col min-h-screen bg-background">
@@ -1269,12 +1435,112 @@ export default function Home() {
 
             {/* Word count and chunk estimate */}
             {inputText.trim() && (
-              <div className="text-sm text-muted-foreground mb-2">
-                {inputWordCount.toLocaleString()} words
-                {isLargeText && (
-                  <span className="ml-2">
-                    (will process in ~{estimatedChunks} chunks of 2000 words each)
-                  </span>
+              <div className="space-y-3 mb-2">
+                <div className="flex items-center justify-between">
+                  <div className="text-sm text-muted-foreground">
+                    {inputWordCount.toLocaleString()} words
+                    {isLargeText && !showChunkSelection && (
+                      <span className="ml-2">
+                        (will process in ~{estimatedChunks} chunks of 2000 words each)
+                      </span>
+                    )}
+                  </div>
+                  {isLargeText && !showChunkSelection && (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handlePreviewChunks}
+                      disabled={chunkPreviewMutation.isPending}
+                      data-testid="button-preview-chunks"
+                    >
+                      {chunkPreviewMutation.isPending ? "Loading..." : "Select Chunks"}
+                    </Button>
+                  )}
+                </div>
+
+                {/* Chunk Selection Panel */}
+                {showChunkSelection && chunks.length > 0 && (
+                  <Card className="p-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <Label className="text-sm font-semibold">
+                        Select Chunks to Process ({selectedChunkIds.size}/{chunks.length} selected)
+                      </Label>
+                      <div className="flex gap-2">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handleSelectAllChunks}
+                          disabled={selectedChunkIds.size === chunks.length}
+                          data-testid="button-select-all-chunks"
+                        >
+                          Select All
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handleDeselectAllChunks}
+                          disabled={selectedChunkIds.size === 0}
+                          data-testid="button-deselect-all-chunks"
+                        >
+                          Deselect All
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => {
+                            setShowChunkSelection(false);
+                            setChunks([]);
+                            setSelectedChunkIds(new Set());
+                          }}
+                          data-testid="button-close-chunk-selection"
+                        >
+                          <XMarkIcon className="w-4 h-4" />
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="max-h-[200px] overflow-auto space-y-2 border rounded-lg p-2 bg-muted/30">
+                      {chunks.map((chunk) => (
+                        <div
+                          key={chunk.id}
+                          className={`flex items-start gap-3 p-2 rounded-md cursor-pointer transition-colors ${
+                            selectedChunkIds.has(chunk.id) 
+                              ? "bg-primary/10 border border-primary/20" 
+                              : "bg-background hover:bg-muted/50"
+                          }`}
+                          onClick={() => handleToggleChunk(chunk.id)}
+                          data-testid={`chunk-item-${chunk.id}`}
+                        >
+                          <Checkbox
+                            checked={selectedChunkIds.has(chunk.id)}
+                            onCheckedChange={() => handleToggleChunk(chunk.id)}
+                            className="mt-0.5"
+                            data-testid={`checkbox-chunk-${chunk.id}`}
+                          />
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2 mb-1">
+                              <span className="text-xs font-medium text-muted-foreground">
+                                Chunk {chunk.id + 1}
+                              </span>
+                              <span className="text-xs text-muted-foreground">
+                                ({chunk.wordCount.toLocaleString()} words, {chunk.sentenceCount} sentences)
+                              </span>
+                            </div>
+                            <p className="text-xs text-muted-foreground truncate">
+                              {chunk.preview}
+                            </p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                    {selectedChunkIds.size > 0 && (
+                      <p className="text-xs text-muted-foreground mt-2">
+                        Selected: {Array.from(selectedChunkIds)
+                          .map(id => chunks.find(c => c.id === id)?.wordCount || 0)
+                          .reduce((a, b) => a + b, 0)
+                          .toLocaleString()} words total
+                      </p>
+                    )}
+                  </Card>
                 )}
               </div>
             )}
@@ -1288,10 +1554,10 @@ export default function Home() {
                 className="flex-1 h-11 text-base font-semibold"
                 data-testid="button-bleach"
               >
-                <SparklesIcon className={`w-5 h-5 mr-2 ${bleachMutation.isPending ? "animate-spin" : ""}`} />
-                {bleachMutation.isPending 
-                  ? (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Bleaching...") 
-                  : "Bleach Text"}
+                <SparklesIcon className={`w-5 h-5 mr-2 ${(bleachMutation.isPending || bleachChunksMutation.isPending) ? "animate-spin" : ""}`} />
+                {bleachMutation.isPending || bleachChunksMutation.isPending
+                  ? (showChunkSelection ? `Processing ${selectedChunkIds.size} chunks...` : (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Bleaching..."))
+                  : (showChunkSelection && selectedChunkIds.size > 0 ? `Bleach ${selectedChunkIds.size} Chunks` : "Bleach Text")}
               </Button>
               <Button
                 onClick={handleGenerateJsonl}
@@ -1301,10 +1567,10 @@ export default function Home() {
                 className="flex-1 h-11 text-base font-semibold"
                 data-testid="button-generate-jsonl"
               >
-                <DocumentTextIcon className={`w-5 h-5 mr-2 ${sentenceBankMutation.isPending ? "animate-pulse" : ""}`} />
-                {sentenceBankMutation.isPending 
-                  ? (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Processing...") 
-                  : "Generate JSONL"}
+                <DocumentTextIcon className={`w-5 h-5 mr-2 ${(sentenceBankMutation.isPending || sentenceBankChunksMutation.isPending) ? "animate-pulse" : ""}`} />
+                {sentenceBankMutation.isPending || sentenceBankChunksMutation.isPending
+                  ? (showChunkSelection ? `Processing ${selectedChunkIds.size} chunks...` : (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Processing..."))
+                  : (showChunkSelection && selectedChunkIds.size > 0 ? `Generate JSONL (${selectedChunkIds.size} Chunks)` : "Generate JSONL")}
               </Button>
             </div>
           </div>
