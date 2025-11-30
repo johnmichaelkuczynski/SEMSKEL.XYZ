@@ -53,7 +53,12 @@ This produces human-like, detector-safe text with full content preservation.
 - **Layer 2 candidate reuse**: humanize API accepts prefiltered candidates to skip full bank scan
 - **Match scores typically 92-95**: High-quality geometric matching
 - **GPTZero AI Detection**: Built-in detector to verify humanized text passes AI checks
-- **Automatic chunking**: Large texts (>2000 words) are automatically divided into chunks and processed sequentially - no micromanagement needed
+- **Automatic chunking**: Large texts (>2000 words) are automatically divided into chunks and processed sequentially
+- **Manual chunk selection**: For large texts, users can click "Select Chunks" to preview chunks and choose specific ones to process
+  - Sentence-aware splitting preserves sentence boundaries  
+  - Each chunk shows word count, sentence count, and preview text
+  - "Select All" / "Deselect All" buttons for quick selection
+  - Action buttons update to show chunk count when chunks are selected
 
 ### Database Features:
 - PostgreSQL (Neon) database for persistent storage
@@ -140,6 +145,7 @@ This produces human-like, detector-safe text with full content preservation.
 ### API Endpoints
 - `POST /api/bleach` — Bleaches text, returns bleached string
 - `POST /api/build-sentence-bank` — Splits into sentences, bleaches each, returns JSONL
+- `POST /api/chunk-preview` — Splits large text into sentence-aware chunks with metadata (word count, sentence count, preview)
 - `POST /api/match` — Matches AI text sentences to human patterns from the bank
 - `POST /api/humanize` — Humanizes AI text using matched human patterns (Step 3)
 - `POST /api/rewrite-style` — Rewrites target text using style patterns (accepts authorStyleId or styleSample)
