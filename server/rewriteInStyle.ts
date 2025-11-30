@@ -437,53 +437,64 @@ async function bleachAndCreatePattern(
 export async function rewriteInStyle(
   targetText: string,
   styleSample: string,
-  level: BleachingLevel = "Heavy"
+  level: BleachingLevel = "Heavy",
+  prebuiltPatterns?: SentenceBankEntry[] // Optional: use these instead of extracting from styleSample
 ): Promise<RewriteStyleResult> {
   console.log("Starting style transfer...");
   
   const targetSentences = splitIntoSentences(targetText);
-  const styleSentences = splitIntoSentences(styleSample);
+  const styleSentences = prebuiltPatterns ? [] : splitIntoSentences(styleSample);
   
   if (targetSentences.length === 0) {
     throw new Error("No sentences found in the target text.");
   }
   
-  if (styleSentences.length === 0) {
-    throw new Error("No sentences found in the style sample.");
-  }
+  // Use prebuilt patterns if provided, otherwise extract from style sample
+  let stylePatterns: SentenceBankEntry[];
   
-  console.log(`Target: ${targetSentences.length} sentences, Style sample: ${styleSentences.length} sentences`);
-  
-  console.log("Bleaching style sample to extract patterns...");
-  const stylePatterns: SentenceBankEntry[] = [];
   const BATCH_SIZE = 5;
   const DELAY = 500;
-  
   const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
   
-  for (let i = 0; i < styleSentences.length; i += BATCH_SIZE) {
-    const batch = styleSentences.slice(i, i + BATCH_SIZE);
-    console.log(`Bleaching style batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(styleSentences.length / BATCH_SIZE)}`);
-    
-    const batchPatterns = await Promise.all(
-      batch.map(async (sentence) => {
-        try {
-          return await bleachAndCreatePattern(sentence, level);
-        } catch (error) {
-          console.error(`Error bleaching style sentence: ${sentence.substring(0, 50)}...`);
-          return null;
-        }
-      })
-    );
-    
-    stylePatterns.push(...batchPatterns.filter((p): p is SentenceBankEntry => p !== null));
-    
-    if (i + BATCH_SIZE < styleSentences.length) {
-      await delay(DELAY);
+  if (prebuiltPatterns && prebuiltPatterns.length > 0) {
+    // Use the provided patterns directly (e.g., from an author style)
+    console.log(`Using ${prebuiltPatterns.length} prebuilt patterns`);
+    stylePatterns = prebuiltPatterns;
+  } else {
+    // Extract patterns from the style sample
+    if (styleSentences.length === 0) {
+      throw new Error("No sentences found in the style sample.");
     }
+    
+    console.log(`Target: ${targetSentences.length} sentences, Style sample: ${styleSentences.length} sentences`);
+    
+    console.log("Bleaching style sample to extract patterns...");
+    stylePatterns = [];
+    
+    for (let i = 0; i < styleSentences.length; i += BATCH_SIZE) {
+      const batch = styleSentences.slice(i, i + BATCH_SIZE);
+      console.log(`Bleaching style batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(styleSentences.length / BATCH_SIZE)}`);
+      
+      const batchPatterns = await Promise.all(
+        batch.map(async (sentence) => {
+          try {
+            return await bleachAndCreatePattern(sentence, level);
+          } catch (error) {
+            console.error(`Error bleaching style sentence: ${sentence.substring(0, 50)}...`);
+            return null;
+          }
+        })
+      );
+      
+      stylePatterns.push(...batchPatterns.filter((p): p is SentenceBankEntry => p !== null));
+      
+      if (i + BATCH_SIZE < styleSentences.length) {
+        await delay(DELAY);
+      }
+    }
+    
+    console.log(`Extracted ${stylePatterns.length} style patterns`);
   }
-  
-  console.log(`Extracted ${stylePatterns.length} style patterns`);
   
   if (stylePatterns.length === 0) {
     throw new Error("Failed to extract any patterns from the style sample.");

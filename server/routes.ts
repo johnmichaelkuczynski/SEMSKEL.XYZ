@@ -13,6 +13,9 @@ import {
   gptzeroRequestSchema,
   rewriteStyleRequestSchema,
   contentSimilarityRequestSchema,
+  createAuthorStyleRequestSchema,
+  addAuthorSentencesRequestSchema,
+  rewriteWithAuthorStyleRequestSchema,
   type InsertSentenceEntry,
 } from "@shared/schema";
 import Anthropic from "@anthropic-ai/sdk";
@@ -968,6 +971,250 @@ export async function registerRoutes(app: Express): Promise<Server> {
       });
     } catch (error) {
       console.error("Rewrite style error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Style rewrite failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // ==================== AUTHOR STYLES ENDPOINTS ====================
+
+  // Get all author styles with sentence counts
+  app.get("/api/author-styles", async (_req, res) => {
+    try {
+      const styles = await storage.getAllAuthorStyles();
+      res.json(styles);
+    } catch (error) {
+      console.error("Get author styles error:", error);
+      res.status(500).json({
+        error: "Failed to get author styles",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Create a new author style
+  app.post("/api/author-styles", async (req, res) => {
+    try {
+      const validatedData = createAuthorStyleRequestSchema.parse(req.body);
+      
+      // Check if author already exists
+      const existing = await storage.getAuthorStyleByName(validatedData.name);
+      if (existing) {
+        return res.status(400).json({
+          error: "Author style already exists",
+          message: `An author style with the name "${validatedData.name}" already exists.`,
+        });
+      }
+      
+      const style = await storage.createAuthorStyle(validatedData);
+      res.json(style);
+    } catch (error) {
+      console.error("Create author style error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Failed to create author style",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Add sentences to an author style
+  app.post("/api/author-styles/:id/sentences", async (req, res) => {
+    try {
+      const authorStyleId = parseInt(req.params.id, 10);
+      if (isNaN(authorStyleId)) {
+        return res.status(400).json({
+          error: "Invalid author style ID",
+          message: "Author style ID must be a number.",
+        });
+      }
+      
+      // Verify author style exists
+      const authorStyle = await storage.getAuthorStyle(authorStyleId);
+      if (!authorStyle) {
+        return res.status(404).json({
+          error: "Author style not found",
+          message: `No author style found with ID ${authorStyleId}.`,
+        });
+      }
+      
+      const validatedData = addAuthorSentencesRequestSchema.parse(req.body);
+      
+      // Check for duplicates within the request
+      const uniqueSentences = new Map<string, typeof validatedData.sentences[0]>();
+      for (const sentence of validatedData.sentences) {
+        if (!uniqueSentences.has(sentence.bleached)) {
+          uniqueSentences.set(sentence.bleached, sentence);
+        }
+      }
+      
+      // Check for existing sentences in this author's bank
+      const bleachedTexts = Array.from(uniqueSentences.keys());
+      const existingBleached = await storage.getExistingBleachedTextsForAuthor(authorStyleId, bleachedTexts);
+      
+      // Filter out duplicates
+      const newSentences: InsertSentenceEntry[] = [];
+      for (const [bleached, sentence] of Array.from(uniqueSentences.entries())) {
+        if (!existingBleached.has(bleached)) {
+          newSentences.push({
+            original: sentence.original,
+            bleached: sentence.bleached,
+            charLength: sentence.char_length,
+            tokenLength: sentence.token_length,
+            clauseCount: sentence.clause_count,
+            clauseOrder: sentence.clause_order || 'main → subordinate',
+            punctuationPattern: sentence.punctuation_pattern || '',
+            structure: sentence.structure || sentence.bleached,
+          });
+        }
+      }
+      
+      // Insert new sentences
+      const insertedCount = await storage.addSentenceEntriesToAuthorStyle(authorStyleId, newSentences);
+      const totalCount = await storage.getAuthorStyleSentenceCount(authorStyleId);
+      
+      res.json({
+        authorStyleId,
+        authorName: authorStyle.name,
+        sentencesReceived: validatedData.sentences.length,
+        duplicatesSkipped: validatedData.sentences.length - insertedCount,
+        sentencesAdded: insertedCount,
+        totalSentences: totalCount,
+      });
+    } catch (error) {
+      console.error("Add author sentences error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Failed to add sentences to author style",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Get sentences for an author style
+  app.get("/api/author-styles/:id/sentences", async (req, res) => {
+    try {
+      const authorStyleId = parseInt(req.params.id, 10);
+      if (isNaN(authorStyleId)) {
+        return res.status(400).json({
+          error: "Invalid author style ID",
+          message: "Author style ID must be a number.",
+        });
+      }
+      
+      const authorStyle = await storage.getAuthorStyle(authorStyleId);
+      if (!authorStyle) {
+        return res.status(404).json({
+          error: "Author style not found",
+          message: `No author style found with ID ${authorStyleId}.`,
+        });
+      }
+      
+      const sentences = await storage.getAuthorStyleSentences(authorStyleId);
+      res.json({
+        authorStyleId,
+        authorName: authorStyle.name,
+        sentenceCount: sentences.length,
+        sentences: sentences.map(s => ({
+          original: s.original,
+          bleached: s.bleached,
+          char_length: s.charLength,
+          token_length: s.tokenLength,
+          clause_count: s.clauseCount,
+          clause_order: s.clauseOrder,
+          punctuation_pattern: s.punctuationPattern,
+          structure: s.structure,
+        })),
+      });
+    } catch (error) {
+      console.error("Get author sentences error:", error);
+      res.status(500).json({
+        error: "Failed to get author sentences",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Rewrite text using an author's style
+  app.post("/api/rewrite-with-author-style", async (req, res) => {
+    try {
+      console.log("Received rewrite with author style request");
+      
+      const validatedData = rewriteWithAuthorStyleRequestSchema.parse(req.body);
+      
+      // Verify author style exists
+      const authorStyle = await storage.getAuthorStyle(validatedData.authorStyleId);
+      if (!authorStyle) {
+        return res.status(404).json({
+          error: "Author style not found",
+          message: `No author style found with ID ${validatedData.authorStyleId}.`,
+        });
+      }
+      
+      // Get the author's sentence patterns
+      const authorSentences = await storage.getAuthorStyleSentences(validatedData.authorStyleId);
+      if (authorSentences.length === 0) {
+        return res.status(400).json({
+          error: "No patterns available",
+          message: `The author style "${authorStyle.name}" has no sentence patterns yet.`,
+        });
+      }
+      
+      // Convert to sentence bank entry format
+      const authorPatterns = authorSentences.map(s => ({
+        original: s.original,
+        bleached: s.bleached,
+        char_length: s.charLength,
+        token_length: s.tokenLength,
+        clause_count: s.clauseCount,
+        clause_order: s.clauseOrder,
+        punctuation_pattern: s.punctuationPattern,
+        structure: s.structure,
+      }));
+      
+      // Use the rewriteInStyle function with author patterns
+      const result = await rewriteInStyle(
+        validatedData.targetText,
+        "", // Empty style sample - we're using pre-built patterns
+        validatedData.level,
+        authorPatterns // Pass author patterns directly
+      );
+      
+      res.json({
+        sentences: result.sentences,
+        combinedRewrite: result.combinedRewrite,
+        totalSentences: result.totalSentences,
+        successfulRewrites: result.successfulRewrites,
+        authorStyleId: validatedData.authorStyleId,
+        authorName: authorStyle.name,
+        patternsUsed: authorPatterns.length,
+      });
+    } catch (error) {
+      console.error("Rewrite with author style error:", error);
       
       if (error instanceof z.ZodError) {
         return res.status(400).json({
