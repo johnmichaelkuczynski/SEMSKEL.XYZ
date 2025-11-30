@@ -328,3 +328,59 @@ export const rewriteWithAuthorStyleRequestSchema = z.object({
   authorStyleId: z.number().min(1, "Author style ID is required"),
   level: z.enum(bleachingLevels).optional().default("Heavy"),
 });
+
+// ==================== CHUNK PREVIEW SCHEMAS ====================
+
+// Individual chunk metadata
+export const chunkMetadataSchema = z.object({
+  id: z.number(),
+  text: z.string(),
+  preview: z.string(),
+  wordCount: z.number(),
+  sentenceCount: z.number(),
+  charStart: z.number(),
+  charEnd: z.number(),
+});
+
+export type ChunkMetadata = z.infer<typeof chunkMetadataSchema>;
+
+// Chunk preview request schema
+export const chunkPreviewRequestSchema = z.object({
+  text: z.string().min(1, "Text is required"),
+  chunkSize: z.number().optional().default(2000), // words per chunk
+});
+
+export type ChunkPreviewRequest = z.infer<typeof chunkPreviewRequestSchema>;
+
+// Chunk preview response schema
+export const chunkPreviewResponseSchema = z.object({
+  chunks: z.array(chunkMetadataSchema),
+  totalWords: z.number(),
+  totalSentences: z.number(),
+  needsChunking: z.boolean(),
+});
+
+export type ChunkPreviewResponse = z.infer<typeof chunkPreviewResponseSchema>;
+
+// Modified bleach request that accepts selected chunks
+export const bleachChunkedRequestSchema = z.object({
+  chunks: z.array(z.object({
+    id: z.number(),
+    text: z.string(),
+  })),
+  level: z.enum(bleachingLevels),
+});
+
+export type BleachChunkedRequest = z.infer<typeof bleachChunkedRequestSchema>;
+
+// Sentence bank request with chunks
+export const sentenceBankChunkedRequestSchema = z.object({
+  chunks: z.array(z.object({
+    id: z.number(),
+    text: z.string(),
+  })),
+  level: z.enum(bleachingLevels),
+  userId: z.number().optional(),
+});
+
+export type SentenceBankChunkedRequest = z.infer<typeof sentenceBankChunkedRequestSchema>;
