@@ -16,6 +16,7 @@ export interface RewriteStyleResult {
   totalSentences: number;
   successfulRewrites: number;
   stylePatternsExtracted: number;
+  extractedPatterns: SentenceBankEntry[]; // The bleached patterns for potential storage
 }
 
 const CLAUSE_TRIGGERS = ["when", "because", "although", "if", "while", "since", "but"];
@@ -552,5 +553,6 @@ export async function rewriteInStyle(
     totalSentences: targetSentences.length,
     successfulRewrites,
     stylePatternsExtracted: stylePatterns.length,
+    extractedPatterns: stylePatterns, // Return patterns for potential database storage
   };
 }
