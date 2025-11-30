@@ -12,8 +12,10 @@ import {
   humanizeRequestSchema,
   gptzeroRequestSchema,
   rewriteStyleRequestSchema,
+  contentSimilarityRequestSchema,
   type InsertSentenceEntry,
 } from "@shared/schema";
+import Anthropic from "@anthropic-ai/sdk";
 import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
 import { humanizeText } from "./humanizer";
 import { rewriteInStyle } from "./rewriteInStyle";
@@ -976,6 +978,115 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.status(500).json({
         error: "Style rewrite failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // ==================== CONTENT SIMILARITY ENDPOINT ====================
+
+  const anthropicClient = new Anthropic({
+    apiKey: process.env.ANTHROPIC_API_KEY,
+  });
+
+  app.post("/api/content-similarity", async (req, res) => {
+    try {
+      console.log("Received content similarity request");
+      
+      const validatedData = contentSimilarityRequestSchema.parse(req.body);
+      
+      const prompt = `You are a content similarity analyzer. Compare the following two texts and determine how similar they are in MEANING and CONTENT (not style or wording).
+
+ORIGINAL TEXT:
+"${validatedData.originalText}"
+
+REWRITTEN TEXT:
+"${validatedData.rewrittenText}"
+
+Analyze the semantic similarity between these texts. Focus on:
+1. Are the same facts, ideas, and concepts present in both?
+2. Is any important information missing from the rewrite?
+3. Has any meaning been distorted or changed?
+
+Respond with ONLY a valid JSON object in this exact format (no markdown, no code blocks):
+{
+  "similarityScore": <number from 0 to 100>,
+  "agreementSummary": "<brief description of what content is preserved>",
+  "discrepancies": "<brief description of any missing or changed content, or 'None' if fully preserved>"
+}
+
+Score guidelines:
+- 95-100: Perfect or near-perfect content preservation
+- 85-94: Minor omissions or slight rewording that doesn't change meaning
+- 70-84: Some content differences but main ideas preserved
+- 50-69: Significant content changes or omissions
+- Below 50: Major meaning differences`;
+
+      const message = await anthropicClient.messages.create({
+        model: "claude-sonnet-4-5",
+        max_tokens: 500,
+        messages: [{ role: "user", content: prompt }],
+      });
+
+      const content = message.content[0];
+      if (content.type !== "text") {
+        throw new Error("Unexpected response format from Claude");
+      }
+
+      // Parse the JSON response
+      let result;
+      try {
+        // Clean up the response in case it has markdown code blocks
+        let jsonText = content.text.trim();
+        if (jsonText.startsWith("```json")) {
+          jsonText = jsonText.slice(7);
+        }
+        if (jsonText.startsWith("```")) {
+          jsonText = jsonText.slice(3);
+        }
+        if (jsonText.endsWith("```")) {
+          jsonText = jsonText.slice(0, -3);
+        }
+        jsonText = jsonText.trim();
+        
+        result = JSON.parse(jsonText);
+      } catch (parseError) {
+        console.error("Failed to parse Claude response:", content.text);
+        throw new Error("Failed to parse similarity analysis");
+      }
+
+      // Validate the result has required fields
+      if (typeof result.similarityScore !== "number" || 
+          result.similarityScore < 0 || 
+          result.similarityScore > 100) {
+        result.similarityScore = 75; // Default fallback
+      }
+      
+      if (!result.agreementSummary) {
+        result.agreementSummary = "Analysis completed";
+      }
+      
+      if (!result.discrepancies) {
+        result.discrepancies = "None identified";
+      }
+
+      res.json({
+        similarityScore: Math.round(result.similarityScore),
+        agreementSummary: result.agreementSummary,
+        discrepancies: result.discrepancies,
+      });
+    } catch (error) {
+      console.error("Content similarity error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Content similarity analysis failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
       });
     }
