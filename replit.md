@@ -93,14 +93,22 @@ This produces human-like, detector-safe text with full content preservation.
 ### Style Transfer Feature:
 - "Rewrite in Same Style" section at bottom of page
 - Takes target text (what to rewrite) and style sample (reference for patterns)
-- **Auto-save patterns**: When logged in, extracted style patterns are automatically saved to user's personal sentence bank (with deduplication)
-- Matches target sentences to extracted style patterns using same weighted similarity scoring
+- **Author Styles**: Dropdown to select pre-defined authors (Bertrand Russell, Plato, etc.)
+  - Each author has their own database of bleached sentence patterns
+  - Admin can add sentences to author libraries over time via API
+  - Authors with 0 patterns are disabled in the dropdown
+  - When author selected, custom style sample input is hidden
+  - Button text changes to "Rewrite in Author's Style"
+- **Custom Style Sample**: Alternative to author styles
+  - Paste or upload any reference text
+  - Patterns extracted on-the-fly and matched to target
+- **Auto-save patterns**: When logged in and using custom style sample, extracted patterns are automatically saved to user's personal sentence bank (with deduplication)
+- Matches target sentences to style patterns using same weighted similarity scoring
 - Rewrites target using matched style patterns via Claude slot-fill
 - Tip displayed: style sample should be longer than target for better results
 - Side-by-side layout: Target Text (left) | Rewritten Text (right)
-- Style Sample input below with word count display
 - Sentence-by-sentence breakdown showing original, matched pattern, and rewrite
-- Toast notification shows how many patterns were saved for logged-in users
+- Toast notification shows how many patterns were saved for logged-in users (custom style only)
 - **Content Similarity**: Verifies that target text and rewritten text preserve the same meaning
   - Compares semantic content between original and rewritten text
   - Returns 0-100 similarity score with Excellent/Good/Fair/Low rating
@@ -134,10 +142,14 @@ This produces human-like, detector-safe text with full content preservation.
 - `POST /api/build-sentence-bank` — Splits into sentences, bleaches each, returns JSONL
 - `POST /api/match` — Matches AI text sentences to human patterns from the bank
 - `POST /api/humanize` — Humanizes AI text using matched human patterns (Step 3)
-- `POST /api/rewrite-style` — Rewrites target text using ephemeral style patterns (Style Transfer)
+- `POST /api/rewrite-style` — Rewrites target text using style patterns (accepts authorStyleId or styleSample)
 - `POST /api/content-similarity` — Compares original and rewritten text for semantic similarity (0-100 score)
 - `GET /api/sentence-bank/status` — Returns count of entries in the bank
 - `GET /api/sentence-bank` — Returns all entries in the bank
+- `GET /api/author-styles` — Returns all author styles with sentence counts
+- `POST /api/author-styles` — Creates a new author style (name, description)
+- `GET /api/author-styles/:id/sentences` — Returns all sentences for an author
+- `POST /api/author-styles/:id/sentences` — Adds sentences to an author's bank (with deduplication)
 
 ### Key Files
 - `client/src/pages/home.tsx` — Main UI (all features on one page)
