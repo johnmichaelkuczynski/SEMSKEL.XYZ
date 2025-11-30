@@ -97,6 +97,9 @@ export default function Home() {
   const [selectedChunkIds, setSelectedChunkIds] = useState<Set<number>>(new Set());
   const [showChunkSelection, setShowChunkSelection] = useState(false);
   
+  // Bank download state
+  const [downloadingInstallment, setDownloadingInstallment] = useState<number | null>(null);
+  
   const { toast } = useToast();
   
   // Calculate word count and estimated chunks for the input text
@@ -1215,6 +1218,78 @@ export default function Home() {
     });
   };
 
+  const handleDownloadInstallment = async (installmentNum: number) => {
+    setDownloadingInstallment(installmentNum);
+    
+    try {
+      const response = await fetch(`/api/sentence-bank/download/${installmentNum}`);
+      const data = await response.json() as {
+        entries?: BankEntry[];
+        count?: number;
+        installment?: number;
+        totalInstallments?: number;
+        totalCount?: number;
+        rangeStart?: number;
+        rangeEnd?: number;
+        error?: string;
+        message?: string;
+      };
+      
+      if (!response.ok) {
+        throw new Error(data.message || data.error || "Download failed");
+      }
+      
+      if (!data.entries || data.entries.length === 0) {
+        throw new Error("No entries returned from server");
+      }
+      
+      const entries = data.entries;
+      const totalInstallments = data.totalInstallments || 1;
+      const rangeStart = data.rangeStart || 1;
+      const rangeEnd = data.rangeEnd || entries.length;
+      
+      const jsonlLines = entries.map((entry) => {
+        return JSON.stringify({
+          original: entry.original,
+          bleached: entry.bleached,
+          char_length: entry.char_length,
+          token_length: entry.token_length,
+          clause_count: entry.clause_count,
+          clause_order: entry.clause_order,
+          punctuation_pattern: entry.punctuation_pattern,
+          structure: entry.structure || entry.bleached,
+        });
+      });
+      
+      const jsonlContent = jsonlLines.join("\n");
+      const timestamp = Date.now();
+      const filename = `sentence_bank_part${installmentNum}_of_${totalInstallments}_${timestamp}.jsonl`;
+      
+      const blob = new Blob([jsonlContent], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = filename;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      
+      toast({
+        title: "Download started",
+        description: `Downloading patterns ${rangeStart.toLocaleString()}-${rangeEnd.toLocaleString()} as ${filename}`,
+      });
+    } catch (error) {
+      toast({
+        title: "Download failed",
+        description: error instanceof Error ? error.message : "An error occurred",
+        variant: "destructive",
+      });
+    } finally {
+      setDownloadingInstallment(null);
+    }
+  };
+
   const isProcessing = bleachMutation.isPending || sentenceBankMutation.isPending || 
     chunkPreviewMutation.isPending || bleachChunksMutation.isPending || sentenceBankChunksMutation.isPending;
 
@@ -1322,36 +1397,81 @@ export default function Home() {
             </DialogTrigger>
             <DialogContent className="max-w-4xl max-h-[80vh] flex flex-col">
               <DialogHeader>
-                <DialogTitle className="flex items-center justify-between">
-                  <span>Sentence Bank ({bankContentQuery.data?.count || 0} patterns)</span>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleDownloadBankJsonl}
-                    disabled={!bankContentQuery.data?.entries?.length}
-                    data-testid="button-download-bank-jsonl"
-                  >
-                    <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
-                    Download JSONL
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    onClick={handleDownloadBankTxt}
-                    disabled={!bankContentQuery.data?.entries?.length}
-                    data-testid="button-download-bank-txt"
-                  >
-                    <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
-                    Download TXT
-                  </Button>
-                </DialogTitle>
+                <DialogTitle>Sentence Bank ({totalBankSize.toLocaleString()} patterns)</DialogTitle>
               </DialogHeader>
+              
+              {/* Download Section */}
+              <div className="bg-muted/30 rounded-lg p-4 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-sm font-medium">Download Bank</span>
+                  <span className="text-xs text-muted-foreground">
+                    {totalBankSize > 10000 
+                      ? `${Math.ceil(totalBankSize / 10000)} installments of 10,000 patterns each`
+                      : "Single file download"}
+                  </span>
+                </div>
+                
+                {totalBankSize > 10000 ? (
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2">
+                    {Array.from({ length: Math.ceil(totalBankSize / 10000) }, (_, i) => {
+                      const installmentNum = i + 1;
+                      const rangeStart = i * 10000 + 1;
+                      const rangeEnd = Math.min((i + 1) * 10000, totalBankSize);
+                      return (
+                        <Button
+                          key={installmentNum}
+                          variant="outline"
+                          size="sm"
+                          onClick={() => handleDownloadInstallment(installmentNum)}
+                          disabled={downloadingInstallment !== null}
+                          className="text-xs"
+                          data-testid={`button-download-installment-${installmentNum}`}
+                        >
+                          {downloadingInstallment === installmentNum ? (
+                            <span className="animate-pulse">Downloading...</span>
+                          ) : (
+                            <>
+                              <ArrowDownTrayIcon className="w-3 h-3 mr-1" />
+                              Part {installmentNum} ({rangeStart.toLocaleString()}-{rangeEnd.toLocaleString()})
+                            </>
+                          )}
+                        </Button>
+                      );
+                    })}
+                  </div>
+                ) : (
+                  <div className="flex gap-2">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleDownloadInstallment(1)}
+                      disabled={totalBankSize === 0 || downloadingInstallment !== null}
+                      data-testid="button-download-bank-jsonl"
+                    >
+                      {downloadingInstallment === 1 ? (
+                        <span className="animate-pulse">Downloading...</span>
+                      ) : (
+                        <>
+                          <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+                          Download JSONL
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                )}
+              </div>
+              
+              {/* Bank Preview */}
               <div className="flex-1 overflow-auto bg-muted/50 rounded-lg p-4 font-mono text-xs">
                 {bankContentQuery.isLoading ? (
-                  <div className="text-center text-muted-foreground py-8">Loading bank...</div>
+                  <div className="text-center text-muted-foreground py-8">Loading bank preview...</div>
                 ) : bankContentQuery.data?.entries?.length ? (
                   <div className="space-y-4">
-                    {bankContentQuery.data.entries.map((entry, index) => (
+                    <div className="text-muted-foreground text-center pb-2 border-b">
+                      Showing first {Math.min(bankContentQuery.data.entries.length, 100)} patterns
+                      {bankContentQuery.data.entries.length > 100 && " (download for full content)"}
+                    </div>
+                    {bankContentQuery.data.entries.slice(0, 100).map((entry, index) => (
                       <div key={index} className="border-b border-border pb-3 last:border-0">
                         <div className="text-muted-foreground mb-1">--- Pattern {index + 1} ---</div>
                         <div><span className="text-muted-foreground">Original:</span> {entry.original}</div>
