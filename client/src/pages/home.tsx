@@ -123,6 +123,11 @@ export default function Home() {
     }
   }, [bankStatusQuery.data]);
 
+  // Clear similarity result when style texts change
+  useEffect(() => {
+    setContentSimilarityResult(null);
+  }, [styleTargetText, styleSampleText]);
+
   // Bleaching mutation
   const bleachMutation = useMutation({
     mutationFn: async (data: { text: string; level: BleachingLevel; filename?: string }) => {
