@@ -919,12 +919,20 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (validatedData.userId && result.extractedPatterns.length > 0) {
         console.log(`Saving ${result.extractedPatterns.length} patterns for user ${validatedData.userId}`);
         
-        // Get existing bleached texts for this user to avoid duplicates
-        const bleachedTexts = result.extractedPatterns.map(p => p.bleached);
+        // First, deduplicate within the request itself (by bleached text)
+        const seenBleached = new Set<string>();
+        const uniquePatterns = result.extractedPatterns.filter(p => {
+          if (seenBleached.has(p.bleached)) return false;
+          seenBleached.add(p.bleached);
+          return true;
+        });
+        
+        // Get existing bleached texts for this user to avoid duplicates in DB
+        const bleachedTexts = uniquePatterns.map(p => p.bleached);
         const existingBleached = await storage.getExistingBleachedTexts(validatedData.userId, bleachedTexts);
         
-        // Filter out duplicates
-        const newPatterns = result.extractedPatterns.filter(p => !existingBleached.has(p.bleached));
+        // Filter out duplicates that already exist in DB
+        const newPatterns = uniquePatterns.filter(p => !existingBleached.has(p.bleached));
         
         if (newPatterns.length > 0) {
           // Convert SentenceBankEntry to InsertSentenceEntry format
