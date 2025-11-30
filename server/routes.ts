@@ -30,6 +30,35 @@ function splitIntoSentences(text: string): string[] {
     .filter(s => s.length > 0);
 }
 
+// Split text into chunks of approximately targetWordCount words, preserving sentence boundaries
+function splitIntoWordChunks(text: string, targetWordCount: number = 2000): string[] {
+  const sentences = splitIntoSentences(text);
+  const chunks: string[] = [];
+  let currentChunk: string[] = [];
+  let currentWordCount = 0;
+  
+  for (const sentence of sentences) {
+    const sentenceWordCount = sentence.split(/\s+/).filter(w => w.length > 0).length;
+    
+    // If adding this sentence would exceed target and we have content, start new chunk
+    if (currentWordCount > 0 && currentWordCount + sentenceWordCount > targetWordCount) {
+      chunks.push(currentChunk.join(' '));
+      currentChunk = [sentence];
+      currentWordCount = sentenceWordCount;
+    } else {
+      currentChunk.push(sentence);
+      currentWordCount += sentenceWordCount;
+    }
+  }
+  
+  // Don't forget the last chunk
+  if (currentChunk.length > 0) {
+    chunks.push(currentChunk.join(' '));
+  }
+  
+  return chunks;
+}
+
 function countClauses(sentence: string): number {
   const lowerSentence = sentence.toLowerCase();
   let count = 0;
@@ -169,7 +198,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // ==================== BLEACHING ENDPOINTS ====================
 
-  // Bleaching API endpoint
+  // Bleaching API endpoint with automatic chunking for large texts
   app.post("/api/bleach", async (req, res) => {
     try {
       const validatedData = bleachRequestSchema.parse(req.body);
@@ -181,14 +210,68 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
-      const bleachedText = await bleachText(
-        validatedData.text,
-        validatedData.level
-      );
-
+      // Check word count to determine if chunking is needed
+      const wordCount = validatedData.text.split(/\s+/).filter(w => w.length > 0).length;
+      const CHUNK_SIZE = 2000; // words per chunk
+      
+      if (wordCount <= CHUNK_SIZE) {
+        // Small text - process directly
+        const bleachedText = await bleachText(validatedData.text, validatedData.level);
+        return res.json({
+          bleachedText,
+          originalFilename: validatedData.filename,
+          chunksProcessed: 1,
+          totalChunks: 1,
+        });
+      }
+      
+      // Large text - split into chunks and process sequentially
+      const chunks = splitIntoWordChunks(validatedData.text, CHUNK_SIZE);
+      const totalChunks = chunks.length;
+      console.log(`Bleaching large text: ${wordCount} words split into ${totalChunks} chunks`);
+      
+      const bleachedChunks: string[] = [];
+      
+      for (let i = 0; i < chunks.length; i++) {
+        const chunkNum = i + 1;
+        console.log(`Processing chunk ${chunkNum}/${totalChunks}...`);
+        
+        // Retry logic for each chunk
+        let retries = 3;
+        let bleachedChunk = null;
+        
+        while (retries > 0 && !bleachedChunk) {
+          try {
+            bleachedChunk = await bleachText(chunks[i], validatedData.level);
+          } catch (error: any) {
+            retries--;
+            if (retries > 0) {
+              const waitTime = Math.pow(2, 3 - retries) * 1000;
+              console.log(`Chunk ${chunkNum} failed, retrying in ${waitTime}ms...`);
+              await delay(waitTime);
+            } else {
+              throw error;
+            }
+          }
+        }
+        
+        if (bleachedChunk) {
+          bleachedChunks.push(bleachedChunk);
+        }
+        
+        // Small delay between chunks to avoid rate limits
+        if (i < chunks.length - 1) {
+          await delay(500);
+        }
+      }
+      
+      console.log(`Completed bleaching all ${totalChunks} chunks`);
+      
       res.json({
-        bleachedText,
+        bleachedText: bleachedChunks.join('\n\n\n'), // Triple newline to preserve paragraph separation between chunks
         originalFilename: validatedData.filename,
+        chunksProcessed: bleachedChunks.length,
+        totalChunks,
       });
     } catch (error) {
       console.error("Bleaching API error:", error);
@@ -209,67 +292,129 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // ==================== SENTENCE BANK ENDPOINTS ====================
 
-  // Sentence Bank API endpoint (build from text)
+  // Sentence Bank API endpoint (build from text) with automatic chunking for large texts
   app.post("/api/build-sentence-bank", async (req, res) => {
     try {
       const validatedData = sentenceBankRequestSchema.parse(req.body);
       const userId = req.body.userId ? parseInt(req.body.userId) : null;
       
-      const sentences = splitIntoSentences(validatedData.text);
-      
-      if (sentences.length === 0) {
+      // First check if text has sentences
+      const allSentences = splitIntoSentences(validatedData.text);
+      if (allSentences.length === 0) {
         return res.status(400).json({
           error: "No sentences found",
           message: "Could not find any sentences in the provided text.",
         });
       }
       
-      const totalSentences = sentences.length;
-      console.log(`Processing ${totalSentences} sentences in chunked batches...`);
+      // Calculate word count for chunking
+      const wordCount = validatedData.text.split(/\s+/).filter(w => w.length > 0).length;
+      const WORD_CHUNK_SIZE = 2000;
       
-      const BATCH_SIZE = 5;
+      const SENTENCE_BATCH_SIZE = 5;
       const DELAY_BETWEEN_BATCHES = 500;
-      const entries: InsertSentenceEntry[] = [];
+      const allEntries: InsertSentenceEntry[] = [];
+      let totalWordChunks = 1;
       
-      for (let i = 0; i < sentences.length; i += BATCH_SIZE) {
-        const batch = sentences.slice(i, i + BATCH_SIZE);
-        const batchNum = Math.floor(i / BATCH_SIZE) + 1;
-        const totalBatches = Math.ceil(sentences.length / BATCH_SIZE);
+      // For small texts (< 2000 words), skip chunking and process directly
+      if (wordCount <= WORD_CHUNK_SIZE) {
+        console.log(`Processing ${wordCount} words (${allSentences.length} sentences) directly...`);
         
-        console.log(`Processing batch ${batchNum}/${totalBatches} (${batch.length} sentences, ${entries.length}/${totalSentences} complete)`);
-        
-        const batchResults = await Promise.all(
-          batch.map(sentence => processSentenceWithRetry(sentence, validatedData.level))
-        );
-        
-        const validResults = batchResults.filter((r): r is InsertSentenceEntry => r !== null);
-        
-        // Associate with user if logged in
-        if (userId) {
-          validResults.forEach(entry => entry.userId = userId);
+        for (let i = 0; i < allSentences.length; i += SENTENCE_BATCH_SIZE) {
+          const batch = allSentences.slice(i, i + SENTENCE_BATCH_SIZE);
+          const batchNum = Math.floor(i / SENTENCE_BATCH_SIZE) + 1;
+          const totalBatches = Math.ceil(allSentences.length / SENTENCE_BATCH_SIZE);
+          
+          console.log(`Processing batch ${batchNum}/${totalBatches} (${batch.length} sentences)`);
+          
+          const batchResults = await Promise.all(
+            batch.map(sentence => processSentenceWithRetry(sentence, validatedData.level))
+          );
+          
+          const validResults = batchResults.filter((r): r is InsertSentenceEntry => r !== null);
+          
+          if (userId) {
+            validResults.forEach(entry => entry.userId = userId);
+          }
+          
+          allEntries.push(...validResults);
+          
+          if (i + SENTENCE_BATCH_SIZE < allSentences.length) {
+            await delay(DELAY_BETWEEN_BATCHES);
+          }
         }
+      } else {
+        // Large text - split into word-based chunks
+        const wordChunks = splitIntoWordChunks(validatedData.text, WORD_CHUNK_SIZE);
+        totalWordChunks = wordChunks.length;
         
-        entries.push(...validResults);
+        console.log(`Processing ${wordCount} words in ${totalWordChunks} chunk(s) for JSONL generation...`);
         
-        if (i + BATCH_SIZE < sentences.length) {
-          await delay(DELAY_BETWEEN_BATCHES);
+        // Process each word chunk
+        for (let chunkIndex = 0; chunkIndex < wordChunks.length; chunkIndex++) {
+          const chunk = wordChunks[chunkIndex];
+          const chunkNum = chunkIndex + 1;
+          
+          console.log(`\n=== Processing word chunk ${chunkNum}/${totalWordChunks} ===`);
+          
+          const sentences = splitIntoSentences(chunk);
+          
+          if (sentences.length === 0) {
+            console.log(`Chunk ${chunkNum}: No sentences found, skipping`);
+            continue;
+          }
+          
+          const totalSentences = sentences.length;
+          console.log(`Chunk ${chunkNum}: ${totalSentences} sentences to process`);
+          
+          // Process sentences in batches within this chunk
+          for (let i = 0; i < sentences.length; i += SENTENCE_BATCH_SIZE) {
+            const batch = sentences.slice(i, i + SENTENCE_BATCH_SIZE);
+            const batchNum = Math.floor(i / SENTENCE_BATCH_SIZE) + 1;
+            const totalBatches = Math.ceil(sentences.length / SENTENCE_BATCH_SIZE);
+            
+            console.log(`  Chunk ${chunkNum}/${totalWordChunks} - Batch ${batchNum}/${totalBatches}`);
+            
+            const batchResults = await Promise.all(
+              batch.map(sentence => processSentenceWithRetry(sentence, validatedData.level))
+            );
+            
+            const validResults = batchResults.filter((r): r is InsertSentenceEntry => r !== null);
+            
+            // Associate with user if logged in
+            if (userId) {
+              validResults.forEach(entry => entry.userId = userId);
+            }
+            
+            allEntries.push(...validResults);
+            
+            if (i + SENTENCE_BATCH_SIZE < sentences.length) {
+              await delay(DELAY_BETWEEN_BATCHES);
+            }
+          }
+          
+          // Delay between word chunks
+          if (chunkIndex < wordChunks.length - 1) {
+            console.log(`Chunk ${chunkNum} complete. Brief pause before next chunk...`);
+            await delay(1000);
+          }
         }
       }
       
-      console.log(`Completed processing ${entries.length}/${totalSentences} sentences`);
+      console.log(`\nCompleted processing. Total entries: ${allEntries.length}`);
       
       // Save to database
       let totalBankSize = 0;
       try {
-        await storage.addSentenceEntries(entries);
+        await storage.addSentenceEntries(allEntries);
         totalBankSize = await storage.getSentenceEntryCount();
-        console.log(`Saved ${entries.length} entries to database. Total: ${totalBankSize}`);
+        console.log(`Saved ${allEntries.length} entries to database. Total bank size: ${totalBankSize}`);
       } catch (dbError) {
         console.error("Error saving to database:", dbError);
       }
       
       // Generate JSONL for display
-      const jsonlContent = entries.map(entry => JSON.stringify({
+      const jsonlContent = allEntries.map(entry => JSON.stringify({
         original: entry.original,
         bleached: entry.bleached,
         char_length: entry.charLength,
@@ -282,8 +427,10 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       res.json({
         jsonlContent,
-        sentenceCount: entries.length,
+        sentenceCount: allEntries.length,
         totalBankSize,
+        chunksProcessed: totalWordChunks,
+        totalChunks: totalWordChunks,
       });
     } catch (error) {
       console.error("Sentence bank API error:", error);

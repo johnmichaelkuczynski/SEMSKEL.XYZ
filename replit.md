@@ -52,6 +52,7 @@ This produces human-like, detector-safe text with full content preservation.
 - **Layer 2 candidate reuse**: humanize API accepts prefiltered candidates to skip full bank scan
 - **Match scores typically 92-95**: High-quality geometric matching
 - **GPTZero AI Detection**: Built-in detector to verify humanized text passes AI checks
+- **Automatic chunking**: Large texts (>2000 words) are automatically divided into chunks and processed sequentially - no micromanagement needed
 
 ### Database Features:
 - PostgreSQL (Neon) database for persistent storage

@@ -45,6 +45,16 @@ interface BankEntry {
 
 type OutputMode = "bleach" | "jsonl";
 
+// Helper: calculate word count
+function getWordCount(text: string): number {
+  return text.split(/\s+/).filter(w => w.length > 0).length;
+}
+
+// Helper: calculate estimated chunks (2000 words per chunk)
+function getEstimatedChunks(wordCount: number): number {
+  return Math.ceil(wordCount / 2000);
+}
+
 export default function Home() {
   const [inputText, setInputText] = useState("");
   const [outputText, setOutputText] = useState("");
@@ -67,6 +77,11 @@ export default function Home() {
   const [uploadJsonlContent, setUploadJsonlContent] = useState("");
   const [aiDetectionResult, setAiDetectionResult] = useState<GPTZeroResponse | null>(null);
   const { toast } = useToast();
+  
+  // Calculate word count and estimated chunks for the input text
+  const inputWordCount = getWordCount(inputText);
+  const estimatedChunks = getEstimatedChunks(inputWordCount);
+  const isLargeText = inputWordCount > 2000;
 
   // Load user from localStorage on mount
   useEffect(() => {
@@ -101,13 +116,16 @@ export default function Home() {
   const bleachMutation = useMutation({
     mutationFn: async (data: { text: string; level: BleachingLevel; filename?: string }) => {
       const response = await apiRequest("POST", "/api/bleach", data);
-      return await response.json() as BleachResponse;
+      return await response.json() as BleachResponse & { chunksProcessed?: number; totalChunks?: number };
     },
     onSuccess: (data) => {
       setOutputText(data.bleachedText);
+      const chunkInfo = data.totalChunks && data.totalChunks > 1 
+        ? ` (processed ${data.chunksProcessed} chunks)` 
+        : "";
       toast({
         title: "Text bleached successfully",
-        description: `Applied ${bleachingLevel} bleaching to your text.`,
+        description: `Applied ${bleachingLevel} bleaching to your text${chunkInfo}.`,
       });
     },
     onError: (error: any) => {
@@ -124,7 +142,7 @@ export default function Home() {
   const sentenceBankMutation = useMutation({
     mutationFn: async (data: { text: string; level: BleachingLevel }) => {
       const response = await apiRequest("POST", "/api/build-sentence-bank", data);
-      return await response.json() as SentenceBankResponse;
+      return await response.json() as SentenceBankResponse & { chunksProcessed?: number; totalChunks?: number };
     },
     onSuccess: (data) => {
       setJsonlContent(data.jsonlContent);
@@ -133,9 +151,12 @@ export default function Home() {
         setTotalBankSize(data.totalBankSize);
       }
       queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+      const chunkInfo = data.totalChunks && data.totalChunks > 1 
+        ? ` from ${data.totalChunks} chunks` 
+        : "";
       toast({
         title: "Saved to sentence bank",
-        description: `Added ${data.sentenceCount} sentences. Bank now has ${data.totalBankSize || data.sentenceCount} total entries.`,
+        description: `Added ${data.sentenceCount} sentences${chunkInfo}. Bank now has ${data.totalBankSize || data.sentenceCount} total entries.`,
       });
     },
     onError: (error: any) => {
@@ -928,6 +949,18 @@ export default function Home() {
               </RadioGroup>
             </Card>
 
+            {/* Word count and chunk estimate */}
+            {inputText.trim() && (
+              <div className="text-sm text-muted-foreground mb-2">
+                {inputWordCount.toLocaleString()} words
+                {isLargeText && (
+                  <span className="ml-2">
+                    (will process in ~{estimatedChunks} chunks of 2000 words each)
+                  </span>
+                )}
+              </div>
+            )}
+
             {/* Action Buttons */}
             <div className="flex gap-3">
               <Button
@@ -937,8 +970,10 @@ export default function Home() {
                 className="flex-1 h-11 text-base font-semibold"
                 data-testid="button-bleach"
               >
-                <SparklesIcon className="w-5 h-5 mr-2" />
-                {bleachMutation.isPending ? "Bleaching..." : "Bleach Text"}
+                <SparklesIcon className={`w-5 h-5 mr-2 ${bleachMutation.isPending ? "animate-spin" : ""}`} />
+                {bleachMutation.isPending 
+                  ? (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Bleaching...") 
+                  : "Bleach Text"}
               </Button>
               <Button
                 onClick={handleGenerateJsonl}
@@ -949,7 +984,9 @@ export default function Home() {
                 data-testid="button-generate-jsonl"
               >
                 <DocumentTextIcon className={`w-5 h-5 mr-2 ${sentenceBankMutation.isPending ? "animate-pulse" : ""}`} />
-                {sentenceBankMutation.isPending ? "Processing... (this may take a while)" : "Generate JSONL"}
+                {sentenceBankMutation.isPending 
+                  ? (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Processing...") 
+                  : "Generate JSONL"}
               </Button>
             </div>
           </div>
