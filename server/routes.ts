@@ -914,7 +914,48 @@ export async function registerRoutes(app: Express): Promise<Server> {
         validatedData.level
       );
       
-      res.json(result);
+      // If user is logged in, save the extracted patterns to their personal bank
+      let patternsSaved = 0;
+      if (validatedData.userId && result.extractedPatterns.length > 0) {
+        console.log(`Saving ${result.extractedPatterns.length} patterns for user ${validatedData.userId}`);
+        
+        // Get existing bleached texts for this user to avoid duplicates
+        const bleachedTexts = result.extractedPatterns.map(p => p.bleached);
+        const existingBleached = await storage.getExistingBleachedTexts(validatedData.userId, bleachedTexts);
+        
+        // Filter out duplicates
+        const newPatterns = result.extractedPatterns.filter(p => !existingBleached.has(p.bleached));
+        
+        if (newPatterns.length > 0) {
+          // Convert SentenceBankEntry to InsertSentenceEntry format
+          const entriesToInsert = newPatterns.map(pattern => ({
+            original: pattern.original,
+            bleached: pattern.bleached,
+            charLength: pattern.char_length,
+            tokenLength: pattern.token_length,
+            clauseCount: pattern.clause_count,
+            clauseOrder: pattern.clause_order || "main → subordinate",
+            punctuationPattern: pattern.punctuation_pattern || "",
+            structure: pattern.structure || pattern.bleached,
+            userId: validatedData.userId,
+          }));
+          
+          patternsSaved = await storage.addSentenceEntries(entriesToInsert);
+          console.log(`Saved ${patternsSaved} new patterns to user's bank (skipped ${result.extractedPatterns.length - patternsSaved} duplicates)`);
+        } else {
+          console.log("All patterns already exist in user's bank - no new patterns saved");
+        }
+      }
+      
+      // Return response with patternsSavedToBank count
+      res.json({
+        sentences: result.sentences,
+        combinedRewrite: result.combinedRewrite,
+        totalSentences: result.totalSentences,
+        successfulRewrites: result.successfulRewrites,
+        stylePatternsExtracted: result.stylePatternsExtracted,
+        patternsSavedToBank: patternsSaved,
+      });
     } catch (error) {
       console.error("Rewrite style error:", error);
       

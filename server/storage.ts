@@ -1,7 +1,7 @@
 import { drizzle } from "drizzle-orm/neon-serverless";
 import { Pool, neonConfig } from "@neondatabase/serverless";
 import ws from "ws";
-import { eq, sql, desc } from "drizzle-orm";
+import { eq, sql, desc, and, inArray } from "drizzle-orm";
 
 // Configure WebSocket for Neon serverless
 neonConfig.webSocketConstructor = ws;
@@ -32,6 +32,7 @@ export interface IStorage {
   getUserSentenceCount(userId: number): Promise<number>;
   addSentenceEntry(entry: InsertSentenceEntry): Promise<SentenceEntry>;
   addSentenceEntries(entries: InsertSentenceEntry[]): Promise<number>;
+  getExistingBleachedTexts(userId: number, bleachedTexts: string[]): Promise<Set<string>>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -93,6 +94,22 @@ export class DatabaseStorage implements IStorage {
     }
     
     return inserted;
+  }
+
+  async getExistingBleachedTexts(userId: number, bleachedTexts: string[]): Promise<Set<string>> {
+    if (bleachedTexts.length === 0) return new Set();
+    
+    // Query for existing entries with matching userId and bleached text
+    const existing = await db.select({ bleached: sentenceEntries.bleached })
+      .from(sentenceEntries)
+      .where(
+        and(
+          eq(sentenceEntries.userId, userId),
+          inArray(sentenceEntries.bleached, bleachedTexts)
+        )
+      );
+    
+    return new Set(existing.map(e => e.bleached));
   }
 }
 
