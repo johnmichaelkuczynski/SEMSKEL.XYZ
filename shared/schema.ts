@@ -15,6 +15,18 @@ export const insertUserSchema = createInsertSchema(users).omit({ id: true, creat
 export type InsertUser = z.infer<typeof insertUserSchema>;
 export type User = typeof users.$inferSelect;
 
+// Author styles table - stores predefined author styles (Bertrand Russell, Plato, etc.)
+export const authorStyles = pgTable("author_styles", {
+  id: serial("id").primaryKey(),
+  name: varchar("name", { length: 100 }).notNull().unique(),
+  description: text("description"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertAuthorStyleSchema = createInsertSchema(authorStyles).omit({ id: true, createdAt: true });
+export type InsertAuthorStyle = z.infer<typeof insertAuthorStyleSchema>;
+export type AuthorStyle = typeof authorStyles.$inferSelect;
+
 // Sentence entries table - stores sentence bank data
 export const sentenceEntries = pgTable("sentence_entries", {
   id: serial("id").primaryKey(),
@@ -27,6 +39,7 @@ export const sentenceEntries = pgTable("sentence_entries", {
   punctuationPattern: text("punctuation_pattern").notNull(),
   structure: text("structure").notNull(),
   userId: integer("user_id").references(() => users.id),
+  authorStyleId: integer("author_style_id").references(() => authorStyles.id),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 
@@ -276,3 +289,38 @@ export const contentSimilarityResponseSchema = z.object({
 });
 
 export type ContentSimilarityResponse = z.infer<typeof contentSimilarityResponseSchema>;
+
+// ==================== AUTHOR STYLES SCHEMAS ====================
+
+// Create author style request schema
+export const createAuthorStyleRequestSchema = z.object({
+  name: z.string().min(1, "Author name is required").max(100),
+  description: z.string().optional(),
+});
+
+export type CreateAuthorStyleRequest = z.infer<typeof createAuthorStyleRequestSchema>;
+
+// Add sentences to author style request schema
+export const addAuthorSentencesRequestSchema = z.object({
+  sentences: z.array(sentenceBankEntrySchema).min(1, "At least one sentence is required"),
+});
+
+export type AddAuthorSentencesRequest = z.infer<typeof addAuthorSentencesRequestSchema>;
+
+// Author style with sentence count (for listing)
+export const authorStyleWithCountSchema = z.object({
+  id: z.number(),
+  name: z.string(),
+  description: z.string().nullable(),
+  sentenceCount: z.number(),
+  createdAt: z.date(),
+});
+
+export type AuthorStyleWithCount = z.infer<typeof authorStyleWithCountSchema>;
+
+// Rewrite using author style request schema
+export const rewriteWithAuthorStyleRequestSchema = z.object({
+  targetText: z.string().min(1, "Target text is required"),
+  authorStyleId: z.number().min(1, "Author style ID is required"),
+  level: z.enum(bleachingLevels).optional().default("Heavy"),
+});

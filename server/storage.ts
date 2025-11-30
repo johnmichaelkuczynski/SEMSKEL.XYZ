@@ -8,10 +8,14 @@ neonConfig.webSocketConstructor = ws;
 import {
   users,
   sentenceEntries,
+  authorStyles,
   type User,
   type InsertUser,
   type SentenceEntry,
   type InsertSentenceEntry,
+  type AuthorStyle,
+  type InsertAuthorStyle,
+  type AuthorStyleWithCount,
 } from "@shared/schema";
 
 // Create database connection
@@ -33,6 +37,16 @@ export interface IStorage {
   addSentenceEntry(entry: InsertSentenceEntry): Promise<SentenceEntry>;
   addSentenceEntries(entries: InsertSentenceEntry[]): Promise<number>;
   getExistingBleachedTexts(userId: number, bleachedTexts: string[]): Promise<Set<string>>;
+  
+  // Author style operations
+  getAllAuthorStyles(): Promise<AuthorStyleWithCount[]>;
+  getAuthorStyle(id: number): Promise<AuthorStyle | undefined>;
+  getAuthorStyleByName(name: string): Promise<AuthorStyle | undefined>;
+  createAuthorStyle(style: InsertAuthorStyle): Promise<AuthorStyle>;
+  getAuthorStyleSentences(authorStyleId: number): Promise<SentenceEntry[]>;
+  getAuthorStyleSentenceCount(authorStyleId: number): Promise<number>;
+  addSentenceEntriesToAuthorStyle(authorStyleId: number, entries: InsertSentenceEntry[]): Promise<number>;
+  getExistingBleachedTextsForAuthor(authorStyleId: number, bleachedTexts: string[]): Promise<Set<string>>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -105,6 +119,91 @@ export class DatabaseStorage implements IStorage {
       .where(
         and(
           eq(sentenceEntries.userId, userId),
+          inArray(sentenceEntries.bleached, bleachedTexts)
+        )
+      );
+    
+    return new Set(existing.map(e => e.bleached));
+  }
+
+  // Author style operations
+  async getAllAuthorStyles(): Promise<AuthorStyleWithCount[]> {
+    const styles = await db.select().from(authorStyles).orderBy(authorStyles.name);
+    
+    // Get sentence counts for each author style
+    const result: AuthorStyleWithCount[] = [];
+    for (const style of styles) {
+      const count = await this.getAuthorStyleSentenceCount(style.id);
+      result.push({
+        id: style.id,
+        name: style.name,
+        description: style.description,
+        sentenceCount: count,
+        createdAt: style.createdAt,
+      });
+    }
+    return result;
+  }
+
+  async getAuthorStyle(id: number): Promise<AuthorStyle | undefined> {
+    const result = await db.select().from(authorStyles).where(eq(authorStyles.id, id)).limit(1);
+    return result[0];
+  }
+
+  async getAuthorStyleByName(name: string): Promise<AuthorStyle | undefined> {
+    const result = await db.select().from(authorStyles).where(eq(authorStyles.name, name)).limit(1);
+    return result[0];
+  }
+
+  async createAuthorStyle(style: InsertAuthorStyle): Promise<AuthorStyle> {
+    const result = await db.insert(authorStyles).values(style).returning();
+    return result[0];
+  }
+
+  async getAuthorStyleSentences(authorStyleId: number): Promise<SentenceEntry[]> {
+    return await db.select().from(sentenceEntries)
+      .where(eq(sentenceEntries.authorStyleId, authorStyleId))
+      .orderBy(desc(sentenceEntries.id));
+  }
+
+  async getAuthorStyleSentenceCount(authorStyleId: number): Promise<number> {
+    const result = await db.select({ count: sql<number>`count(*)::int` })
+      .from(sentenceEntries)
+      .where(eq(sentenceEntries.authorStyleId, authorStyleId));
+    return result[0]?.count || 0;
+  }
+
+  async addSentenceEntriesToAuthorStyle(authorStyleId: number, entries: InsertSentenceEntry[]): Promise<number> {
+    if (entries.length === 0) return 0;
+    
+    // Add authorStyleId to each entry
+    const entriesWithAuthor = entries.map(e => ({
+      ...e,
+      authorStyleId,
+    }));
+    
+    // Insert in batches of 100 to avoid overwhelming the database
+    const BATCH_SIZE = 100;
+    let inserted = 0;
+    
+    for (let i = 0; i < entriesWithAuthor.length; i += BATCH_SIZE) {
+      const batch = entriesWithAuthor.slice(i, i + BATCH_SIZE);
+      await db.insert(sentenceEntries).values(batch);
+      inserted += batch.length;
+    }
+    
+    return inserted;
+  }
+
+  async getExistingBleachedTextsForAuthor(authorStyleId: number, bleachedTexts: string[]): Promise<Set<string>> {
+    if (bleachedTexts.length === 0) return new Set();
+    
+    // Query for existing entries with matching authorStyleId and bleached text
+    const existing = await db.select({ bleached: sentenceEntries.bleached })
+      .from(sentenceEntries)
+      .where(
+        and(
+          eq(sentenceEntries.authorStyleId, authorStyleId),
           inArray(sentenceEntries.bleached, bleachedTexts)
         )
       );
