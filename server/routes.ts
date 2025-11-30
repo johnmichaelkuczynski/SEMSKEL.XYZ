@@ -902,26 +902,79 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       const validatedData = rewriteStyleRequestSchema.parse(req.body);
       
-      // Check text size limits
       const targetWordCount = validatedData.targetText.split(/\s+/).filter(w => w.length > 0).length;
-      const styleWordCount = validatedData.styleSample.split(/\s+/).filter(w => w.length > 0).length;
+      console.log(`Target: ${targetWordCount} words`);
       
-      console.log(`Target: ${targetWordCount} words, Style sample: ${styleWordCount} words`);
+      let result;
+      let authorStyleName: string | null = null;
       
-      // Warn if style sample is shorter than target
-      if (styleWordCount < targetWordCount) {
-        console.warn("Style sample is shorter than target - may result in pattern reuse");
+      // Check if using author style patterns
+      if (validatedData.authorStyleId) {
+        console.log(`Using author style ID: ${validatedData.authorStyleId}`);
+        
+        // Fetch author style
+        const authorStyle = await storage.getAuthorStyle(validatedData.authorStyleId);
+        if (!authorStyle) {
+          return res.status(404).json({
+            error: "Author style not found",
+            message: `No author style found with ID ${validatedData.authorStyleId}`,
+          });
+        }
+        
+        authorStyleName = authorStyle.name;
+        console.log(`Using patterns from author: ${authorStyleName}`);
+        
+        // Fetch patterns for this author
+        const authorPatterns = await storage.getAuthorStyleSentences(validatedData.authorStyleId);
+        
+        if (authorPatterns.length === 0) {
+          return res.status(400).json({
+            error: "No patterns available",
+            message: `Author "${authorStyleName}" has no sentence patterns in their library. Add patterns first.`,
+          });
+        }
+        
+        console.log(`Found ${authorPatterns.length} patterns for author ${authorStyleName}`);
+        
+        // Convert database entries to SentenceBankEntry format
+        const prebuiltPatterns = authorPatterns.map(entry => ({
+          original: entry.original,
+          bleached: entry.bleached,
+          char_length: entry.charLength,
+          token_length: entry.tokenLength,
+          clause_count: entry.clauseCount,
+          clause_order: entry.clauseOrder,
+          punctuation_pattern: entry.punctuationPattern,
+          structure: entry.structure || entry.bleached,
+        }));
+        
+        // Call rewriteInStyle with prebuilt patterns (passing empty styleSample since we have patterns)
+        result = await rewriteInStyle(
+          validatedData.targetText,
+          "", // Empty style sample - not needed when using prebuilt patterns
+          validatedData.level,
+          prebuiltPatterns
+        );
+      } else {
+        // Using custom style sample
+        const styleWordCount = validatedData.styleSample.split(/\s+/).filter(w => w.length > 0).length;
+        console.log(`Style sample: ${styleWordCount} words`);
+        
+        // Warn if style sample is shorter than target
+        if (styleWordCount < targetWordCount) {
+          console.warn("Style sample is shorter than target - may result in pattern reuse");
+        }
+        
+        result = await rewriteInStyle(
+          validatedData.targetText,
+          validatedData.styleSample,
+          validatedData.level
+        );
       }
       
-      const result = await rewriteInStyle(
-        validatedData.targetText,
-        validatedData.styleSample,
-        validatedData.level
-      );
-      
-      // If user is logged in, save the extracted patterns to their personal bank
+      // If user is logged in and using custom style sample (not author style), save the extracted patterns to their personal bank
       let patternsSaved = 0;
-      if (validatedData.userId && result.extractedPatterns.length > 0) {
+      if (!validatedData.authorStyleId && validatedData.userId && result.extractedPatterns.length > 0) {
         console.log(`Saving ${result.extractedPatterns.length} patterns for user ${validatedData.userId}`);
         
         // First, deduplicate within the request itself (by bleached text)

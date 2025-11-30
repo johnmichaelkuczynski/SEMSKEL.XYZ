@@ -239,10 +239,14 @@ export type GPTZeroResponse = z.infer<typeof gptzeroResponseSchema>;
 // Rewrite in style request schema
 export const rewriteStyleRequestSchema = z.object({
   targetText: z.string().min(1, "Target text is required"),
-  styleSample: z.string().min(1, "Style sample is required"),
+  styleSample: z.string().optional().default(""), // Optional when using authorStyleId
   level: z.enum(bleachingLevels).optional().default("Heavy"),
   userId: z.number().optional(), // If logged in, patterns will be saved to user's bank
-});
+  authorStyleId: z.number().optional(), // If provided, use patterns from this author instead of styleSample
+}).refine(
+  (data) => data.styleSample.length > 0 || data.authorStyleId !== undefined,
+  { message: "Either styleSample or authorStyleId must be provided" }
+);
 
 export type RewriteStyleRequest = z.infer<typeof rewriteStyleRequestSchema>;
 

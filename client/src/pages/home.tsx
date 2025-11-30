@@ -23,7 +23,8 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse, AuthorStyleWithCount } from "@shared/schema";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ShieldCheckIcon } from "@heroicons/react/24/solid";
 
 interface LoggedInUser {
@@ -87,6 +88,9 @@ export default function Home() {
   const [styleAiDetectionResult, setStyleAiDetectionResult] = useState<GPTZeroResponse | null>(null);
   const [contentSimilarityResult, setContentSimilarityResult] = useState<ContentSimilarityResponse | null>(null);
   
+  // Author Style state (for Style Transfer)
+  const [selectedAuthorStyleId, setSelectedAuthorStyleId] = useState<number | null>(null);
+  
   const { toast } = useToast();
   
   // Calculate word count and estimated chunks for the input text
@@ -115,6 +119,11 @@ export default function Home() {
   const bankContentQuery = useQuery<{ entries: BankEntry[]; count: number }>({
     queryKey: ["/api/sentence-bank"],
     enabled: bankDialogOpen,
+  });
+  
+  // Fetch author styles for dropdown
+  const authorStylesQuery = useQuery<AuthorStyleWithCount[]>({
+    queryKey: ["/api/author-styles"],
   });
 
   useEffect(() => {
@@ -311,7 +320,7 @@ export default function Home() {
 
   // Style Transfer mutation
   const styleRewriteMutation = useMutation({
-    mutationFn: async (data: { targetText: string; styleSample: string; level: BleachingLevel; userId?: number }) => {
+    mutationFn: async (data: { targetText: string; styleSample?: string; level: BleachingLevel; userId?: number; authorStyleId?: number }) => {
       const response = await apiRequest("POST", "/api/rewrite-style", data);
       return await response.json() as RewriteStyleResponse;
     },
@@ -607,13 +616,31 @@ export default function Home() {
   });
 
   const handleStyleRewrite = () => {
-    if (!styleTargetText.trim() || !styleSampleText.trim()) return;
-    styleRewriteMutation.mutate({
+    // Need either style sample text or a selected author style
+    if (!styleTargetText.trim()) return;
+    if (!styleSampleText.trim() && !selectedAuthorStyleId) return;
+    
+    const mutationData: { 
+      targetText: string; 
+      styleSample?: string; 
+      level: BleachingLevel; 
+      userId?: number; 
+      authorStyleId?: number 
+    } = {
       targetText: styleTargetText,
-      styleSample: styleSampleText,
       level: bleachingLevel,
-      userId: currentUser?.id, // Include userId to save patterns to user's bank
-    });
+    };
+    
+    if (selectedAuthorStyleId) {
+      // Using author style
+      mutationData.authorStyleId = selectedAuthorStyleId;
+    } else {
+      // Using custom style sample
+      mutationData.styleSample = styleSampleText;
+      mutationData.userId = currentUser?.id; // Only save patterns when using custom sample
+    }
+    
+    styleRewriteMutation.mutate(mutationData);
   };
 
   const handleCopyStyleRewrite = async () => {
@@ -668,6 +695,7 @@ export default function Home() {
     setStyleRewriteStats(null);
     setStyleAiDetectionResult(null);
     setContentSimilarityResult(null);
+    setSelectedAuthorStyleId(null);
   };
 
   const handleStyleDetectAI = () => {
@@ -1938,48 +1966,98 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Bottom Row: Style Sample */}
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center justify-between">
-              <Label className="text-sm font-medium">Style Sample (reference text for sentence patterns)</Label>
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => { setStyleSampleText(""); setStyleSampleFile(null); }}
-                disabled={!styleSampleText}
-                data-testid="button-clear-style-sample"
-              >
-                <XMarkIcon className="w-4 h-4" />
-              </Button>
-            </div>
-            <div
-              {...getStyleSampleProps()}
-              className={`h-16 border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer transition-colors hover-elevate ${
-                isStyleSampleDragActive ? "border-primary bg-primary/5" : "border-border"
-              }`}
-              data-testid="dropzone-style-sample"
-            >
-              <input {...getStyleSampleInputProps()} data-testid="input-style-sample-file" />
-              <p className="text-xs text-muted-foreground">
-                {styleSampleFile ? styleSampleFile.name : "Drop style sample .txt or click to browse"}
-              </p>
-            </div>
-            <Textarea
-              placeholder="Paste or type a style sample text (ideally longer than your target)..."
-              value={styleSampleText}
-              onChange={(e) => setStyleSampleText(e.target.value)}
-              className="min-h-[150px] resize-none"
-              data-testid="textarea-style-sample"
-            />
-            {styleSampleText && (
-              <p className="text-xs text-muted-foreground">
-                {getWordCount(styleSampleText)} words
-                {styleTargetText && getWordCount(styleSampleText) < getWordCount(styleTargetText) && (
-                  <span className="text-yellow-600 ml-2">
-                    (Consider using a longer style sample for better results)
-                  </span>
+          {/* Bottom Row: Author Style Selection OR Custom Style Sample */}
+          <div className="flex flex-col gap-4">
+            {/* Author Style Dropdown */}
+            <div className="flex flex-col gap-2">
+              <Label className="text-sm font-medium">Author Style</Label>
+              <div className="flex items-center gap-3">
+                <Select
+                  value={selectedAuthorStyleId?.toString() || "custom"}
+                  onValueChange={(value) => {
+                    if (value === "custom") {
+                      setSelectedAuthorStyleId(null);
+                    } else {
+                      setSelectedAuthorStyleId(parseInt(value));
+                      // Clear custom style sample when selecting an author
+                      setStyleSampleText("");
+                      setStyleSampleFile(null);
+                    }
+                  }}
+                  data-testid="select-author-style"
+                >
+                  <SelectTrigger className="w-[250px]" data-testid="trigger-author-style">
+                    <SelectValue placeholder="Select an author style..." />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="custom" data-testid="option-custom-style">
+                      Custom Style Sample
+                    </SelectItem>
+                    {authorStylesQuery.data?.map((style) => (
+                      <SelectItem 
+                        key={style.id} 
+                        value={style.id.toString()}
+                        disabled={style.sentenceCount === 0}
+                        data-testid={`option-author-${style.id}`}
+                      >
+                        {style.name} ({style.sentenceCount} patterns)
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                {selectedAuthorStyleId && (
+                  <p className="text-xs text-muted-foreground">
+                    Using {authorStylesQuery.data?.find(s => s.id === selectedAuthorStyleId)?.name}'s sentence patterns
+                  </p>
                 )}
-              </p>
+              </div>
+            </div>
+            
+            {/* Custom Style Sample (only shown when not using an author style) */}
+            {!selectedAuthorStyleId && (
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-between">
+                  <Label className="text-sm font-medium">Style Sample (reference text for sentence patterns)</Label>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => { setStyleSampleText(""); setStyleSampleFile(null); }}
+                    disabled={!styleSampleText}
+                    data-testid="button-clear-style-sample"
+                  >
+                    <XMarkIcon className="w-4 h-4" />
+                  </Button>
+                </div>
+                <div
+                  {...getStyleSampleProps()}
+                  className={`h-16 border-2 border-dashed rounded-lg flex items-center justify-center cursor-pointer transition-colors hover-elevate ${
+                    isStyleSampleDragActive ? "border-primary bg-primary/5" : "border-border"
+                  }`}
+                  data-testid="dropzone-style-sample"
+                >
+                  <input {...getStyleSampleInputProps()} data-testid="input-style-sample-file" />
+                  <p className="text-xs text-muted-foreground">
+                    {styleSampleFile ? styleSampleFile.name : "Drop style sample .txt or click to browse"}
+                  </p>
+                </div>
+                <Textarea
+                  placeholder="Paste or type a style sample text (ideally longer than your target)..."
+                  value={styleSampleText}
+                  onChange={(e) => setStyleSampleText(e.target.value)}
+                  className="min-h-[150px] resize-none"
+                  data-testid="textarea-style-sample"
+                />
+                {styleSampleText && (
+                  <p className="text-xs text-muted-foreground">
+                    {getWordCount(styleSampleText)} words
+                    {styleTargetText && getWordCount(styleSampleText) < getWordCount(styleTargetText) && (
+                      <span className="text-yellow-600 ml-2">
+                        (Consider using a longer style sample for better results)
+                      </span>
+                    )}
+                  </p>
+                )}
+              </div>
             )}
           </div>
 
@@ -1987,17 +2065,17 @@ export default function Home() {
           <div className="flex gap-3 mt-4">
             <Button
               onClick={handleStyleRewrite}
-              disabled={!styleTargetText.trim() || !styleSampleText.trim() || styleRewriteMutation.isPending}
+              disabled={!styleTargetText.trim() || (!styleSampleText.trim() && !selectedAuthorStyleId) || styleRewriteMutation.isPending}
               className="flex-1"
               data-testid="button-style-rewrite"
             >
               <SparklesIcon className="w-4 h-4 mr-2" />
-              {styleRewriteMutation.isPending ? "Rewriting..." : "Rewrite in Same Style"}
+              {styleRewriteMutation.isPending ? "Rewriting..." : selectedAuthorStyleId ? "Rewrite in Author's Style" : "Rewrite in Same Style"}
             </Button>
             <Button
               variant="outline"
               onClick={handleClearStyleTransfer}
-              disabled={!styleTargetText && !styleSampleText && !styleRewriteResults}
+              disabled={!styleTargetText && !styleSampleText && !styleRewriteResults && !selectedAuthorStyleId}
               data-testid="button-clear-style-transfer"
             >
               <XMarkIcon className="w-4 h-4 mr-2" />
