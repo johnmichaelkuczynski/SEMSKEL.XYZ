@@ -23,7 +23,7 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse } from "@shared/schema";
 import { ShieldCheckIcon } from "@heroicons/react/24/solid";
 
 interface LoggedInUser {
@@ -85,6 +85,7 @@ export default function Home() {
   const [styleRewriteResults, setStyleRewriteResults] = useState<RewrittenSentence[] | null>(null);
   const [styleRewriteStats, setStyleRewriteStats] = useState<{ total: number; successful: number; patternsExtracted: number } | null>(null);
   const [styleAiDetectionResult, setStyleAiDetectionResult] = useState<GPTZeroResponse | null>(null);
+  const [contentSimilarityResult, setContentSimilarityResult] = useState<ContentSimilarityResponse | null>(null);
   
   const { toast } = useToast();
   
@@ -316,6 +317,9 @@ export default function Home() {
         successful: data.successfulRewrites,
         patternsExtracted: data.stylePatternsExtracted,
       });
+      // Clear previous analysis results when a new rewrite is done
+      setStyleAiDetectionResult(null);
+      setContentSimilarityResult(null);
       
       // Show different message if patterns were saved
       const savedInfo = data.patternsSavedToBank && data.patternsSavedToBank > 0
@@ -361,6 +365,32 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "AI detection failed.";
       toast({
         title: "Detection failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Content Similarity mutation
+  const contentSimilarityMutation = useMutation({
+    mutationFn: async (data: { originalText: string; rewrittenText: string }) => {
+      const response = await apiRequest("POST", "/api/content-similarity", data);
+      return await response.json() as ContentSimilarityResponse;
+    },
+    onSuccess: (data) => {
+      setContentSimilarityResult(data);
+      const scoreDescription = data.similarityScore >= 95 ? "Excellent" :
+        data.similarityScore >= 85 ? "Good" :
+        data.similarityScore >= 70 ? "Fair" : "Low";
+      toast({
+        title: `Content Similarity: ${data.similarityScore}% (${scoreDescription})`,
+        description: data.discrepancies === "None" ? "Content fully preserved" : data.discrepancies.substring(0, 100),
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "Similarity analysis failed.";
+      toast({
+        title: "Analysis failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -632,6 +662,7 @@ export default function Home() {
     setStyleRewriteResults(null);
     setStyleRewriteStats(null);
     setStyleAiDetectionResult(null);
+    setContentSimilarityResult(null);
   };
 
   const handleStyleDetectAI = () => {
@@ -645,6 +676,30 @@ export default function Home() {
     }
     const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
     styleAiDetectMutation.mutate(rewrittenText);
+  };
+
+  const handleContentSimilarity = () => {
+    if (!styleTargetText.trim()) {
+      toast({
+        title: "No target text",
+        description: "Enter target text to compare.",
+        variant: "destructive",
+      });
+      return;
+    }
+    if (!styleRewriteResults || styleRewriteResults.length === 0) {
+      toast({
+        title: "No rewritten text",
+        description: "Rewrite your text first before checking content similarity.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
+    contentSimilarityMutation.mutate({
+      originalText: styleTargetText,
+      rewrittenText: rewrittenText,
+    });
   };
 
   // Action handlers
@@ -1752,19 +1807,71 @@ export default function Home() {
                 )}
               </div>
 
-              {/* AI Detection Button for Style Transfer */}
+              {/* Analysis Buttons for Style Transfer */}
               {styleRewriteResults && styleRewriteResults.length > 0 && (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  onClick={handleStyleDetectAI}
-                  disabled={styleAiDetectMutation.isPending}
-                  className="w-full"
-                  data-testid="button-style-detect-ai"
-                >
-                  <ShieldCheckIcon className="w-4 h-4 mr-2" />
-                  {styleAiDetectMutation.isPending ? "Detecting..." : "Detect AI (GPTZero)"}
-                </Button>
+                <div className="flex gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleContentSimilarity}
+                    disabled={contentSimilarityMutation.isPending}
+                    className="flex-1"
+                    data-testid="button-content-similarity"
+                  >
+                    <DocumentTextIcon className="w-4 h-4 mr-2" />
+                    {contentSimilarityMutation.isPending ? "Analyzing..." : "Content Similarity"}
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={handleStyleDetectAI}
+                    disabled={styleAiDetectMutation.isPending}
+                    className="flex-1"
+                    data-testid="button-style-detect-ai"
+                  >
+                    <ShieldCheckIcon className="w-4 h-4 mr-2" />
+                    {styleAiDetectMutation.isPending ? "Detecting..." : "Detect AI"}
+                  </Button>
+                </div>
+              )}
+
+              {/* Content Similarity Result Display */}
+              {contentSimilarityResult && (
+                <div className={`p-3 rounded-lg border ${
+                  contentSimilarityResult.similarityScore >= 95 
+                    ? "bg-green-50 border-green-200 dark:bg-green-950/30 dark:border-green-800"
+                    : contentSimilarityResult.similarityScore >= 85
+                    ? "bg-blue-50 border-blue-200 dark:bg-blue-950/30 dark:border-blue-800"
+                    : contentSimilarityResult.similarityScore >= 70
+                    ? "bg-yellow-50 border-yellow-200 dark:bg-yellow-950/30 dark:border-yellow-800"
+                    : "bg-red-50 border-red-200 dark:bg-red-950/30 dark:border-red-800"
+                }`}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <DocumentTextIcon className={`w-5 h-5 ${
+                      contentSimilarityResult.similarityScore >= 95
+                        ? "text-green-600 dark:text-green-400"
+                        : contentSimilarityResult.similarityScore >= 85
+                        ? "text-blue-600 dark:text-blue-400"
+                        : contentSimilarityResult.similarityScore >= 70
+                        ? "text-yellow-600 dark:text-yellow-400"
+                        : "text-red-600 dark:text-red-400"
+                    }`} />
+                    <span className="font-semibold text-sm">
+                      Content Similarity: {contentSimilarityResult.similarityScore}%
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      ({contentSimilarityResult.similarityScore >= 95 ? "Excellent" :
+                        contentSimilarityResult.similarityScore >= 85 ? "Good" :
+                        contentSimilarityResult.similarityScore >= 70 ? "Fair" : "Low"})
+                    </span>
+                  </div>
+                  <div className="text-xs text-muted-foreground space-y-1">
+                    <p><strong>Preserved:</strong> {contentSimilarityResult.agreementSummary}</p>
+                    {contentSimilarityResult.discrepancies !== "None" && (
+                      <p><strong>Differences:</strong> {contentSimilarityResult.discrepancies}</p>
+                    )}
+                  </div>
+                </div>
               )}
 
               {/* AI Detection Result Display */}
