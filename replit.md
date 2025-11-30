@@ -66,6 +66,10 @@ This produces human-like, detector-safe text with full content preservation.
 - Sentence entries table with user association
 - Upload custom JSONL files to append to the bank
 - Per-user sentence tracking and stats
+- **Installment Downloads**: Large sentence banks (>10,000 patterns) can be downloaded in 10,000-pattern installments to prevent crashes
+  - Bank dialog shows download buttons for each installment (e.g., "Part 1 (1-10,000)", "Part 2 (10,001-20,000)")
+  - Downloads are paginated via `/api/sentence-bank/download/:installment` endpoint
+  - Each installment generates a JSONL file with pattern range in filename
 
 ### Layer 1 Features:
 - Single-page UI with split panels (input | output)
@@ -152,6 +156,7 @@ This produces human-like, detector-safe text with full content preservation.
 - `POST /api/content-similarity` — Compares original and rewritten text for semantic similarity (0-100 score)
 - `GET /api/sentence-bank/status` — Returns count of entries in the bank
 - `GET /api/sentence-bank` — Returns all entries in the bank
+- `GET /api/sentence-bank/download/:installment` — Returns paginated entries (10,000 per installment) with metadata
 - `GET /api/author-styles` — Returns all author styles with sentence counts
 - `POST /api/author-styles` — Creates a new author style (name, description)
 - `GET /api/author-styles/:id/sentences` — Returns all sentences for an author
