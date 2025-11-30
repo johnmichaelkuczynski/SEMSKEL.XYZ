@@ -154,20 +154,29 @@ export default function Home() {
   const bleachMutation = useMutation({
     mutationFn: async (data: { text: string; level: BleachingLevel; filename?: string }) => {
       const response = await apiRequest("POST", "/api/bleach", data);
-      return await response.json() as BleachResponse & { chunksProcessed?: number; totalChunks?: number };
+      return await response.json() as BleachResponse & { chunksProcessed?: number; totalChunks?: number; failedChunks?: number[] };
     },
     onSuccess: (data) => {
       setOutputText(data.bleachedText);
       const chunkInfo = data.totalChunks && data.totalChunks > 1 
-        ? ` (processed ${data.chunksProcessed} chunks)` 
+        ? ` (processed ${data.chunksProcessed}/${data.totalChunks} chunks)` 
         : "";
-      toast({
-        title: "Text bleached successfully",
-        description: `Applied ${bleachingLevel} bleaching to your text${chunkInfo}.`,
-      });
+      
+      if (data.failedChunks && data.failedChunks.length > 0) {
+        toast({
+          title: "Text partially bleached",
+          description: `${data.failedChunks.length} chunk(s) failed, but processed the rest${chunkInfo}.`,
+          variant: "default",
+        });
+      } else {
+        toast({
+          title: "Text bleached successfully",
+          description: `Applied ${bleachingLevel} bleaching to your text${chunkInfo}.`,
+        });
+      }
     },
     onError: (error: any) => {
-      const errorMessage = error?.error || error?.message || "An error occurred while bleaching the text.";
+      const errorMessage = error?.error || error?.message || "An error occurred while bleaching the text. Please try again.";
       toast({
         title: "Bleaching failed",
         description: errorMessage,
@@ -244,19 +253,27 @@ export default function Home() {
   const bleachChunksMutation = useMutation({
     mutationFn: async (data: { chunks: { id: number; text: string }[]; level: BleachingLevel }) => {
       const response = await apiRequest("POST", "/api/bleach-chunks", data);
-      return await response.json() as { bleachedText: string; chunksProcessed: number; totalChunks: number };
+      return await response.json() as { bleachedText: string; chunksProcessed: number; totalChunks: number; failedChunks?: number[] };
     },
     onSuccess: (data) => {
       setOutputText(data.bleachedText);
-      toast({
-        title: "Text bleached successfully",
-        description: `Processed ${data.chunksProcessed} of ${data.totalChunks} chunks.`,
-      });
+      if (data.failedChunks && data.failedChunks.length > 0) {
+        toast({
+          title: "Text partially bleached",
+          description: `Processed ${data.chunksProcessed} of ${data.totalChunks} chunks. ${data.failedChunks.length} chunk(s) failed.`,
+          variant: "default",
+        });
+      } else {
+        toast({
+          title: "Text bleached successfully",
+          description: `Processed ${data.chunksProcessed} of ${data.totalChunks} chunks.`,
+        });
+      }
     },
     onError: (error: any) => {
       toast({
         title: "Bleaching failed",
-        description: error?.message || "An error occurred.",
+        description: error?.message || "An error occurred. Please try again.",
         variant: "destructive",
       });
     },
@@ -266,21 +283,29 @@ export default function Home() {
   const sentenceBankChunksMutation = useMutation({
     mutationFn: async (data: { chunks: { id: number; text: string }[]; level: BleachingLevel; userId?: number }) => {
       const response = await apiRequest("POST", "/api/build-sentence-bank-chunks", data);
-      return await response.json() as { jsonl: string; entries: number; chunksProcessed: number; savedToBank: number };
+      return await response.json() as { jsonl: string; entries: number; chunksProcessed: number; savedToBank: number; failedSentences?: number };
     },
     onSuccess: (data) => {
       setJsonlContent(data.jsonl);
       setSentenceCount(data.entries);
       queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
-      toast({
-        title: "Saved to sentence bank",
-        description: `Added ${data.entries} sentences from ${data.chunksProcessed} chunks.${data.savedToBank > 0 ? ` Saved ${data.savedToBank} to your bank.` : ""}`,
-      });
+      if (data.failedSentences && data.failedSentences > 0) {
+        toast({
+          title: "Sentence bank partially built",
+          description: `Added ${data.entries} sentences from ${data.chunksProcessed} chunks. ${data.failedSentences} sentence(s) failed.${data.savedToBank > 0 ? ` Saved ${data.savedToBank} to your bank.` : ""}`,
+          variant: "default",
+        });
+      } else {
+        toast({
+          title: "Saved to sentence bank",
+          description: `Added ${data.entries} sentences from ${data.chunksProcessed} chunks.${data.savedToBank > 0 ? ` Saved ${data.savedToBank} to your bank.` : ""}`,
+        });
+      }
     },
     onError: (error: any) => {
       toast({
         title: "JSONL generation failed",
-        description: error?.message || "An error occurred.",
+        description: error?.message || "An error occurred. Please try again.",
         variant: "destructive",
       });
     },

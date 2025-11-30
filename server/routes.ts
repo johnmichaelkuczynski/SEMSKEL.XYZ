@@ -209,7 +209,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
   // ==================== BLEACHING ENDPOINTS ====================
 
-  // Bleaching API endpoint with automatic chunking for large texts
+  // Bleaching API endpoint with automatic chunking for large texts - BULLETPROOF version
   app.post("/api/bleach", async (req, res) => {
     try {
       const validatedData = bleachRequestSchema.parse(req.body);
@@ -226,8 +226,30 @@ export async function registerRoutes(app: Express): Promise<Server> {
       const CHUNK_SIZE = 2000; // words per chunk
       
       if (wordCount <= CHUNK_SIZE) {
-        // Small text - process directly
-        const bleachedText = await bleachText(validatedData.text, validatedData.level);
+        // Small text - process directly with retries
+        const MAX_RETRIES = 5;
+        let bleachedText = null;
+        
+        for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
+          try {
+            bleachedText = await bleachText(validatedData.text, validatedData.level);
+            break;
+          } catch (error: any) {
+            console.log(`Small text bleach attempt ${attempt}/${MAX_RETRIES} failed: ${error.message?.substring(0, 100)}`);
+            if (attempt < MAX_RETRIES) {
+              const waitTime = Math.min(2000 * Math.pow(2, attempt - 1), 30000);
+              await delay(waitTime);
+            }
+          }
+        }
+        
+        if (!bleachedText) {
+          return res.status(500).json({
+            error: "Bleaching failed",
+            message: "Could not process text after multiple attempts. Please try again.",
+          });
+        }
+        
         return res.json({
           bleachedText,
           originalFilename: validatedData.filename,
@@ -242,47 +264,66 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.log(`Bleaching large text: ${wordCount} words split into ${totalChunks} chunks`);
       
       const bleachedChunks: string[] = [];
+      const failedChunkIds: number[] = []; // 0-based indices
+      const MAX_RETRIES = 5;
       
       for (let i = 0; i < chunks.length; i++) {
         const chunkNum = i + 1;
         console.log(`Processing chunk ${chunkNum}/${totalChunks}...`);
         
-        // Retry logic for each chunk
-        let retries = 3;
-        let bleachedChunk = null;
+        // Robust retry logic - handles ALL errors
+        let bleachedChunk: string | null = null;
         
-        while (retries > 0 && !bleachedChunk) {
+        for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
           try {
             bleachedChunk = await bleachText(chunks[i], validatedData.level);
+            break; // Success
           } catch (error: any) {
-            retries--;
-            if (retries > 0) {
-              const waitTime = Math.pow(2, 3 - retries) * 1000;
-              console.log(`Chunk ${chunkNum} failed, retrying in ${waitTime}ms...`);
+            console.log(`Chunk ${chunkNum} attempt ${attempt}/${MAX_RETRIES} failed: ${error.message?.substring(0, 100)}`);
+            
+            if (attempt < MAX_RETRIES) {
+              const waitTime = Math.min(2000 * Math.pow(2, attempt - 1), 30000);
+              console.log(`Waiting ${waitTime}ms before retry...`);
               await delay(waitTime);
             } else {
-              throw error;
+              console.error(`Chunk ${chunkNum} failed after ${MAX_RETRIES} attempts.`);
             }
           }
         }
         
+        // Always add something to maintain output alignment
         if (bleachedChunk) {
           bleachedChunks.push(bleachedChunk);
+        } else {
+          bleachedChunks.push(`[Chunk ${chunkNum} could not be processed - please retry]`);
+          failedChunkIds.push(i); // 0-based index
         }
         
-        // Small delay between chunks to avoid rate limits
+        // Delay between chunks (longer for stability)
         if (i < chunks.length - 1) {
-          await delay(500);
+          await delay(1000);
         }
       }
       
-      console.log(`Completed bleaching all ${totalChunks} chunks`);
+      const successCount = totalChunks - failedChunkIds.length;
+      console.log(`Completed bleaching: ${successCount}/${totalChunks} chunks successful`);
       
+      // If ALL chunks failed, return an error
+      if (successCount === 0) {
+        return res.status(500).json({
+          error: "Bleaching failed",
+          message: "All chunks failed to process. Please try again later.",
+          failedChunks: failedChunkIds,
+        });
+      }
+      
+      // Return response with results (partial or complete)
       res.json({
-        bleachedText: bleachedChunks.join('\n\n\n'), // Triple newline to preserve paragraph separation between chunks
+        bleachedText: bleachedChunks.join('\n\n\n'),
         originalFilename: validatedData.filename,
-        chunksProcessed: bleachedChunks.length,
+        chunksProcessed: successCount,
         totalChunks,
+        failedChunks: failedChunkIds.length > 0 ? failedChunkIds : undefined,
       });
     } catch (error) {
       console.error("Bleaching API error:", error);
@@ -294,9 +335,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
 
+      // Even on unexpected errors, return a graceful response
       res.status(500).json({
         error: "Bleaching failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
+        suggestion: "Please try again or try with smaller text.",
       });
     }
   });
@@ -416,7 +459,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
   
-  // Bleach selected chunks only
+  // Bleach selected chunks only - BULLETPROOF version that NEVER crashes
   app.post("/api/bleach-chunks", async (req, res) => {
     try {
       const validatedData = bleachChunkedRequestSchema.parse(req.body);
@@ -432,45 +475,70 @@ export async function registerRoutes(app: Express): Promise<Server> {
       console.log(`Bleaching ${chunks.length} selected chunks...`);
       
       const bleachedChunks: string[] = [];
+      const failedChunkIds: number[] = []; // Use 0-based IDs to match frontend
       const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
       
       for (let i = 0; i < chunks.length; i++) {
         const chunk = chunks[i];
-        console.log(`Bleaching chunk ${i + 1}/${chunks.length} (${chunk.text.split(/\s+/).length} words)`);
+        const wordCount = chunk.text.split(/\s+/).filter((w: string) => w.length > 0).length;
+        console.log(`Bleaching chunk ${i + 1}/${chunks.length} (${wordCount} words)`);
         
-        // Use retry logic for rate limits
+        // Robust retry logic - handles ALL errors
         let bleachedChunk: string | null = null;
-        for (let attempt = 1; attempt <= 3; attempt++) {
+        const MAX_RETRIES = 5;
+        
+        for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
           try {
             bleachedChunk = await bleachText(chunk.text, level);
-            break;
+            break; // Success - exit retry loop
           } catch (error) {
             const errorMsg = error instanceof Error ? error.message : String(error);
-            if (errorMsg.includes("rate_limit") || errorMsg.includes("overloaded")) {
-              console.log(`Rate limited on chunk ${i + 1}, attempt ${attempt}/3. Waiting...`);
-              await delay(3000 * attempt);
+            console.log(`Chunk ${i + 1} failed (attempt ${attempt}/${MAX_RETRIES}): ${errorMsg.substring(0, 100)}`);
+            
+            if (attempt < MAX_RETRIES) {
+              // Exponential backoff: 2s, 4s, 8s, 16s
+              const waitTime = Math.min(2000 * Math.pow(2, attempt - 1), 30000);
+              console.log(`Waiting ${waitTime}ms before retry...`);
+              await delay(waitTime);
             } else {
-              throw error;
+              console.error(`Chunk ${i + 1} failed after ${MAX_RETRIES} attempts.`);
             }
           }
         }
         
+        // Always add something to maintain output alignment
         if (bleachedChunk) {
           bleachedChunks.push(bleachedChunk);
+        } else {
+          // Add placeholder for failed chunks to maintain alignment
+          bleachedChunks.push(`[Chunk ${i + 1} could not be processed - please retry]`);
+          failedChunkIds.push(i); // 0-based index
         }
         
-        // Small delay between chunks
+        // Delay between chunks to prevent rate limiting (longer for stability)
         if (i < chunks.length - 1) {
-          await delay(500);
+          await delay(1000);
         }
       }
       
-      console.log(`Completed bleaching ${chunks.length} chunks`);
+      const successCount = chunks.length - failedChunkIds.length;
+      console.log(`Completed bleaching: ${successCount} successful, ${failedChunkIds.length} failed`);
       
+      // If ALL chunks failed, return an error
+      if (successCount === 0) {
+        return res.status(500).json({
+          error: "Bleaching failed",
+          message: "All chunks failed to process. Please try again later.",
+          failedChunks: failedChunkIds,
+        });
+      }
+      
+      // Return response with results (partial or complete)
       res.json({
         bleachedText: bleachedChunks.join('\n\n\n'),
-        chunksProcessed: bleachedChunks.length,
+        chunksProcessed: successCount,
         totalChunks: chunks.length,
+        failedChunks: failedChunkIds.length > 0 ? failedChunkIds : undefined,
       });
     } catch (error) {
       console.error("Bleach chunks error:", error);
@@ -482,14 +550,16 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
+      // Even on unexpected errors, return a graceful response
       res.status(500).json({
         error: "Bleaching failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
+        suggestion: "Try selecting fewer chunks or try again later.",
       });
     }
   });
   
-  // Build sentence bank from selected chunks only
+  // Build sentence bank from selected chunks only - BULLETPROOF version
   app.post("/api/build-sentence-bank-chunks", async (req, res) => {
     try {
       const validatedData = sentenceBankChunkedRequestSchema.parse(req.body);
@@ -504,52 +574,69 @@ export async function registerRoutes(app: Express): Promise<Server> {
       
       console.log(`Building sentence bank from ${chunks.length} selected chunks...`);
       
-      const SENTENCE_BATCH_SIZE = 5;
+      const SENTENCE_BATCH_SIZE = 3; // Smaller batches for stability
       const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
       const allEntries: InsertSentenceEntry[] = [];
+      let failedSentences = 0;
+      let processedChunks = 0;
       
       for (let chunkIdx = 0; chunkIdx < chunks.length; chunkIdx++) {
         const chunk = chunks[chunkIdx];
-        const sentences = splitIntoSentences(chunk.text);
+        let sentences: string[] = [];
+        
+        try {
+          sentences = splitIntoSentences(chunk.text);
+        } catch (err) {
+          console.error(`Failed to split chunk ${chunkIdx + 1} into sentences:`, err);
+          continue; // Skip this chunk but continue with others
+        }
         
         console.log(`Processing chunk ${chunkIdx + 1}/${chunks.length} (${sentences.length} sentences)`);
         
         for (let i = 0; i < sentences.length; i += SENTENCE_BATCH_SIZE) {
           const batch = sentences.slice(i, i + SENTENCE_BATCH_SIZE);
           
-          const batchResults = await Promise.all(
-            batch.map(sentence => processSentenceWithRetry(sentence, level))
-          );
-          
-          for (const result of batchResults) {
-            if (result) {
-              allEntries.push({
-                original: result.original,
-                bleached: result.bleached,
-                charLength: result.charLength,
-                tokenLength: result.tokenLength,
-                clauseCount: result.clauseCount,
-                clauseOrder: result.clauseOrder || "main → subordinate",
-                punctuationPattern: result.punctuationPattern || "",
-                structure: result.structure || result.bleached,
-                userId: userId || null,
-              });
+          // Process each sentence individually with error handling
+          for (const sentence of batch) {
+            try {
+              const result = await processSentenceWithRetry(sentence, level);
+              if (result) {
+                allEntries.push({
+                  original: result.original,
+                  bleached: result.bleached,
+                  charLength: result.charLength,
+                  tokenLength: result.tokenLength,
+                  clauseCount: result.clauseCount,
+                  clauseOrder: result.clauseOrder || "main → subordinate",
+                  punctuationPattern: result.punctuationPattern || "",
+                  structure: result.structure || result.bleached,
+                  userId: userId || null,
+                });
+              } else {
+                failedSentences++;
+              }
+            } catch (err) {
+              console.log(`Failed to process sentence (chunk ${chunkIdx + 1}): ${sentence.substring(0, 50)}...`);
+              failedSentences++;
+              // Continue with next sentence
             }
           }
           
-          // Delay between batches
+          // Delay between batches (longer for stability)
           if (i + SENTENCE_BATCH_SIZE < sentences.length) {
-            await delay(500);
+            await delay(800);
           }
         }
         
-        // Delay between chunks
+        processedChunks++;
+        
+        // Delay between chunks (longer for stability)
         if (chunkIdx < chunks.length - 1) {
-          await delay(500);
+          await delay(1000);
         }
       }
       
-      // Generate JSONL output
+      // Generate JSONL output from whatever we managed to process
       const jsonlOutput = allEntries.map(entry => JSON.stringify({
         original: entry.original,
         bleached: entry.bleached,
@@ -564,17 +651,24 @@ export async function registerRoutes(app: Express): Promise<Server> {
       // Save to database if userId provided
       let savedCount = 0;
       if (userId && allEntries.length > 0) {
-        savedCount = await storage.addSentenceEntries(allEntries);
-        console.log(`Saved ${savedCount} entries to user's bank`);
+        try {
+          savedCount = await storage.addSentenceEntries(allEntries);
+          console.log(`Saved ${savedCount} entries to user's bank`);
+        } catch (err) {
+          console.error("Failed to save entries to database:", err);
+          // Continue - we still have the JSONL output
+        }
       }
       
-      console.log(`Completed building sentence bank: ${allEntries.length} entries from ${chunks.length} chunks`);
+      console.log(`Completed: ${allEntries.length} entries from ${processedChunks}/${chunks.length} chunks (${failedSentences} sentences failed)`);
       
+      // Always return a response - never crash
       res.json({
         jsonl: jsonlOutput,
         entries: allEntries.length,
-        chunksProcessed: chunks.length,
+        chunksProcessed: processedChunks,
         savedToBank: savedCount,
+        failedSentences: failedSentences > 0 ? failedSentences : undefined,
       });
     } catch (error) {
       console.error("Build sentence bank chunks error:", error);
@@ -586,9 +680,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
+      // Even on unexpected errors, return a graceful response
       res.status(500).json({
         error: "Sentence bank build failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
+        suggestion: "Try selecting fewer chunks or try again later.",
       });
     }
   });
