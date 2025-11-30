@@ -305,7 +305,7 @@ export default function Home() {
 
   // Style Transfer mutation
   const styleRewriteMutation = useMutation({
-    mutationFn: async (data: { targetText: string; styleSample: string; level: BleachingLevel }) => {
+    mutationFn: async (data: { targetText: string; styleSample: string; level: BleachingLevel; userId?: number }) => {
       const response = await apiRequest("POST", "/api/rewrite-style", data);
       return await response.json() as RewriteStyleResponse;
     },
@@ -316,10 +316,21 @@ export default function Home() {
         successful: data.successfulRewrites,
         patternsExtracted: data.stylePatternsExtracted,
       });
+      
+      // Show different message if patterns were saved
+      const savedInfo = data.patternsSavedToBank && data.patternsSavedToBank > 0
+        ? ` Saved ${data.patternsSavedToBank} patterns to your bank.`
+        : "";
+      
       toast({
         title: "Style transfer complete",
-        description: `Rewrote ${data.successfulRewrites} of ${data.totalSentences} sentences using ${data.stylePatternsExtracted} extracted patterns.`,
+        description: `Rewrote ${data.successfulRewrites} of ${data.totalSentences} sentences using ${data.stylePatternsExtracted} extracted patterns.${savedInfo}`,
       });
+      
+      // Invalidate bank status if patterns were saved
+      if (data.patternsSavedToBank && data.patternsSavedToBank > 0) {
+        queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+      }
     },
     onError: (error: any) => {
       const errorMessage = error?.error || error?.message || "Style transfer failed.";
@@ -566,6 +577,7 @@ export default function Home() {
       targetText: styleTargetText,
       styleSample: styleSampleText,
       level: bleachingLevel,
+      userId: currentUser?.id, // Include userId to save patterns to user's bank
     });
   };
 
