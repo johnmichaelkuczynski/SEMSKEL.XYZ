@@ -84,6 +84,7 @@ export default function Home() {
   const [styleSampleFile, setStyleSampleFile] = useState<{ name: string } | null>(null);
   const [styleRewriteResults, setStyleRewriteResults] = useState<RewrittenSentence[] | null>(null);
   const [styleRewriteStats, setStyleRewriteStats] = useState<{ total: number; successful: number; patternsExtracted: number } | null>(null);
+  const [styleAiDetectionResult, setStyleAiDetectionResult] = useState<GPTZeroResponse | null>(null);
   
   const { toast } = useToast();
   
@@ -324,6 +325,31 @@ export default function Home() {
       const errorMessage = error?.error || error?.message || "Style transfer failed.";
       toast({
         title: "Style transfer failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Style Transfer AI Detection mutation (GPTZero)
+  const styleAiDetectMutation = useMutation({
+    mutationFn: async (text: string) => {
+      const response = await apiRequest("POST", "/api/detect-ai", { text });
+      return await response.json() as GPTZeroResponse;
+    },
+    onSuccess: (data) => {
+      setStyleAiDetectionResult(data);
+      const classification = data.documentClassification;
+      const prob = Math.round(data.completelyGeneratedProb * 100);
+      toast({
+        title: `Detection: ${classification.replace("_", " ")}`,
+        description: `${prob}% AI probability (${data.confidenceCategory} confidence)`,
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "AI detection failed.";
+      toast({
+        title: "Detection failed",
         description: errorMessage,
         variant: "destructive",
       });
@@ -593,6 +619,20 @@ export default function Home() {
     setStyleSampleFile(null);
     setStyleRewriteResults(null);
     setStyleRewriteStats(null);
+    setStyleAiDetectionResult(null);
+  };
+
+  const handleStyleDetectAI = () => {
+    if (!styleRewriteResults || styleRewriteResults.length === 0) {
+      toast({
+        title: "No text to analyze",
+        description: "Rewrite your text first before running AI detection.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
+    styleAiDetectMutation.mutate(rewrittenText);
   };
 
   // Action handlers
@@ -755,6 +795,7 @@ export default function Home() {
     setStyleSampleFile(null);
     setStyleRewriteResults(null);
     setStyleRewriteStats(null);
+    setStyleAiDetectionResult(null);
   };
 
   const handleLogin = () => {
@@ -1698,6 +1739,52 @@ export default function Home() {
                   </div>
                 )}
               </div>
+
+              {/* AI Detection Button for Style Transfer */}
+              {styleRewriteResults && styleRewriteResults.length > 0 && (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleStyleDetectAI}
+                  disabled={styleAiDetectMutation.isPending}
+                  className="w-full"
+                  data-testid="button-style-detect-ai"
+                >
+                  <ShieldCheckIcon className="w-4 h-4 mr-2" />
+                  {styleAiDetectMutation.isPending ? "Detecting..." : "Detect AI (GPTZero)"}
+                </Button>
+              )}
+
+              {/* AI Detection Result Display */}
+              {styleAiDetectionResult && (
+                <div className={`p-3 rounded-lg border ${
+                  styleAiDetectionResult.documentClassification === "HUMAN_ONLY" 
+                    ? "bg-green-50 border-green-200 dark:bg-green-950/30 dark:border-green-800"
+                    : styleAiDetectionResult.documentClassification === "AI_ONLY"
+                    ? "bg-red-50 border-red-200 dark:bg-red-950/30 dark:border-red-800"
+                    : "bg-yellow-50 border-yellow-200 dark:bg-yellow-950/30 dark:border-yellow-800"
+                }`}>
+                  <div className="flex items-center gap-2 mb-1">
+                    <ShieldCheckIcon className={`w-5 h-5 ${
+                      styleAiDetectionResult.documentClassification === "HUMAN_ONLY"
+                        ? "text-green-600 dark:text-green-400"
+                        : styleAiDetectionResult.documentClassification === "AI_ONLY"
+                        ? "text-red-600 dark:text-red-400"
+                        : "text-yellow-600 dark:text-yellow-400"
+                    }`} />
+                    <span className="font-medium text-sm">
+                      {styleAiDetectionResult.documentClassification.replace("_", " ")}
+                    </span>
+                    <span className="text-xs text-muted-foreground">
+                      ({styleAiDetectionResult.confidenceCategory} confidence)
+                    </span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    AI Probability: {Math.round(styleAiDetectionResult.completelyGeneratedProb * 100)}%
+                  </p>
+                </div>
+              )}
+
               <div className="flex-1 min-h-[200px] border rounded-lg p-3 bg-muted/30 overflow-auto">
                 {styleRewriteResults && styleRewriteResults.length > 0 ? (
                   <div className="space-y-2">
