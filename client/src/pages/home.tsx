@@ -573,11 +573,22 @@ export default function Home() {
   };
 
   const handleClearAll = () => {
+    // Clear bleaching section
     setInputText("");
     setOutputText("");
     setUploadedFile(null);
     setJsonlContent(null);
     setSentenceCount(0);
+    // Clear pattern matcher section
+    setAiTextInput("");
+    setAiUploadedFile(null);
+    setMatchResults(null);
+    setMatchStats(null);
+    // Clear humanizer section
+    setHumanizeResults(null);
+    setHumanizeStats(null);
+    // Clear AI detection
+    setAiDetectionResult(null);
   };
 
   const handleLogin = () => {
