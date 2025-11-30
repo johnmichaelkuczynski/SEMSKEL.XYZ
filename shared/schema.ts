@@ -257,3 +257,22 @@ export const rewriteStyleResponseSchema = z.object({
 });
 
 export type RewriteStyleResponse = z.infer<typeof rewriteStyleResponseSchema>;
+
+// ==================== CONTENT SIMILARITY SCHEMAS ====================
+
+// Content similarity request schema
+export const contentSimilarityRequestSchema = z.object({
+  originalText: z.string().min(1, "Original text is required"),
+  rewrittenText: z.string().min(1, "Rewritten text is required"),
+});
+
+export type ContentSimilarityRequest = z.infer<typeof contentSimilarityRequestSchema>;
+
+// Content similarity response schema
+export const contentSimilarityResponseSchema = z.object({
+  similarityScore: z.number().min(0).max(100), // 0-100 percentage
+  agreementSummary: z.string(), // What content is preserved
+  discrepancies: z.string(), // What content differs or is lost
+});
+
+export type ContentSimilarityResponse = z.infer<typeof contentSimilarityResponseSchema>;
