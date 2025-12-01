@@ -78,6 +78,7 @@ export default function Home() {
   const [uploadDialogOpen, setUploadDialogOpen] = useState(false);
   const [uploadJsonlContent, setUploadJsonlContent] = useState("");
   const [aiDetectionResult, setAiDetectionResult] = useState<GPTZeroResponse | null>(null);
+  const [humanizeContentSimilarityResult, setHumanizeContentSimilarityResult] = useState<ContentSimilarityResponse | null>(null);
   
   // Style Transfer state
   const [styleTargetText, setStyleTargetText] = useState("");
@@ -152,6 +153,11 @@ export default function Home() {
   useEffect(() => {
     setContentSimilarityResult(null);
   }, [styleTargetText, styleSampleText]);
+
+  // Clear humanize similarity result when AI text changes or new results come in
+  useEffect(() => {
+    setHumanizeContentSimilarityResult(null);
+  }, [aiTextInput, humanizeResults]);
 
   // Bleaching mutation
   const bleachMutation = useMutation({
@@ -505,7 +511,7 @@ export default function Home() {
     },
   });
 
-  // Content Similarity mutation
+  // Content Similarity mutation (for Style Transfer)
   const contentSimilarityMutation = useMutation({
     mutationFn: async (data: { originalText: string; rewrittenText: string }) => {
       const response = await apiRequest("POST", "/api/content-similarity", data);
@@ -513,6 +519,32 @@ export default function Home() {
     },
     onSuccess: (data) => {
       setContentSimilarityResult(data);
+      const scoreDescription = data.similarityScore >= 95 ? "Excellent" :
+        data.similarityScore >= 85 ? "Good" :
+        data.similarityScore >= 70 ? "Fair" : "Low";
+      toast({
+        title: `Content Similarity: ${data.similarityScore}% (${scoreDescription})`,
+        description: data.discrepancies === "None" ? "Content fully preserved" : data.discrepancies.substring(0, 100),
+      });
+    },
+    onError: (error: any) => {
+      const errorMessage = error?.error || error?.message || "Similarity analysis failed.";
+      toast({
+        title: "Analysis failed",
+        description: errorMessage,
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Content Similarity mutation (for Humanize section)
+  const humanizeContentSimilarityMutation = useMutation({
+    mutationFn: async (data: { originalText: string; rewrittenText: string }) => {
+      const response = await apiRequest("POST", "/api/content-similarity", data);
+      return await response.json() as ContentSimilarityResponse;
+    },
+    onSuccess: (data) => {
+      setHumanizeContentSimilarityResult(data);
       const scoreDescription = data.similarityScore >= 95 ? "Excellent" :
         data.similarityScore >= 85 ? "Good" :
         data.similarityScore >= 70 ? "Fair" : "Low";
@@ -629,6 +661,22 @@ export default function Home() {
     }
     const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
     aiDetectMutation.mutate(humanizedText);
+  };
+
+  const handleHumanizeContentSimilarity = () => {
+    if (!humanizeResults || humanizeResults.length === 0 || !aiTextInput) {
+      toast({
+        title: "No text to analyze",
+        description: "Humanize your text first before checking content similarity.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
+    humanizeContentSimilarityMutation.mutate({
+      originalText: aiTextInput,
+      rewrittenText: humanizedText,
+    });
   };
 
   const handleCopyHumanized = async () => {
@@ -2053,37 +2101,98 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  {/* AI Detector Button */}
-                  <div className="flex items-center justify-between mb-4">
+                  {/* Analysis Buttons Row */}
+                  <div className="flex gap-2 mb-4">
+                    <Button
+                      onClick={handleHumanizeContentSimilarity}
+                      disabled={humanizeContentSimilarityMutation.isPending}
+                      variant="outline"
+                      className="flex-1 gap-2"
+                      data-testid="button-humanize-content-similarity"
+                    >
+                      <DocumentTextIcon className="w-4 h-4" />
+                      {humanizeContentSimilarityMutation.isPending ? "Analyzing..." : "Content Similarity"}
+                    </Button>
                     <Button
                       onClick={handleDetectAI}
                       disabled={aiDetectMutation.isPending}
                       variant="outline"
-                      className="gap-2"
+                      className="flex-1 gap-2"
                       data-testid="button-detect-ai"
                     >
                       <ShieldCheckIcon className="w-4 h-4" />
-                      {aiDetectMutation.isPending ? "Detecting..." : "AI Detector (GPTZero)"}
+                      {aiDetectMutation.isPending ? "Detecting..." : "Detect AI"}
                     </Button>
-                    
-                    {aiDetectionResult && (
-                      <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-sm font-medium ${
-                        aiDetectionResult.documentClassification === "HUMAN_ONLY" 
-                          ? "bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"
-                          : aiDetectionResult.documentClassification === "MIXED"
-                          ? "bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"
-                          : "bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400"
-                      }`} data-testid="ai-detection-result">
-                        <span>
-                          {aiDetectionResult.documentClassification === "HUMAN_ONLY" ? "Human" :
-                           aiDetectionResult.documentClassification === "MIXED" ? "Mixed" : "AI Detected"}
+                  </div>
+
+                  {/* Content Similarity Result Display */}
+                  {humanizeContentSimilarityResult && (
+                    <div className={`p-3 rounded-lg border mb-4 ${
+                      humanizeContentSimilarityResult.similarityScore >= 95 
+                        ? "bg-green-50 border-green-200 dark:bg-green-950/30 dark:border-green-800"
+                        : humanizeContentSimilarityResult.similarityScore >= 85
+                        ? "bg-blue-50 border-blue-200 dark:bg-blue-950/30 dark:border-blue-800"
+                        : humanizeContentSimilarityResult.similarityScore >= 70
+                        ? "bg-yellow-50 border-yellow-200 dark:bg-yellow-950/30 dark:border-yellow-800"
+                        : "bg-red-50 border-red-200 dark:bg-red-950/30 dark:border-red-800"
+                    }`}>
+                      <div className="flex items-center gap-2 mb-1">
+                        <DocumentTextIcon className={`w-5 h-5 ${
+                          humanizeContentSimilarityResult.similarityScore >= 95
+                            ? "text-green-600 dark:text-green-400"
+                            : humanizeContentSimilarityResult.similarityScore >= 85
+                            ? "text-blue-600 dark:text-blue-400"
+                            : humanizeContentSimilarityResult.similarityScore >= 70
+                            ? "text-yellow-600 dark:text-yellow-400"
+                            : "text-red-600 dark:text-red-400"
+                        }`} />
+                        <span className="font-semibold text-sm">
+                          Content Similarity: {humanizeContentSimilarityResult.similarityScore}%
                         </span>
-                        <span className="text-xs opacity-75">
-                          ({Math.round(aiDetectionResult.completelyGeneratedProb * 100)}% AI)
+                        <span className="text-xs text-muted-foreground">
+                          ({humanizeContentSimilarityResult.similarityScore >= 95 ? "Excellent" :
+                            humanizeContentSimilarityResult.similarityScore >= 85 ? "Good" :
+                            humanizeContentSimilarityResult.similarityScore >= 70 ? "Fair" : "Low"})
                         </span>
                       </div>
-                    )}
-                  </div>
+                      <div className="text-xs text-muted-foreground space-y-1">
+                        <p><strong>Preserved:</strong> {humanizeContentSimilarityResult.agreementSummary}</p>
+                        {humanizeContentSimilarityResult.discrepancies !== "None" && (
+                          <p><strong>Differences:</strong> {humanizeContentSimilarityResult.discrepancies}</p>
+                        )}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* AI Detection Result Display */}
+                  {aiDetectionResult && (
+                    <div className={`p-3 rounded-lg border mb-4 ${
+                      aiDetectionResult.documentClassification === "HUMAN_ONLY" 
+                        ? "bg-green-50 border-green-200 dark:bg-green-950/30 dark:border-green-800"
+                        : aiDetectionResult.documentClassification === "AI_ONLY"
+                        ? "bg-red-50 border-red-200 dark:bg-red-950/30 dark:border-red-800"
+                        : "bg-yellow-50 border-yellow-200 dark:bg-yellow-950/30 dark:border-yellow-800"
+                    }`}>
+                      <div className="flex items-center gap-2 mb-1">
+                        <ShieldCheckIcon className={`w-5 h-5 ${
+                          aiDetectionResult.documentClassification === "HUMAN_ONLY"
+                            ? "text-green-600 dark:text-green-400"
+                            : aiDetectionResult.documentClassification === "AI_ONLY"
+                            ? "text-red-600 dark:text-red-400"
+                            : "text-yellow-600 dark:text-yellow-400"
+                        }`} />
+                        <span className="font-medium text-sm">
+                          {aiDetectionResult.documentClassification.replace("_", " ")}
+                        </span>
+                        <span className="text-xs text-muted-foreground">
+                          ({aiDetectionResult.confidenceCategory} confidence)
+                        </span>
+                      </div>
+                      <p className="text-xs text-muted-foreground">
+                        AI Probability: {Math.round(aiDetectionResult.completelyGeneratedProb * 100)}%
+                      </p>
+                    </div>
+                  )}
 
                   {/* Combined humanized text */}
                   <div className="bg-primary/5 rounded-lg p-4 mb-4">
