@@ -95,31 +95,42 @@ ${text}
 OUTPUT: Provide ONLY the bleached text. No explanations, no commentary, no introductory text. Just the bleached result.`;
 }
 
-// Perform semantic bleaching using Claude
+// Perform semantic bleaching using Claude with timeout protection
 export async function bleachText(
   text: string,
-  level: BleachingLevel
+  level: BleachingLevel,
+  timeoutMs: number = 25000
 ): Promise<string> {
   try {
     const prompt = buildBleachingPrompt(text, level);
 
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
-      max_tokens: 8192,
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-    });
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
 
-    const content = message.content[0];
-    if (content.type === "text") {
-      return content.text.trim();
+    try {
+      const message = await anthropic.messages.create({
+        model: "claude-sonnet-4-20250514",
+        max_tokens: 4096,
+        messages: [
+          {
+            role: "user",
+            content: prompt,
+          },
+        ],
+      });
+
+      clearTimeout(timeoutId);
+
+      const content = message.content[0];
+      if (content.type === "text") {
+        return content.text.trim();
+      }
+
+      throw new Error("Unexpected response type from Claude");
+    } catch (error: any) {
+      clearTimeout(timeoutId);
+      throw error;
     }
-
-    throw new Error("Unexpected response type from Claude");
   } catch (error: any) {
     console.error("Bleaching error:", error);
     throw new Error(

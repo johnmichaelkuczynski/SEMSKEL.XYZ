@@ -223,11 +223,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
 
       // Check word count to determine if chunking is needed
       const wordCount = validatedData.text.split(/\s+/).filter(w => w.length > 0).length;
-      const CHUNK_SIZE = 2000; // words per chunk
+      const CHUNK_SIZE = 1200; // Smaller chunks for production stability (was 2000)
+      const CONCURRENCY = 2; // Process 2 chunks in parallel
+      const MAX_TOTAL_TIME = 50000; // 50 second hard limit (deployment timeout ~60s)
+      const startTime = Date.now();
       
       if (wordCount <= CHUNK_SIZE) {
         // Small text - process directly with retries
-        const MAX_RETRIES = 5;
+        const MAX_RETRIES = 3;
         let bleachedText = null;
         
         for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
@@ -237,7 +240,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
           } catch (error: any) {
             console.log(`Small text bleach attempt ${attempt}/${MAX_RETRIES} failed: ${error.message?.substring(0, 100)}`);
             if (attempt < MAX_RETRIES) {
-              const waitTime = Math.min(2000 * Math.pow(2, attempt - 1), 30000);
+              const waitTime = Math.min(1000 * attempt, 3000);
               await delay(waitTime);
             }
           }
@@ -258,55 +261,59 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
-      // Large text - split into chunks and process sequentially
+      // Large text - split into chunks and process with parallel concurrency
       const chunks = splitIntoWordChunks(validatedData.text, CHUNK_SIZE);
       const totalChunks = chunks.length;
-      console.log(`Bleaching large text: ${wordCount} words split into ${totalChunks} chunks`);
+      console.log(`Bleaching large text: ${wordCount} words split into ${totalChunks} chunks (parallel: ${CONCURRENCY})`);
       
-      const bleachedChunks: string[] = [];
-      const failedChunkIds: number[] = []; // 0-based indices
-      const MAX_RETRIES = 5;
+      const bleachedChunks: (string | null)[] = new Array(totalChunks).fill(null);
+      const failedChunkIds: number[] = [];
+      const MAX_RETRIES = 2; // Fewer retries to stay within timeout
       
-      for (let i = 0; i < chunks.length; i++) {
-        const chunkNum = i + 1;
-        console.log(`Processing chunk ${chunkNum}/${totalChunks}...`);
+      // Process chunks in parallel batches
+      const processChunk = async (index: number): Promise<void> => {
+        const chunkNum = index + 1;
         
-        // Robust retry logic - handles ALL errors
-        let bleachedChunk: string | null = null;
+        // Check if we're running out of time
+        if (Date.now() - startTime > MAX_TOTAL_TIME) {
+          console.log(`Chunk ${chunkNum} skipped - timeout approaching`);
+          failedChunkIds.push(index);
+          return;
+        }
         
         for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
           try {
-            bleachedChunk = await bleachText(chunks[i], validatedData.level);
-            break; // Success
+            const result = await bleachText(chunks[index], validatedData.level, 20000);
+            bleachedChunks[index] = result;
+            console.log(`Chunk ${chunkNum}/${totalChunks} completed`);
+            return;
           } catch (error: any) {
-            console.log(`Chunk ${chunkNum} attempt ${attempt}/${MAX_RETRIES} failed: ${error.message?.substring(0, 100)}`);
-            
-            if (attempt < MAX_RETRIES) {
-              const waitTime = Math.min(2000 * Math.pow(2, attempt - 1), 30000);
-              console.log(`Waiting ${waitTime}ms before retry...`);
-              await delay(waitTime);
-            } else {
-              console.error(`Chunk ${chunkNum} failed after ${MAX_RETRIES} attempts.`);
+            console.log(`Chunk ${chunkNum} attempt ${attempt}/${MAX_RETRIES} failed: ${error.message?.substring(0, 80)}`);
+            if (attempt < MAX_RETRIES && Date.now() - startTime < MAX_TOTAL_TIME - 5000) {
+              await delay(500);
             }
           }
         }
-        
-        // Always add something to maintain output alignment
-        if (bleachedChunk) {
-          bleachedChunks.push(bleachedChunk);
-        } else {
-          bleachedChunks.push(`[Chunk ${chunkNum} could not be processed - please retry]`);
-          failedChunkIds.push(i); // 0-based index
+        failedChunkIds.push(index);
+      };
+      
+      // Process in parallel batches of CONCURRENCY
+      for (let i = 0; i < chunks.length; i += CONCURRENCY) {
+        const batch = [];
+        for (let j = 0; j < CONCURRENCY && i + j < chunks.length; j++) {
+          batch.push(processChunk(i + j));
         }
+        await Promise.all(batch);
         
-        // Delay between chunks (longer for stability)
-        if (i < chunks.length - 1) {
-          await delay(1000);
+        // Check timeout before next batch
+        if (Date.now() - startTime > MAX_TOTAL_TIME) {
+          console.log(`Timeout reached after batch, stopping early`);
+          break;
         }
       }
       
-      const successCount = totalChunks - failedChunkIds.length;
-      console.log(`Completed bleaching: ${successCount}/${totalChunks} chunks successful`);
+      const successCount = bleachedChunks.filter(c => c !== null).length;
+      console.log(`Completed bleaching: ${successCount}/${totalChunks} chunks in ${Date.now() - startTime}ms`);
       
       // If ALL chunks failed, return an error
       if (successCount === 0) {
@@ -317,9 +324,14 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
+      // Build final result, replacing failed chunks with error placeholder
+      const finalChunks = bleachedChunks.map((chunk, idx) => 
+        chunk !== null ? chunk : `[Chunk ${idx + 1} could not be processed]`
+      );
+      
       // Return response with results (partial or complete)
       res.json({
-        bleachedText: bleachedChunks.join('\n\n\n'),
+        bleachedText: finalChunks.join('\n\n\n'),
         originalFilename: validatedData.filename,
         chunksProcessed: successCount,
         totalChunks,
