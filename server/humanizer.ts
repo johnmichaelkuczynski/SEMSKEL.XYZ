@@ -422,60 +422,163 @@ function deterministicSlotFill(
 }
 
 // ============================================
-// SLOT-FILL REWRITING WITH CLAUDE
-// Falls back to deterministic fill if Claude fails
+// CONTENT-PRESERVING REWRITE
+// Uses pattern STRUCTURE only, keeps AI content EXACTLY
 // ============================================
+
+function extractContentWords(sentence: string): string[] {
+  const words = sentence.split(/\s+/);
+  const contentWords: string[] = [];
+  
+  for (const word of words) {
+    const cleanWord = word.replace(/^[^a-zA-Z0-9]+/, "").replace(/[^a-zA-Z0-9]+$/, "");
+    const lowerWordForCheck = cleanWord.replace(/[^a-zA-Z]/g, "").toLowerCase();
+    
+    if (lowerWordForCheck.length > 2 && !FUNCTION_WORDS.has(lowerWordForCheck)) {
+      contentWords.push(cleanWord);
+    }
+  }
+  
+  return contentWords;
+}
+
+function contentPreservingRewrite(
+  aiSentence: string,
+  humanPattern: SentenceBankEntry
+): string {
+  // Extract the BLEACHED structure (with variable slots) from the pattern
+  const bleachedStructure = humanPattern.bleached;
+  
+  // Extract content words from the AI sentence (what we want to preserve)
+  const aiContentWords = extractContentWords(aiSentence);
+  
+  if (aiContentWords.length === 0) {
+    return aiSentence; // Nothing to rewrite
+  }
+  
+  // Parse the bleached structure to find variable slots
+  const varPattern = /\b[A-Z](?:-[a-z]+)?(?:'s?)?\b/g;
+  const words = bleachedStructure.split(/\s+/);
+  
+  // Find indices of variable slots in the bleached structure
+  const slotIndices: number[] = [];
+  for (let i = 0; i < words.length; i++) {
+    if (varPattern.test(words[i])) {
+      slotIndices.push(i);
+    }
+    varPattern.lastIndex = 0; // Reset regex
+  }
+  
+  if (slotIndices.length === 0) {
+    // No variable slots found - use fallback method
+    return deterministicSlotFill(aiSentence, humanPattern);
+  }
+  
+  // Distribute AI content words into the slots
+  const resultWords = [...words];
+  const numSlots = slotIndices.length;
+  const numContent = aiContentWords.length;
+  const wordsPerSlot = Math.max(1, Math.floor(numContent / numSlots));
+  let contentIdx = 0;
+  
+  for (let i = 0; i < numSlots && contentIdx < numContent; i++) {
+    const slotIdx = slotIndices[i];
+    const isLastSlot = i === numSlots - 1;
+    const wordsToUse = isLastSlot ? numContent - contentIdx : Math.min(wordsPerSlot, numContent - contentIdx);
+    
+    const slotWords: string[] = [];
+    for (let j = 0; j < wordsToUse && contentIdx < numContent; j++) {
+      slotWords.push(aiContentWords[contentIdx]);
+      contentIdx++;
+    }
+    
+    if (slotWords.length > 0) {
+      let replacement = slotWords.join(" ");
+      
+      // Capitalize first word of sentence if needed
+      if (slotIdx === 0 && /^[a-z]/.test(replacement)) {
+        replacement = replacement.charAt(0).toUpperCase() + replacement.slice(1);
+      }
+      
+      // Preserve any punctuation attached to the original slot
+      const originalWord = words[slotIdx];
+      const leadingPunct = originalWord.match(/^[^a-zA-Z]*/)?.[0] || "";
+      const trailingPunct = originalWord.match(/[^a-zA-Z]*$/)?.[0] || "";
+      
+      resultWords[slotIdx] = leadingPunct + replacement + trailingPunct;
+    }
+  }
+  
+  let result = resultWords.join(" ").replace(/\s+/g, " ").trim();
+  
+  // Ensure proper ending punctuation from original AI sentence
+  const aiEndPunct = aiSentence.match(/[.!?;:—\-–]$/)?.[0];
+  const resultEndPunct = result.match(/[.!?;:—\-–]$/)?.[0];
+  
+  if (aiEndPunct && !resultEndPunct) {
+    result += aiEndPunct;
+  }
+  
+  return result;
+}
+
+// Polish with Claude - ONLY for grammar/flow, NEVER changes meaning
+async function polishWithClaude(
+  roughRewrite: string,
+  aiSentence: string
+): Promise<string> {
+  const prompt = `You are a copy editor. Your ONLY job is to fix grammar and improve flow.
+
+ORIGINAL CONTENT (the meaning to preserve EXACTLY):
+"${aiSentence}"
+
+ROUGH REWRITE (needs grammar/flow polish):
+"${roughRewrite}"
+
+CRITICAL RULES:
+1. The rough rewrite contains ALL the correct content from the original
+2. You may ONLY fix grammar, word order, and flow
+3. You MUST NOT add any new ideas, claims, or qualifiers
+4. You MUST NOT remove or change any assertions
+5. You MUST NOT add hedging words like "tends to", "seems to", "appears"
+6. You MUST NOT negate or reverse any claims
+7. If the rough rewrite is already grammatical, return it unchanged
+
+OUTPUT: Provide ONLY the polished sentence. No explanations.`;
+
+  try {
+    const message = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 300,
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    const content = message.content[0];
+    if (content.type === "text") {
+      const polished = content.text.trim();
+      if (polished.length > 0) {
+        return polished;
+      }
+    }
+    return roughRewrite;
+  } catch (error) {
+    console.error("Polish error, using rough rewrite:", error);
+    return roughRewrite;
+  }
+}
 
 async function rewriteWithPattern(
   aiSentence: string,
   humanPattern: SentenceBankEntry
 ): Promise<string> {
-  const prompt = `You are a sentence rewriter. Your task is to rewrite an AI-generated sentence using the rhetorical structure of a human-written pattern.
-
-HUMAN PATTERN (template to follow):
-Original: "${humanPattern.original}"
-Bleached structure: "${humanPattern.bleached}"
-
-AI SENTENCE (content to preserve):
-"${aiSentence}"
-
-INSTRUCTIONS:
-1. Keep the MEANING and KEY CONTENT of the AI sentence
-2. Adopt the SENTENCE STRUCTURE, RHYTHM, and RHETORICAL PATTERNS of the human pattern
-3. Match the clause order: ${humanPattern.clause_order}
-4. Match the punctuation style: ${humanPattern.punctuation_pattern || 'standard'}
-5. Target similar length: approximately ${humanPattern.token_length} words
-
-Your goal is to make the AI sentence sound like it was written by the same human who wrote the pattern, while preserving the AI sentence's meaning.
-
-OUTPUT: Provide ONLY the rewritten sentence. No explanations, no quotes, no commentary. Just the rewritten sentence.`;
-
-  try {
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
-      max_tokens: 500,
-      messages: [
-        {
-          role: "user",
-          content: prompt,
-        },
-      ],
-    });
-
-    const content = message.content[0];
-    if (content.type === "text") {
-      const rewrite = content.text.trim();
-      if (rewrite.length > 0 && rewrite !== aiSentence) {
-        return rewrite;
-      }
-    }
-
-    console.log("Claude returned empty/unchanged, using deterministic fallback");
-    return deterministicSlotFill(aiSentence, humanPattern);
-  } catch (error: any) {
-    console.error("Rewrite error, using deterministic fallback:", error.message);
-    return deterministicSlotFill(aiSentence, humanPattern);
-  }
+  // STEP 1: Create content-preserving rewrite using pattern STRUCTURE
+  // This guarantees the AI sentence's meaning is preserved
+  const roughRewrite = contentPreservingRewrite(aiSentence, humanPattern);
+  
+  // STEP 2: Polish for grammar/flow (optional, won't change meaning)
+  const polished = await polishWithClaude(roughRewrite, aiSentence);
+  
+  return polished;
 }
 
 // ============================================

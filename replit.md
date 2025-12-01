@@ -44,7 +44,11 @@ This produces human-like, detector-safe text with full content preservation.
 ### Implementation Details:
 - **Weighted similarity scoring**: Structure (40%), token length (15%), clause count (15%), clause order (15%), punctuation (15%)
 - **Skeleton feature extraction**: Variable positions, clause markers, function word sequences
-- **Claude-powered slot-fill**: Rewrites AI sentences using matched human patterns
+- **Content-Preserving Rewrite** (Dec 2025 fix):
+  - Step 1: Extract content words from original sentence (preserves ALL meaning)
+  - Step 2: Map content words into bleached pattern's variable slots
+  - Step 3: Claude ONLY polishes grammar/flow (cannot add/remove/negate claims)
+  - This fixes the critical bug where Claude was copying pattern wording (like "no more...than") that contradicted original meaning
 - **Deterministic fallback**: Content-word replacement preserving:
   - Proper noun casing (NASA, OpenAI stay uppercase)
   - Internal punctuation (apostrophes in can't, COVID-19 hyphens)

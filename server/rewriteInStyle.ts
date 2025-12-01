@@ -315,6 +315,88 @@ function extractContentWords(sentence: string): string[] {
   return contentWords;
 }
 
+// CONTENT-PRESERVING REWRITE: Uses pattern STRUCTURE only, keeps target CONTENT
+function contentPreservingRewrite(
+  targetSentence: string,
+  stylePattern: SentenceBankEntry
+): string {
+  // Extract the BLEACHED structure (with variable slots) from the pattern
+  const bleachedStructure = stylePattern.bleached;
+  
+  // Extract content words from the TARGET sentence (what we want to preserve)
+  const targetContentWords = extractContentWords(targetSentence);
+  
+  if (targetContentWords.length === 0) {
+    return targetSentence; // Nothing to rewrite
+  }
+  
+  // Parse the bleached structure to find variable slots
+  const varPattern = /\b[A-Z](?:-[a-z]+)?(?:'s?)?\b/g;
+  const words = bleachedStructure.split(/\s+/);
+  
+  // Find indices of variable slots in the bleached structure
+  const slotIndices: number[] = [];
+  for (let i = 0; i < words.length; i++) {
+    if (varPattern.test(words[i])) {
+      slotIndices.push(i);
+    }
+    varPattern.lastIndex = 0; // Reset regex
+  }
+  
+  if (slotIndices.length === 0) {
+    // No variable slots found - use fallback method
+    return deterministicSlotFill(targetSentence, stylePattern);
+  }
+  
+  // Distribute target content words into the slots
+  const resultWords = [...words];
+  const numSlots = slotIndices.length;
+  const numContent = targetContentWords.length;
+  const wordsPerSlot = Math.max(1, Math.floor(numContent / numSlots));
+  let contentIdx = 0;
+  
+  for (let i = 0; i < numSlots && contentIdx < numContent; i++) {
+    const slotIdx = slotIndices[i];
+    const isLastSlot = i === numSlots - 1;
+    const wordsToUse = isLastSlot ? numContent - contentIdx : Math.min(wordsPerSlot, numContent - contentIdx);
+    
+    const slotWords: string[] = [];
+    for (let j = 0; j < wordsToUse && contentIdx < numContent; j++) {
+      slotWords.push(targetContentWords[contentIdx]);
+      contentIdx++;
+    }
+    
+    if (slotWords.length > 0) {
+      let replacement = slotWords.join(" ");
+      
+      // Capitalize first word of sentence if needed
+      if (slotIdx === 0 && /^[a-z]/.test(replacement)) {
+        replacement = replacement.charAt(0).toUpperCase() + replacement.slice(1);
+      }
+      
+      // Preserve any punctuation attached to the original slot
+      const originalWord = words[slotIdx];
+      const leadingPunct = originalWord.match(/^[^a-zA-Z]*/)?.[0] || "";
+      const trailingPunct = originalWord.match(/[^a-zA-Z]*$/)?.[0] || "";
+      
+      resultWords[slotIdx] = leadingPunct + replacement + trailingPunct;
+    }
+  }
+  
+  let result = resultWords.join(" ").replace(/\s+/g, " ").trim();
+  
+  // Ensure proper ending punctuation from original target
+  const targetEndPunct = targetSentence.match(/[.!?;:—\-–]$/)?.[0];
+  const resultEndPunct = result.match(/[.!?;:—\-–]$/)?.[0];
+  
+  if (targetEndPunct && !resultEndPunct) {
+    result += targetEndPunct;
+  }
+  
+  return result;
+}
+
+// Fallback: Replace content words in original human sentence with target content words
 function deterministicSlotFill(
   targetSentence: string,
   stylePattern: SentenceBankEntry
@@ -324,7 +406,7 @@ function deterministicSlotFill(
   const targetContentWords = extractContentWords(targetSentence);
   
   if (styleContentPositions.length === 0 || targetContentWords.length === 0) {
-    return original;
+    return targetSentence; // Can't rewrite, return original target content
   }
   
   const originalWords = original.split(/\s+/);
@@ -359,61 +441,74 @@ function deterministicSlotFill(
   
   let result = resultWords.join(" ").replace(/\s+/g, " ").trim();
   
-  const originalEndPunct = original.match(/[.!?;:—\-–]$/)?.[0];
+  // Preserve target sentence ending punctuation
+  const targetEndPunct = targetSentence.match(/[.!?;:—\-–]$/)?.[0];
   const resultEndPunct = result.match(/[.!?;:—\-–]$/)?.[0];
   
-  if (originalEndPunct && !resultEndPunct) {
-    result += originalEndPunct;
+  if (targetEndPunct && !resultEndPunct) {
+    result += targetEndPunct;
   }
   
   return result;
+}
+
+// Polish with Claude - ONLY for grammar/flow, NEVER changes meaning
+async function polishWithClaude(
+  roughRewrite: string,
+  targetSentence: string
+): Promise<string> {
+  const prompt = `You are a copy editor. Your ONLY job is to fix grammar and improve flow.
+
+ORIGINAL CONTENT (the meaning to preserve EXACTLY):
+"${targetSentence}"
+
+ROUGH REWRITE (needs grammar/flow polish):
+"${roughRewrite}"
+
+CRITICAL RULES:
+1. The rough rewrite contains ALL the correct content from the original
+2. You may ONLY fix grammar, word order, and flow
+3. You MUST NOT add any new ideas, claims, or qualifiers
+4. You MUST NOT remove or change any assertions
+5. You MUST NOT add hedging words like "tends to", "seems to", "appears"
+6. You MUST NOT negate or reverse any claims
+7. If the rough rewrite is already grammatical, return it unchanged
+
+OUTPUT: Provide ONLY the polished sentence. No explanations.`;
+
+  try {
+    const message = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 300,
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    const content = message.content[0];
+    if (content.type === "text") {
+      const polished = content.text.trim();
+      if (polished.length > 0) {
+        return polished;
+      }
+    }
+    return roughRewrite;
+  } catch (error) {
+    console.error("Polish error, using rough rewrite:", error);
+    return roughRewrite;
+  }
 }
 
 async function rewriteWithStylePattern(
   targetSentence: string,
   stylePattern: SentenceBankEntry
 ): Promise<string> {
-  const prompt = `You are a style transfer engine. Your task is to rewrite a target sentence using the rhetorical structure and style of a pattern sentence.
-
-STYLE PATTERN (template to follow):
-Original: "${stylePattern.original}"
-Bleached structure: "${stylePattern.bleached}"
-
-TARGET SENTENCE (content to preserve):
-"${targetSentence}"
-
-INSTRUCTIONS:
-1. Keep the MEANING and KEY CONTENT of the target sentence
-2. Adopt the SENTENCE STRUCTURE, RHYTHM, and STYLE of the pattern
-3. Match the clause order: ${stylePattern.clause_order}
-4. Match the punctuation style: ${stylePattern.punctuation_pattern || 'standard'}
-5. Keep approximately the same length as the target sentence
-
-Your goal is to make the target sentence sound like it was written by the same person who wrote the pattern, while preserving the target's meaning.
-
-OUTPUT: Provide ONLY the rewritten sentence. No explanations, no quotes, no commentary.`;
-
-  try {
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
-      max_tokens: 500,
-      messages: [{ role: "user", content: prompt }],
-    });
-
-    const content = message.content[0];
-    if (content.type === "text") {
-      const rewrite = content.text.trim();
-      if (rewrite.length > 0 && rewrite !== targetSentence) {
-        return rewrite;
-      }
-    }
-
-    console.log("Claude returned empty/unchanged, using deterministic fallback");
-    return deterministicSlotFill(targetSentence, stylePattern);
-  } catch (error: any) {
-    console.error("Rewrite error, using deterministic fallback:", error.message);
-    return deterministicSlotFill(targetSentence, stylePattern);
-  }
+  // STEP 1: Create content-preserving rewrite using pattern STRUCTURE
+  // This guarantees the target's meaning is preserved
+  const roughRewrite = contentPreservingRewrite(targetSentence, stylePattern);
+  
+  // STEP 2: Polish for grammar/flow (optional, won't change meaning)
+  const polished = await polishWithClaude(roughRewrite, targetSentence);
+  
+  return polished;
 }
 
 async function bleachAndCreatePattern(
