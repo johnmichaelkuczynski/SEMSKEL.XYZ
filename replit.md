@@ -142,7 +142,7 @@ This produces human-like, detector-safe text with full content preservation.
 - **Required secrets**: ANTHROPIC_API_KEY (default), OPENAI_API_KEY, GROK_API_KEY, DEEPSEEK_API_KEY, PERPLEXITY_API_KEY
 
 ### Author Style Libraries:
-- **Kuczynski**: 1,082 complex philosophical sentence patterns with Greek letters and nested clauses
+- **Kuczynski**: 1,225 complex philosophical sentence patterns with Greek letters, nested clauses, logical notation (CR, LL, SS), and formal reference theory structures
 - **Bertrand Russell**: Classical analytical philosophy patterns
 - **Plato**: Ancient philosophical dialogue patterns
 
