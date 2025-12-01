@@ -580,13 +580,22 @@ export async function rewriteForContentSimilarity(
   currentText: string,
   originalText: string
 ): Promise<string> {
+  const originalWordCount = originalText.split(/\s+/).filter(Boolean).length;
+  const minWords = Math.floor(originalWordCount * 0.9);
+  const maxWords = Math.ceil(originalWordCount * 1.1);
+  
   const prompt = `TASK: Rewrite the current text to be MORE SIMILAR in meaning to the original, while keeping it human-sounding.
 
-ORIGINAL TEXT (the source meaning):
+ORIGINAL TEXT (the source meaning, ${originalWordCount} words):
 "${originalText}"
 
 CURRENT TEXT (needs to match original meaning better):
 "${currentText}"
+
+CRITICAL LENGTH REQUIREMENT:
+- Your output MUST be between ${minWords} and ${maxWords} words (same length as original ±10%)
+- Do NOT expand or contract the text significantly
+- Match the original's length closely
 
 INSTRUCTIONS:
 1. Keep ALL facts, claims, and assertions from the original text
@@ -594,29 +603,41 @@ INSTRUCTIONS:
 3. Remove any distortions or additions that weren't in the original
 4. Still sound natural and human-written
 5. Do NOT just copy the original - maintain natural sentence flow
+6. MATCH THE WORD COUNT - this is critical
 
 OUTPUT: Provide ONLY the improved text. No quotes, no explanation.`;
 
-  try {
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
-      max_tokens: 2000,
-      messages: [{ role: "user", content: prompt }],
-    });
+  // Try up to 3 times to get length-compliant output
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const message = await anthropic.messages.create({
+        model: "claude-sonnet-4-5",
+        max_tokens: 2000,
+        messages: [{ role: "user", content: prompt }],
+      });
 
-    const content = message.content[0];
-    if (content.type === "text") {
-      let result = content.text.trim();
-      result = result.replace(/^["']|["']$/g, '');
-      if (result.length > 0) {
-        return result;
+      const content = message.content[0];
+      if (content.type === "text") {
+        let result = content.text.trim();
+        result = result.replace(/^["']|["']$/g, '');
+        
+        if (result.length > 0) {
+          const resultWordCount = result.split(/\s+/).filter(Boolean).length;
+          // Check if within ±15% (slightly more lenient for validation)
+          if (resultWordCount >= minWords * 0.95 && resultWordCount <= maxWords * 1.05) {
+            return result;
+          }
+          console.log(`Attempt ${attempt + 1}: Output ${resultWordCount} words, target ${originalWordCount} (±10%)`);
+        }
       }
+    } catch (error) {
+      console.error("Content similarity rewrite error:", error);
     }
-    return currentText;
-  } catch (error) {
-    console.error("Content similarity rewrite error:", error);
-    return currentText;
   }
+  
+  // If all retries failed, return current text unchanged
+  console.log("Length validation failed after 3 attempts, returning current text");
+  return currentText;
 }
 
 // Targeted rewrite for LOWER AI detection score (sounds more human)
@@ -624,13 +645,22 @@ export async function rewriteForAIBypass(
   currentText: string,
   originalText: string
 ): Promise<string> {
-  const prompt = `TASK: Rewrite this text to sound MORE HUMAN and LESS AI-generated, while keeping the same meaning.
+  const originalWordCount = originalText.split(/\s+/).filter(Boolean).length;
+  const minWords = Math.floor(originalWordCount * 0.9);
+  const maxWords = Math.ceil(originalWordCount * 1.1);
+  
+  const prompt = `TASK: Rewrite this text to sound MORE HUMAN and LESS AI-generated, while keeping the same meaning AND LENGTH.
 
-ORIGINAL MEANING TO PRESERVE:
+ORIGINAL MEANING TO PRESERVE (${originalWordCount} words):
 "${originalText}"
 
 CURRENT TEXT (sounds too AI-like):
 "${currentText}"
+
+CRITICAL LENGTH REQUIREMENT:
+- Your output MUST be between ${minWords} and ${maxWords} words (same length as original ±10%)
+- Do NOT expand or contract the text significantly
+- Redistribute words differently but keep the SAME total count
 
 MAKE IT SOUND HUMAN BY:
 1. Using shorter, punchier sentences mixed with longer ones
@@ -646,29 +676,41 @@ RULES:
 - Don't add filler or padding
 - Don't use overly casual slang
 - Maintain professional tone while sounding natural
+- MATCH THE WORD COUNT - this is critical
 
 OUTPUT: Provide ONLY the rewritten text. No quotes, no explanation.`;
 
-  try {
-    const message = await anthropic.messages.create({
-      model: "claude-sonnet-4-5",
-      max_tokens: 2000,
-      messages: [{ role: "user", content: prompt }],
-    });
+  // Try up to 3 times to get length-compliant output
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      const message = await anthropic.messages.create({
+        model: "claude-sonnet-4-5",
+        max_tokens: 2000,
+        messages: [{ role: "user", content: prompt }],
+      });
 
-    const content = message.content[0];
-    if (content.type === "text") {
-      let result = content.text.trim();
-      result = result.replace(/^["']|["']$/g, '');
-      if (result.length > 0) {
-        return result;
+      const content = message.content[0];
+      if (content.type === "text") {
+        let result = content.text.trim();
+        result = result.replace(/^["']|["']$/g, '');
+        
+        if (result.length > 0) {
+          const resultWordCount = result.split(/\s+/).filter(Boolean).length;
+          // Check if within ±15% (slightly more lenient for validation)
+          if (resultWordCount >= minWords * 0.95 && resultWordCount <= maxWords * 1.05) {
+            return result;
+          }
+          console.log(`AI Bypass attempt ${attempt + 1}: Output ${resultWordCount} words, target ${originalWordCount} (±10%)`);
+        }
       }
+    } catch (error) {
+      console.error("AI bypass rewrite error:", error);
     }
-    return currentText;
-  } catch (error) {
-    console.error("AI bypass rewrite error:", error);
-    return currentText;
   }
+  
+  // If all retries failed, return current text unchanged
+  console.log("AI bypass length validation failed after 3 attempts, returning current text");
+  return currentText;
 }
 
 async function rewriteWithPattern(
