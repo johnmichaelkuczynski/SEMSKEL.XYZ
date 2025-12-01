@@ -38,7 +38,7 @@ export const LLM_PROVIDERS: LLMProviderInfo[] = [
     maxContextTokens: 128000,
     maxOutputTokens: 8192,
     recommendedChunkSize: 2500,
-    available: !!(process.env.AI_INTEGRATIONS_OPENAI_BASE_URL && process.env.AI_INTEGRATIONS_OPENAI_API_KEY),
+    available: !!process.env.OPENAI_API_KEY,
     description: "128K context, fast responses, reliable"
   },
   {
@@ -65,10 +65,9 @@ const anthropic = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
 });
 
-const openaiClient = process.env.AI_INTEGRATIONS_OPENAI_BASE_URL 
+const openaiClient = process.env.OPENAI_API_KEY 
   ? new OpenAI({
-      baseURL: process.env.AI_INTEGRATIONS_OPENAI_BASE_URL,
-      apiKey: process.env.AI_INTEGRATIONS_OPENAI_API_KEY
+      apiKey: process.env.OPENAI_API_KEY
     })
   : null;
 
@@ -105,7 +104,7 @@ function checkProviderAvailability(provider: LLMProvider): boolean {
     case "anthropic":
       return !!process.env.ANTHROPIC_API_KEY;
     case "openai":
-      return !!(process.env.AI_INTEGRATIONS_OPENAI_BASE_URL && process.env.AI_INTEGRATIONS_OPENAI_API_KEY);
+      return !!process.env.OPENAI_API_KEY;
     case "grok":
       return !!process.env.GROK_API_KEY;
     case "perplexity":
@@ -187,9 +186,9 @@ async function callOpenAI(prompt: string, systemPrompt?: string, maxTokens: numb
   messages.push({ role: "user", content: prompt });
 
   const response = await openaiClient.chat.completions.create({
-    model: "gpt-5",
+    model: "gpt-4o",
     messages,
-    max_completion_tokens: maxTokens,
+    max_tokens: maxTokens,
   });
 
   return response.choices[0]?.message?.content?.trim() || "";
