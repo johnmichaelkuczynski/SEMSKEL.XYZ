@@ -24,7 +24,7 @@ import {
 } from "@shared/schema";
 import Anthropic from "@anthropic-ai/sdk";
 import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
-import { humanizeText } from "./humanizer";
+import { humanizeText, rewriteForContentSimilarity, rewriteForAIBypass } from "./humanizer";
 import { rewriteInStyle } from "./rewriteInStyle";
 import { z } from "zod";
 
@@ -1829,6 +1829,80 @@ Score guidelines:
       
       res.status(500).json({
         error: "Content similarity analysis failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // ==================== TARGETED REWRITE ENDPOINTS ====================
+
+  // Schema for targeted rewrite requests
+  const targetedRewriteSchema = z.object({
+    currentText: z.string().min(1, "Current text is required"),
+    originalText: z.string().min(1, "Original text is required"),
+  });
+
+  // Rewrite for higher content similarity
+  app.post("/api/rewrite-for-similarity", async (req, res) => {
+    try {
+      console.log("Received rewrite-for-similarity request");
+      
+      const validatedData = targetedRewriteSchema.parse(req.body);
+      
+      const rewrittenText = await rewriteForContentSimilarity(
+        validatedData.currentText,
+        validatedData.originalText
+      );
+      
+      res.json({
+        rewrittenText,
+        mode: "content_similarity",
+      });
+    } catch (error) {
+      console.error("Rewrite for similarity error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Rewrite failed",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Rewrite for lower AI detection score
+  app.post("/api/rewrite-for-ai-bypass", async (req, res) => {
+    try {
+      console.log("Received rewrite-for-ai-bypass request");
+      
+      const validatedData = targetedRewriteSchema.parse(req.body);
+      
+      const rewrittenText = await rewriteForAIBypass(
+        validatedData.currentText,
+        validatedData.originalText
+      );
+      
+      res.json({
+        rewrittenText,
+        mode: "ai_bypass",
+      });
+    } catch (error) {
+      console.error("Rewrite for AI bypass error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Rewrite failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
       });
     }

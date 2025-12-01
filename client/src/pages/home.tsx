@@ -563,6 +563,124 @@ export default function Home() {
     },
   });
 
+  // Targeted Rewrite mutations (for Humanize section)
+  const humanizeRewriteForSimilarityMutation = useMutation({
+    mutationFn: async (data: { currentText: string; originalText: string }) => {
+      const response = await apiRequest("POST", "/api/rewrite-for-similarity", data);
+      return await response.json() as { rewrittenText: string; mode: string };
+    },
+    onSuccess: (data) => {
+      // Update the humanized results with the new text
+      if (humanizeResults) {
+        const sentences = data.rewrittenText.split(/(?<=[.!?])\s+/).filter(s => s.trim());
+        const updatedResults = humanizeResults.map((r, i) => ({
+          ...r,
+          humanizedRewrite: sentences[i] || r.humanizedRewrite,
+        }));
+        setHumanizeResults(updatedResults);
+      }
+      toast({
+        title: "Rewritten for better content match",
+        description: "Text has been adjusted to better preserve the original meaning.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Rewrite failed",
+        description: error?.message || "Could not rewrite for similarity.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const humanizeRewriteForAIBypassMutation = useMutation({
+    mutationFn: async (data: { currentText: string; originalText: string }) => {
+      const response = await apiRequest("POST", "/api/rewrite-for-ai-bypass", data);
+      return await response.json() as { rewrittenText: string; mode: string };
+    },
+    onSuccess: (data) => {
+      // Update the humanized results with the new text
+      if (humanizeResults) {
+        const sentences = data.rewrittenText.split(/(?<=[.!?])\s+/).filter(s => s.trim());
+        const updatedResults = humanizeResults.map((r, i) => ({
+          ...r,
+          humanizedRewrite: sentences[i] || r.humanizedRewrite,
+        }));
+        setHumanizeResults(updatedResults);
+      }
+      toast({
+        title: "Rewritten to sound more human",
+        description: "Text has been adjusted to pass AI detection better.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Rewrite failed",
+        description: error?.message || "Could not rewrite for AI bypass.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Targeted Rewrite mutations (for Style Transfer section)
+  const styleRewriteForSimilarityMutation = useMutation({
+    mutationFn: async (data: { currentText: string; originalText: string }) => {
+      const response = await apiRequest("POST", "/api/rewrite-for-similarity", data);
+      return await response.json() as { rewrittenText: string; mode: string };
+    },
+    onSuccess: (data) => {
+      // Update the style rewrite results with the new text
+      if (styleRewriteResults) {
+        const sentences = data.rewrittenText.split(/(?<=[.!?])\s+/).filter(s => s.trim());
+        const updatedResults = styleRewriteResults.map((r, i) => ({
+          ...r,
+          rewrite: sentences[i] || r.rewrite,
+        }));
+        setStyleRewriteResults(updatedResults);
+      }
+      toast({
+        title: "Rewritten for better content match",
+        description: "Text has been adjusted to better preserve the original meaning.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Rewrite failed",
+        description: error?.message || "Could not rewrite for similarity.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const styleRewriteForAIBypassMutation = useMutation({
+    mutationFn: async (data: { currentText: string; originalText: string }) => {
+      const response = await apiRequest("POST", "/api/rewrite-for-ai-bypass", data);
+      return await response.json() as { rewrittenText: string; mode: string };
+    },
+    onSuccess: (data) => {
+      // Update the style rewrite results with the new text
+      if (styleRewriteResults) {
+        const sentences = data.rewrittenText.split(/(?<=[.!?])\s+/).filter(s => s.trim());
+        const updatedResults = styleRewriteResults.map((r, i) => ({
+          ...r,
+          rewrite: sentences[i] || r.rewrite,
+        }));
+        setStyleRewriteResults(updatedResults);
+      }
+      toast({
+        title: "Rewritten to sound more human",
+        description: "Text has been adjusted to pass AI detection better.",
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Rewrite failed",
+        description: error?.message || "Could not rewrite for AI bypass.",
+        variant: "destructive",
+      });
+    },
+  });
+
   // File upload handling
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
@@ -676,6 +794,72 @@ export default function Home() {
     humanizeContentSimilarityMutation.mutate({
       originalText: aiTextInput,
       rewrittenText: humanizedText,
+    });
+  };
+
+  // Targeted rewrite handlers for Humanize section
+  const handleHumanizeRewriteForSimilarity = () => {
+    if (!humanizeResults || humanizeResults.length === 0 || !aiTextInput) {
+      toast({
+        title: "No text to rewrite",
+        description: "Humanize your text first.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
+    humanizeRewriteForSimilarityMutation.mutate({
+      currentText: humanizedText,
+      originalText: aiTextInput,
+    });
+  };
+
+  const handleHumanizeRewriteForAIBypass = () => {
+    if (!humanizeResults || humanizeResults.length === 0 || !aiTextInput) {
+      toast({
+        title: "No text to rewrite",
+        description: "Humanize your text first.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const humanizedText = humanizeResults.map(r => r.humanizedRewrite).join(" ");
+    humanizeRewriteForAIBypassMutation.mutate({
+      currentText: humanizedText,
+      originalText: aiTextInput,
+    });
+  };
+
+  // Targeted rewrite handlers for Style Transfer section
+  const handleStyleRewriteForSimilarity = () => {
+    if (!styleRewriteResults || styleRewriteResults.length === 0 || !styleTargetText) {
+      toast({
+        title: "No text to rewrite",
+        description: "Rewrite in style first.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const rewrittenText = styleRewriteResults.map(r => r.rewritten).join(" ");
+    styleRewriteForSimilarityMutation.mutate({
+      currentText: rewrittenText,
+      originalText: styleTargetText,
+    });
+  };
+
+  const handleStyleRewriteForAIBypass = () => {
+    if (!styleRewriteResults || styleRewriteResults.length === 0 || !styleTargetText) {
+      toast({
+        title: "No text to rewrite",
+        description: "Rewrite in style first.",
+        variant: "destructive",
+      });
+      return;
+    }
+    const rewrittenText = styleRewriteResults.map(r => r.rewritten).join(" ");
+    styleRewriteForAIBypassMutation.mutate({
+      currentText: rewrittenText,
+      originalText: styleTargetText,
     });
   };
 
@@ -2194,6 +2378,30 @@ export default function Home() {
                     </div>
                   )}
 
+                  {/* Targeted Rewrite Buttons */}
+                  <div className="flex gap-2 mb-4">
+                    <Button
+                      onClick={handleHumanizeRewriteForSimilarity}
+                      disabled={humanizeRewriteForSimilarityMutation.isPending}
+                      variant="secondary"
+                      className="flex-1 gap-2"
+                      data-testid="button-rewrite-for-similarity"
+                    >
+                      <DocumentTextIcon className="w-4 h-4" />
+                      {humanizeRewriteForSimilarityMutation.isPending ? "Rewriting..." : "Boost Content Match"}
+                    </Button>
+                    <Button
+                      onClick={handleHumanizeRewriteForAIBypass}
+                      disabled={humanizeRewriteForAIBypassMutation.isPending}
+                      variant="secondary"
+                      className="flex-1 gap-2"
+                      data-testid="button-rewrite-for-ai-bypass"
+                    >
+                      <ShieldCheckIcon className="w-4 h-4" />
+                      {humanizeRewriteForAIBypassMutation.isPending ? "Rewriting..." : "Boost Human Score"}
+                    </Button>
+                  </div>
+
                   {/* Combined humanized text */}
                   <div className="bg-primary/5 rounded-lg p-4 mb-4">
                     <p className="text-xs text-primary font-medium mb-2">HUMANIZED OUTPUT</p>
@@ -2454,6 +2662,34 @@ export default function Home() {
                   <p className="text-xs text-muted-foreground">
                     AI Probability: {Math.round(styleAiDetectionResult.completelyGeneratedProb * 100)}%
                   </p>
+                </div>
+              )}
+
+              {/* Targeted Rewrite Buttons for Style Transfer */}
+              {styleRewriteResults && styleRewriteResults.length > 0 && (
+                <div className="flex gap-2 mb-3">
+                  <Button
+                    onClick={handleStyleRewriteForSimilarity}
+                    disabled={styleRewriteForSimilarityMutation.isPending}
+                    variant="secondary"
+                    size="sm"
+                    className="flex-1 gap-2"
+                    data-testid="button-style-rewrite-for-similarity"
+                  >
+                    <DocumentTextIcon className="w-4 h-4" />
+                    {styleRewriteForSimilarityMutation.isPending ? "Rewriting..." : "Boost Content Match"}
+                  </Button>
+                  <Button
+                    onClick={handleStyleRewriteForAIBypass}
+                    disabled={styleRewriteForAIBypassMutation.isPending}
+                    variant="secondary"
+                    size="sm"
+                    className="flex-1 gap-2"
+                    data-testid="button-style-rewrite-for-ai-bypass"
+                  >
+                    <ShieldCheckIcon className="w-4 h-4" />
+                    {styleRewriteForAIBypassMutation.isPending ? "Rewriting..." : "Boost Human Score"}
+                  </Button>
                 </div>
               )}
 

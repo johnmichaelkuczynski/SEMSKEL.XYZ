@@ -522,48 +522,152 @@ function contentPreservingRewrite(
   return result;
 }
 
-// Polish with Claude - ONLY for grammar/flow, NEVER changes meaning
-async function polishWithClaude(
-  roughRewrite: string,
-  aiSentence: string
-): Promise<string> {
-  const prompt = `You are a copy editor. Your ONLY job is to fix grammar and improve flow.
+// ============================================
+// CLAUDE-BASED REWRITING FUNCTIONS
+// ============================================
 
-ORIGINAL CONTENT (the meaning to preserve EXACTLY):
+// Standard rewrite - balanced approach
+async function rewriteWithClaude(
+  aiSentence: string,
+  humanPattern: SentenceBankEntry
+): Promise<string> {
+  const prompt = `TASK: Rewrite the AI sentence to follow the human sentence's STRUCTURE while keeping the AI sentence's MEANING.
+
+HUMAN SENTENCE (use its structure/rhythm):
+"${humanPattern.original}"
+
+BLEACHED PATTERN (its skeleton):
+"${humanPattern.bleached}"
+
+AI SENTENCE (keep its meaning):
 "${aiSentence}"
 
-ROUGH REWRITE (needs grammar/flow polish):
-"${roughRewrite}"
+INSTRUCTIONS:
+1. Your output must convey the EXACT same facts/claims as the AI sentence
+2. Your output must follow the grammatical structure and rhythm of the human sentence
+3. Use similar sentence length, clause arrangement, and punctuation style as the human sentence
+4. Do NOT copy words from the human sentence - only copy its STRUCTURE
+5. Do NOT add hedging, qualifiers, or negations that weren't in the AI sentence
+6. The result should sound naturally human-written
 
-CRITICAL RULES:
-1. The rough rewrite contains ALL the correct content from the original
-2. You may ONLY fix grammar, word order, and flow
-3. You MUST NOT add any new ideas, claims, or qualifiers
-4. You MUST NOT remove or change any assertions
-5. You MUST NOT add hedging words like "tends to", "seems to", "appears"
-6. You MUST NOT negate or reverse any claims
-7. If the rough rewrite is already grammatical, return it unchanged
-
-OUTPUT: Provide ONLY the polished sentence. No explanations.`;
+OUTPUT: Provide ONLY the rewritten sentence. No quotes, no explanation.`;
 
   try {
     const message = await anthropic.messages.create({
       model: "claude-sonnet-4-5",
-      max_tokens: 300,
+      max_tokens: 400,
       messages: [{ role: "user", content: prompt }],
     });
 
     const content = message.content[0];
     if (content.type === "text") {
-      const polished = content.text.trim();
-      if (polished.length > 0) {
-        return polished;
+      let result = content.text.trim();
+      // Remove surrounding quotes if present
+      result = result.replace(/^["']|["']$/g, '');
+      if (result.length > 0) {
+        return result;
       }
     }
-    return roughRewrite;
+    return aiSentence;
   } catch (error) {
-    console.error("Polish error, using rough rewrite:", error);
-    return roughRewrite;
+    console.error("Rewrite error:", error);
+    return aiSentence;
+  }
+}
+
+// Targeted rewrite for HIGHER content similarity (preserves meaning more strictly)
+export async function rewriteForContentSimilarity(
+  currentText: string,
+  originalText: string
+): Promise<string> {
+  const prompt = `TASK: Rewrite the current text to be MORE SIMILAR in meaning to the original, while keeping it human-sounding.
+
+ORIGINAL TEXT (the source meaning):
+"${originalText}"
+
+CURRENT TEXT (needs to match original meaning better):
+"${currentText}"
+
+INSTRUCTIONS:
+1. Keep ALL facts, claims, and assertions from the original text
+2. Match the original's tone and emphasis exactly
+3. Remove any distortions or additions that weren't in the original
+4. Still sound natural and human-written
+5. Do NOT just copy the original - maintain natural sentence flow
+
+OUTPUT: Provide ONLY the improved text. No quotes, no explanation.`;
+
+  try {
+    const message = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 2000,
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    const content = message.content[0];
+    if (content.type === "text") {
+      let result = content.text.trim();
+      result = result.replace(/^["']|["']$/g, '');
+      if (result.length > 0) {
+        return result;
+      }
+    }
+    return currentText;
+  } catch (error) {
+    console.error("Content similarity rewrite error:", error);
+    return currentText;
+  }
+}
+
+// Targeted rewrite for LOWER AI detection score (sounds more human)
+export async function rewriteForAIBypass(
+  currentText: string,
+  originalText: string
+): Promise<string> {
+  const prompt = `TASK: Rewrite this text to sound MORE HUMAN and LESS AI-generated, while keeping the same meaning.
+
+ORIGINAL MEANING TO PRESERVE:
+"${originalText}"
+
+CURRENT TEXT (sounds too AI-like):
+"${currentText}"
+
+MAKE IT SOUND HUMAN BY:
+1. Using shorter, punchier sentences mixed with longer ones
+2. Adding conversational rhythm and natural pauses
+3. Using active voice and concrete language
+4. Varying sentence beginnings (not always Subject-Verb)
+5. Including occasional informal phrasing
+6. Breaking up long complex sentences
+7. Using dashes, colons, or parentheses naturally
+
+RULES:
+- Keep the SAME facts and claims - don't change the meaning
+- Don't add filler or padding
+- Don't use overly casual slang
+- Maintain professional tone while sounding natural
+
+OUTPUT: Provide ONLY the rewritten text. No quotes, no explanation.`;
+
+  try {
+    const message = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 2000,
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    const content = message.content[0];
+    if (content.type === "text") {
+      let result = content.text.trim();
+      result = result.replace(/^["']|["']$/g, '');
+      if (result.length > 0) {
+        return result;
+      }
+    }
+    return currentText;
+  } catch (error) {
+    console.error("AI bypass rewrite error:", error);
+    return currentText;
   }
 }
 
@@ -571,14 +675,8 @@ async function rewriteWithPattern(
   aiSentence: string,
   humanPattern: SentenceBankEntry
 ): Promise<string> {
-  // STEP 1: Create content-preserving rewrite using pattern STRUCTURE
-  // This guarantees the AI sentence's meaning is preserved
-  const roughRewrite = contentPreservingRewrite(aiSentence, humanPattern);
-  
-  // STEP 2: Polish for grammar/flow (optional, won't change meaning)
-  const polished = await polishWithClaude(roughRewrite, aiSentence);
-  
-  return polished;
+  // Use Claude to properly rewrite following the pattern structure
+  return await rewriteWithClaude(aiSentence, humanPattern);
 }
 
 // ============================================
