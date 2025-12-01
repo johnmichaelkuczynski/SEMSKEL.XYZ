@@ -26,6 +26,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import { findBestMatch, loadSentenceBank, computeMetadata } from "./matcher";
 import { humanizeText, rewriteForContentSimilarity, rewriteForAIBypass } from "./humanizer";
 import { rewriteInStyle } from "./rewriteInStyle";
+import { getAvailableProviders } from "./llmProviders";
 import { z } from "zod";
 
 // GPTZero API configuration
@@ -182,6 +183,17 @@ export async function registerRoutes(app: Express): Promise<Server> {
         error: "Login failed",
         message: error instanceof Error ? error.message : "An unexpected error occurred.",
       });
+    }
+  });
+
+  // Get available LLM providers
+  app.get("/api/llm-providers", async (req, res) => {
+    try {
+      const providers = getAvailableProviders();
+      res.json({ providers });
+    } catch (error) {
+      console.error("Error getting LLM providers:", error);
+      res.status(500).json({ error: "Failed to get LLM providers" });
     }
   });
 

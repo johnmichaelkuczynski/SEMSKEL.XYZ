@@ -23,7 +23,7 @@ import {
   UserIcon,
   ArrowRightStartOnRectangleIcon
 } from "@heroicons/react/24/outline";
-import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse, AuthorStyleWithCount, ChunkMetadata, ChunkPreviewResponse } from "@shared/schema";
+import type { BleachingLevel, BleachResponse, SentenceBankResponse, MatchResponse, MatchResult, HumanizeResponse, HumanizedSentence, GPTZeroResponse, RewriteStyleResponse, RewrittenSentence, ContentSimilarityResponse, AuthorStyleWithCount, ChunkMetadata, ChunkPreviewResponse, LLMProvider } from "@shared/schema";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ShieldCheckIcon } from "@heroicons/react/24/solid";
@@ -32,6 +32,16 @@ interface LoggedInUser {
   id: number;
   username: string;
   createdAt: string;
+}
+
+interface LLMProviderInfo {
+  id: LLMProvider;
+  name: string;
+  maxContextTokens: number;
+  maxOutputTokens: number;
+  recommendedChunkSize: number;
+  available: boolean;
+  description: string;
 }
 
 interface BankEntry {
@@ -101,6 +111,9 @@ export default function Home() {
   // Bank download state
   const [downloadingInstallment, setDownloadingInstallment] = useState<number | null>(null);
   
+  // LLM Provider state
+  const [selectedProvider, setSelectedProvider] = useState<LLMProvider>("anthropic");
+  
   const { toast } = useToast();
   
   // Calculate word count and estimated chunks for the input text
@@ -134,6 +147,11 @@ export default function Home() {
   // Fetch author styles for dropdown
   const authorStylesQuery = useQuery<AuthorStyleWithCount[]>({
     queryKey: ["/api/author-styles"],
+  });
+
+  // Fetch available LLM providers
+  const llmProvidersQuery = useQuery<{ providers: LLMProviderInfo[] }>({
+    queryKey: ["/api/llm-providers"],
   });
 
   useEffect(() => {
@@ -840,7 +858,7 @@ export default function Home() {
       });
       return;
     }
-    const rewrittenText = styleRewriteResults.map(r => r.rewritten).join(" ");
+    const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
     styleRewriteForSimilarityMutation.mutate({
       currentText: rewrittenText,
       originalText: styleTargetText,
@@ -856,7 +874,7 @@ export default function Home() {
       });
       return;
     }
-    const rewrittenText = styleRewriteResults.map(r => r.rewritten).join(" ");
+    const rewrittenText = styleRewriteResults.map(r => r.rewrite).join(" ");
     styleRewriteForAIBypassMutation.mutate({
       currentText: rewrittenText,
       originalText: styleTargetText,
@@ -1776,38 +1794,79 @@ export default function Home() {
               />
             </div>
 
-            {/* Bleaching Level Selector */}
+            {/* Bleaching Level and LLM Provider Selector */}
             <Card className="p-4">
-              <Label className="text-sm font-semibold mb-3 block">Bleaching Level</Label>
-              <RadioGroup
-                value={bleachingLevel}
-                onValueChange={(value) => setBleachingLevel(value as BleachingLevel)}
-                className="flex flex-wrap gap-4"
-                data-testid="radiogroup-bleaching-level"
-              >
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Light" id="light" data-testid="radio-light" />
-                  <Label htmlFor="light" className="font-normal cursor-pointer text-sm">Light</Label>
+              <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
+                {/* Bleaching Level */}
+                <div className="flex-1 mb-4 lg:mb-0">
+                  <Label className="text-sm font-semibold mb-3 block">Bleaching Level</Label>
+                  <RadioGroup
+                    value={bleachingLevel}
+                    onValueChange={(value) => setBleachingLevel(value as BleachingLevel)}
+                    className="flex flex-wrap gap-4"
+                    data-testid="radiogroup-bleaching-level"
+                  >
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="Light" id="light" data-testid="radio-light" />
+                      <Label htmlFor="light" className="font-normal cursor-pointer text-sm">Light</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="Moderate" id="moderate" data-testid="radio-moderate" />
+                      <Label htmlFor="moderate" className="font-normal cursor-pointer text-sm">Moderate</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="Moderate-Heavy" id="moderate-heavy" data-testid="radio-moderate-heavy" />
+                      <Label htmlFor="moderate-heavy" className="font-normal cursor-pointer text-sm">Moderate-Heavy</Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="Heavy" id="heavy" data-testid="radio-heavy" />
+                      <Label htmlFor="heavy" className="font-normal cursor-pointer text-sm">
+                        Heavy <span className="text-xs text-muted-foreground">(Default)</span>
+                      </Label>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <RadioGroupItem value="Very Heavy" id="very-heavy" data-testid="radio-very-heavy" />
+                      <Label htmlFor="very-heavy" className="font-normal cursor-pointer text-sm">Very Heavy</Label>
+                    </div>
+                  </RadioGroup>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Moderate" id="moderate" data-testid="radio-moderate" />
-                  <Label htmlFor="moderate" className="font-normal cursor-pointer text-sm">Moderate</Label>
+                
+                {/* LLM Provider Selector */}
+                <div className="lg:w-64">
+                  <Label className="text-sm font-semibold mb-3 block">AI Provider</Label>
+                  <Select 
+                    value={selectedProvider} 
+                    onValueChange={(value) => setSelectedProvider(value as LLMProvider)}
+                    data-testid="select-llm-provider"
+                  >
+                    <SelectTrigger className="w-full" data-testid="select-trigger-llm-provider">
+                      <SelectValue placeholder="Select AI Provider" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {llmProvidersQuery.data?.providers?.map((provider) => (
+                        <SelectItem 
+                          key={provider.id} 
+                          value={provider.id}
+                          disabled={!provider.available}
+                          data-testid={`select-item-provider-${provider.id}`}
+                        >
+                          <div className="flex flex-col">
+                            <span className={!provider.available ? "text-muted-foreground" : ""}>
+                              {provider.name}
+                              {!provider.available && " (Not configured)"}
+                            </span>
+                          </div>
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                  {llmProvidersQuery.data?.providers?.find(p => p.id === selectedProvider)?.description && (
+                    <p className="text-xs text-muted-foreground mt-1">
+                      {llmProvidersQuery.data?.providers?.find(p => p.id === selectedProvider)?.description}
+                    </p>
+                  )}
                 </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Moderate-Heavy" id="moderate-heavy" data-testid="radio-moderate-heavy" />
-                  <Label htmlFor="moderate-heavy" className="font-normal cursor-pointer text-sm">Moderate-Heavy</Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Heavy" id="heavy" data-testid="radio-heavy" />
-                  <Label htmlFor="heavy" className="font-normal cursor-pointer text-sm">
-                    Heavy <span className="text-xs text-muted-foreground">(Default)</span>
-                  </Label>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <RadioGroupItem value="Very Heavy" id="very-heavy" data-testid="radio-very-heavy" />
-                  <Label htmlFor="very-heavy" className="font-normal cursor-pointer text-sm">Very Heavy</Label>
-                </div>
-              </RadioGroup>
+              </div>
             </Card>
 
             {/* Word count and chunk estimate */}

@@ -49,6 +49,10 @@ export type SentenceEntry = typeof sentenceEntries.$inferSelect;
 
 // ==================== API SCHEMAS ====================
 
+// LLM Provider options - ranked by text processing capacity
+export const llmProviders = ["deepseek", "anthropic", "openai", "grok", "perplexity"] as const;
+export type LLMProvider = typeof llmProviders[number];
+
 // Bleaching level options
 export const bleachingLevels = ["Light", "Moderate", "Moderate-Heavy", "Heavy", "Very Heavy"] as const;
 export type BleachingLevel = typeof bleachingLevels[number];
@@ -57,6 +61,7 @@ export type BleachingLevel = typeof bleachingLevels[number];
 export const bleachRequestSchema = z.object({
   text: z.string().min(1, "Text is required"),
   level: z.enum(bleachingLevels),
+  provider: z.enum(llmProviders).optional().default("anthropic"),
   filename: z.string().optional(),
 });
 
@@ -163,6 +168,7 @@ export type PrefilteredCandidate = z.infer<typeof prefilteredCandidateSchema>;
 export const humanizeRequestSchema = z.object({
   text: z.string().min(1, "Text is required"),
   level: z.enum(bleachingLevels).optional().default("Heavy"),
+  provider: z.enum(llmProviders).optional().default("anthropic"),
   // Optional prefiltered candidates from Layer 2 to avoid rescanning entire bank
   prefilteredCandidates: z.array(prefilteredCandidateSchema).optional(),
 });
@@ -241,6 +247,7 @@ export const rewriteStyleRequestSchema = z.object({
   targetText: z.string().min(1, "Target text is required"),
   styleSample: z.string().optional().default(""), // Optional when using authorStyleId
   level: z.enum(bleachingLevels).optional().default("Heavy"),
+  provider: z.enum(llmProviders).optional().default("anthropic"),
   userId: z.number().optional(), // If logged in, patterns will be saved to user's bank
   authorStyleId: z.number().optional(), // If provided, use patterns from this author instead of styleSample
 }).refine(
