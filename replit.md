@@ -142,7 +142,7 @@ This produces human-like, detector-safe text with full content preservation.
 - **Required secrets**: ANTHROPIC_API_KEY (default), OPENAI_API_KEY, GROK_API_KEY, DEEPSEEK_API_KEY, PERPLEXITY_API_KEY
 
 ### Author Style Libraries:
-- **Kuczynski**: 1,510 complex philosophical sentence patterns with Greek letters (Φ, Ω, ψ, χ, φ, υ, τ, σ, ρ, π, ο, ξ, ν, μ, λ, κ, ι, θ, η, ζ, ε, δ, γ, β, α), nested clauses, logical notation (CR, LL, SS, KM, DMO), formal reference theory structures, versus comparisons, academic title patterns, financial/metric analysis patterns, and multi-clause conditional structures
+- **Kuczynski**: 1,607 complex philosophical sentence patterns with Greek letters (Φ, Ω, ψ, χ, φ, υ, τ, σ, ρ, π, ο, ξ, ν, μ, λ, κ, ι, θ, η, ζ, ε, δ, γ, β, α), nested clauses, logical notation (CR, LL, SS, KM, DMO), formal reference theory structures, versus comparisons, academic title patterns, financial/metric analysis patterns, multi-clause conditional structures, constitutional/legal analysis patterns, and interrogative/rhetorical question patterns
 - **Bertrand Russell**: Classical analytical philosophy patterns
 - **Plato**: Ancient philosophical dialogue patterns
 
