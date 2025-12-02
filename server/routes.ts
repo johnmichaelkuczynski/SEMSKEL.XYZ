@@ -1932,6 +1932,313 @@ Score guidelines:
     }
   });
 
+  // ==================== ALL DAY MODE BATCH JOB ENDPOINTS ====================
+
+  const { createBatchJob, batchProcessor, splitTextIntoSections } = await import("./batchProcessor");
+  const { startBatchJobRequestSchema, batchJobTypes } = await import("@shared/schema");
+
+  // Start a new All Day Mode batch job
+  app.post("/api/batch-jobs", async (req, res) => {
+    try {
+      const validatedData = startBatchJobRequestSchema.parse(req.body);
+      
+      const wordCount = validatedData.text.split(/\s+/).filter(w => w.length > 0).length;
+      console.log(`[AllDayMode] Starting ${validatedData.jobType} job for ${wordCount} words`);
+      
+      // Create the batch job
+      const { job, sections } = await createBatchJob(
+        validatedData.text,
+        validatedData.jobType,
+        validatedData.level || 'Heavy',
+        validatedData.provider || 'anthropic',
+        validatedData.userId,
+        validatedData.sectionSize || 1000,
+        validatedData.breakDurationMs || 60000
+      );
+      
+      // Calculate estimated time
+      const totalMinutes = sections.length * (1 + (validatedData.breakDurationMs || 60000) / 60000);
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = Math.ceil(totalMinutes % 60);
+      const estimatedTime = hours > 0 
+        ? `${hours}h ${minutes}m` 
+        : `${minutes} minutes`;
+      
+      res.json({
+        id: job.id,
+        jobType: job.jobType,
+        status: job.status,
+        totalSections: job.totalSections,
+        estimatedTime,
+        breakDuration: `${(validatedData.breakDurationMs || 60000) / 1000} seconds`,
+        message: `All Day Mode job started. ${sections.length} sections will be processed with ${(validatedData.breakDurationMs || 60000) / 1000}s breaks between each.`,
+      });
+    } catch (error) {
+      console.error("Batch job creation error:", error);
+      
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          error: "Validation error",
+          message: error.errors.map((e) => e.message).join(", "),
+        });
+      }
+      
+      res.status(500).json({
+        error: "Failed to create batch job",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Get batch job status
+  app.get("/api/batch-jobs/:id", async (req, res) => {
+    try {
+      const jobId = parseInt(req.params.id);
+      if (isNaN(jobId)) {
+        return res.status(400).json({ error: "Invalid job ID" });
+      }
+      
+      const job = await storage.getBatchJob(jobId);
+      if (!job) {
+        return res.status(404).json({ error: "Batch job not found" });
+      }
+      
+      const sections = await storage.getBatchSections(jobId);
+      
+      const progress = job.totalSections > 0 
+        ? Math.round((job.completedSections + job.failedSections) / job.totalSections * 100)
+        : 0;
+      
+      // Calculate estimated time remaining
+      let estimatedTimeRemaining: string | undefined;
+      if (job.status === 'processing' && job.nextProcessTime) {
+        const sectionsLeft = job.totalSections - job.completedSections - job.failedSections;
+        const minutesLeft = sectionsLeft * 1.5; // ~1.5 min per section (processing + break)
+        const hours = Math.floor(minutesLeft / 60);
+        const mins = Math.ceil(minutesLeft % 60);
+        estimatedTimeRemaining = hours > 0 ? `${hours}h ${mins}m` : `${mins} minutes`;
+      }
+      
+      res.json({
+        id: job.id,
+        jobType: job.jobType,
+        status: job.status,
+        totalSections: job.totalSections,
+        completedSections: job.completedSections,
+        failedSections: job.failedSections,
+        currentSection: job.currentSection,
+        progress,
+        estimatedTimeRemaining,
+        nextProcessTime: job.nextProcessTime,
+        startedAt: job.startedAt,
+        completedAt: job.completedAt,
+        sections: sections.map(s => ({
+          id: s.id,
+          sectionIndex: s.sectionIndex,
+          status: s.status,
+          wordCount: s.wordCount,
+          hasOutput: !!s.outputText,
+          errorMessage: s.errorMessage,
+        })),
+      });
+    } catch (error) {
+      console.error("Batch job status error:", error);
+      res.status(500).json({
+        error: "Failed to get batch job status",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Get all batch jobs for a user
+  app.get("/api/batch-jobs/user/:userId", async (req, res) => {
+    try {
+      const userId = parseInt(req.params.userId);
+      if (isNaN(userId)) {
+        return res.status(400).json({ error: "Invalid user ID" });
+      }
+      
+      const jobs = await storage.getBatchJobsByUser(userId);
+      
+      res.json({
+        jobs: jobs.map(job => ({
+          id: job.id,
+          jobType: job.jobType,
+          status: job.status,
+          totalSections: job.totalSections,
+          completedSections: job.completedSections,
+          failedSections: job.failedSections,
+          progress: job.totalSections > 0 
+            ? Math.round((job.completedSections + job.failedSections) / job.totalSections * 100)
+            : 0,
+          startedAt: job.startedAt,
+          completedAt: job.completedAt,
+        })),
+      });
+    } catch (error) {
+      console.error("Batch jobs list error:", error);
+      res.status(500).json({
+        error: "Failed to get batch jobs",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Get completed sections output for a batch job
+  app.get("/api/batch-jobs/:id/output", async (req, res) => {
+    try {
+      const jobId = parseInt(req.params.id);
+      if (isNaN(jobId)) {
+        return res.status(400).json({ error: "Invalid job ID" });
+      }
+      
+      const job = await storage.getBatchJob(jobId);
+      if (!job) {
+        return res.status(404).json({ error: "Batch job not found" });
+      }
+      
+      const sections = await storage.getBatchSections(jobId);
+      const completedSections = sections.filter(s => s.status === 'completed' && s.outputText);
+      
+      // Combine all completed outputs
+      const combinedOutput = completedSections
+        .sort((a, b) => a.sectionIndex - b.sectionIndex)
+        .map(s => s.outputText)
+        .join(job.jobType === 'jsonl' ? '\n' : '\n\n---\n\n');
+      
+      res.json({
+        jobId: job.id,
+        jobType: job.jobType,
+        status: job.status,
+        totalSections: job.totalSections,
+        completedSections: completedSections.length,
+        output: combinedOutput,
+        sections: completedSections.map(s => ({
+          sectionIndex: s.sectionIndex,
+          wordCount: s.wordCount,
+          output: s.outputText,
+        })),
+      });
+    } catch (error) {
+      console.error("Batch job output error:", error);
+      res.status(500).json({
+        error: "Failed to get batch job output",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Download a specific section's output
+  app.get("/api/batch-jobs/:id/sections/:sectionIndex/download", async (req, res) => {
+    try {
+      const jobId = parseInt(req.params.id);
+      const sectionIndex = parseInt(req.params.sectionIndex);
+      
+      if (isNaN(jobId) || isNaN(sectionIndex)) {
+        return res.status(400).json({ error: "Invalid job or section ID" });
+      }
+      
+      const sections = await storage.getBatchSections(jobId);
+      const section = sections.find(s => s.sectionIndex === sectionIndex);
+      
+      if (!section) {
+        return res.status(404).json({ error: "Section not found" });
+      }
+      
+      if (!section.outputText) {
+        return res.status(400).json({ error: "Section has no output yet" });
+      }
+      
+      const job = await storage.getBatchJob(jobId);
+      const extension = job?.jobType === 'jsonl' ? 'jsonl' : 'txt';
+      const filename = `section_${sectionIndex + 1}_of_${job?.totalSections || '?'}.${extension}`;
+      
+      res.setHeader('Content-Type', extension === 'jsonl' ? 'application/x-ndjson' : 'text/plain');
+      res.setHeader('Content-Disposition', `attachment; filename="${filename}"`);
+      res.send(section.outputText);
+    } catch (error) {
+      console.error("Section download error:", error);
+      res.status(500).json({
+        error: "Failed to download section",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Delete a batch job
+  app.delete("/api/batch-jobs/:id", async (req, res) => {
+    try {
+      const jobId = parseInt(req.params.id);
+      if (isNaN(jobId)) {
+        return res.status(400).json({ error: "Invalid job ID" });
+      }
+      
+      const job = await storage.getBatchJob(jobId);
+      if (!job) {
+        return res.status(404).json({ error: "Batch job not found" });
+      }
+      
+      // Check if job is currently processing
+      if (batchProcessor.isJobProcessing(jobId)) {
+        return res.status(400).json({ 
+          error: "Cannot delete job while processing",
+          message: "Please wait for the current section to complete." 
+        });
+      }
+      
+      await storage.deleteBatchJob(jobId);
+      
+      res.json({ success: true, message: "Batch job deleted" });
+    } catch (error) {
+      console.error("Batch job delete error:", error);
+      res.status(500).json({
+        error: "Failed to delete batch job",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
+  // Preview how text would be split into sections (for UI preview)
+  app.post("/api/batch-jobs/preview", async (req, res) => {
+    try {
+      const { text, sectionSize = 1000 } = req.body;
+      
+      if (!text || typeof text !== 'string') {
+        return res.status(400).json({ error: "Text is required" });
+      }
+      
+      const sections = splitTextIntoSections(text, sectionSize);
+      const totalWords = text.split(/\s+/).filter((w: string) => w.length > 0).length;
+      
+      // Estimate time (1 min break + ~30s processing per section)
+      const totalMinutes = sections.length * 1.5;
+      const hours = Math.floor(totalMinutes / 60);
+      const minutes = Math.ceil(totalMinutes % 60);
+      const estimatedTime = hours > 0 
+        ? `${hours}h ${minutes}m` 
+        : `${minutes} minutes`;
+      
+      res.json({
+        totalWords,
+        totalSections: sections.length,
+        estimatedTime,
+        breakDuration: "1 minute",
+        sections: sections.map((s, i) => ({
+          index: i,
+          wordCount: s.wordCount,
+          sentenceCount: s.sentenceCount,
+          preview: s.text.substring(0, 100) + (s.text.length > 100 ? '...' : ''),
+        })),
+      });
+    } catch (error) {
+      console.error("Batch preview error:", error);
+      res.status(500).json({
+        error: "Failed to preview sections",
+        message: error instanceof Error ? error.message : "An unexpected error occurred.",
+      });
+    }
+  });
+
   const httpServer = createServer(app);
 
   return httpServer;

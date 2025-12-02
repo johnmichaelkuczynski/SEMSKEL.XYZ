@@ -91,7 +91,15 @@ export default async function runApp(
     port,
     host: "0.0.0.0",
     reusePort: true,
-  }, () => {
+  }, async () => {
     log(`serving on port ${port}`);
+    
+    // Start the batch processor to resume any pending/processing jobs
+    try {
+      const { batchProcessor } = await import("./batchProcessor");
+      batchProcessor.start();
+    } catch (error) {
+      console.error("[BatchProcessor] Failed to start on server init:", error);
+    }
   });
 }

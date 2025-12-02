@@ -41,6 +41,7 @@ This produces human-like, detector-safe text with full content preservation.
 **DATABASE & USER SYSTEM COMPLETE** ✅
 **STYLE TRANSFER FEATURE COMPLETE** ✅
 **MULTI-LLM PROVIDER SUPPORT** ✅
+**ALL DAY MODE COMPLETE** ✅
 
 ### Implementation Details:
 - **Weighted similarity scoring**: Structure (40%), token length (15%), clause count (15%), clause order (15%), punctuation (15%)
@@ -141,6 +142,23 @@ This produces human-like, detector-safe text with full content preservation.
 - **API endpoint**: `GET /api/llm-providers` returns list of providers with availability
 - **Required secrets**: ANTHROPIC_API_KEY (default), OPENAI_API_KEY, GROK_API_KEY, DEEPSEEK_API_KEY, PERPLEXITY_API_KEY
 
+### All Day Mode (Batch Processing):
+- **Purpose**: Process extremely large texts (200,000+ words) without crashes
+- **Automatic toggle**: Shows when input exceeds 5,000 words
+- **Section-based processing**: Divides text into ~1,000-word sections
+- **1-minute breaks**: Prevents rate limits and server overload
+- **Background processing**: User can close the dialog and return later
+- **Progress tracking**: Real-time status with completion percentage
+- **Downloadable results**: Completed sections can be downloaded at any time
+- **Database-backed**: Jobs and sections stored in PostgreSQL for persistence
+- **Supports both Bleach and JSONL**: Works with both Layer 1 features
+- **API endpoints**:
+  - `POST /api/batch-jobs` — Start a new batch job
+  - `GET /api/batch-jobs/:id` — Get job status and section details
+  - `GET /api/batch-jobs/:id/output` — Get combined output from completed sections
+  - `POST /api/batch-jobs/preview` — Preview how text would be split
+  - `DELETE /api/batch-jobs/:id` — Delete a batch job
+
 ### Author Style Libraries:
 - **Kuczynski**: 1,607 complex philosophical sentence patterns with Greek letters (Φ, Ω, ψ, χ, φ, υ, τ, σ, ρ, π, ο, ξ, ν, μ, λ, κ, ι, θ, η, ζ, ε, δ, γ, β, α), nested clauses, logical notation (CR, LL, SS, KM, DMO), formal reference theory structures, versus comparisons, academic title patterns, financial/metric analysis patterns, multi-clause conditional structures, constitutional/legal analysis patterns, and interrogative/rhetorical question patterns
 - **Bertrand Russell**: Classical analytical philosophy patterns
@@ -190,6 +208,7 @@ This produces human-like, detector-safe text with full content preservation.
 - `server/matcher.ts` — Pattern matching engine (Layer 2)
 - `server/humanizer.ts` — Humanizer module (Layer 3) with weighted similarity and slot-fill rewriting
 - `server/rewriteInStyle.ts` — Style Transfer service (ephemeral pattern extraction and rewriting)
+- `server/batchProcessor.ts` — All Day Mode batch processing service with section management
 - `server/routes.ts` — API endpoints
 - `shared/schema.ts` — Types and validation schemas
 - `sentence_bank.jsonl` — Stored human sentence patterns (backup file)

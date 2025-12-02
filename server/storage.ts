@@ -9,6 +9,8 @@ import {
   users,
   sentenceEntries,
   authorStyles,
+  batchJobs,
+  batchSections,
   type User,
   type InsertUser,
   type SentenceEntry,
@@ -16,6 +18,10 @@ import {
   type AuthorStyle,
   type InsertAuthorStyle,
   type AuthorStyleWithCount,
+  type BatchJob,
+  type InsertBatchJob,
+  type BatchSection,
+  type InsertBatchSection,
 } from "@shared/schema";
 
 // Create database connection
@@ -48,6 +54,22 @@ export interface IStorage {
   getAuthorStyleSentenceCount(authorStyleId: number): Promise<number>;
   addSentenceEntriesToAuthorStyle(authorStyleId: number, entries: InsertSentenceEntry[]): Promise<number>;
   getExistingBleachedTextsForAuthor(authorStyleId: number, bleachedTexts: string[]): Promise<Set<string>>;
+  
+  // Batch job operations (All Day Mode)
+  createBatchJob(job: InsertBatchJob): Promise<BatchJob>;
+  getBatchJob(id: number): Promise<BatchJob | undefined>;
+  getBatchJobsByUser(userId: number): Promise<BatchJob[]>;
+  getActiveBatchJobs(): Promise<BatchJob[]>;
+  updateBatchJob(id: number, updates: Partial<BatchJob>): Promise<BatchJob | undefined>;
+  deleteBatchJob(id: number): Promise<void>;
+  
+  // Batch section operations
+  createBatchSections(sections: InsertBatchSection[]): Promise<BatchSection[]>;
+  getBatchSections(jobId: number): Promise<BatchSection[]>;
+  getBatchSection(id: number): Promise<BatchSection | undefined>;
+  updateBatchSection(id: number, updates: Partial<BatchSection>): Promise<BatchSection | undefined>;
+  getNextPendingSection(jobId: number): Promise<BatchSection | undefined>;
+  resetProcessingSections(jobId: number): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -217,6 +239,95 @@ export class DatabaseStorage implements IStorage {
       );
     
     return new Set(existing.map(e => e.bleached));
+  }
+
+  // Batch job operations (All Day Mode)
+  async createBatchJob(job: InsertBatchJob): Promise<BatchJob> {
+    const result = await db.insert(batchJobs).values(job).returning();
+    return result[0];
+  }
+
+  async getBatchJob(id: number): Promise<BatchJob | undefined> {
+    const result = await db.select().from(batchJobs).where(eq(batchJobs.id, id)).limit(1);
+    return result[0];
+  }
+
+  async getBatchJobsByUser(userId: number): Promise<BatchJob[]> {
+    return await db.select().from(batchJobs)
+      .where(eq(batchJobs.userId, userId))
+      .orderBy(desc(batchJobs.startedAt));
+  }
+
+  async getActiveBatchJobs(): Promise<BatchJob[]> {
+    return await db.select().from(batchJobs)
+      .where(
+        sql`${batchJobs.status} IN ('pending', 'processing', 'paused')`
+      )
+      .orderBy(batchJobs.startedAt);
+  }
+
+  async updateBatchJob(id: number, updates: Partial<BatchJob>): Promise<BatchJob | undefined> {
+    const result = await db.update(batchJobs)
+      .set(updates)
+      .where(eq(batchJobs.id, id))
+      .returning();
+    return result[0];
+  }
+
+  async deleteBatchJob(id: number): Promise<void> {
+    // Delete sections first (foreign key constraint)
+    await db.delete(batchSections).where(eq(batchSections.jobId, id));
+    await db.delete(batchJobs).where(eq(batchJobs.id, id));
+  }
+
+  // Batch section operations
+  async createBatchSections(sections: InsertBatchSection[]): Promise<BatchSection[]> {
+    if (sections.length === 0) return [];
+    const result = await db.insert(batchSections).values(sections).returning();
+    return result;
+  }
+
+  async getBatchSections(jobId: number): Promise<BatchSection[]> {
+    return await db.select().from(batchSections)
+      .where(eq(batchSections.jobId, jobId))
+      .orderBy(batchSections.sectionIndex);
+  }
+
+  async getBatchSection(id: number): Promise<BatchSection | undefined> {
+    const result = await db.select().from(batchSections).where(eq(batchSections.id, id)).limit(1);
+    return result[0];
+  }
+
+  async updateBatchSection(id: number, updates: Partial<BatchSection>): Promise<BatchSection | undefined> {
+    const result = await db.update(batchSections)
+      .set(updates)
+      .where(eq(batchSections.id, id))
+      .returning();
+    return result[0];
+  }
+
+  async getNextPendingSection(jobId: number): Promise<BatchSection | undefined> {
+    const result = await db.select().from(batchSections)
+      .where(
+        and(
+          eq(batchSections.jobId, jobId),
+          eq(batchSections.status, 'pending')
+        )
+      )
+      .orderBy(batchSections.sectionIndex)
+      .limit(1);
+    return result[0];
+  }
+
+  async resetProcessingSections(jobId: number): Promise<void> {
+    await db.update(batchSections)
+      .set({ status: 'pending' })
+      .where(
+        and(
+          eq(batchSections.jobId, jobId),
+          eq(batchSections.status, 'processing')
+        )
+      );
   }
 }
 

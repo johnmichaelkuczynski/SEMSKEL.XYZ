@@ -336,6 +336,95 @@ export const rewriteWithAuthorStyleRequestSchema = z.object({
   level: z.enum(bleachingLevels).optional().default("Heavy"),
 });
 
+// ==================== ALL DAY MODE BATCH JOB SCHEMAS ====================
+
+// Batch job types
+export const batchJobTypes = ["bleach", "jsonl"] as const;
+export type BatchJobType = typeof batchJobTypes[number];
+
+// Batch job statuses
+export const batchJobStatuses = ["pending", "processing", "paused", "completed", "failed"] as const;
+export type BatchJobStatus = typeof batchJobStatuses[number];
+
+// Batch jobs table - stores the overall job
+export const batchJobs = pgTable("batch_jobs", {
+  id: serial("id").primaryKey(),
+  jobType: varchar("job_type", { length: 20 }).notNull(), // "bleach" or "jsonl"
+  status: varchar("status", { length: 20 }).notNull().default("pending"),
+  totalSections: integer("total_sections").notNull(),
+  completedSections: integer("completed_sections").notNull().default(0),
+  failedSections: integer("failed_sections").notNull().default(0),
+  currentSection: integer("current_section").notNull().default(0),
+  bleachLevel: varchar("bleach_level", { length: 20 }).notNull(),
+  provider: varchar("provider", { length: 20 }).default("anthropic"),
+  nextProcessTime: timestamp("next_process_time"), // When to process next section (after 1 min break)
+  startedAt: timestamp("started_at").defaultNow().notNull(),
+  completedAt: timestamp("completed_at"),
+  userId: integer("user_id").references(() => users.id),
+});
+
+export const insertBatchJobSchema = createInsertSchema(batchJobs).omit({ id: true, startedAt: true, completedAt: true });
+export type InsertBatchJob = z.infer<typeof insertBatchJobSchema>;
+export type BatchJob = typeof batchJobs.$inferSelect;
+
+// Batch sections table - stores each 1000-word section
+export const batchSections = pgTable("batch_sections", {
+  id: serial("id").primaryKey(),
+  jobId: integer("job_id").references(() => batchJobs.id).notNull(),
+  sectionIndex: integer("section_index").notNull(), // 0-based section number
+  inputText: text("input_text").notNull(), // Original text for this section
+  outputText: text("output_text"), // Bleached text or JSONL output
+  status: varchar("status", { length: 20 }).notNull().default("pending"), // pending, processing, completed, failed
+  wordCount: integer("word_count").notNull(),
+  sentenceCount: integer("sentence_count").notNull().default(0),
+  errorMessage: text("error_message"),
+  processedAt: timestamp("processed_at"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertBatchSectionSchema = createInsertSchema(batchSections).omit({ id: true, createdAt: true });
+export type InsertBatchSection = z.infer<typeof insertBatchSectionSchema>;
+export type BatchSection = typeof batchSections.$inferSelect;
+
+// API request to start an All Day Mode batch job
+export const startBatchJobRequestSchema = z.object({
+  text: z.string().min(1, "Text is required"),
+  jobType: z.enum(batchJobTypes),
+  level: z.enum(bleachingLevels).optional().default("Heavy"),
+  provider: z.enum(llmProviders).optional().default("anthropic"),
+  userId: z.number().optional(),
+  sectionSize: z.number().optional().default(1000), // Words per section
+  breakDurationMs: z.number().optional().default(60000), // 1 minute default break
+});
+
+export type StartBatchJobRequest = z.infer<typeof startBatchJobRequestSchema>;
+
+// Batch job status response
+export const batchJobStatusResponseSchema = z.object({
+  id: z.number(),
+  jobType: z.enum(batchJobTypes),
+  status: z.enum(batchJobStatuses),
+  totalSections: z.number(),
+  completedSections: z.number(),
+  failedSections: z.number(),
+  currentSection: z.number(),
+  progress: z.number(), // 0-100 percentage
+  estimatedTimeRemaining: z.string().optional(), // Human readable
+  nextProcessTime: z.date().nullable(),
+  startedAt: z.date(),
+  completedAt: z.date().nullable(),
+  sections: z.array(z.object({
+    id: z.number(),
+    sectionIndex: z.number(),
+    status: z.string(),
+    wordCount: z.number(),
+    hasOutput: z.boolean(),
+    errorMessage: z.string().nullable(),
+  })).optional(),
+});
+
+export type BatchJobStatusResponse = z.infer<typeof batchJobStatusResponseSchema>;
+
 // ==================== CHUNK PREVIEW SCHEMAS ====================
 
 // Individual chunk metadata

@@ -114,6 +114,22 @@ export default function Home() {
   // LLM Provider state
   const [selectedProvider, setSelectedProvider] = useState<LLMProvider>("anthropic");
   
+  // All Day Mode state
+  const [allDayModeEnabled, setAllDayModeEnabled] = useState(false);
+  const [allDayModeDialogOpen, setAllDayModeDialogOpen] = useState(false);
+  const [activeBatchJob, setActiveBatchJob] = useState<{
+    id: number;
+    jobType: string;
+    status: string;
+    totalSections: number;
+    completedSections: number;
+    failedSections: number;
+    progress: number;
+    estimatedTimeRemaining?: string;
+    startedAt: string;
+  } | null>(null);
+  const [batchJobPollingEnabled, setBatchJobPollingEnabled] = useState(false);
+  
   const { toast } = useToast();
   
   // Calculate word count and estimated chunks for the input text
@@ -698,6 +714,93 @@ export default function Home() {
       });
     },
   });
+
+  // All Day Mode batch job mutation
+  const startBatchJobMutation = useMutation({
+    mutationFn: async (data: { text: string; jobType: 'bleach' | 'jsonl'; level: string; provider: string; userId?: number }) => {
+      const response = await apiRequest("POST", "/api/batch-jobs", {
+        ...data,
+        sectionSize: 1000,
+        breakDurationMs: 60000,
+      });
+      return await response.json() as {
+        id: number;
+        jobType: string;
+        status: string;
+        totalSections: number;
+        estimatedTime: string;
+        message: string;
+      };
+    },
+    onSuccess: (data) => {
+      setActiveBatchJob({
+        id: data.id,
+        jobType: data.jobType,
+        status: data.status,
+        totalSections: data.totalSections,
+        completedSections: 0,
+        failedSections: 0,
+        progress: 0,
+        estimatedTimeRemaining: data.estimatedTime,
+        startedAt: new Date().toISOString(),
+      });
+      setBatchJobPollingEnabled(true);
+      setAllDayModeDialogOpen(true);
+      toast({
+        title: "All Day Mode Started!",
+        description: `${data.totalSections} sections will be processed with 1-minute breaks. Estimated time: ${data.estimatedTime}`,
+      });
+    },
+    onError: (error: any) => {
+      toast({
+        title: "Failed to start All Day Mode",
+        description: error?.message || "Could not start batch processing.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  // Poll batch job status when enabled
+  const batchJobStatusQuery = useQuery({
+    queryKey: ["/api/batch-jobs", activeBatchJob?.id],
+    queryFn: async () => {
+      if (!activeBatchJob?.id) return null;
+      const response = await fetch(`/api/batch-jobs/${activeBatchJob.id}`);
+      return await response.json();
+    },
+    enabled: batchJobPollingEnabled && !!activeBatchJob?.id,
+    refetchInterval: 5000,
+  });
+
+  // Update active batch job when polling returns new data
+  useEffect(() => {
+    if (batchJobStatusQuery.data && activeBatchJob) {
+      const data = batchJobStatusQuery.data;
+      setActiveBatchJob({
+        id: data.id,
+        jobType: data.jobType,
+        status: data.status,
+        totalSections: data.totalSections,
+        completedSections: data.completedSections,
+        failedSections: data.failedSections,
+        progress: data.progress,
+        estimatedTimeRemaining: data.estimatedTimeRemaining,
+        startedAt: data.startedAt,
+      });
+      
+      // Stop polling when job is complete or failed
+      if (data.status === 'completed' || data.status === 'failed') {
+        setBatchJobPollingEnabled(false);
+        toast({
+          title: data.status === 'completed' ? "All Day Mode Complete!" : "Batch Job Failed",
+          description: data.status === 'completed' 
+            ? `Successfully processed ${data.completedSections} of ${data.totalSections} sections.`
+            : `Completed ${data.completedSections} sections with ${data.failedSections} failures.`,
+          variant: data.status === 'completed' ? "default" : "destructive",
+        });
+      }
+    }
+  }, [batchJobStatusQuery.data, activeBatchJob?.id, toast]);
 
   // File upload handling
   const onDrop = useCallback((acceptedFiles: File[]) => {
@@ -1738,6 +1841,137 @@ export default function Home() {
               </div>
             </DialogContent>
           </Dialog>
+
+          {/* All Day Mode Progress Dialog */}
+          <Dialog open={allDayModeDialogOpen} onOpenChange={setAllDayModeDialogOpen}>
+            <DialogContent className="max-w-2xl">
+              <DialogHeader>
+                <DialogTitle className="flex items-center gap-2">
+                  <div className={`w-3 h-3 rounded-full ${
+                    activeBatchJob?.status === 'processing' ? 'bg-blue-500 animate-pulse' :
+                    activeBatchJob?.status === 'completed' ? 'bg-green-500' :
+                    activeBatchJob?.status === 'failed' ? 'bg-red-500' :
+                    'bg-gray-500'
+                  }`} />
+                  All Day Mode Progress
+                </DialogTitle>
+              </DialogHeader>
+              
+              {activeBatchJob ? (
+                <div className="space-y-4">
+                  {/* Status Banner */}
+                  <div className={`p-4 rounded-lg ${
+                    activeBatchJob.status === 'processing' ? 'bg-blue-500/10 border border-blue-500/20' :
+                    activeBatchJob.status === 'completed' ? 'bg-green-500/10 border border-green-500/20' :
+                    'bg-red-500/10 border border-red-500/20'
+                  }`}>
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="font-medium capitalize">{activeBatchJob.jobType} Job</span>
+                      <span className={`text-sm px-2 py-0.5 rounded-full ${
+                        activeBatchJob.status === 'processing' ? 'bg-blue-500/20 text-blue-600 dark:text-blue-400' :
+                        activeBatchJob.status === 'completed' ? 'bg-green-500/20 text-green-600 dark:text-green-400' :
+                        'bg-red-500/20 text-red-600 dark:text-red-400'
+                      }`}>
+                        {activeBatchJob.status}
+                      </span>
+                    </div>
+                    
+                    {/* Progress Bar */}
+                    <div className="w-full bg-muted rounded-full h-3 mb-2">
+                      <div 
+                        className={`h-3 rounded-full transition-all duration-500 ${
+                          activeBatchJob.status === 'completed' ? 'bg-green-500' :
+                          activeBatchJob.status === 'failed' ? 'bg-red-500' :
+                          'bg-primary'
+                        }`}
+                        style={{ width: `${activeBatchJob.progress}%` }}
+                      />
+                    </div>
+                    
+                    <div className="flex justify-between text-sm">
+                      <span>{activeBatchJob.completedSections} of {activeBatchJob.totalSections} sections completed</span>
+                      <span className="font-medium">{activeBatchJob.progress}%</span>
+                    </div>
+                  </div>
+                  
+                  {/* Stats */}
+                  <div className="grid grid-cols-3 gap-4">
+                    <div className="bg-muted/50 rounded-lg p-3 text-center">
+                      <div className="text-2xl font-bold">{activeBatchJob.completedSections}</div>
+                      <div className="text-xs text-muted-foreground">Completed</div>
+                    </div>
+                    <div className="bg-muted/50 rounded-lg p-3 text-center">
+                      <div className="text-2xl font-bold">{activeBatchJob.failedSections}</div>
+                      <div className="text-xs text-muted-foreground">Failed</div>
+                    </div>
+                    <div className="bg-muted/50 rounded-lg p-3 text-center">
+                      <div className="text-2xl font-bold">{activeBatchJob.totalSections - activeBatchJob.completedSections - activeBatchJob.failedSections}</div>
+                      <div className="text-xs text-muted-foreground">Remaining</div>
+                    </div>
+                  </div>
+                  
+                  {/* Estimated Time */}
+                  {activeBatchJob.status === 'processing' && activeBatchJob.estimatedTimeRemaining && (
+                    <div className="text-center text-sm text-muted-foreground">
+                      Estimated time remaining: <strong>{activeBatchJob.estimatedTimeRemaining}</strong>
+                    </div>
+                  )}
+                  
+                  {/* Download Button */}
+                  {activeBatchJob.completedSections > 0 && (
+                    <div className="flex justify-center gap-2">
+                      <Button
+                        onClick={async () => {
+                          try {
+                            const response = await fetch(`/api/batch-jobs/${activeBatchJob.id}/output`);
+                            const data = await response.json();
+                            if (data.output) {
+                              const extension = activeBatchJob.jobType === 'jsonl' ? 'jsonl' : 'txt';
+                              const filename = `all_day_${activeBatchJob.jobType}_${activeBatchJob.completedSections}_sections.${extension}`;
+                              const blob = new Blob([data.output], { type: 'text/plain' });
+                              const url = URL.createObjectURL(blob);
+                              const link = document.createElement('a');
+                              link.href = url;
+                              link.download = filename;
+                              link.click();
+                              URL.revokeObjectURL(url);
+                              toast({
+                                title: "Download started",
+                                description: `Downloaded ${activeBatchJob.completedSections} completed sections.`,
+                              });
+                            }
+                          } catch (error) {
+                            toast({
+                              title: "Download failed",
+                              description: "Could not download completed sections.",
+                              variant: "destructive",
+                            });
+                          }
+                        }}
+                        data-testid="button-download-batch-output"
+                      >
+                        <ArrowDownTrayIcon className="w-4 h-4 mr-2" />
+                        Download {activeBatchJob.completedSections} Completed Sections
+                      </Button>
+                    </div>
+                  )}
+                  
+                  {/* Info */}
+                  <div className="text-xs text-muted-foreground text-center space-y-1">
+                    <p>Processing continues in the background with 1-minute breaks between sections.</p>
+                    <p>You can close this dialog and return anytime to check progress.</p>
+                    <p className="text-amber-600 dark:text-amber-400">Started: {new Date(activeBatchJob.startedAt).toLocaleString()}</p>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-center py-8 text-muted-foreground">
+                  <p>No active batch job.</p>
+                  <p className="text-sm mt-2">Enable "All Day Mode" for texts larger than 5,000 words to start a batch job.</p>
+                </div>
+              )}
+            </DialogContent>
+          </Dialog>
+
           <Button
             variant="outline"
             size="default"
@@ -1981,31 +2215,127 @@ export default function Home() {
               </div>
             )}
 
+            {/* All Day Mode Toggle (for very large texts) */}
+            {inputWordCount > 5000 && (
+              <div className="flex items-center justify-between p-3 bg-amber-500/10 dark:bg-amber-400/10 border border-amber-500/20 rounded-lg">
+                <div className="flex items-center gap-3">
+                  <Checkbox
+                    id="all-day-mode"
+                    checked={allDayModeEnabled}
+                    onCheckedChange={(checked) => setAllDayModeEnabled(!!checked)}
+                    data-testid="checkbox-all-day-mode"
+                  />
+                  <div>
+                    <Label htmlFor="all-day-mode" className="text-sm font-medium cursor-pointer">
+                      All Day Mode
+                    </Label>
+                    <p className="text-xs text-muted-foreground">
+                      Process ~1,000 words at a time with 1-minute breaks. Prevents crashes for large texts.
+                    </p>
+                  </div>
+                </div>
+                <div className="text-xs text-muted-foreground">
+                  {Math.ceil(inputWordCount / 1000)} sections, ~{Math.ceil(inputWordCount / 1000 * 1.5)} min total
+                </div>
+              </div>
+            )}
+
+            {/* Active Batch Job Status */}
+            {activeBatchJob && (
+              <div className="p-3 bg-blue-500/10 dark:bg-blue-400/10 border border-blue-500/20 rounded-lg">
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 rounded-full ${
+                      activeBatchJob.status === 'processing' ? 'bg-blue-500 animate-pulse' :
+                      activeBatchJob.status === 'completed' ? 'bg-green-500' :
+                      'bg-red-500'
+                    }`} />
+                    <span className="text-sm font-medium">
+                      All Day Mode: {activeBatchJob.jobType.toUpperCase()}
+                    </span>
+                  </div>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={() => setAllDayModeDialogOpen(true)}
+                    data-testid="button-view-batch-progress"
+                  >
+                    <EyeIcon className="w-4 h-4 mr-1" />
+                    View Progress
+                  </Button>
+                </div>
+                <div className="w-full bg-muted rounded-full h-2 mb-1">
+                  <div 
+                    className="bg-primary h-2 rounded-full transition-all duration-500"
+                    style={{ width: `${activeBatchJob.progress}%` }}
+                  />
+                </div>
+                <div className="flex justify-between text-xs text-muted-foreground">
+                  <span>{activeBatchJob.completedSections} of {activeBatchJob.totalSections} sections</span>
+                  {activeBatchJob.estimatedTimeRemaining && (
+                    <span>~{activeBatchJob.estimatedTimeRemaining} remaining</span>
+                  )}
+                </div>
+              </div>
+            )}
+
             {/* Action Buttons */}
             <div className="flex gap-3">
               <Button
-                onClick={handleBleach}
-                disabled={!inputText.trim() || isProcessing}
+                onClick={() => {
+                  if (allDayModeEnabled && inputWordCount > 5000) {
+                    startBatchJobMutation.mutate({
+                      text: inputText,
+                      jobType: 'bleach',
+                      level: bleachingLevel,
+                      provider: selectedProvider,
+                      userId: currentUser?.id,
+                    });
+                  } else {
+                    handleBleach();
+                  }
+                }}
+                disabled={!inputText.trim() || isProcessing || startBatchJobMutation.isPending}
                 size="lg"
                 className="flex-1 h-11 text-base font-semibold"
                 data-testid="button-bleach"
               >
-                <SparklesIcon className={`w-5 h-5 mr-2 ${(bleachMutation.isPending || bleachChunksMutation.isPending) ? "animate-spin" : ""}`} />
-                {bleachMutation.isPending || bleachChunksMutation.isPending
+                <SparklesIcon className={`w-5 h-5 mr-2 ${(bleachMutation.isPending || bleachChunksMutation.isPending || startBatchJobMutation.isPending) ? "animate-spin" : ""}`} />
+                {startBatchJobMutation.isPending
+                  ? "Starting All Day Mode..."
+                  : bleachMutation.isPending || bleachChunksMutation.isPending
                   ? (showChunkSelection ? `Processing ${selectedChunkIds.size} chunks...` : (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Bleaching..."))
+                  : allDayModeEnabled && inputWordCount > 5000
+                  ? `Start All Day Bleach (${Math.ceil(inputWordCount / 1000)} sections)`
                   : (showChunkSelection && selectedChunkIds.size > 0 ? `Bleach ${selectedChunkIds.size} Chunks` : "Bleach Text")}
               </Button>
               <Button
-                onClick={handleGenerateJsonl}
-                disabled={!inputText.trim() || isProcessing}
+                onClick={() => {
+                  if (allDayModeEnabled && inputWordCount > 5000) {
+                    startBatchJobMutation.mutate({
+                      text: inputText,
+                      jobType: 'jsonl',
+                      level: bleachingLevel,
+                      provider: selectedProvider,
+                      userId: currentUser?.id,
+                    });
+                  } else {
+                    handleGenerateJsonl();
+                  }
+                }}
+                disabled={!inputText.trim() || isProcessing || startBatchJobMutation.isPending}
                 variant="secondary"
                 size="lg"
                 className="flex-1 h-11 text-base font-semibold"
                 data-testid="button-generate-jsonl"
               >
-                <DocumentTextIcon className={`w-5 h-5 mr-2 ${(sentenceBankMutation.isPending || sentenceBankChunksMutation.isPending) ? "animate-pulse" : ""}`} />
-                {sentenceBankMutation.isPending || sentenceBankChunksMutation.isPending
+                <DocumentTextIcon className={`w-5 h-5 mr-2 ${(sentenceBankMutation.isPending || sentenceBankChunksMutation.isPending || startBatchJobMutation.isPending) ? "animate-pulse" : ""}`} />
+                {startBatchJobMutation.isPending
+                  ? "Starting All Day Mode..."
+                  : sentenceBankMutation.isPending || sentenceBankChunksMutation.isPending
                   ? (showChunkSelection ? `Processing ${selectedChunkIds.size} chunks...` : (isLargeText ? `Processing ${estimatedChunks} chunks...` : "Processing..."))
+                  : allDayModeEnabled && inputWordCount > 5000
+                  ? `Start All Day JSONL (${Math.ceil(inputWordCount / 1000)} sections)`
                   : (showChunkSelection && selectedChunkIds.size > 0 ? `Generate JSONL (${selectedChunkIds.size} Chunks)` : "Generate JSONL")}
               </Button>
             </div>
