@@ -76,6 +76,11 @@ This produces human-like, detector-safe text with full content preservation.
   - Bank dialog shows download buttons for each installment (e.g., "Part 1 (1-10,000)", "Part 2 (10,001-20,000)")
   - Downloads are paginated via `/api/sentence-bank/download/:installment` endpoint
   - Each installment generates a JSONL file with pattern range in filename
+- **Output Persistence (Dec 2025)**: All processing outputs are now saved to database
+  - `bleached_text` table stores original text and bleached result from /api/bleach
+  - `jsonl_outputs` table stores generated JSONL content from /api/build-sentence-bank
+  - `writing_styles` table stores author style patterns with JSON arrays
+  - Storage methods: saveBleachedText(), saveJsonlOutput(), getAllWritingStyles(), getWritingStyleByName(), updateWritingStylePatterns()
 
 ### Layer 1 Features:
 - Single-page UI with split panels (input | output)
