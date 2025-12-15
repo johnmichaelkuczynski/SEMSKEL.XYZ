@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { pgTable, text, serial, integer, timestamp, varchar } from "drizzle-orm/pg-core";
+import { pgTable, text, serial, integer, timestamp, varchar, jsonb } from "drizzle-orm/pg-core";
 import { createInsertSchema } from "drizzle-zod";
 
 // ==================== DATABASE TABLES ====================
@@ -46,6 +46,43 @@ export const sentenceEntries = pgTable("sentence_entries", {
 export const insertSentenceEntrySchema = createInsertSchema(sentenceEntries).omit({ id: true, createdAt: true });
 export type InsertSentenceEntry = z.infer<typeof insertSentenceEntrySchema>;
 export type SentenceEntry = typeof sentenceEntries.$inferSelect;
+
+// Bleached text outputs table - stores all bleached text results
+export const bleachedText = pgTable("bleached_text", {
+  id: serial("id").primaryKey(),
+  originalText: text("original_text").notNull(),
+  bleachedText: text("bleached_text").notNull(),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertBleachedTextSchema = createInsertSchema(bleachedText).omit({ id: true, createdAt: true });
+export type InsertBleachedText = z.infer<typeof insertBleachedTextSchema>;
+export type BleachedText = typeof bleachedText.$inferSelect;
+
+// JSONL outputs table - stores all generated JSONL content
+export const jsonlOutputs = pgTable("jsonl_outputs", {
+  id: serial("id").primaryKey(),
+  content: text("content").notNull(),
+  sourceDescription: text("source_description"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertJsonlOutputSchema = createInsertSchema(jsonlOutputs).omit({ id: true, createdAt: true });
+export type InsertJsonlOutput = z.infer<typeof insertJsonlOutputSchema>;
+export type JsonlOutput = typeof jsonlOutputs.$inferSelect;
+
+// Writing styles table - stores author style patterns with JSON array
+export const writingStyles = pgTable("writing_styles", {
+  id: serial("id").primaryKey(),
+  styleName: text("style_name").notNull().unique(),
+  patternCount: integer("pattern_count").notNull().default(0),
+  patterns: jsonb("patterns").notNull().default([]),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const insertWritingStyleSchema = createInsertSchema(writingStyles).omit({ id: true, createdAt: true });
+export type InsertWritingStyle = z.infer<typeof insertWritingStyleSchema>;
+export type WritingStyle = typeof writingStyles.$inferSelect;
 
 // ==================== API SCHEMAS ====================
 
