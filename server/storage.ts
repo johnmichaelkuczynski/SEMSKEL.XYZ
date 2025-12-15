@@ -79,6 +79,17 @@ export interface IStorage {
   updateBatchSection(id: number, updates: Partial<BatchSection>): Promise<BatchSection | undefined>;
   getNextPendingSection(jobId: number): Promise<BatchSection | undefined>;
   resetProcessingSections(jobId: number): Promise<void>;
+  
+  // Bleached text output operations
+  saveBleachedText(originalText: string, bleachedTextContent: string): Promise<BleachedText>;
+  
+  // JSONL output operations
+  saveJsonlOutput(content: string, sourceDescription?: string): Promise<JsonlOutput>;
+  
+  // Writing styles operations
+  getAllWritingStyles(): Promise<WritingStyle[]>;
+  getWritingStyleByName(styleName: string): Promise<WritingStyle | undefined>;
+  updateWritingStylePatterns(id: number, patterns: any[], patternCount: number): Promise<void>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -337,6 +348,42 @@ export class DatabaseStorage implements IStorage {
           eq(batchSections.status, 'processing')
         )
       );
+  }
+
+  // Bleached text output operations
+  async saveBleachedText(originalText: string, bleachedTextContent: string): Promise<BleachedText> {
+    const result = await db.insert(bleachedText).values({
+      originalText,
+      bleachedText: bleachedTextContent,
+    }).returning();
+    return result[0];
+  }
+
+  // JSONL output operations
+  async saveJsonlOutput(content: string, sourceDescription?: string): Promise<JsonlOutput> {
+    const result = await db.insert(jsonlOutputs).values({
+      content,
+      sourceDescription: sourceDescription || null,
+    }).returning();
+    return result[0];
+  }
+
+  // Writing styles operations
+  async getAllWritingStyles(): Promise<WritingStyle[]> {
+    return await db.select().from(writingStyles).orderBy(writingStyles.styleName);
+  }
+
+  async getWritingStyleByName(styleName: string): Promise<WritingStyle | undefined> {
+    const result = await db.select().from(writingStyles)
+      .where(eq(writingStyles.styleName, styleName))
+      .limit(1);
+    return result[0];
+  }
+
+  async updateWritingStylePatterns(id: number, patterns: any[], patternCount: number): Promise<void> {
+    await db.update(writingStyles)
+      .set({ patterns, patternCount })
+      .where(eq(writingStyles.id, id));
   }
 }
 

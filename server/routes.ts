@@ -265,6 +265,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
           });
         }
         
+        // Save bleached text to database
+        try {
+          await storage.saveBleachedText(validatedData.text, bleachedText);
+        } catch (saveError) {
+          console.error("Failed to save bleached text to database:", saveError);
+        }
+        
         return res.json({
           bleachedText,
           originalFilename: validatedData.filename,
@@ -341,9 +348,18 @@ export async function registerRoutes(app: Express): Promise<Server> {
         chunk !== null ? chunk : `[Chunk ${idx + 1} could not be processed]`
       );
       
+      const combinedBleachedText = finalChunks.join('\n\n\n');
+      
+      // Save bleached text to database
+      try {
+        await storage.saveBleachedText(validatedData.text, combinedBleachedText);
+      } catch (saveError) {
+        console.error("Failed to save bleached text to database:", saveError);
+      }
+      
       // Return response with results (partial or complete)
       res.json({
-        bleachedText: finalChunks.join('\n\n\n'),
+        bleachedText: combinedBleachedText,
         originalFilename: validatedData.filename,
         chunksProcessed: successCount,
         totalChunks,
@@ -557,9 +573,19 @@ export async function registerRoutes(app: Express): Promise<Server> {
         });
       }
       
+      const combinedBleachedText = bleachedChunks.join('\n\n\n');
+      
+      // Save bleached text to database
+      try {
+        const originalText = chunks.map(c => c.text).join('\n\n');
+        await storage.saveBleachedText(originalText, combinedBleachedText);
+      } catch (saveError) {
+        console.error("Failed to save bleached text to database:", saveError);
+      }
+      
       // Return response with results (partial or complete)
       res.json({
-        bleachedText: bleachedChunks.join('\n\n\n'),
+        bleachedText: combinedBleachedText,
         chunksProcessed: successCount,
         totalChunks: chunks.length,
         failedChunks: failedChunkIds.length > 0 ? failedChunkIds : undefined,
@@ -682,6 +708,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
           console.error("Failed to save entries to database:", err);
           // Continue - we still have the JSONL output
         }
+      }
+      
+      // Save JSONL output to database
+      try {
+        await storage.saveJsonlOutput(jsonlOutput, `Generated from ${allEntries.length} sentences (chunks)`);
+      } catch (saveError) {
+        console.error("Failed to save JSONL output to database:", saveError);
       }
       
       console.log(`Completed: ${allEntries.length} entries from ${processedChunks}/${chunks.length} chunks (${failedSentences} sentences failed)`);
@@ -847,6 +880,13 @@ export async function registerRoutes(app: Express): Promise<Server> {
         punctuation_pattern: entry.punctuationPattern,
         structure: entry.structure,
       })).join('\n');
+      
+      // Save JSONL output to database
+      try {
+        await storage.saveJsonlOutput(jsonlContent, `Generated from ${allEntries.length} sentences`);
+      } catch (saveError) {
+        console.error("Failed to save JSONL output to database:", saveError);
+      }
       
       res.json({
         jsonlContent,
