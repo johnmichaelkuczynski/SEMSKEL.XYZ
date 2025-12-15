@@ -11,6 +11,9 @@ import {
   authorStyles,
   batchJobs,
   batchSections,
+  bleachedText,
+  jsonlOutputs,
+  writingStyles,
   type User,
   type InsertUser,
   type SentenceEntry,
@@ -22,6 +25,12 @@ import {
   type InsertBatchJob,
   type BatchSection,
   type InsertBatchSection,
+  type BleachedText,
+  type InsertBleachedText,
+  type JsonlOutput,
+  type InsertJsonlOutput,
+  type WritingStyle,
+  type InsertWritingStyle,
 } from "@shared/schema";
 
 // Create database connection
