@@ -2023,53 +2023,6 @@ export default function Home() {
               data-testid="input-pattern-gen-author"
             />
             <span className="text-sm text-muted-foreground">(Leave blank for general bank)</span>
-            
-            <input
-              id="importPatternFileInput"
-              type="file"
-              accept=".txt,.TXT"
-              className="hidden"
-              onChange={async (e) => {
-                const file = e.target.files?.[0];
-                if (!file) return;
-                const reader = new FileReader();
-                reader.onload = async (event) => {
-                  const content = event.target?.result as string;
-                  if (!content) return;
-                  try {
-                    const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
-                      content: content,
-                      authorName: patternGenAuthor.trim() || null,
-                    });
-                    const data = await response.json();
-                    const authorNote = patternGenAuthor.trim() 
-                      ? ` to "${patternGenAuthor.trim()}" library` 
-                      : " to general bank";
-                    toast({ 
-                      title: "Imported!", 
-                      description: `${data.imported || 0} patterns added${authorNote}` 
-                    });
-                    queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
-                    queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
-                  } catch (err) {
-                    toast({ title: "Error", description: "Failed to import patterns", variant: "destructive" });
-                  }
-                };
-                reader.readAsText(file);
-                e.target.value = "";
-              }}
-              data-testid="input-import-pattern-file"
-            />
-            <Button
-              variant="default"
-              size="sm"
-              className="bg-green-600 hover:bg-green-700"
-              onClick={() => document.getElementById("importPatternFileInput")?.click()}
-              data-testid="button-import-pattern-file"
-            >
-              <ArrowUpTrayIcon className="w-4 h-4 mr-1" />
-              Import Pattern File
-            </Button>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
@@ -3583,6 +3536,69 @@ export default function Home() {
               </div>
             </div>
           )}
+        </div>
+
+        {/* ADMIN: Pattern File Drop Zone */}
+        <div className="mt-8 p-6 border-2 border-dashed border-orange-500 rounded-lg bg-orange-50 dark:bg-orange-950">
+          <div className="flex items-center gap-3 mb-4">
+            <span className="text-2xl">🔧</span>
+            <h2 className="text-xl font-bold text-orange-700 dark:text-orange-300">Admin: Import Pattern Files</h2>
+          </div>
+          <div className="flex items-center gap-4 mb-4">
+            <Label className="font-semibold whitespace-nowrap">Author:</Label>
+            <Input
+              id="adminAuthorInput"
+              placeholder="e.g., Kuczynski"
+              className="max-w-xs"
+              data-testid="input-admin-author"
+            />
+          </div>
+          <div 
+            className="p-8 border-2 border-dashed border-orange-400 rounded-lg bg-white dark:bg-gray-900 text-center cursor-pointer hover:bg-orange-100 dark:hover:bg-orange-900 transition-colors"
+            onDragOver={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+            }}
+            onDrop={async (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const files = Array.from(e.dataTransfer.files);
+              const txtFile = files.find(f => f.name.toLowerCase().endsWith('.txt'));
+              if (!txtFile) {
+                toast({ title: "Error", description: "Please drop a .txt file", variant: "destructive" });
+                return;
+              }
+              const authorInput = document.getElementById("adminAuthorInput") as HTMLInputElement;
+              const authorName = authorInput?.value?.trim() || null;
+              const reader = new FileReader();
+              reader.onload = async (event) => {
+                const content = event.target?.result as string;
+                if (!content) return;
+                try {
+                  const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                    content: content,
+                    authorName: authorName,
+                  });
+                  const data = await response.json();
+                  const authorNote = authorName ? ` to "${authorName}"` : " to general bank";
+                  toast({ 
+                    title: "Imported!", 
+                    description: `${data.imported || 0} patterns added${authorNote}` 
+                  });
+                  queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+                  queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
+                } catch (err) {
+                  toast({ title: "Error", description: "Failed to import patterns", variant: "destructive" });
+                }
+              };
+              reader.readAsText(txtFile);
+            }}
+            data-testid="dropzone-admin-patterns"
+          >
+            <ArrowUpTrayIcon className="w-12 h-12 mx-auto text-orange-500 mb-2" />
+            <p className="text-lg font-semibold text-orange-700 dark:text-orange-300">Drop pattern file here</p>
+            <p className="text-sm text-muted-foreground">Drag and drop any .txt pattern file</p>
+          </div>
         </div>
       </div>
     </div>
