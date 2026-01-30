@@ -2348,43 +2348,6 @@ export default function Home() {
                   ? `Start All Day JSONL (${Math.ceil(inputWordCount / 1000)} sections)`
                   : (showChunkSelection && selectedChunkIds.size > 0 ? `Generate JSONL (${selectedChunkIds.size} Chunks)` : "Generate JSONL")}
               </Button>
-              <Button
-                onClick={async () => {
-                  if (!inputText.trim()) return;
-                  
-                  try {
-                    const response = await apiRequest("POST", "/api/build-sentence-bank", {
-                      text: inputText,
-                      level: bleachingLevel,
-                      provider: selectedProvider,
-                      userId: currentUser?.id,
-                    });
-                    const data = await response.json();
-                    
-                    if (data.entries && data.entries > 0) {
-                      queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
-                      toast({
-                        title: "Patterns saved to database!",
-                        description: `${data.entries} patterns added.`,
-                      });
-                    }
-                  } catch (error) {
-                    toast({
-                      title: "Error",
-                      description: "Failed to save patterns",
-                      variant: "destructive",
-                    });
-                  }
-                }}
-                disabled={!inputText.trim() || isProcessing}
-                variant="default"
-                size="lg"
-                className="h-11 text-base font-semibold bg-green-600 hover:bg-green-700"
-                data-testid="button-save-to-db"
-              >
-                <CircleStackIcon className="w-5 h-5 mr-2" />
-                SAVE TO DATABASE
-              </Button>
             </div>
           </div>
         </div>
