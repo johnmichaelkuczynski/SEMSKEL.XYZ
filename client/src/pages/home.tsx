@@ -2083,6 +2083,21 @@ export default function Home() {
                   <Button
                     variant="outline"
                     size="sm"
+                    onClick={() => {
+                      if (patternGenOutput) {
+                        navigator.clipboard.writeText(patternGenOutput);
+                        toast({ title: "Copied!", description: "Output copied to clipboard" });
+                      }
+                    }}
+                    disabled={!patternGenOutput}
+                    data-testid="button-copy-pattern-gen"
+                  >
+                    <ClipboardDocumentIcon className="w-4 h-4 mr-1" />
+                    Copy
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="sm"
                     onClick={async () => {
                       if (patternGenOutput) {
                         await saveFileWithPicker(patternGenOutput, `patterns_${Date.now()}.txt`, "text/plain");
