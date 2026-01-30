@@ -143,6 +143,7 @@ export default function Home() {
   
   // Pattern Generator state (top section)
   const [patternGenInput, setPatternGenInput] = useState("");
+  const [patternGenOutput, setPatternGenOutput] = useState("");
   const [patternGenProcessing, setPatternGenProcessing] = useState(false);
   const [patternGenFile, setPatternGenFile] = useState<string | null>(null);
   
@@ -2001,46 +2002,50 @@ export default function Home() {
 
       {/* PATTERN GENERATOR - One-Click Pattern File Creator */}
       <div className="p-6 border-b-4 border-green-500 bg-green-50 dark:bg-green-950/30">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <CircleStackIcon className="w-8 h-8 text-green-600" />
             <h2 className="text-2xl font-bold">Pattern Generator</h2>
-            <span className="text-base text-muted-foreground">— Upload or paste text, click button, get pattern file</span>
+            <span className="text-base text-muted-foreground">— Upload or paste text, generate patterns, download file</span>
           </div>
           
-          <div className="flex gap-4">
-            <div className="flex-1 flex flex-col gap-2">
-              <div className="flex items-center gap-2">
-                <input
-                  id="patternGenFileInput"
-                  type="file"
-                  accept=".txt"
-                  className="hidden"
-                  onChange={(e) => {
-                    const file = e.target.files?.[0];
-                    if (file) {
-                      const reader = new FileReader();
-                      reader.onload = (event) => {
-                        setPatternGenInput(event.target?.result as string || "");
-                        setPatternGenFile(file.name);
-                      };
-                      reader.readAsText(file);
-                    }
-                  }}
-                  data-testid="input-pattern-gen-file"
-                />
-                <Button
-                  variant="outline"
-                  onClick={() => document.getElementById("patternGenFileInput")?.click()}
-                  className="bg-white dark:bg-gray-800"
-                  data-testid="button-browse-pattern-gen"
-                >
-                  <ArrowUpTrayIcon className="w-4 h-4 mr-2" />
-                  Browse for .txt file
-                </Button>
-                {patternGenFile && (
-                  <span className="text-sm text-green-600 font-medium">Loaded: {patternGenFile}</span>
-                )}
+          <div className="grid grid-cols-2 gap-4">
+            {/* INPUT SIDE */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <Label className="text-lg font-bold">INPUT</Label>
+                <div className="flex items-center gap-2">
+                  <input
+                    id="patternGenFileInput"
+                    type="file"
+                    accept=".txt"
+                    className="hidden"
+                    onChange={(e) => {
+                      const file = e.target.files?.[0];
+                      if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (event) => {
+                          setPatternGenInput(event.target?.result as string || "");
+                          setPatternGenFile(file.name);
+                        };
+                        reader.readAsText(file);
+                      }
+                    }}
+                    data-testid="input-pattern-gen-file"
+                  />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={() => document.getElementById("patternGenFileInput")?.click()}
+                    data-testid="button-browse-pattern-gen"
+                  >
+                    <ArrowUpTrayIcon className="w-4 h-4 mr-1" />
+                    Browse
+                  </Button>
+                  {patternGenFile && (
+                    <span className="text-xs text-green-600 font-medium">{patternGenFile}</span>
+                  )}
+                </div>
               </div>
               <Textarea
                 value={patternGenInput}
@@ -2059,66 +2064,99 @@ export default function Home() {
                     reader.readAsText(file);
                   }
                 }}
-                placeholder="Drag .txt file here, paste text, or use Browse button above..."
-                className="flex-1 h-44 text-base"
+                placeholder="Drag .txt file here, paste text, or use Browse button..."
+                className="h-48 text-sm"
                 data-testid="textarea-pattern-gen"
               />
+              {patternGenInput && (
+                <p className="text-sm text-muted-foreground">
+                  {patternGenInput.split(/\s+/).filter(Boolean).length.toLocaleString()} words
+                </p>
+              )}
             </div>
-            <div className="flex flex-col gap-3">
-              <Button
-                onClick={async () => {
-                  if (!patternGenInput.trim()) return;
-                  setPatternGenProcessing(true);
-                  try {
-                    const response = await apiRequest("POST", "/api/build-sentence-bank", {
-                      text: patternGenInput,
-                      level: "Heavy",
-                      provider: "anthropic",
-                    });
-                    const data = await response.json();
-                    
-                    if (data.jsonl) {
-                      const lines = data.jsonl.trim().split("\n");
-                      let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\nDownloaded: ${new Date().toLocaleString()}\n\n`;
-                      
-                      lines.forEach((line: string, index: number) => {
-                        try {
-                          const entry = JSON.parse(line);
-                          txtContent += `--- Pattern ${index + 1} ---\n`;
-                          txtContent += `Original: ${entry.original}\n`;
-                          txtContent += `Bleached: ${entry.bleached}\n`;
-                          txtContent += `Chars: ${entry.char_length || 0} | Tokens: ${entry.token_length || 0} | Clauses: ${entry.clause_count || 1}\n`;
-                          txtContent += `Clause Order: ${entry.clause_order || "main → subordinate"}\n`;
-                          txtContent += `Punctuation: ${entry.punctuation_pattern || "(none)"}\n\n`;
-                        } catch {}
-                      });
-                      
-                      const saved = await saveFileWithPicker(txtContent, `patterns_${Date.now()}.txt`, "text/plain");
-                      if (saved) {
-                        toast({ title: "Pattern file created!", description: `${lines.length} patterns saved.` });
-                        setPatternGenInput("");
-                        setPatternGenFile(null);
+            
+            {/* OUTPUT SIDE */}
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
+                <Label className="text-lg font-bold">OUTPUT</Label>
+                <div className="flex items-center gap-2">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    onClick={async () => {
+                      if (patternGenOutput) {
+                        await saveFileWithPicker(patternGenOutput, `patterns_${Date.now()}.txt`, "text/plain");
                       }
-                    }
-                  } catch (error) {
-                    toast({ title: "Error", description: "Failed to generate patterns", variant: "destructive" });
-                  }
-                  setPatternGenProcessing(false);
-                }}
-                disabled={!patternGenInput.trim() || patternGenProcessing}
-                className="h-48 px-10 bg-green-600 hover:bg-green-700 text-white font-bold text-lg"
-                data-testid="button-generate-pattern-file"
-              >
-                {patternGenProcessing ? "Processing..." : "CREATE\nPATTERN\nFILE"}
-              </Button>
+                    }}
+                    disabled={!patternGenOutput}
+                    data-testid="button-download-pattern-gen"
+                  >
+                    <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                    Download
+                  </Button>
+                </div>
+              </div>
+              <Textarea
+                value={patternGenOutput}
+                readOnly
+                placeholder="Generated patterns will appear here..."
+                className="h-48 text-sm font-mono bg-white dark:bg-gray-900"
+                data-testid="textarea-pattern-gen-output"
+              />
+              {patternGenOutput && (
+                <p className="text-sm text-green-600 font-medium">
+                  {(patternGenOutput.match(/--- Pattern/g) || []).length} patterns generated
+                </p>
+              )}
             </div>
           </div>
           
-          {patternGenInput && (
-            <p className="text-sm text-muted-foreground mt-2">
-              {patternGenInput.split(/\s+/).filter(Boolean).length.toLocaleString()} words loaded
-            </p>
-          )}
+          {/* GENERATE BUTTON */}
+          <div className="flex justify-center mt-4">
+            <Button
+              onClick={async () => {
+                if (!patternGenInput.trim()) return;
+                setPatternGenProcessing(true);
+                setPatternGenOutput("");
+                try {
+                  const response = await apiRequest("POST", "/api/build-sentence-bank", {
+                    text: patternGenInput,
+                    level: "Heavy",
+                    provider: "anthropic",
+                  });
+                  const data = await response.json();
+                  
+                  if (data.jsonl) {
+                    const lines = data.jsonl.trim().split("\n");
+                    let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\nGenerated: ${new Date().toLocaleString()}\n\n`;
+                    
+                    lines.forEach((line: string, index: number) => {
+                      try {
+                        const entry = JSON.parse(line);
+                        txtContent += `--- Pattern ${index + 1} ---\n`;
+                        txtContent += `Original: ${entry.original}\n`;
+                        txtContent += `Bleached: ${entry.bleached}\n`;
+                        txtContent += `Chars: ${entry.char_length || 0} | Tokens: ${entry.token_length || 0} | Clauses: ${entry.clause_count || 1}\n`;
+                        txtContent += `Clause Order: ${entry.clause_order || "main → subordinate"}\n`;
+                        txtContent += `Punctuation: ${entry.punctuation_pattern || "(none)"}\n\n`;
+                      } catch {}
+                    });
+                    
+                    setPatternGenOutput(txtContent);
+                    toast({ title: "Patterns generated!", description: `${lines.length} patterns ready. Click Download to save.` });
+                  }
+                } catch (error) {
+                  toast({ title: "Error", description: "Failed to generate patterns", variant: "destructive" });
+                }
+                setPatternGenProcessing(false);
+              }}
+              disabled={!patternGenInput.trim() || patternGenProcessing}
+              className="px-16 py-6 bg-green-600 hover:bg-green-700 text-white font-bold text-xl"
+              data-testid="button-generate-pattern-file"
+            >
+              {patternGenProcessing ? "PROCESSING..." : "GENERATE PATTERNS"}
+            </Button>
+          </div>
         </div>
       </div>
 
