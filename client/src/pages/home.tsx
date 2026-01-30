@@ -2126,8 +2126,8 @@ export default function Home() {
                   });
                   const data = await response.json();
                   
-                  if (data.jsonl) {
-                    const lines = data.jsonl.trim().split("\n");
+                  if (data.jsonlContent) {
+                    const lines = data.jsonlContent.trim().split("\n");
                     let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\nGenerated: ${new Date().toLocaleString()}\n\n`;
                     
                     lines.forEach((line: string, index: number) => {
