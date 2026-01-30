@@ -1446,12 +1446,18 @@ export default function Home() {
   };
 
   const handleClearAll = () => {
+    // Clear Pattern Generator section
+    setPatternGenInput("");
+    setPatternGenOutput("");
+    setPatternGenFile(null);
+    setPatternGenAuthor("");
     // Clear bleaching section
     setInputText("");
     setOutputText("");
     setUploadedFile(null);
     setJsonlContent(null);
     setSentenceCount(0);
+    setJsonlAuthor("");
     // Clear chunk selection
     setChunks([]);
     setSelectedChunkIds(new Set());
