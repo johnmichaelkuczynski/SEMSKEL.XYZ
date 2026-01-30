@@ -2189,7 +2189,8 @@ export default function Home() {
                   
                   if (data.jsonlContent) {
                     const lines = data.jsonlContent.trim().split("\n");
-                    let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\nGenerated: ${new Date().toLocaleString()}\n\n`;
+                    const authorLine = patternGenAuthor.trim() ? `Author: ${patternGenAuthor.trim()}\n` : "";
+                    let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\n${authorLine}Generated: ${new Date().toLocaleString()}\n\n`;
                     
                     lines.forEach((line: string, index: number) => {
                       try {
