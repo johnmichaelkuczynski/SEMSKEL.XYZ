@@ -201,7 +201,10 @@ export class DatabaseStorage implements IStorage {
   }
 
   async getAuthorStyleByName(name: string): Promise<AuthorStyle | undefined> {
-    const result = await db.select().from(authorStyles).where(eq(authorStyles.name, name)).limit(1);
+    // Case-insensitive lookup
+    const result = await db.select().from(authorStyles)
+      .where(sql`LOWER(${authorStyles.name}) = LOWER(${name})`)
+      .limit(1);
     return result[0];
   }
 

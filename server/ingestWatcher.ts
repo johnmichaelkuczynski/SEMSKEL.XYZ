@@ -2,7 +2,7 @@ import * as fs from "fs";
 import * as path from "path";
 import { db } from "./storage";
 import { sentenceEntries, authorStyles } from "../shared/schema";
-import { eq } from "drizzle-orm";
+import { eq, sql } from "drizzle-orm";
 
 const INGEST_DIR = "./ingest";
 const PROCESSED_DIR = "./ingest/processed";
@@ -22,8 +22,9 @@ function extractAuthorFromFilename(filename: string): string | null {
 }
 
 async function getOrCreateAuthorStyle(authorName: string): Promise<number> {
-  // Check if author exists
-  const existing = await db.select().from(authorStyles).where(eq(authorStyles.name, authorName));
+  // Check if author exists (case-insensitive)
+  const existing = await db.select().from(authorStyles)
+    .where(sql`LOWER(${authorStyles.name}) = LOWER(${authorName})`);
   if (existing.length > 0) {
     return existing[0].id;
   }
