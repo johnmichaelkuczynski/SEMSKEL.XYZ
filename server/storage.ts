@@ -61,6 +61,7 @@ export interface IStorage {
   createAuthorStyle(style: InsertAuthorStyle): Promise<AuthorStyle>;
   getAuthorStyleSentences(authorStyleId: number): Promise<SentenceEntry[]>;
   getAuthorStyleSentenceCount(authorStyleId: number): Promise<number>;
+  incrementAuthorPatternCount(authorStyleId: number, count: number): Promise<void>;
   addSentenceEntriesToAuthorStyle(authorStyleId: number, entries: InsertSentenceEntry[]): Promise<number>;
   getExistingBleachedTextsForAuthor(authorStyleId: number, bleachedTexts: string[]): Promise<Set<string>>;
   
@@ -224,6 +225,12 @@ export class DatabaseStorage implements IStorage {
       .from(sentenceEntries)
       .where(eq(sentenceEntries.authorStyleId, authorStyleId));
     return result[0]?.count || 0;
+  }
+
+  async incrementAuthorPatternCount(authorStyleId: number, count: number): Promise<void> {
+    await db.update(authorStyles)
+      .set({ patternCount: sql`${authorStyles.patternCount} + ${count}` })
+      .where(eq(authorStyles.id, authorStyleId));
   }
 
   async addSentenceEntriesToAuthorStyle(authorStyleId: number, entries: InsertSentenceEntry[]): Promise<number> {

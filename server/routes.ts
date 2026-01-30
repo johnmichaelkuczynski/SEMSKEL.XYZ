@@ -1136,6 +1136,11 @@ export async function registerRoutes(app: Express): Promise<Server> {
           }
         }
         
+        // Update the pattern_count field on author_styles
+        if (imported > 0) {
+          await storage.incrementAuthorPatternCount(authorStyle.id, imported);
+        }
+        
         total = await storage.getAuthorStyleSentenceCount(authorStyle.id);
       } else {
         // Add to general bank (no author)

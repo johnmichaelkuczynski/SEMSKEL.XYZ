@@ -20,6 +20,7 @@ export const authorStyles = pgTable("author_styles", {
   id: serial("id").primaryKey(),
   name: varchar("name", { length: 100 }).notNull().unique(),
   description: text("description"),
+  patternCount: integer("pattern_count").default(0).notNull(),
   createdAt: timestamp("created_at").defaultNow().notNull(),
 });
 

@@ -176,6 +176,13 @@ async function processFile(filePath: string): Promise<number> {
       totalImported += batch.length;
     }
     
+    // Update the pattern_count field on author_styles if author was assigned
+    if (authorStyleId && totalImported > 0) {
+      await db.update(authorStyles)
+        .set({ patternCount: sql`${authorStyles.patternCount} + ${totalImported}` })
+        .where(eq(authorStyles.id, authorStyleId));
+    }
+    
     console.log(`[IngestWatcher] Imported ${totalImported} patterns from ${fileName}`);
     
     const processedPath = path.join(PROCESSED_DIR, `${Date.now()}_${fileName}`);
