@@ -2109,21 +2109,64 @@ export default function Home() {
                     onClick={async () => {
                       if (!patternGenOutput) return;
                       try {
-                        const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
-                          content: patternGenOutput,
-                          authorName: patternGenAuthor.trim() || null,
-                        });
-                        const data = await response.json();
+                        // Split patterns into chunks of 50 for large uploads
+                        const patternBlocks = patternGenOutput.split(/--- Pattern \d+ ---/).filter(b => b.trim());
+                        const CHUNK_SIZE = 50;
+                        let totalImported = 0;
+                        let lastTotal = 0;
+                        
+                        if (patternBlocks.length <= CHUNK_SIZE) {
+                          // Small upload - do it in one request
+                          const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                            content: patternGenOutput,
+                            authorName: patternGenAuthor.trim() || null,
+                          });
+                          const data = await response.json();
+                          totalImported = data.imported || 0;
+                          lastTotal = data.total || 0;
+                        } else {
+                          // Large upload - split into chunks
+                          const header = patternGenOutput.split("--- Pattern 1 ---")[0];
+                          const chunks: string[] = [];
+                          
+                          for (let i = 0; i < patternBlocks.length; i += CHUNK_SIZE) {
+                            const chunkBlocks = patternBlocks.slice(i, i + CHUNK_SIZE);
+                            let chunkContent = header;
+                            chunkBlocks.forEach((block, idx) => {
+                              chunkContent += `--- Pattern ${idx + 1} ---${block}`;
+                            });
+                            chunks.push(chunkContent);
+                          }
+                          
+                          toast({ title: "Uploading...", description: `Processing ${chunks.length} batches...` });
+                          
+                          for (let i = 0; i < chunks.length; i++) {
+                            const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                              content: chunks[i],
+                              authorName: patternGenAuthor.trim() || null,
+                            });
+                            const data = await response.json();
+                            totalImported += data.imported || 0;
+                            lastTotal = data.total || 0;
+                            
+                            // Small delay between chunks
+                            if (i < chunks.length - 1) {
+                              await new Promise(r => setTimeout(r, 300));
+                            }
+                          }
+                        }
+                        
                         const authorNote = patternGenAuthor.trim() 
                           ? ` to "${patternGenAuthor.trim()}" library` 
                           : " to general bank";
                         toast({ 
                           title: "Uploaded to Database!", 
-                          description: `${data.imported || 0} patterns added${authorNote}. Total: ${data.total || 0}` 
+                          description: `${totalImported} patterns added${authorNote}. Total: ${lastTotal}` 
                         });
                         queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
                         queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
                       } catch (error) {
+                        console.error("Upload error:", error);
                         toast({ title: "Error", description: "Failed to upload patterns", variant: "destructive" });
                       }
                     }}
