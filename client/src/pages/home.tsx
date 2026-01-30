@@ -3538,7 +3538,8 @@ export default function Home() {
           )}
         </div>
 
-        {/* ADMIN: Pattern File Drop Zone */}
+        {/* ADMIN: Pattern File Drop Zone - Only visible to admin users */}
+        {currentUser && (currentUser.username.toLowerCase() === "admin" || currentUser.username.toLowerCase() === "jmk") && (
         <div className="mt-8 p-6 border-2 border-dashed border-orange-500 rounded-lg bg-orange-50 dark:bg-orange-950">
           <div className="flex items-center gap-3 mb-4">
             <span className="text-2xl">🔧</span>
@@ -3600,6 +3601,7 @@ export default function Home() {
             <p className="text-sm text-muted-foreground">Drag and drop any .txt pattern file</p>
           </div>
         </div>
+        )}
       </div>
     </div>
   );
