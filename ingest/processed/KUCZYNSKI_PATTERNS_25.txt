@@ -1,0 +1,4850 @@
+=== SENTENCE BANK ===
+Total Patterns: 427
+Author: KUCZYNSKI
+Generated: 1/30/2026, 1:22:22 PM
+
+--- Pattern 1 ---
+Original: The King Follet Discourse: 
+
+                                  A Historiographical Approach 
+
+ 
+
+I.
+Bleached: The F G X:
+
+                                  A Y-cal Z
+
+ 
+
+I.
+Chars: 105 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 2 ---
+Original: Introduction 
+
+II.
+Bleached: Introduction 
+
+II.
+Chars: 20 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 3 ---
+Original: Smith’s Arguments for 1-5 
+
+III.
+Bleached: A's B's for 1-5 
+
+III.
+Chars: 34 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 4 ---
+Original: "The Doctrinal Impact of the King Follett Discourse” (1978) by Van Hale 
+
+IV.
+Bleached: """
+"The A B of the C D E" (1978) by F G 
+
+IV.
+"""
+Chars: 79 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "().
+
+--- Pattern 5 ---
+Original: “The Idea of Pre-Existence in the Development of Mormon Thought” (1982) 
+
+by Blake Ostler 
+
+V.
+Bleached: "The A of B-C in the D of E F" (1982) 
+
+by G H 
+
+V.
+Chars: 98 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -().
+
+--- Pattern 6 ---
+Original: “Elohim and Jehovah in Mormonism and the Bible” (1986) by Boyd Kirkland.
+Bleached: "X and Y in Z and the W" (1986) by A B.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 7 ---
+Original: VI.
+Bleached: VI.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 8 ---
+Original: "The Development of the Mormon Doctrine of God” (1989) by Boyd Kirkland.
+Bleached: "The P of the Q R of S" (1989) by T U.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "().
+
+--- Pattern 9 ---
+Original: VII.
+Bleached: VII.
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 10 ---
+Original: Exploring Mormon Thought: Volume 1, The Attributes of God (2001) by Blake Ostler 
+
+VIII.
+Bleached: """
+X-ing Y Z: Volume 1, The A's of B (2001) by C D 
+
+VIII.
+"""
+Chars: 90 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,().
+
+--- Pattern 11 ---
+Original: “The Weeping God of Mormonism” (2002) by Eugene England.
+Bleached: "The X-ing Y of Z" (2002) by A B.
+Chars: 56 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 12 ---
+Original: IX.
+Bleached: IX.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 13 ---
+Original: “William Phelp's Paracletes” (2021) by Matthew Bowman 
+
+X.
+Bleached: "A B's C" (2021) by D E
+
+F.
+Chars: 60 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '().
+
+--- Pattern 14 ---
+Original: "What Is the Nature of God’s Progress?” (2021) by Matthew Bowman 
+
+Conclusion 
+
+ 
+
+ 
+
+                                        I.
+Bleached: """
+"X Is the Y of Z's W?" (2021) by A B 
+
+C 
+
+ 
+
+ 
+
+                                        I.
+"""
+Chars: 136 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "?().
+
+--- Pattern 15 ---
+Original: Introduction 
+
+ 
+
+            In 1844, Joseph Smith gave a sermon that is now referred to as the “King Follett 
+
+      Discourse” (KFD).
+Bleached: Introduction 
+
+ 
+
+            In 1844, A B gave a C that is now D to as the "E F 
+
+      G" (H).
+Chars: 142 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 16 ---
+Original: The doctrines put forth in KFD represented a sharp break from 
+
+      existing Christian theological orthodoxy.
+Bleached: The X put Y in Z W-ed a X X from 
+
+      X-ing X X X.
+Chars: 113 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 17 ---
+Original: Indeed, those doctrines are still opposed to 
+
+      virtually all other Christian orthodoxies.
+Bleached: Indeed, those A are still B-ed to 
+
+      virtually all other C D-ies.
+Chars: 97 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 18 ---
+Original: Even though today’s Mormon Church rejects 
+
+      many of these doctrines, they nonetheless had an important role in the development of 
+
+      contemporary Mormon theological orthodoxy, and their validity remains a matter of 
+
+      fierce debate among Mormon theologians.
+Bleached: Even though today's A B rejects 
+
+      many of these C, they nonetheless had an D role in the E of 
+
+      F A G H, and their I remains a J of 
+
+      K L among A M.
+Chars: 279 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 19 ---
+Original: KFD is clear and straightforward.
+Bleached: X is Y and Z.
+Chars: 33 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 20 ---
+Original: Its main contentions are:  
+
+ 
+
+                1.
+Bleached: Its main X's are:  
+
+ 
+
+                1.
+Chars: 54 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 21 ---
+Original: God was once a man; he became God through a process of spiritual 
+
+                    development.
+Bleached: Ω was once a F; he became Ω through a P of Λ 
+
+                    Q.
+Chars: 101 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 22 ---
+Original: 2.
+Bleached: 2.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 23 ---
+Original: Human beings can become demi-Gods, or at least God-like, if they 
+
+                    undergo a similar process.
+Bleached: X Y's can become Z-W's, or at least W-like, if they 
+
+                    undergo a similar V.
+Chars: 115 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,.
+
+--- Pattern 24 ---
+Original: 3.
+Bleached: 3.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 25 ---
+Original: Although there is a single supreme God, there also exist several lesser 
+
+                    gods.
+Bleached: Although there is a single A B, there also C several D 
+
+                    B's.
+Chars: 101 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 26 ---
+Original: 4.
+Bleached: 4.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 27 ---
+Original: Although God did create the world, he did not do so ex nihilo; rather, he 
+
+                    did it by working with pre-existing materials: he did not create the world 
+
+                    so much as he organized it.
+Bleached: Although A did B the C, he did not do so ex nihilo; rather, he 
+
+                    did it by D-ing with E-ing F's: he did not B the C 
+
+                    so much as he G-ed it.
+Chars: 224 | Tokens: 34 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,;,-:.
+
+--- Pattern 28 ---
+Original: 5.
+Bleached: 5.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 29 ---
+Original: A given human being has always existed and will always exist: being 
+
+                    human entails existing eternally, and existing eternally entails having 
+
+                    always existed.
+Bleached: A X Y Z has always X-ed and will always X: being 
+
+                    Y entails X-ing eternally, and X-ing eternally entails having 
+
+                    always X-ed.
+Chars: 203 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 30 ---
+Original: 2-4 are corollaries of 1.
+Bleached: 2-4 are X of 1.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 31 ---
+Original: Given that God was once a man, it follows that other 
+
+      humans can become Gods; and given that humans can become Gods, it follows that 
+
+      multiple gods exist.
+Bleached: Given that X was once a Y, it follows that other 
+
+      Z's can become X's; and given that Z's can become X's, it follows that 
+
+      multiple x's exist.
+Chars: 172 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 32 ---
+Original: And given that God was once a person, it follows that, if he created 
+
+    the world, it was by reconfiguring existing materials.
+Bleached: And given that A was once a B, it follows that, if he C-ed 
+
+    the D, it was by E-ing F-ing G's.
+Chars: 131 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 33 ---
+Original: It is not hard to understand what Joseph Smith is saying.
+Bleached: It is not A to B what C D is E-ing.
+Chars: 57 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 34 ---
+Original: What is hard to 
+
+      understand is why he said it.
+Bleached: What is X to 
+
+      Y is why he Z it.
+Chars: 55 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 35 ---
+Original: What exactly was his reasoning?
+Bleached: What exactly was his X-ing?
+Chars: 31 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 36 ---
+Original: What exactly was he 
+
+      hoping to accomplish?
+Bleached: What exactly was he 
+
+      X-ing to Y?
+Chars: 51 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 37 ---
+Original: In KFD, Smith puts forth arguments for his assertions, and those arguments are 
+
+      reasonably clear.
+Bleached: In X, Y Z forth W for his V, and those W are 
+
+      reasonably clear.
+Chars: 106 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 38 ---
+Original: But in KFD, Smith was not presenting the conclusions of arguments; he 
+
+      was presenting a vision: a clear, unequivocal, and extremely heterodox vision as to the 
+
+      nature of God and man’s relationship thereto.
+Bleached: But in X, Y was not Z-ing the W's of V's; he 
+
+      was Z-ing a U: a T, S, and R Q U as to the 
+
+      P of N and M's L thereto.
+Chars: 223 | Tokens: 33 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,;:,,.
+
+--- Pattern 39 ---
+Original: And those arguments, even if assumed 
+
+      cogent, simply wouldn’t lead anyone, including Joseph Smith himself, to accept such a 
+
+      vision.
+Bleached: And those X's, even if Y-ed 
+
+      Z, simply wouldn't W anyone, including A B himself, to V such a 
+
+      C.
+Chars: 150 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 40 ---
+Original: The merits of that vision lie in that vision itself, not in Joseph Smith’s arguments 
+
+    for it, and the question remains: Where did Smith’s vision come from?
+Bleached: The X's of that Y lie in that Y itself, not in Z A's B's 
+
+    for it, and the C remains: Where did A's Y come from?
+Chars: 162 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,:?
+
+--- Pattern 41 ---
+Original: A related question is: What did that vision lead to?
+Bleached: A X-ed Y is: What did that Z W to?
+Chars: 52 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 42 ---
+Original: In particular, what were its 
+
+      consequences for Mormonism?
+Bleached: In particular, what were its 
+
+      X for Y?
+Chars: 66 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 43 ---
+Original: What role does it have in contemporary Mormon thought 
+
+    and how did it come to have that role?
+Bleached: What X does it have in Y Z X
+
+    and how did it X to have that X?
+Chars: 100 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 44 ---
+Original: This paper discusses a series of attempts to answer these questions, thereby 
+
+      showing how these beliefs have changed over time.
+Bleached: This A B's a C of D's to E these F's, thereby 
+
+      G-ing how these H's have I-ed over J.
+Chars: 136 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 45 ---
+Original: The works discussed are: "The 
+
+      Doctrinal Impact of the King Follett Discourse" (1978), by Van Hale; “The Idea of Pre-      Existence in the Development of Mormon Thought” (1982), by Blake Ostler; “Elohim 
+
+    and Jehovah in Mormonism and the Bible” (1986), by Boyd Kirkland; "The Development 
+
+    of the Mormon Doctrine of God” (1989), also by Boyd Kirkland; Exploring Mormon 
+
+      Thought: Volume 1, The Attributes of God (2001), by Blake Ostler; “The Weeping God 
+
+    of Mormonism” (2002); “William Phelp's Paracletes” (2009), by Samuel Brown; and 
+
+      "What Is the Nature of God’s Progress?" (2021), by Matthew Bowman.
+Bleached: The X's Y-ed are: "The 
+
+      Z A of the B C D" (1978), by E F; "The G of H-I in the J of K L" (1982), by M N; "O 
+
+    and P in Q and the R" (1986), by S T; "The J 
+
+    of the K U of V" (1989), also by S T; W K 
+
+      X: Y 1, The Z's of V (2001), by M N; "The AA V 
+
+    of Q" (2002); "BB CC's DD" (2009), by EE FF; and 
+
+      "What Is the GG of V's HH?" (2021), by II JJ.
+Chars: 648 | Tokens: 94 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :""(),;-(),;(),;"(),;:,(),;();'(),;"?"(),.
+
+--- Pattern 46 ---
+Original: The present work 
+
+      discusses these works in chronological order, taking note of cases where a given work 
+
+      either builds on or diverges from one of its predecessors in the series.
+Bleached: The A work 
+
+      B's these C's in D E, F G of H's where a I work 
+
+      either J's on or K's from one of its L's in the M.
+Chars: 195 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 47 ---
+Original: II.
+Bleached: II.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 48 ---
+Original: Smith’s Arguments for 1-5 
+
+ 
+
+    We will start by stating the arguments for 1-5 that Joseph Smith presents in KFD.
+Bleached: F's G's for 1-5 
+
+ 
+
+    We will H by I-ing the G's for 1-5 that J F K's in L.
+Chars: 120 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 49 ---
+Original: Smith’s argument for 1 is extremely straightforward: God resembles a man; therefore he 
+
+is a man, albeit an exalted one.
+Bleached: A's B for 1 is C D: E F a G; H I is a G, J an K L.
+Chars: 123 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :;,.
+
+--- Pattern 50 ---
+Original: In Smith’s own words:  
+
+ 
+
+    It is the first principle of the Gospel to know for a certainty the Character of God, and to 
+
+      know that we may converse with him as one man converses with another, and that he was 
+
+      once a man like us; yea, that God himself, the Father of us all, dwelt on an earth, the 
+
+      same as Jesus Christ himself did; and I will show it from the Bible… God himself was 
+
+      once as we are now, and is an exalted man, and sits enthroned in yonder heavens!
+Bleached: In A's own B:  
+
+ 
+
+    It is the first C of the D to E for a F the G of H, and to 
+
+      E that we may I with him as one J I-s with another, and that he was 
+
+      once a J like us; yea, that H himself, the K of us all, L-ed on an M, the 
+
+      same as N O himself P-ed; and I will Q it from the R… H himself was 
+
+      once as we are now, and is an S-ed J, and T-s U-ed in V W!
+Chars: 508 | Tokens: 92 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,;,,,,;,,!
+
+--- Pattern 51 ---
+Original: That is 
+
+    the great secret.
+Bleached: That is 
+
+    the X Y.
+Chars: 33 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 52 ---
+Original: If the veil were rent today, and the great God who holds this world in its 
+
+      orbit, and who upholds all worlds and all things by his power, was to make himself 
+
+      visible, -- I say, if you were to see him today, you would see him like a man in form -- 
+
+    like yourselves in all the person, image, and very form as a man; for Adam was created in 
+
+    the very fashion, image and likeness of God, and received instruction from, and walked, 
+
+      talked and conversed with him, as one man talks and communes with another” (Smith pp.
+Bleached: If the A were B today, and the great C who D this E in its 
+
+      F, and who G all H and all I by his J, was to K himself 
+
+      L, -- I M, if you were to N him today, you would N him like a O in P -- 
+
+    like yourselves in all the Q, R, and very P as a O; for S was T-ed in 
+
+    the very U, R and V of C, and W-ed X from, and Y-ed, 
+
+      Z-ed and AA-ed with him, as one O BB and CC with another" (DD pp.
+Chars: 556 | Tokens: 100 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,,--,,--,,;,,,,,(.
+
+--- Pattern 53 ---
+Original: 4-5).
+Bleached: 4-5).
+Chars: 5 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -).
+
+--- Pattern 54 ---
+Original: The argument here is the same: God resembles Adam, a human being; therefore, 
+
+      God is himself a human being.”  (Smith pp.
+Bleached: The A here is the same: B C's D, a E F; therefore, 
+
+      B is himself a E F."  (G pp.
+Chars: 129 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,;,.(.
+
+--- Pattern 55 ---
+Original: 3-4).
+Bleached: 3-4).
+Chars: 5 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -).
+
+--- Pattern 56 ---
+Original: Let us restate this argument in our own words.
+Bleached: Let us X this Y in our own Z's.
+Chars: 46 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 57 ---
+Original: We converse with God as we do with 
+
+other humans.
+Bleached: We X with Y as we do with 
+
+other Z's.
+Chars: 52 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 58 ---
+Original: Jesus is the son of God, and Jesus cannot be the son of God unless God is human.
+Bleached: A is the B of C, and A cannot be the B of C unless C is D.
+Chars: 80 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 59 ---
+Original: (If I am a human, my father is human; if my father is a panther, then I am a panther, not a 
+
+human.) Also, God resembles Adam, who was a human being; indeed, in creating Adam, God 
+
+created a replica of himself.
+Bleached: (If I am a X, my Y is X; if my Y is a Z, then I am a Z, not a 
+
+X.) Also, W R's A, who was a X B; indeed, in C-ing A, W 
+
+D-ed a E of himself.
+Chars: 216 | Tokens: 42 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: (,;,,.),,;,,.
+
+--- Pattern 60 ---
+Original: For these reasons, God must himself be human.
+Bleached: For these A, B must himself be C.
+Chars: 45 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 61 ---
+Original: This argument makes a number of assumptions, in particular that we do in fact converse 
+
+with God and, more generally, that the Bible is factually accurate.
+Bleached: This A B-s a C of D-s, in E that we do in F G with H and, more I, that the J is K-ly L.
+Chars: 158 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 62 ---
+Original: But given those assumptions, 
+
+it does stand to reason that God is a person.
+Bleached: But given those X, 
+
+it does Y to Z that A is a B.
+Chars: 78 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 63 ---
+Original: In the Bible, God thinks and emotes like a person; 
+
+and his existence and nature become very hard to explain except on the assumption that we either 
+
+(i) came from him, in which case he is a human or proto-human, or (ii) he came from us, in 
+
+which case we are proto-Gods.
+Bleached: In the X, Y thinks and Z-s like a F; 
+
+and his existence and nature become very hard to W except on the assumption that we either 
+
+(i) came from him, in which case he is a human or proto-human, or (ii) he came from us, in 
+
+which case we are proto-Y's.
+Chars: 280 | Tokens: 52 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;(),-,(),-.
+
+--- Pattern 64 ---
+Original: Though not necessarily definitive, this line of reasoning certainly 
+
+represents one way of modeling the data generated by the assumption that the Bible is literally 
+
+accurate.
+Bleached: Though not necessarily A, this B of C certainly 
+
+D one E of F-ing the G H-ed by the I that the J is K 
+
+L.
+Chars: 181 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 65 ---
+Original: With respect to 2, it is ultimately a corollary of 1, this presumably being why Smith 
+
+endorsed it.
+Bleached: With respect to 2, it is ultimately a X of 1, this presumably being why Y Z-ed it.
+Chars: 102 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 66 ---
+Original: With respect to 3, it too is a corollary of 1: if self-improvement is the road to Godliness, 
+
+then it stands to reason that there are degrees of Godliness and that, besides God himself, there 
+
+are many lesser Gods.
+Bleached: With respect to 3, it too is a X of 1: if Y-Z is the W to V, 
+
+then it U to T that there are S of V and that, besides R himself, there 
+
+are many Q R's.
+Chars: 220 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,,,.
+
+--- Pattern 67 ---
+Original: That said, Smith provides exegetical arguments to the effect that, 
+
+according to the Bible, there are multiple gods, for example:  
+
+ 
+
+    I shall comment on the very first Hebrew word in the Bible; I will make a comment on 
+
+    the very first sentence of the history of the creation in the Bible -- Berosheit.
+Bleached: That said, A provides B arguments to the effect that,
+
+according to the C, there are multiple D's, for example:
+
+    I shall E on the very first F word in the C; I will make a E on
+
+    the very first sentence of the G of the H in the C -- I.
+Chars: 321 | Tokens: 53 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,:;--.
+
+--- Pattern 68 ---
+Original: I want to 
+
+      analyze the word.
+Bleached: I want to 
+
+      X the Y.
+Chars: 37 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 69 ---
+Original: Baith -- in, by through, and everything else.
+Bleached: X -- in, by through, and everything else.
+Chars: 45 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,,.
+
+--- Pattern 70 ---
+Original: Rosh -- the head.
+Bleached: X -- the Y.
+Chars: 17 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 71 ---
+Original: Sheit -- 
+
+      grammatical termination.
+Bleached: Sheit -- 
+
+      X Y.
+Chars: 43 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 72 ---
+Original: When the inspired man wrote it, he did not put the baith there.
+Bleached: When the X-ed Y Z-ed it, he did not V the W there.
+Chars: 63 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 73 ---
+Original: An old Jew without any authority added the word; he thought it too bad to begin to talk 
+
+      about the head!
+Bleached: An A B without any C D-ed the E; he F-ed it too G to H to I about the J!
+Chars: 113 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;!
+
+--- Pattern 74 ---
+Original: It read first, "The head one of the Gods brought forth the Gods." That is 
+
+    the true meaning of the words.
+Bleached: It X-ed first, "The Y one of the Z's X-ed forth the Z's." That is 
+
+    the true W of the X's.
+Chars: 112 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,".".
+
+--- Pattern 75 ---
+Original: Baurau signifies to bring forth.
+Bleached: A B's to C D.
+Chars: 32 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 76 ---
+Original: If you do not believe it, 
+
+      you do not believe the learned man of God.
+Bleached: If you do not A it, 
+
+      you do not A the B man of God.
+Chars: 78 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 77 ---
+Original: Learned men can teach you no more than 
+
+      what I have told you.
+Bleached: A men can B you no more than 
+
+      what I have C you.
+Chars: 70 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 78 ---
+Original: Thus the head God brought forth the Gods in the grand council 
+
+      (Smith p.
+Bleached: Thus the A B C forth the B's in the D E
+
+      (F p.
+Chars: 81 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.
+
+--- Pattern 79 ---
+Original: 5).
+Bleached: 5).
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 80 ---
+Original: With respect to 4, this too is a corollary of 1.
+Bleached: With respect to X, this too is a Y of Z.
+Chars: 48 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 81 ---
+Original: Smith also provides an independent 
+
+argument for it:   
+
+      You ask the learned doctors why they say the world was made out of nothing; and they 
+
+      will answer, "Doesn't the Bible say He created the world?" And they infer, from the word 
+
+      create, that it must have been made out of nothing.
+Bleached: A also B's an C 
+
+D for it:   
+
+      You E the F G's why they H the I was J out of nothing; and they 
+
+      will K, "Doesn't the L H He M-ed the I?" And they N, from the O 
+
+P, that it must have been J out of nothing.
+Chars: 313 | Tokens: 51 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :;,"'?",,.
+
+--- Pattern 82 ---
+Original: Now, the word create came from the 
+
+      baurau which does not mean to create out of nothing; it means to organize; the same as a 
+
+      man would organize materials and build a ship.
+Bleached: Now, the word X came from the 
+
+      Y which does not mean to X out of nothing; it means to Z; the same as a 
+
+      man would Z W's and build a V.
+Chars: 190 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;;.
+
+--- Pattern 83 ---
+Original: Hence, we infer that God had materials to 
+
+      organize the world out of chaos -- chaotic matter, which is element, and in which dwells 
+
+    all the glory.
+Bleached: Hence, we X that Y had Z to 
+
+      W the V out of U -- U T, which is S, and in which R 
+
+    all the Q.
+Chars: 163 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--,,.
+
+--- Pattern 84 ---
+Original: Element had an existence from the time he had.
+Bleached: X had an Y from the Z W he had.
+Chars: 46 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 85 ---
+Original: The pure principles of 
+
+      element are principles which can never be destroyed; they may be organized and 
+
+      reorganized, but not destroyed.
+Bleached: The X Y's of 
+
+      Z are Y's which can never be W-ed; they may be X-ed and 
+
+      re-X-ed, but not W-ed.
+Chars: 153 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 86 ---
+Original: They had no beginning, and can have no end.
+Bleached: They had no X-ing, and can have no Y.
+Chars: 43 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 87 ---
+Original: There are actually two arguments here: one exegetical, the other philosophical.
+Bleached: There are X two Y's here: one Z, the other W.
+Chars: 79 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 88 ---
+Original: The 
+
+exegetical argument is to the effect that, properly translated, the Bible says that God did not 
+
+create the world so much as he organized it into existence.
+Bleached: The 
+
+A B is to the effect that, properly C-ed, the D says that E did not 
+
+F the G so much as he H-ed it into I.
+Chars: 167 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 89 ---
+Original: The philosophical argument is to the 
+
+effect that, although the veritable building blocks of existence can be arranged in different ways, 
+
+they are inherently incapable of being created or destroyed, the implication being that God could 
+
+only have organized them, not brought them into existence.
+Bleached: The A B is to the 
+
+C that, although the D E F of G can be H in different I, 
+
+they are J K of being L or M, the N being that O could 
+
+only have P them, not Q them into G.
+Chars: 305 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 90 ---
+Original: With respect to 5, Smith puts forth three distinct arguments.
+Bleached: With respect to 5, A puts forth three distinct B's.
+Chars: 61 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 91 ---
+Original: Argument #1: God is immortal.
+Bleached: Argument #1: X is Y.
+Chars: 29 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 92 ---
+Original: People are God-like.
+Bleached: A are B-like.
+Chars: 20 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 93 ---
+Original: Therefore, people are immortal.
+Bleached: Therefore, X are Y.
+Chars: 31 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 94 ---
+Original: In Smith’s own words:  
+
+ 
+
+    We say that God himself is a self-existent being.
+Bleached: In X's own Y:  
+
+ 
+
+    We say that Z himself is a W-existent being.
+Chars: 85 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 95 ---
+Original: Who told you so?
+Bleached: Who X-ed you so?
+Chars: 16 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 96 ---
+Original: It is correct enough; 
+
+    but how did it get into your heads?
+Bleached: It is A enough; 
+
+    but how did it B into your C's?
+Chars: 65 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;?
+
+--- Pattern 97 ---
+Original: Who told you that man did not exist in like manner 
+
+      upon the same principles?
+Bleached: Who X-ed you that Y did not Z in like W upon the same V?
+Chars: 86 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 98 ---
+Original: Man does exist upon the same principles (Smith, p.
+Bleached: F does exist upon the same principles (Smith, p.
+Chars: 50 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.
+
+--- Pattern 99 ---
+Original: 7).
+Bleached: 7).
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 100 ---
+Original: Argument #2: People are immortal.
+Bleached: Argument #2: X are Y.
+Chars: 33 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 101 ---
+Original: People could not be immortal if they were created.
+Bleached: A could not be B if they were C-ed.
+Chars: 50 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 102 ---
+Original: Therefore, people are immortal.
+Bleached: Therefore, X are Y.
+Chars: 31 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 103 ---
+Original: In Smith’s own words:  
+
+ 
+
+    I am dwelling on the immortality of the spirit of man.
+Bleached: In Y's own Z's:
+
+
+
+    I am X-ing on the A-ity of the B of C.
+Chars: 90 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 104 ---
+Original: Is it logical to say that the 
+
+      intelligence of spirits is immortal, and yet that it had a beginning?
+Bleached: Is it L to X that the 
+
+      Y of Z's is W, and yet that it had a B?
+Chars: 109 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 105 ---
+Original: The intelligence of       spirits had not beginning, neither will it have an end.
+Bleached: The A of B had not C, neither will it have an D.
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 106 ---
+Original: That is good logic.
+Bleached: That is X Y.
+Chars: 19 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 107 ---
+Original: That which has a 
+
+      beginning may have an end.
+Bleached: That which has a 
+
+      X may have an Y.
+Chars: 53 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 108 ---
+Original: There never was a time when there were not spirits; for they 
+
+    are co-equal [co-eternal] with our Father in heaven.
+Bleached: There never was a time when there were not X's; for they 
+
+    are Y-Z [Y-W] with our V in Q.
+Chars: 121 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;--.
+
+--- Pattern 109 ---
+Original: Argument #3: Intelligence cannot possibly be created.
+Bleached: Argument #3: X cannot possibly be Y-ed.
+Chars: 53 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 110 ---
+Original: To create is to assemble, and there 
+
+is no way to assemble intelligence.
+Bleached: To A is to B, and there 
+
+is no way to B C.
+Chars: 75 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 111 ---
+Original: It either exists or it doesn’t; and if it does, it is by virtue of 
+
+being a fundamental constituent of reality.
+Bleached: It either X-s or it doesn't; and if it does, it is by virtue of 
+
+being a Y Z of W.
+Chars: 114 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 112 ---
+Original: This means that it cannot be destroyed, since to be 
+
+destroyed is to be disassembled; and it also means that it has always existed, since to come into 
+
+existence is to be assembled.
+Bleached: This X-s that it cannot be Y-ed, since to be 
+
+Y-ed is to be Z-ed; and it also X-s that it has always W-ed, since to come into 
+
+A is to be B-ed.
+Chars: 187 | Tokens: 33 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 113 ---
+Original: In Smith’s own words:  
+
+ 
+
+      Intelligence is eternal and exists upon a self-existent principle.
+Bleached: In X's own Y:  
+
+ 
+
+      Z is W and V upon a Q-R S.
+Chars: 104 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 114 ---
+Original: It is a spirit from age to 
+
+    age, and there is no creation about it.
+Bleached: It is a X from Y to 
+
+    Y, and there is no Z about it.
+Chars: 74 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 115 ---
+Original: All the minds and spirits that God ever sent into the 
+
+      world are susceptible of enlargement (Smith, p.
+Bleached: All the A's and B's that C ever D-ed into the 
+
+      E are F of G (Smith, p.
+Chars: 111 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.
+
+--- Pattern 116 ---
+Original: 8).
+Bleached: 8).
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 117 ---
+Original: Theimplication underlying all of these arguments is that people are mini-Gods and must 
+
+therefore be immortal, given that God is immortal.
+Bleached: The X-ation Y-ing all of these Z's is that W's are A-B's and must 
+
+therefore be C, given that D is C.
+Chars: 141 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 118 ---
+Original: Consequently, 5 is ultimately a corollary of 1.
+Bleached: Consequently, 5 is ultimately a X of 1.
+Chars: 47 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 119 ---
+Original: 1 is to the effect that God is an exalted man.
+Bleached: 1 is to the A that B is an C-ed D.
+Chars: 46 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 120 ---
+Original: Therefore, when coupled with the assumption that 
+
+God has always existed and always will, 1 entails 5.
+Bleached: Therefore, when X-ed with the Y that 
+
+Z has always V-ed and always will, 1 W's 5.
+Chars: 105 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 121 ---
+Original: In conclusion, 1 is the essence of the KFD, and 2-5 are merely corollaries of 1.
+Bleached: In conclusion, 1 is the A of the B, and 2-5 are merely C's of 1.
+Chars: 80 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 122 ---
+Original: III.
+Bleached: III.
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 123 ---
+Original: "The Doctrinal Impact of the King Follett Discourse” (1978) by Van Hale 
+
+ 
+
+ Summary: The most important contentions within KFD, at least in terms of its impact on 
+
+Mormonism, are (this is a direct quotation from Van Hale, p.
+Bleached: "The A B of the C D E" (1978) by F G 
+
+ 
+
+ H: The most I J within KFD, at least in K of its L on 
+
+M, are (this is a N O from F G, p.
+Chars: 233 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "():,,(,.
+
+--- Pattern 124 ---
+Original: 213):  
+
+ 
+
+  1.
+Bleached: 213):  
+
+ 
+
+  1.
+Chars: 20 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ):.
+
+--- Pattern 125 ---
+Original: Men can become Gods.
+Bleached: X can become Y.
+Chars: 20 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 126 ---
+Original: 2.
+Bleached: 2.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 127 ---
+Original: There exist many gods.
+Bleached: There exist many X's.
+Chars: 22 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 128 ---
+Original: 3.
+Bleached: 3.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 129 ---
+Original: The gods exist one above another innumerably, and  
+
+  4.
+Bleached: The X's Y one above another Z-ly, and  
+
+  4.
+Chars: 59 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 130 ---
+Original: God was once as man now is.
+Bleached: A was once as B now is.
+Chars: 27 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 131 ---
+Original: Smith had put forth each of these doctrines prior to giving the KFD.
+Bleached: X had Y forth each of these Z's prior to W-ing the KFD.
+Chars: 68 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 132 ---
+Original: Smith publicly affirmed 
+
+(1) before publicly affirming any of the others; and judging by Smith’s writings, he appears to 
+
+have accepted 1 before accepting the others.
+Bleached: A B C
+
+(1) before B D any of the others; and E by A's F, he G to 
+
+have H 1 before I the others.
+Chars: 172 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ();,.
+
+--- Pattern 133 ---
+Original: This indicates that he did not come to accept them 
+
+simultaneously.
+Bleached: This X that he did not Y to Z them
+
+simultaneously.
+Chars: 70 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 134 ---
+Original: And the evidence---his writings and sermons---suggest that he accepted them 
+
+sequentially, in the order given above.
+Bleached: And the A---his B's and C's---D that he E-ed them 
+
+F-ly, in the G H above.
+Chars: 119 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ------,.
+
+--- Pattern 135 ---
+Original: The evidence also suggests that he came to accept each 
+
+one gradually.
+Bleached: The A also B's that he C to D each 
+
+one E.
+Chars: 73 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 136 ---
+Original: In each case, he started with vague anticipations of the idea in question, and over 
+
+time he developed those anticipatory ideas into the idea itself.
+Bleached: In each case, he X-ed with Y Z's of the A in B, and over 
+
+time he C-ed those D-ory A's into the A itself.
+Chars: 152 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 137 ---
+Original: It is unclear exactly how Smith came to accept 1-4.
+Bleached: It is X exactly how Y Z to V 1-4.
+Chars: 51 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 138 ---
+Original: Judging by his writings, it appears to 
+
+have been on the basis of direct revelations supplemented by careful, if questionable, textual 
+
+analysis of Scripture.
+Bleached: A-ing by his B-s, it C-s to 
+
+have been on the D of E F-s G-ed by H, if I, J 
+
+K of L.
+Chars: 164 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 139 ---
+Original: Nonetheless, before giving the KFD, Smith publicly endorsed each of 1-4.
+Bleached: Nonetheless, before X-ing the Y, Z publicly W-ed each of 1-4.
+Chars: 72 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 140 ---
+Original: Because of this, 
+
+many in the just-founded Mormon Church regarded Smith as a “heretic” and “blasphemer.” 
+
+Indeed, there was such intense rancor towards Smith that he feared for his own life.
+Bleached: Because of this, 
+
+many in the just-X-ed Y Z X-ed A as a "B" and "C." 
+
+Indeed, there was such D E towards A that he F-ed for his own G.
+Chars: 196 | Tokens: 31 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-.,.
+
+--- Pattern 141 ---
+Original: Despite the 
+
+pressure he was under to do so, Smith never softened his positions.
+Bleached: Despite the 
+
+X he was under to do so, Y never Z-ed his W's.
+Chars: 83 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 142 ---
+Original: Even though Smith had publicly endorsed each of 1-4 before giving the KFD, it was in the 
+
+KFD that he united these positions into a single coherent vision, and for this reason the KFD did 
+
+more than any of Smith’s previous sermons to shape Mormon thought.
+Bleached: Even though X had publicly Y-ed each of 1-4 before Z-ing the KFD, it was in the 
+
+KFD that he W-ed these A's into a single B C, and for this D the KFD did 
+
+more than any of X's previous E's to F G H.
+Chars: 261 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,.
+
+--- Pattern 143 ---
+Original: Consequently, even 
+
+though many of Smith’s contemporaries in the Mormon Church regarded each of 1-4 as heresy, 
+
+each of them became pillars of Mormon theology.
+Bleached: Consequently, even 
+
+though many of Smith's A-s in the B Church C-ed each of 1-4 as D, 
+
+each of them became E-s of B F.
+Chars: 165 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,.
+
+--- Pattern 144 ---
+Original: Commentary: Van Hale’s position is that Smith arrived at 1-4 one-by-one and, moreover, 
+
+that he arrived at each gradually.
+Bleached: Commentary: Van Hale's X is that Y Z-ed at 1-4 one-by-one and, moreover, 
+
+that he Z-ed at each W.
+Chars: 125 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :---,,.
+
+--- Pattern 145 ---
+Original: This is consistent with what Smith says in his sermons; for in 
+
+his pre-KFD sermons, he does not state them as starkly as he does in KFD.
+Bleached: This is A with what B C in his D; for in
+
+his pre-E D, he does not F them as G as he does in E.
+Chars: 140 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;-,.
+
+--- Pattern 146 ---
+Original: But another possibility is that, long before giving the KFD, he had already completely 
+
+accepted each of 1-4 but, not wanting to alienate his colleagues and followers, refrained from 
+
+stating them as directly as he did in KFD.
+Bleached: But another P is that, long before X-ing the Y, he had already completely 
+
+Z-ed each of 1-4 but, not W-ing to V his Q's and R's, S-ed from 
+
+T-ing them as directly as he did in Y.
+Chars: 232 | Tokens: 38 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,-,,.
+
+--- Pattern 147 ---
+Original: I personally believe this to be the case, suggesting some references in footnote 1.
+Bleached: I X Y this to be the Z, W some A's in B 1.
+Chars: 83 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 148 ---
+Original: Smith had a 
+
+religious epiphany at age 14, and this epiphany involved his accepting 1-4 in exactly the form in 
+
+which he states them in the KFD.
+Bleached: A had a 
+
+B C at D 14, and this C E-ed his F-ing 1-4 in exactly the G in 
+
+which he H-s them in the I.
+Chars: 150 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 149 ---
+Original: Not wanting to be ostracized, he held his tongue over the next 
+
+few decades and spoke his mind only after he had acquired a certain degree of standing and only, 
+
+moreover, when he suspected that he only had a short time to live.
+Bleached: Not X-ing to be Y-ed, he Z-ed his A over the next 
+
+few B's and C-ed his D only after he had E-ed a certain F of G and only, 
+
+moreover, when he H-ed that he only had a I J to K.
+Chars: 234 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 150 ---
+Original: IV.
+Bleached: IV.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 151 ---
+Original: “The Idea of Pre-Existence in the Development of Mormon Thought” (1982)  
+
+                                    by Blake Ostler 
+
+ 
+
+  Summary: In KFD, Smith asserts that human beings, like God, cannot come into existence 
+
+and must therefore have always existed, this being the doctrine of “pre-existence.” Smith’s 
+
+reasoning is that, although minds can obviously change, they cannot be assembled.
+Bleached: "The X of Y-Z in the W of V U" (1982)
+
+                                    by A B
+
+ 
+
+  C: In D, E F that G H, like I, cannot J into K 
+
+and must therefore have always L, this being the M of "Y-Z." E's 
+
+N is that, although O can obviously P, they cannot be Q-ed.
+Chars: 408 | Tokens: 53 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -():,,,,-.,,.
+
+--- Pattern 152 ---
+Original: Therefore, 
+
+they either exist or they don’t; if they do, they have always existed.
+Bleached: Therefore, 
+
+they either X or they don't; if they do, they have always X-ed.
+Chars: 85 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 153 ---
+Original: A corollary of the doctrine of pre-existence is that God cannot bring people into existence.
+Bleached: A Y of the Z of X-Y is that A cannot B C into Y.
+Chars: 92 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 154 ---
+Original: God is omnipotent in the sense that he can do whatever can be done, not in the sense that he can 
+
+do what it is logically impossible to do; and for the reason just given, it is logically impossible to 
+
+bring a mind into existence.
+Bleached: A is B in the C that he can do whatever can be D-ed, not in the C that he can 
+
+do what it is E-ly F to do; and for the G just H-ed, it is E-ly F to 
+
+I a J into K.
+Chars: 236 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 155 ---
+Original: For this reason, the doctrine of pre-existence is heretical, at least 
+
+relative to Christian orthodoxy.
+Bleached: For this Q, the R of S is T, at least relative to U V.
+Chars: 106 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,.
+
+--- Pattern 156 ---
+Original: Smith did not arrive at the doctrine of pre-existence instantaneously.
+Bleached: X did not Y at the Z of pre-W X-ly.
+Chars: 70 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 157 ---
+Original: He developed it over 
+
+time.
+Bleached: He X-ed it over 
+
+time.
+Chars: 30 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 158 ---
+Original: We know this from his writings.
+Bleached: We X this from his Y's.
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 159 ---
+Original: This doctrine, though heretical relative to Christian 
+
+orthodoxy, has roots in Western philosophy.
+Bleached: This A, though B relative to C D, has E in F G.
+Chars: 101 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 160 ---
+Original: Leibniz held a version of it.
+Bleached: A held a B of it.
+Chars: 29 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 161 ---
+Original: (According to Leibniz, 
+
+minds are “monads” that cannot be created or destroyed.) Plato also held this view, at least 
+
+implicitly, his position being that minds are “simples” that, as such, cannot be created or 
+
+                                                          1
+destroyed and must therefore exist eternally, in both directions.
+Bleached: (According to A, 
+
+B are "C" that cannot be D-ed or E-ed.) F also G-ed this H, at least 
+
+I-ly, his J being that B are "K" that, as such, cannot be D-ed or 
+
+                                                          1
+E-ed and must therefore L M-ly, in both N.)
+Chars: 346 | Tokens: 44 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.),,,,,.
+
+--- Pattern 162 ---
+Original: [] 
+
+  Post-Smith Mormon theologians were less willing than Smith to depart from Christian 
+
+orthodoxy and therefore had difficulty compatibilizing the doctrine of pre-existence with what 
+
+they wanted Mormon theology to be.
+Bleached: []
+
+Post-A B C were less D than A to E from F 
+
+G and therefore had H I-ing the J of K-L with what 
+
+they M B C to be.
+Chars: 230 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 163 ---
+Original: At the same time, Mormon theologians were under 
+
+pressure to accept this doctrine, given that KFD is to a large extent definitive of Mormon 
+
+theology.
+Bleached: At the same time, A B's were under 
+
+C to D this E, given that F is to a large extent G of A 
+
+H.
+Chars: 156 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 164 ---
+Original: As a result, Mormon theologians continue to debate the merits of this view.
+Bleached: As a X, Y Z's X to X the X of this X.
+Chars: 75 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 165 ---
+Original: Commentary: The doctrine of pre-existence is in fact heretical—and for more than one 
+
+reason.
+Bleached: Commentary: The X of Y-ence is in fact Z—and for more than one 
+
+reason.
+Chars: 96 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-—.
+
+--- Pattern 166 ---
+Original: First, it does at least arguably imply that God’s power is limited.
+Bleached: First, it does at least arguably X that Y's Z is W-ed.
+Chars: 67 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 167 ---
+Original: More importantly, it 
+
+puts people on the same footing as God.
+Bleached: More importantly, it 
+
+X's Y on the same Z as W.
+Chars: 64 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 168 ---
+Original: If people have always existed alongside God, then not 
+
+only did God not create them; they are in some respect his peers.
+Bleached: If A have always B-ed alongside C, then not
+
+only did C not D them; they are in some E his F's.
+Chars: 123 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,;.
+
+--- Pattern 169 ---
+Original: The doctrine of pre-existence 
+
+thus underscores Smith’s main point in KFD, namely, that God was once a man and, therefore, 
+
+that people can achieve God-status.
+Bleached: The X of Y-ence 
+
+thus Z's A's main B in C, namely, that D was once a E and, therefore, 
+
+that F can G D-H.
+Chars: 165 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,,-.
+
+--- Pattern 170 ---
+Original: Finally, for the reasons given earlier, I personally believe 
+
+
+ 
+    1
+ Author’s note: Plato also held that we have a priori knowledge that we inherited from our past selves, and 
+    this doctrine is consistent with his view that we have always existed.
+Bleached: Finally, for the X's Y earlier, I Z believe
+
+
+ 
+    1
+ Author's note: A also B that we have a C D knowledge that we E from our F G's, and 
+    this H is I with his J that we have always K.
+Chars: 261 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,:,.
+
+--- Pattern 171 ---
+Original: that Smith arrived at the doctrine of pre-existence instantaneously; I believe that it was part of 
+
+the religious epiphany he had as a 14-year-old.
+Bleached: that A B-ed at the C of D-E F-ly; I G that it was H of 
+
+the I J he had as a K-L-old.
+Chars: 150 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -;--.
+
+--- Pattern 172 ---
+Original: His position on the matters appears to change in 
+
+writings, but the reason, I propose, is that he was becoming more comfortable stating what he 
+
+already believed.
+Bleached: His X on the Y's Z's to W in 
+
+V's, but the U, I T, is that he was S-ing more R Q-ing what he 
+
+already P-ed.
+Chars: 168 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 173 ---
+Original: V.
+Bleached: V.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 174 ---
+Original: “Elohim and Jehovah in Mormonism and the Bible” (1986) by Boyd Kirkland.
+Bleached: """
+"X and Y in Z and the W" (1986) by A B.
+"""
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 175 ---
+Original: Summary: According to Christian orthodoxy, God (Jehovah), Jesus, and the Holy Ghost are 
+
+different embodiments of a single entity, as opposed to being altogether distinct entities.
+Bleached: Summary: According to A B, C (D), E, and the F G are 
+
+different H's of a single I, as opposed to being altogether distinct J's.
+Chars: 183 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,(),,,.
+
+--- Pattern 176 ---
+Original: In other 
+
+words, orthodox Christianity is unitarian, as opposed to trinitarian.
+Bleached: In other 
+
+X, Y Z is A, as opposed to B.
+Chars: 82 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 177 ---
+Original: This is a consequence of the 
+
+fact that Christianity is monotheistic; for Christianity could not be monotheistic unless God, 
+
+Jesus, and the Holy Ghost were indeed distinct entities, given that each is a divinity, and 
+
+therefore a God, of some kind or other.
+Bleached: This is a Y of the 
+
+Z that A is B; for A could not be B unless C, 
+
+D, and the E F were indeed G H, given that each is a I, and 
+
+therefore a C, of some kind or other.
+Chars: 267 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,,,,.
+
+--- Pattern 178 ---
+Original: In Mormonism, God, Jesus, and the Holy Ghost are indeed distinct entities.
+Bleached: In A, B, C, and the D E are indeed F G.
+Chars: 74 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 179 ---
+Original: This is largely 
+
+thanks to Joseph Smith’s work.
+Bleached: This is largely
+
+thanks to X Y's Z.
+Chars: 50 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 180 ---
+Original: At the beginning of his career, Smith was a unitarian.
+Bleached: At the beginning of his career, X was a Y.
+Chars: 54 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 181 ---
+Original: But his 
+
+views shifted over the years.
+Bleached: But his 
+
+X's Y-ed over the Z's.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 182 ---
+Original: In his Lectures on Faith, he takes the position that Jesus, being the 
+
+son of God, must indeed be distinct from God.
+Bleached: In his X on Y, he takes the Z that A, being the 
+
+B of God, must indeed be C from God.
+Chars: 119 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 183 ---
+Original: This was one of his first breaks from a unitarian 
+
+view.
+Bleached: This was one of his first X's from a Y Z.
+Chars: 59 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 184 ---
+Original: In that same work, he takes the view that the Holy Ghost is the mind of God, as opposed to 
+
+being an aspect of God.
+Bleached: In that same X, he Y's the Z that the A B is the C of D, as E to 
+
+being an F of D.
+Chars: 118 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 185 ---
+Original: Later, he simply takes the position that the Holy Ghost is distinct from 
+
+God, any relationship between them being one of kinship or similarity.
+Bleached: Later, he simply X's the Y that the Z W is X from 
+
+A, any B between them being one of C or D.
+Chars: 147 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 186 ---
+Original: There are innumerable references in scripture to various different gods.
+Bleached: There are A B in C to D E F.
+Chars: 72 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 187 ---
+Original: Consequently, 
+
+Smith’s trinitarianism has a solid basis in scripture, however heterodox it may be with respect to 
+
+Christian orthodoxy.
+Bleached: Consequently, 
+
+A's B has a C D in E, however F it may be with respect to 
+
+G H.
+Chars: 141 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 188 ---
+Original: Commentary: Christian authorities clearly want to conceive of their religion as being 
+
+monotheistic.
+Bleached: Commentary: A B's C D to E of their F as being 
+
+G.
+Chars: 103 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 189 ---
+Original: To this end, they hold that God, Jesus, and the Holy Ghost are “one”, even though 
+
+they cannot possibly be one.
+Bleached: To this end, they hold that A, B, and the C D are "one", even though 
+
+they cannot possibly be one.
+Chars: 114 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 190 ---
+Original: Assuming scripture to be accurate, Jesus is indeed the son of God, 
+
+not God himself; the Holy Ghost is a benevolent but impersonal force; and God is an exalted 
+
+person-like being.
+Bleached: Assuming A to be B, C is indeed the D of E, 
+
+not E himself; the F G is a H but I J; and E is an K 
+
+L-like M.
+Chars: 185 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,;;-.
+
+--- Pattern 191 ---
+Original: In Christianity, there is a single supreme divine being, but there are at least 
+
+three divine beings.
+Bleached: In A, there is a single B C D being, but there are at least 
+
+three D beings.
+Chars: 104 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 192 ---
+Original: Therefore, Christianity isn’t strictly monotheistic, and Smith is simply 
+
+calling Christianity out on this fact.
+Bleached: Therefore, X isn't strictly Y, and Z is simply 
+
+calling X out on this fact.
+Chars: 115 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 193 ---
+Original: The KFD is not directly concerned with the identity, or lack thereof, of the Father, Son, and 
+
+Holy Ghost.
+Bleached: The A is not directly B-ed with the C, or D thereof, of the E, F, and G H.
+Chars: 109 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 194 ---
+Original: But the KFD explicitly states that, although there is only one supreme God, there 
+
+are multiple gods, and it is therefore compatible with trinitarianism.
+Bleached: But the KFD X-ly Y-s that, although there is only one Z God, there 
+
+are W gods, and it is therefore V with A-ism.
+Chars: 156 | Tokens: 24 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 195 ---
+Original: Also, in the KFD, Smith 
+
+explicitly references the Father, Son, and Holy Ghost, and it appears to be his intention in doing 
+
+so to refer to three distinct entities.
+Bleached: Also, in the A, B 
+
+explicitly C's the D, E, and F G, and it H's to be his I in J-ing 
+
+so to K to three L M's.
+Chars: 170 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 196 ---
+Original: VI.
+Bleached: VI.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 197 ---
+Original: "The Development of the Mormon Doctrine of God” (1989) by Boyd Kirkland.
+Bleached: "The A of the B C of D" (1989) by E F.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "().
+
+--- Pattern 198 ---
+Original: Summary: Early in his career (from around 1820 to around 1835), Smith had an 
+
+unambiguously monotheistic position.
+Bleached: Summary: Early in his X (from around 1820 to around 1835), Y had an 
+
+unambiguously Z position.
+Chars: 117 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :(),.
+
+--- Pattern 199 ---
+Original: During this period, he produced a translation of the Bible, 
+
+now known as “Joseph Smith’s Translation” (JST); and in JST, he deliberately omitted 
+
+statements that could be interpreted as alleging the existence of multiple gods.
+Bleached: During this A, he B-ed a C of the D, 
+
+now E as "F G's C" (H); and in H, he I J-ed 
+
+K that could be L-ed as M-ing the N of O P.
+Chars: 233 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,();,.
+
+--- Pattern 200 ---
+Original: He also altered 
+
+parts of the new testament that could be taken to support the position that God and Jesus are 
+
+            2
+distinct entities.
+Bleached: He also X-ed 
+
+Y's of the Z A that could be B-en to C the D that E and F are 
+
+            2
+G H's.
+Chars: 151 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 201 ---
+Original: Over the years, Smith’s outlook gradually became less monotheistic.
+Bleached: Over the years, A's B gradually became less C.
+Chars: 67 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 202 ---
+Original: In the (1835) 
+
+“Lectures on Faith”, Smith, who presided over the committee that wrote the lectures, regards 
+
+God and Jesus as distinct entities.
+Bleached: In the (1835) 
+
+"X on Y", Z, who W over the X that X-ed the X, X 
+
+A and B as C X.
+Chars: 150 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),,,.
+
+--- Pattern 203 ---
+Original: As for the Holy Ghost, he holds it to be identical with the mind 
+
+of God—a position intermediate between regarding it as “one” with God and regarding it as 
+
+altogether distinct from God.
+Bleached: As for the A B, he C's it to be D with the E 
+
+of F—a G H between I it as "J" with F and I it as 
+
+K L from F.
+Chars: 192 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—.
+
+--- Pattern 204 ---
+Original: Beginning in 1835, Smith began to study Hebrew, and this appears to have accelerated his 
+
+shift from monotheism to polytheism.
+Bleached: A-ing in 1835, B C-ed to D E, and this F-s to have G-ed his 
+
+H from I to J.
+Chars: 129 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 205 ---
+Original: The likely reason is that, when reading scripture in the 
+
+original Hebrew, he found that many distinct terms, likely having a plurality of different 
+
+referents, had been indiscriminately translated into English as “God” or “Jehova.”  
+
+
+
+
+ 
+2
+ To quote Kirkland: “Several scriptural passages given through Smith indicate clearly that he saw 
+no contradiction in having one god simultaneously be the Father who sent Jesus as well as Jesus 
+himself.
+Bleached: The likely A is that, when B-ing C in the 
+
+D E, he F-ed that many G H, likely I-ing a J of K 
+
+L, had been M-ly N-ed into O as "P" or "Q."  
+
+
+
+
+ 
+2
+ To R S: "T U V W-en through X Y Z-ly that he AA 
+no BB in CC-ing one DD EE-ly be the FF who GG-ed HH as well as II 
+JJ.
+Chars: 462 | Tokens: 68 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.:.
+
+--- Pattern 206 ---
+Original: For example, Ether 4:12 in the Book of Mormon plainly states, ‘He that will not believe me 
+will not believe the Father who sent me.
+Bleached: For A, B 4:12 in the C of D E F, 'G that will not H me will not H the I who J me.
+Chars: 133 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,.
+
+--- Pattern 207 ---
+Original: For behold, I am the Father.’ A close examination of Joseph 
+Smith’s translation of the Bible (JST) also reveals his early monotheistic beliefs.
+Bleached: For X, I am the Y.' A Z W of X Y's X of the Y (JST) also V his Z A B.
+Chars: 145 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.().
+
+--- Pattern 208 ---
+Original: Smith consciously 
+attempted to remove all reference to a plurality of gods from the King James Bible (KJV).
+Bleached: A consciously 
+B-ed to C all D to a E of F from the G H I (J).
+Chars: 109 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 209 ---
+Original: He also 
+changed several passages to identify more clearly the Father and the Son as the same god.
+Bleached: He also 
+X-ed Y Z's to W more V the A and the B as the same C.
+Chars: 99 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 210 ---
+Original: For 
+example, he revised Luke 10:22 (in JST) to have Jesus teach that ‘no man knoweth that the Son is the 
+Father, and the Father is the Son, but him to whom the Son will reveal it’” (Kirkland 1989, p.
+Bleached: For 
+example, he X-ed A 10:22 (in B) to have C X that 'no man X-eth that the D is the 
+E, and the E is the D, but him to whom the D will X it'" (F 1989, p.
+Chars: 203 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:(),,(,.
+
+--- Pattern 211 ---
+Original: 1).
+Bleached: 1).
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 212 ---
+Original: During Smith’s so-called “Nauvoo” period (1839-1844), Smith’s theology underwent several 
+
+additional shifts, many of them described in the (1842) “Book of Abraham.” God, he came to 
+
+believe, himself has a father.
+Bleached: During X's so-called "Y" Z (1839-1844), X's W underwent several 
+
+additional V's, many of them U-ed in the (1842) "T of S." R, he came to 
+
+Q, himself has a P.
+Chars: 218 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -(-),,().,,.
+
+--- Pattern 213 ---
+Original: God, though supreme, belongs to a “council of Gods.” Both God 
+
+and Jesus are corporeal.
+Bleached: X, though Y, belongs to a "Z of X's." Both X 
+
+and W are V.
+Chars: 90 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,..
+
+--- Pattern 214 ---
+Original: Finally, human beings can become Gods.
+Bleached: Finally, A B's can become C's.
+Chars: 38 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 215 ---
+Original: These ideas are put forth in the 
+
+(1844) KFD.
+Bleached: These A's are put forth in the 
+
+(1844) B.
+Chars: 48 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 216 ---
+Original: Commentary: As previously stated, there is a respect in which Smith’s theology is heretical; 
+
+but there is a deeper sense in which it isn’t.
+Bleached: Commentary: As previously stated, there is a X in which Y's Z is W; 
+
+but there is a deeper X in which it isn't.
+Chars: 143 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,;.
+
+--- Pattern 217 ---
+Original: If Jesus really is the son of God, then God is human.
+Bleached: If X really is the Y of Z, then Z is W.
+Chars: 53 | Tokens: 12 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 218 ---
+Original: And if God is human, then humans can become gods.
+Bleached: And if X is Y, then Y's can become X's.
+Chars: 49 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 219 ---
+Original: Here I would like to venture a speculative point.
+Bleached: Here I would like to X a Y Z.
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 220 ---
+Original: Judaism is and always has been resolutely 
+
+monotheistic.
+Bleached: A is and always has been B-ly 
+
+C.
+Chars: 59 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 221 ---
+Original: Historically, monotheism is more the exception than the rule.
+Bleached: X-ly, Y is more the Z than the W.
+Chars: 61 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 222 ---
+Original: Christianity may 
+
+represent a revival of polytheistic instincts.
+Bleached: A may 
+
+B a C of D E's.
+Chars: 67 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 223 ---
+Original: For a variety of reasons, early Doctors of the Church 
+
+did not want to openly embrace polytheism.
+Bleached: For a variety of A, early B's of the C 
+
+did not want to openly D E.
+Chars: 100 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 224 ---
+Original: At the same time, they needed there to be at least 
+
+two divinities, God and Jesus, since the latter’s divinity is the cornerstone of Christianity.
+Bleached: At the same time, they X-ed there to be at least 
+
+two Y's, Z and W, since the latter's Q is the R of S.
+Chars: 149 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 225 ---
+Original: Consequently, Church Doctors affirmed, absurdly, that God and Jesus, though two, are one.
+Bleached: Consequently, A B's C-ed, D-ly, that E and F, though two, are one.
+Chars: 89 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 226 ---
+Original: As 
+
+for the Holy Ghost, this, I speculate, was posited as a way to let God and Jesus be one: though 
+
+obviously distinct, they both partake of this  “Holy Spirit.” But after being posited, so I would 
+
+further speculate, the Holy Ghost simply became a third divinity, forcing Church Fathers to say 
+
+that God, Jesus, and the Holy Ghost, though three, are one.
+Bleached: As 
+
+for the A B, this, I C, was D-ed as a E to F G and H be one: though 
+
+I J, they both K of this "A L." But after being D-ed, so I would 
+
+M N, the A B O P a Q R, S-ing T U to V 
+
+that G, H, and the A B, though three, are one.
+Chars: 368 | Tokens: 63 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,:,.,,,,,,,.
+
+--- Pattern 227 ---
+Original: In any case, Joseph Smith’s theology doesn’t have this problem; he simply says that God and 
+
+Jesus and any other existing divinities are simply distinct.
+Bleached: In any case, A B's C doesn't have this D; he simply E-s that F and 
+
+G and any other H-ing I-s are simply J.
+Chars: 156 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;.
+
+--- Pattern 228 ---
+Original: Finally, the cornerstone of Smith’s 
+
+theology is that Jesus was divine, this being why Smith’s theology is indeed Christian.
+Bleached: Finally, the A of B's 
+
+C is that D was E, this being why B's C is indeed F.
+Chars: 127 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 229 ---
+Original: But given 
+
+that Jesus was obviously human, it logically follows that his father is human, this being what 
+
+Smith’s theology explicitly says; and it logically follows from this that human beings are capable 
+
+of becoming godly, which Smith’s theology also explicitly states.
+Bleached: But given 
+
+that A was obviously B, it logically follows that his C is B, this being what 
+
+D's E explicitly says; and it logically follows from this that B F's are G 
+
+of becoming H, which D's E also explicitly states.
+Chars: 281 | Tokens: 42 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,;,.
+
+--- Pattern 230 ---
+Original: VII.
+Bleached: VII.
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 231 ---
+Original: Exploring Mormon Thought: Volume 1, The Attributes of God (2001) by Blake Ostler  
+
+ 
+
+  Note: The following summary is concerned only with two sections of Chapter 3, namely, 
+
+“The Lectures on Faith” and Joseph Smith and the Foundational Scriptures”, as these are the 
+
+most relevant parts of this work.
+Bleached: """
+X-ing Y Z: Volume 1, The A's of B (2001) by C D  
+
+ 
+
+  Note: The following E is F-ed only with two G's of Chapter 3, namely, 
+
+"The H's on I" and J K and the L M's", as these are the 
+
+most N O's of this P.
+"""
+Chars: 312 | Tokens: 48 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,():,,,.
+
+--- Pattern 232 ---
+Original: Summary:  Throughout his career, Smith was concerned with the question: What must God 
+
+be like if human beings are to have the kind of relationship with him that they are supposed to 
+
+have?
+Bleached: Summary: Throughout his A, B was C-ed with the D: What must E be like if F G's are to have the H of I with him that they are J-ed to have?
+Chars: 195 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,:?
+
+--- Pattern 233 ---
+Original: In other words, what must God be like if he is to discharge his duties towards human 
+
+beings?
+Bleached: In other words, what must A be like if he is to B his C towards D E's?
+Chars: 96 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 234 ---
+Original: In taking this question as primary, Smith was breaking with Christian tradition as well as 
+
+philosophical tradition.
+Bleached: In X-ing this Y as Z, A was B-ing with C D as well as E D.
+Chars: 119 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 235 ---
+Original: Philosophers of religion and Christian theologians tend to focus on 
+
+logical puzzles relating to God’s existence and nature.
+Bleached: A's of B and C D's tend to E on 
+
+F G's H-ing to I's J and K.
+Chars: 127 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 236 ---
+Original: (For example: If God is all-knowing, then 
+
+he knows what it is like to suffer; but he cannot know what it is like to suffer unless he is 
+
+vulnerable and therefore not all-powerful: so how can God’s omnipotence by compatibilized 
+
+with his omniscience?) Most Christian theologians take is a given God is all-knowing and all-
+
+powerful and then try to reconcile that with the presumption that God cares about us and is 
+
+otherwise sufficiently human to serve as our guardian.
+Bleached: (For example: If A is all-B-ing, then 
+
+he C's what it is like to D; but he cannot C what it is like to D unless he is 
+
+E and therefore not all-F: so how can A's G by H-ed 
+
+with his I?) Most J K's take is a given A is all-B-ing and all-
+
+F and then try to L that with the M that A N's about us and is 
+
+otherwise sufficiently O to serve as our P.
+Chars: 485 | Tokens: 80 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: (:-,;-:?)--.
+
+--- Pattern 237 ---
+Original: Smith starts with the assumption that God 
+
+is psychologically able and willing to serve as a guardian and attributes only as much power and 
+
+sapience to God as is compatible with this fact.
+Bleached: A X's with the Y that Z 
+
+is W Q and R to S as a T and U only as V W and 
+
+X to Z as is Y with this Z.
+Chars: 195 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 238 ---
+Original: Relatedly, Smith’s theology, unlike traditional Christian theology, is not concerned with 
+
+providing logical proofs of God’s existence.
+Bleached: Q-ly, A's B, unlike C D B, is not E with 
+
+F G H of I's J.
+Chars: 138 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 239 ---
+Original: No attempts are made to deduce God’s existence, let 
+
+alone his nature, from first principles—to show, for example, that God, qua perfect being, cannot 
+
+fail to exist; or to show that God’s existence is a precondition for natural law.
+Bleached: No X's are made to Y God's existence, let 
+
+alone his nature, from first Z's—to show, for example, that God, qua perfect being, cannot 
+
+fail to exist; or to show that God's existence is a W for natural law.
+Chars: 239 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,—,,,,;.
+
+--- Pattern 240 ---
+Original: For Smith, God is 
+
+known through revelation or on the basis of the testimony of those who have had such 
+
+revelations.
+Bleached: For A, B is 
+
+C-ed through D or on the basis of the E of those who have had such 
+
+D's.
+Chars: 123 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 241 ---
+Original: This is significant because attempts to prove that God exists inevitably turn Him into 
+
+an impersonal force or principle, stripping him of his ability to have a relationship with us: If 
+
+“God” is “a maximally perfect being”, “a guarantor of natural law”, or an “unmoved mover”, 
+
+then he is unlikely to be sufficiently like us that we could possibly have a meaningful 
+
+relationship with him.
+Bleached: This is A because B's to C that D E's F turn Him into 
+
+an G H or I, J-ing him of his K to have a L with us: If 
+
+"D" is "a M N O", "a P of Q R", or an "S T", 
+
+then he is U to be V like us that we could W have a X 
+
+L with him.
+Chars: 402 | Tokens: 65 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,:,,,.
+
+--- Pattern 242 ---
+Original: Also, Smith does not hold that God is all-knowing or all-powerful.
+Bleached: Also, A does not B that C is D or E.
+Chars: 66 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--.
+
+--- Pattern 243 ---
+Original: He holds that he is as 
+
+knowing and powerful as he can be while still being able to be emotionally invested in us.
+Bleached: He P's that he is as 
+
+Q-ing and R as he can be while still being able to be S-ly T-ed in us.
+Chars: 117 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 244 ---
+Original: For traditional Christian theology, God does not change.
+Bleached: For A B C, D does not E.
+Chars: 56 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 245 ---
+Original: For Smith, God is capable of 
+
+changing.
+Bleached: For X, Y is capable of 
+
+Z-ing.
+Chars: 42 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 246 ---
+Original: This is a corollary of his view that God is able to have emotional ties to us.
+Bleached: This is a Ω of his X that Y is Z to have A B to us.
+Chars: 78 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 247 ---
+Original: A being 
+
+that doesn’t change at all doesn’t change for us, and a being that is completely unresponsive to us 
+
+doesn’t care for us and is not otherwise our guardian.
+Bleached: A being 
+
+that doesn't X at all doesn't X for us, and a being that is completely Y to us 
+
+doesn't Z for us and is not otherwise our W.
+Chars: 170 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 248 ---
+Original: Smith’s belief that God was a man is 
+
+consistent with his position that God changes.
+Bleached: A's B that C was a D is
+
+E with his F that C G's.
+Chars: 87 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 249 ---
+Original: Smith’s theology changed over the years.
+Bleached: A's B changed over the C's.
+Chars: 40 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 250 ---
+Original: But all of the changes that occurred in his 
+
+theological system were internal to the assumption that God is first and foremost a being who is 
+
+sufficiently like us that he can have a relationship with us.
+Bleached: But all of the A's that B-ed in his 
+
+C D were E to the F that G is first and foremost a H who is 
+
+I like us that he can have a J with us.
+Chars: 210 | Tokens: 37 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 251 ---
+Original: In Smith’s theology, God is “immanent” in the spatiotemporal world, meaning that he is 
+
+present throughout it, in much the same way as gravity or light.
+Bleached: In X's Y, Z is "A" in the B C, D-ing that he is 
+
+E throughout it, in much the same way as F or G.
+Chars: 155 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 252 ---
+Original: Because God is immanent, we 
+
+can interact with him; if he were detached from reality, we couldn’t.
+Bleached: Because A is B, we 
+
+can C with him; if he were D from E, we couldn't.
+Chars: 101 | Tokens: 17 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,;,.
+
+--- Pattern 253 ---
+Original: According to Smith, all reality is animate; indeed, reality consists of consciousness that is 
+
+individuated into discrete consciousnesses.
+Bleached: According to A, all B is C; indeed, B consists of D that is 
+
+individuated into E D's.
+Chars: 141 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 254 ---
+Original: At the same time, Smith does not hold that God is 
+
+this generalized consciousness; he holds that God is but one of the many consciousnesses into 
+
+which it is individuated, with the qualification that he is the most important one.
+Bleached: At the same time, A does not B that C is 
+
+this D-ed E; he B-s that C is but one of the many E-s into 
+
+which it is F-ed, with the G that he is the most H one.
+Chars: 235 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 255 ---
+Original: Smith started off as a strict monotheist and ended up as a polytheist.
+Bleached: A X-ed Y as a Z B and X-ed Y as a C.
+Chars: 70 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 256 ---
+Original: According to the 
+
+theology that Smith accepted at the end of his life, God, Jesus, and the Holy Ghost are distinct 
+
+entities but they jointly constitute a single “Godhead.”  
+
+    Commentary: Practicing Christians operate on the assumption that God cares about them and 
+
+also has the power to act on his concern for them.
+Bleached: According to the 
+
+A that B X-ed at the C of his D, E, F, and the G H are I 
+
+J but they K L a M "N."  
+
+    O: P-ing Q R on the S that E T about them and 
+
+also has the U to V on his W for them.
+Chars: 332 | Tokens: 53 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.:.
+
+--- Pattern 257 ---
+Original: Christian theologians start with the assumption 
+
+that God is utterly perfect or otherwise not of this world and then trying to reconcile that with the 
+
+presumption that God is caring.
+Bleached: A B start with the C 
+
+that D is E F or otherwise not of this G and then H-ing to I that with the 
+
+J that D is K-ing.
+Chars: 189 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 258 ---
+Original: This is an exercise in futility.
+Bleached: This is an X in Y.
+Chars: 32 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 259 ---
+Original: An all-knowing creature wouldn’t 
+
+care about us.
+Bleached: An all-X-ing Y wouldn't 
+
+Z about us.
+Chars: 51 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 260 ---
+Original: For it would be emotionally completely different from us; indeed, it wouldn’t have 
+
+any emotions at all, since emotion presupposes partiality and therefore ignorance.
+Bleached: For it would be X-ly Y different from us; indeed, it wouldn't have 
+
+any Z's at all, since Z presupposes W and therefore V.
+Chars: 169 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,.
+
+--- Pattern 261 ---
+Original: An all-
+
+powerful being wouldn’t care about us; for such a being would have no vulnerabilities and would 
+
+therefore have none of the emotions that presuppose vulnerability—meaning that it would have 
+
+no emotions at all and would therefore have none concerning us.
+Bleached: An all-
+
+A being wouldn't care about us; for such a being would have no B's and would 
+
+therefore have none of the C's that D B—meaning that it would have 
+
+no C's at all and would therefore have none concerning us.
+Chars: 271 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -;—.
+
+--- Pattern 262 ---
+Original: If one’s starting point is that 
+
+God is all powerful or all-knowing or otherwise perfect, there is no way to explain why he would 
+
+care about us.
+Bleached: If one's X-ing Y is that 
+
+Z is all W-ful or all-V-ing or otherwise A, there is no B to C why he would 
+
+D about us.
+Chars: 151 | Tokens: 27 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 263 ---
+Original: Smith sidesteps this problem.
+Bleached: A sidesteps this B.
+Chars: 29 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 264 ---
+Original: Smith’s starting point is that God cares about us and guides us, 
+
+and he attributes the requisite properties to God—in particular, the requisite levels of sapience 
+
+and power.
+Bleached: A's B-ing C is that D E-s about us and F-s us, 
+
+and he G-s the H I-s to D—in particular, the H J-s of K 
+
+and L.
+Chars: 181 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—,.
+
+--- Pattern 265 ---
+Original: And in taking that as his starting point, Smith is able to validate religious practice.
+Bleached: And in X-ing that as his Y-ing Z, A is W to B C D.
+Chars: 87 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 266 ---
+Original: From the viewpoint of a religious person, God’s primary function is to guide us and care about 
+
+us.
+Bleached: From the X of a Y Z, A's B C is to D us and E about us.
+Chars: 102 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 267 ---
+Original: That being so, he must be relatively powerful and knowing, but he needn’t be absolutely so.
+Bleached: That being so, he must be relatively X and Y-ing, but he needn't be absolutely so.
+Chars: 91 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 268 ---
+Original: VIII.
+Bleached: VIII.
+Chars: 5 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 269 ---
+Original: “The Weeping God of Mormonism” (2002) by Eugene England.
+Bleached: "The X-ing Y of Z" (2002) by A B.
+Chars: 56 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 270 ---
+Original: Summary: In the Book of Moses, written or otherwise channeled by Joseph Smith in 1830, 
+
+God addresses Enoch, a prophet, and discusses how upset he is that human beings mistreat each 
+
+other.
+Bleached: Summary: In the A of B, C-ed or otherwise D-ed by E F in G, 
+
+H I-es J, a K, and L-es how M he is that N O-s P each 
+
+Q.
+Chars: 195 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,,,.
+
+--- Pattern 271 ---
+Original: In the process, God actually weeps.
+Bleached: In the X, Y Z W's.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 272 ---
+Original: Enoch is puzzled, since he cannot understand how an 
+
+all-powerful being would feel the need to weep.
+Bleached: A is B-ed, since he cannot C how an 
+
+D-E F would G the H to I.
+Chars: 103 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 273 ---
+Original: For one only weeps when one lacks control, and 
+
+God is presumably always in control.
+Bleached: For one only X-s when one Y-s Z, and 
+
+W is presumably always in Z.
+Chars: 87 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 274 ---
+Original: Enoch says as much to God, and God responds by saying 
+
+that his powers are limited.
+Bleached: A says as much to B, and B responds by saying
+
+that his C's are D-ed.
+Chars: 86 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 275 ---
+Original: In particular, he cannot do away with human freedom without doing 
+
+away with human beings themselves, which he does not wish to do, since human beings are his 
+
+most valued creation.
+Bleached: In K1, he cannot do away with X L without K-ing 
+
+away with X M's themselves, which he does not N to do, since X M's are his 
+
+most O-ed P.
+Chars: 187 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 276 ---
+Original: Of course, God could still obliterate human beings.
+Bleached: Of course, X could still Y Z beings.
+Chars: 51 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 277 ---
+Original: But he chooses not to because he cares 
+
+about them, and he cares about them because he has emotions, and he has emotions because is 
+
+not all-powerful.
+Bleached: But he A not to because he B 
+
+about them, and he B about them because he has C, and he has C because is 
+
+not all-D.
+Chars: 156 | Tokens: 27 | Clauses: 4
+Clause Order: subordinate → main
+Punctuation: ,,-.
+
+--- Pattern 278 ---
+Original: He is certainly relatively powerful, but he is sufficiently lacking in power that 
+
+his psychological constitution is still basically that of a human being, with the result that he can 
+
+emote.
+Bleached: He is certainly relatively A, but he is sufficiently B-ing in C that 
+
+his D E is still basically that of a F G, with the result that he can 
+
+H.
+Chars: 197 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 279 ---
+Original: Thus, Joseph Smith does not attempt to reconcile the existence of evil with the existence of 
+
+an all-powerful, all-knowing God.
+Bleached: Thus, A B does not C to D the E of F with the E of 
+
+an G-H, G-I J.
+Chars: 130 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,-.
+
+--- Pattern 280 ---
+Original: Rather, Smith denies that God is all-powerful.
+Bleached: Rather, A B-s that C is all-D.
+Chars: 46 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 281 ---
+Original: And there is 
+
+independent support for this position.
+Bleached: And there is 
+
+X Y for this Z.
+Chars: 55 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 282 ---
+Original: For an all-powerful God couldn’t emote and therefore 
+
+couldn’t emote about us; and such a God would not be our God, even though he was indeed God.
+Bleached: For an all-X Y couldn't Z and therefore 
+
+couldn't Z about us; and such a Y would not be our Y, even though he was indeed Y.
+Chars: 149 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -;,.
+
+--- Pattern 283 ---
+Original: Commentary: For Smith, God is our protector, which means that he is powerful enough to 
+
+protect us without being so powerful as to lack the ability to care about us.
+Bleached: Commentary: For A, B is our C, which means that he is D enough to 
+
+E us without being so D as to lack the ability to F about us.
+Chars: 168 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,.
+
+--- Pattern 284 ---
+Original: England’s article does 
+
+a good job of making it clear that is indeed how Smith conceives of God.
+Bleached: A's B does 
+
+a C D of E-ing it F that is G how H I-s of J.
+Chars: 99 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 285 ---
+Original: IX.
+Bleached: IX.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 286 ---
+Original: “William Phelp's Paracletes” (2021) by Samuel Brown 
+
+ 
+
+  Note: This article consists of two parts: “Paracletes” by William Phelps, along with a preface 
+
+bySamuel Brown.
+Bleached: "A B's C" (2021) by D E 
+
+ 
+
+  Note: This F G of two H: "C" by A B, along with a I 
+
+byD E.
+Chars: 177 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '()::,.
+
+--- Pattern 287 ---
+Original: “Paracletes” is a work of Mormon fiction written in 1845.
+Bleached: "A" is a B of C D E in F.
+Chars: 57 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 288 ---
+Original: I will summarize 
+
+“Paracletes” itself and then briefly summarize Brown’s take on it.
+Bleached: I will X
+
+"Y's" itself and then briefly X Z's A on it.
+Chars: 87 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 289 ---
+Original: Summary of “Paracletes”: “Paracletes” is a fictionalization of Joseph Smith’s view as to 
+
+how God, with the help of other lesser gods, brought humans into existence.
+Bleached: A of "B": "B" is a C of D E's F as to 
+
+how G, with the H of other I J, K L into M.
+Chars: 168 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,.
+
+--- Pattern 290 ---
+Original: “Paracletes” is primarily concerned with the backstory, that is, with the activities of these various gods prior to, 
+
+and involved in, the creation of human beings.
+Bleached: """
+"A" is primarily B with the C, that is, with the D of these various E prior to, 
+
+and F in, the G of H I.
+"""
+Chars: 167 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 291 ---
+Original: The story is quite byzantine, but the gist is easily stated.
+Bleached: The X is quite Y, but the Z is easily W-ed.
+Chars: 60 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 292 ---
+Original: God existed before human beings 
+
+did.
+Bleached: A existed before B C's 
+
+did.
+Chars: 40 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 293 ---
+Original: But he did not exist alone.
+Bleached: But he did not X alone.
+Chars: 27 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 294 ---
+Original: He existed along side many lesser gods.
+Bleached: He X-ed along side many Y-er Z's.
+Chars: 39 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 295 ---
+Original: Indeed, he was part of a 
+
+veritable world consisting of gods.
+Bleached: Indeed, he was part of a 
+
+X Y consisting of Z's.
+Chars: 64 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 296 ---
+Original: Moreover, God, though supreme, worked together with a 
+
+“council of Gods.” God’s relationship to the council-members was not that of lord to vassal but 
+
+was rather that of chairman to board-member: he had the final vote, so to speak, but he 
+
+cooperated with the council-members, giving weight to their input, rather than simply issuing 
+
+orders.
+Bleached: Moreover, X, though Y, Z-ed together with a 
+
+"W of X's." X's V to the W-U's was not that of Q to R but 
+
+was rather that of S to T-U: he had the final M, so to speak, but he 
+
+N-ed with the W-U's, giving P to their L, rather than simply K-ing 
+
+J's.
+Chars: 355 | Tokens: 55 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,.--:,,-,,.
+
+--- Pattern 297 ---
+Original: One day, God and the council decide that it behooves them to create a world of self-aware, 
+
+intelligent but mortal beings.
+Bleached: One day, A and the B decide that it C them to create a D of E-aware, F but G H.
+Chars: 125 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,.
+
+--- Pattern 298 ---
+Original: These creatures are to have “agency”: the ability to make their own 
+
+decisions.
+Bleached: These A's are to have "B": the C to make their own D's.
+Chars: 82 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 299 ---
+Original: God and the council consider various different possible worlds that these creatures 
+
+might inhabit, each with its own merits and demerits.
+Bleached: A and the B C D E F G H that these I
+
+J K, L with its own M and N.
+Chars: 141 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 300 ---
+Original: None of these worlds will be perfect, they 
+
+realize, since these creatures will have agency, which they will inevitably abuse.
+Bleached: None of these A's will be B, they 
+
+C, since these D's will have E, which they will F G.
+Chars: 129 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 301 ---
+Original: But the 
+
+objective is not to create a perfect world; it is to create a world where humans have the 
+
+opportunity to perfect themselves.
+Bleached: But the 
+
+X is not to Y a Z world; it is to Y a world where A's have the 
+
+B to Z themselves.
+Chars: 140 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ;.
+
+--- Pattern 302 ---
+Original: God and the council finally choose a world to actualize.
+Bleached: A and the B finally C a D to E.
+Chars: 56 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 303 ---
+Original: They call it “Idumia.” When 
+
+actualizing Idumia, God does not act alone.
+Bleached: They X it "Y." When 
+
+Z-ing Y, A does not B alone.
+Chars: 75 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,.
+
+--- Pattern 304 ---
+Original: He works with the council and also with his son, 
+
+who functions as his right-hand man.
+Bleached: He X's with the Y and also with his Z, 
+
+who A's as his B-C D.
+Chars: 89 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 305 ---
+Original: The son is not referred to as “Jesus” but that is clearly who 
+
+he is.
+Bleached: The A is not B-ed to as "C" but that is D who 
+
+he is.
+Chars: 72 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 306 ---
+Original: One important fact about the actualization-process is that God creates a first man, in whom 
+
+he partially embodies himself.
+Bleached: One J K about the L-M is that N O-s a P Q, in whom 
+
+he R S-s himself.
+Chars: 126 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 307 ---
+Original: Summary of Brown’s Preface to “Paracletes”: “Paracletes” provides a vivid representation 
+
+of Smith’s thought concerning the origins of humanity, specifically God’s role therein.
+Bleached: A of B's C to "D": "D" E a F G 
+
+of H's I J the K of L, M N's O P.
+Chars: 180 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 308 ---
+Original: By 
+
+presenting the intricacies of Smith’s thought in the form of a story, “Paracletes” makes those 
+
+intricacies intelligible and in the process illuminates otherwise obscure aspects of Mormon 
+
+theology.
+Bleached: By 
+
+presenting the X of Y's Z in the form of a A, "B" makes those 
+
+X C and in the process D otherwise E F of G 
+
+H.
+Chars: 211 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 309 ---
+Original: Commentary: “Paracletes” does not provide a useful illustration of Smith’s thought: it 
+
+actually obscures it.
+Bleached: Commentary: "X" does not provide a Y Z of A's B: it 
+
+actually C it.
+Chars: 112 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::.
+
+--- Pattern 310 ---
+Original: The material on which “Paracletes” is based is drawn from the periphery of 
+
+Smith’s thought, but it treats it as being central to his thought, making Smith’s theology seem 
+
+cartoonish and arbitrary.
+Bleached: The O on which "P's" is based is X from the Ω of 
+
+Y's Z, but it A's it as being B to his Z, C-ing Y's D seem 
+
+E and F.
+Chars: 204 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 311 ---
+Original: The essence of Smith’s theology is given by the aphorism (due to Lorenzo Snow): “As man 
+
+is, God once was; as God is, man may become.” In other words, God is an evolved man, and a 
+
+human being can therefore evolve into a state of relative Godliness.
+Bleached: The A of B's C is D by the E (F to G H): "As I 
+
+is, J once was; as J is, I may K." In other words, J is an L-ed I, and a 
+
+M N can therefore O into a P of Q R.
+Chars: 255 | Tokens: 47 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():,;,.,,.
+
+--- Pattern 312 ---
+Original: This entails that Godliness 
+
+comes in degrees, and it therefore entails that there are, or at least could be, various beings 
+
+having varying degrees of God status.
+Bleached: This X's that Y 
+
+Z's in W's, and it therefore X's that there are, or at least could be, various A's 
+
+B-ing C-ing W's of Y D.
+Chars: 169 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 313 ---
+Original: The motivation for this position is that unless God is at 
+
+least partly human, he is unlikely to have the ability or inclination to function as our guardian.
+Bleached: The A for this B is that unless C is at 
+
+least D E, he is F to have the G or H to I as our J.
+Chars: 160 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 314 ---
+Original: “Paracletes” spins off this defensible idea into an L.
+Bleached: "X" Y off this Z idea into an L.
+Chars: 54 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 315 ---
+Original: Ron Hubbard style fantasy.
+Bleached: A B C D.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 316 ---
+Original: X.
+Bleached: X.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 317 ---
+Original: "What Is the Nature of God’s Progress?” (2021) by Matthew Bowman 
+
+ 
+
+  Summary: The essence of KFD and indeed of Smith’s theology is that God was human and 
+
+only became a God through a process of self-actualization.
+Bleached: "What Is the X of Y's Z?" (2021) by A B 
+
+ 
+
+  C: The D of E and F of G's H is that Y was I and 
+
+only J a Y through a K of L-M.
+Chars: 223 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "?():-.
+
+--- Pattern 318 ---
+Original: Later Mormon theologians had no 
+
+choice but to accept some version or other of this claim, but many balked at accepting it outright 
+
+and opted for softened versions of it.
+Bleached: Later A B had no 
+
+C but to D some E or F of this G, but many H at I it J 
+
+and K for L M of it.
+Chars: 177 | Tokens: 30 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 319 ---
+Original: For example, some held that, although God has become 
+
+more godly over time, there was never a time when he was not God.
+Bleached: For A, some B that, although C has become 
+
+more D over E, there was never a E when he was not C.
+Chars: 122 | Tokens: 23 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 320 ---
+Original: Others held that, although 
+
+God himself was always a God, there have existed human beings who achieved a certain degree 
+
+of godliness.
+Bleached: Others held that, although 
+
+A himself was always a A, there have existed B C's who D-ed a E F 
+
+of G-ness.
+Chars: 140 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 321 ---
+Original: There have also been Mormon theologians who pushed back against this tendency, by 
+
+advocating the very theology that Smith advocated.
+Bleached: There have also been A B who C-ed back against this D, by 
+
+E-ing the very F that G E-ed.
+Chars: 136 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 322 ---
+Original: Because Smith’s theology is consistent with 
+
+the supposition that creatures evolve, it had support from evolution-positive Mormon 
+
+                                                th
+theologians, of whom there were many in the late 19 century owing to the widespread 
+
+evolutionary-mania that had taken hold of thinkers of the time.
+Bleached: Because A's B is C with 
+
+the D that E's F, it had G from H-I J 
+
+                                                th
+K's, of whom there were many in the L M N owing to the O 
+
+P-Q that had R S of T's of the U.
+Chars: 340 | Tokens: 43 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-,-.
+
+--- Pattern 323 ---
+Original: Mormon theology as a whole has remained in a limbo between Smith’s own theology and 
+
+these softened versions of it.
+Bleached: A theology as a whole has B-ed in a C between D's own theology and
+
+these E-ed F's of it.
+Chars: 118 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 324 ---
+Original: Commentary: Bowman writes that:   
+
+ 
+
+      Orson Pratt took the notion that God was not always God seriously, but he offered a more 
+
+      abstract version of divine progress that the lineal parentage statements of Young or Hyde, 
+
+ in some way God’s divinity is eternal and self-existent.
+Bleached: Commentary: A writes that:   
+
+ 
+
+      B C took the X that D was not always D Y, but he Z-ed a more 
+
+      E F of G H that the I J K of L or M, 
+
+ in some way D's N is O and P.
+Chars: 300 | Tokens: 44 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::,,-.
+
+--- Pattern 325 ---
+Original: From the King 
+      instead teaching that
+
+      Follett Discourse, Pratt posited that “the primary powers of all material substance must be 
+
+      intelligent” and that therefore the totality of that intelligence, which was interconnected, 
+
+      self-existent, and eternal, was in
+ fact what Pratt called the “Great God.” The being humans       called “God,” then, partook of the eternal divine attributes that the “Great God” had always 
+
+ divinity.
+Bleached: From the A 
+      instead B-ing that
+
+      C D, E F-ed that "the G H's of all I J must be 
+
+      K" and that therefore the L of that M, which was N, 
+
+      O, and P, was in
+ fact what E Q-ed the "R S." The T U's       Q-ed "S," then, V-ed of the P W X's that the "R S" had always 
+
+ Y.
+Chars: 465 | Tokens: 63 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-,,.,,.
+
+--- Pattern 326 ---
+Original: Pratt thus 
+      possessed as a singular manifestation of the eternal principles of
+
+      insisted that “God” in the form of the “Great God” had indeed always existed and always 
+
+      possessed all the attributes of divinity, but that any particular “God” who entered into 
+
+      communion with the “Great God” might indeed have had a history of growth and change.
+Bleached: X thus 
+      Y-ed as a Z W of the X1 Y1 of
+
+      Y2-ed that "X2" in the Y3 of the "Z1 X2" had indeed always Y4-ed and always 
+
+      Y-ed all the W1 of X3, but that any Z2 "X2" who Y5-ed into 
+
+      W2 with the "Z1 X2" might indeed have had a Y6 of X4 and W3.
+Chars: 376 | Tokens: 57 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 327 ---
+Original: He 
+
+ 
+      thus saw both eternity and progress in Smith’s ideas (Bowman 2021, p.
+Bleached: He 
+
+ 
+      thus X both Y and Z in A's B's (C 2021, p.
+Chars: 85 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.
+
+--- Pattern 328 ---
+Original: 4).
+Bleached: 4).
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 329 ---
+Original: What would Joseph Smith say about Pratt’s position?
+Bleached: What would A B say about C's position?
+Chars: 51 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 330 ---
+Original: He would reject it.
+Bleached: He would X it.
+Chars: 19 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 331 ---
+Original: According to the 
+
+KFD, God was once a man and he developed a god.
+Bleached: According to the 
+
+X, Y was once a Z and he V-ed a Y.
+Chars: 68 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 332 ---
+Original: What Pratt puts forth is incompatible with 
+
+this doctrine of Smith’s.
+Bleached: What X Y Z is W with 
+
+this V of U's.
+Chars: 72 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 333 ---
+Original: Pratt’s position is pantheism coupled with the position that matter is in 
+
+fact sentient.
+Bleached: A's B is C D-ed with the B that E is in 
+
+F G.
+Chars: 92 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 334 ---
+Original: Pratt’s position is therefore very far from—and logically incompatible with--the 
+
+position that some person became what is now God.
+Bleached: A's B is therefore very far from—and logically incompatible with--the 
+
+B that some person became what is now C.
+Chars: 134 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —--.
+
+--- Pattern 335 ---
+Original: Pratt, as Bowman observes, is one of the 
+
+most “Smith-positive” theologians in Mormon theological history: and yet Pratt’s theology 
+
+repudiates the very essence of Smith’s theology, namely, the contention that God was once a 
+
+man.
+Bleached: A, as B observes, is one of the 
+
+most "C-positive" D's in E F history: and yet A's G 
+
+H's the very I of C's G, namely, the J that K was once a 
+
+L.
+Chars: 239 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-:,,.
+
+--- Pattern 336 ---
+Original: This shows how intensely Mormon theologians resisted Smith’s doctrines, even while 
+
+having to operate within a framework at least partially defined by those doctrines.
+Bleached: This X's how Y-ly Z A's R-ed B's C's, even while 
+
+having to D within a E at least F-ly G-ed by those C's.
+Chars: 170 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 337 ---
+Original: Bowman gives other another striking example of this ambivalence in Mormon thought, 
+
+writing that:  
+
+ 
+
+      Far more controversial than the debate over God’s origins has been the notion only hinted 
+
+    at in Smith’s discourses: that God continues to progress.
+Bleached: Bowman gives X another Y example of this Z in A thought, 
+
+writing that:  
+
+ 
+
+      Far more B than the C over God's D has been the E only F 
+
+    at in Smith's G: that God H to I.
+Chars: 272 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,::.
+
+--- Pattern 338 ---
+Original: Woodruff recorded Joseph Smith 
+
+      describing Jesus’s intentions in the King Follett Discourse: “I will give to the father which 
+
+    will add to his glory, He will take a Higher exhaltation & I will take his place and am also 
+
+      exhalted.” This implied, at least, that God the Father’s divinity continues in some way to 
+
+      expand.
+Bleached: A X-ed B C 
+
+      X-ing D's E in the F G H: "I will I to the J which 
+
+    will K to his L, He will M a N O & I will P his Q and am also 
+
+      R-ed." This S-ed, at T, that U the V's W X in some Y to 
+
+      Z.
+Chars: 354 | Tokens: 55 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.,,.
+
+--- Pattern 339 ---
+Original: For some, the idea was self-evident, and those who were most vocal in insisting that 
+
+      God did progress also tended to argue that God’s progress was qualitative: that God is 
+
+      increasing in knowledge and power, changing and developing even as human beings do the 
+
+      same… As the twentieth century went on, however, [such] ideas were increasingly 
+
+      marginalized.
+Bleached: For some, the X was Y-evident, and those who were most Z in W-ing that 
+
+      A did B also C-ed to D that A's B was E: that A is 
+
+      F-ing in G and H, I-ing and J-ing even as K beings do the 
+
+      same… As the L century went on, however, [such] X's were increasingly 
+
+      M-ed.
+Chars: 392 | Tokens: 57 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,:,,,.
+
+--- Pattern 340 ---
+Original: Rather, many Church leaders came to conclude that in referring to “higher 
+
+      exaltation,” Joseph Smith meant that God’s glory increased as Jesus worked out his mission 
+
+      and human beings progressed.
+Bleached: Rather, many A B's came to C that in D-ing to "E 
+
+      F," G H I-ed that J's K L-ed as L M-ed out his N 
+
+      and O P's Q-ed.
+Chars: 213 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 341 ---
+Original: They found the notion that God continues to gain knowledge 
+
+      and power incompatible with scriptural declarations that God possesses all power and       wisdom.
+Bleached: They A the B that C D to E F 
+
+      and G H with I J that C K all G and       L.
+Chars: 167 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 342 ---
+Original: Elder Neal A.
+Bleached: Ω F A.
+Chars: 13 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 343 ---
+Original: Maxwell worried that “some have wrongly assumed God’s progress is 
+
+      related to His acquisition of additional knowledge.
+Bleached: Maxwell X-ed that "some have wrongly Y-ed God's Z is 
+
+      related to His W of additional X.
+Chars: 127 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 344 ---
+Original: .
+Bleached: .
+Chars: 1 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 345 ---
+Original: .
+Bleached: .
+Chars: 1 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 346 ---
+Original: .
+Bleached: .
+Chars: 1 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 347 ---
+Original: Mortals should not aspire to teach 
+
+      God that He is not omniscient by adding qualifiers that He has never used in the scriptures.
+Bleached: A's should not B to C 
+
+      D that He is not E by F-ing G's that He has H-ed I-ed in the J's.
+Chars: 137 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 348 ---
+Original: Job rightly asked, ‘Shall any teach God knowledge?’”24 McConkie said, “God is not 
+
+      progressing in knowledge, truth, virtue, wisdom, or any of the attributes of godliness.
+Bleached: """
+A rightly B-ed, 'Shall any C God D?'"24 E F-ed, "God is not 
+
+      G-ing in D, H, I, J, or any of the K's of L.
+"""
+Chars: 179 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?,,,,,.
+
+--- Pattern 349 ---
+Original: .
+Bleached: .
+Chars: 1 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 350 ---
+Original: .
+Bleached: .
+Chars: 1 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 351 ---
+Original: .
+Bleached: .
+Chars: 1 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 352 ---
+Original: He 
+
+    is progressing in the sense that his creations increase, his dominions expand, his spirit 
+
+      offspring multiply, and more kingdoms are added to his domains.”25 Indeed, McConkie, 
+
+      whose mind worked in definitives, denounced as one of his “Seven Deadly Heresies” the 
+
+      idea that “God is progressing in knowledge and is learning new truths.
+Bleached: He 
+
+    is X-ing in the Y that his Z's W, his V's R, his T 
+
+      U multiply, and more S's are Q-ed to his P's."25 Indeed, N, 
+
+      whose M L-ed in O's, K-ed as one of his "J I H's" the 
+
+      G that "F is X-ing in E and is D-ing C B's.
+Chars: 372 | Tokens: 53 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.,,,.
+
+--- Pattern 353 ---
+Original: This is false—utterly, 
+
+      totally, and completely.
+Bleached: This is A—B, 
+
+      C, and D.
+Chars: 57 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —,,.
+
+--- Pattern 354 ---
+Original: There is not one sliver of truth in it.
+Bleached: There is not one X of Y in it.
+Chars: 39 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 355 ---
+Original: (Pratt, 2021, p.
+Bleached: (A, B, C.
+Chars: 16 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,.
+
+--- Pattern 356 ---
+Original: 70-71).
+Bleached: 70-71).
+Chars: 7 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -).
+
+--- Pattern 357 ---
+Original: There is no doubt as to what Smith’s position in the KFD was: God continues to learn and to 
+
+grow.
+Bleached: There is no P as to what Q's R in the S was: T U to V and to W.
+Chars: 101 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 358 ---
+Original: An immediate corollary is that God is not omniscient and never was.
+Bleached: An X corollary is that Y is not Z and never was.
+Chars: 67 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 359 ---
+Original: In the above passage, we  
+
+learn of two schools of thought in within Mormon theology.
+Bleached: In the above X, we
+
+Y of two Z's of A in within B C.
+Chars: 88 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 360 ---
+Original: According to one of those schools, 
+
+Smith indeed said that God continues to acquire knowledge.
+Bleached: According to one of those A, 
+
+B indeed C that D E to F G.
+Chars: 97 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 361 ---
+Original: According to the other, Smith did not 
+
+say that, and it is to be rejected as “heresy.” Once again we see how profoundly ambivalent the 
+
+Mormon Church is about Smith’s doctrines.
+Bleached: According to the other, A did not 
+
+B that, and it is to be C-ed as "D." Once again we E how F-ly G the 
+
+H I is about A's J's.
+Chars: 183 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,..
+
+--- Pattern 362 ---
+Original: On the one hand, it operates within a framework 
+
+defined by them.
+Bleached: On the one hand, it X within a Y 
+
+Z by them.
+Chars: 68 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 363 ---
+Original: On the other hand, the doctrines it officially countenances are simply incompatible 
+
+with them.
+Bleached: On the other hand, the X's it officially Y's are simply Z with them.
+Chars: 98 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 364 ---
+Original: Taken as a history of Mormon theological thought, Bowman’s article is unexceptionable.
+Bleached: X-ed as a Y of Z W X, A's B is C.
+Chars: 86 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 365 ---
+Original: That said, I personally feel that it should supplemented with a follow-up paper that is concerned 
+
+with the question: Is anything left of Smith’s though in contemporary Mormon theology?
+Bleached: That said, I personally X that it should Y-ed with a Z-up W that is X-ed 
+
+with the X: Is X Y of V's X in Z Ω Y?
+Chars: 188 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-:?
+
+--- Pattern 366 ---
+Original: For it 
+
+seems that the history of Mormon theology is a history of attempts to run away from Smith’s 
+
+thought under the pretext of developing it, and it is worth investigating to what extent this is 
+
+actually the case.
+Bleached: For it 
+
+seems that the A of B C is a A of D to E away from F's 
+
+G under the H of I-ing it, and it is J K-ing to what L this is 
+
+actually the M.
+Chars: 226 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 367 ---
+Original: Conclusion 
+
+ 
+
+  According to orthodox Christian theology, God has a dual mandate.
+Bleached: A
+
+According to B C D, E has a F G.
+Chars: 87 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 368 ---
+Original: On the one hand, he is 
+
+supposed to be all-knowing and all-powerful.
+Bleached: On the one hand, he is 
+
+supposed to be X-Y and Z-W.
+Chars: 71 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--.
+
+--- Pattern 369 ---
+Original: On the other hand, he is supposed to care about us.
+Bleached: On the other hand, he is A-ed to B about us.
+Chars: 51 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 370 ---
+Original: These are incompatible mandates.
+Bleached: These are P Q's.
+Chars: 32 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 371 ---
+Original: Orthodox Christianity suffers from this incoherence 
+
+because it starts with the supposition that God is perfect and on that basis tries to validate the 
+
+presumption that God is emotionally invested in us.
+Bleached: A B suffers from this C 
+
+because it starts with the D that E is F and on that G tries to H the 
+
+I that E is J K in us.
+Chars: 210 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 372 ---
+Original: But there is no way to do this since an all-
+
+powerful, all-knowing being wouldn’t have emotions and therefore wouldn’t have any emotions 
+
+concerning us.
+Bleached: But there is no Δ to X this since an Y-
+
+Z, Y-W-ing Ω wouldn't have Ψ's and therefore wouldn't have any Ψ's 
+
+V-ing us.
+Chars: 158 | Tokens: 25 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: -,-.
+
+--- Pattern 373 ---
+Original: There is the additional fact that the concept of a sapient, all-powerful being is incoherent.
+Bleached: There is the additional A that the B of a C, D-ful E is F.
+Chars: 93 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 374 ---
+Original: Being sapient involves being responsive to change; being responsive to change involves being 
+
+vulnerable; and being vulnerable involves not being all-powerful.
+Bleached: Being X involves being Y to Z; being Y to Z involves being 
+
+W; and being W involves not being V.
+Chars: 162 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;;-.
+
+--- Pattern 375 ---
+Original: Sapience is therefore 
+
+incompatible with omnipotence.
+Bleached: A is therefore 
+
+B with C.
+Chars: 56 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 376 ---
+Original: Also, according to orthodox Christian theology, God has a human son but is not himself 
+
+human or otherwise biological, which is absurd.
+Bleached: Also, according to A B C, D has a E F but is not himself
+
+E or otherwise G, which is H.
+Chars: 138 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 377 ---
+Original: Finally, God and Jesus, though related as father 
+
+and son, are supposed to be one entity, which is absurd.
+Bleached: Finally, X and Y, though Z-ed as W 
+
+and V, are U-ed to be one T, which is S.
+Chars: 109 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 378 ---
+Original: Orthodox Christian theology is therefore incorrigibly incoherent, and the reason is that it 
+
+starts with the incoherent supposition that God is absolutely perfect.
+Bleached: A B C is therefore D E, and the F is that it
+
+G's with the E H that I is J K.
+Chars: 166 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 379 ---
+Original: Joseph Smith’s theology is free from these incoherencies.
+Bleached: A B's C is D from these E's.
+Chars: 57 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 380 ---
+Original: This is because it starts with the 
+
+supposition that God is our guardian, and it attributes only as much power and sapience to him as 
+
+is compatible with that supposition.
+Bleached: This is because it starts with the 
+
+X that Y is our Z, and it W's only as much A and B to him as 
+
+is C with that X.
+Chars: 177 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 381 ---
+Original: A God that cares about us, Smith realizes, must be a God 
+
+that is capable of changing and evolving.
+Bleached: A G that V's about us, S V's, must be a G 
+
+that is W of X-ing and Y-ing.
+Chars: 102 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 382 ---
+Original: Coupled with the fact that, by supposition, God is a 
+
+kind of exalted human, this suggests that God is a highly evolved person---a being that started 
+
+off as a person and developed into a God.
+Bleached: Coupled with the fact that, by supposition, A is a 
+
+kind of B C, this suggests that A is a D E F---a being that started 
+
+off as a F and G-ed into a A.
+Chars: 198 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,---.
+
+--- Pattern 383 ---
+Original: Consequently, Smith’s theology, unlike orthodox 
+
+Christian theology, is compatible with the fact that Jesus, God’s alleged son, is a person.
+Bleached: Consequently, A's B, unlike C D B, is E with the F that G, H's I J, is a K.
+Chars: 143 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 384 ---
+Original: Finally, 
+
+God and Jesus are distinct in Smith’s theology, as they must be, given that they are related as 
+
+father and son.
+Bleached: Finally, 
+
+A and B are C in D's E, as they must be, given that they are F as 
+
+G and H.
+Chars: 128 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 385 ---
+Original: It is not clear exactly what motivated Smith to accept these views.
+Bleached: It is not A exactly what B-ed C to D these E's.
+Chars: 67 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 386 ---
+Original: In the King Follett 
+
+Discourse (KFD), he provides both broadly philosophical and narrowly exegetical justifications 
+
+for his views.
+Bleached: In the A B 
+
+C (D), he E's both F G and H I J 
+
+for his K's.
+Chars: 137 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),.
+
+--- Pattern 387 ---
+Original: The philosophical justifications are similar to those just given.
+Bleached: The A B are C to those just D.
+Chars: 65 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 388 ---
+Original: The philosophical 
+
+arguments are much more compelling than the exegetical arguments, and it stands to reason that 
+
+he produced the exegetical arguments after philosophical insights had already led him to accept 
+
+those positions.
+Bleached: The A 
+
+B's are much more C than the D B's, and it stands to reason that 
+
+he E-ed the D B's after A F's had already G-ed him to H 
+
+those I's.
+Chars: 237 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 389 ---
+Original: Moreover, these philosophical insights were coded into a religious epiphany, 
+
+since they would likely not otherwise have compelled Smith to break so completely from 
+
+Christian orthodoxy.
+Bleached: Moreover, these Φ Ψ were Ω into a Ρ Σ, 
+
+since they would likely not otherwise have Τ Υ to Χ so Ζ from 
+
+Α Β.
+Chars: 192 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 390 ---
+Original: We have reviewed eight works concerning Smith’s theology.
+Bleached: We have X-ed Y Z's X-ing A's B.
+Chars: 57 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 391 ---
+Original: With one exception, each did a 
+
+creditable job of illuminating either some aspect of Smith’s theology, as represented in the KFD, 
+
+or some aspect of its backstory or effect on Mormon theology.
+Bleached: With one exception, each did a 
+
+X job of Y-ing either some Z of A's B, as C-ed in the D, 
+
+or some Z of its E or F on G H.
+Chars: 198 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 392 ---
+Original: The exception was Samuel 
+
+Brown’s “William Phelp’s Paracletes.” This comprised the text of William Phelp’s Paracletes, a 
+
+work of theological fiction, as well as Samuel Brown’s assessment of its significance.
+Bleached: The X was Y 
+
+Z's "W P's Q." This R-ed the S of W P's Q, a 
+
+T of U V, as well as Y Z's W of its X.
+Chars: 214 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,,.
+
+--- Pattern 393 ---
+Original: The 
+
+Paracletes is supposedly a fictionalization of Smith’s views as to what was involved in God’s 
+
+creating man.
+Bleached: The 
+
+X is supposedly a Y of Z's A's as to what was B-ed in C's 
+
+D-ing E.
+Chars: 119 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 394 ---
+Original: But it is in fact based on material that is on the periphery of Smith’s system or is 
+
+simply absent from it and connected only by literary license on Phelp’s part.
+Bleached: But it is in fact X-ed on Y that is on the Z of Smith's W or is 
+
+simply V from it and U-ed only by T S on Phelp's part.
+Chars: 166 | Tokens: 31 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 395 ---
+Original: As a result, Smith’s 
+
+cogent and carefully thought-out theological system is falsely represented as an absurd fairy tale 
+
+spun out of whole cloth; and Brown’s contention that the Paracletes “provides a crucial window 
+
+on the complex network of beliefs undergirding [Smith’s theology]” is not accurate.
+Bleached: As a result, X's 
+
+Y and Z A-ed B C is D E as an F G H 
+
+I out of J K; and L's M that the N "O a P Q 
+
+on the R S of T U [X's V]" is not W.
+Chars: 310 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-;.
+
+--- Pattern 396 ---
+Original: References 
+
+ 
+
+Smith, Joseph (1844).
+Bleached: References 
+
+ 
+
+A, B (1844).
+Chars: 41 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 397 ---
+Original: King Follet Discourse.
+Bleached: X Y Z.
+Chars: 22 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 398 ---
+Original: Public Domain.
+Bleached: A B.
+Chars: 14 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 399 ---
+Original: Hale, Van (1978) "The Doctrinal Impact of the King Follett Discourse," BYU Studies Quarterly: 
+
+Vol.
+Bleached: X, Y (1978) "The Z W of the X X X," X X X: 
+
+Vol.
+Chars: 102 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,()",":.
+
+--- Pattern 400 ---
+Original: 18 : Iss.
+Bleached: 18 : X.
+Chars: 9 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 401 ---
+Original: 2 , Article 8.
+Bleached: 2 , Article 8.
+Chars: 14 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 402 ---
+Original: Available at: https://scholarsarchive.byu.edu/byusq/vol18/iss2/8 
+
+ 
+
+Ostler, Blake.
+Bleached: Available at: https://scholarsarchive.byu.edu/byusq/vol18/iss2/8 
+
+ 
+
+X, Y.
+Chars: 88 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::..,.
+
+--- Pattern 403 ---
+Original: “The Idea of Pre-Existence in the Development of Mormon Thought.” Dialogue: 
+
+A Journal of Mormon Thought 15, no.
+Bleached: "The A of B-C in the D of E F." G: 
+
+A H of E F 15, no.
+Chars: 115 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.:,.
+
+--- Pattern 404 ---
+Original: 1 (1982): 59–78.
+Bleached: 1 (1982): 59–78.
+Chars: 16 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():.
+
+--- Pattern 405 ---
+Original: https://doi.org/10.2307/45225053.
+Bleached: https://doi.org/10.2307/45225053.
+Chars: 33 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :...
+
+--- Pattern 406 ---
+Original: Kirkland, Boyd.
+Bleached: A, B.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 407 ---
+Original: “Elohim and Jehovah in Mormonism and the Bible.” Dialogue: A Journal of 
+
+Mormon Thought, vol.
+Bleached: "A and B in C and the D." E: A F of 
+
+G H, I.
+Chars: 96 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .:,.
+
+--- Pattern 408 ---
+Original: 19, no.
+Bleached: 19, no.
+Chars: 7 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 409 ---
+Original: 1, 1 Apr.
+Bleached: 1, 1 X.
+Chars: 9 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 410 ---
+Original: 1986, pp.
+Bleached: 1986, pp.
+Chars: 9 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 411 ---
+Original: 77–93., https://doi.org/10.2307/45225454.
+Bleached: 77–93., https://doi.org/10.2307/45225454.
+Chars: 41 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,:...
+
+--- Pattern 412 ---
+Original: Kirkland, Boyd.
+Bleached: X, Y.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 413 ---
+Original: "The Development of the Mormon Doctrine of God." Bergera, Gary James.
+Bleached: "The A of the B C of D." E, F G.
+Chars: 69 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ".",.
+
+--- Pattern 414 ---
+Original: Line upon Line: Essays on Mormon Doctrine.
+Bleached: X upon X: Y's on Z A.
+Chars: 42 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 415 ---
+Original: Signature Books, 1989.
+Bleached: V X's, 1989.
+Chars: 22 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 416 ---
+Original: Chapter 4  
+
+ 
+
+Ostler, Blake.
+Bleached: Chapter 4  
+
+ 
+
+A, B.
+Chars: 34 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 417 ---
+Original: Exploring Mormon Thought: Volume 1, The Attributes of God.
+Bleached: X-ing Y Z: W 1, The A's of B.
+Chars: 58 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 418 ---
+Original: Greg Kofford 
+
+Books, 2001.
+Bleached: A B
+
+C's, 2001.
+Chars: 29 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 419 ---
+Original: England, Eugene.
+Bleached: X, Y.
+Chars: 16 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 420 ---
+Original: “The Weeping God of Mormonism.” Dialogue: A Journal of Mormon Thought 
+
+35, no.
+Bleached: """
+"The A-ing B of C." D: A E of C F 
+
+35, no.
+"""
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .:,.
+
+--- Pattern 421 ---
+Original: 1 (2002): 63–80 
+
+ 
+
+Brown, Samuel.
+Bleached: 1 (2002): 63–80 
+
+ 
+
+X, Y.
+Chars: 39 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():,.
+
+--- Pattern 422 ---
+Original: “William Phelp's Paracletes.” International Journal of Mormon Studies 2, no.
+Bleached: "A B's C." D E of F G 2, no.
+Chars: 76 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.,.
+
+--- Pattern 423 ---
+Original: Spring 2009 (2009): 62–82.
+Bleached: X 2009 (2009): 62–82.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():.
+
+--- Pattern 424 ---
+Original: Bowman, Matthew (2021) "What Is the Nature of God’s Progress?," BYU Studies Quarterly: 
+
+Vol.
+Bleached: A, B (C) "D Is the E of F's G?," H I J: 
+
+K.
+Chars: 95 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,()"?,":.
+
+--- Pattern 425 ---
+Original: 60 : Iss.
+Bleached: 60 : X.
+Chars: 9 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 426 ---
+Original: 3, Article 6.
+Bleached: 3, Article 6.
+Chars: 13 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 427 ---
+Original: Available at: https://scholarsarchive.byu.edu/byusq/vol60/iss3/6
+Bleached: Available at: https://X.Y.edu/Z/A/B/C/6
+Chars: 64 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::..
+

@@ -1,0 +1,2293 @@
+=== SENTENCE BANK ===
+Total Patterns: 295
+Author: KUCZYNSKI
+Generated: 1/30/2026, 12:56:06 PM
+
+--- Pattern 1 ---
+Original: Religion and the Limits of Modern Rationalism
+
+Part 1 What is religion?
+Bleached: A and the B of C D
+
+E 1 F is A?
+Chars: 73 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 2 ---
+Original: Three Positions Uncritical acceptance Rejection
+Critical acceptance Part 2 James� Position Religion vs.
+Bleached: Three Positions Uncritical acceptance Rejection
+Critical acceptance Part 2 James� Position Religion vs.
+Chars: 104 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 3 ---
+Original: Science
+Religion as Psychologically Necessary An Incoherence in James� Analysis
+A Deeper Coherence
+Part 3 Otto�s Position
+The Numinous: What It Isn�t The Numinous: What It Is Awe and Terror
+The Numinous as Projection of Passivity
+Part 4 Eliade�s Position The Sacred and the Profane Linear vs.
+Bleached: X
+Y as Z W X in X� X
+A E X
+Part 3 X� X
+The X: What It X� The X: What It Is X and X
+The X as X of X
+Part 4 X� X The X and the X X vs.
+Chars: 298 | Tokens: 47 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::.
+
+--- Pattern 4 ---
+Original: Circular Time
+Part 5 Writing as the Basis of Rationalism Economies of Scale Responsible for Time-linearization Religion as Early-stage Rationalism
+Writing and Rationality
+Part 6 Spiritualism and Religion
+Religion Not what James, Otto, and Eliade are Examining Spiritualism and Religion
+Part 7 James, Otto, and Eliade on the Limits of Rationalism
+James, Otto, and Eliade on Rationalism James, Otto, and Eliade on Spiritualism Conclusion: What Do These Authors Propose?
+Bleached: A Time
+Part 5 B-ing as the C of D-ism E of F G for Time-H-ization I as J-stage D-ism
+B-ing and D-ity
+Part 6 K-ism and I
+I Not what L, M, and N are O-ing K-ism and I
+Part 7 L, M, and N on the P of D-ism
+L, M, and N on D-ism L, M, and N on K-ism Q: What Do These R S?
+Chars: 473 | Tokens: 69 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,,,,,,,,:?
+
+--- Pattern 5 ---
+Original: Part 1 What is religion?
+Bleached: Part 1 What is X?
+Chars: 24 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 6 ---
+Original: Three Positions
+     What is religion, and does it have any legitimacy?
+Bleached: Three A's
+     What is B, and does it have any C?
+Chars: 72 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 7 ---
+Original: There are many different answers to each of these questions, but ultimately any given answer to either question embodies one of three attitudes:
+1 One of uncritical acceptance, such as
+we would presumably find among people living 3,500 years ago;
+2 One of rejection, such as we would find
+in someone, such as Freud, whose career involved examining religion, and therefore making an object out of it, as opposed to having religion; or
+3 One of critical and reflective
+acceptance, such as we find in William James, Rudolph Otto, and Mircea Eliade, these being scholars who took it upon themselves to supplement critical scientific rationalism, such as we find in Freud, with firsthand knowledge of the experiences involved in being religious.
+Bleached: There are many different X's to each of these Y's, but ultimately any given X to either Y Z's one of three W's:
+1 One of V U, such as
+we would presumably find among F's living 3,500 years ago;
+2 One of T, such as we would find
+in someone, such as S, whose R involved Q-ing P, and therefore making an O out of it, as opposed to having P; or
+3 One of N and M
+U, such as we find in L K, J I, and H G, these being E's who took it upon themselves to D C B A, such as we find in S, with firsthand Φ of the Ψ's involved in being Ω.
+Chars: 746 | Tokens: 121 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,,;,,,,,;,,,,,,.
+
+--- Pattern 8 ---
+Original: In the present work, the views of James, Otto, and Eliade will be stated, compared, contrasted, and evaluated.
+Bleached: In the A B, the C of D, E, and F will be G-ed, H-ed, I-ed, and J-ed.
+Chars: 110 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,,.
+
+--- Pattern 9 ---
+Original: It will be found that they have much the same view as to the emotional basis of religion and also as to its psychological function.
+Bleached: It will be X-ed that they have much the same Y as to the Z W of X and also as to its Ω V.
+Chars: 131 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 10 ---
+Original: In their view, the essence of religious sentiment is that this world is not all that there is and, moreover, that one cannot fail to have this view while retaining psychological health.
+Bleached: In their A, the B of C D is that this E is not all that there is and, moreover, that one cannot F to G this A while H-ing I J.
+Chars: 185 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 11 ---
+Original: Each of these authors acknowledges that there exist psychologically healthy, self-identified agnostics and atheists; but they also hold that such individuals, whether they know it or not, hold some variant of the view just described.
+Bleached: Each of these X's Y's that there Z W X-ed V, U-T-ed Q's and R's; but they also S that such P's, whether they O it or not, N some M of the L just K-ed.
+Chars: 233 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-;,,.
+
+--- Pattern 12 ---
+Original: They also hold that when people genuinely do not have this view, they succumb to various different forms of psychological morbidity.
+Bleached: They also Y that when X's genuinely do not have this Z, they W to various different A's of B C.
+Chars: 132 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 13 ---
+Original: It must be stated at the outset that, when these authors refer to �religion�, they are typically referring to its subjective, emotional side, not to its objective, institutional side.
+Bleached: It must be X-ed at the Y that, when these Z's W to "V", they are U W-ing to its T, S side, not to its R, Q side.
+Chars: 183 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 14 ---
+Original: At the same time, none of these authors is
+
+referring to the mindset of someone who, in the 21st century, describes himself as �spiritual.� For reasons to be discussed, the person who self- describes as �spiritual� is in much the same category as a self-described atheist.
+Bleached: At the same time, none of these A's is
+
+referring to the B of someone who, in the 21st C, D's himself as "E." For F's to be G-ed, the person who self- D's as "E" is in much the same H as a self-I-ed J.
+Chars: 274 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.,--.
+
+--- Pattern 15 ---
+Original: 21st Century �spiritualism�, so these authors would say, is just another manifestation of contemporary nihilism and is therefore not an expression of
+the actual spiritualism that these authors have in mind but of its absence.
+Bleached: 21st Ω A, so these Bs would C, is just another D of E F and is therefore not an G of the H A that these Bs have in I but of its J.
+Chars: 226 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 16 ---
+Original: Let us start by describing the previously mentioned attitudes of uncritical acceptance, rejection, and critical acceptance.
+Bleached: Let us X by Y-ing the previously Z-ed A's of B C, D, and E C.
+Chars: 123 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 17 ---
+Original: Uncritical acceptance
+     Someone is genuinely uncritically accepting of religion if they don�t even know of the possibility of not accepting it.
+Bleached: X A
+     Someone is genuinely X-ly A-ing of Y if they don't even Z of the W of not A-ing it.
+Chars: 147 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 18 ---
+Original: It is not possible for a member of any contemporary society to have this attitude.
+Bleached: It is not X for a Y of any Z W to have this X.
+Chars: 82 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 19 ---
+Original: So-called �fundamentalists� are not uncritically accepting of religion.
+Bleached: So-called "X-ists" are not Y-ly Z-ing of A.
+Chars: 71 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 20 ---
+Original: A contemporary Christian or Moslem fundamentalists chooses to be a fundamentalist.
+Bleached: A F G or H I's J's to be a I.
+Chars: 82 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 21 ---
+Original: He lives in a society of non-fundamentalists; he has access to books, newspapers, and websites that represent views antithetical to his own.
+Bleached: He X's in a Y of Z-ists; he has W to A's, B's, and C's that D E's F to his own.
+Chars: 140 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -;,,.
+
+--- Pattern 22 ---
+Original: The contemporary fundamentalist is reacting to non-religious views and to religious but non- fundamentalists views.
+Bleached: The A B is C-ing to non-D views and to D but non- B views.
+Chars: 115 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 23 ---
+Original: By contrast, the spiritualism of the stone age tribesman is not a reaction, that is to say, it is not a defense against some other view.
+Bleached: By contrast, the X of the Y Z A-man is not a B, that is to say, it is not a C against some other D.
+Chars: 136 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 24 ---
+Original: Moreover, the tribesman�s views do not represent mere credulity or acquiescence to some set of social norms.
+Bleached: Moreover, the X's Y do not Z mere W or V to some set of U T.
+Chars: 108 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 25 ---
+Original: In believing that some bolt of lightning represents the wrath of a higher being, he isn�t acquiescing to social norms or to a charismatic leader.
+Bleached: In A-ing that some B of C D-s the E of a F G, he isn't H-ing to I J or to a K L.
+Chars: 145 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 26 ---
+Original: He believes it because it is how he naturally sees the world, not because he has been taught that this is how he should see the world.
+Bleached: He X's it because it is how he naturally Y's the Z, not because he has been W-ed that this is how he should Y the Z.
+Chars: 134 | Tokens: 27 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 27 ---
+Original: The contemporary fundamentalist is in a very different category: his beliefs are the result of a long process of acculturation, usually accompanied by considerable internal struggle.
+Bleached: The A B is in a very C D: his E are the F of a G H of I, usually J by K L M.
+Chars: 182 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 28 ---
+Original: Rejection
+     There are two very different forms of religious rejectionism: the authentic kind and the inauthentic kind.
+Bleached: A
+     There are two very B forms of C A-ism: the D kind and the E kind.
+Chars: 122 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 29 ---
+Original: An example of the authentic kind is someone, e.g.
+Bleached: An X of the Y Z is K, e.g.
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,..
+
+--- Pattern 30 ---
+Original: Freud, who genuinely has a rationalistic world view and, on that basis, simply doesn�t accept a religious world view.
+Bleached: A, who B has a C-istic D E and, on that F, G doesn't H a I D E.
+Chars: 117 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 31 ---
+Original: An example of the inauthentic kind is anyone whose rejectionism is simply a way of fitting in or moving ahead.
+Bleached: An X of the Y Z is anyone whose R is simply a way of V-ing in or V-ing ahead.
+Chars: 110 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 32 ---
+Original: People often join atheist groups because they want to fit in with others or because they believe membership in
+
+such a group to be a source of prestige.
+Bleached: A often B C D because they want to E in with F or because they G H in
+
+such a D to be a I of J.
+Chars: 154 | Tokens: 28 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 33 ---
+Original: This form of rejectionism is presumably a historical consequence of the work of authentic rejectionists� as in, the latter changed our worldview in such a way as to make a non- religious view be socially normal�but the mentality involved is much closer that involved in religious fundamentalism than it is to that involved in authentic, rationalism-based rejectionism.
+Bleached: This X of Y is presumably a Z W of the X of X Y's� as in, the latter X-ed our X in such a X as to X a non- Z X be socially Z�but the X involved is much closer that involved in Z X than it is to that involved in X, Y-based Y.
+Chars: 368 | Tokens: 57 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,-.
+
+--- Pattern 34 ---
+Original: In most cases, today�s atheist or secular humanist is simply following the herd, just as the true-believer was one thousand years ago, and his views are likely to be equally dogmatic.
+Bleached: In most X's, today's Y or Z H is simply V-ing the W, just as the A-B was one X Y's ago, and his V's are likely to be equally D.
+Chars: 183 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,.
+
+--- Pattern 35 ---
+Original: So even if what the contemporary atheist believes is more reasonable than what a medieval peasant believes, his reasons for believing it may well be equally emotional and equally spurious.
+Bleached: So even if what the A B C is more D than what a E F C, his G for C-ing it may well be equally H and equally I.
+Chars: 188 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 36 ---
+Original: Indeed, the brain-centers that mediate �militant� atheism are identical with those that mediate religious fundamentalism.
+Bleached: Indeed, the A-B that C "D" E are F with those that C G H.
+Chars: 121 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 37 ---
+Original: Critical acceptance
+     There are two ways to be reflective about religion: reductively and non-reductively.
+Bleached: A B
+     There are two C to be D about E: F and G.
+Chars: 110 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 38 ---
+Original: Freud was reductively reflective about religion.
+Bleached: A was B-ly C about D.
+Chars: 48 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 39 ---
+Original: In his view, God represents the father, and religion exists to mediate various biological and social functions (e.g.
+Bleached: In his view, A represents the B, and C exists to D various E and F functions (e.g.
+Chars: 116 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,(..
+
+--- Pattern 40 ---
+Original: preventing incest, directing aggression towards appropriate targets, and inculcating superego).
+Bleached: X-ing Y, Z-ing W towards E T's, and V-ing S).
+Chars: 95 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,).
+
+--- Pattern 41 ---
+Original: William James was non- reductively rational about religion.
+Bleached: A B was C- D-ly E about F.
+Chars: 59 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 42 ---
+Original: He didn�t deny that religions served (or used to serve) various social functions.
+Bleached: He didn't A that B's C-ed (or D-ed to C) E F G's.
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 43 ---
+Original: Nor did he deny that religion was amenable to eliminative explanations of the kind that Freud would later provide.
+Bleached: Nor did he X that Y was Z to W X's of the X that F would later X.
+Chars: 114 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 44 ---
+Original: His position is not so much that those positions are wrong as it is that they are incomplete.
+Bleached: His X is not so much that those X's are Y as it is that they are Z.
+Chars: 93 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 45 ---
+Original: There are indeed reductionist truths about religion, James grants, but there are also non-reductionist truths; and, so he claims, it is truths of the non-reductionist kind that the very essence of religion lies.
+Bleached: There are indeed A B about C, D E, but there are also non-A B; and, so he F, it is B of the non-A G that the very H of C I.
+Chars: 211 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-;,,-.
+
+--- Pattern 46 ---
+Original: It is important to note that there are, or at least could be, both reductive and non-reductive truths about religion.
+Bleached: It is A to B that there are, or at least could be, both C and D-C E's about F.
+Chars: 117 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 47 ---
+Original: James himself makes this point.
+Bleached: A himself makes this point.
+Chars: 31 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 48 ---
+Original: Religion is a psychological phenomenon and can be examined as such.
+Bleached: A is a B C and can be D-ed as such.
+Chars: 67 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 49 ---
+Original: It can be said why people are religious, just as it can be said why people do science.
+Bleached: It can be said why X are Y, just as it can be said why X do Z.
+Chars: 86 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 50 ---
+Original: It could well be that Newton poured himself into his scientific researches as a way of fleeing from painful childhood memories, and it might well be that Martin Luther�s religious fervor is to be explained in much the same way.
+Bleached: It could well be that A B-ed himself into his C D-es as a way of E-ing from F G H-ies, and it might well be that I J's K L is to be M-ed in much the same way.
+Chars: 227 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 51 ---
+Original: But, as James himself says, the psychological backstory is not always the whole story.
+Bleached: But, as X himself says, the Y Z is not always the whole Z.
+Chars: 86 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 52 ---
+Original: Scientific positions must be understood on their own terms, and it is at least possible that the same is true of religious positions.
+Bleached: A positions must be understood on their own terms, and it is at least possible that the same is true of B positions.
+Chars: 133 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 53 ---
+Original: Consequently, even if everything Freud says about religion is correct�even
+
+if God is simply a personification of superego and even if �holy injunctions� are mere defenses against incestuous urges---it doesn�t follow that religion is nothing other than a giant neurosis.
+Bleached: Consequently, even if everything A says about B is C—even
+
+if D is simply a E of F and even if "G H" are mere I against J K---it doesn't follow that B is nothing other than a L M.
+Chars: 272 | Tokens: 40 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,---.
+
+--- Pattern 54 ---
+Original: Supposing that Smith becomes a medical researcher because he suffers from terrible asthma, it doesn�t follow that his researches are nothing but expressions of asthma-related distress.
+Bleached: Supposing that X Y-s a Z A because he B-s from C D, it doesn't follow that his E-s are nothing but F-s of D-G H.
+Chars: 184 | Tokens: 26 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 55 ---
+Original: Similarly, supposing that Martin Luther turned to God because his own father abandoned him as a child, it doesn�t follow that his subsequent religious activity is nothing but an expression of anguish over not having had a father.
+Bleached: Similarly, supposing that A B X-ed to C because his own D E-ed him as a F, it doesn't follow that his subsequent G H is nothing but an I of J over not having had a D.
+Chars: 229 | Tokens: 38 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 56 ---
+Original: Of course, it will be said that, whereas science has both subjective and objective sides, religion is pure subjectivity, there being nothing real corresponding to the various psychological phenomena involved in it.
+Bleached: Of course, it will be said that, whereas A has both B and C sides, D is pure E, there being nothing F corresponding to the various G H involved in it.
+Chars: 214 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 57 ---
+Original: But, of course, this is precisely what James, Otto, and Eliade question, and it is to their work that we now turn.
+Bleached: But, of course, this is precisely what A, B, and C X, and it is to their Y that we now Z.
+Chars: 114 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,,,.
+
+--- Pattern 58 ---
+Original: In what follows, we will use the term �perceptible world� to refer to the world qua entity that can be known through our senses and through scientific examination of the data thereby made available to us.
+Bleached: In what follows, we will use the term "A world" to refer to the world qua B that can be C-ed through our D's and through E F of the G thereby H-ed I to us.
+Chars: 204 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 59 ---
+Original: It must be borne in mind that, in this context, �perceptible� means �knowable either through our senses or through rational inference from what our senses disclose to us.�
+
+Part 2 James� position Religion vs.
+Bleached: It must be A in B that, in this C, "D" E "F either through our G or through H I from what our G J to us."
+
+K 2 L' M N vs.
+Chars: 210 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,..
+
+--- Pattern 60 ---
+Original: Science
+     According to James, the essence of religion is that the perceptible world is not the whole world, since an �invisible order� suffuses and undergirds the perceptible world, giving it meaning and moral structure:
+
+Were one asked to characterize the life of religion in the broadest and most general terms possible, one might say that it consists of the belief that there is an unseen order, and that our supreme good lies in harmoniously adjusting ourselves thereto.
+Bleached: A
+     According to B, the C of D is that the E world is not the whole world, since an "F order" G's and H's the E world, giving it I and J K:
+
+Were one asked to L the M of D in the broadest and most general terms possible, one might say that it consists of the belief that there is an unseen order, and that our supreme good lies in harmoniously N-ing ourselves thereto.
+Chars: 480 | Tokens: 77 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,:,,.
+
+--- Pattern 61 ---
+Original: This belief and this adjustment are the
+religious attitude in the soul.[1]
+
+     This quotation explained: According to the scientific rationalist, the world is just a machine, consisting of so many parts governed by so many
+
+mechanisms, and is to be understood in much the same way as a machine.
+Bleached: This Z and this Y are the
+X W in the V.[1]
+
+     This U T: According to the R S, the Q is just a P, O-ing of so many N M by so many
+
+L, and is to be K in much the same J as a P.
+Chars: 301 | Tokens: 49 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .:,,,.
+
+--- Pattern 62 ---
+Original: According to religion, says James, this is not the case, since the world known to us through our science is not all there is, the reason being there also exists an �invisible order� that suffuses the perceptible Moreover, this invisible order gives the world meaning and it gives individual human beings a purpose.
+Bleached: According to A, says B, this is not the C, since the D known to us through our E is not all there is, the F being there also exists an "G H" that I's the J Moreover, this G H gives the D K and it gives L M N's a O.
+Chars: 314 | Tokens: 53 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 63 ---
+Original: A given person�s life is meaningful to the extent that he is on the right side of this �invisible order� and meaningless to the extent that he is on the wrong side of it.
+Bleached: A F Ω8's Λ is M to the Θ that he is on the Ψ Ξ of this "Ρ Σ" and M-less to the Θ that he is on the Φ Ξ of it.
+Chars: 170 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 64 ---
+Original: Religion as Psychologically Necessary
+     Notice that, in this particular quotation, James is expressing a value- judgment; he is just saying what, in his view, the essence of religion is.
+Bleached: ```
+A as B C
+     D that, in this E F, G is H-ing a I- J; he is just K-ing what, in his L, the M of A is.
+```
+Chars: 190 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-;,,.
+
+--- Pattern 65 ---
+Original: But it is the very purpose of this work of James to express a value-judgment about this conceit: and that judgment is that even if it is false, we benefit from believing it to be true.
+Bleached: But it is the very A of this B of C to D a E-F about this G: and that F is that even if it is H, we I from J-ing it to be K.
+Chars: 184 | Tokens: 36 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: -:,.
+
+--- Pattern 66 ---
+Original: James� argument is that, even if God does not in fact exist, belief in God gives one a certain measure of God-like strength.
+Bleached: A's B is that, even if C does not in fact D, E in C F one a certain G of C-like H.
+Chars: 124 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 67 ---
+Original: In a word�believing it makes it real:
+
+We can act AS IF there were a God; feel AS IF we were free; consider Nature AS IF she were full of special designs; lay plans AS IF we were to be immortal; and we find then that these words do make a genuine difference in our moral life.
+Bleached: In a word—X-ing it Y's it Z:
+
+We can act AS IF there were a A; feel AS IF we were B; consider C AS IF she were full of D E's; lay F's AS IF we were to be G; and we find then that these words do make a H I in our J K.
+Chars: 278 | Tokens: 57 | Clauses: 4
+Clause Order: main → subordinate
+Punctuation: :;;;;.
+
+--- Pattern 68 ---
+Original: Our faith THAT these unintelligible objects actually exist proves thus to be a full equivalent in praktischer Hinsicht, as Kant calls it, or from the point of view of our action, for a knowledge of WHAT they might be, in case we were permitted positively to conceive them.
+Bleached: Our A THAT these B objects actually C proves thus to be a full D in praktischer Hinsicht, as Kant E-s it, or from the point of view of our F, for a G of WHAT they might be, in case we were H-ed I to J them.
+Chars: 272 | Tokens: 48 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 69 ---
+Original: So we have the strange phenomenon, as Kant assures us, of a mind believing with all its strength in the real presence of a set of things of no one of which it can form any notion
+whatsoever.
+Bleached: So we have the Z Y, as K X's us, of a M Y-ing with all its S in the real P of a set of T's of no one of which it can V any N whatsoever.
+Chars: 191 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 70 ---
+Original: [2]
+
+     In and of itself, this passage only says that the consequences of belief in God are in some respects interchangeable with those of God�s actually existing; it does not say what those consequences are or whether they are good.
+Bleached: [2]
+
+     In and of itself, this A only B that the C of D in E are in some F G with those of E's H I; it does not B what those C are or whether they are J.
+Chars: 237 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;.
+
+--- Pattern 71 ---
+Original: But one page later, James says that belief in God gives us strength and is therefore good:
+
+The sentiment of reality can indeed attach itself so strongly to our object of belief that our whole life is polarized through and through, so to speak, by its sense of the existence of the thing believed in, and yet that thing, for purpose of definite description, can hardly be said to be present to our mind at all.
+Bleached: But one page later, X says that Y in Z gives us A and is therefore B:
+
+The C of D can indeed E itself so F to our G of Y that our whole H is I through and through, so to speak, by its J of the K of the L M in, and yet that L, for N of O P, can hardly be said to be Q to our R at all.
+Chars: 412 | Tokens: 76 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,:,,,,,.
+
+--- Pattern 72 ---
+Original: It is as if a bar of iron, without touch or sight, with no representative faculty whatever, might nevertheless be strongly endowed with an inner capacity for magnetic feeling; and as if, through the various arousals of its magnetism by magnets coming and going in its neighborhood, it might be consciously determined to different attitudes and tendencies.
+Bleached: It is as if a X of Y, without Z or W, with no V U whatever, might nevertheless be strongly T with an inner S for R Q; and as if, through the various P of its O by N coming and going in its M, it might be consciously L to different K and J.
+Chars: 355 | Tokens: 57 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,;,,.
+
+--- Pattern 73 ---
+Original: Such a bar of iron could never give you an outward description of the agencies that had the power of stirring it so strongly; yet of their presence, and of their significance for its life, it would be intensely aware through
+every fibre of its being.
+Bleached: Such a X of Y could never Z you an W V of the A's that had the B of C-ing it so D; yet of their E, and of their F for its G, it would be H I through every J of its K.
+Chars: 251 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,.
+
+--- Pattern 74 ---
+Original: [3]
+
+       And therein lies the basic message of The Varieties of Religious Experience (TVRE), to wit: Strength comes from belief, and weakness from doubt.
+Bleached: [3]
+
+       And therein lies the basic X of The Y's of Z W (TVRE), to wit: A comes from B, and C from D.
+Chars: 158 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),:,.
+
+--- Pattern 75 ---
+Original: An Incoherence in James� Analysis
+     There is a deep incoherence in what James is saying.
+Bleached: An X in Y's Z
+     There is a deep X in what Y is A-ing.
+Chars: 92 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 76 ---
+Original: One cannot derive strength from a belief that one doesn�t have.
+Bleached: One cannot X Y from a Z that one doesn't have.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 77 ---
+Original: So if someone who
+
+doesn�t believe in God is to derive strength from such a belief, he
+must make himself have that belief and therefore make himself believe what he doesn�t really believe.
+Bleached: So if someone who
+
+doesn't X in Y is to Z A from such a belief, he
+must B himself C that belief and therefore B himself X what he doesn't really X.
+Chars: 191 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 78 ---
+Original: But if he does that, he is making himself weaker, not stronger, since he is undermining the integrity of his own belief-system and also therefore of any other psychological faculties of his whose integrity depends on that of his belief-system.
+Bleached: But if he does that, he is making himself A-er, not B-er, since he is C-ing the D of his own E-system and also therefore of any other F G-s of his whose D depends on that of his E-system.
+Chars: 243 | Tokens: 40 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,,,--.
+
+--- Pattern 79 ---
+Original: A Deeper Coherence
+     But there is a coherent point beneath this incoherent one.
+Bleached: A E-er X
+     But there is a X Y beneath this Z one.
+Chars: 83 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 80 ---
+Original: The basic message of TVRE is not exactly that we should believe in a higher power.
+Bleached: The A B of C is not exactly that we should D in a E F.
+Chars: 82 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 81 ---
+Original: It is rather that, whether we know it or not, our motivations, emotional dispositions, and values are hewed to the presumption that there is a God who superintends a moral order.
+Bleached: It is rather that, whether we X it or not, our Y's, Z W's, and V's are U-ed to the T that there is a God who S's a R S.
+Chars: 178 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 82 ---
+Original: The self-identified true believer consciously and explicitly affirms that this presumption, and the self-identified disbeliever denies them.
+Bleached: The A-ed B C D-ly and E-ly F-s that this G, and the A-ed H I-s them.
+Chars: 140 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-.
+
+--- Pattern 83 ---
+Original: But even though their theories differ, says James, their emotional architectures do not, and in each case the psychological faculty responsible for affect, emotion, and motivation is that of the true believer:
+
+Nevertheless, if we look on man's whole mental life as it exists, on the life of men that lies in them apart from their learning and science, and that they inwardly and privately follow, we have to confess that the part of it of which rationalism can give an account is relatively superficial.
+Bleached: But even though their X's Y, says Z, their A B's do not, and in each case the C D E for F, G, and H is that of the I J:
+
+Nevertheless, if we look on K's whole L M as it N, on the M of K's that O in them apart from their P and Q, and that they R and S T, we have to U that the part of it of which V can give an W is X Y.
+Chars: 506 | Tokens: 85 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,,,:,',,,.
+
+--- Pattern 84 ---
+Original: It is the part that has the prestige undoubtedly, for it has the loquacity, it can challenge you for proofs, and chop logic, and put you down with words.
+Bleached: It is the A that has the B undoubtedly, for it has the C, it can D you for E's, and F G, and H you down with I's.
+Chars: 153 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 85 ---
+Original: But it will fail to convince or convert you all the same, if your dumb intuitions are opposed to its
+conclusions.[4]
+
+     James then says that the well-springs of intuition, and indeed of what we might call genius, lie in this subterraneous psychological realm:
+
+If you have intuitions at all, they come
+
+from a deeper level of your nature than the loquacious level which rationalism inhabits.
+Bleached: But it will X to Y or Z you all the same, if your A B are C to its D.[4]
+
+     E then F that the G of B, and indeed of what we might H I, J in this K L M:
+
+If you have B at all, they N
+
+from a O P of your Q than the R P which S T.
+Chars: 401 | Tokens: 65 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,.-,,:,.
+
+--- Pattern 86 ---
+Original: Your whole subconscious life, your impulses, your faiths, your needs, your divinations, have prepared the premises, of which your consciousness now feels the weight of the result; and something in you absolutely KNOWS that that result must be truer than any logic- chopping rationalistic talk, however clever,
+that may contradict it.[5]
+
+     It is in the context of these points that James� discussion of mysticism is to be understood.
+Bleached: Your A B C, your D's, your E's, your F's, your G's, have H-ed the I's, of which your consciousness now J's the K of the L; and something in you absolutely M's that that L must be N-er than any O- P-ing Q R, however S,
+that may T it.[5]
+
+     It is in the U of these V's that W's X of Y is to be Z-ed.
+Chars: 439 | Tokens: 68 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,,;-,,..
+
+--- Pattern 87 ---
+Original: According to James, mystical experiences are �ineffable�, �transient�, and �passive�; and they are also experienced as being �noetic�, i.e.
+Bleached: According to A, B C's are "D", "E", and "F"; and they are also G-ed as being "H", i.e.
+Chars: 139 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,;,..
+
+--- Pattern 88 ---
+Original: as being instances of knowledge, as opposed to feeling.
+Bleached: as being X's of Y, as opposed to Z.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 89 ---
+Original: What this suggests is that mystical experiences are about letting go and letting one�s �real feelings�, for lack of a better term, rise to the surface.
+Bleached: What this suggests is that A experiences are about letting go and letting one's "B feelings", for lack of a better term, rise to the surface.
+Chars: 151 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 90 ---
+Original: Strikingly, people who take nitrous oxide, as James himself points out, have mystical experiences (or experiences similar thereto), and so do people who take LSD.
+Bleached: A, B who C D E, as F himself G out, have H I (or I J thereto), and so do B who C K.
+Chars: 162 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,(),.
+
+--- Pattern 91 ---
+Original: Nitrous oxide and LSD are both disinhibitory agents, meaning that they deregulate the flow of chemical information between synapses; and this fact obviously confirms the hypotheses that mystical experiences are about disinhibition, as does the fact that antipsychotic medications are inhibitory agents.
+Bleached: A and B are both C agents, meaning that they D the E of F G between H's; and this I obviously J's the K's that L M's are about N, as does the I that O P's are Q agents.
+Chars: 302 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,.
+
+--- Pattern 92 ---
+Original: In conclusion, James� position seems to be that it is not really up to us whether or not to �believe�, since belief is built into our psychological structure.
+Bleached: In X, Y's Z A-s to be that it is not really up to us whether or not to "B", since B is C-ed into our D E.
+Chars: 158 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 93 ---
+Original: James is not making the absurd point that someone living now should have the same theories as someone living 12,000 years ago.
+Bleached: A is not B-ing the C D that E F-ing G should H the I J's as E F-ing K L's M.
+Chars: 126 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 94 ---
+Original: Rather is making the non-absurd point that however much our theories may change, the beliefs that are etched into our unchanging human essence are closer to those of the religious than of the non-religious person.
+Bleached: A is B-ing the non-C D that E F our G may H, the I that are J-ed into our K L M are N to those of the O than of the non-O P.
+Chars: 213 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-.
+
+--- Pattern 95 ---
+Original: Part 3 Otto�s Position The Numinous: What It Isn�t
+     Otto�s position is that the essence of religious sentiment is the sense that the world is suffused by a presence that cannot possibly be known
+
+through rational inquiry, let alone sense-perception.
+Bleached: Part 3 A's B The C: What It D't
+     A's B is that the E of F G is the H that the I is J-ed by a K that L M possibly be N-ed
+
+through O P, let alone Q-R.
+Chars: 256 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,-.
+
+--- Pattern 96 ---
+Original: Otto refers to this hidden presence as �the numinous� (from numen: Latin for divine or awesome presence).
+Bleached: A refers to this B C as "the D" (from E: F for G or H C).
+Chars: 105 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (:).
+
+--- Pattern 97 ---
+Original: In order to understand what the numinous is, says Otto, we must be very clear about what it isn�t.
+Bleached: In order to X what the Y is, says Z, we must be very A about what it isn't.
+Chars: 98 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 98 ---
+Original: God, conceived of as a kind of super-person, is not the numinous.
+Bleached: A, B-ed of as a C of D-E, is not the F.
+Chars: 65 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,.
+
+--- Pattern 99 ---
+Original: Quite the contrary, says Otto.
+Bleached: Quite the contrary, says X.
+Chars: 30 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 100 ---
+Original: If God is conceived of as an ogre who lives on Mt.
+Bleached: If A is B-ed of as an C who D-s on E.
+Chars: 50 | Tokens: 12 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 101 ---
+Original: Olympus, then there is nothing mysterious about him, and he is therefore the very opposite of numinous.
+Bleached: A, then there is nothing B about him, and he is therefore the very C of D.
+Chars: 103 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 102 ---
+Original: Much the same holds if God is conceived of as being utterly rational and powerful and just; for thus conceived, God is basically a person, albeit one free of the usual limitations, and there is therefore nothing mysterious or �numinous� about him.
+Bleached: Much the same X's if Y is Z-ed of as being utterly A and B and C; for thus Z-ed, Y is basically a F, albeit one D of the usual G's, and there is therefore nothing H or "I" about him.
+Chars: 247 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,,.
+
+--- Pattern 103 ---
+Original: For this reason, Otto says that, if indeed God is hyper-intelligent, hyper-just, and the like, those are merely �synthetical� attributes of his, meaning that it is not in virtue of his having them that he is God.
+Bleached: For this A, B C that, if D E is F-G, F-H, and the I, those are J �K� L of his, M that it is not in N of his O them that he is E.
+Chars: 212 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,-,,,.
+
+--- Pattern 104 ---
+Original: To be God is not to be a superman but is rather to be the �numinous� presence that pervades the world.
+Bleached: To be X is not to be a Y but is rather to be the "Z" W that V-s the U.
+Chars: 102 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 105 ---
+Original: Also, the numinous is not to be identified with the miraculous.
+Bleached: Also, the A is not to be B-ed with the C.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 106 ---
+Original: For a miracle to occur is for a sapient being to create breach of natural law.
+Bleached: For a A to B is for a C D to E F of G H.
+Chars: 78 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 107 ---
+Original: The supposition that a sapient being is violating natural law is simply another hypothesis; and were that hypothesis to prove correct, it would not be a rejection of a rationalist world view but a mere modification of the way such a world view is applied.
+Bleached: The X that a Y being is Z-ing W law is simply another V; and were that V to prove U, it would not be a T of a S world R but a mere Q of the way such a world R is P-ed.
+Chars: 255 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 108 ---
+Original: Consequently, the miraculous is not identical with, or even necessarily an expression of, the numinous.
+Bleached: Consequently, the A is not B with, or even necessarily an C of, the D.
+Chars: 103 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 109 ---
+Original: The Numinous: What It Is
+     Otto does not quite say the numinous is, but he identifies some of its key attributes:
+     *The numinous is either awe inspiring or terrifying (more on this below).
+Bleached: The A: What It Is
+     B does not quite say the A is, but he C-s some of its key D-s:
+     *The A is either E F-ing or G-ing (more on this below).
+Chars: 197 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,:().
+
+--- Pattern 110 ---
+Original: *Awareness of it involves a state of fascination�meaning that involves a state of rapt interest in it and also of absorption of oneself into it.
+Bleached: *A of it B-s a C of D—E that B-s a C of F G in it and also of H of I into it.
+Chars: 144 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 111 ---
+Original: *In being aware of it, one has a sense of one�s smallness and, for that reason, of there being a larger cosmic order.
+Bleached: *In being X of it, one has a Y of one's Z and, for that reason, of there being a W A B.
+Chars: 117 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 112 ---
+Original: *We encounter the numinous when we listen to good music, and also when we experience romantic and erotic attachments.
+Bleached: *We X the Y when we Z to A B, and also when we X C and D E's.
+Chars: 117 | Tokens: 19 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 113 ---
+Original: *The awe inspired by natural phenomena in those who are not jaded by scientific rationalism involves their being aware of the numinous.
+Bleached: *The X Y-ed by Z W in those who are not X-ed by Z R involves their being X of the Y.
+Chars: 135 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 114 ---
+Original: *The numinous is holy, a corollary (one not explicitly drawn by Otto) being that its existence imposes moral obligations on human beings and also
+
+gives them a sense of purpose.
+Bleached: *The A is B, a C (one not explicitly D-ed by E) being that its F G-s H I-s on J K-s and also
+
+L-s them a M of N.
+Chars: 179 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 115 ---
+Original: Awe and Terror
+     The numinous inspires awe or terror, says Otto.
+Bleached: A and B
+     The C inspires A or B, says D.
+Chars: 68 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 116 ---
+Original: I know that bears are dangerous, but I also understand them, since, being mammals, they are basically four-legged versions of myself, and I am therefore not terrified of them.
+Bleached: I X that Y's are Z, but I also W them, since, being V's, they are basically U-T S's of myself, and I am therefore not R of them.
+Chars: 175 | Tokens: 29 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,-,.
+
+--- Pattern 117 ---
+Original: I am terrified of creatures, such as sharks and tarantulas, that I know to be dangerous and that are totally alien to me.
+Bleached: I am X-ed of Y's, such as Z's and W's, that I know to be V and that are totally Q to me.
+Chars: 121 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 118 ---
+Original: If I became a marine biologist and came to understand such creatures, they would to that extent cease to terrify me, though I would still be duly afraid of them.
+Bleached: If I X-ed a Y Z and X-ed to W such A's, they would to that B C to D me, though I would still be E F of them.
+Chars: 161 | Tokens: 30 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 119 ---
+Original: Similarly, I am not awed by someone who runs faster than myself, since there is nothing mysterious to me about being able to run a 100-yard dash in 11 seconds, as opposed to twelve seconds.
+Bleached: Similarly, I am not X-ed by Y who Z's W-er than myself, since there is nothing A to me about being able to Z a B-C D in E F's, as opposed to G F's.
+Chars: 189 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,.
+
+--- Pattern 120 ---
+Original: I would be awed by somebody who could paint an entire landscape in perfect detail from memory, since, not having artistic talent myself, I would not quite understand what was involved in his having this ability.
+Bleached: I would be X-ed by somebody who could Y an entire Z in W detail from memory, since, not having Ω talent myself, I would not quite understand what was involved in his having this ability.
+Chars: 211 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 121 ---
+Original: But if I myself developed this ability, or at least learned what was involved in this other person�s having it, I would cease to be awed by his having it.
+Bleached: But if I myself X-ed this Y, or at least Z-ed what was W-ed in this other F's having it, I would X to be V-ed by his having it.
+Chars: 154 | Tokens: 30 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 122 ---
+Original: The awe-inspiring and the terrifying are what we perceive to be supernatural.
+Bleached: The A-inspiring and the B are what we perceive to be C.
+Chars: 77 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 123 ---
+Original: If vampires existed, they would be inherently terrifying, since, because they would be supernatural, mere mortals could not possibly ever understand them.
+Bleached: If A X-ed, they would be B C, since, because they would be D, E F could not G ever H them.
+Chars: 154 | Tokens: 22 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,,,,.
+
+--- Pattern 124 ---
+Original: And superheroes, if they existed, would be inherently awe- inspiring for the same reason mutatis mutandis.
+Bleached: And A, if they B-ed, would be C-ly D-E for the same F G H.
+Chars: 106 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 125 ---
+Original: Sharks and tarantulas are terrifying to people who do not understand them and to whom they therefore might as well be supernatural, and they are not terrifying to those who study them scientifically and for whom they are therefore mere natural phenomena.
+Bleached: A's and B's are C to D who do not E them and to whom they therefore might as well be F, and they are not C to those who G them H and for whom they are therefore mere I J.
+Chars: 254 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 126 ---
+Original: Great art is awe-inspiring to those who have no idea how it comes into existence, and to whom it therefore has a supernatural quality, but not to great artists, who do have such an idea and to whom it therefore has no such quality.
+Bleached: A X is B-ing to those who have no C how it D-s into E, and to whom it therefore has a F G, but not to A X-s, who do have such an C and to whom it therefore has no such G.
+Chars: 231 | Tokens: 44 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,.
+
+--- Pattern 127 ---
+Original: The Numinous as Projection of Passivity
+     Otto never quite says what the numinous is.
+Bleached: The A as B of C
+     D never quite E what the A is.
+Chars: 89 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 128 ---
+Original: He says what it isn�t, and he lists off a few of its key attributes.
+Bleached: He X's what it isn't, and he Y's off a few of its key Z's.
+Chars: 68 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 129 ---
+Original: But he can�t quite define it.
+Bleached: But he can't quite X it.
+Chars: 29 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 130 ---
+Original: The reason for this, contrary to what Otto himself says, is not that the numinous is inherently indefinable.
+Bleached: The X for this, Y to what Otto himself Z's, is not that the W is X-ly V-able.
+Chars: 108 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 131 ---
+Original: It is rather that Otto is treating as an objective being� one that lies outside of ourselves�when the truth is that it is obviously a psychological projection of some kind, and the question �what is the
+
+numinous?� is a psychological, not a metaphysical question.
+Bleached: It is rather that X is Y-ing as an Z A� one that B's outside of ourselves�when the truth is that it is obviously a C D of some kind, and the E �what is the
+
+F?� is a C, not a G E.
+Chars: 265 | Tokens: 44 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?,.
+
+--- Pattern 132 ---
+Original: When trying to form a clear conception of the numinous, the relevant question is: When do people experience it and when don�t they experience it?
+Bleached: When X-ing to Y a Z A-tion of the B, the C D is: When do E F it and when don't they F it?
+Chars: 145 | Tokens: 25 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,:?
+
+--- Pattern 133 ---
+Original: The answer is: They experience it when they have their guard down.
+Bleached: The X is: They Y it when they have their Z down.
+Chars: 66 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 134 ---
+Original: The savage�s relationship to nature is one of openness and passive wonder.
+Bleached: The X's Y to Z is one of W and V U.
+Chars: 74 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 135 ---
+Original: When one is listening to music, one is in a state of disinterested contemplation.
+Bleached: When one is X-ing to Y, one is in a Z of W V.
+Chars: 81 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 136 ---
+Original: Erotic and romantic attachments involve a condition of surrender.
+Bleached: A and B C involve a D of E.
+Chars: 65 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 137 ---
+Original: The tie-in to James is clear.
+Bleached: The X-in to Y is Z.
+Chars: 29 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 138 ---
+Original: James points out that people under the influence of drugs have experiences similar to those of the mystical variety, the reason being that such experiences are about passivity, as opposed to activity.
+Bleached: A X's out that B's under the C of D's have E's F to those of the G H, the I being that such E's are about J, as opposed to K.
+Chars: 200 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 139 ---
+Original: The scientist�s attitude to nature is not one of passive wonder but of active deconstruction, and the forester�s attitude towards nature is one
+of literal deconstruction, this being why there is nothing numinous about nature for either.
+Bleached: The A's B to C is not one of D E but of F G, and the H's B towards C is one of I G, this being why there is nothing J about C for either.
+Chars: 237 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 140 ---
+Original: For the savage, nature is not to be mastered but passively experienced, this being why he experiences it as numinous.
+Bleached: For the X, Y is not to be Z-ed but W-ly V-ed, this being why he V's it as A.
+Chars: 117 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 141 ---
+Original: Part 4 Eliade�s Position The Sacred and the Profane
+     According to Eliade, the essence of a genuinely religious person�s relation to the world is that he sees it as being either sacred or profane.
+Bleached: Part 4 X's Y The Z and the W
+     According to X, the A of a B C D's E to the F is that he G's it as H either I or J.
+Chars: 200 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 142 ---
+Original: Unlike the scientist, he does not see as it impersonal.
+Bleached: Unlike the A, he does not B as it C.
+Chars: 55 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 143 ---
+Original: The more genuinely religious a person is, the less he sees it as a mere machine, and the more likely he is to see a rock or twig or bolt of lightning as a manifestation of a beneficent higher presence, and therefore as �sacred�, or of a maleficent such presence, and therefore as �profane.� The less religious a person is, the more he sees it as a mere machine, and the less likely he is to see a rock or a twig as anything other than a rock or a twig.
+Bleached: The more A B a C is, the less he D it as a E F, and the more G he is to H a I or J or K of L as a M of a N O P, and therefore as "Q", or of a R such P, and therefore as "S." The less B a C is, the more he D it as a E F, and the less G he is to H a I or a J as anything other than a I or a J.
+Chars: 452 | Tokens: 91 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.,,.
+
+--- Pattern 144 ---
+Original: Linear vs.
+Bleached: A vs.
+Chars: 10 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 145 ---
+Original: Circular Time
+     According to Eliade, primitive man, this being the most religious kind of man, conceives of time as circular.
+Bleached: Ω1 Ω2
+     According to Ω3, Ω4 Ω5, this being the most Ω6 Ω7 of Ω5, Ω8-s of Ω2 as Ω1.
+Chars: 129 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 146 ---
+Original: He does not see it as a linear march away from a past that becomes ever more remote.
+Bleached: He does not V it as a A B away from a C that becomes ever more D.
+Chars: 84 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 147 ---
+Original: On the contrary, he sees time as being like the seasons.
+Bleached: On the contrary, he X's Y as being like the Z's.
+Chars: 56 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 148 ---
+Original: Indeed, his conception of time is very likely modeled on the seasons.
+Bleached: Indeed, his A of B is very likely C-ed on the D's.
+Chars: 69 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 149 ---
+Original: As a matter of anthropological fact, Eliade is right that this is how human beings initially conceived of time.
+Bleached: As a X of Y Z, A is B that this is how C D E F of G.
+Chars: 111 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 150 ---
+Original: We obviously now conceive of time as being linear, meaning that at some point our conception of time underwent a major shift.
+Bleached: We obviously now X of Y as being Z, meaning that at some W our X of Y X-ed a major V.
+Chars: 125 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 151 ---
+Original: According to Eliade, it was Abrahamic religion that brought about this shift.
+Bleached: According to X, it was Y Z that W about this V.
+Chars: 77 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 152 ---
+Original: Such
+
+religions, says Eliade, involve defining events (e.g.
+Bleached: Such
+
+X, says Y, involve Z-ing W (e.g.
+Chars: 61 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,(..
+
+--- Pattern 153 ---
+Original: God speaking to Abraham, Moses being given the Ten Commandments, or Jesus turning water into wine); and because these events are of such singular significance, making it impossible for them to be duplicated, the march of time is necessarily a march away from them and must therefore follow a linear path.
+Bleached: X speaking to Y, Z being given the W V Q's, or R turning S into T); and because these U are of such V W, making it X for them to be Y-ed, the Z of A is necessarily a B away from them and must therefore follow a C D.
+Chars: 304 | Tokens: 51 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,);,,.
+
+--- Pattern 154 ---
+Original: Part 5 Writing as the Basis of Rationalism Economies of Scale Responsible for the Time- linearization
+     Contrary to what Eliade alleges, the shift from a cyclical to a linear conception of time couldn�t possibly be a consequence of the advent of Judaism.
+Bleached: Part 5 X-ing as the Y of Z A's of B C for the D-E
+
+Contrary to what F G's, the H from a I to a J K of L couldn't possibly be a M of the N of O.
+Chars: 258 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 155 ---
+Original: First of all, it occurred independently in the Orient.
+Bleached: A of all, it B-ed C in the D.
+Chars: 54 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 156 ---
+Original: Second, it occurred in the West prior to the advent of Judaism.
+Bleached: Second, it occurred in the West prior to the advent of Judaism.
+Chars: 63 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 157 ---
+Original: The actual cause of this shift, in both the West and East, was the creation of the written word.
+Bleached: The A B of this C, in both the D and E, was the F of the G H I.
+Chars: 96 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 158 ---
+Original: This occurred in Mesopotamia approximately 6,000 years ago.[6] Hash marks in clay were used to keep inventory, and this system of record keeping was then so generalized as to be able to represent arithmetical operations and also to be able to record the written word.
+Bleached: This X-ed in Y approximately 6,000 Z ago.[6] W marks in V were used to keep U, and this T of S keeping was then so R-ed as to be able to represent Q operations and also to be able to record the written P.
+Chars: 267 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.,.
+
+--- Pattern 159 ---
+Original: Once the written word was established, it
+quickly led to the development of economies of scale and to the development of legal systems sufficiently complex to maintain such economies.
+Bleached: Once the X-ed Y was Z-ed, it quickly V-ed to the W of X2 of X3 and to the W of X4 X5 X6 X7 to X8 such X2.
+Chars: 184 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 160 ---
+Original: It may well be that a cyclical conception of time retained a certain hold on literate pre-Abrahamic peoples, such as the Mesopotamians and the Egyptians.
+Bleached: It may well be that a Q-al R of S T-ed a U V on W pre-X Y, such as the Z and the A.
+Chars: 153 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 161 ---
+Original: It may be, for example, that such a view is present in their myths.
+Bleached: It may be, for example, that such a X is Y in their Z's.
+Chars: 67 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 162 ---
+Original: (Indeed, we will argue below that myths of their very nature presuppose such a conception of time.) And it may be that such a view is advocated in their �official� theological works.
+Bleached: (Indeed, we will X below that Y's of their very Z A such a B of C.) And it may be that such a D is E-ed in their "F" G H's.
+Chars: 182 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.).
+
+--- Pattern 163 ---
+Original: But as soon as there were written records, time came to be thought of as linear.
+Bleached: But as soon as there were X-ed Y's, Z came to be X-ed of as W.
+Chars: 80 | Tokens: 16 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 164 ---
+Original: This is a matter of historical fact.
+Bleached: This is a N of E F.
+Chars: 36 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 165 ---
+Original: And the explanation is obvious.
+Bleached: And the X is Y.
+Chars: 31 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 166 ---
+Original: With the written word, and the concomitant development of economies of scale, history came into existence.
+Bleached: With the X-ed Y, and the Z A of B of C, D came into E.
+Chars: 106 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 167 ---
+Original: Functionally speaking, the life of a precivilizational
+person was cyclical.
+Bleached: Functionally speaking, the A of a B C was D.
+Chars: 76 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 168 ---
+Original: Each year was like the last.
+Bleached: Each X was like the Y.
+Chars: 28 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 169 ---
+Original: There were no technological changes and no economic development.
+Bleached: There were no A B's and no C D.
+Chars: 64 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 170 ---
+Original: And, of course, there were no written records and there was therefore no well-defined moment that receded into the past: no �year zero�--no 1492 or 1776.
+Bleached: And, of course, there were no X-en Y's and there was therefore no Z-ed W that V-ed into the X: no "Y Ω"--no 1492 or 1776.
+Chars: 153 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-:--.
+
+--- Pattern 171 ---
+Original: �History� extended no further than
+
+one�s personal memory.
+Bleached: "A" extended no further than
+
+one's B C.
+Chars: 60 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 172 ---
+Original: Of course, children were told myths, and myths necessarily concern events that, if they actually occurred, did so in the past.
+Bleached: Of course, X were Y Z, and Z necessarily A B that, if they actually C, did so in the past.
+Chars: 126 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 173 ---
+Original: But the events described in myths are better thought of as occurring in a hypothetical time; for it makes little sense to suppose that the events in Little Red Riding Hood preceded those in Jack in the Bean Stalk by 17 years or by 112 years.
+Bleached: But the X's described in Y's are better Z-ed of as W-ing in a V U; for it makes little T to S that the X's in R Q P Hood R-ed those in O in the N M by 17 L's or by 112 L's.
+Chars: 241 | Tokens: 46 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ;.
+
+--- Pattern 174 ---
+Original: In general, it makes little sense to conceive of a series of actual events linking the events in some myth to events external to that myth.
+Bleached: In A, it B-s C D to E of a F of G H-s I-ing the H-s in J K to H-s L to that K.
+Chars: 139 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 175 ---
+Original: Myths therefore do not represent historical consciousness of history.
+Bleached: A therefore do not B C D of E.
+Chars: 69 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 176 ---
+Original: On the contrary, they represent an ahistorical consciousness of lessons learned in a historical past.
+Bleached: On the contrary, they represent an A consciousness of B's C-ed in a D past.
+Chars: 101 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 177 ---
+Original: Writing was invented at approximately the same time that Judaism came into existence, this likely being what through Eliade off.
+Bleached: X-ing was Y-ed at approximately the same Z that W came into V, this likely being what through U off.
+Chars: 128 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 178 ---
+Original: Writing was invented first.
+Bleached: X was Y-ed first.
+Chars: 27 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 179 ---
+Original: As a result, it became possible for Moses to introduce writing to the Israelites, this being Judaism�s inaugural event (mythologically represented as God etching commandments into a tablet).
+Bleached: As a result, it became possible for A to introduce B to the C, this being D's E F (G H as I J K into a L).
+Chars: 190 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,().
+
+--- Pattern 180 ---
+Original: Being a consequence of the written word, Judaism is the effect, not the cause, of the linearization of time.
+Bleached: Being a A of the B C, D is the E, not the F, of the G of H.
+Chars: 108 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 181 ---
+Original: Religion as Early-stage Rationalism
+     A civilization involves an economy of scale, along with complex legal and political arrangements.
+Bleached: Ω as Φ-stage Ψ
+     A Δ involves an Ξ of Θ, along with Λ Μ and Ν arrangements.
+Chars: 139 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 182 ---
+Original: None of this can exist in the absence of rationalism.
+Bleached: None of this can X in the Y of Z.
+Chars: 53 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 183 ---
+Original: Small scale tribal organizations can exist in the absence of rationalism�and indeed depend on its absence.
+Bleached: A B C D can E in the F of G—and H I on its F.
+Chars: 106 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 184 ---
+Original: But where there is civilization, there are necessarily arrangements that are not strictly instinct- based or emotion-driven and that can be sustained only on the basis of rationalism-based social engineering.
+Bleached: But where there is A, there are necessarily B's that are not strictly C-based or D-driven and that can be E-ed only on the basis of F-based G H.
+Chars: 208 | Tokens: 30 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,---.
+
+--- Pattern 185 ---
+Original: What Eliade describes as a shift from one kind of religion to another� what he describes as a shift from pre-Abrahamic to Abrahamic religions�is not a shift between religions at all.
+Bleached: What A B-s as a C from one D of E to F� what he B-s as a C from G-H to H E-s�is not a C between E-s at all.
+Chars: 182 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 186 ---
+Original: It is a shift from spiritualism to religion, spiritualism being the outlook of the precivilizational person and religion being the way that spiritualism is compatibilized with early-stage civilization.
+Bleached: It is a X from Y to Z, Y being the Ω of the A F and Z being the W that Y is B-ed with C-stage D.
+Chars: 201 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 187 ---
+Original: Judaism did not officially begin until norms of conduct were written down and codified; and those norms had to be codified, since unwritten understandings wouldn�t be capable of governing such a large and internally differentiated group.
+Bleached: A did not officially B until C of D were E down and F-ed; and those C had to be F-ed, since G H wouldn't be I of J-ing such a K and internally L-ed M.
+Chars: 237 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 188 ---
+Original: Christianity and Islam may have started out is informal movements that were governed more by sentiments than by codified norms.
+Bleached: A and B may have X-ed out is Y Z-s that were W-ed more by F-s than by G-ed H-s.
+Chars: 127 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 189 ---
+Original: But they did not become full-blown religions until, like Judaism, they developed, and indeed identified with, complex legal and legalistic norms of
+
+conduct.
+Bleached: But they did not X full-Y Z's until, like A, they X-ed, and indeed X-ed with, B C and D E's of
+
+F.
+Chars: 159 | Tokens: 23 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,,,,.
+
+--- Pattern 190 ---
+Original: Consequently, religion is not so much pre-rationalism or anti- rationalism as it is early-stage rationalism; it is not so much non-rationalism as it is the rationalism of early civilizations.
+Bleached: Consequently, Z is not so much pre-R or anti-R as it is early-stage R; it is not so much non-R as it is the R of early Y's.
+Chars: 191 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,---;-.
+
+--- Pattern 191 ---
+Original: As for what we now refer to as �rationalism�, that is late-stage rationalism�the rationalism of a civilization whose investigations into nature have started to acquire the same degree of logical rigor as the legal and economic norms involved in societies of scale.
+Bleached: As for what we now refer to as "R", that is late-stage R—the R of a C whose I-s into N have started to acquire the same degree of logical rigor as the legal and economic norms involved in societies of scale.
+Chars: 264 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 192 ---
+Original: Writing and Rationality
+     Intelligence is about making judgments about the world.
+Bleached: """
+X-ing and Y
+     Z is about V-ing W's about the X.
+"""
+Chars: 85 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 193 ---
+Original: (A fox is behaving intelligently if it correctly judges when to pounce on a rabbit.) Rationality is about making judgments about one�s intelligence.
+Bleached: (A A is B-ing C-ly if it D-ly E when to F on a G.) H is about I J about one's K.
+Chars: 148 | Tokens: 23 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: (.).
+
+--- Pattern 194 ---
+Original: (I am being rational if I judge that a career in engineering would be a better use of my mathematical talents than a career as a bookmaker.) Can individuals be rational without being literate?
+Bleached: (I am being A if I B that a C in D would be a E F of my G H than a C as a I.) Can J be A without being K?
+Chars: 192 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.)?
+
+--- Pattern 195 ---
+Original: Probably, but the written word certainly makes it easier than it would otherwise be for individuals to be intelligent.
+Bleached: Probably, but the X word certainly makes it Y than it would otherwise be for Z's to be W.
+Chars: 118 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 196 ---
+Original: Can illiterate societies be rationally structured?
+Bleached: Can A societies be B structured?
+Chars: 50 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 197 ---
+Original: Probably, but a literate society is able to do more in the way of rationally structuring itself than an illiterate one.
+Bleached: Probably, but a X Y is Z to do more in the way of W V itself than an A one.
+Chars: 119 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 198 ---
+Original: In the West, our conception of time became linear at about the same time that the first Abrahamic faith came into existence.
+Bleached: In the X, our Y of Z became Ω at about the same time that the first A B came into C.
+Chars: 124 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 199 ---
+Original: Eliade deduces from this that Abrahamism was responsible for the linearization of our time- concept.
+Bleached: A deduces from this that B was responsible for the C-ation of our time-concept.
+Chars: 100 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 200 ---
+Original: But this is simply false, given that there were many pre-Abrahamic civilizations�some of them dating back to 8,000 B.C.---whose conceptions of time were quite as linear as ours.
+Bleached: But this is simply A, B that there were many C-D E---some of them F back to 8,000 G.---whose H of I were quite as J as K.
+Chars: 177 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-,..---.
+
+--- Pattern 201 ---
+Original: Chapter 6 Spiritualism and Religion Religion Not what James, Otto, and Eliade are
+Examining
+     When James, Otto, and Eliade refer to �religion�, they are not referring to religion at all, but rather to precivilizational spiritualism.
+Bleached: Chapter 6 A and B B Not what C, D, and E are F-ing
+
+     When C, D, and E G to "B", they are not G-ing to B at all, but rather to H-al A.
+Chars: 237 | Tokens: 35 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,,,.
+
+--- Pattern 202 ---
+Original: Members of any given Abrahamic faith, or indeed of any religion unambiguously worthy of the name, tend to have worldviews that are largely indistinguishable from those of ardent rationalists.
+Bleached: X of any given Y Z, or indeed of any W unambiguously Ω of the Φ, tend to have Ψ that are largely Λ from those of Δ Θ.
+Chars: 191 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 203 ---
+Original: Yes�a fundamentalist Christian seems to have a few beliefs here and there that his non-religious counterpart does not have.
+Bleached: Yes—a Ω1 Ω2 seems to have a few Ω3's here and there that his Ω4-Ω5 Ω6 does not have.
+Chars: 123 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 204 ---
+Original: But, first of all, is this really true?
+Bleached: But, first of all, is this really X?
+Chars: 39 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,?
+
+--- Pattern 205 ---
+Original: Does the contemporary fundamentalist Christian really believe that Christ walked on water?
+Bleached: Does the A B C D really E that F G-ed on H?
+Chars: 90 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 206 ---
+Original: Does he
+
+believe it in the same sense in which he believes that he is a person or that fish live in water?
+Bleached: Does he
+
+Λ it in the same Ω in which he Λ's that he is a F or that G Υ in H?
+Chars: 108 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 207 ---
+Original: Or is it rather that this so-called belief of his is more of
+a posit whose purpose is not so much to be true as it is to emblematize a set of values?
+Bleached: Or is it rather that this so-called A of his is more of
+a B whose C is not so much to be true as it is to D a E of F's?
+Chars: 150 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -?
+
+--- Pattern 208 ---
+Original: Second, and more importantly, even if the fundamentalist Christian actually believes that Christ walked on water and rose from the
+dead, his understanding of the world is almost entirely identical with that of his non-religious counterpart.
+Bleached: Second, and more importantly, even if the A B C actually D that E F on G and H from the I, his J of the K is almost entirely L with that of his M N.
+Chars: 241 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 209 ---
+Original: He doesn�t think that there are little people in his radio who are responsible for the noises it makes; he doesn�t think that every other twig and rock that he comes upon is a magic omen.
+Bleached: He doesn't think that there are X people in his Y who are Z for the A's it makes; he doesn't think that every other B and C that he comes upon is a D E.
+Chars: 187 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 210 ---
+Original: His animism is confined to a small and tightly bounded collection of relics concerning alleged past miracles and the like, which relics�though obviously false and absurd if considered as representations of historical fact�are used in a very controlled and, indeed, rational way.
+Bleached: His A is B to a C and D E F of G concerning H I J and the like, which G—though I J and K if L as M of N O—are P in a very Q and, indeed, R way.
+Chars: 278 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 211 ---
+Original: For example, the Amish have many beliefs, for lack of a better term, about Moses, Jesus, God, and Virgin Birth that, if considered on their own, are obviously absurd but that the Amish use as the basis for extremely stable social arrangements, thanks to which the Amish work relatively short hours, live relatively long lives, have relatively happy marriages, and whose communities are virtually crime free.
+Bleached: For example, the A have many B's, for lack of a better term, about C, D, E, and F G that, if considered on their own, are obviously H but that the A use as the basis for extremely I J K's, thanks to which the A work relatively short hours, live relatively long lives, have relatively L M's, and whose N's are virtually O free.
+Chars: 407 | Tokens: 66 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,,,,,,,,,.
+
+--- Pattern 212 ---
+Original: The Amish, despite having different values from ordinary �seculars�, like myself, see the world in the same way.
+Bleached: The A, despite X-ing different B's from ordinary "C's", like myself, D the E in the same F.
+Chars: 112 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 213 ---
+Original: If I see a rock, they see a rock; and if they see a twig, I see a twig.
+Bleached: If I see a X, they see a X; and if they see a Y, I see a Y.
+Chars: 71 | Tokens: 19 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,;,.
+
+--- Pattern 214 ---
+Original: Unlike the precivilizational spiritualist, they don�t beat their amulets when angry, they don�t see tree-branches blowing in the wind as angry monster-arms.
+Bleached: Unlike the X Y-ist, they don't Z their W's when V, they don't U T-S R-ing in the Q as V P-O's.
+Chars: 156 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,--.
+
+--- Pattern 215 ---
+Original: Spiritualism and Religion
+     If the Amish aren�t religious, who is?
+Bleached: """
+A and B
+     If the C aren't D, who is?
+"""
+Chars: 70 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 216 ---
+Original: So when James, Otto, and Eliade talk about �religion�, they cannot possibly be using this term correctly.
+Bleached: So when A, B, and C X about "Y", they cannot possibly be Z-ing this W correctly.
+Chars: 105 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 217 ---
+Original: Religious people�such as the Amish and Hasidim---are no more likely than others to have �ineffable� experiences of �numinous� apparitions.
+Bleached: A people—such as the B and C---are no more likely than others to have "D" experiences of "E" apparitions.
+Chars: 138 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---.
+
+--- Pattern 218 ---
+Original: They are no more likely than others to see rocks as beating monster-hearts.
+Bleached: They are no more Q than R to X S as T-ing U-V.
+Chars: 75 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 219 ---
+Original: What is likely is they used to have such beliefs but no longer do, these former beliefs of theirs having long since hardened into mere acceptances or posits that function as foils for rationally worked out ethical and legal codes.
+Bleached: What is A is they B to have such C but no longer do, these D C of theirs having long since E-ed into mere F or G that H as I for J K out L and M N.
+Chars: 230 | Tokens: 40 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 220 ---
+Original: When they refer to religion, what James, Otto, and Eliade are referring
+
+to is precivilizational spiritualism.
+Bleached: When they X to Y, what Z, A, and B are X-ing
+
+to is C-al D.
+Chars: 112 | Tokens: 16 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 221 ---
+Original: They are referring to the mindset of somebody for whom rationalism was simply not an option.
+Bleached: They are X-ing to the Y of Z for whom R was simply not an W.
+Chars: 92 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 222 ---
+Original: They are not referring to acceptance of some legalistic code of conduct that happens to contain a few throwbacks to spiritualism; they are not referring to the likes of Christianity and Islam, which, though occasionally referencing a snake that turned into a serpent or a talking bush, are complex and internally consistent behavioral codes that stabilize relations between man and woman, parent and child, employer and employee, and buyer and seller.
+Bleached: They are not X-ing to Y of some Z-ic A of B that C-s to D a few E-s to F; they are not X-ing to the G-s of H and I, which, though J-ly K-ing a L that M-ed into a N or a O-ing P, are Q and R S T-al A-s that U V-s between W and X, Y and Z, A and B, and C and D.
+Chars: 451 | Tokens: 71 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,,,,,.
+
+--- Pattern 223 ---
+Original: The most die-hard fundamentalist Christian uses the internet and has a refrigerator and pays his taxes.
+Bleached: The most X-hard Y Z uses the internet and has a refrigerator and pays his taxes.
+Chars: 103 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 224 ---
+Original: His values may be slightly different from those of his neighbor, but his factual beliefs, with rare and dubious exceptions, are the same.
+Bleached: His A's may be slightly B from those of his C, but his D E's, with rare and F G's, are the same.
+Chars: 137 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 225 ---
+Original: The mentality that James, Otto, and Eliade are describing is not religious, but animistic.
+Bleached: The A that B, C, and D are E-ing is not F, but G.
+Chars: 90 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 226 ---
+Original: Granting that Otto, James, and Eliade should not have used the term �religion� to refer to mindset they had in mind, it does not follow that what they said is false�only that they could have worded it more clearly.
+Bleached: Granting that A, B, and C should not have used the term "D" to refer to E they had in mind, it does not follow that what they said is F—only that they could have G-ed it more H.
+Chars: 214 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 227 ---
+Original: So what did they say?
+Bleached: So what did they X?
+Chars: 21 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 228 ---
+Original: To this we now turn.
+Bleached: To this we now X.
+Chars: 20 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 229 ---
+Original: Part 7 James, Otto, and Eliade on the Limits of Rationalism
+James, Otto, and Eliade on Rationalism
+Rationalism begins when spiritualism ends.
+Bleached: Part 7 A, B, and C on the D's of E
+A, B, and C on E
+E F's when G H's.
+Chars: 143 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 230 ---
+Original: For the rationalist, there world is so many moving parts.
+Bleached: For the R-ist, there world is so many X-ing Y's.
+Chars: 57 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 231 ---
+Original: There is nothing magical or mysterious about it.
+Bleached: There is X Y or Z about it.
+Chars: 48 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 232 ---
+Original: Yes, there is much that the rationalist doesn�t know and knows that he doesn�t know.
+Bleached: Yes, there is much that the R-ist doesn't X and X's that he doesn't X.
+Chars: 84 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 233 ---
+Original: But for the rationalist, unknowns are just gaps in his knowledge.
+Bleached: But for the R-ist, U's are just G's in his K.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 234 ---
+Original: They are not mysteries.
+Bleached: They are not X's.
+Chars: 23 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 235 ---
+Original: For the rationalist, some parts of the world are useful, others are harmful, and others are neither.
+Bleached: For the R-ist, some F's of the G are H, others are I, and others are neither.
+Chars: 100 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 236 ---
+Original: But nothing is sacred, and nothing is profane.
+Bleached: But X is Y, and X is Z.
+Chars: 46 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 237 ---
+Original: For the rationalist, morality has to do with utility, not with divinity.
+Bleached: For the R-ist, M has to do with U, not with D.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 238 ---
+Original: Some legal codes work better than others; they lead to lower crime rates, higher GDPs, and the like.
+Bleached: Some A B's C D than E's; they F to G H I's, J K's, and the like.
+Chars: 100 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,.
+
+--- Pattern 239 ---
+Original: But that�s the end of it.
+Bleached: But that's the X of it.
+Chars: 25 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 240 ---
+Original: For the rationalist, there is indeed morality, but there is no higher morality.
+Bleached: For the R-ist, there is indeed M, but there is no higher M.
+Chars: 79 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 241 ---
+Original: Morality is another branch of engineering.
+Bleached: A is B C of D.
+Chars: 42 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 242 ---
+Original: For the rationalist, the world is impersonal.
+Bleached: For the R-ist, the X is Y.
+Chars: 45 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 243 ---
+Original: It is not a living being.
+Bleached: It is not a X-ing Y.
+Chars: 25 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 244 ---
+Original: It is just so much dead matter.
+Bleached: It is just so much X Y.
+Chars: 31 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 245 ---
+Original: There do existing living organisms, and a few of those are sentient.
+Bleached: There do X-ing Y Z's, and a few of those are W.
+Chars: 68 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 246 ---
+Original: But for the rationalist, life, especially of the sentient variety, is an anomaly and must therefore be explained, with the qualification
+
+that �explaining� it means reconciling its existence to an otherwise dead and non-sentient universe.
+Bleached: But for the X-ist, Y, especially of the Z variety, is an W and must therefore be V-ed, with the qualification
+
+that "V-ing" it means Q-ing its existence to an otherwise R and non-Z universe.
+Chars: 240 | Tokens: 35 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,,-.
+
+--- Pattern 247 ---
+Original: For the rationalist, the world is an object.
+Bleached: For the R-ist, the X is an Y.
+Chars: 44 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 248 ---
+Original: It exists only to be used.
+Bleached: It X-s only to be Y-ed.
+Chars: 26 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 249 ---
+Original: The rationalist sometimes cloaks his instrumentalist conception of nature by taking the position that he wants to understand the world, not use it.
+Bleached: The R-ist sometimes X's his I-ist Y of Z by taking the W that he wants to V the A, not B it.
+Chars: 147 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 250 ---
+Original: But to understand the world is to dissect it mentally, usually in furtherance of doing so literally.
+Bleached: But to X the Y is to Z it W, usually in X of X-ing so W.
+Chars: 100 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 251 ---
+Original: James, Otto, and Eliade on Spiritualism
+For the spiritualist, the world is a subject.
+Bleached: """
+A, B, and C on D
+For the E, the F is a G.
+"""
+Chars: 86 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 252 ---
+Original: For the spiritualist, the world, though having its uses, does not exist only to be used.
+Bleached: For the A, the B, though having its C's, does not D only to be E-ed.
+Chars: 88 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 253 ---
+Original: It is more of a partner than an object.
+Bleached: It is more of a X than an Y.
+Chars: 39 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 254 ---
+Original: And, like a partner, it is teeming with life, and gives one�s life meaning.
+Bleached: And, like a A, it is B-ing with C, and gives one's C D.
+Chars: 75 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 255 ---
+Original: For the spiritualist, morality is emotional, not utilitarian in nature, based as it is not on utilitarian judgments about social stability but on an empathic rapport with God and nature.
+Bleached: For the A, B is C, not D in E, F as it is not on D G about H I but on an J K with L and M.
+Chars: 186 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 256 ---
+Original: For the spiritualist, organisms are more basic than dead matter, the latter being mere vestiges of the former, and the very concept of an �impersonal force� is alien to him.
+Bleached: For the A, B's are more C than D E, the F being mere G's of the H, and the very I of an "J K" is L to him.
+Chars: 173 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 257 ---
+Original: Conclusion: What Do These Authors Propose?
+Bleached: Conclusion: What Do These A's Propose?
+Chars: 42 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 258 ---
+Original: Each of these authors repeatedly references the invigorating effects of spiritualism.
+Bleached: Each of these X's repeatedly Y's the Z effects of W.
+Chars: 85 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 259 ---
+Original: Too much rationalism is morbid, they seem to be saying, the implication being that at least some spiritualism is necessary for mental health.
+Bleached: Too much R-ism is M, they seem to be saying, the implication being that at least some S-ism is necessary for mental health.
+Chars: 141 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 260 ---
+Original: But is this in fact what they are saying?
+Bleached: But is this in fact what they are X-ing?
+Chars: 41 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?
+
+--- Pattern 261 ---
+Original: Are they advocating a return to a condition of spiritualism?
+Bleached: Are they X-ing a Y to a Z of W?
+Chars: 60 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 262 ---
+Original: Do they want us to take Rousseau�s advice and revert a condition of innocent savagery?
+Bleached: Do they want us to take A's advice and B to a condition of C D?
+Chars: 86 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 263 ---
+Original: I would suggest a very different reading.
+Bleached: I would X a very Y Z.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 264 ---
+Original: Their position, I propose, is not that we should be more spiritual, but that we are already spiritual, even though we tend not to recognize the manifestations of our spiritualism for what they are.
+Bleached: Their A, I B, is not that we should be more C, but that we are already C, even though we tend not to D the E's of our C-ism for what they are.
+Chars: 197 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 265 ---
+Original: What these authors are saying about spiritualism is similar to what Freud says about sexuality.
+Bleached: What these A's are B-ing about C is D to what E B's about F.
+Chars: 95 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 266 ---
+Original: According to Freud, we cannot become asexual.
+Bleached: According to X, we cannot become Y.
+Chars: 45 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 267 ---
+Original: What we can do is wrongly believe ourselves to be asexual and, on that basis, make life-decisions that thwart our sexuality and thereby undermine our biological condition.
+Bleached: What we can do is A-ly B ourselves to be C and, on that basis, make D-decisions that E our F and thereby G our H I.
+Chars: 171 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 268 ---
+Original: According to James, Otto, and Eliade, so
+
+I am suggesting, we cannot become non-spiritual.
+Bleached: According to X, Y, and Z, so
+
+I am W-ing, we cannot V non-Q.
+Chars: 92 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,-.
+
+--- Pattern 269 ---
+Original: What we can do is wrongly believe that we are non-spiritual---possibly because we have erroneously come to see rationalism as a rejection, as opposed to a rarefied extension, of our spiritualism�and on that basis adopt lifestyles that contravene our ineradicably spiritual natures.
+Bleached: What we can do is A-ly B that we are C-D---E because we have F-ly G to H I as a J, as K to a L M, of our N�and on that O P Q that R our S-ly D T.
+Chars: 281 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ----,,.
+
+--- Pattern 270 ---
+Original: [1] James, William.
+Bleached: [1] A, B.
+Chars: 19 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 271 ---
+Original: The Varieties of Religious Experience: Complete and Unabridged (Illustrated) (p.
+Bleached: The X's of Y Z: W and U (V) (p.
+Chars: 80 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()(.
+
+--- Pattern 272 ---
+Original: 15).
+Bleached: 15).
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 273 ---
+Original: CrossReach Publications.
+Bleached: X Y.
+Chars: 24 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 274 ---
+Original: Kindle Edition.
+Bleached: X Y.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 275 ---
+Original: [2] James, William.
+Bleached: [2] A, B.
+Chars: 19 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 276 ---
+Original: The Varieties of Religious Experience: Complete and Unabridged (Illustrated) (p.
+Bleached: The X's of Y Z: X and X (X) (p.
+Chars: 80 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()(.
+
+--- Pattern 277 ---
+Original: 15).
+Bleached: 15).
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 278 ---
+Original: CrossReach Publications.
+Bleached: X Y.
+Chars: 24 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 279 ---
+Original: Kindle Edition.
+Bleached: X Y.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 280 ---
+Original: [3] James, William.
+Bleached: [3] A, B.
+Chars: 19 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 281 ---
+Original: The Varieties of Religious Experience: Complete and Unabridged (Illustrated) (p.
+Bleached: The X's of Y Z: W and V (U) (p.
+Chars: 80 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()(.
+
+--- Pattern 282 ---
+Original: 15).
+Bleached: 15).
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 283 ---
+Original: CrossReach Publications.
+Bleached: X Y.
+Chars: 24 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 284 ---
+Original: Kindle Edition.
+Bleached: X Y.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 285 ---
+Original: [4] James, William.
+Bleached: [4] A, B.
+Chars: 19 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 286 ---
+Original: The Varieties of Religious Experience: Complete and Unabridged (Illustrated) (p.
+Bleached: The X's of Y Z: A and B (C) (p.
+Chars: 80 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()(.
+
+--- Pattern 287 ---
+Original: 21).
+Bleached: 21).
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 288 ---
+Original: CrossReach Publications.
+Bleached: X Y.
+Chars: 24 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 289 ---
+Original: Kindle Edition.
+Bleached: X Y.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 290 ---
+Original: [5] James, William.
+Bleached: [5] A, B.
+Chars: 19 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 291 ---
+Original: The Varieties of Religious Experience: Complete and Unabridged (Illustrated) (p.
+Bleached: The A's of B C: D and E (F) (G.
+Chars: 80 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()(.
+
+--- Pattern 292 ---
+Original: 21).
+Bleached: 21).
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 293 ---
+Original: CrossReach Publications.
+Bleached: X Y.
+Chars: 24 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 294 ---
+Original: Kindle Edition.
+Bleached: X Y.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 295 ---
+Original: [6] Judaism officially came into existence 5780 years ago; and it did so, strikingly, when Moses introduced the written word, in the form of the Decalogue, to the Israelites.
+Bleached: [6] A officially came into B C D ago; and it did so, E, when F G-ed the H I, in the J of the K, to the L.
+Chars: 174 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,,,.
+

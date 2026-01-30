@@ -2109,13 +2109,13 @@ export default function Home() {
                     onClick={async () => {
                       if (!patternGenOutput) return;
                       try {
-                        // Split patterns into chunks of 50 for large uploads
-                        const patternBlocks = patternGenOutput.split(/--- Pattern \d+ ---/).filter(b => b.trim());
+                        // Count patterns to determine if chunking is needed
+                        const patternCount = (patternGenOutput.match(/--- Pattern \d+ ---/g) || []).length;
                         const CHUNK_SIZE = 50;
                         let totalImported = 0;
                         let lastTotal = 0;
                         
-                        if (patternBlocks.length <= CHUNK_SIZE) {
+                        if (patternCount <= CHUNK_SIZE) {
                           // Small upload - do it in one request
                           const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
                             content: patternGenOutput,
@@ -2125,29 +2125,46 @@ export default function Home() {
                           totalImported = data.imported || 0;
                           lastTotal = data.total || 0;
                         } else {
-                          // Large upload - split into chunks
+                          // Large upload - split into chunks by pattern boundaries
                           const header = patternGenOutput.split("--- Pattern 1 ---")[0];
-                          const chunks: string[] = [];
+                          // Get content after header, split by pattern delimiter but keep delimiters
+                          const afterHeader = patternGenOutput.substring(header.length);
+                          const patternMatches = afterHeader.split(/(--- Pattern \d+ ---)/);
                           
-                          for (let i = 0; i < patternBlocks.length; i += CHUNK_SIZE) {
-                            const chunkBlocks = patternBlocks.slice(i, i + CHUNK_SIZE);
+                          // Rebuild as pairs: [delimiter, content, delimiter, content, ...]
+                          const patterns: string[] = [];
+                          for (let i = 1; i < patternMatches.length; i += 2) {
+                            if (patternMatches[i] && patternMatches[i + 1] !== undefined) {
+                              patterns.push(patternMatches[i] + patternMatches[i + 1]);
+                            }
+                          }
+                          
+                          // Create chunks
+                          const chunks: string[] = [];
+                          for (let i = 0; i < patterns.length; i += CHUNK_SIZE) {
+                            const chunkPatterns = patterns.slice(i, i + CHUNK_SIZE);
+                            // Renumber patterns within chunk
                             let chunkContent = header;
-                            chunkBlocks.forEach((block, idx) => {
-                              chunkContent += `--- Pattern ${idx + 1} ---${block}`;
+                            chunkPatterns.forEach((pattern, idx) => {
+                              chunkContent += pattern.replace(/--- Pattern \d+ ---/, `--- Pattern ${idx + 1} ---`);
                             });
                             chunks.push(chunkContent);
                           }
                           
-                          toast({ title: "Uploading...", description: `Processing ${chunks.length} batches...` });
+                          toast({ title: "Uploading...", description: `Processing ${chunks.length} batches (${patternCount} patterns)...` });
                           
                           for (let i = 0; i < chunks.length; i++) {
-                            const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
-                              content: chunks[i],
-                              authorName: patternGenAuthor.trim() || null,
-                            });
-                            const data = await response.json();
-                            totalImported += data.imported || 0;
-                            lastTotal = data.total || 0;
+                            try {
+                              const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                                content: chunks[i],
+                                authorName: patternGenAuthor.trim() || null,
+                              });
+                              const data = await response.json();
+                              totalImported += data.imported || 0;
+                              lastTotal = data.total || 0;
+                            } catch (chunkError) {
+                              console.error(`Chunk ${i + 1} failed:`, chunkError);
+                            }
                             
                             // Small delay between chunks
                             if (i < chunks.length - 1) {
