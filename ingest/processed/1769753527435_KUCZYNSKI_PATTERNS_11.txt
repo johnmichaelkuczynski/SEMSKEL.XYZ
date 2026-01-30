@@ -1,0 +1,4688 @@
+=== SENTENCE BANK ===
+Total Patterns: 622
+Generated: 1/30/2026, 1:09:26 AM
+
+--- Pattern 1 ---
+Original: Chapter 25
+Religion
+1.0 What does philosophy have to teach us about religion?
+Bleached: Chapter 25
+A
+1.0 What does B have to C us about A?
+Chars: 79 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .?
+
+--- Pattern 2 ---
+Original: Nothing.
+Bleached: A.
+Chars: 8 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 3 ---
+Original: The so-called philosophy of religion doesn’t concern religion.
+Bleached: The so-called X of Y doesn't Z Y.
+Chars: 62 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 4 ---
+Original: It concerns puzzles that can be illustrated in connection with religious questions but are really of a strictly logical nature.
+Bleached: It A B that can be C in D with E F but are really of a strictly G H.
+Chars: 127 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 5 ---
+Original: Here is one such puzzle:
+
+(OG) Many hold that God is omnipotent—that, in other words, She can do anything.
+Bleached: Here is one such Z:
+
+(OG) A hold that B is C—that, in other words, She can do D.
+Chars: 108 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()—,,.
+
+--- Pattern 6 ---
+Original: Let’s suppose that this is true.
+Bleached: Let's X that this is Y.
+Chars: 32 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 7 ---
+Original: In that case, God can create some task that She cannot perform.
+Bleached: In that X, Y can Z some W that She cannot V.
+Chars: 63 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 8 ---
+Original: But if She can do that, She’s not omnipotent.
+Bleached: But if She can X that, She's not Y.
+Chars: 45 | Tokens: 9 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 9 ---
+Original: OG doesn’t have anything to do with God.
+Bleached: X doesn't have anything to do with Y.
+Chars: 40 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 10 ---
+Original: It has to do with subtleties of logic that, although they can be illustrated in connection with statements concerning God, have nothing to do with Her.
+Bleached: It has to do with A's of B that, although they can be C-ed in D with E's F-ing God, have nothing to do with Her.
+Chars: 151 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 11 ---
+Original: We know this because OG perfectly parallels the following argument.
+Bleached: We X this because Y perfectly Z's the following W.
+Chars: 67 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 12 ---
+Original: (SG) Smith shaves all and only those who don’t shave themselves.
+Bleached: (SG) X Y-s all and only those who don't Y themselves.
+Chars: 64 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 13 ---
+Original: Question: Does Smith shave himself?
+Bleached: Question: Does X Y himself?
+Chars: 35 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 14 ---
+Original: If he does, then he doesn’t, since he shaves only those who don’t shave themselves.
+Bleached: If he does, then he doesn't, since he X's only those who don't X themselves.
+Chars: 83 | Tokens: 15 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 15 ---
+Original: If doesn’t, then he does, since he shaves all those who don’t shave themselves.
+Bleached: If doesn't, then he does, since he X's all those who don't X themselves.
+Chars: 79 | Tokens: 14 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 16 ---
+Original: OG is no more about God than SG is about barbers.
+Bleached: X is no more about Y than Z is about W's.
+Chars: 49 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 17 ---
+Original: Both paradoxes expose logical problems relating to the use of quantifiers.
+Bleached: Both X's Y Z W's X-ing to the X of X's.
+Chars: 74 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 18 ---
+Original: Although one of the objectives of the philosophy of religion is to figure out whether or not God exists, its efforts to do this quickly veer off course and end up bogging down in logical minutiae that are of no relevance to religion at all.
+Bleached: Although one of the A's of the B of C is to D out whether or not E F's, its G's to do this quickly H off I and end up J-ing down in K L that are of no M to C at all.
+Chars: 240 | Tokens: 45 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 19 ---
+Original: Consider the following argument, which was given by St.
+Bleached: Consider the following X, which was Y by Z.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 20 ---
+Original: Thomas Aquinas (1225–1274):
+
+(AG1) Every event has a predecessor.
+Bleached: V W (1225–1274):
+
+(AG1) Every X has a Y.
+Chars: 67 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():().
+
+--- Pattern 21 ---
+Original: Therefore, there is some event that is the predecessor of every event.
+Bleached: Therefore, there is some X that is the Y of every X.
+Chars: 70 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 22 ---
+Original: In other words, there is a first event.
+Bleached: In other words, there is a first X.
+Chars: 39 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 23 ---
+Original: Causes precede their effects.
+Bleached: A precede their B.
+Chars: 29 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 24 ---
+Original: Therefore, that first event, not being preceded by anything, was uncaused.
+Bleached: Therefore, that X Y, not being Z-ed by anything, was W-ed.
+Chars: 74 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 25 ---
+Original: Since all events must be caused, that first event was a miracle and, therefore, the act of a deity.
+Bleached: Since all A's must be B-ed, that first A was a C and, therefore, the D of a E.
+Chars: 99 | Tokens: 19 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 26 ---
+Original: Therefore, there is a God.
+Bleached: Therefore, there is a X.
+Chars: 26 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 27 ---
+Original: The first sentence of AG1, which we’ll refer to as (a), is ambiguous.
+Bleached: The X Y of Z, which we'll W to as (a), is V.
+Chars: 69 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,(),.
+
+--- Pattern 28 ---
+Original: It could mean either:
+
+(a1) Given any event x, there is some event y, such that y precedes x
+
+or
+
+(a2) there is some event x such that, for any event y, x precedes y.
+Bleached: It could mean either:
+
+(a1) Given any X x, there is some X y, such that y Y's x
+
+or
+
+(a2) there is some X x such that, for any X y, x Y's y.
+Chars: 172 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :(),,(),,.
+
+--- Pattern 29 ---
+Original: (a1) says that any given event has a predecessor.
+Bleached: (a1) says that any given X has a Y.
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 30 ---
+Original: (a2) says that there is some event that is the predecessor of every event.
+Bleached: (a2) X's that there is some Y that is the Z of every Y.
+Chars: 74 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 31 ---
+Original: (a1) does not entail that
+
+(b) there is some event that is the predecessor of every event.
+Bleached: (a1) does not X that
+
+(b) there is some Y that is the Z of every Y.
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()().
+
+--- Pattern 32 ---
+Original: Any given integer has a predecessor.
+Bleached: Any given X has a Y.
+Chars: 36 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 33 ---
+Original: Given only that any given integer has a predecessor, it doesn’t follow that some one integer precedes every other—nor is it the case.
+Bleached: Given only that any given A has a B, it doesn't follow that some one A C-s every other—nor is it the case.
+Chars: 133 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—.
+
+--- Pattern 34 ---
+Original: Similarly, given only that any given event has a predecessor, it doesn’t follow that some one event precedes every other.
+Bleached: Similarly, given only that any given A has a B, it doesn't follow that some one A C's every other.
+Chars: 121 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 35 ---
+Original: So (a) fails if (a) is taken to have (a1) for its meaning, and AG1 must therefore be assumed to have (a2) for its meaning.
+Bleached: So (a) X's if (a) is Y-ed to have (a1) for its meaning, and AG1 must therefore be Z-ed to have (a2) for its meaning.
+Chars: 122 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()()(),().
+
+--- Pattern 36 ---
+Original: But (a2) and (b) are the very same statement.
+Bleached: But (a2) and (b) are the very same X.
+Chars: 45 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ()().
+
+--- Pattern 37 ---
+Original: So Aquinas has simply assumed that there was a first event, and he thus hasn’t established it at all.
+Bleached: So A has simply B-ed that there was a first C, and he thus hasn't D-ed it at all.
+Chars: 101 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 38 ---
+Original: But supposing, if only for argument’s sake, that there was a first event, it doesn’t follow, at least not for any obvious reason, that it was an act of God.
+Bleached: But X-ing, if only for Y's Z, that there was a first A, it doesn't B, at least not for any C D, that it was an E of F.
+Chars: 156 | Tokens: 30 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,,,.
+
+--- Pattern 39 ---
+Original: Why did I hedge with the phrase “at least for any obvious reason”?
+Bleached: Why did I X with the Y "at least for any Z Y"?
+Chars: 66 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 40 ---
+Original: Because it may be that, if there was a first event, there is a God.
+Bleached: Because it may be that, if there was a first X, there is a God.
+Chars: 67 | Tokens: 15 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 41 ---
+Original: (I personally do not know this to be false.) It may be that atheists cannot, without being guilty of inconsistency, believe in a first event (such as the Big Bang).
+Bleached: (I A do not B this to be C.) It may be that D's cannot, without being E of F, G in a H I (such as the J K).
+Chars: 164 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.),,().
+
+--- Pattern 42 ---
+Original: But even if this is true, it cannot be taken for granted; it must be demonstrated.
+Bleached: But even if this is A, it cannot be B for C; it must be D-ed.
+Chars: 82 | Tokens: 16 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,;.
+
+--- Pattern 43 ---
+Original: And Aquinas hasn’t demonstrated it.
+Bleached: And F hasn't X-ed it.
+Chars: 35 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 44 ---
+Original: Aquinas gave another, similarly flawed argument for God’s existence:
+
+(AG2) There can’t be comparatives unless there are absolutes.
+Bleached: X gave Y, Z W-ed X for Y's X:
+
+(AG2) There can't be X-s unless there are Y-s.
+Chars: 133 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:().
+
+--- Pattern 45 ---
+Original: I’m wealthier than you if I’m more like some absolutely wealthy entity than you are.
+Bleached: I'm X-er than you if I'm more like some absolutely X entity than you are.
+Chars: 84 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 46 ---
+Original: I’m better than you if I’m more like some absolutely good entity than you are.
+Bleached: I'm X than you if I'm more like some absolutely Y Z than you are.
+Chars: 78 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 47 ---
+Original: Some things are better than others.
+Bleached: Some X's are Y-er than Z's.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 48 ---
+Original: Therefore, some things are more like some absolutely good thing than others.
+Bleached: Therefore, some X's are more like some absolutely Y X than others.
+Chars: 76 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 49 ---
+Original: Therefore, there is some absolutely good thing.
+Bleached: Therefore, there is some absolutely X Y.
+Chars: 47 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 50 ---
+Original: In other words, there is a God.
+Bleached: In other words, there is a X.
+Chars: 31 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 51 ---
+Original: AG2 is a failure.
+Bleached: X is a Y.
+Chars: 17 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 52 ---
+Original: If Smith’s complexion is better than Brown’s, then
+
+(i) Smith’s complexion is more like that of a person with a perfect complexion than Brown’s.
+Bleached: If A's B is C than D's, then
+
+(i) A's B is more like that of a F with a E B than D's.
+Chars: 146 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,().
+
+--- Pattern 53 ---
+Original: But what follows is not that
+
+(ii) somebody has a perfect complexion, and Smith’s complexion is more like that person’s complexion than Brown’s,
+
+What actually follows from (i) is that:
+
+(iii) were there to be a person with a perfect complexion, then, other things being equal, Smith’s complexion would be more like that person’s complexion than Brown’s.
+Bleached: But what follows is not that
+
+(ii) somebody has a perfect X, and Y's X is more like that person's X than Z's,
+
+What actually follows from (i) is that:
+
+(iii) were there to be a person with a perfect X, then, other things being equal, Y's X would be more like that person's X than Z's.
+Chars: 360 | Tokens: 57 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: (),,():(),,,.
+
+--- Pattern 54 ---
+Original: Similarly, given only that:
+
+(#) Smith’s condition is more like of that some perfect entity’s than Brown’s,
+
+what follows isn’t that
+
+(##) there exists some maximally good entity whose condition Smith’s resembles more than Brown’s 
+
+and is instead that:
+
+(###) were there to be some maximally good entity, then, other things being equal, Smith’s condition would be more like that entity’s condition than Brown’s.
+Bleached: Similarly, given only that:
+
+(#) X's Y is more like of that some Z W's than V's,
+
+what follows isn't that
+
+(##) there exists some maximally A W whose Y X's resembles more than V's 
+
+and is instead that:
+
+(###) were there to be some maximally A W, then, other things being equal, X's Y would be more like that W's Y than V's.
+Chars: 422 | Tokens: 64 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:(),():(),,,.
+
+--- Pattern 55 ---
+Original: (iii) doesn’t entail that anyone’s complexion is perfect, and (###) doesn’t entail that anything’s condition is perfect.
+Bleached: (iii) doesn't entail that anyone's X is Y, and (###) doesn't entail that anything's Z is Y.
+Chars: 120 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),().
+
+--- Pattern 56 ---
+Original: Contrary to what Aquinas believes, there don’t have to be absolutes for there to be comparatives.
+Bleached: Contrary to what A believes, there don't have to be B's for there to be C's.
+Chars: 97 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 57 ---
+Original: Although (#) is ambiguous, it isn’t ambiguous in the same way as:
+
+(JB) Jerry is at the bank.
+Bleached: Although (#) is X, it isn't X in the same Y as:
+
+(JB) Z is at the W.
+Chars: 95 | Tokens: 18 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: (),:().
+
+--- Pattern 58 ---
+Original: JB is ambiguous because one of its constituents has two different meanings.
+Bleached: JB is E because one of its F's has two different G's.
+Chars: 75 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 59 ---
+Original: In other words, it’s lexically ambiguous.
+Bleached: In other words, it's Y Z.
+Chars: 41 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 60 ---
+Original: By contrast, (#) is ambiguous not because it contains an ambiguous constituent, but because there are two different ways of parsing it.
+Bleached: By contrast, (#) is X not because it Y-s an X Z, but because there are two different W-s of X-ing it.
+Chars: 135 | Tokens: 22 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,(),.
+
+--- Pattern 61 ---
+Original: The same is true of (a).
+Bleached: The X is Y of (a).
+Chars: 24 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 62 ---
+Original: Thus, (#) and (a) are syntactically ambiguous.
+Bleached: Thus, (#) and (a) are X-ly Y.
+Chars: 46 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,()().
+
+--- Pattern 63 ---
+Original: An expression is syntactically ambiguous iff it can be parsed in more than one way.
+Bleached: An A is B C iff it can be D-ed in more than one E.
+Chars: 83 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 64 ---
+Original: (An expression can be both syntactically and lexically ambiguous (for example, “some banks are more like some maximally beautiful bank than others”).
+Bleached: (An A can be both B-ly and C-ly D (for E, "some F's are more like some G-ly H F than I").
+Chars: 149 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ((,).
+
+--- Pattern 65 ---
+Original: Pre-modern philosophers, such as Aquinas, were only dimly aware of the phenomenon of syntactic ambiguity.
+Bleached: A-B C, such as D, were only E-ly F of the G of H I.
+Chars: 105 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,.
+
+--- Pattern 66 ---
+Original: Hence the problems with AG2.
+Bleached: Hence the X's with Y.
+Chars: 28 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 67 ---
+Original: Let’s take stock.
+Bleached: Let's X Y.
+Chars: 17 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 68 ---
+Original: In the course of studying these two arguments, we’ve learned a lot about sentencestructure and about argumentation in general.
+Bleached: In the A of B-ing these two C's, we've D-ed a lot about E and about F in general.
+Chars: 126 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 69 ---
+Original: But we didn’t learn anything about God or religion.
+Bleached: But we didn't X anything about Y or Z.
+Chars: 51 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 70 ---
+Original: “But we learned that Aquinas failed to prove God’s existence.” Yes.
+Bleached: "But we X-ed that Y Z-ed to V W's X-ance." Yes.
+Chars: 67 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 71 ---
+Original: But his arguments don’t fail in a way that gives us any indication as to whether God does or does not exist.
+Bleached: But his X's don't Y in a way that Z's us any W as to whether God does or does not exist.
+Chars: 108 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 72 ---
+Original: 1.1 The futility of trying to provide rational arguments for or against 	religious belief
+Religion is not science or logic, and to the extent that one’s beliefs are based on rational consideration of the relevant evidence, one is a person of science, not of religion.
+Bleached: 1.1 The X of Y-ing to Z W A's for or against B C
+
+D is not E or F, and to the G that one's H's are I-ed on W J of the K L, one is a M of E, not of D.
+Chars: 268 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,,,.
+
+--- Pattern 73 ---
+Original: A story will clarify this.
+Bleached: A X will Y this.
+Chars: 26 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 74 ---
+Original: Smith hasn’t a religious bone in his body.
+Bleached: A hasn't a B C in his D.
+Chars: 42 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 75 ---
+Original: But he’s an open thinker and doesn’t want to assume, without first exercising due diligence, either that God exists or that God does not exist.
+Bleached: But he's an X Y and doesn't Z to A, without first B-ing C D, either that E F-s or that E does not F.
+Chars: 143 | Tokens: 25 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 76 ---
+Original: On Monday, Smith uncovers what he thinks is evidence of God’s existence.
+Bleached: On A, B C-s what he D-s is E of F's G.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 77 ---
+Original: But on Tuesday, he finds out that this evidence was manufactured by a religious person and is therefore bogus.
+Bleached: But on X, he Y's out that this Z was W-ed by a A B and is therefore C.
+Chars: 110 | Tokens: 19 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 78 ---
+Original: Smith doesn’t conclude that God doesn’t exist.
+Bleached: X doesn't Y that Z doesn't W.
+Chars: 46 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 79 ---
+Original: Being a scientifically minded person, he rightly concludes only that he doesn’t yet have reason to believe otherwise.
+Bleached: Being a X-ly Y-ed Z, he W-ly V-s only that he doesn't yet have U to T otherwise.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 80 ---
+Original: On Wednesday, he uncovers more apparent evidence of God’s existence.
+Bleached: On A, he B's more C D of E's F.
+Chars: 68 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 81 ---
+Original: Since he finds it convincing, he begins to warm to the idea that God exists.
+Bleached: Since he X's it Y-ing, he Z's to W to the V that G U's.
+Chars: 76 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 82 ---
+Original: But, being a rigorous and cautious thinker, he makes sure that his zeal for that hypothesis never outruns the evidence he has for it.
+Bleached: But, being a A and B C, he D E that his F for that G never H the I he has for it.
+Chars: 133 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 83 ---
+Original: And if new evidence turns up, he’ll modify his views accordingly.
+Bleached: And if new Z turns up, he'll Y his X accordingly.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 84 ---
+Original: Smith’s belief in God goes only as far as the available evidence permits.
+Bleached: A's B in C goes only as far as the available D permits.
+Chars: 73 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 85 ---
+Original: For this reason, even if Smith does finally arrive at the belief that God exists, he isn’t religious.
+Bleached: For this A, even if B does finally C at the D that E F, he isn't G.
+Chars: 101 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 86 ---
+Original: As long as his belief is contingent on its consistency with future findings, he’s prepared to reject it, which is the mark of a scientific, not a religious, person.
+Bleached: As long as his A is B on its C with future D's, he's E to F it, which is the G of a H, not a I, J.
+Chars: 164 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 87 ---
+Original: Of course, one can be both religious and scientific.
+Bleached: Of course, one can be both A and B.
+Chars: 52 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 88 ---
+Original: Newton was very religious.
+Bleached: X was very Y.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 89 ---
+Original: But to the extent that one’s attitude towards a position is characterized by the just-described attitude of deference to future findings, one is not a religious person.
+Bleached: But to the extent that one's X towards a Y is Z-ed by the just-W-ed X of V to U T-s, one is not a R Q.
+Chars: 168 | Tokens: 27 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 90 ---
+Original: Had Newton’s beliefs about God been as evidence-based as his beliefs about physics, he would not have been a religious person.
+Bleached: Had A's B's about C been as D-based as his B's about E, he would not have been a F G.
+Chars: 126 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 91 ---
+Original: A person who believes in God isn’t religious if that person’s acceptance of that position is contingent on its being consistent with the data.
+Bleached: A F who X's in G isn't R if that F's Y of that Z is W on its being V with the O.
+Chars: 142 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 92 ---
+Original: This is why it’s silly to try to undermine religious belief by arguing that it doesn’t square with the facts.
+Bleached: This is why it's E to X to Y Z A by X-ing that it doesn't B with the C's.
+Chars: 109 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 93 ---
+Original: What distinguishes religious from scientific belief is precisely that the former, unlike the latter, isn’t subject to one’s views as to what inferences the available data warrants.
+Bleached: What X's Y from Z A is B that the C, D the E, isn't F to G's H as to what I the J K L.
+Chars: 180 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 94 ---
+Original: Religious people know this.
+Bleached: A people B this.
+Chars: 27 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 95 ---
+Original: That’s why they are unmoved by anti-religious arguments.
+Bleached: That's why they are X-ed by Y-Z arguments.
+Chars: 56 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 96 ---
+Original: And they’re right to be unmoved.
+Bleached: And they're right to be X-ed.
+Chars: 32 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 97 ---
+Original: To the extent that it’s a religious attitude they wish to hold onto, it would be incoherent of them to regard recalcitrant data as giving them a reason to jettison that attitude, since a religious attitude is precisely one that isn’t marked by the subservience to data and logic characteristic of the scientific view.
+Bleached: To the extent that it's a A B they wish to hold onto, it would be C of them to regard D data as giving them a reason to E that B, since a A B is precisely one that isn't F-ed by the G to data and logic H of the I view.
+Chars: 317 | Tokens: 54 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 98 ---
+Original: 1.2 My biases
+I am not a religious person and I don’t believe in God.
+Bleached: 1.2 My X
+I am not a Y Z and I don't W in A.
+Chars: 70 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 99 ---
+Original: (Or so I say—but see Section 1.4.) I say this not because I have any special insight into these matters.
+Bleached: (Or so I X—but see Y 1.4.) I X this not because I have any Z A into these B's.
+Chars: 104 | Tokens: 20 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: (—..).
+
+--- Pattern 100 ---
+Original: I do not.
+Bleached: I do not.
+Chars: 9 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 101 ---
+Original: My views on these matters are no more authoritative than anyone else’s.
+Bleached: My X on these Y are no more Z than anyone else's.
+Chars: 71 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 102 ---
+Original: I am stating these facts about myself only so that the reader can know that, because of them, what I say about religion is biased in favor of an anti-religious perspective.
+Bleached: I am X-ing these Y's about myself only so that the Z can W that, because of them, what I V about A is B-ed in C of an D-A E.
+Chars: 172 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 103 ---
+Original: That said, this chapter won’t target religious belief.
+Bleached: That said, this X won't Y Z A.
+Chars: 54 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 104 ---
+Original: I will put forth some arguments that might appear to have anti-religious consequences.
+Bleached: I will X forth some Y that might Z to have W-E V.
+Chars: 86 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 105 ---
+Original: But, though I obviously accept those arguments, what they prove, in my opinion, doesn’t really have anything to do with religion.
+Bleached: But, though I obviously X those Y's, what they Z, in my W, doesn't really have anything to do with Ω.
+Chars: 129 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,,.
+
+--- Pattern 106 ---
+Original: It has to do with certain attempts to doctrinalize religious sentiment—that is, with attempts to identify religious sentiment with acceptance of well defined contentions as to how the world is.
+Bleached: It has to do with certain A's to B C D—that is, with A's to E C D with F of well G'd H's as to how the I is.
+Chars: 193 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —,.
+
+--- Pattern 107 ---
+Original: Since, as we saw in Section 1.1, religious sentiment necessarily outstrips any logical or evidential reasons one has for accepting any given contention, the logical and evidential demerits of such doctrinalizations are irrelevant to whether the religious outlook is, when evaluated on its own terms, a viable one.
+Bleached: Since, as we saw in Section 1.1, A B necessarily C-s any D or E F-s one has for G-ing any given H, the D and E I-s of such J-s are K to whether the A L is, when M-ed on its own N-s, a O one.
+Chars: 313 | Tokens: 48 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.,,,,.
+
+--- Pattern 108 ---
+Original: So far as one accepts the yardsticks relative to which such doctrinalizations fall short, one isn’t religious.
+Bleached: So far as one X's the Y's Z to which such A-ations B short, one isn't C.
+Chars: 110 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 109 ---
+Original: After all, the religious mentality is a rejection of those yardsticks.
+Bleached: After all, the A B is a C of those D's.
+Chars: 70 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 110 ---
+Original: (To be sure, there are religious people who are utterly rational and who are superlative scientists, businessmen, and so on.
+Bleached: (To be A, there are B C who are D E and who are F G, H, and so on.
+Chars: 124 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,,.
+
+--- Pattern 111 ---
+Original: But to the limited extent to which a given person’s mental life is to be understood in terms of his or her having a religious outlook, that individual’s psychological situation is not to be understood in terms of his or her ratiocinative abilities, however active those abilities may be outside of religious contexts.) So in attempting to invalidate religion by showing that it fails relative to those yardsticks, one is guilty of “begging the question”—that is, of assuming the truth of the very thing one is trying to prove.
+Bleached: But to the limited extent to which a given person's mental life is to be understood in terms of his or her having a religious outlook, that individual's psychological situation is not to be understood in terms of his or her X-ive abilities, however active those abilities may be outside of religious contexts.) So in attempting to Y religion by showing that it Z-s relative to those W-s, one is guilty of "begging the question"—that is, of assuming the truth of the very thing one is trying to prove.
+Chars: 526 | Tokens: 89 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.),—,.
+
+--- Pattern 112 ---
+Original: Further, given that there is at least one component of religious sentiment to which any given doctrinalization of it ipso facto fails to do justice, the contentions that are associated with acceptance of a given religion are really just foils of some kind—that is, they are stand-ins for some attitude or conviction that, for some reason, isn’t making an appearance in propria persona.
+Bleached: Further, given that there is at least one X of Y Z to which any given W-ation of it ipso facto fails to do V, the A's that are associated with B of a given C are really just D's of some kind—that is, they are E-ins for some F or G that, for some reason, isn't making an H in propria persona.
+Chars: 385 | Tokens: 63 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,—,-,,.
+
+--- Pattern 113 ---
+Original: Instead of asking “how can I disprove the contentions put forth by religious folk?”, those who aspire to undermine religious sentiment should ask, “what do such contentions represent?
+Bleached: Instead of X-ing "how can I Y the Z-s put forth by W A?", those who B to C W D should ask, "what do such Z-s E?"
+Chars: 183 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?,,?
+
+--- Pattern 114 ---
+Original: What are the sentiments underlying acceptance them?”
+To be sure, the integrity of a given religion may depend up to a point on the integrity of the doctrines associated with it.
+Bleached: What are the A's B C them?"
+To be sure, the D of a given E may F up to a G on the D of the H's I with it.
+Chars: 178 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?,.
+
+--- Pattern 115 ---
+Original: Acceptance of a religion typically involves acceptance of well-defined contentions (concerning morality, the structure of the universe, etc.).
+Bleached: A of a B typically involves A of well-C D (concerning E, the F of the G, etc.).
+Chars: 142 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -(,,.).
+
+--- Pattern 116 ---
+Original: That said, those who attack religion on scientific or logical grounds—on the grounds that what Darwin or Einstein said is inconsistent with this or that religious contention— are misguidedly trying to understand religious sentiment in epistemological terms, when in fact it is to be understood in psychoanalytic terms.
+Bleached: That said, those who X religion on Y or Z grounds—on the grounds that what A or B said is C with this or that D E— are F-ly G-ing to H religious I in J terms, when in fact it is to be K in L terms.
+Chars: 318 | Tokens: 48 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,——,.
+
+--- Pattern 117 ---
+Original: And this, I believe, is part of the reason why the philosophy of religion tends to be so sterile.
+Bleached: And this, I believe, is part of the A why the B of C tends to be so D.
+Chars: 97 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 118 ---
+Original: 1.3 The futility of attempts to liberalize religious belief
+A friend of mine who says that she believes in God recently told me that, in her view, “God is love.” When I asked her to explain what she meant, she said that, if there is love in the world, there is, for that very reason, a God.
+Bleached: 1.3 The X of Y's to Z A B
+A C of D who E's that she F's in G H I me that, in her J, "G is K." When I L'd her to M what she N, she O that, if there is K in the P, there is, for that Q R, a G.
+Chars: 291 | Tokens: 57 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: .,,.,,,,,.
+
+--- Pattern 119 ---
+Original: God isn’t some hyper-person, she explained.
+Bleached: Y isn't some Z-F, she X-ed.
+Chars: 43 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 120 ---
+Original: He or She or It is nothing other than the fact that people love other people.
+Bleached: He or She or It is nothing other than the X that Y Z other Y.
+Chars: 77 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 121 ---
+Original: This is all very well.
+Bleached: This is all very X.
+Chars: 22 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 122 ---
+Original: But it isn’t the view of somebody who believes in God.
+Bleached: But it isn't the X of Y who Z's in G.
+Chars: 54 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 123 ---
+Original: Freud was an atheist, and he certainly believed that people sometimes love other people.
+Bleached: A was an B, and he certainly C-ed that D sometimes E other D.
+Chars: 88 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 124 ---
+Original: In fact, he said that “libido” is one of the basic forces of human psychology.
+Bleached: In fact, he said that "X" is one of the Y Z of W V.
+Chars: 78 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 125 ---
+Original: Many philosophers have advocated similar positions, saying that God is nothing other than logic, or truth, or reason.
+Bleached: Many A's have B-ed similar C's, saying that D is nothing other than E, or F, or G.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 126 ---
+Original: I admire the rationalist sensibility underlying these views.
+Bleached: I X the Y Z underlying these W's.
+Chars: 60 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 127 ---
+Original: But they’re not the views of a religious person, since there is no shortage of dedicated atheists who believe in logic—that is, who believe that some statements entail some other statements.
+Bleached: But they're not the X's of a Y Z, since there is no W of V U's who T in S—that is, who T that some R's Q some other R's.
+Chars: 190 | Tokens: 31 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,—,.
+
+--- Pattern 128 ---
+Original: I don’t know whether there is a God.
+Bleached: I don't X whether there is a Y.
+Chars: 36 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 129 ---
+Original: I don’t even know what it means to say that there is a God.
+Bleached: I don't even X what it Y's to Z that there is a G.
+Chars: 59 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 130 ---
+Original: But I know what it doesn’t mean.
+Bleached: But I X what it doesn't Y.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 131 ---
+Original: It doesn’t mean that some inferences go through; it doesn’t mean that some peo- 
+ple love some people.
+Bleached: It doesn't mean that some X go through; it doesn't mean that some Y love some Y.
+Chars: 103 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;-.
+
+--- Pattern 132 ---
+Original: So God isn’t truth, logic, or love—even though, if God exists, that entity, whatever it is, may well be maximally logical, perceptive, and caring.
+Bleached: So A isn't B, C, or D—even though, if A E's, that F, whatever it is, may well be G-ly H, I, and J.
+Chars: 146 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,—,,,,,,.
+
+--- Pattern 133 ---
+Original: Attempts to identify God with reason or truth or love are dishonest and incoherent, and so is every other attempt to show that religious sentiment is compatible with 21st century intellectualism.
+Bleached: A-s to B God with C or D or E are F and G, and so is every other A to H that I J is K with 21st L M.
+Chars: 195 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 134 ---
+Original: People should cop to what they really believe.
+Bleached: A should B to what they really C.
+Chars: 46 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 135 ---
+Original: If your belief in God extends no further than your belief in logic or libido, then you do not believe in God.
+Bleached: If your A in B C's no further than your A in D or E, then you do not F in B.
+Chars: 109 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 136 ---
+Original: 1.3.1 “Never explain, never complain”
+Given that religious belief is of its very nature free of the tentativeness and evidence-dependence of scientific belief, religious people have no obligation to defend their views.
+Bleached: 1.3.1 "Never X, never Y"
+Given that Z A is of its very B free of the C and D-dependence of E A, Z F have no G to H their I.
+Chars: 219 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..,-,.
+
+--- Pattern 137 ---
+Original: Many religious people have done so, of course.
+Bleached: Many A B have C so, of course.
+Chars: 46 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 138 ---
+Original: Many religious people are also scientists, logicians, and philosophers, who, like all other members of those professions, enjoy finding support for their positions.
+Bleached: Many R F are also S's, L's, and P's, who, like all other M's of those Q's, X finding T for their U's.
+Chars: 164 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 139 ---
+Original: Indeed, some very great philosophers and scientists (e.g., Kant, Newton) have been devoutly religious, and some (e.g., Augustine, Aquinas) have themselves been important religious figures.
+Bleached: Indeed, some very A B's and C's (e.g., D, E) have been F G, and some (e.g., H, I) have themselves been A G J's.
+Chars: 188 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,(..,,),(..,,).
+
+--- Pattern 140 ---
+Original: But to the extent that one is religious and that one’s views are religious views, one is not only not required to defend one’s views, but is actually required to hold that they need no defense.
+Bleached: But to the extent that one is A and that one's B's are A B's, one is not only not C-ed to D one's B's, but is actually C-ed to E that they F no G.
+Chars: 193 | Tokens: 36 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 141 ---
+Original: This is because a view that is only as good as the logic and evidence underlying it is ipso facto a non-religious view.
+Bleached: This is because a X that is only as Y as the Z and W X-ing it is ipso facto a non-V X.
+Chars: 119 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 142 ---
+Original: Rockefeller said: “never explain, never complain.” In defending a view that one holds, one is conceding that it needs a defense and therefore that it is to be presumed false until proven correct.
+Bleached: X said: "never Y, never Z." In W-ing a Q that one R's, one is T-ing that it U's a V and therefore that it is to be S'd M until N'd P.
+Chars: 195 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.,.
+
+--- Pattern 143 ---
+Original: When one complains, one is saying that one is powerless, and therefore unworthy, since it is by acting, not whining, that the powerful express themselves.
+Bleached: When one X's, one is Y-ing that one is Z, and therefore W, since it is by V-ing, not U-ing, that the T S themselves.
+Chars: 154 | Tokens: 25 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,,,.
+
+--- Pattern 144 ---
+Original: Obviously there are contexts where Rockefeller’s dictum is inappropriate.
+Bleached: Obviously there are X's where Y's Z is W.
+Chars: 73 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 145 ---
+Original: A doctor or lawyer should surely explain, and a person who is abused should surely complain.
+Bleached: A X or Y should surely Z, and a F who is W-ed should surely V.
+Chars: 92 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 146 ---
+Original: But that dictum does hold where religious belief is concerned.
+Bleached: But that X does Y where Z W is X-ed.
+Chars: 62 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 147 ---
+Original: Defending a religious view is the same as explaining why one holds it, and explaining why one holds it is almost the same as apologizing for it.
+Bleached: A-ing a B-ous C is the same as D-ing why one E's it, and D-ing why one E's it is almost the same as F-ing for it.
+Chars: 144 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 148 ---
+Original: So, if you are a religious person, you are entitled to explain your beliefs, if you wish to do so.
+Bleached: So, if you are a X person, you are Y-ed to Z your A's, if you B to do so.
+Chars: 98 | Tokens: 20 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 149 ---
+Original: But know that, in doing so, you are conceding that they are only as good as the arguments for them.
+Bleached: But X that, in Y-ing so, you are Z-ing that they are only as W as the V's for them.
+Chars: 99 | Tokens: 20 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 150 ---
+Original: And in making that concession, you are saying, however unwittingly, that there but for the grace of the mercurial and unpredictable winds of evidential change go they.
+Bleached: And in X-ing that Y, you are Z-ing, however W-ly, that there but for the X of the A and B C's of D E go they.
+Chars: 167 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 151 ---
+Original: 1.4 A conjecture
+In his book Compulsion and Doubt, Wilhelm Stekel (1868–1940), a psychoanalyst with a gargantuan intellect, said that many self-described atheists are actually crypto-believers.
+Bleached: 1.4 A X
+
+In his Y Z and W, X X (1868–1940), a X with a X X, Z-ed that many X-ed X's are actually X-X's.
+Chars: 194 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,(),,--.
+
+--- Pattern 152 ---
+Original: I suspect that, when some philosophers speak of the logical or ethical standards to which judgments and acts ought to conform, they are at some level speaking about God.
+Bleached: I A that, when some B C of the D or E F to which G and H I to J, they are at some K L about M.
+Chars: 169 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 153 ---
+Original: Acceptance of such rarefied and depersonalized arbiters and right and wrong is sometimes, I would conjecture, a distorted and oblique expression of a belief in God.
+Bleached: A of such B-ed and C-ed D and E and F is sometimes, I would G, a H-ed and I J of a K in L.
+Chars: 164 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 154 ---
+Original: 1.5 Is there a relationship between the degree to which one is religious and 	the extent to which one is intelligent?
+Bleached: 1.5 Is there a X between the Y to which one is Z and the W to which one is A?
+Chars: 117 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .?
+
+--- Pattern 155 ---
+Original: No.
+Bleached: No.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 156 ---
+Original: Some of the most intelligent people I know, or know of, are religious and some of the least intelligent are non-religious.
+Bleached: Some of the most X people I know, or know of, are Y and some of the least X are non-Y.
+Chars: 122 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 157 ---
+Original: (I’ve known many people who were decidedly unintelligent who, in an effort to convince themselves and others of their intelligence, became rabidly anti-religion.) One of the most brilliant philosophers alive is Michael Dummett.
+Bleached: (I've known many F's who were decidedly Ω8 who, in an effort to X themselves and others of their Y, became Z-ly anti-R.) One of the most Ω8 P's alive is Michael Dummett.
+Chars: 227 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,-.).
+
+--- Pattern 158 ---
+Original: Even though he’s devoutly religious, you wouldn’t know it from his work.
+Bleached: Even though he's A-ly B, you wouldn't C it from his D.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 159 ---
+Original: I myself didn’t know it until after I’d read most of his works; and I found it out, not by reading one of his books, but by reading an interview with him.
+Bleached: I myself didn't A it until after I'd B most of his C's; and I D it out, not by E-ing one of his F's, but by G-ing an H with him.
+Chars: 154 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,.
+
+--- Pattern 160 ---
+Original: The reason why people of such intelligence may believe in religious doctrines that are insufficiently supported by facts and logic is that religious belief isn’t about facts or logic.
+Bleached: The A why B of such C may D in E F that are G H by I and J is that E K isn't about I or J.
+Chars: 183 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 161 ---
+Original: It’s independent of them and isn’t
+answerable to them.
+Bleached: It's A of them and isn't B to them.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 162 ---
+Original: The part of the mind that mediates religious sentiment is only in very imperfect communication with the parts that mediate rational thought; and religious sentiment being what it is, it is right that this is so, at least after a fashion.
+Bleached: The A of the B that C-s D E is only in very F G with the A-s that C H I; and D E being what it is, it is J that this is so, at K after a L.
+Chars: 237 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,.
+
+--- Pattern 163 ---
+Original: 1.6 The one thing that philosophy has to say about religion
+There is only one qualification to my previous statement that philosophy has nothing to teach us about religion.
+Bleached: 1.6 The one A that B has to C about D
+There is only one E to my F G that B has H to I us about D.
+Chars: 173 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 164 ---
+Original: Plato put forth a very clever argument to the effect that, so far as there are moral truths, their basis lies in the structures of properties, and not in God’s decrees.
+Bleached: A B forth a very C D to the E that, so far as there are F G's, their H lies in the I's of J's, and not in K's L's.
+Chars: 168 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 165 ---
+Original: That argument is known as the “Euthyphro argument,” since it was first put forth in Plato’s dialogue the Euthyphro.
+Bleached: That A is B as the "C A," since it was first D forth in E's F the C.
+Chars: 115 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 166 ---
+Original: I consider that argument to be cogent.
+Bleached: I X that Y to be Z.
+Chars: 38 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 167 ---
+Original: Anthony Flew, a contemporary philosopher, said that there is an easy and reliable way to determine whether a person has an aptitude for philosophy: she does if she understands the Euthyphro Argument; she doesn’t if she doesn’t.
+Bleached: A B, a C D, E that there is an F and G H to I whether a J has an K for L: she M if she N the O P; she doesn't if she doesn't.
+Chars: 227 | Tokens: 37 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,:;.
+
+--- Pattern 168 ---
+Original: Having had thousands of students, and having gone over the Euthyphro argument many times in class, I agree with Flew.
+Bleached: Having had thousands of A's, and having B over the C D many E's in F, I G with H.
+Chars: 117 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 169 ---
+Original: There is an easy and reliable way to determine whether a person is religious.
+Bleached: There is an A and B way to C whether a D is E.
+Chars: 77 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 170 ---
+Original: (But this test only works for people who have studied the Euthyphro argument and who also understand it.) If she agrees with the conclusion of the Euthyphro argument, she’s not religious; and if she disagrees with it, she is.
+Bleached: (But this A only B's for C who have D-ed the E F and who also G it.) If she H's with the I of the E F, she's not J; and if she K's with it, she is.
+Chars: 225 | Tokens: 39 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: (.),;,.
+
+--- Pattern 171 ---
+Original: Let us now discuss that argument.
+Bleached: Let us now X that Y.
+Chars: 33 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 172 ---
+Original: 2.0 The Euthyphro dilemma
+Some acts are good and others are bad.
+Bleached: 2.0 The X Y
+Some Z are W and others are V.
+Chars: 65 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 173 ---
+Original: Giving money to the needy is good and killing babies is bad.
+Bleached: X-ing Y to the Z is W and V-ing A's is B.
+Chars: 60 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 174 ---
+Original: But what makes good acts good, and what makes bad acts bad?
+Bleached: But what makes X acts X, and what makes Y acts Y?
+Chars: 59 | Tokens: 12 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,?
+
+--- Pattern 175 ---
+Original: Here is one answer:
+
+(G) If an act is good, that is because God likes it.
+Bleached: Here is one Z:
+
+(G) If an Y is W, that is because V X's it.
+Chars: 75 | Tokens: 16 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :(),.
+
+--- Pattern 176 ---
+Original: In other words, God’s liking it is what causes it to be good.
+Bleached: In other words, X's Y-ing it is what Z's it to be W.
+Chars: 61 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 177 ---
+Original: If an act is bad, God’s disliking it is what causes it to be bad.
+Bleached: If an A is B, C's D-ing it is what E-s it to be B.
+Chars: 65 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 178 ---
+Original: Until God likes or dislikes an act, it remains neutral.
+Bleached: Until A B's or C's an D, it E's F.
+Chars: 55 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 179 ---
+Original: Basically, to be good is to be liked by God, and to be bad is to be disliked by God.
+Bleached: Basically, to be A is to be B-ed by C, and to be D is to be E-ed by C.
+Chars: 84 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 180 ---
+Original: Of course, G assumes that God exists.
+Bleached: Of course, G X's that Y Z's.
+Chars: 37 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 181 ---
+Original: For argument’s sake, let’s grant that assumption.
+Bleached: For X's sake, let's Y that Z.
+Chars: 49 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 182 ---
+Original: Is G correct?
+Bleached: Is G X?
+Chars: 13 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 183 ---
+Original: No.
+Bleached: No.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 184 ---
+Original: What if God liked rape?
+Bleached: What if X Y-ed Z?
+Chars: 23 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 185 ---
+Original: Would that make it good?
+Bleached: Would that X it Y?
+Chars: 24 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 186 ---
+Original: No.
+Bleached: Z.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 187 ---
+Original: Rape would be bad even if God liked it, and God would be bad for liking it.
+Bleached: X would be Y even if Z X-ed it, and Z would be Y for X-ing it.
+Chars: 75 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 188 ---
+Original: What if God disliked acts of kindness?
+Bleached: What if X Y-ed Z's of W?
+Chars: 38 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 189 ---
+Original: Would that make such acts bad?
+Bleached: Would that X such Y's Z?
+Chars: 30 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 190 ---
+Original: No.
+Bleached: No.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 191 ---
+Original: They would still be good, and God would be bad for disliking them.
+Bleached: They would still be A, and B would be C for D-ing them.
+Chars: 66 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 192 ---
+Original: So G is false.
+Bleached: So G is P.
+Chars: 14 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 193 ---
+Original: But one might object to this argument:
+
+(CG) There’s no way that God would like rape and no way he wouldn’t like acts of kindness.
+Bleached: But one might X to this Y:
+
+(CG) There's no Z that A would B C and no Z he wouldn't B D's of E.
+Chars: 132 | Tokens: 25 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: :().
+
+--- Pattern 194 ---
+Original: You see, God is maximally good; and it isn’t even a theoretical possibility that something maximally good should like rape or dislike acts of kindness.
+Bleached: You A, B is C D; and it isn't even a E F that something C D should G H or I J of K.
+Chars: 151 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;.
+
+--- Pattern 195 ---
+Original: Your argument therefore fails, since it presupposes that God could like rape and dislike acts of kindness.
+Bleached: Your A therefore B's, since it C's that D could E F and G H's of I.
+Chars: 106 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 196 ---
+Original: CG doesn’t work.
+Bleached: X doesn't Y.
+Chars: 16 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 197 ---
+Original: Let’s suppose, if only for argument’s sake, that God is maximally good and therefore dislikes rape and likes acts of kindness.
+Bleached: Let's A, if only for B's C, that D is E F and therefore G's H and I's J of K.
+Chars: 126 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 198 ---
+Original: Why does God dislike rape?
+Bleached: Why does X Y Z?
+Chars: 26 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 199 ---
+Original: Does he just dislike it?
+Bleached: Does he just X it?
+Chars: 24 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 200 ---
+Original: Is his dislike of it without any foundation?
+Bleached: Is his A of it without any B?
+Chars: 44 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 201 ---
+Original: No.
+Bleached: No.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 202 ---
+Original: Surely God has a good reason for disliking rape.
+Bleached: Surely X has a Y Z for V-ing W.
+Chars: 48 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 203 ---
+Original: But what could that reason be?
+Bleached: But what could that X be?
+Chars: 30 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?
+
+--- Pattern 204 ---
+Original: The answer is clear: rape is bad; rape is wrong.
+Bleached: The X is Y: Z is bad; Z is wrong.
+Chars: 48 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :;.
+
+--- Pattern 205 ---
+Original: So God’s reason for disliking rape is that it is bad and wrong.
+Bleached: So X's Y for Z-ing W is that it is V and Q.
+Chars: 63 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 206 ---
+Original: He sees the fact that rape is wrong; and, on the basis of that knowledge, he judges that rape is wrong.
+Bleached: He X's the Y that Z is W; and, on the basis of that knowledge, he judges that Z is W.
+Chars: 103 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,,.
+
+--- Pattern 207 ---
+Original: Rape is wrong.
+Bleached: A is B.
+Chars: 14 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 208 ---
+Original: God sees that.
+Bleached: Z X-s that.
+Chars: 14 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 209 ---
+Original: And God therefore dislikes rape.
+Bleached: And F therefore X's Y.
+Chars: 32 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 210 ---
+Original: So the fact that rape is wrong is what makes God dislike it.
+Bleached: So the A that B is C is what D's E F it.
+Chars: 60 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 211 ---
+Original: Therefore, it isn’t God’s dislike of rape that makes it wrong.
+Bleached: Therefore, it isn't X's Y of Z that V's it W.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 212 ---
+Original: For exactly similar reasons, the fact that kind acts are morally right is what makes God like them.
+Bleached: For exactly similar reasons, the fact that kind acts are morally right is what makes God like them.
+
+For A B reasons, the fact that C acts are D right is what makes E like them.
+Chars: 99 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 213 ---
+Original: Therefore, it isn’t God’s approval of such acts that makes them right.
+Bleached: Therefore, it isn't X's Y of such Z's that V's them W.
+Chars: 70 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 214 ---
+Original: Conclusion: Morality is independent of God’s views.
+Bleached: Conclusion: X is Y of Z's W.
+Chars: 51 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 215 ---
+Original: If, as many of us believe, God is morally perfect and intellectually infallible, then God will like all morally good acts and dislike all morally bad ones.
+Bleached: If, as many of us X, Y is Z W and X V, then Y will X all Z U X's and X all Z U X's.
+Chars: 155 | Tokens: 27 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 216 ---
+Original: But it isn’t God’s liking an act that makes it good or bad.
+Bleached: But it isn't X's Y-ing an Z that W's it A or B.
+Chars: 59 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 217 ---
+Original: That act is good or bad all by itself.
+Bleached: That X is Y or Z all by itself.
+Chars: 38 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 218 ---
+Original: Question: Could God make rape to be morally good?
+Bleached: Question: Could X make Y to be Z W?
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 219 ---
+Original: No.
+Bleached: No.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 220 ---
+Original: Even God cannot make rape be good.
+Bleached: Even A cannot make B be C.
+Chars: 34 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 221 ---
+Original: But can’t God do anything?
+Bleached: But can't X do Y?
+Chars: 26 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?
+
+--- Pattern 222 ---
+Original: So can’t he make rape morally good?
+Bleached: So can't he make A morally B?
+Chars: 35 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 223 ---
+Original: No, and the reasons are similar to those that make God unable to make a square circle.
+Bleached: No, and the X's are Y to those that Z God W to X a V U.
+Chars: 86 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 224 ---
+Original: For an elucidation and defense of this point, see Section 4.0.
+Bleached: For an X and Y of this Z, see W 4.0.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,..
+
+--- Pattern 225 ---
+Original: 2.1 Why, even if correct, the Divine Command Theory is irrelevant to what 	even maximally religious people believe
+Many a sociopathic ghoul has claimed that “God” ordered him to kill.
+Bleached: 2.1 Why, even if correct, the X Y Z is irrelevant to what 	even maximally A people believe
+Many a B C has claimed that "D" E-ed him to F.
+Chars: 184 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,,.
+
+--- Pattern 226 ---
+Original: We don’t believe such people.
+Bleached: We don't X such Y.
+Chars: 29 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 227 ---
+Original: But why not?
+Bleached: But why not?
+Chars: 12 | Tokens: 3 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?
+
+--- Pattern 228 ---
+Original: (In this context, it will be assumed for argument’s sake that we believe there to be a God and also that we believe God to be morally good.)
+One reason is that what the ghoul in question is claiming is inconsistent with our views about morality.
+Bleached: (In this Y, it will be Z-ed for W's X that we K there to be a G and also that we K G to be M-ly R.)
+One T is that what the S in U is V-ing is P with our Q's about M.
+Chars: 246 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.).
+
+--- Pattern 229 ---
+Original: “God would have to be evil to tell Hitler to do those things,” we believe.
+Bleached: "X would have to be Y to Z A to B those C," we D.
+Chars: 74 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 230 ---
+Original: “Therefore, contrary to what Hitler claimed, God didn’t tell Hitler to do those things.”
+Of course, there are often other reasons to distrust such people.
+Bleached: "Therefore, contrary to what A B-ed, C didn't D A to E those F's."
+Of course, there are often other G's to H such I.
+Chars: 155 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.,.
+
+--- Pattern 231 ---
+Original: There is independent evidence of mental illness or of political ambition or of some other factor that would explain why, even though God did not speak to him, the evil-doer in question would say otherwise.
+Bleached: There is A B of C D or of E F or of some other G that would H why, even though I did not J to him, the K-L in M would N otherwise.
+Chars: 205 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 232 ---
+Original: That said, if some otherwise utterly normal person were to tell you that God told him to blow up a school bus, you would, for that very reason, question the credibility of his claim.
+Bleached: That said, if some otherwise utterly normal X were to Y you that Z Y-ed him to W up a V U, you would, for that very reason, T the S of his R.
+Chars: 182 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 233 ---
+Original: This shows that even if God speaks to certain individuals, it isn’t because of what He told them that we believe that rape, theft, and so on, are wrong.
+Bleached: This X's that even if Y Z's to certain A's, it isn't because of what He B them that we C that D, E, and so on, are F.
+Chars: 152 | Tokens: 29 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 234 ---
+Original: If I tell people that God personally told me that x is wrong, I’ll be seen as a fraud or a madman by those who think that x is good and who therefore think that God would never condemn it, and I’ll have no effect on those who already think that x is wrong.
+Bleached: If I tell Δ that Ψ personally told me that x is Ω, I'll be Λ-ed as a Φ or a Ξ by those who think that x is Ρ and who therefore think that Ψ would never Σ it, and I'll have no Τ on those who already think that x is Ω.
+Chars: 256 | Tokens: 54 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 235 ---
+Original: If somebody claims that God said X, it is only by considering the merits of X itself that we can determine whether that claim is legitimate or not.
+Bleached: If somebody A's that B C X, it is only by D-ing the E's of X itself that we can determine whether that A is F or not.
+Chars: 147 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 236 ---
+Original: This means that our decision to accept or reject X is not based on what God says.
+Bleached: This A-s that our B to C or D X is not E-ed on what F G-s.
+Chars: 81 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 237 ---
+Original: So even if God believes that X is good and directly tells certain people this, that isn’t why we believe that X is good.
+Bleached: So even if A B's that X is C and directly D's E F this, that isn't why we B that X is C.
+Chars: 120 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 238 ---
+Original: Our views as to what is right and wrong don’t have anything to do with what God believes.
+Bleached: Our X's as to what is Y and Z don't have anything to do with what A B's.
+Chars: 89 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 239 ---
+Original: So even if it’s correct, the Divine Command Theory can do nothing in the way of legitimating existing religious practices or beliefs.
+Bleached: So even if it's A, the B C D can do E in the F of G-ing H I J or K.
+Chars: 133 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 240 ---
+Original: 3.0 The problem of evil
+Many people hold that there is a God and that He is all-powerful, all-good, and all-knowing.
+Bleached: 3.0 The X of Y
+Many Z hold that there is a God and that He is all-W, all-Q, and all-R.
+Chars: 117 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .-,-,-.
+
+--- Pattern 241 ---
+Original: For argument’s sake, let us suppose that this is true.
+Bleached: For X's sake, let us Y that this is true.
+Chars: 54 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 242 ---
+Original: In that case, we are stuck with a problem.
+Bleached: In that X, we are Y with a Z.
+Chars: 42 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 243 ---
+Original: Many bad things happen in this world (e.g., murder, disease, physical and emotional pain).
+Bleached: Many X things Y in this world (e.g., Z, W, V and Q R).
+Chars: 90 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (..,,,).
+
+--- Pattern 244 ---
+Original: But if God is all-knowing, all-powerful, and all-good, then whenever something bad is going to happen, He’ll know it (since He’s all-knowing); He’ll also want to prevent it (since He’s all good); finally, He’ll be able to prevent it (since He’s all-powerful).
+Bleached: But if X is Y-ing, Z-ful, and W-good, then whenever something bad is going to happen, He'll know it (since He's Y-ing); He'll also want to prevent it (since He's W-good); finally, He'll be able to prevent it (since He's Z-ful).
+Chars: 259 | Tokens: 42 | Clauses: 5
+Clause Order: subordinate → main
+Punctuation: -,-,-,,(-);();,(-).
+
+--- Pattern 245 ---
+Original: Nonetheless, there obviously are many bad things in this world.
+Bleached: Nonetheless, there obviously are many X things in this world.
+Chars: 63 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 246 ---
+Original: This suggests that there is no God or that, if there is a God, He isn’t all-powerful, all-good, and all-knowing.
+Bleached: This X that there is no Y or that, if there is a Y, He isn't all-Z, all-W, and all-V.
+Chars: 112 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,-,-.
+
+--- Pattern 247 ---
+Original: Here are some views that people adopt in order to make sense of the information just put forth:
+
+(a) There is no God.
+Bleached: Here are some X that Y Z in W to V U of the T just S forth:
+
+(a) There is no R.
+Chars: 119 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :().
+
+--- Pattern 248 ---
+Original: (b) There is a God, but He’s not all-powerful, all-good, and all-knowing.
+Bleached: (b) There is a X, but He's not all-Y, all-Z, and all-W.
+Chars: 73 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),-,-,-.
+
+--- Pattern 249 ---
+Original: (c) There is no badness—there is only the illusion of badness.
+Bleached: (c) There is no X—there is only the Y of X.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()—.
+
+--- Pattern 250 ---
+Original: If we were to know God’s master-	plan, we’d see that it’s okay that people have their arms and legs blown off.
+Bleached: If we were to R G's Q-plan, we'd see that it's okay that F have their M and N X-ed off.
+Chars: 110 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 251 ---
+Original: But there’s a fourth view, and it is the view that, from a philosophical standpoint, is the most interesting:
+
+(d) God exists, and He is all-powerful, all-good, and all-knowing.
+Bleached: But there's a fourth X, and it is the X that, from a Y Z, is the most W:
+
+(d) A B, and He is C, D, and E.
+Chars: 179 | Tokens: 29 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,:(),-,-,-.
+
+--- Pattern 252 ---
+Original: Furthermore, there is much evil in the world.
+Bleached: Furthermore, there is much X in the Y.
+Chars: 45 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 253 ---
+Original: And these statements are consistent with one another.
+Bleached: And these X's are Y with one another.
+Chars: 53 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 254 ---
+Original: There is nothing absurd in believing in the existence of badness and in the existence of all-powerful, all-good, and all-knowing God.
+Bleached: There is nothing A in B-ing in the C of D and in the C of E-F, E-G, and E-H I.
+Chars: 133 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,-.
+
+--- Pattern 255 ---
+Original: But we saw earlier that (d) appears to be incoherent.
+Bleached: But we X earlier that (d) Y to be Z.
+Chars: 53 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ().
+
+--- Pattern 256 ---
+Original: If there is a God, and He’s all-powerful, all-good, and all-knowing, then He’ll prevent bad things from happening.
+Bleached: If there is a A, and He's all-B, all-C, and all-D, then He'll E F G from H-ing.
+Chars: 114 | Tokens: 18 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-,-,-,.
+
+--- Pattern 257 ---
+Original: But bad things do happen.
+Bleached: But A things do B.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 258 ---
+Original: So it seems to follow that either God isn’t all-powerful, all-good, and all-knowing or He simply doesn’t exist.
+Bleached: So it X's to Y that either Z isn't all-W, all-Q, and all-R or He simply doesn't S.
+Chars: 111 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,-.
+
+--- Pattern 259 ---
+Original: But many fine thinkers hold that (d) is not incoherent.
+Bleached: But many X Y-ers Z that (d) is not W.
+Chars: 55 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ().
+
+--- Pattern 260 ---
+Original: They hold, in other words, that (d) makes perfectly good sense.
+Bleached: They X, in other words, that (d) Y perfectly Z sense.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,().
+
+--- Pattern 261 ---
+Original: In their view, it is perfectly reasonable to hold that, despite all the badness in this world, there exists an all-powerful, all-good, and all-knowing God.
+Bleached: In their X, it is Y Z to A that, despite all the B in this C, there D-s an E-F, G-H, and I-J K.
+Chars: 155 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-,-,-.
+
+--- Pattern 262 ---
+Original: Attempts to show that (d) is coherent are known as theodicies.
+Bleached: A's to B that (d) is C are D as E's.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 263 ---
+Original: Following are the two most plausible theodicies.
+Bleached: Following are the two most A B's.
+Chars: 48 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 264 ---
+Original: 3.1 Theodicy #1—The Free-Will Defense
+Because He is good, God wants the world to be a good place.
+Bleached: 3.1 X #1—The Y-Z A
+Because He is B, C D's the E to be a B F.
+Chars: 98 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .—-,.
+
+--- Pattern 265 ---
+Original: In fact, He wants it to be as good as possible.
+Bleached: In fact, He X's it to be as Y as possible.
+Chars: 47 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 266 ---
+Original: A world where nothing has free will wouldn’t be a very good world, and it wouldn’t be as good as one where there were creatures with free will.
+Bleached: A P where Q has R S wouldn't be a very T P, and it wouldn't be as T as U where there were V with R S.
+Chars: 143 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 267 ---
+Original: A world of robots who do no wrong isn’t as good as a world of free creatures that do some wrong.
+Bleached: A X of Y's who do no Z isn't as W as a X of V U's that do some Z.
+Chars: 96 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 268 ---
+Original: (Would you rather have a son or daughter who is a robot who never does anything wrong but doesn’t have a soul?
+Bleached: (Would you rather have a son or daughter who is a X who never does anything Y but doesn't have a Z?
+Chars: 110 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (?
+
+--- Pattern 269 ---
+Original: Or would you rather have a son or daughter who has a soul but sometimes parties too hard?) Not wanting us to be soulless robots, God gave us free will.
+Bleached: Or would you rather have a A or B who has a C but sometimes D's too E?) Not F-ing us to be G-less H's, I gave us J K.
+Chars: 151 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?),.
+
+--- Pattern 270 ---
+Original: But now that we have free will, we’re free to commit bad acts—to steal, kill, and so on.
+Bleached: But now that we have X Y, we're X to Z W V—to Z, V, and so on.
+Chars: 88 | Tokens: 18 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,—,,.
+
+--- Pattern 271 ---
+Original: And that’s why, despite God’s goodness, there’s badness in the world.
+Bleached: And that's why, despite A's B, there's C in the D.
+Chars: 69 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 272 ---
+Original: There are three problems there.
+Bleached: There are three A's there.
+Chars: 31 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 273 ---
+Original: 3.1.1 First problem: Theodicy #1 isn’t compatible with the compatibilist 	conception of freedom
+In Chapter 15, we saw reason to believe that, not only is determinism compatible with freedom but is actually a prerequisite for it.
+Bleached: 3.1.1 A B: C #1 isn't D with the E F of G
+In H 15, we I J to K that, not only is L M with G but is N a O for it.
+Chars: 229 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..:,,.
+
+--- Pattern 274 ---
+Original: If this is the case, then, even if we are free, God is still responsible for the badness that we, in our freedom, inject into the world.
+Bleached: If this is the case, then, even if we are A, B is still C for the D that we, in our E, F into the G.
+Chars: 136 | Tokens: 27 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,,,.
+
+--- Pattern 275 ---
+Original: But even if we set aside this problem, there are two other grave problems with Theodicy #1, as we’ll now see.
+Bleached: But even if we X aside this Y, there are two other Z Y's with A #1, as we'll now B.
+Chars: 109 | Tokens: 21 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 276 ---
+Original: 3.1.2 Second problem: There’s too much evil for Theodicy #1 to be correct
+Couldn’t God allow us to have free will in general but intervene in cases where somebody was going to commit particularly horrible acts or was going to commit horrors on a mass scale?
+Bleached: 3.1.2 X A: There's too Y Z for B #1 to be C
+Couldn't D E us to have F G in H but I in J where K was L to M N O P or was L to M Q on a R S?
+Chars: 258 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..:?
+
+--- Pattern 277 ---
+Original: Here’s how advocates of Theodicy #1 deal with this:
+
+(AF) Suppose that God thwarted every would-be Hitler and Stalin.
+Bleached: Here's how X1's of Y #1 Z with this:
+
+(AF) W that God X-ed every would-be A and B.
+Chars: 119 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()-.
+
+--- Pattern 278 ---
+Original: Suppose, in other words, that God always saved us from ourselves at the moment of truth.
+Bleached: Suppose, in other words, that X always Y-ed us from ourselves at the moment of Z.
+Chars: 88 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 279 ---
+Original: In that case, we’d be in a state of perpetual infancy—we’d never have to learn to manage our own affairs.
+Bleached: In that A, we'd be in a B of C D—we'd never have to E to F our own G.
+Chars: 105 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—.
+
+--- Pattern 280 ---
+Original: God doesn’t abridge the free will of Hitler and Stalin because, were he to do so, he’d be running the show, instead of giving us a chance to demonstrate and develop our characters by running the show for ourselves.
+Bleached: A doesn't B the C D of E and F because, were he to do so, he'd be G-ing the H, instead of I-ing us a J to K and L our M's by G-ing the H for ourselves.
+Chars: 214 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 281 ---
+Original: Whatever its merits, there is a very obvious problem with AF, which we’ll now discuss.
+Bleached: Whatever its X's, there is a very Y Z with AF, which we'll now V.
+Chars: 86 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 282 ---
+Original: 3.1.3 Third problem: not all badness is our doing
+The third problem is not all badness results from human activity or, therefore, from the exercise of free will.
+Bleached: 3.1.3 A B: not all C is our D-ing
+The A B is not all C E's from F G or, therefore, from the H of I J.
+Chars: 162 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..:,,.
+
+--- Pattern 283 ---
+Original: There are diseases, floods, earthquakes, etc.
+Bleached: There are X's, Y's, Z's, etc.
+Chars: 45 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 284 ---
+Original: The Free-Will defense has nothing to say about these, since it isn’t our free will that causes these bad things to happen.
+Bleached: The X-Y Z has nothing to say about these, since it isn't our X Y that W-s these V things to happen.
+Chars: 122 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 285 ---
+Original: So couldn’t God spare us these horrors?
+Bleached: So couldn't X Y us these Z's?
+Chars: 39 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 286 ---
+Original: And wouldn’t he do so if he really were all-good, all-powerful, and all-knowing?
+Bleached: And wouldn't he X so if he really were all-Y, all-Z, and all-W?
+Chars: 80 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,-?
+
+--- Pattern 287 ---
+Original: The response to this question lies in: 
+3.2 Theodicy #2—the no pain/no gain defense
+Suppose that every time a disaster was about to strike, God stepped in.
+Bleached: The Ω to this Φ lies in:
+3.2 Θ #2—the no Ψ/no Ξ Ζ
+Υ that every Τ a Σ was about to Ρ, Ο Π-ed in.
+Chars: 157 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.—,.
+
+--- Pattern 288 ---
+Original: In that case, life would be a big cakewalk, and we, as a species, would never develop any character.
+Bleached: In that case, A would be a big B, and we, as a species, would never C any D.
+Chars: 100 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 289 ---
+Original: We’d have it too easy.
+Bleached: We'd have it too E.
+Chars: 22 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 290 ---
+Original: Our ingenuity and fortitude would never be put to the test.
+Bleached: Our X and Y would never be Z-ed to the W.
+Chars: 59 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 291 ---
+Original: We’d be deprived of a chance to prove and improve ourselves, which would strip life of much of its meaning.
+Bleached: We'd be A-ed of a B to C and D ourselves, which would E F of G of its H.
+Chars: 107 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 292 ---
+Original: If life were easy, it wouldn’t be a challenge; if it weren’t a challenge, it wouldn’t be meaningful.
+Bleached: If X were Y, it wouldn't be a Z; if it weren't a Z, it wouldn't be W.
+Chars: 100 | Tokens: 18 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,;,.
+
+--- Pattern 293 ---
+Original: A certain amount of strife enriches life.
+Bleached: A certain amount of A enriches B.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 294 ---
+Original: But too much impoverishes it.
+Bleached: But too much X-es it.
+Chars: 29 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 295 ---
+Original: There’s too much strife for this theodicy to work.
+Bleached: There's too much A for this B to C.
+Chars: 50 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 296 ---
+Original: That’s my position, anyway.
+Bleached: That's my X, anyway.
+Chars: 27 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 297 ---
+Original: Others disagree.
+Bleached: Others X.
+Chars: 16 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 298 ---
+Original: 4.0 Can God do the impossible?
+Bleached: 4.0 Can X do the Y?
+Chars: 30 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .?
+
+--- Pattern 299 ---
+Original: Even if, as we’ll assume in this section, God exists and is omnipotent, She is unable to make 1 + 1 = 3.
+Bleached: Even if, as we'll X in this Y, Z W's and is Ω, She is Q to R 1 + 1 = 3.
+Chars: 104 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 300 ---
+Original: For something to be impossible is not for it to be very hard to do: it is for the very idea of doing that thing to be an incoherent one.
+Bleached: For X to be Y is not for it to be very Z to do: it is for the very W of X-ing that X to be an V one.
+Chars: 136 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 301 ---
+Original: It is, in other words, for there to be no such thing as doing that thing.
+Bleached: It is, in other words, for there to be no such thing as X-ing that thing.
+Chars: 73 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 302 ---
+Original: Something is impossible just in case nothing would count as doing it—just in case, in other words, no meaningful statement that would describe the occurrence of that thing.
+Bleached: A is B just in case C would D as E-ing it—just in case, in other words, no F G that would H the I of that A.
+Chars: 172 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —,,.
+
+--- Pattern 303 ---
+Original: Nobody can read a thousand-page book in two seconds.
+Bleached: Nobody can X a Y-Z book in two W's.
+Chars: 52 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 304 ---
+Original: But there is some sense in which it would be possible, albeit very hard, to do so.
+Bleached: But there is some X in which it would be Y, albeit very Z, to do so.
+Chars: 82 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 305 ---
+Original: The reason it is possible to read such a large book in so little time is that the idea of doing so is not incoherent.
+Bleached: The A it is B to C such a D E in so F G is that the H of I so is not J.
+Chars: 117 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 306 ---
+Original: We know what it is to read a long book in (e.g.) a week.
+Bleached: We X what it is to Y a Z A in (e.g.) a B.
+Chars: 56 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (..).
+
+--- Pattern 307 ---
+Original: On that basis, we know what it would be to read such a book in a day or an hour or even a second.
+Bleached: On that A, we B what it would be to C such a D in a E or an F or even a G.
+Chars: 97 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 308 ---
+Original: So, even though nobody can read a thousand-page book in two seconds, the idea of somebody’s doing so is not an incoherent one; and that is why somebody’s doing so is possible.
+Bleached: So, even though nobody can X a Y-page Z in two W's, the V of somebody's U-ing so is not an T one; and that is why somebody's U-ing so is S.
+Chars: 175 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,;.
+
+--- Pattern 309 ---
+Original: (Of course, to say that it is possible is not to say that it is practically possible.
+Bleached: (Of course, to X that it is Y is not to X that it is Z Y.
+Chars: 85 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,.
+
+--- Pattern 310 ---
+Original: It is only to say that it is logically possible.)
+By contrast, it seems impossible—not just practically, but logically—that something should preexist itself.
+Bleached: It is only to X that it is logically Y.)
+By Z, it A's B—not just C-ly, but logically—that something should D itself.
+Chars: 158 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .),—,—.
+
+--- Pattern 311 ---
+Original: It seems impossible, in other words, that something should come into existence before it comes into existence or, if it is an event, that it should occur before it occurs.
+Bleached: It A B, in other words, that something should C into D before it C's into D or, if it is an E, that it should F before it F's.
+Chars: 171 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 312 ---
+Original: What is the difference between somebody’s reading a thousand-page book in two seconds and an event’s occurring before it occurs?
+Bleached: What is the A between B's C-ing a D-page E in F G's and an H's I-ing before it I's?
+Chars: 128 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -?
+
+--- Pattern 313 ---
+Original: Why is the one possible and the other impossible?
+Bleached: Why is the one Q and the other R?
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 314 ---
+Original: 4.1 Impossibilities are expressed by self-undermining statements and, 	therefore, by non-statements
+The answer is not hard to find.
+Bleached: 4.1 A's are B-ed by C-D E's and, therefore, by F-E's
+The G is not H to I.
+Chars: 132 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .-,,-.
+
+--- Pattern 315 ---
+Original: The statement:
+
+(PE) X preexists itself
+
+denies the very thing that it affirms.
+Bleached: The B:
+
+(PE) X C-s itself
+
+D-s the very E that it F-s.
+Chars: 83 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :().
+
+--- Pattern 316 ---
+Original: It says (1) that, for some time t, X began to exist at t and (2) that, for some earlier time t*, X began to exist at t*.
+Bleached: It A (1) that, for some B t, X C-ed to D at t and (2) that, for some E B t*, X C-ed to D at t*.
+Chars: 120 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),,(),,.
+
+--- Pattern 317 ---
+Original: In saying (2), PE is saying that X did not, in fact, begin to exist at t.
+Bleached: In A-ing (2), PE is A-ing that X did not, in B, C to D at t.
+Chars: 73 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),,,.
+
+--- Pattern 318 ---
+Original: So PE says that X begins to exist at t, and it then says that X does not begin to exist at t.
+Bleached: So PE V's that X W's to Y at t, and it then V's that X does not W to Y at t.
+Chars: 93 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 319 ---
+Original: PE therefore says that the very thing (or, in any case, one of the very things) that it says is false.
+Bleached: PE therefore says that the very thing (or, in any case, one of the very things) that it says is X.
+Chars: 102 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,).
+
+--- Pattern 320 ---
+Original: Thus, the reason why it is impossible that X should preexist itself is that the very idea of X’s doing so is self-defeating.
+Bleached: Thus, the A why it is B that X should C itself is that the very D of X's doing so is E.
+Chars: 124 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 321 ---
+Original: To think that X preexists itself is to think (A) that X begins to exist at time t and also (B) that (A) is false.
+Bleached: To X that Y Z-s itself is to X (A) that Y W-s to V at U t and also (B) that (A) is R.
+Chars: 113 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()()().
+
+--- Pattern 322 ---
+Original: Since such an idea is self-contradictory, it fails to say anything coherent about reality.
+Bleached: Since such an X is Y-Z, it W's to V anything U about T.
+Chars: 90 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 323 ---
+Original: What we just said about the statement “God preexisted himself ” is true of any other statement that describes an impossibility.
+Bleached: What we just X about the Y "Z W-ed himself " is true of any other Y that X-s an impossibility.
+Chars: 127 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 324 ---
+Original: For example, nothing can be a square and a circle at the same time.
+Bleached: For example, nothing can be a X and a Y at the same time.
+Chars: 67 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 325 ---
+Original: Therefore: 
+
+(SC) “X is a square circle”
+
+describes an impossibility.
+Bleached: Therefore: 
+
+(SC) "X is a A B"
+
+C-s an D.
+Chars: 73 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :().
+
+--- Pattern 326 ---
+Original: But can God do the impossible?
+Bleached: But can X do the Y?
+Chars: 30 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?
+
+--- Pattern 327 ---
+Original: Can God create a square circle?
+Bleached: Can X Y a Z W?
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 328 ---
+Original: I say “no.” And I also say that, even though God cannot create a square circle, this does not show that Her powers are in any way limited.
+Bleached: I A "no." And I also A that, even though B cannot C a D E, this does not F that Her G are in any way H.
+Chars: 138 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,,.
+
+--- Pattern 329 ---
+Original: Let us look at SC more closely.
+Bleached: Let us X at Y more Z.
+Chars: 31 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 330 ---
+Original: A square is by definition something that has four straight sides.
+Bleached: A Q is by definition something that has four R S's.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 331 ---
+Original: A circle is by definition something that has no straight sides.
+Bleached: A X is by Y something that has no Z W's.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 332 ---
+Original: So (SC) makes two statements: first, that X has four straight sides; second, that it has no straight sides (and therefore doesn’t have four straight sides).
+Bleached: So (SC) A-s two B-s: first, that X has four C D-s; second, that it has no C D-s (and therefore doesn't have four C D-s).
+Chars: 156 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():,;,().
+
+--- Pattern 333 ---
+Original: So SC says that the very statement (or, at any rate, one of the very statements) that it affirms is false.
+Bleached: So SC X's that the very Y (or, at any rate, one of the very Y's) that it Z's is false.
+Chars: 106 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,).
+
+--- Pattern 334 ---
+Original: So it affirms a statement and then withdraws it, thus failing to make any statement.
+Bleached: So it A's a B and then C's it, thus D-ing to E any B.
+Chars: 84 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 335 ---
+Original: Thus, when we say that God cannot make SC be true—when we say, in other words, that God cannot create a square circle—there is no coherent statement that we are saying that God cannot make true; and there is, therefore, nothing that we are saying that God cannot do.
+Bleached: Thus, when we say that A cannot make B be true—when we say, in other words, that A cannot create a C D—there is no E statement that we are saying that A cannot make true; and there is, therefore, nothing that we are saying that A cannot do.
+Chars: 266 | Tokens: 49 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,—,,—;,,.
+
+--- Pattern 336 ---
+Original: So in saying that God cannot create a square circle, there is no coherent statement that we are negating, and we are therefore not managing to ascribe any genuine limitation to God’s powers.
+Bleached: So in X-ing that Y cannot Z a A B, there is no C D that we are E-ing, and we are therefore not F-ing to G any H I to Y's J's.
+Chars: 190 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 337 ---
+Original: 4.2 The confusion underlying the traditional conception of what it is to be 	impossible
+We pre-theoretically tend to think of impossibility as a property of things.
+Bleached: 4.2 The X underlying the Y Z of what it is to be impossible
+We A-ly tend to think of B as a C of things.
+Chars: 165 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .-.
+
+--- Pattern 338 ---
+Original: Consider the following statements:
+
+(SC) Square circles are impossible—so are perpetual motion machines, self-causing events, and even primes greater than two.
+Bleached: Consider the following Y's:
+
+(SC) A B's are C—so are D E F's, G-ing H's, and I J's K than L.
+Chars: 161 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()—,-,.
+
+--- Pattern 339 ---
+Original: SC is a true statement.
+Bleached: A is a B C.
+Chars: 23 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 340 ---
+Original: But, at first glance, SC seems to be self-defeating.
+Bleached: But, at first X, Y Z to be W-V.
+Chars: 52 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,-.
+
+--- Pattern 341 ---
+Original: For it seems to be saying that there exist certain things—namely, square circles, perpetual motion machines, and even primes greater than two— that cannot, and therefore do not, exist.
+Bleached: For it seems to be X-ing that there exist certain Y's—namely, Z A's, B C D's, and even E's F than G— that cannot, and therefore do not, exist.
+Chars: 184 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —,,,—,,.
+
+--- Pattern 342 ---
+Original: In other words, SC seems to be saying that there exist things that don’t exist.
+Bleached: In other words, SC seems to be saying that there exist X's that don't exist.
+Chars: 79 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 343 ---
+Original: But if that is what SC is saying, then it is not only false, but incoherent.
+Bleached: But if that is what SC is X-ing, then it is not only Y, but Z.
+Chars: 76 | Tokens: 16 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 344 ---
+Original: But it is not incoherent.
+Bleached: But it is not X.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 345 ---
+Original: In fact, it is true.
+Bleached: In fact, it is true.
+Chars: 20 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 346 ---
+Original: How can we make sense of all this?
+Bleached: How can we Y Z of all this?
+Chars: 34 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 347 ---
+Original: The key here is to distinguish between objects and statements.
+Bleached: The X here is to Y between Z's and W's.
+Chars: 62 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 348 ---
+Original: SC doesn’t make a statement about objects: it makes a statement about statements.
+Bleached: A doesn't make a B about C's: it makes a B about B's.
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 349 ---
+Original: It says that all statements of the form X is a square circle (and X is a perpetual motion machine and X is an even prime greater than two) are false.
+Bleached: It Q that all R's of the S X is a T U (and X is a V W X and X is an Y Z V than two) are P.
+Chars: 149 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 350 ---
+Original: So SC doesn’t say of any object that it is, or is not, a perpetual motion machine.
+Bleached: So SC doesn't say of any object that it is, or is not, a X Y Z.
+Chars: 82 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 351 ---
+Original: It couldn’t possibly say this, since there are no perpetual motions
+and there are therefore no perpetual motion machines of which to say that they are impossible (or, for that matter, of which to say anything).
+Bleached: It couldn't possibly X this, since there are no Y Z's
+and there are therefore no Y Z W's of which to X that they are V (or, for that matter, of which to X anything).
+Chars: 211 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,(,,).
+
+--- Pattern 352 ---
+Original: Rather than making a statement about non-existent perpetual motion machines—and thus about things that don’t exist to have statements made about them (or, for that matter, to have anything else done to them)—SC makes a statement about very much existing statements.
+Bleached: Rather than X-ing a Y about Z-ent A B C's—and thus about D's that don't E to have Y's F about them (or, for that G, to have H else I to them)—SC X's a Y about very much E-ing Y's.
+Chars: 265 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -—(,,)—.
+
+--- Pattern 353 ---
+Original: More specifically, it says that every statement having the form X is a perpetual motion machine is untrue.
+Bleached: More specifically, it says that every statement having the form X is a A B C machine is untrue.
+Chars: 106 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 354 ---
+Original: In general, impossibility is not a property of things.
+Bleached: In general, X is not a Y of Z's.
+Chars: 54 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 355 ---
+Original: After all, if something is impossible, then it cannot, and therefore does not, exist.
+Bleached: After all, if something is X, then it cannot, and therefore does not, Y.
+Chars: 85 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 356 ---
+Original: And if it does not (let alone cannot) exist, then there exists no thing to have the property of being impossible.
+Bleached: And if it does not (let alone cannot) X, then there Y no Z to have the W of being V.
+Chars: 113 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),.
+
+--- Pattern 357 ---
+Original: Impossibility is a property, not of things, but of statements.
+Bleached: Z is a Y, not of X's, but of W's.
+Chars: 62 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 358 ---
+Original: And, as we saw in the previous section, a statement is impossible if it is incoherent—if, in other words, it contradicts itself.
+Bleached: And, as we X in the Y Z, a W is V if it is U—if, in other words, it T itself.
+Chars: 128 | Tokens: 22 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,—,,.
+
+--- Pattern 359 ---
+Original: 4.3 Explicit versus implicit self-contradiction
+We must bear in mind that most incoherent statements contradict themselves implicitly, not explicitly.
+Bleached: 4.3 A versus B C-D
+We must bear in mind that most E F-s G themselves H, not I.
+Chars: 151 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .-,.
+
+--- Pattern 360 ---
+Original: The statement:
+
+(KB) X is knowledge, but it isn’t true belief
+
+is incoherent.
+Bleached: The A:
+
+(KB) X is B, but it isn't C D
+
+is E.
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :(),.
+
+--- Pattern 361 ---
+Original: But it does not overtly or explicitly have the form P and not-P.
+Bleached: But it does not X-ly or Y-ly have the Z P and not-P.
+Chars: 64 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -.
+
+--- Pattern 362 ---
+Original: Nonetheless, it implicitly has that form.
+Bleached: Nonetheless, it implicitly X that Y.
+Chars: 41 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 363 ---
+Original: Since any instance of knowledge is necessarily an instance of true belief, KB does, albeit implicitly, say that X simultaneously is, and is not, true belief.
+Bleached: Since any A of B is C an A of D E, KB does, F G, H that X I is, and is not, D E.
+Chars: 157 | Tokens: 26 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,,,.
+
+--- Pattern 364 ---
+Original: Therefore, KB does, albeit implicitly, say X is true and it is not the case that X is true belief.
+Bleached: Therefore, KB does, albeit implicitly, say X is true and it is not the case that X is true A.
+Chars: 98 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 365 ---
+Original: So KB does in fact have the form P and not-P, that being why it is incoherent.
+Bleached: So X does in fact have the form Y and not-Y, that being why it is Z.
+Chars: 78 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 366 ---
+Original: Let us revisit the topic of God’s omnipotence.
+Bleached: Let us X the Y of Z's W.
+Chars: 46 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 367 ---
+Original: To say that God cannot do the impossible is therefore not to say that there exist certain things that God cannot do or objects that He cannot create.
+Bleached: To X that Y cannot Z the A is therefore not to X that there B certain C that Y cannot Z or D that He cannot E.
+Chars: 149 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 368 ---
+Original: There exist no impossible objects.
+Bleached: There exist no Z A's.
+Chars: 34 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 369 ---
+Original: If something exists, then it isn’t impossible.
+Bleached: If X Y's, then it isn't Z.
+Chars: 46 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 370 ---
+Original: But there are incoherent statements.
+Bleached: But there are E statements.
+Chars: 36 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 371 ---
+Original: And when we say that “square circles” are impossible, we are saying that statements of the form X is a square circle are selfundermining.
+Bleached: And when we say that "A B's" are C, we are saying that D's of the E X is a A B are F.
+Chars: 137 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 372 ---
+Original: An incoherent statement is one that does not, ultimately, say anything (since it denies, and therefore retracts, what it affirms).
+Bleached: An A B is one that does not, ultimately, C anything (since it D, and therefore E, what it F).
+Chars: 130 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,(,,).
+
+--- Pattern 373 ---
+Original: So there is nothing that God’s “inability,” so to speak, to create square circles is an inability to create.
+Bleached: So there is nothing that God's "inability," so to speak, to create X Y's is an inability to create.
+Chars: 108 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 374 ---
+Original: 4.4 Incoherence versus meaninglessness
+A moment ago, I said that, ultimately, an incoherent statement is one that doesn’t say anything.
+Bleached: 4.4 A versus B
+A C D, I E that, F, an A G is H that doesn't I J.
+Chars: 136 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .,,,.
+
+--- Pattern 375 ---
+Original: This statement must be understood aright.
+Bleached: This A must be B-ed C.
+Chars: 41 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 376 ---
+Original: The statement:
+
+(A) X is a square circle
+
+is obviously, at some level, meaningful; and it obviously does say something.
+Bleached: The A:
+
+(A) X is a B C
+
+is D, at some E, F; and it D does G something.
+Chars: 123 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :(),,;.
+
+--- Pattern 377 ---
+Original: An example of a completely meaningless utterance—one that simply fails to say anything at all—would be:
+
+(B) Frog the marathon pool clearly dabble.
+Bleached: An X of a Y Z A—B that C D to E F at G—would be:
+
+(H) I the J K L M.
+Chars: 149 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ——:().
+
+--- Pattern 378 ---
+Original: It is clear that (A) is incoherent.
+Bleached: It is X that (A) is Y.
+Chars: 35 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 379 ---
+Original: But it is not clear that (A) is meaningless.
+Bleached: But it is not A that (B) is C.
+Chars: 44 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ().
+
+--- Pattern 380 ---
+Original: Indeed, (A) seems to be far from meaningless.
+Bleached: Indeed, (A) X's to be far from Y.
+Chars: 45 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 381 ---
+Original: By contrast, (B) seems to be quite meaningless—so meaningless, in fact, that it’s not even clear if it can be described as “incoherent.” (A) and (B) are obviously not in the same category.
+Bleached: By contrast, (B) seems to be quite A—so A, in fact, that it's not even B if it can be C-ed as "D." (A) and (B) are E not in the same F.
+Chars: 188 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,()—,,.()().
+
+--- Pattern 382 ---
+Original: A related point is that, whereas (B) doesn’t say anything, (A) very much does seem to say something, albeit something defective.
+Bleached: A X-ed Y is that, whereas (B) doesn't Z anything, (A) very much does seem to Z something, albeit something W.
+Chars: 128 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,(),(),.
+
+--- Pattern 383 ---
+Original: And this, of course, is why (A) and (B) are clearly not in the same category, notwithstanding that they are both failed statements.
+Bleached: And this, of course, is why (A) and (B) are clearly not in the same X, notwithstanding that they are both Y-ed Z's.
+Chars: 131 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,()(),.
+
+--- Pattern 384 ---
+Original: What, then, is the difference between incoherence and meaninglessness?
+Bleached: What, then, is the X between Y and Z?
+Chars: 70 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,?
+
+--- Pattern 385 ---
+Original: And in what sense, if any, does (A) fail to say anything?
+Bleached: And in what X, if any, does (A) Y to Z anything?
+Chars: 57 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,()?
+
+--- Pattern 386 ---
+Original: For a statement to be meaningless is for it to have no meaning.
+Bleached: For a X to be Y is for it to have no Z.
+Chars: 63 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 387 ---
+Original: For a statement to be incoherent is for it to have two (or more) opposed meanings.
+Bleached: For a X to be Y is for it to have two (or more) Z-ed W's.
+Chars: 82 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 388 ---
+Original: (B) has no meaning.
+Bleached: (B) has no X.
+Chars: 19 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 389 ---
+Original: It doesn’t say anything.
+Bleached: It doesn't X anything.
+Chars: 24 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 390 ---
+Original: By contrast, (A) has two
+meanings.
+Bleached: By contrast, (A) has two X's.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 391 ---
+Original: (It says, on the one hand, that X has four sides and, on the other, that X has no sides and therefore less than four sides.) So, in the short term, (A) does have a meaning—indeed, it has two of them.
+Bleached: (It Y-s, on the one hand, that X has four Z-s and, on the other, that X has no Z-s and therefore less than four Z-s.) So, in the short term, (A) does have a W—indeed, it has two of them.
+Chars: 199 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,,,.),,()—,.
+
+--- Pattern 392 ---
+Original: But ultimately it has no meaning, since those two meanings cancel each other out.
+Bleached: But ultimately it has no A, since those two A's B each other out.
+Chars: 81 | Tokens: 14 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 393 ---
+Original: So ultimately (A) fails to say anything.
+Bleached: So ultimately (A) X's to Y anything.
+Chars: 40 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 394 ---
+Original: (Saying two opposed things is a way of failing to say anything—just as taking one step forward and one step backwards is a way of failing to go anywhere, even though it is a way of failing to go anywhere that involves going to two places.) Therefore, my previous statement—that incoherent statements ultimately fail to say anything— has turned out to be true, and also capable of being reconciled with the fact that it clearly does, at some level, have some kind of meaning (unlike (B)).
+Bleached: (X-ing two Y-ed Z's is a W of V-ing to X U—just as T-ing one S R and one S Q-s is a W of V-ing to go P, even though it is a W of V-ing to go P that N-s T-ing to two M's.) Therefore, my L K—that J I's G F to X U— has E-ed out to be D, and also C of being B-ed with the A that it clearly does, at some level, have some kind of meaning (unlike (B)).
+Chars: 487 | Tokens: 86 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (—,.),——,,,(()).
+
+--- Pattern 395 ---
+Original: 5.0 Anselm’s version of the ontological argument for God’s existence
+The so-called “ontological argument” for the existence of God was first put forth explicitly by St.
+Bleached: 5.0 A's B of the C D for E's F
+The so-called "C D" for the F of E was first G H I by J.
+Chars: 169 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .-.
+
+--- Pattern 396 ---
+Original: Anselm.
+Bleached: A.
+Chars: 7 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 397 ---
+Original: There are different versions of this argument.
+Bleached: There are Q R's of this S.
+Chars: 46 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 398 ---
+Original: We’ll consider three, starting with Anselm’s own.
+Bleached: We'll X three, Y-ing with Z's own.
+Chars: 49 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 399 ---
+Original: (AG) Let us define “God” as a “maximally great being.” (In this context, a being is “maximally great,” if it isn’t possible for me, or you or whoever, to conceive of anything greater than it.)With this in mind, consider the following argument.
+Bleached: (AG) Let us X "Y" as a "Z-ly W being." (In this context, a being is "Z-ly W," if it isn't possible for me, or you or whoever, to X of anything W-er than it.)With this in mind, X the following argument.
+Chars: 243 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().(,,,,.),.
+
+--- Pattern 400 ---
+Original: I can conceive of a maximally great being.
+Bleached: I can X of a Y Z A.
+Chars: 42 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 401 ---
+Original: Thus, a maximally great being exists in my mind.
+Bleached: Thus, a X-ly Y Z exists in my W.
+Chars: 48 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 402 ---
+Original: For argument’s sake, suppose that such a thing existed in my mind, but not also in reality.
+Bleached: For X's Y, Z that such a W V-ed in my U, but not also in R.
+Chars: 91 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 403 ---
+Original: In that case, it would be possible to conceive of something greater than that thing—namely, something existing in reality but otherwise just like that thing.
+Bleached: In that case, it would be possible to X of something Y than that thing—namely, something Z-ing in reality but otherwise just like that thing.
+Chars: 157 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—,.
+
+--- Pattern 404 ---
+Original: (A real mansion is better than an otherwise identical imaginary mansion.
+Bleached: (A X Y is Z than an otherwise X W Y.
+Chars: 72 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.
+
+--- Pattern 405 ---
+Original: Similarly, a real maximally great thing is better than a merely imaginary one.) It is therefore incoherent to suppose that a maximally great thing exists in my mind but not also in reality.
+Bleached: Similarly, a M N-ly Q R is S than a T-ly U V.) It is therefore W to X that a N-ly Q R Y-s in my Z but not also in A.
+Chars: 189 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.).
+
+--- Pattern 406 ---
+Original: So given that such a thing exists in my mind, it must also exist in reality.
+Bleached: So X that such a Y Z's in my W, it must also Z in X.
+Chars: 76 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 407 ---
+Original: Conclusion: a maximally great thing exists.
+Bleached: Conclusion: a maximally A B exists.
+Chars: 43 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 408 ---
+Original: In other words, God exists.
+Bleached: In other words, X exists.
+Chars: 27 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 409 ---
+Original: AG is a spurious argument.
+Bleached: A is a B C.
+Chars: 26 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 410 ---
+Original: The problem lies in the italicized statement, which we’ll call “MG.” Correctly interpreted, MG doesn’t say that God exists in my mind.
+Bleached: The A lies in the B-ed C, which we'll call "MG." D-ly E-ed, MG doesn't say that F exists in my G.
+Chars: 134 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.,.
+
+--- Pattern 411 ---
+Original: If God exists, She is out there, in the world, not in my mind.
+Bleached: If X Y's, She is out there, in the Z, not in my W.
+Chars: 62 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 412 ---
+Original: No idea of mine is God.
+Bleached: No X of mine is Y.
+Chars: 23 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 413 ---
+Original: The only things that exist in my mind are thoughts, feelings, etc.
+Bleached: The only A's that B in my C are D's, E's, etc.
+Chars: 66 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 414 ---
+Original: Some of these things are representations of things that exist outside of my mind.
+Bleached: Some of these X's are Y's of X's that Z outside of my V.
+Chars: 81 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 415 ---
+Original: But the fact that a representation of the Sun exists in my mind obviously doesn’t entail that the Sun itself exists in my mind.
+Bleached: But the A that a B of the C D's in my E F doesn't G that the C itself D's in my E.
+Chars: 127 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 416 ---
+Original: And the statement “the Sun exists in my mind” is a brazen falsehood, unless it’s misleading of saying that a Sun-idea so exists.
+Bleached: And the A "the B C-s in my D" is a E F, unless it's G of H-ing that a B-I so C-s.
+Chars: 128 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 417 ---
+Original: Similarly, the statement that God exists “in my mind” is patently false, unless it’s a misleading way of making the irrelevant point that a God-idea so exists.
+Bleached: Similarly, the X that Y Z-s "in my W" is Q-ly R, unless it's a S way of T-ing the U V that a Y-W so Z-s.
+Chars: 159 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 418 ---
+Original: So, to the extent that it’s true, MG doesn’t entail that God exists in any way, shape, or form; and, therefore, no contradiction from the supposition that MG is true but that God doesn’t exist “in reality.”
+Here’s a similar line of thought.
+Bleached: So, to the X that it's Y, Z doesn't W that A B's in any C, D, or E; and, therefore, no F from the G that Z is Y but that A doesn't B "in H."
+Here's a I J of K.
+Chars: 241 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,;,,..
+
+--- Pattern 419 ---
+Original: Correctly interpreted, MG says that I know how a thing must be if it is to be maximally great.
+Bleached: Q R-ed, MG Z that I Y how a F X be if it is to be S-ly T.
+Chars: 94 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 420 ---
+Original: In other words, it says that I know what conditions a thing must fulfill in order to be maximally great.
+Bleached: In other words, it says that I know what A's a B must C in D to be E F.
+Chars: 104 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 421 ---
+Original: But given only that I have this knowledge, it doesn’t follow that there exists anything that has any of the requisite properties.
+Bleached: But X only that I have this Y, it doesn't Z that there W anything that has any of the A B.
+Chars: 129 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 422 ---
+Original: It doesn’t follow that there is anything that is all-powerful or all-knowing or all-good or that has any other virtue specific to God.
+Bleached: It doesn't follow that there is anything that is all-X or all-Y or all-Z or that has any other W specific to A.
+Chars: 134 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---.
+
+--- Pattern 423 ---
+Original: AG goes through only if there exists something that has these properties.
+Bleached: AG X-s through only if there Y-s something that Z-s these W-s.
+Chars: 73 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 424 ---
+Original: The italicized statement must guarantee that there is such a thing; otherwise the argument collapses.
+Bleached: The X-ed Y must Z that there is such a W; otherwise the V X's.
+Chars: 101 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 425 ---
+Original: It doesn’t, and the argument collapses.
+Bleached: It doesn't, and the X Y's.
+Chars: 39 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 426 ---
+Original: 5.1 A simpler version of the ontological argument
+Step 1.
+Bleached: 5.1 A X-er Y of the Z-ical W
+Step 1.
+Chars: 58 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 427 ---
+Original: God is a maximally excellent thing.
+Bleached: X is a Y Z W.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 428 ---
+Original: Explanation: Just as squares are, by definition, four-sided, so God is, by definition, maximally excellent.
+Bleached: Just as X's are, by Y, Z-sided, so A is, by Y, B-ly C.
+Chars: 107 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,-,,,.
+
+--- Pattern 429 ---
+Original: If we found that object X was deficient in some way—that it was ill-willed or stupid or lazy—then it would, for that very reason, fail to be God.
+Bleached: If we A that B X was C in some way—that it was D-ed or E or F—then it would, for that very reason, G to be H.
+Chars: 145 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: —-—,,.
+
+--- Pattern 430 ---
+Original: Step 2: Because he is a maximally excellent thing, God has all excellences, and he has them to the highest degree.
+Bleached: Step 2: Because he is a maximally A thing, B has all C's, and he has them to the highest D.
+Chars: 114 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,.
+
+--- Pattern 431 ---
+Original: Explanation: Consider some excellence—for example, physical strength.
+Bleached: A: Consider some B—for example, C D.
+Chars: 69 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :—,.
+
+--- Pattern 432 ---
+Original: And suppose that X is puny and weak; that is, that X has physical strength only to a small degree.
+Bleached: And suppose that X is A and B; that is, that X has C D only to a E F.
+Chars: 98 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 433 ---
+Original: Obviously X isn’t God.
+Bleached: Obviously X isn't Y.
+Chars: 22 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 434 ---
+Original: So God must be maximally strong and, for similar reasons, must be maximally smart, kind, good-looking, etc.
+Bleached: So A must be maximally B and, for similar C, must be maximally D, E, F-ing, etc.
+Chars: 107 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,-,.
+
+--- Pattern 435 ---
+Original: Step 3.
+Bleached: Step 3.
+Chars: 7 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 436 ---
+Original: Existence is an excellence.
+Bleached: A is an B.
+Chars: 27 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 437 ---
+Original: Explanation: There are a lot of ways that one can fail.
+Bleached: A: There are a B of C that one can D.
+Chars: 55 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 438 ---
+Original: One can be lazy, stupid, mean, etc.
+Bleached: One can be X, Y, Z, etc.
+Chars: 35 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 439 ---
+Original: But no failure is as bad as the failure to exist.
+Bleached: But no X is as Y as the X to Z.
+Chars: 49 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 440 ---
+Original: If you don’t exist, you are a nothing, a complete and total zero, and you are therefore a nothing compared to anyone—even the biggest loser you know.
+Bleached: If you don't X, you are a Y, a Z and W Y, and you are therefore a Y compared to anyone—even the most A B you C.
+Chars: 149 | Tokens: 27 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,—.
+
+--- Pattern 441 ---
+Original: Conclusion: God must have existence.
+Bleached: Conclusion: A must have B.
+Chars: 36 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 442 ---
+Original: God is, by definition, maximally excellent and therefore has every excellence.
+Bleached: A is, by definition, maximally B and therefore has every C.
+Chars: 78 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 443 ---
+Original: Since existence is an excellence, it follows that God has existence.
+Bleached: Since A is an B, it follows that C has A.
+Chars: 68 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 444 ---
+Original: 5.1.1 This argument evaluated
+No good argument can assume the truth of its conclusion: arguments mustn’t “beg the question.” But the ontological argument appears to do just this.
+Bleached: 5.1.1 This X Y-ed
+No Z X can Y the A of its B: X's C't "D the E." But the F X G's to H I this.
+Chars: 179 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..:..
+
+--- Pattern 445 ---
+Original: The problem lies in the first two steps.
+Bleached: The A lies in the B C D's.
+Chars: 40 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 446 ---
+Original: Step 1 is just another way of saying:
+
+Step 1*: There exists a certain thing, namely God, which is maximally excellent.
+Bleached: Step 1 is just another way of saying:
+
+Step 1*: There exists a certain thing, namely X, which is maximally Y.
+Chars: 121 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::,,.
+
+--- Pattern 447 ---
+Original: And Step 2 is a way of saying:
+
+Step 2*: There exists a certain thing, namely God, which, because he is maximally excellent, has every excellence to the highest possible degree.
+Bleached: And X 2 is a Y of Z-ing:
+
+X 2*: There exists a certain thing, namely A, which, because he is B-ly C, has every D to the E-est possible F.
+Chars: 179 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::,,,,.
+
+--- Pattern 448 ---
+Original: But if Steps 1 and 2 are taken in this way, then the argument question-beggingly assumes that God exists, and thus fails to prove it.
+Bleached: But if X's 1 and 2 are Y-ed in this way, then the Z question-W-ingly assumes that G exists, and thus fails to V it.
+Chars: 133 | Tokens: 25 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,-,.
+
+--- Pattern 449 ---
+Original: So, if the Ontological argument is to go through, Steps 1 and 2 must be interpreted in such a way that they don’t assume that God exists.
+Bleached: So, if the A B is to C through, D's 1 and 2 must be E-ed in such a F that they don't G that H I's.
+Chars: 137 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 450 ---
+Original: Thus interpreted, their meanings are:
+
+Step 1#: If God existed, then She would be a most excellent being.
+Bleached: Thus X-ed, their Y's are:
+
+Z 1#: If A B-ed, then She would be a most C D.
+Chars: 107 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,::,.
+
+--- Pattern 451 ---
+Original: Step 2#: If God existed, then God would have every excellence to a maximally high degree.
+Bleached: Step 2#: If X Y-ed, then X would have every Z to a maximally W V.
+Chars: 89 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 452 ---
+Original: So if the ontological argument is to avoid begging the question—in other words, if it is to avoid simply assuming God’s existence—then we must replace Steps 1 and 2 with Steps #1 and #2.
+Bleached: So if the A B is to C D the E—in other words, if it is to C F G H's I—then we must J K 1 and 2 with K #1 and #2.
+Chars: 186 | Tokens: 34 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: —,—.
+
+--- Pattern 453 ---
+Original: So the first three steps must become:
+
+Step 1#.
+Bleached: So the A B C's must D:
+
+E 1#.
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 454 ---
+Original: If God existed, She would be a most excellent being.
+Bleached: If X existed, She would be a most Y being.
+Chars: 52 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 455 ---
+Original: Step 2#: If God existed, then God would have every excellence to a maximally high degree.
+Bleached: Step 2#: If A B-ed, then A would have every C to a D-ly E F.
+Chars: 89 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 456 ---
+Original: Step 3.
+Bleached: Step 3.
+Chars: 7 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 457 ---
+Original: Existence is an excellence.
+Bleached: A is an B.
+Chars: 27 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 458 ---
+Original: What follows from these three statements is that:
+
+Conclusion*: If God exists, then He has every excellence, including existence.
+Bleached: What follows from these three statements is that:
+
+Conclusion*: If X exists, then He has every Y, including existence.
+Chars: 131 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::,,.
+
+--- Pattern 459 ---
+Original: In other words, if God exists, She exists.
+Bleached: In other words, if X exists, She exists.
+Chars: 42 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 460 ---
+Original: But that statement is completely innocuous.
+Bleached: But that X is Y Z.
+Chars: 43 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 461 ---
+Original: Even atheists grant that if God existed, then She would exist.
+Bleached: Even A's grant that if B existed, then She would exist.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 462 ---
+Original: So the ontological argument proves nothing.
+Bleached: So the X-al Y Z's nothing.
+Chars: 43 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 463 ---
+Original: 5.1.2 The simplest possible version of the ontological argument (SOA)
+Failing to exist is a way of being imperfect.
+Bleached: 5.1.2 The A-est B C of the D E (SOA)
+F-ing to G is a H of I-ing J.
+Chars: 116 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..().
+
+--- Pattern 464 ---
+Original: God is perfect.
+Bleached: X is Y.
+Chars: 15 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 465 ---
+Original: Therefore, God doesn’t fail to exist.
+Bleached: Therefore, X doesn't fail to Y.
+Chars: 37 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 466 ---
+Original: 5.1.3 This argument evaluated
+SOA presupposes that a given thing’s failing to exist makes it imperfect.
+Bleached: 5.1.3 This X Y-ed
+Z W-s that a given thing's X-ing to Y Z-s it X.
+Chars: 104 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ...
+
+--- Pattern 467 ---
+Original: SOA therefore presupposes that a given thing can fail to exist.
+Bleached: SOA therefore X's that a given thing can Y to Z.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 468 ---
+Original: This seems reasonable enough at first.
+Bleached: This X-s Y Z at W.
+Chars: 38 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 469 ---
+Original: (“Wouldn’t I be a lesser person if I failed to exist?”) But it’s incoherent.
+Bleached: ("Wouldn't I be a X-er Y if I Z-ed to W?") But it's X.
+Chars: 76 | Tokens: 14 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: (?).
+
+--- Pattern 470 ---
+Original: If you didn’t exist, you wouldn’t be a lesser person.
+Bleached: If you didn't X, you wouldn't be a Y-er Z.
+Chars: 53 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 471 ---
+Original: There would be no you to begin with; and there would thus be no you to fail to do or be this or that.
+Bleached: There would be no you to X with; and there would thus be no you to Y to do or be this or that.
+Chars: 101 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 472 ---
+Original: For there to be something that failed to exist would be for there to exist something x such that x did not exist.
+Bleached: For there to be something that X-ed to Y would be for there to Y something x such that x did not Y.
+Chars: 113 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 473 ---
+Original: And that, clearly, is not possible.
+Bleached: And that, clearly, is not X.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 474 ---
+Original: “But surely there are things that don’t exist,” it will be said.
+Bleached: "But surely there are X that don't Y," it will be Z.
+Chars: 64 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 475 ---
+Original: “Square circles don’t exist.
+Bleached: "X Y's don't exist.
+Chars: 28 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 476 ---
+Original: Neither does Zeus.”
+
+This position is dealt with at length in Chapters 1 and 8.
+Bleached: Neither does A."
+
+This B is C with at D in E's 1 and 8.
+Chars: 81 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 477 ---
+Original: But it’s easy to say what’s wrong with it.
+Bleached: But it's P to Q what's R with it.
+Chars: 42 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 478 ---
+Original: The sentence:
+
+(SC) “square circles don’t exist”
+
+doesn’t say that
+
+(SC#) there exist objects that are both square and circle; and those objects don’t exist, which would be nonsense.
+Bleached: The sentence:
+
+(SC) "X Y's don't exist"
+
+doesn't say that
+
+(SC#) there exist objects that are both X and Y; and those objects don't exist, which would be nonsense.
+Chars: 188 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()();,.
+
+--- Pattern 479 ---
+Original: Rather, SC says that
+
+(SC*) any given thing is a non-square if it’s a circle
+
+In other words, pick any given object: if it’s a circle, it isn’t a square.
+Bleached: Rather, A says that
+
+(A*) any given B is a non-C if it's a D
+
+In other words, pick any given E: if it's a D, it isn't a C.
+Chars: 157 | Tokens: 30 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,()-,:,.
+
+--- Pattern 480 ---
+Original: And the sentence
+
+(ZE) “Zeus doesn’t exist”
+
+doesn’t mean that:
+
+(ZE#) there exists is a certain thing, viz.
+Bleached: And the X
+
+(ZE) "Y doesn't Z"
+
+doesn't W that:
+
+(ZE#) there Z's is a V U, viz.
+Chars: 114 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ():(),.
+
+--- Pattern 481 ---
+Original: Zeus, that doesn’t exist.
+Bleached: Ω, that doesn't exist.
+Chars: 25 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 482 ---
+Original: ZE makes the innocuous claim that given any object x, x doesn’t have the property of being a unique,
+lightning-bolt hurling god [etc.].
+Bleached: ZE A-s the B C that D any E x, x doesn't F the G of H a I, J-K L M [etc.].
+Chars: 136 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-..
+
+--- Pattern 483 ---
+Original: Thus, SC and ZE attribute properties to properties.
+Bleached: Thus, A and B C D to D.
+Chars: 51 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 484 ---
+Original: They don’t attribute non-existence to objects.
+Bleached: They don't X non-Y to Z's.
+Chars: 46 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 485 ---
+Original: And:
+
+(CS) square circles do exist
+
+and
+
+(EZ) Zeus exists
+
+are to be understood similarly.
+Bleached: And:
+
+(CS) A B's do exist
+
+and
+
+(EZ) C exists
+
+are to be understood similarly.
+Chars: 98 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()().
+
+--- Pattern 486 ---
+Original: There isn’t some square circle x such that CS is to the effect that:
+
+(MCS) x exists.
+Bleached: There isn't some X Y x such that CS is to the effect that:
+
+(MCS) x exists.
+Chars: 87 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :().
+
+--- Pattern 487 ---
+Original: Rather, CS is to the effect that:
+
+(MCS1) it isn’t true that everything that is a square isn’t also a circle
+
+or, alternatively,
+(MCS2) the set of circles overlaps with that of squares.
+Bleached: Rather, A is to the effect that:
+
+(MCS1) it isn't true that everything that is a B isn't also a C
+
+or, alternatively,
+(MCS2) the D of C's E-s with that of B's.
+Chars: 190 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:(),,().
+
+--- Pattern 488 ---
+Original: And there isn’t some god x such that x hurls lightning bolts (etc.) such that EZ is to the effect that:
+
+(MEZ) x exists.
+Bleached: And there isn't some A x such that x B's C D's (etc.) such that EZ is to the effect that:
+
+(MEZ) x exists.
+Chars: 122 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.):().
+
+--- Pattern 489 ---
+Original: Rather EZ is to the effect that:
+
+(MEZ) it isn’t true of any given thing x that x doesn’t uniquely have the property of being something that lives on Mt.
+Bleached: Rather EZ is to the effect that:
+
+(MEZ) it isn't true of any given thing x that x doesn't uniquely have the A of being something that B-s on C.
+Chars: 155 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :().
+
+--- Pattern 490 ---
+Original: Olympus and hurls lightning bolts [etc.].
+Bleached: A and B's C D's [etc.].
+Chars: 41 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 491 ---
+Original: It isn’t even possible to attribute non-existence to a non-existent object.
+Bleached: It isn't even X to Y Z-ence to a Z W.
+Chars: 75 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 492 ---
+Original: One’s doing would so would involve there existing some non-existent object to which one attributed non-existence.
+Bleached: One's X-ing would so would Y there Z-ing some non-W object to which one V-ed non-existence.
+Chars: 113 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 493 ---
+Original: But that isn’t possible.
+Bleached: But that isn't X.
+Chars: 24 | Tokens: 4 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 494 ---
+Original: Nor is it possible to attribute existence to a non-existent object.
+Bleached: Nor is it A to B C to a D-ent E.
+Chars: 67 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 495 ---
+Original: One’s doing so would involve there existing some non-existent object to which one attributed existence.
+Bleached: One's X-ing so would Y there Z-ing some non-W object to which one V-ed existence.
+Chars: 103 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 496 ---
+Original: But that isn’t possible.
+Bleached: But that isn't X.
+Chars: 24 | Tokens: 4 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 497 ---
+Original: Thus, nothing to which existence or non-existence is attributed is non-existent.
+Bleached: Thus, nothing to which A or non-A is B-ed is non-C.
+Chars: 80 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--.
+
+--- Pattern 498 ---
+Original: This is a pretty innocuous claim, as it’s identical with the obvious truth that there is no object x such that existence or non-existence is attributed to x and such that x doesn’t exist.
+Bleached: This is a A B C, as it's D with the E F that there is no G x such that H or I-H is J-ed to x and such that x doesn't K.
+Chars: 187 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 499 ---
+Original: It follows that a precondition for a thing’s being described as existent or non-existent is its existing.
+Bleached: It follows that a X for a thing's being Y-ed as Z or non-Z is its Z-ing.
+Chars: 105 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 500 ---
+Original: This means that, if P is the proposition one affirms when one describes a given object as existent, there is no negation of P.
+Bleached: This X that, if P is the Y one Z's when one W's a given V as U, there is no T of P.
+Chars: 126 | Tokens: 24 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 501 ---
+Original: Since any given proposition can be negated, it follows that, in attributing existence to a given thing, one isn’t affirming anything.
+Bleached: Since any given X can be Y-ed, it Z's that, in W-ing V to a given U, one isn't T-ing anything.
+Chars: 133 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 502 ---
+Original: It is meaningless to say of specific individuals that they exist or don’t exist.
+Bleached: It is A to B of C D that they E or don't E.
+Chars: 80 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 503 ---
+Original: ENDNOTES
+Name:_______________________________________ Date: _______________________________
+Exercises
+1.
+Bleached: ENDNOTES
+Name:_______________________________________ Date: _______________________________
+X's
+1.
+Chars: 107 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::.
+
+--- Pattern 504 ---
+Original: Consider the following argument:
+
+(*) Since God is by definition something that lacks no perfection, and since lacking existence would be a rather extreme way of lacking a perfection, it follows that God exists.
+Bleached: Consider the following X:
+
+(*) Since Y is by Z something that lacks no W, and since lacking V would be a rather Q way of lacking a W, it follows that Y exists.
+Chars: 213 | Tokens: 34 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :(),,.
+
+--- Pattern 505 ---
+Original: Is (*) a cogent argument?
+Bleached: Is (*) a X argument?
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()?
+
+--- Pattern 506 ---
+Original: In other words, does it establish the conclusion that it is meant to establish?
+Bleached: In other words, does it X the Y that it is Z to X?
+Chars: 79 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 507 ---
+Original: a.
+Bleached: a.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 508 ---
+Original: Yes.
+Bleached: Yes.
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 509 ---
+Original: b.
+Bleached: b.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 510 ---
+Original: As posed, that question cannot be answered in a principled manner, since one could provide a correct response to it only if one knew things (e.g., what does “God” mean precisely?
+Bleached: As X-ed, that Y cannot be Z-ed in a W-ed V, since one could U a T S to it only if one R-ed Q's (e.g., what does "P" O N?
+Chars: 178 | Tokens: 31 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,(..,?
+
+--- Pattern 511 ---
+Original: what is a “perfection”?) concerning which the question provides insufficient relevant information.
+Bleached: what is a "Z"?) concerning which the Y X's Ω relevant Δ.
+Chars: 98 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?).
+
+--- Pattern 512 ---
+Original: c.
+Bleached: c.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 513 ---
+Original: Both of the above.
+Bleached: Both of the X.
+Chars: 18 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 514 ---
+Original: d.
+Bleached: d.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 515 ---
+Original: None of the above.
+Bleached: X of the Y.
+Chars: 18 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 516 ---
+Original: 2.
+Bleached: 2.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 517 ---
+Original: For argument’s sake, let’s assume that killing babies is always unconditionally wrong.
+Bleached: For X's sake, let's Y that Z-ing W's is always V-ly Q.
+Chars: 86 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 518 ---
+Original: Let’s also assume that there is an all-knowing, all-good, all-powerful God.
+Bleached: Let's also X that there is an Y-ing, Z-good, W-powerful A.
+Chars: 75 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,-.
+
+--- Pattern 519 ---
+Original: In light of these assumptions, consider the following proposition:
+
+(*) Killing innocent and healthy babies, when nothing other than sadistic pleasure can come of it, is at least sometimes morally good.
+Bleached: In light of these A, B the following C:
+
+(*) D-ing E and F G, when nothing other than H I can J of it, is at least sometimes K L.
+Chars: 204 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:(),,.
+
+--- Pattern 520 ---
+Original: Could God make (*) be true?
+Bleached: Could X Y (*) be true?
+Chars: 27 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()?
+
+--- Pattern 521 ---
+Original: (Note: this question doesn’t concern the sentence used to express (*), but rather the principle expressed by that sentence.)
+
+a.
+Bleached: (Note: this X doesn't Y the Z used to V (*), but rather the W V-ed by that Z.)
+
+a.
+Chars: 130 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (:(),.).
+
+--- Pattern 522 ---
+Original: Yes.
+Bleached: Yes.
+Chars: 4 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 523 ---
+Original: After all, God can do anything.
+Bleached: After all, X can Y anything.
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 524 ---
+Original: b.
+Bleached: b.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 525 ---
+Original: No.
+Bleached: No.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 526 ---
+Original: Even if God is all-powerful, He/She cannot make (*) be true.
+Bleached: Even if X is Y, He/She cannot Z (*) be true.
+Chars: 60 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,().
+
+--- Pattern 527 ---
+Original: c.
+Bleached: c.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 528 ---
+Original: Possibly, but not necessarily.
+Bleached: P, but not Q.
+Chars: 30 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 529 ---
+Original: It depends on psychological facts about babies and also about morality information which is absent from the question, making that question unanswerable in its current form.
+Bleached: It X-s on Y Z-s about A-s and also about B C which is D from the E, F-ing that E G-able in its H I.
+Chars: 172 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 530 ---
+Original: 3.
+Bleached: 3.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 531 ---
+Original: Let’s assume that the number seven necessarily exists and is also necessarily an odd number.
+Bleached: Let's X that the Y Z W X's and is also W an E Y.
+Chars: 92 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 532 ---
+Original: Let’s also assume that there is an all-knowing, all-good, all-powerful God.
+Bleached: Let's also assume that there is an all-X-ing, all-Y, all-Z God.
+Chars: 75 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,-.
+
+--- Pattern 533 ---
+Original: Relative to these assumptions, could God destroy the number seven or make it be even?
+Bleached: A to these B, could C D the E F or G it be H?
+Chars: 85 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 534 ---
+Original: a.
+Bleached: a.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 535 ---
+Original: Possibly.
+Bleached: A.
+Chars: 9 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 536 ---
+Original: The answer depends on the outcome of carefully executed physical experiments, the reason being that arithmetical facts are high-level generalizations about the physical world.
+Bleached: The X Y-s on the Z of W-ly X-ed V X-s, the U being that W V-s are X-level Z-s about the V W.
+Chars: 175 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 537 ---
+Original: Since no information as to the nature of such experiments is provided in the question, no answer can be given to that question in this context.
+Bleached: Since no A as to the B of such C's is D-ed in the E, no F can be G-ed to that E in this H.
+Chars: 143 | Tokens: 26 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 538 ---
+Original: b.
+Bleached: b.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 539 ---
+Original: Absolutely.
+Bleached: Y.
+Chars: 11 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 540 ---
+Original: c.
+Bleached: c.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 541 ---
+Original: None of the above.
+Bleached: None of the X.
+Chars: 18 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 542 ---
+Original: 4.
+Bleached: 4.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 543 ---
+Original: Which of the following propositions, if any, could an omnipotent God make true?
+Bleached: Which of the following X's, if any, could an Y Z make true?
+Chars: 79 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,?
+
+--- Pattern 544 ---
+Original: a.
+Bleached: a.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 545 ---
+Original: Some events occur before they occur.
+Bleached: Some A's B before they B.
+Chars: 36 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 546 ---
+Original: b.
+Bleached: b.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 547 ---
+Original: There are finitely many even numbers.
+Bleached: There are X-ly Y Z X's.
+Chars: 37 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 548 ---
+Original: c.
+Bleached: c.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 549 ---
+Original: All people are benevolent.
+Bleached: All X are Y.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 550 ---
+Original: 5.
+Bleached: 5.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 551 ---
+Original: Put forth an argument FOR the Divine Command Theory (DCT).
+Bleached: Put forth an Z FOR the A B C (DCT).
+Chars: 58 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 552 ---
+Original: But make sure that, before doing so, you do the following.
+Bleached: But X Y that, before Z-ing so, you do the W-ing.
+Chars: 58 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 553 ---
+Original: First, clearly state (in your own words) the arguments that we considered against DCT.
+Bleached: First, clearly X (in your own Y) the Z that we W-ed against DCT.
+Chars: 86 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 554 ---
+Original: Make sure that you make it clear what it  means to say that “normative questions must be distinguished from historical questions”; and make sure that you also explain why that precept is relevant in the present context.
+Bleached: Make sure that you make it clear what it means to say that "A B's must be C-ed from D B's"; and make sure that you also explain why that E is F in the present G.
+Chars: 219 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 555 ---
+Original: Explain what the “Euthyphro” problem is.
+Bleached: X what the "Y" Z is.
+Chars: 40 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 556 ---
+Original: Also, some advocates of DCT sometimes argue that, so far as DCT seems to have counterintuitive consequences, that is not because DCT is wrong, but is instead because our ethical judgments reflect idiosyncrasies of our cultures and upbringings.
+Bleached: Also, some A's of B sometimes C that, so far as B seems to have D E's, that is not because B is F, but is instead because our G H's I J's of our K's and L's.
+Chars: 243 | Tokens: 38 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 557 ---
+Original: Explain why, even though that maneuver has merit, it comes with a heavy price.
+Bleached: B why, even though that C has D, it E's with a F G.
+Chars: 78 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 558 ---
+Original: (Hint: if you say that our ethical judgments are by-products of our upbringing, and therefore aren’t hewed to anything objective, then you are ipso facto denying that your judgments are any good, in which case you forfeit your right to assert anything—whether it be DCT or Newtonian physics.) 
+Having done all of that, say why, in your judgment, DCT prevails against all of problems that have been identified.
+Bleached: (Hint: if you say that our A B's are C-products of our D, and therefore aren't E-ed to anything F, then you are ipso facto G-ing that your B's are any H, in which case you I your J to K anything—whether it be L or M N.) 
+Having O all of that, say why, in your B, L P's against all of Q's that have been R-ed.
+Chars: 410 | Tokens: 68 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (:-,,,—.),,,.
+
+--- Pattern 559 ---
+Original: Fun fact: St.
+Bleached: A B: C.
+Chars: 13 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 560 ---
+Original: Thomas Aquinas (who lived in the 13th century) argues against DCT (along lines similar  to the ones we’ve discussed).
+Bleached: A B (who C-ed in the D-th E) F-s against G (along H-s I to the J-s we've K-ed).
+Chars: 117 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()().
+
+--- Pattern 561 ---
+Original: Since Aquinas’ time, it has been heresy in the Catholic Church to accept DCT.
+Bleached: Since A's time, it has been B in the C D to accept E.
+Chars: 77 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 562 ---
+Original: (Incidentally, this strongly suggests that, contrary to what I said in Section 1.6, one can reject DCT and be religious.
+Bleached: (Y, this Z W's that, X to what I X-ed in Y 1.6, one can X DCT and be X.
+Chars: 120 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,.,.
+
+--- Pattern 563 ---
+Original: In fact, Aquinas argues that, to be genuinely religious, one must reject DCT.
+Bleached: In fact, A argues that, to be genuinely B, one must reject C.
+Chars: 77 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 564 ---
+Original: My feeling is that to the extent that Aquinas rejected DCT, he wasn’t religious and that to the extent that he was religious, he actually did accept DCT, even though, evidently, he didn’t admit it to himself.
+Bleached: My X is that to the extent that Y Z-ed DCT, he wasn't W and that to the extent that he was W, he actually did V DCT, even though, evidently, he didn't U it to himself.
+Chars: 208 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 565 ---
+Original: Religious intellectuals are masters of compartmentalization.)
+
+6.
+Bleached: A intellectuals are B's of C.)
+
+6.
+Chars: 67 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .).
+
+--- Pattern 566 ---
+Original: One of the two theodicies that we discussed presupposes that there is such a thing as free will.
+Bleached: A of the two B's that we C-ed D's that there is such a E as F G.
+Chars: 96 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 567 ---
+Original: State that theodicy.
+Bleached: Y that Z.
+Chars: 20 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 568 ---
+Original: Then say why it is questionable whether there is such a thing as free will.
+Bleached: Then Y why it is Z-able whether there is such a thing as W X.
+Chars: 75 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 569 ---
+Original: Also say why, supposing that there is free will, it wouldn’t necessarily help the theodicy in question.
+Bleached: Also X why, Y-ing that there is Z W, it wouldn't V help the T in U.
+Chars: 103 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 570 ---
+Original: 7.
+Bleached: 7.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 571 ---
+Original: According to many, God is omniscient.
+Bleached: According to many, X is Y.
+Chars: 37 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 572 ---
+Original: For the purposes of this question, suppose this to be correct.
+Bleached: For the X's of this Y, Z this to be W.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 573 ---
+Original: Given that God is omniscient, He/She has always known exactly what each person—past, present, and future— would do at each moment of his/her life.
+Bleached: Given that X is Y, He/She has always Z-ed exactly what each F—past, present, and future— would do at each moment of his/her life.
+Chars: 146 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—,,—.
+
+--- Pattern 574 ---
+Original: Does this mean that you have no free will?
+Bleached: Does this X that you have no Y Z?
+Chars: 42 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 575 ---
+Original: If “yes,” does that entail that nobody is morally responsible for their actions?
+Bleached: If "X," does that Y that Z is W V for their U?
+Chars: 80 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,?
+
+--- Pattern 576 ---
+Original: If “no,” does that mean that people are necessarily responsible for their actions?
+Bleached: If "no," does that mean that X are necessarily Y for their Z?
+Chars: 82 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,?
+
+--- Pattern 577 ---
+Original: 8.
+Bleached: 8.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 578 ---
+Original: The free-will theodicy presupposes that God is omniscient and therefore knows exactly what the future holds.
+Bleached: The A-B C presupposes that D is E and therefore F exactly what the G H.
+Chars: 108 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 579 ---
+Original: But if Gods knows now what I will do 10 years from now, it’s hard to see how I could possibly have any free will.
+Bleached: But if A B-s now what I will C 10 D-s from now, it's E to F how I could G H any I J.
+Chars: 113 | Tokens: 25 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 580 ---
+Original: The Free Will defense thus seems to have the absurd consequence that people both do, and do not, have free will.
+Bleached: The X Y Z thus seems to have the W V that U both do, and do not, have X Y.
+Chars: 112 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 581 ---
+Original: Say what a proponent of the Free Will defense might say in response to this charge.
+Bleached: Say what a X of the Y Z A might say in response to this B.
+Chars: 83 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 582 ---
+Original: Make sure that the argument that you attribute to this person is substantial—don’t saddle them with a “straw” argument.
+Bleached: A sure that the B that you C to this D is E—don't F them with a "G" B.
+Chars: 119 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —.
+
+--- Pattern 583 ---
+Original: Then evaluate that person’s argument.
+Bleached: Then X that Y's Z.
+Chars: 37 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 584 ---
+Original: 9.
+Bleached: 9.
+Chars: 2 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 585 ---
+Original: According to Descartes, God, being omnipotent, can make 1 + 1 = 3.
+Bleached: According to X, Y, being Z, can W 1 + 1 = 3.
+Chars: 66 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 586 ---
+Original: According to Wittgenstein, even if God is omnipotent, He/She cannot make 1 + 1 = 3.
+Bleached: According to Ω, even if X is Y, He/She cannot make 1 + 1 = 3.
+Chars: 83 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 587 ---
+Original: In other words, even an omnipotent being cannot make 1 + 1 = 3.
+Bleached: In other words, even an X Y cannot make 1 + 1 = 3.
+Chars: 63 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 588 ---
+Original: The idea, basically, is that the very idea that 1 + 1 should equal 3 is so incoherent that there isn’t anything to be done—if x + y = 3, then ipso facto either x or y isn’t equal to one.
+Bleached: The A, basically, is that the very A that 1 + 1 should B 3 is so C that there isn't anything to be D—if x + y = 3, then ipso facto either x or y isn't E to one.
+Chars: 186 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,—,.
+
+--- Pattern 589 ---
+Original: Just as the world’s greatest athlete couldn’t score a touchdown in tennis (since a game where a touchdown is scored is ipso facto not tennis), so even the most powerful being couldn’t make 1 + 1 = 3 (or triangles have four sides).
+Bleached: Just as the X's Y-est Z couldn't V a W in Q (since a R where a W is V-ed is S T not Q), so even the most U being couldn't make 1 + 1 = 3 (or M's have four N's).
+Chars: 230 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),().
+
+--- Pattern 590 ---
+Original: In this chapter, I argued that, for similar reasons, even an omnipotent being couldn’t make rape, wanton torture, etc., morally correct.
+Bleached: In this X, I Y-ed that, for Z A's, even an B C couldn't D E, F G, etc., H I.
+Chars: 136 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.,.
+
+--- Pattern 591 ---
+Original: In your own words, reproduce my argument.
+Bleached: In your own X's, Y my Z.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 592 ---
+Original: Then put forth your own view of the matter.
+Bleached: Then X forth your own Y of the Z.
+Chars: 43 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 593 ---
+Original: In other words, argue that, contrary to what I say, an omnipotent being could make rape be morally okay (and could make 1 + 1 = 3).
+Bleached: In other words, X that, contrary to what I Y, an Z being could W rape be morally A (and could W 1 + 1 = 3).
+Chars: 131 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,().
+
+--- Pattern 594 ---
+Original: Or, alternatively, argue that, just as I argue, such a being couldn’t do those things.
+Bleached: Or, alternatively, X that, just as I X, such a being couldn't do those things.
+Chars: 86 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 595 ---
+Original: If you argue the latter, make sure to consider arguments against my position.
+Bleached: If you X the Y, Z sure to W arguments against my position.
+Chars: 77 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 596 ---
+Original: 10.
+Bleached: 10.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 597 ---
+Original: What is a theodicy?
+Bleached: What is a X?
+Chars: 19 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 598 ---
+Original: Identify two theodicies.
+Bleached: X-ify two Y's.
+Chars: 24 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 599 ---
+Original: These theodicies don’t have to be the ones discussed in this chapter; nor do they have to be especially compelling.
+Bleached: These A's don't have to be the ones B-ed in this C; nor do they have to be especially D-ing.
+Chars: 115 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 600 ---
+Original: They must simply satisfy the formal requirements laid down in the definition of the term “theodicy.”
+
+11.
+Bleached: They must simply A the B C D down in the E of the F "G."
+
+11.
+Chars: 107 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 601 ---
+Original: Explain the reasoning behind the two theodicies discussed in class.
+Bleached: X the Y behind the two Z's X-ed in W.
+Chars: 67 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 602 ---
+Original: (Your complete answer should be no more than five sentences.)
+
+12.
+Bleached: (Your X A should be no B than C D.)
+
+12.
+Chars: 68 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.).
+
+--- Pattern 603 ---
+Original: Identify one important problem with the “free-will” theodicy.
+Bleached: A one B C with the "D-E" F.
+Chars: 61 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 604 ---
+Original: Your answer cannot be that the concept of free will is incoherent, or anything along those lines.
+Bleached: Your X cannot be that the Y of Z W is V, or anything along those U.
+Chars: 97 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 605 ---
+Original: (Your answer can be anywhere from one to three sentences.)
+
+13.
+Bleached: (Your answer can be anywhere from one to three sentences.)
+
+13.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.).
+
+--- Pattern 606 ---
+Original: Explain why, even if God is omnipotent, He/She cannot create two distinct, straight objects (in a Euclidean space) that are parallel but intersect.
+Bleached: X why, even if Y is Z, He/She cannot W two A, B C's (in a D E) that are F but G.
+Chars: 147 | Tokens: 23 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,().
+
+--- Pattern 607 ---
+Original: 14.
+Bleached: 14.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 608 ---
+Original: Identify some problems with rule-utilitarianism (RU), which is to be distinguished from act- utilitarianism (AU).
+Bleached: X some Y with Z-W (RU), which is to be X from A-W (AU).
+Chars: 113 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -(),-().
+
+--- Pattern 609 ---
+Original: In your paper, say what utilitarianism is in general.
+Bleached: In your X, Y what Z is in W.
+Chars: 53 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 610 ---
+Original: Then say how AU and RU differ from each other, saying also how RU avoids many of the problems with AU.
+Bleached: Then V how X and Y W from each other, V-ing also how Y Z's many of the A's with X.
+Chars: 102 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 611 ---
+Original: Then say why RU has (or at least appears to have) some problems of its own that warrant its rejection.
+Bleached: Then X why Y has (or at least Z to have) some W's of its own that V its R.
+Chars: 102 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 612 ---
+Original: 15.
+Bleached: 15.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 613 ---
+Original: What is the problem of evil (POE)?
+Bleached: What is the A of B (POE)?
+Chars: 34 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()?
+
+--- Pattern 614 ---
+Original: What are two proposed solutions to it?
+Bleached: What are two X-ed Y's to it?
+Chars: 38 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 615 ---
+Original: How do those solutions fall short (or appear to do so)?
+Bleached: How do those X's Y short (or Z to do so)?
+Chars: 55 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()?
+
+--- Pattern 616 ---
+Original: 16.
+Bleached: 16.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 617 ---
+Original: One of the solutions we considered to the problem of evil (POE) presupposes that we have free will.
+Bleached: One of the X's we Y-ed to the Z of W (POE) V's that we have A B.
+Chars: 99 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 618 ---
+Original: But there are two conceptions of free will: the compatibilist and the incompatibilist.
+Bleached: But there are two X's of Y Z: the A and the B.
+Chars: 86 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: :.
+
+--- Pattern 619 ---
+Original: Explain why a compatibilist (see Chapter 15) conception of free will doesn’t help the aforementioned solution to POE.
+Bleached: X why a Y (see Z 15) W of X V doesn't X the X X to Y.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 620 ---
+Original: Then say whether an incompatibilist solution can make that solution work.
+Bleached: Then A whether an B C can D that C E.
+Chars: 73 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 621 ---
+Original: 17.
+Bleached: 17.
+Chars: 3 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 622 ---
+Original: What is Divine Command Theory, and what are two problems with it?
+Bleached: What is X Y Z, and what are two A's with it?
+Chars: 65 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+

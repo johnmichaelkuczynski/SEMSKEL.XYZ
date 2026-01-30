@@ -147,6 +147,7 @@ export default function Home() {
   const [patternGenProcessing, setPatternGenProcessing] = useState(false);
   const [patternGenFile, setPatternGenFile] = useState<string | null>(null);
   const [patternGenAuthor, setPatternGenAuthor] = useState("");
+  const [patternGenProgress, setPatternGenProgress] = useState<{ current: number; total: number } | null>(null);
   
   // JSONL Output section author (separate from Pattern Generator)
   const [jsonlAuthor, setJsonlAuthor] = useState("");
@@ -1451,6 +1452,7 @@ export default function Home() {
     setPatternGenOutput("");
     setPatternGenFile(null);
     setPatternGenAuthor("");
+    setPatternGenProgress(null);
     // Clear bleaching section
     setInputText("");
     setOutputText("");
@@ -2179,26 +2181,89 @@ export default function Home() {
           </div>
           
           {/* GENERATE BUTTON */}
-          <div className="flex justify-center mt-4">
+          <div className="flex flex-col items-center gap-2 mt-4">
             <Button
               onClick={async () => {
                 if (!patternGenInput.trim()) return;
                 setPatternGenProcessing(true);
                 setPatternGenOutput("");
+                setPatternGenProgress(null);
+                
                 try {
-                  const response = await apiRequest("POST", "/api/build-sentence-bank", {
-                    text: patternGenInput,
-                    level: "Heavy",
-                    provider: "anthropic",
-                  });
-                  const data = await response.json();
+                  // Split text into chunks (~1000 words each) for large documents
+                  const words = patternGenInput.split(/\s+/);
+                  const CHUNK_SIZE = 1000; // words per chunk
+                  const allJsonlLines: string[] = [];
                   
-                  if (data.jsonlContent) {
-                    const lines = data.jsonlContent.trim().split("\n");
-                    const authorLine = patternGenAuthor.trim() ? `Author: ${patternGenAuthor.trim()}\n` : "";
-                    let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\n${authorLine}Generated: ${new Date().toLocaleString()}\n\n`;
+                  if (words.length <= CHUNK_SIZE) {
+                    // Small document - process in one request
+                    const response = await apiRequest("POST", "/api/build-sentence-bank", {
+                      text: patternGenInput,
+                      level: "Heavy",
+                      provider: "anthropic",
+                    });
+                    const data = await response.json();
+                    if (data.jsonlContent) {
+                      allJsonlLines.push(...data.jsonlContent.trim().split("\n").filter(Boolean));
+                    }
+                  } else {
+                    // Large document - split into chunks and process sequentially
+                    const chunks: string[] = [];
+                    let currentChunk: string[] = [];
                     
-                    lines.forEach((line: string, index: number) => {
+                    // Split by sentences to preserve context
+                    const sentences = patternGenInput.split(/(?<=[.!?])\s+/);
+                    let currentWordCount = 0;
+                    
+                    for (const sentence of sentences) {
+                      const sentenceWords = sentence.split(/\s+/).length;
+                      if (currentWordCount + sentenceWords > CHUNK_SIZE && currentChunk.length > 0) {
+                        chunks.push(currentChunk.join(" "));
+                        currentChunk = [sentence];
+                        currentWordCount = sentenceWords;
+                      } else {
+                        currentChunk.push(sentence);
+                        currentWordCount += sentenceWords;
+                      }
+                    }
+                    if (currentChunk.length > 0) {
+                      chunks.push(currentChunk.join(" "));
+                    }
+                    
+                    setPatternGenProgress({ current: 0, total: chunks.length });
+                    
+                    // Process each chunk sequentially
+                    for (let i = 0; i < chunks.length; i++) {
+                      setPatternGenProgress({ current: i + 1, total: chunks.length });
+                      
+                      try {
+                        const response = await apiRequest("POST", "/api/build-sentence-bank", {
+                          text: chunks[i],
+                          level: "Heavy",
+                          provider: "anthropic",
+                        });
+                        const data = await response.json();
+                        if (data.jsonlContent) {
+                          allJsonlLines.push(...data.jsonlContent.trim().split("\n").filter(Boolean));
+                        }
+                      } catch (chunkError) {
+                        console.error(`Chunk ${i + 1} failed:`, chunkError);
+                        // Continue with other chunks
+                      }
+                      
+                      // Small delay between chunks to avoid rate limits
+                      if (i < chunks.length - 1) {
+                        await new Promise(r => setTimeout(r, 500));
+                      }
+                    }
+                  }
+                  
+                  // Format output
+                  if (allJsonlLines.length > 0) {
+                    const authorLine = patternGenAuthor.trim() ? `Author: ${patternGenAuthor.trim()}\n` : "";
+                    let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${allJsonlLines.length}\n${authorLine}Generated: ${new Date().toLocaleString()}\n\n`;
+                    
+                    allJsonlLines.forEach((line: string, index: number) => {
                       try {
                         const entry = JSON.parse(line);
                         txtContent += `--- Pattern ${index + 1} ---\n`;
@@ -2211,19 +2276,34 @@ export default function Home() {
                     });
                     
                     setPatternGenOutput(txtContent);
-                    toast({ title: "Patterns generated!", description: `${lines.length} patterns ready. Click Download to save.` });
+                    toast({ title: "Patterns generated!", description: `${allJsonlLines.length} patterns ready. Click Download or Upload to DB.` });
+                  } else {
+                    toast({ title: "Warning", description: "No patterns were generated", variant: "destructive" });
                   }
                 } catch (error) {
                   toast({ title: "Error", description: "Failed to generate patterns", variant: "destructive" });
                 }
                 setPatternGenProcessing(false);
+                setPatternGenProgress(null);
               }}
               disabled={!patternGenInput.trim() || patternGenProcessing}
               className="px-16 py-6 bg-green-600 hover:bg-green-700 text-white font-bold text-xl"
               data-testid="button-generate-pattern-file"
             >
-              {patternGenProcessing ? "PROCESSING..." : "GENERATE PATTERNS"}
+              {patternGenProcessing 
+                ? (patternGenProgress 
+                    ? `PROCESSING CHUNK ${patternGenProgress.current}/${patternGenProgress.total}...` 
+                    : "PROCESSING...")
+                : "GENERATE PATTERNS"}
             </Button>
+            {patternGenProgress && (
+              <div className="w-64 h-2 bg-gray-200 rounded-full overflow-hidden">
+                <div 
+                  className="h-full bg-green-600 transition-all duration-300"
+                  style={{ width: `${(patternGenProgress.current / patternGenProgress.total) * 100}%` }}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
