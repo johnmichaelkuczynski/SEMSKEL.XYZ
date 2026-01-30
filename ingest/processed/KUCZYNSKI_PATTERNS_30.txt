@@ -1,0 +1,276 @@
+=== SENTENCE BANK ===
+Total Patterns: 37
+Author: KUCZYNSKI
+Generated: 1/30/2026, 2:16:21 PM
+
+--- Pattern 1 ---
+Original: Bureaucratism is late-onset psychopathy.
+Bleached: A is B-C D.
+Chars: 40 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 2 ---
+Original: Let me explain.
+Bleached: Let me X.
+Chars: 15 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 3 ---
+Original: First of all, psychopathy is simply a complete lack of integrity.
+Bleached: F of all, P is simply a Q R of S.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 4 ---
+Original: In some cases, this lack of integrity sets in very early in life.
+Bleached: In some X's, this Y of Z W's in very V in X.
+Chars: 65 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 5 ---
+Original: When this happens, the person in question never even develops the character-architecture of a normal person, and so far as he ever appears to have one, it is simply because he is faking it.
+Bleached: When this happens, the F in question never even X's the Y-Z of a normal F, and so far as he ever appears to have one, it is simply because he is W-ing it.
+Chars: 189 | Tokens: 34 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,-,,.
+
+--- Pattern 6 ---
+Original: These people are con-artists, grifters, drifters, cult-leaders, and altogether plastic and obviously phony people.
+Bleached: These A are B-C, D, E, F-G, and altogether H and obviously I A.
+Chars: 114 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,-,.
+
+--- Pattern 7 ---
+Original: A vastly more common kind of psychopat is the bureaupath, this being someone who forfeits his integrity into order to fit into some bureaucratic institution or pseudo-legitimate area of professional endeavor, such as academia or the law.
+Bleached: A X-ly more Y kind of Z is the W, this being someone who V-s his U into order to fit into some T S or R-Q area of P O, such as N or the M.
+Chars: 237 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,.
+
+--- Pattern 8 ---
+Original: This sort of person parted with his integrity late in life, and therefore did develop the characterological properties of a normal person and still, even after psychopathizing, retains the formal properties of such a person.
+Bleached: This A of F B-ed with his C D in E, and therefore did F the G H's of a I F and J, K L M-ing, N's the O H's of P a F.
+Chars: 224 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 9 ---
+Original: In this sort of person, psychopathizing is the same as bureaucratizing—becoming a bureaucratic husk of a person, somebody for whom the magic is gone and in whom the spark is gone.
+Bleached: In this X of Y, Z-ing is the same as W-ing—becoming a W-ic V of a Y, U for whom the T is gone and in whom the S is gone.
+Chars: 179 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,—,.
+
+--- Pattern 10 ---
+Original: In any case, contrary to what people are likely to presume, such people are indeed bona fide psychopaths.
+Bleached: In any case, contrary to what X are likely to Y, such X are indeed Z W X's.
+Chars: 105 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 11 ---
+Original: The reason they seem not to be psychopaths is that, unlike the early onset psychopath—who becomes an obvious conman or some such— the bureaupath is a late onset psychopath, who psychopathized in an institutional context and in order to submit, in the most complete way possible, to institution-internal, purely political mandates.
+Bleached: The Y they seem not to be Z's is that, unlike the early K Z—who becomes an obvious L or some such— the M is a late K Z, who Z-ed in an N context and in order to submit, in the most complete way possible, to N-internal, purely political P's.
+Chars: 330 | Tokens: 51 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,——,,,-,.
+
+--- Pattern 12 ---
+Original: But there is a third kind of psychopath, also a late-onset psychopath.
+Bleached: But there is a third kind of X, also a Y-Z X.
+Chars: 70 | Tokens: 12 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-.
+
+--- Pattern 13 ---
+Original: Academia, specifically the humanities, are replete with this sort of psychopath.
+Bleached: A, specifically the B, are C with this D of E.
+Chars: 80 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 14 ---
+Original: Some background will help.
+Bleached: Some A will B.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 15 ---
+Original: A lot of people, instead of saying that they agree with Freud or that they disagree with him, wil make
+
+statements long the lines of “he had a model”, or “the Freudian critique is compelling, but should be tempered by the Marxist critique”, or “Freud’s narrative was informed by such and such…” The most invidious such dodge is: “Freud is interesting, but it should be treated as literature…”
+People who say these thigns don’t understand Freud.
+Bleached: A lot of X, instead of Y-ing that they Z with A or that they B with him, wil make
+
+C long the lines of "he had a D", or "the A-ian E is F, but should be G-ed by the H-ist E", or "A's I was J-ed by such and such…" The most K such L is: "A is M, but it should be N-ed as O…"
+X who say these P don't Q A.
+Chars: 447 | Tokens: 76 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,,:,.
+
+--- Pattern 16 ---
+Original: Which is not in and of itself a crime, let alone psychopathic, and which in most contexts is no consequence.
+Bleached: Which is not in and of itself a X, let alone Y, and which in most Z's is no W.
+Chars: 108 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 17 ---
+Original: What is psychopathic is the hypocritical, projective stalling that they are doing.
+Bleached: What is A is the B, C D that they are doing.
+Chars: 82 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 18 ---
+Original: They simply don’t understand Freud.
+Bleached: They simply don't X Y.
+Chars: 35 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 19 ---
+Original: One option under such circumstances is to say: I don’t understand Freud.
+Bleached: One Z under such Y's is to say: I don't X Freud.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 20 ---
+Original: No comment.’ Another option is to say: ‘I half-understand him, but I half-don’t understand him.
+Bleached: No A.' Another B is to C: 'I D-E him, but I D-don't E him.
+Chars: 95 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .:-,-.
+
+--- Pattern 21 ---
+Original: And I do, or do not, agree with the half that I understand.’ What is not an option is to project one’s own failure to understand onto the object of one’s non- understanding.
+Bleached: And I do, or do not, X with the Y that I Z.' What is not an W is to V one's own T to Z onto the S of one's non- Z-ing.
+Chars: 173 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.-.
+
+--- Pattern 22 ---
+Original: What is not an option is to slime up that object by saying that it is ‘literature’ or a ‘narrative’ or a ‘critique’, etc.
+Bleached: What is not an X is to Y up that Z by W-ing that it is 'A' or a 'B' or a 'C', etc.
+Chars: 121 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 23 ---
+Original: These terms are used by phonies: by people who don’t understand but want to seem authoritative.
+Bleached: These X are Y-ed by Z's: by F who don't W but V to Q R.
+Chars: 95 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 24 ---
+Original: So they are scumming up the truth and the categories in terms of which the truth is to be grasped with spongiform pseudo-cognitive categories, like ‘narrative’, ‘critique’, and ‘literature.’ That is psychopathic.
+Bleached: So they are X-ing up the Y and the Z's in terms of which the Y is to be W-ed with A B-C's, like 'D', 'E', and 'F.' That is G.
+Chars: 212 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,..
+
+--- Pattern 25 ---
+Original: It is driven by narcissism, hate, and psychopathic, infinite disregard for the truth.
+Bleached: It is X-ed by Y, Z, and W, A B for the C.
+Chars: 85 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 26 ---
+Original: There is a heavy element of sheer stupidity in there as well, since someone with half a brain wouldn’t diminish themselves by so alienating themselves from the truth.
+Bleached: There is a A B of C D in there as well, since E with F a G wouldn't H themselves by so I-ing themselves from the J.
+Chars: 166 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 27 ---
+Original: But stupidity is perfectly compatible with psychopathy, which is nothing other than a total lack of integrity.
+Bleached: But X is perfectly Y with Z, which is nothing other than a total W of V.
+Chars: 110 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 28 ---
+Original: A magnet for psychopaths of this particular variety is the whole concept of the ‘paradigm’, in the sense in which Kuhn uses that term in his absurdly over-valued book The Structure of Scientific Revolutions.
+Bleached: A X for Y's of this Z W is the X X of the 'P', in the X in which K X's that X in his Q R-ed S The T of U V's.
+Chars: 207 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 29 ---
+Original: There are certain topics and conceits that psychopaths of this variety swarm all over— time travel, quantum theory, relativism, post-modernism.
+Bleached: There are A B's and C's that D's of this E F all over— G H, I J, K, L.
+Chars: 143 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —,,,-.
+
+--- Pattern 30 ---
+Original: The first two of these topics obviously have inherent legitimacy, but they are used illegitimately by the psychopath.
+Bleached: The A B of these C D have E F, but they are G H by the I.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 31 ---
+Original: The latter two have legitimacy as objects of analysis but not otherwise.
+Bleached: The X two have Y as Z's of A but not otherwise.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 32 ---
+Original: In any case, these topics, and the conceits popularly associated with them, are magnets for the spongiform, truth- concealing humanities professor psychopath.
+Bleached: In any case, these X's, and the Y's Z associated with them, are A's for the B, C- D-ing E F G.
+Chars: 158 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,-.
+
+--- Pattern 33 ---
+Original: I must stress that when I describe such people as psychopaths, I am speaking literally.
+Bleached: I must A that when I B such C as D, I am E literally.
+Chars: 87 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 34 ---
+Original: These people are systematically dismantling life- and thought-critical epistemic instruments, and they are putting nothing in their place, and they are even going so far as to spurn the idea of putting
+
+something in their place.
+Bleached: These F's are A-ly B-ing C- and D-E F G's, and they are H-ing I in their J, and they are even K-ing so L as to M the N of H-ing
+
+O in their J.
+Chars: 230 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,,.
+
+--- Pattern 35 ---
+Original: And that is heavy-duty psychopathy: no one is drawn to such positions because they believe them, since it is biologically impossible to believe such positions.
+Bleached: And that is A-duty B: no one is C-ed to such D's because they E them, since it is F-ally G to E such D's.
+Chars: 159 | Tokens: 25 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -:,.
+
+--- Pattern 36 ---
+Original: Such people are perpetrating fraud, for reasons of convenience and ego and hate.
+Bleached: Such F are X-ing Y, for reasons of Z and W and V.
+Chars: 80 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 37 ---
+Original: When people hand-wave and hem and haw with jabber about deconstructionism and narratives and critiques, know that you are dealing with a feather-head twig who is wasting your time
+—that you are dealing with someone who himself has no integrity and whose career is an attempt to undermine the very notion of integrity—and promptly be on your way.
+Bleached: When A B-wave and C and D with E about F and G and H, I that you are J-ing with a K-head L who is M-ing your N
+—that you are J-ing with O who P has no Q and whose R is an S to T the U V of Q—and W be on your X.
+Chars: 346 | Tokens: 58 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,-——.
+

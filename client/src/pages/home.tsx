@@ -2109,83 +2109,39 @@ export default function Home() {
                     onClick={async () => {
                       if (!patternGenOutput) return;
                       try {
-                        // Count patterns to determine if chunking is needed
-                        const patternCount = (patternGenOutput.match(/--- Pattern \d+ ---/g) || []).length;
-                        const CHUNK_SIZE = 50;
-                        let totalImported = 0;
-                        let lastTotal = 0;
+                        // Send ALL patterns in one request - server handles it
+                        toast({ title: "Uploading...", description: "Sending patterns to database..." });
                         
-                        if (patternCount <= CHUNK_SIZE) {
-                          // Small upload - do it in one request
-                          const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
-                            content: patternGenOutput,
-                            authorName: patternGenAuthor.trim() || null,
-                          });
-                          const data = await response.json();
-                          totalImported = data.imported || 0;
-                          lastTotal = data.total || 0;
-                        } else {
-                          // Large upload - split into chunks by pattern boundaries
-                          const header = patternGenOutput.split("--- Pattern 1 ---")[0];
-                          // Get content after header, split by pattern delimiter but keep delimiters
-                          const afterHeader = patternGenOutput.substring(header.length);
-                          const patternMatches = afterHeader.split(/(--- Pattern \d+ ---)/);
-                          
-                          // Rebuild as pairs: [delimiter, content, delimiter, content, ...]
-                          const patterns: string[] = [];
-                          for (let i = 1; i < patternMatches.length; i += 2) {
-                            if (patternMatches[i] && patternMatches[i + 1] !== undefined) {
-                              patterns.push(patternMatches[i] + patternMatches[i + 1]);
-                            }
-                          }
-                          
-                          // Create chunks
-                          const chunks: string[] = [];
-                          for (let i = 0; i < patterns.length; i += CHUNK_SIZE) {
-                            const chunkPatterns = patterns.slice(i, i + CHUNK_SIZE);
-                            // Renumber patterns within chunk
-                            let chunkContent = header;
-                            chunkPatterns.forEach((pattern, idx) => {
-                              chunkContent += pattern.replace(/--- Pattern \d+ ---/, `--- Pattern ${idx + 1} ---`);
-                            });
-                            chunks.push(chunkContent);
-                          }
-                          
-                          toast({ title: "Uploading...", description: `Processing ${chunks.length} batches (${patternCount} patterns)...` });
-                          
-                          for (let i = 0; i < chunks.length; i++) {
-                            try {
-                              const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
-                                content: chunks[i],
-                                authorName: patternGenAuthor.trim() || null,
-                              });
-                              const data = await response.json();
-                              totalImported += data.imported || 0;
-                              lastTotal = data.total || 0;
-                            } catch (chunkError) {
-                              console.error(`Chunk ${i + 1} failed:`, chunkError);
-                            }
-                            
-                            // Small delay between chunks
-                            if (i < chunks.length - 1) {
-                              await new Promise(r => setTimeout(r, 300));
-                            }
-                          }
-                        }
+                        const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                          content: patternGenOutput,
+                          authorName: patternGenAuthor.trim() || null,
+                        });
+                        const data = await response.json();
+                        const totalImported = data.imported || 0;
+                        const total = data.total || 0;
+                        const parsed = data.parsed || 0;
                         
                         const authorNote = patternGenAuthor.trim() 
                           ? ` to "${patternGenAuthor.trim()}" library` 
                           : " to general bank";
-                        toast({ 
-                          title: "Uploaded to Database!", 
-                          description: `${totalImported} patterns added${authorNote}. Total: ${lastTotal}` 
-                        });
+                        
+                        if (totalImported === 0 && parsed > 0) {
+                          toast({ 
+                            title: "No New Patterns", 
+                            description: `All ${parsed} patterns already exist${authorNote}. Library total: ${total.toLocaleString()}` 
+                          });
+                        } else {
+                          toast({ 
+                            title: "Uploaded to Database!", 
+                            description: `${totalImported} patterns added${authorNote}. Total: ${total.toLocaleString()}` 
+                          });
+                        }
                         queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
                         queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
                       } catch (error) {
                         console.error("Upload error:", error);
                         const errorMsg = error instanceof Error ? error.message : "Failed to upload patterns";
-                        toast({ title: "Error", description: errorMsg, variant: "destructive" });
+                        toast({ title: "Upload Failed", description: errorMsg, variant: "destructive" });
                       }
                     }}
                     disabled={!patternGenOutput}

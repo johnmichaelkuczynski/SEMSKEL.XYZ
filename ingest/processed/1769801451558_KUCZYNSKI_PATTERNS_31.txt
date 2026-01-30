@@ -1,0 +1,4265 @@
+=== SENTENCE BANK ===
+Total Patterns: 526
+Author: KUCZYNSKI
+Generated: 1/30/2026, 2:24:15 PM
+
+--- Pattern 1 ---
+Original: Ninety Paradoxes of Philosophy and Psychology
+With Solutions
+
+J.-M.
+Bleached: A P's of Q and R
+With S's
+
+T.-U.
+Chars: 70 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .-.
+
+--- Pattern 2 ---
+Original: Kuczynski 
+2018
+
+The Loser Paradox
+The Sour Secretary Paradox
+The Indie Writer’s Paradox
+Paradox of Connectedness
+Arrow’s Information Paradox
+Soft Communism and the Paradox of American Education
+Buridan’s Ass
+Obsessive-compulsive’s Paradox
+Analysis Paralysis Paradox
+The Primerica Paradox
+The Leno Paradox
+Skeptical Bureaucrat Paradox
+The Forest Paradox
+The Larry David Paradox
+The Gratitude Paradox
+The Seinfeld Paradox
+The Gas-guzzling Hippie Paradox
+The Progress Paradox
+The Conformist/Non-conformist Paradox
+The Fake Rebel Paradox
+The Old Guard Hippie Paradox
+The Good Lawyer Bad Lawyer Paradox
+Suicide Paradox
+Churchill’s Paradox
+Orlov’s Paradox
+Unemployment as Consequence of Macroeconomic Efficient Paradox
+Hilbert-Bernays Paradox
+Kuczynski’s Recursion Paradox
+The Automation Paradox
+Heterological Paradox
+The Liar Paradox
+Berry’s Paradox
+Wittgenstein’s Rule-following Paradox
+The Sorites Paradox
+The Paradox of the Grain of Millet
+Arrow Paradox
+The Irresistible Force Paradox
+The Horny Nerd Paradox
+The Licensed Therapist Paradox
+The two-for-one-psychiatrist Paradox
+The Economics Research Paradox
+The Defense-lawyer Paradox
+The Union Paradox
+The Useless Functionary Paradox
+The Useless Professor Paradox
+Zeno’s Paradox: Achilles and the Tortoise
+Paradox of Place
+The Coin Paradox
+Stockdale Paradox
+Self-absorption Paradox
+Ironic Process Theory
+Outcomes Paradox
+The Antitrust Paradox
+The Tenure Paradox
+The Benevolent Leader Paradox
+The Paradox of Analysis
+Fitch’s Paradox
+The Reddit-loser Paradox
+The Low-man-on-the-totem-pole Paradox
+The Grass Roots Movement Paradox
+The Meek Shall Inherit the Earth Paradox
+The Paradox of Hyper-competence
+The Paradox of the School Psychologist
+The Paradox of the Useless Law
+The Useless Lawyer Paradox
+The Paradox of Gratuitous Scholarship
+The Know-it-All Paradox
+The Paradox of the Omniscient Decider
+The Paradox of the Omniscient Ignoramus
+The Heavy Rock Paradox
+The Paradox of the Incoherent Institution
+The Preface Paradox
+Bhartrhari’s Paradox
+The Barber Paradox
+Unexpected Hanging Paradox
+Ross’s Paradox
+The Lottery Paradox
+The Slacker’s Paradox
+The Paradox of Economic Efficiency
+The Raven Paradox
+The Riddle of Induction
+The New Riddle of Induction
+Frege’s Puzzle
+Kripke’s Paradox
+The Ratiocinator’s Paradox
+Meno’s Paradox
+The Learner’s Paradox
+The Content Externalism Paradox
+The Secession Paradox
+
+The Loser Paradox 
+
+People who are the bottom of a hierarchy are far less likely to spurn that hierarchy than they are to use it against people who are trying to climb the ranks of that hierarchy.
+Bleached: A1 
+2018
+
+The B C
+The D E C
+The F G's C
+C of H
+I's J C
+K L and the C of M N
+O's P
+Q-R's C
+S T C
+The U C
+The V C
+W X C
+The Y C
+The Z AA C
+The BB C
+The CC C
+The DD EE C
+The FF C
+The GG/HH-GG C
+The II JJ C
+The KK LL EE C
+The MM NN OO NN C
+PP C
+QQ's C
+RR's C
+SS as TT of UU VV C
+WW-XX C
+A1's YY C
+The ZZ C
+AAA C
+The BBB C
+CCC's C
+DDD's EEE-FFF C
+The GGG C
+The C of the HHH of III
+JJJ C
+The KKK LLL C
+The MMM NNN C
+The OOO PPP C
+The QQQ-for-RRR-SSS C
+The TTT UUU C
+The VVV-WWW C
+The XXX C
+The YYY ZZZ C
+The AAAA BBBB C
+CCCC's C: DDDD and the EEEE
+C of FFFF
+The GGGG C
+HHHH C
+IIII-JJJJ C
+KKKK LLLL MMMM
+NNNN C
+The OOOO C
+The PPPP C
+The QQQQ RRRR C
+The C of SSSS
+TTTT's C
+The UUUU-VVVV C
+The WWWW-XXXX-on-the-YYYY-ZZZZ C
+The AAAAA BBBBB CCCCC C
+The DDDDD EEEEE FFFFF the GGGGG C
+The C of HHHHH-IIIII
+The C of the JJJJJ KKKKK
+The C of the LLLLL MMMMM
+The NNNNN OOOOO C
+The C of PPPPP QQQQQ
+The RRRRR-it-SSSSS C
+The C of the TTTTT UUUUU
+The C of the VVVVV WWWWW
+The XXXXX YYYYY C
+The C of the ZZZZZ AAAAAA
+The BBBBBB C
+CCCCCCC's C
+The DDDDDDD C
+EEEEEEE FFFFFFF C
+GGGGGGG's C
+The HHHHHHH C
+The IIIIIII's C
+The C of JJJJJJJ KKKKKKK
+The LLLLLLL C
+The MMMMMMM of NNNNNNN
+The OOOOOOO PPPPPPP of QQQQQQQ
+RRRRRRR's SSSSSSS
+TTTTTTT's C
+The UUUUUUU's C
+VVVVVVV's C
+The WWWWWWW's C
+The XXXXXXX YYYYYYY C
+The ZZZZZZZ C
+
+The B C 
+
+AAAAAAA who are the BBBBBBB of a CCCCCCC are far less DDDDDDD to EEEEEEE that CCCCCCC than they are to FFFFFFF it against AAAAAAA who are GGGGGGG to HHHHHHH the IIIIIII of that CCCCCCC.
+Chars: 2643 | Tokens: 354 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---------:----------.
+
+--- Pattern 3 ---
+Original: The person who never graduates from college may in some contexts claim that a college degree is worthless, but he is unlikely to act accordingly.
+Bleached: The F who never X's from Y may in some contexts Z that a Y W is A, but he is unlikely to V accordingly.
+Chars: 145 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 4 ---
+Original: When he comes across someone without a college degree who is trying to make something of himself, he is likely to pounce on that person, claiming he is an uncredentialed fraud.
+Bleached: When he X's across someone without a Y Z who is W-ing to make something of himself, he is likely to V on that person, Q-ing he is an R-ed S.
+Chars: 176 | Tokens: 31 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 5 ---
+Original: Explanation: Losers want others to share their coffin, and if that involves hyper-valuing the very people or institutions that put them in that coffin, then so be it.
+Bleached: X: Y want Z to V their W, and if that involves X-ing the very F or G that X them in that W, then so be it.
+Chars: 166 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,-,.
+
+--- Pattern 6 ---
+Original: The Sour Secretary Paradox 
+
+The more useless a given employee is to the organization that employs her, the more unstintingly she will toe that organization’s line.
+Bleached: The A B C
+
+The more D a given E is to the F that G-s her, the more H-ly she will I that F's J.
+Chars: 166 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 7 ---
+Original: This is a corollary of the loser paradox.
+Bleached: This is a X of the Y Z.
+Chars: 41 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 8 ---
+Original: The Indie Writer’s Paradox 
+
+People don’t give good reviews to writers who do not already have positive reviews.
+Bleached: The A B's C 
+
+D don't give E F's to G's who do not already have H F's.
+Chars: 114 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 9 ---
+Original: Analysis: This is a veridical paradox, in the sense that it describes an actual vicious circle and does not represent a logical blunder.
+Bleached: A: This is a B C, in the D that it E's an F G H and does not I a J K.
+Chars: 136 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 10 ---
+Original: An independent writer is by definition one who does not have a marketing apparatus behind him, and such a writer depends on uncoerced positive reviews.
+Bleached: An A B is by C one who does not have a D E behind him, and such a B F-s on G H I-s.
+Chars: 151 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 11 ---
+Original: But people are extremely reluctant to give good reviews to writers who are not popular already or who do not have the weight of some institution behind them.
+Bleached: But X are extremely Y to Z good W to V who are not U already or who do not have the T of some S behind them.
+Chars: 157 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 12 ---
+Original: This circle can be broken by writers who mass-produce schlock, but there is no real way for other writers to break it.
+Bleached: This X can be Y-ed by Z's who W-V Q, but there is no R S for other Z's to Y it.
+Chars: 118 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 13 ---
+Original: This is a special form of the Grass Roots Movement Paradox.
+Bleached: This is a E form of the A B C D Paradox.
+Chars: 59 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 14 ---
+Original: Paradox of Connectedness 
+
+Communications technology is supposed to connect us but separates us into self-contained, non-interacting units.
+Bleached: Ω of Ψ 
+
+Φ Θ is Λ-ed to Ξ us but Ζ-s us into Η-Ρ-ed, Μ-Ν-ing Κ-s.
+Chars: 141 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-.
+
+--- Pattern 15 ---
+Original: Solution: Communications technology is not supposed to connect us emotionally.
+Bleached: Solution: A technology is not supposed to connect us B.
+Chars: 78 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 16 ---
+Original: On the contrary, it is supposed to connect us in such a way that we can transact without having to bond emotionally.
+Bleached: On the contrary, it is X-ed to Y us in such a Z that we can W without having to V emotionally.
+Chars: 116 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 17 ---
+Original: And that is what it does.
+Bleached: And that is what it X's.
+Chars: 25 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 18 ---
+Original: It connects us logically while disconnecting us emotionally.
+Bleached: It X's us Y while Z-ing us W.
+Chars: 60 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 19 ---
+Original: Arrow’s Information Paradox 
+
+If you don’t know what it is, you don’t buy it.
+Bleached: A's B C
+
+If you don't D what it is, you don't E it.
+Chars: 79 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 20 ---
+Original: Therefore, you don’t buy information unless you know what it is.
+Bleached: Therefore, you don't X Y unless you Z what it is.
+Chars: 64 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 21 ---
+Original: But if you know what it is, you don’t need to buy it.
+Bleached: But if you X what it is, you don't Y to Z it.
+Chars: 53 | Tokens: 13 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 22 ---
+Original: But information is bought.
+Bleached: But X is Y-ed.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 23 ---
+Original: Solution: The obvious solution is that information can be described without being disclosed.
+Bleached: X: The Y X is that Z can be W-ed without being V-ed.
+Chars: 92 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 24 ---
+Original: I can tell you that I have the so and so’s phone number without giving you that number, and the circumstances may give you reason to believe me.
+Bleached: I can Z you that I have the so and so's X Y without W-ing you that Y, and the V's may W you U to V me.
+Chars: 144 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 25 ---
+Original: But oftentimes it isn’t until a given person discloses what he says he knows that he there is any reason to believe him to know it.
+Bleached: But oftentimes it isn't until a given F X-s what he says he knows that he there is any reason to Y him to know it.
+Chars: 131 | Tokens: 26 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 26 ---
+Original: There are a lot of people who make a living charging others for insights into the market, even they have no such insight, as their customers eventually find out.
+Bleached: There are a lot of X who Y a Z A-ing B for C into the D, even they have no such C, as their E eventually F out.
+Chars: 161 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 27 ---
+Original: Soft Communism and the Paradox of American Education 
+
+The more money that the United States invests in education, the worse American education is.
+Bleached: A B and the C of D E
+
+The more F that the United States G-s in H, the worse D H is.
+Chars: 149 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 28 ---
+Original: Explanation: In the US, when money is poured into education, it is not to improve education but is rather to provide incompetent people with fake employment as educational administrators or teachers.
+Bleached: Explanation: In the US, when X is Y-ed into Z, it is not to W Z but is rather to V A B with C D as E F or G.
+Chars: 199 | Tokens: 31 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :,,.
+
+--- Pattern 29 ---
+Original: So with each new wave of educational funding, a bloated, entrenched and incompetent cadre of educational bureaucrats becomes even more bloated, entrenched and incompetent, with predictably adverse effects on student-learning.
+Bleached: So with each new A of B C, a D, E and F G of B H becomes even more D, E and F, with I J K on L-M.
+Chars: 225 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,-.
+
+--- Pattern 30 ---
+Original: In the US, when money is poured into public schools, it isn’t about improving education.
+Bleached: In the A, when B is C-ed into D E's, it isn't about F-ing G.
+Chars: 88 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 31 ---
+Original: It is about creating straw government jobs at the expense of real private sector jobs.
+Bleached: It is about X-ing Y Z J's at the K of L M N J's.
+Chars: 86 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 32 ---
+Original: In other words, it is about the dead of hand of government bureaucracy replacing the invisible hand of the market.
+Bleached: In other words, it is about the X of Y of Z A B-ing the C Y of the D.
+Chars: 114 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 33 ---
+Original: It is about communism displacing capitalism, under the banner of helping the public.
+Bleached: It is about X Y-ing Z, under the W of V-ing the A.
+Chars: 84 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 34 ---
+Original: The same is true to a large extent of investment in law enforcement.
+Bleached: The same is true to a large extent of X in Y Z.
+Chars: 68 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 35 ---
+Original: Law enforcement jobs, like most jobs in education, are basically fake jobs that are created for dummies as a way of buying their votes and also of having a moralistic pretext for absconding with funds.
+Bleached: A B C, like most C in D, are basically E C that are F-ed for G as a H of I-ing their J and also of K-ing a L M for N-ing with O.
+Chars: 201 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 36 ---
+Original: The less money spent on public schools the better, the same being true, with obvious qualifications, of law-enforcement.
+Bleached: The A B C on D E the F, the same being true, with G H, of I-J.
+Chars: 120 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 37 ---
+Original: Buridan’s Ass 
+
+An ass that has to choose between food and water and is exactly as hungry as it is thirsty cannot make a choice and will therefore be paralyzed by indecision.
+Bleached: Buridan's X
+
+An X that has to Y between Z and W and is exactly as V as it is U cannot V a T and will therefore be S-ed by R.
+Chars: 176 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 38 ---
+Original: But such an ass would in fact be able to make a decision.
+Bleached: But such an A would in fact be able to make a B.
+Chars: 57 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 39 ---
+Original: Explanation: This isn’t exactly a paradox.
+Bleached: X: This isn't exactly a Y.
+Chars: 42 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 40 ---
+Original: There is nothing absurd in the supposition that a creature in such a situation might simply ‘halt’, and we don’t know that actual biological creatures would not in fact halt in such a situation, since it seldom if ever happens that a creature is confronted with options that are exactly equally appealing.
+Bleached: There is nothing A in the B that a C in such a D might simply 'E', and we don't F that G H C's would not in I E in such a D, since it J if ever K that a C is L with M that are N O P.
+Chars: 305 | Tokens: 52 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 41 ---
+Original: If there is a paradox here, it is that a creature’s rationality is supposed to help it optimize its situation but Buridan’s Ass is paralyzed by its own rationality.
+Bleached: If there is a A here, it is that a B's C is D-ed to E it F its G but H's I is J-ed by its own C.
+Chars: 164 | Tokens: 29 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 42 ---
+Original: The right response to this point is that rationality, unlike intelligence, is inherently reflective in nature.
+Bleached: The X Y to this Z is that R, unlike W, is Q V in M.
+Chars: 110 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 43 ---
+Original: Intelligence cannot decide between two equally reasonable options, but rationality can so decide, since rationality, being reflective, can decide that it is good to make a decision, even if no particular decision is optimal, whereas intelligence, being non-reflective, can only chose between the options on the table and is therefore paralyzed by the absence of one that is optimal.
+Bleached: Intelligence cannot decide between two equally reasonable options, but R can so decide, since R, being reflective, can decide that it is good to make a decision, even if no particular decision is optimal, whereas intelligence, being non-reflective, can only chose between the options on the table and is therefore paralyzed by the absence of one that is optimal.
+Chars: 382 | Tokens: 59 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,,,,,,,-,.
+
+--- Pattern 44 ---
+Original: Obsessive-compulsive’s Paradox 
+
+If the obsessive-compulsive doesn't give in to his compulsions, he suffers.
+Bleached: A-B's C 
+
+If the A-B doesn't D in to his E's, he F's.
+Chars: 110 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --',.
+
+--- Pattern 45 ---
+Original: If he does give into them, they get worse.
+Bleached: If he does X into them, they get Y-er.
+Chars: 42 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 46 ---
+Original: Solution: If the obsessive-compulsive fights his compulsions, they wither and go away.
+Bleached: A: If the B-C D his E's, they F and G away.
+Chars: 86 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-,.
+
+--- Pattern 47 ---
+Original: Analysis Paralysis Paradox 
+
+Given that there is almost always a more rational course of action, the ability to identify rational courses of action may lead to a failure to act.
+Bleached: Z Y Φ
+
+Given that there is almost always a more R Q of W, the X to Y R Q's of W may Z to a Y to W.
+Chars: 179 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 48 ---
+Original: Solution: There is a difference between intelligence and rationality.
+Bleached: R: There is a V between Q and R.
+Chars: 69 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 49 ---
+Original: Intelligence answers the question: What is it objectively possible to do?
+Bleached: A answers the B: What is it objectively C to D?
+Chars: 73 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 50 ---
+Original: Rationality answers the question: What do my limited resources of time, energy and intelligence make it incumbent on me to do?
+Bleached: A answers the B: What do my C D of E, F and G make it H on me to do?
+Chars: 126 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,?
+
+--- Pattern 51 ---
+Original: And the second answer breaks any deadlocks created by the first.
+Bleached: And the X Y Z-s any W-s X-ed by the X.
+Chars: 64 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 52 ---
+Original: The Primerica Paradox 
+
+In order to work for Primerica, you need to have money, since you don’t make any money working there.
+Bleached: The A B 
+
+In order to work for A, you need to have money, since you don't make any money working there.
+Chars: 127 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 53 ---
+Original: But if you have money you won’t work for Primerica, because there is no reason to do so.
+Bleached: But if you have A you won't B for C, because there is no D to do so.
+Chars: 88 | Tokens: 18 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 54 ---
+Original: And yet people work for Primerica.
+Bleached: And yet A's B for C.
+Chars: 34 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 55 ---
+Original: Explanation: Primerica is a multi-level insurance company.
+Bleached: A: B is a C-D E F.
+Chars: 58 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 56 ---
+Original: Its representatives have to pay to work there.
+Bleached: Its A's have to B to C there.
+Chars: 46 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 57 ---
+Original: They do not make a salary and only make money off of commissions.
+Bleached: They do not X a Y and only X Z off of W's.
+Chars: 65 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 58 ---
+Original: But they don’t make money off of commissions since they almost never make sales, and they don’t make sales because nobody wants Primerica insurance since it’s bad and definitely don’t want to buy it from some sleazy Primerica sales representative.
+Bleached: But they don't make X off of Y's since they almost never make Z's, and they don't make Z's because nobody wants A B since it's C and definitely don't want to buy it from some D A Z E.
+Chars: 247 | Tokens: 40 | Clauses: 4
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 59 ---
+Original: And yet Primerica has hundreds of thousands of ‘employees.' What's the explanation?
+Bleached: And yet A has B's of C's of 'D's.' What's the E?
+Chars: 83 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .''?
+
+--- Pattern 60 ---
+Original: Part of it, of course, is that Primerica sales reps are chumps.
+Bleached: X of it, of course, is that Y Z R are S.
+Chars: 63 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 61 ---
+Original: Another part of it is that, although they sometimes vaguely understand that it is a scam, they give their money to Primerica thinking that in due course they will be on the inside of that scam.
+Bleached: Another A of it is that, although they sometimes B C that it is a D, they E their F to G H that in I J they will be on the K of that D.
+Chars: 193 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 62 ---
+Original: But there is a simpler and more cogent explanation.
+Bleached: But there is a X-er and more Y Z.
+Chars: 51 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 63 ---
+Original: People who are on welfare often have to provide proof that either have employment or are looking for it.
+Bleached: F's who are on G often have to H I that either have J or are K-ing for it.
+Chars: 104 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 64 ---
+Original: If you pay a monthly fee of $50 to Primerica, you can list it as an employer.
+Bleached: If you X a Y Z of $50 to W, you can V it as an Q.
+Chars: 77 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 65 ---
+Original: Plus, given that you are technically employed but are making no money at all, you are entitled to major tax exemptions.
+Bleached: Plus, given that you are technically X-ed but are Y-ing no Z at all, you are W-ed to major A B-ions.
+Chars: 119 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 66 ---
+Original: There is no money to be made at Primerica.
+Bleached: There is no X to be Y-ed at Z.
+Chars: 42 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 67 ---
+Original: Zero.
+Bleached: A.
+Chars: 5 | Tokens: 1 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 68 ---
+Original: The people who work there are slimy lying chumps.
+Bleached: The X who Y there are Z W-ing V's.
+Chars: 49 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 69 ---
+Original: But it makes it possible to get welfare, and what Primerica charges its fake employees is a lot less than their subsequent welfare checks.
+Bleached: But it makes it possible to get A, and what B charges its fake C's is a lot less than their subsequent A checks.
+Chars: 138 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 70 ---
+Original: So it’s worth it for them to let Primerica rip them off a little bit, and that’s why Primerica remains ‘in business.’ 
+
+ 
+
+The Leno Paradox 
+
+The people who should commit suicide don’t.
+Bleached: So it's X for them to let Y Z them off a W X, and that's why Y X 'in X.' 
+
+ 
+
+The X X 
+
+The X who X X X don't.
+Chars: 191 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,..
+
+--- Pattern 71 ---
+Original: Skeptical Bureaucrat Paradox 
+
+When bureaucrats say they ‘need more information’, it’s because they don’t need it.
+Bleached: **A B C**
+
+When D's E they 'F G H', it's because they don't F it.
+Chars: 116 | Tokens: 16 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 72 ---
+Original: They are determined not to help you and they’re sending you on a fool’s errand.
+Bleached: They are X-ed not to Y you and they're Z-ing you on a W's V.
+Chars: 79 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 73 ---
+Original: The Forest Paradox
+
+Knowing involves not knowing too much.
+Bleached: The A Ω
+
+X-ing involves not X-ing too much.
+Chars: 60 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 74 ---
+Original: If you know too much about Smith, you are likely to make excuses for him.
+Bleached: If you X too much about Y, you are likely to Z W's for him.
+Chars: 73 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 75 ---
+Original: If you know just enough, you can’t make excuses for him and you’ll see him for what he is.
+Bleached: If you A just enough, you can't B C's for him and you'll D him for what he is.
+Chars: 90 | Tokens: 19 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 76 ---
+Original: The Larry David Paradox 
+
+It is only when somebody has no merit that it becomes politically obligatory to say that they have merit.
+Bleached: The A B C
+
+It is only when somebody has no D that it becomes E F to say that they have D.
+Chars: 133 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 77 ---
+Original: The Gratitude Paradox 
+
+The people who should be the most grateful are the least grateful.
+Bleached: The X Y 
+
+The Z who should be the most W are the least W.
+Chars: 92 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 78 ---
+Original: Explanation: The people who should be the most grateful are losers who were bailed out, and they needed to bailed out because they don’t have enough integrity to give credit where it is due.
+Bleached: Explanation: The X who should be the most Y are Z who were W out, and they needed to W out because they don't have enough A to give B where it is due.
+Chars: 190 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 79 ---
+Original: The Seinfeld Paradox 
+
+You are far more likely to succeed as a comedian if you are medium funny than if you are actually funny.
+Bleached: The A B
+
+You are far more C to D as a E if you are F G than if you are H G.
+Chars: 129 | Tokens: 24 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 80 ---
+Original: The Gas-guzzling Hippie Paradox 
+
+Self-identified liberals claim to be pro-environment but on average have a dramatically higher environmental footprint than self-identified conservatives.
+Bleached: The A-B C D
+
+E-F G H to be I-J but on K have a L M J N than E-F O.
+Chars: 190 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ----.
+
+--- Pattern 81 ---
+Original: Explanation: The self-identified conservative tends to be a do-it-yourselfer who takes a certain pride fixing his own machinery and in general taking the path of most resistance, whereas the self-identified liberal tends to be group-people and thus lack the loner’s streak of eco-friendly do-it-your-selfism.
+Bleached: P: The self-Q-ed R tends to be a S-it-T-er who takes a U V W his own X and in Y Z the A of most B, whereas the self-Q-ed C tends to be D-E and thus F the G's H of I-J S-it-your-K-ism.
+Chars: 308 | Tokens: 44 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :---,------.
+
+--- Pattern 82 ---
+Original: The Progress Paradox 
+
+Progress for man is often regress for a specific man.
+Bleached: The A B
+
+A for C is often D for a specific C.
+Chars: 78 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 83 ---
+Original: What is good for humanity as a whole often involves a given person being rendered unnecessary.
+Bleached: What is A for B as a C often involves a given D being E F.
+Chars: 94 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 84 ---
+Original: For example, nothing could do more good for humanity than the digital optimization of education, but once education is duly digitized, an entire class of educational bureaucrats will be obsolete.
+Bleached: For X, Y could do more Z for A than the B C of D, but once D is E F-ed, an G H of I J will be K.
+Chars: 195 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 85 ---
+Original: The Conformist/Non-conformist Paradox 
+
+When people become goths or hippies, they do so to be different but are in fact conforming to the norm.
+Bleached: The A/Non-A B
+
+When C D E or F, they do so to be G but are in H I J to the K.
+Chars: 145 | Tokens: 23 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 86 ---
+Original: The Fake Rebel Paradox 
+
+The fewer legitimate reasons there are to rebel in a given a society, the more self-identified rebels there are.
+Bleached: The A B Ω
+
+The fewer C D there are to E in a given a F, the more G-ed H there are.
+Chars: 139 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 87 ---
+Original: Explanation: where there are legitimate reasons to rebel, it is dangerous to rebel.
+Bleached: Explanation: where there are E reasons to X, it is F to X.
+Chars: 83 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 88 ---
+Original: The Old Guard Hippie Paradox 
+
+The hippies who self-identify as rebels are the establishment and the non-hippies on whom they trample are the actual rebels.
+Bleached: The A B C D
+
+The E who F as G are the H and the I on whom they J are the K G.
+Chars: 158 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 89 ---
+Original: The Good Lawyer Bad Lawyer Paradox 
+
+In most cases, the reason you need a lawyer is to defend yourself against other lawyers, either because of direct affronts on their part or, more likely, because of gratuitous laws put in place by lawyers, along with a general air of litigiousness for which they are responsible.
+Bleached: The Ω1 X-er Ω2 X-er Y
+
+In most Z's, the A you B a X-er is to C yourself against other X-ers, either because of D E's on their part or, more likely, because of F G's H in I by X-ers, along with a J K of L for which they are M.
+Chars: 318 | Tokens: 54 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 90 ---
+Original: Suicide Paradox 
+
+When people kill themselves, the only people they hurt are the ones who care about them.
+Bleached: A Ω
+
+When X Y themselves, the only X they Z are the X who W about them.
+Chars: 108 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 91 ---
+Original: Churchill’s Paradox 
+
+In a non-democratic society, the government oppresses the people.
+Bleached: A's B
+
+In a non-C D, the E F-s the G.
+Chars: 89 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 92 ---
+Original: In a democratic society, the people oppress themselves.
+Bleached: In a X Y, the Z V themselves.
+Chars: 55 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 93 ---
+Original: Orlov’s Paradox 
+
+The more computers eliminate the need to do work, the more work we end up doing.
+Bleached: A's B
+
+The more C's D the E to do F, the more F we G up H-ing.
+Chars: 100 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 94 ---
+Original: Unemployment as Consequence of Macroeconomic Efficient Paradox 
+
+An economy is efficient if few man-hours of work lead to high output and inefficient if many manhours of work lead to low output.
+Bleached: X as Y of Z A B
+
+An C is A if few D-E of F G to H I and J if K L of F G to M I.
+Chars: 196 | Tokens: 31 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 95 ---
+Original: This means that the more efficient an economy is, the higher the rate of employment, setting aside government-created, economically unnecessary employment.
+Bleached: This X's that the more Y an Z is, the W-er the A of B, C aside D-E-ed, F-ly G B.
+Chars: 155 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,.
+
+--- Pattern 96 ---
+Original: Hilbert-Bernays Paradox 
+
+If there is a name of a natural number that is identical with the name of the successor that number, then some natural number is its own successor.
+Bleached: X-Y Ω
+
+If there is a Z of a Q R that is S with the Z of the T that R, then some Q R is its own T.
+Chars: 175 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 97 ---
+Original: The argument: Let h be a term referring to a such a natural number such that h is synonymous with ‘the reference of h+1’, and let n be the referent of h.
+Bleached: The A: Let h be a B C-ing to a such a D E such that h is F with 'the G of h+1', and let n be the H of h.
+Chars: 153 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 98 ---
+Original: Since h is synonymous with, and therefore has the same referent as ‘the referent of h+1’, it follows that the referent of h is n+1.
+Bleached: Since h is A with, and therefore has the same B as 'the B of h+1', it C that the B of h is n+1.
+Chars: 131 | Tokens: 25 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 99 ---
+Original: And since n is by hypothesis the referent of h, it follows that n+n+1.
+Bleached: And since n is by X the Y of h, it Z that n+n+1.
+Chars: 70 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 100 ---
+Original: Analysis: If h is synonymous with ‘the referent of h+1', then h is defined in terms of an expression that is itself defined in terms of h and h consequently has no referent.
+Bleached: Analysis: If h is A with 'the B of h+1', then h is C in D of an E that is itself C in D of h and h F has no B.
+Chars: 173 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :',.
+
+--- Pattern 101 ---
+Original: So h doesn’t refer to any number and a fortiori doesn’t refer to the successor of any number.
+Bleached: So h doesn't X to any Y and a fortiori doesn't X to the Z of any Y.
+Chars: 93 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 102 ---
+Original: Kuczynski’s Recursion Paradox 
+
+There is no recursive definition of the class of recursive definitions.
+Bleached: Ω7's P Q 
+
+There is no P Y of the Z of P Y's.
+Chars: 105 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 103 ---
+Original: Corollary
+
+There is no formal characterization of formal truth.
+Bleached: A
+
+There is no B C of B D.
+Chars: 65 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 104 ---
+Original: The Automation Paradox 
+
+Everything can be automated except for automation itself.
+Bleached: The A B
+
+C can be D-ed except for A itself.
+Chars: 84 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 105 ---
+Original: Heterological Paradox 
+
+A word is ‘heterological’ if it is false of itself.
+Bleached: Ω7 P
+
+A X is 'Ω7' if it is Y of itself.
+Chars: 77 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 106 ---
+Original: Thus ‘monosyllabic’ is heterological, whereas ‘polysyllabic’ is not heterological.
+Bleached: Thus 'X' is Y, whereas 'Z' is not Y.
+Chars: 82 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 107 ---
+Original: Question: Is ‘heterological’ heterological?
+Bleached: Question: Is 'X' X?
+Chars: 43 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 108 ---
+Original: It is if it isn’t and if isn’t if it is.
+Bleached: It is if it isn't and if isn't if it is.
+Chars: 40 | Tokens: 11 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 109 ---
+Original: Solution: To say that ‘polysyllabic’ is true of itself is to say that ‘polysyllabic’ is polysyllabic.
+Bleached: Solution: To say that 'X' is true of itself is to say that 'X' is X.
+Chars: 101 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 110 ---
+Original: To say that ‘is an English expression’ is true of itself is to say that ‘is an English expression' is an English expression.
+Bleached: To X that 'is an Y Z' is W of itself is to X that 'is an Y Z' is an Y Z.
+Chars: 124 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.
+
+--- Pattern 111 ---
+Original: ‘True of itself,' when meaningful, simply abbreviates some non-reflexive construction; and when it doesn't do so, the term ‘self' an undefined pronoun—a free variable, in other words.
+Bleached: 'X of itself,' when Y, simply Z some non-W construction; and when it doesn't do so, the term 'self' an V pronoun—a free variable, in other words.
+Chars: 183 | Tokens: 27 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,',-;','—,.
+
+--- Pattern 112 ---
+Original: The statement ‘the word “heterological” is true of itself’ does not abbreviate a non-reflexive construction, and neither does the sentence ‘the word “heterological” is heterological’; therefore, neither is either true or false.
+Bleached: The A 'the B "C" is D of itself' does not E a F-G H, and neither does the I 'the B "C" is C'; therefore, neither is either D or J.
+Chars: 227 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,;,.
+
+--- Pattern 113 ---
+Original: The Liar Paradox 
+
+Suppose Smith says “I am lying.” He is lying if he’s telling the truth and he’s telling the truth if he’s lying.
+Bleached: The A B
+
+C D E "I am F-ing." He is F-ing if he's G-ing the H and he's G-ing the H if he's F-ing.
+Chars: 133 | Tokens: 25 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ..
+
+--- Pattern 114 ---
+Original: Analysis: It is not words per se but the underlying meanings, or propositions, that are true or false.
+Bleached: Analysis: It is not X's per se but the underlying Y's, or Z's, that are true or false.
+Chars: 102 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,.
+
+--- Pattern 115 ---
+Original: So when Smith says “I am lying”, what he is saying, if stated perspicuously, is to the effect that: There exists a proposition P such that P is false if affirmed and true if denied and such that, moreover, I am not affirming P.
+Bleached: So when X Y-s "I am Z-ing", what he is Y-ing, if W-ed Ω-ly, is to the A that: There B-s a C P such that P is D if E-ed and D if F-ed and such that, moreover, I am not E-ing P.
+Chars: 227 | Tokens: 44 | Clauses: 4
+Clause Order: main → subordinate
+Punctuation: ,,,:,,.
+
+--- Pattern 116 ---
+Original: But the statement just made is neither false-if-true nor true-if-false: it is simply false.
+Bleached: But the X just Y-ed is neither Z-if-W nor W-if-Z: it is simply Z.
+Chars: 91 | Tokens: 14 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ----:.
+
+--- Pattern 117 ---
+Original: Berry’s Paradox 
+
+The expression “the first number not nameable in under ten words” names that number in nine words.
+Bleached: X's Y
+
+The Z "the W V not A-able in under B C" D's that V in E C.
+Chars: 118 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 118 ---
+Original: Solution: There are different ways of picking out a number.
+Bleached: X: There are different Y's of Z-ing out a W.
+Chars: 59 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 119 ---
+Original: The canonical way of doing so is by using the usual numerical notation.
+Bleached: The A way of B-ing so is by C-ing the D E F.
+Chars: 71 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 120 ---
+Original: Thus, the expression “117,334” is the canonical way of picking out the corresponding number, but “the exact number of dollars in Jim’s saving’s account” is not.
+Bleached: Thus, the A "117,334" is the B C of D out the E F, but "the G F of H in I's J's K" is not.
+Chars: 160 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 121 ---
+Original: In light of this, let n be the least number that cannot be canonically picked out in less than ten words.
+Bleached: In light of this, let n be the least X that cannot be Y-ly Z-ed out in less than ten words.
+Chars: 105 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 122 ---
+Original: Given that E is not a canonical description of n, there is nothing paradoxical about E if it is taken to be short for “the first number not canonically nameable in under ten words.” So E is paradoxical only if taken to mean “the first number not nameable in any way at all in under ten words.” But thus taken, E isn’t paradoxical at all as it doesn’t refer to anything.
+Bleached: Given that E is not a X Y of n, there is nothing Z about E if it is A to be B for "the C D not X-ly E-able in F G H." So E is Z only if A to I "the C D not E-able in J K at L in F G H." But M A, E N O at L as it P Q to R.
+Chars: 369 | Tokens: 71 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,..,.
+
+--- Pattern 123 ---
+Original: For while there is indeed a first number that cannot be canonically named in less than ten words, there is no first number that cannot be named in any way at all in less than ten words, simply because, given suitable linguistic conventions, anything can refer to anything.
+Bleached: For while there is indeed a first Q that cannot be R-ly S-ed in less than ten T's, there is no first Q that cannot be S-ed in any U at all in less than ten T's, simply because, given V-able W X's, anything can Y to anything.
+Chars: 272 | Tokens: 48 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 124 ---
+Original: Wittgenstein’s Rule-following Paradox 
+
+Any given course of conduct complies with many different rules, and there is therefore no good reason to say of a given act that it is an act of following this as opposed to that rule.
+Bleached: Ω1's X-Y Z
+
+Any given A of B C-s with many different X-s, and there is therefore no good D to E of a given F that it is an F of Y-ing this as opposed to that X.
+Chars: 226 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 125 ---
+Original: So any putative case of following a given rule might equally reasonably be seen as a case of following some other, incompatible rule, and there is therefore no good reason to regard any act as a case of following any given rule.
+Bleached: So any A B of C-ing a given D might equally E be F-ed as a B of C-ing some other, G D, and there is therefore no H I to J any K as a B of C-ing any given D.
+Chars: 228 | Tokens: 42 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 126 ---
+Original: The solution: Taken in isolation, a given action can be interpreted as an act of compliance with any given one of a plurality of incompatible rules.
+Bleached: The X: Y in Z, a W V can be R-ed as an U of T with any W S of a P of Q O's.
+Chars: 148 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 127 ---
+Original: If you say "4" when I ask you "what is 2+2?", I cannot on the basis alone rule out the possibility that you took "what is 2+2?" and "4" to mean, respectively,  "I want to play chess" and "I do not have time for childish pastimes." But if that is what you meant, there will be independent evidence for it, meaning that there will be some reason independently of this context to believe that you take those words to have those meanings.
+Bleached: If you X "4" when I X you "what is 2+2?", I cannot on the Y alone Z out the W that you V "what is 2+2?" and "4" to Q, respectively, "I R to S T" and "I do not have U for V W." But if that is what you X, there will be Y Z for it, Q that there will be some A independently of this B to C that you V those D to have those E.
+Chars: 434 | Tokens: 82 | Clauses: 4
+Clause Order: subordinate → main
+Punctuation: """?","?""",,""".",,.
+
+--- Pattern 128 ---
+Original: And attempts to manufacture such evidence by ascribing non-standard interpretations to other acts of yours will quickly lead to hypotheses that are inconsistent with one another and with well-established principles of psychology and natural law generally.
+Bleached: And A's to B such C by D-ing E F's to other G's of yours will quickly H to I's that are J with one another and with well-K'd L's of M and N O generally.
+Chars: 255 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 129 ---
+Original: So Wittgenstein’s ‘paradox’ collapses into the trivial point that erroneous hypotheses may be compatible with artificially restricted data sets.
+Bleached: So X's 'Y' Z's into the W V that Q U's may be R with S T O P's.
+Chars: 144 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 130 ---
+Original: Exactly the same thing is true of Quine's ‘indeterminacy of translation' thesis, according to which people's overt behaviors leave it open what they mean by their words---which isn't true and which only appears true if one considers artificially constricted data-sets.
+Bleached: Exactly the same thing is true of X's 'Y-acy of Z' W, according to which people's overt A's leave it open what they mean by their words---which isn't true and which only appears true if one considers artificially B-ed C-sets.
+Chars: 268 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '','---'-.
+
+--- Pattern 131 ---
+Original: Both of these contentions are motivated by behaviorist psychological theories and, though they are meant to provide support for such theories, they in fact presuppose them and show how broken such theories are.
+Bleached: Both of these A's are B-ed by C-ist D-al E's and, though they are F to G H for such E's, they in fact I them and J how K such E's are.
+Chars: 210 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 132 ---
+Original: The Sorites Paradox
+
+A single grain of sand is not a heap.
+Bleached: The A B
+
+A C D of E is not a F.
+Chars: 60 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 133 ---
+Original: If n grains of sand, then neither are n+1 grains.
+Bleached: If n X's of Y, then neither are n+1 X's.
+Chars: 49 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 134 ---
+Original: Therefore, a billion grains of sands are not a heap.
+Bleached: Therefore, a X Y of Z are not a W.
+Chars: 52 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 135 ---
+Original: Analysis: Three grains of sand is more of a heap than two; four are more of a heap than three.
+Bleached: G: Three H's of I is more of a J than two; four are more of a J than three.
+Chars: 94 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :;.
+
+--- Pattern 136 ---
+Original: n+1 grains of sand are more ‘heapy’ than n grains.
+Bleached: n+1 X's of Y are more 'Z-y' than n X's.
+Chars: 50 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 137 ---
+Original: If, for arbitrary n, n grains of sand qualify as a heap, they do so because they are heapy enough relative to some benchmark.
+Bleached: If, for X n, n Y's of Z V as a W, they do so because they are W-y enough relative to some B.
+Chars: 125 | Tokens: 24 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 138 ---
+Original: They may be heapy enough to alter the path of a rolling golf ball or they may be heapy enough to block traffic.
+Bleached: They may be X enough to Y the Z of a W-ing A B or they may be X enough to C D.
+Chars: 111 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 139 ---
+Original: There are infinitely many different Sorites paradoxes and they are all to be solved in more or less the same way.
+Bleached: There are A-ly many different B C-es and they are all to be D-ed in more or less the same way.
+Chars: 113 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 140 ---
+Original: For example: A person who has only $1 is not rich.
+Bleached: For A: A B who has only $C is not D.
+Chars: 50 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 141 ---
+Original: If a person with $n is not rich, neither is a person with $n+1.
+Bleached: If a F with $n is not G, neither is a F with $n+1.
+Chars: 63 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 142 ---
+Original: Therefore, a billionaire is not rich.
+Bleached: Therefore, a X is not Y.
+Chars: 37 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 143 ---
+Original: Solution: A person with $n+1 is richer than one with only $n.
+Bleached: Y: A F with $n+1 is Q-er than one with only $n.
+Chars: 61 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 144 ---
+Original: If, for arbitrary n, a person with $n counts as ‘rich’, that is because he is rich relative to some benchmark.
+Bleached: If, for arbitrary n, a F with $n X's as 'Y', that is because he is Y relative to some Z.
+Chars: 110 | Tokens: 21 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 145 ---
+Original: He may be rich enough to afford entry into a certain club or to fall into a certain tax bracket.
+Bleached: He may be X enough to Y Z into a certain W or to Y into a certain V bracket.
+Chars: 96 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 146 ---
+Original: Next example: If x is a given water-molecule and x is one mile away from cloud y, then x is not a part of y.
+Bleached: Next example: If x is a given A-B and x is one C away from D y, then x is not a part of y.
+Chars: 108 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-,.
+
+--- Pattern 147 ---
+Original: If a water-molecule that is n millimeters away from a cloud is not a part of that cloud, then neither is a molecule that is n-1 millimeters away.
+Bleached: If a X-Y that is n Z's away from a W is not a part of that W, then neither is a Y that is n-1 Z's away.
+Chars: 145 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,-.
+
+--- Pattern 148 ---
+Original: Solution: Analysis: A water-molecule that is n-1 millimeters away from a given cloud is more a part of that cloud than an otherwise comparable one that is n millimeters away, in the sense that the first molecule's condition is relevant to the cloud's condition in a wider range of contexts than the second molecule.
+Bleached: Solution: Analysis: A X-molecule that is n-1 Y away from a given Z is more a part of that Z than an otherwise W one that is n Y away, in the sense that the first molecule's condition is V to the Z's condition in a wider range of contexts than the second molecule.
+Chars: 315 | Tokens: 54 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::--,''.
+
+--- Pattern 149 ---
+Original: If, for arbitrary n, a water molecule that is n millimeters away from a given cloud ‘belongs' to that cloud, it is because it is close enough relative to some benchmark: it is sufficiently close that it was involved in the occurrence of some electrical storm that was otherwise the responsibility of that cloud or because it was involved in the slowing the descent of some object that was otherwise the responsibility of that cloud.
+Bleached: If, for X n, a Y Z that is n W's away from a given A 'B's' to that A, it is because it is C enough relative to some D: it is sufficiently C that it was E-ed in the F of some G H that was otherwise the I of that A or because it was E-ed in the J-ing the K of some L that was otherwise the I of that A.
+Chars: 432 | Tokens: 75 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,,',:.
+
+--- Pattern 150 ---
+Original: In general, Sorites paradoxes are solved by replacing binary characterizations (‘heap’, ‘rich’, ‘part of a given cloud’) with the corresponding comparatives (‘more of a heap’, ‘rich’, ‘more a part of that cloud’), along with the contextually supplied benchmarks.
+Bleached: In general, A X's are Y-ed by Z-ing W characterizations ('B', 'C', 'D of a given E') with the corresponding F's ('more of a B', 'C', 'more a D of that E'), along with the contextually G-ed H's.
+Chars: 262 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,(,,)(,,),.
+
+--- Pattern 151 ---
+Original: n+1 straws are more of an unbearable load than n straws; and if a given number counts as an ‘unbearable load’, without being preceded by ‘more’ or some other comparative term, that is because that number of straws is unbearable enough in relation to some benchmark, for example, the camel’s back breaks if it has to carry that many straws.
+Bleached: n+1 X's are more of an Y Z than n X's; and if a given number counts as an 'Y Z', without being W-ed by 'more' or some other V term, that is because that number of X's is Y enough in relation to some B, for example, the A's back breaks if it has to carry that many X's.
+Chars: 339 | Tokens: 60 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ;,,,,.
+
+--- Pattern 152 ---
+Original: The Paradox of the Grain of Millet 
+
+If a single grain of millet falls to the earth, it doesn’t make a sound.
+Bleached: The X of the Y of Z 
+
+If a single Y of Z X's to the W, it doesn't V a Q.
+Chars: 111 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 153 ---
+Original: But if a billion such grains do so, they do make a sound.
+Bleached: But if a A such B's do so, they do C a D.
+Chars: 57 | Tokens: 13 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 154 ---
+Original: Therefore, a billion nothings add up to something.
+Bleached: Therefore, a X Y's Z up to W.
+Chars: 50 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 155 ---
+Original: Analysis: If a given grain of millet falls to the earth, it does make a sound.
+Bleached: Analysis: If a given X of Y Z's to the W, it does V a Q.
+Chars: 78 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 156 ---
+Original: If you were millet-sized and appropriately located in relation to the millet grains impact with the earth, the sound would be intolerably loud.
+Bleached: If you were X-sized and appropriately Y-ed in Z to the X W's V with the U, the T would be S loud.
+Chars: 143 | Tokens: 23 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 157 ---
+Original: To say that a single millet-grain doesn't make a sound when it hits the earth is comparable to saying that your stereo doesn't make a sound because your deaf grandfather can't hear it.
+Bleached: To X that a Y Z-grain doesn't W a V when it U's the T is S to X-ing that your R doesn't W a V because your Q P can't N it.
+Chars: 184 | Tokens: 33 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -'''.
+
+--- Pattern 158 ---
+Original: Arrow Paradox 
+
+Since an arrow is at rest at any given instant, it never moves.
+Bleached: A Ω
+
+Since an X is at Y at any given Z, it never W's.
+Chars: 81 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 159 ---
+Original: Since any given object is at rest at any given instant, nothing moves.
+Bleached: Since any X Y is at Z at any X W, X V's.
+Chars: 70 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 160 ---
+Original: The solution: To be at rest is to fail to move during a non-null interval.
+Bleached: The X: To be at Y is to Z to W during a V-X T.
+Chars: 74 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 161 ---
+Original: So while it is true that the arrow occupies different places during its flight, the arrow is nonetheless isn’t at rest during its occupancy of any given one of those points.
+Bleached: So while it is true that the X Y's Z W's during its V, the X is nonetheless isn't at rest during its Y of any given one of those W's.
+Chars: 173 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 162 ---
+Original: The Irresistible Force Paradox 
+
+What happens if an irresistible force meets an unmovable object?
+Bleached: The A B C
+
+What happens if an A B meets an D E?
+Chars: 99 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 163 ---
+Original: Isaac Asimov solved this paradox long ago.
+Bleached: A B C-ed this D long ago.
+Chars: 42 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 164 ---
+Original: If there is an irresistible force, there are no unmovable objects, and if there are unmovable objects, there are no irresistible forces.
+Bleached: If there is an X Y, there are no Z W's, and if there are Z W's, there are no X Y's.
+Chars: 136 | Tokens: 22 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 165 ---
+Original: The Horny Nerd Paradox 
+
+Males with high sex drive may for that reason put off women and therefore have less sex than men with low sex drive.
+Bleached: The X Y Z
+
+A's with B C D may for that E F off G and therefore have H C than I with J C D.
+Chars: 143 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 166 ---
+Original: The Licensed Therapist Paradox 
+
+The more stringent the licensing process for therapists, the less effective therapists are.
+Bleached: The X'd Y Z
+
+The more W the X'ing V for Y's, the less U Y's are.
+Chars: 126 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 167 ---
+Original: The two-for-one-psychiatrist Paradox 
+
+For every hour of psychiatric treatment that you received, you need two hours of psychiatric treatment to undo the damage.
+Bleached: The X-for-Y-Z A
+
+For every B of C D that you E-ed, you F X B's of C D to G the H.
+Chars: 163 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---,.
+
+--- Pattern 168 ---
+Original: The Economics Research Paradox 
+
+The more money is spent on economic research, the more useless are the results of that research.
+Bleached: The A B C
+
+The more D is E on F B, the more G are the H of that B.
+Chars: 131 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 169 ---
+Original: The Defense-lawyer Paradox 
+
+Lawyers are better at defending the guilty than at defending the innocent.
+Bleached: The A-B Ω
+
+C's are D at E-ing the F than at E-ing the G.
+Chars: 105 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 170 ---
+Original: The Union Paradox 
+
+Unions are needed to help people keep jobs only because they prevent people from getting jobs in the first place.
+Bleached: The A B
+
+A's are C-ed to D E F G's only because they H E from I G's in the J K.
+Chars: 135 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 171 ---
+Original: The Useless Functionary Paradox 
+
+Oftentimes people who have very modest responsibilities will intentionally fail to fulfill them or fulfill them only very inefficiently, so as to inflate their own importance.
+Bleached: The A B Paradox
+
+Oftentimes people who have very C responsibilities will intentionally fail to D them or D them only very E-ly, so as to F their own G.
+Chars: 211 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 172 ---
+Original: Hence the sports club attendant whose one job is to buzz people into the athletic center may deliberately make people wait while he takes his time settling into his seat and primping his hair, and the like.
+Bleached: Hence the A B C whose one D is to E F into the G H may I J F K while he L his M N-ing into his O and P-ing his Q, and the like.
+Chars: 206 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 173 ---
+Original: The Useless Professor Paradox 
+
+Professors are supposed to make information available.
+Bleached: The A B C
+
+B's are D to make E F.
+Chars: 88 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 174 ---
+Original: But oftentimes they withhold the little information that they have, in order to make it seem more valuable.
+Bleached: But oftentimes they X the Y Z that they have, in order to W it V more A.
+Chars: 107 | Tokens: 18 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 175 ---
+Original: In general, people have incentives to inflate the value of the information that they have to offer, and they often do so by withholding it or by communicating it only to those who won’t expose them.
+Bleached: In general, X have Y to Z the W of the V that they have to offer, and they often do so by Q-ing it or by R-ing it only to those who won't S them.
+Chars: 198 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 176 ---
+Original: Zeno’s Paradox: Achilles and the Tortoise 
+
+If the tortoise is ahead of Achilles, Achilles can never overtake the tortoise, since, by the time Achilles gets to a position previously occupied by the tortoise, the tortoise has already moved on.
+Bleached: X's Y: Z and the W
+
+If the W is ahead of Z, Z can never V the W, since, by the time Z gets to a P previously Q-ed by the W, the W has already R-ed on.
+Chars: 244 | Tokens: 39 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :,,,,.
+
+--- Pattern 177 ---
+Original: The solution: Whenever Achilles is occupying a point that the tortoise has already occupied, Achilles is indeed behind the tortoise.
+Bleached: The A: Whenever B is C-ing a D that the E has already F-ed, B is indeed behind the E.
+Chars: 132 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 178 ---
+Original: This is a tautology and in no way paradoxical.
+Bleached: This is a X and in no way Y.
+Chars: 46 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 179 ---
+Original: So the paradox must therefore be that in order for Achilles to catch up to the tortoise, he must traverse an infinite series of distances in a finite amount of time.
+Bleached: So the X must therefore be that in Y for Z to W up to the A, he must B an C D of E's in a F G of H.
+Chars: 165 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 180 ---
+Original: But there is nothing paradoxical about this, given that any finite number can be represented as the sum of an infinite series (for example, 1 can be represented as the sum of ½ and ¼ and 1/8th and so on) and given, consequently, that any case of an object’s moving at a finite rate involves its traversing infinitely many finite distances in a finite amount of time.
+Bleached: But there is nothing E about this, given that any G X can be Y-ed as the Z of an W A (for example, 1 can be Y-ed as the Z of ½ and ¼ and 1/8th and so on) and given, consequently, that any B of an C's D-ing at a G F involves its H-ing W-ly many G I's in a G J of K.
+Chars: 366 | Tokens: 67 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,(,),,.
+
+--- Pattern 181 ---
+Original: Paradox of Place 
+
+If everything has a place, then each place has a place, and so on ad infinitum.
+Bleached: Q of R
+
+If everything has a S, then each S has a S, and so on ad T.
+Chars: 100 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 182 ---
+Original: Response: When it is said that everything has a place, what is meant is that every occupant of space-time has a place.
+Bleached: When it is said that everything has a X, what is meant is that every Y of Z-W has a X.
+Chars: 118 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,-.
+
+--- Pattern 183 ---
+Original: Space-time regions do not themselves have places, since they are constituents, not occupants, of space-time.
+Bleached: X-Y Z's do not themselves have W's, since they are V's, not U's, of X-Y.
+Chars: 108 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,-.
+
+--- Pattern 184 ---
+Original: The Coin Paradox 
+
+There are non-denumerably many regions R that a given coin dropped on a flat surface can occupy after settling.
+Bleached: The X Y
+
+There are Z-W many V R that a given X X-ed on a Q V can Z after Z-ing.
+Chars: 132 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 185 ---
+Original: So if R* is the exact region that the coin does occupy, the chances of the coin’s occupying that exact region are 1 divided by the number of such regions and are therefore zero.
+Bleached: So if R* is the A B that the C does D, the E's of the C's D-ing that A B are 1 F by the G of such B's and are therefore H.
+Chars: 177 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 186 ---
+Original: But since the coin does occupy R*, the chances of its doing so are greater than zero.
+Bleached: But since the X does Y R*, the Z's of its doing so are greater than zero.
+Chars: 85 | Tokens: 17 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 187 ---
+Original: The solution: If an infinitely large class contains zero x’s, then the chances of choosing an x from that class are nil.
+Bleached: The A: If an B C D E contains F G's, then the H of I an G from that D are J.
+Chars: 120 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 188 ---
+Original: If an infinitely large class contains one x, then the chances of choosing an x from that class are infinitesimally small but not nil.
+Bleached: If an infinitely A B contains one x, then the C of D-ing an x from that B are infinitesimally E but not F.
+Chars: 133 | Tokens: 24 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 189 ---
+Original: Stockdale Paradox 
+
+Self-belief leads to success, but optimism leads to failure.
+Bleached: A B
+
+C-belief D's to E, but F D's to G.
+Chars: 82 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 190 ---
+Original: According to James Stockton, an admiral in the US Navy, the soldiers who survived war were the ones who believed in themselves while not lying to themselves about the direness of the situation, and the soldiers who did not survive were the ones who were positive that ‘everything would be ok.’ 
+	The explanation of this paradox is straightforward.
+Bleached: According to A B, an C in the D E, the F who G-ed H were the ones who I-ed in themselves while not J-ing to themselves about the K of the L, and the F who did not G were the ones who were M that 'everything would be N.' 
+	The O of this P is Q.
+Chars: 348 | Tokens: 58 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,..
+
+--- Pattern 191 ---
+Original: Optimism is a form of denial.
+Bleached: A is a B of C.
+Chars: 29 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 192 ---
+Original: One believes that ‘everything will be ok’ when one has one reason to believe that everything won’t be ok but lacks the self-confidence to confront that fact.
+Bleached: One X's that 'Y will be Z' when one has one W to X that Y won't be Z but V's the A-B to C that D.
+Chars: 157 | Tokens: 27 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 193 ---
+Original: So optimism is motivated by insecurity-driven lack of realism and therefore leads to failure, whereas self-belief is motivated by confidence-driven realism and tends to lead to success.
+Bleached: So X is Y-ed by Z-W lack of R and therefore V's to A, whereas S-B is Y-ed by C-W R and T's to V to U.
+Chars: 185 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,--.
+
+--- Pattern 194 ---
+Original: Self-absorption Paradox 
+
+High-levels of self-awareness are associated with high levels of well-being and also with high levels of distress, including distress of the neurotic variety.
+Bleached: A-B C
+
+D-E's of A-F are G-ed with D E's of H-I and also with D E's of J, K-ing J of the L M.
+Chars: 186 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ----,.
+
+--- Pattern 195 ---
+Original: How is this to be explained?
+Bleached: How is this to be X-ed?
+Chars: 28 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 196 ---
+Original: First of all, without self-awareness, one tends not to adapt well, since a precondition for adaption is revising, and therefore being aware of, one’s own conduct.
+Bleached: First of all, without A-ness, one B's not to C well, since a D for E is F-ing, and therefore being G of, one's own H.
+Chars: 162 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,,,,.
+
+--- Pattern 197 ---
+Original: So a certain degree of self-awareness is inherent in adapting and therefore in living well.
+Bleached: So a X Y of Z is W in X-ing and therefore in X-ing well.
+Chars: 91 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 198 ---
+Original: But if one is aware, one is self-critical and for that reason prone to forms of distress to which non-self-aware are not prone.
+Bleached: But if one is X, one is Y-Z and for that reason W to V's of U to which non-Y-Z are not W.
+Chars: 127 | Tokens: 23 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,---.
+
+--- Pattern 199 ---
+Original: Ironic Process Theory 
+
+Attempting to not to have thoughts of a certain kind tends to make such thoughts more likely to occur.
+Bleached: A B Theory
+
+X-ing to not to have Y's of a certain kind tends to make such Y's more likely to Z.
+Chars: 128 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 200 ---
+Original: If you try not to think of a white bear, you are for that reason more likely to think of a white bear.
+Bleached: If you X not to Y of a Z W, you are for that reason more V to Y of a Z W.
+Chars: 102 | Tokens: 23 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 201 ---
+Original: Explanation: You cannot try to not have a thought of a certain kind without for that very reason having that thought.
+Bleached: Explanation: You cannot X to not have a Y of a certain Z without for that very W having that Y.
+Chars: 117 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 202 ---
+Original: Also, in trying not to have a thought of a certain kind, you are initiating a cognitive process without letting it run its course, and the simplest way to terminate a thought process is indeed to let it run its course, and if you don't let it do so, it will continue to obtrude itself upon consciousness.
+Bleached: Also, in X-ing not to have a Y of a certain Z, you are A-ing a B C without D-ing it E its F, and the most G H to I a Y C is indeed to let it E its F, and if you don't let it do so, it will continue to J itself upon K.
+Chars: 304 | Tokens: 57 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,',.
+
+--- Pattern 203 ---
+Original: Outcomes Paradox
+
+Schizophrenics in developing countries seems to respond better to psychiatric treatment than schizophrenics in developed countries.
+Bleached: A Φ
+
+B's in C-ing D's Ψ to E F to G H than B's in I-ed D's.
+Chars: 151 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 204 ---
+Original: This is a paradox since people in developed countries generally respond better to medical treatment than their counterparts in developing countries.
+Bleached: This is a X since Y in Z-ed W generally X better to V X than their Y in Z-ing W.
+Chars: 148 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 205 ---
+Original: A possible explanation: Having schizophrenia involves having a profound loss of self-esteem, and it is easier to restore self-esteem in a developing country, where simply making a living is considered a respectable outcome, than it is a developed country, where being a success involves satisfying standards that are both very high and very poorly defined.
+Bleached: A possible X: Having Y involves having a profound Z of A-B, and it is easier to C A-B in a D-ing E, where simply F-ing a G is H-ed a I J, than it is a K-ed E, where being a L involves M-ing N that are both very O and very P Q-ed.
+Chars: 356 | Tokens: 55 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-,-,,,.
+
+--- Pattern 206 ---
+Original: The Antitrust Paradox
+
+The Title of a book by Robert Bork, in which he argues that Anti-trust laws hurt consumers by insulating inefficient competitors from their more efficient competitors.
+Bleached: The A B
+
+The C of a D by E F, in which he G that H I hurt J by K L M from their more N M.
+Chars: 192 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 207 ---
+Original: This is a ‘paradox’ in the sense that anti-trust laws are supposed to protect consumers from shoddy products put out by firms that have 100% market-share and therefore don’t have to compete.
+Bleached: This is a 'X' in the sense that Y-Z laws are supposed to protect A's from B C's put out by D's that have 100% E-F and therefore don't have to G.
+Chars: 190 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 208 ---
+Original: Bork’s position is prima facie correct.
+Bleached: A's B is C D E.
+Chars: 39 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 209 ---
+Original: If the government artificially restricted Walmart's market-share, would consumers have to pay more or less for the products that Walmart supplies?
+Bleached: If the X artificially Y-ed Z's A-share, would B's have to C more or less for the D's that Z E's?
+Chars: 146 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: '-,?
+
+--- Pattern 210 ---
+Original: Probably more.
+Bleached: Ω1 X.
+Chars: 14 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 211 ---
+Original: Some businesses have large market-shares because they outcompete their rivals.
+Bleached: Some X's have Y Z-shares because they W their V's.
+Chars: 78 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 212 ---
+Original: Others have large market shares because they restrict competition.
+Bleached: Others have large X shares because they Y Z.
+Chars: 66 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 213 ---
+Original: When anti-trust laws are applied to businesses of the second kind, consumers benefit, but they are hurt when such laws are applied to businesses of the first kind.
+Bleached: When A-B Y's are X-ed to Z's of the G K, U's V, but they are W-ed when such Y's are X-ed to Z's of the M K.
+Chars: 163 | Tokens: 28 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: -,,.
+
+--- Pattern 214 ---
+Original: The Tenure Paradox
+
+Explanation: Tenure is supposed to allow scholars to have intellectual freedom but actually does the opposite.
+Bleached: The X Y
+
+Z: X is W-ed to V U's to have T S but R Q's the P.
+Chars: 132 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 215 ---
+Original: Tenure strips those who have it of any economic incentive to do good work and also of any economic incentive to hire people who will upstage them.
+Bleached: A strips those who have it of any B C to do D work and also of any B C to E people who will F them.
+Chars: 146 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 216 ---
+Original: So tenure prevents those who could use it do good work from having it.
+Bleached: So A B-s those who could use it do good work from C-ing it.
+Chars: 70 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 217 ---
+Original: The Benevolent Leader Paradox
+
+If a leader is vindictive, people risk a lot by rebelling, and people gain a lot by reporting rebels to the authorities, making rebellion unlikely.
+Bleached: The A B C
+
+If a D is E, F G a H by I-ing, and F J a H by K-ing L to the M, N-ing O P.
+Chars: 180 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 218 ---
+Original: If a leader is not vindictive, people risk little by rebelling and gain little by reporting rebels to the authorities.
+Bleached: If a X is not Y, Z risk little by V-ing and gain little by V-ing W to the Q.
+Chars: 118 | Tokens: 20 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 219 ---
+Original: So a vindictive leader is less likely to be overthrown than a benevolent one, it being irrelevant who does more good for society.
+Bleached: So a A B is less likely to be C-ed than a D one, it being irrelevant who does more E for F.
+Chars: 129 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 220 ---
+Original: The Paradox of Analysis 
+
+A conceptual analysis is given by a true, non-trivial and non-empirical proposition of the form x is a phi if and only if x is a psi, for example, ‘x is a circle if and only if x is a closed planar figure of uniform curvature.’ According to G.E.
+Bleached: The Λ of Ψ 
+
+A Φ-al Ψ is given by a true, non-Ω and non-Θ-al Σ of the form x is a phi if and only if x is a psi, for example, 'x is a Δ if and only if x is a Ρ-ed Μ Ν of Ξ Ζ.' According to G.E.
+Chars: 273 | Tokens: 53 | Clauses: 4
+Clause Order: main → subordinate
+Punctuation: ,--,,...
+
+--- Pattern 221 ---
+Original: Moore, there is a ‘paradox of analysis,' for the reason that if a conceptual analysis is true, then both sides of the ‘if and only if' say the same thing, in which case said analysis is uninformative.
+Bleached: Z, there is a 'W of Y,' for the reason that if a X V is true, then both U of the 'if and only if' say the same thing, in which case said V is T.
+Chars: 200 | Tokens: 37 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,,',',.
+
+--- Pattern 222 ---
+Original: So according to Moore, ‘x is a circle if and only if x is a closed planar figure of uniform curvature' is true only if ‘x is a circle' says the same thing as ‘x is a closed planar figure of uniform curvature'; but if they both say the same thing, Moore also holds, then ‘x is a circle if and only if x is a closed planar figure of uniform curvature' is uninformative.
+Bleached: So according to A, 'x is a B if and only if x is a C D E of F G' is true only if 'x is a B' H-s the same thing as 'x is a C D E of F G'; but if they both H the same thing, A also I-s, then 'x is a B if and only if x is a C D E of F G' is J.
+Chars: 367 | Tokens: 74 | Clauses: 7
+Clause Order: main → subordinate
+Punctuation: ,''';,,'.
+
+--- Pattern 223 ---
+Original: The solution is that the information-load borne by a statement is a function not only of what it says but how it says it.
+Bleached: The X is that the Y-Z W by a V is a T not only of what it U's but how it U's it.
+Chars: 121 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 224 ---
+Original: If I tell you that x is a closed planar figure of uniform curvature, the property that I am ascribing to x is the same as the property I’m ascribing to it if I say that x is a circle.
+Bleached: If I A you that x is a B-ed C D of E F, the G that I am H-ing to x is the same as the G I'm H-ing to it if I A that x is a I.
+Chars: 183 | Tokens: 40 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 225 ---
+Original: But since the one ascription involves different concepts from the other and since in each case you must work through the concepts involved in the property-ascription to identify the property in question, the information borne by the one statement will differ from that borne by the other.
+Bleached: But since the one X involves different Y's from the other and since in each case you must Z through the Y's involved in the W-X to identify the W in question, the A borne by the one B will differ from that borne by the other.
+Chars: 288 | Tokens: 47 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 226 ---
+Original: Fitch’s Paradox 
+
+If all truths can be known, then all truths are known.
+Bleached: F's Λ
+
+If all Ψ's can be X-ed, then all Ψ's are X-ed.
+Chars: 74 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 227 ---
+Original: Here is the supposed proof.
+Bleached: Here is the X-ed Y.
+Chars: 27 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 228 ---
+Original: Suppose that any given truth can be known.
+Bleached: Suppose that any given X can be Y-ed.
+Chars: 42 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 229 ---
+Original: Let P be an unknown truth.
+Bleached: Let P be an X Y.
+Chars: 26 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 230 ---
+Original: In that case, ‘P is an unknown truth’ is a truth and can itself be known.
+Bleached: In that case, 'P is an X Y' is a Y and can itself be Z-ed.
+Chars: 73 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 231 ---
+Original: But if ‘P is an unknown truth’ is known then P is known to be a truth and therefore is not an unknown truth.
+Bleached: But if 'P is an X Y' is Z then P is Z to be a Y and therefore is not an X Y.
+Chars: 108 | Tokens: 24 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 232 ---
+Original: This is not a paradox.
+Bleached: This is not a X.
+Chars: 22 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 233 ---
+Original: It is a proof that not all truths can be known.
+Bleached: It is a X that not all Y's can be Z-ed.
+Chars: 47 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 234 ---
+Original: The Reddit-loser Paradox 
+
+No one spends time on Reddit who by doing so is foregoing opportunities to advance professionally.
+Bleached: The A-B Ω
+
+No one C's D on A who by E-ing so is F-ing G's to H I.
+Chars: 127 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 235 ---
+Original: Therefore, chronic Redditors are people who have no Reddit-external professional opportunities to forego.
+Bleached: Therefore, A B's are C who have no B-D E F's to G.
+Chars: 105 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 236 ---
+Original: Therefore, chronic Redditors are precisely the people who should most support attempts on the part of other Redditors to use Reddit to advance their careers.
+Bleached: Therefore, A B's are C the D who should most E F's on the G of other B's to use H to I their J's.
+Chars: 157 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 237 ---
+Original: But chronic Redditors do the exact opposite, doing everything in their power to prevent people from using to their professional advantage and consequently doing everything in their power to prevent themselves from doing so.
+Bleached: But A B-ers do the exact opposite, doing everything in their power to prevent people from using to their C advantage and consequently doing everything in their power to prevent themselves from doing so.
+Chars: 223 | Tokens: 34 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 238 ---
+Original: This paradox is a special case of the low-man-on-the-totem-pole paradox.
+Bleached: This X is a Y Z of the A-B-on-the-C-D X.
+Chars: 72 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -----.
+
+--- Pattern 239 ---
+Original: The Low-man-on-the-totem-pole Paradox 
+
+The lower down somebody is in a hierarchy, the less likely he is to rebel against it and the more likely he is to use it to prevent other people from his own level from moving up in the hierarchy.
+Bleached: The A-B-on-the-C-D Ω
+
+The E down F is in a G, the H I he is to J against it and the K I he is to L it to M other N from his own O from P up in the G.
+Chars: 238 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -----,.
+
+--- Pattern 240 ---
+Original: Therefore, the people who are the most oppressed by a given hierarchy do the most to give it the power to oppress them.
+Bleached: Therefore, the X who are the most Y-ed by a given Z do the most to give it the power to Y them.
+Chars: 119 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 241 ---
+Original: The Grassroots Movement Paradox 
+
+A movement needs a leader to be effective.
+Bleached: The A B C
+
+A B needs a D to be E.
+Chars: 78 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 242 ---
+Original: A grassroots movement is by definition one whose leader has no power apart from the support of the people in that movement.
+Bleached: A X Y is by Z one whose W has no V apart from the U of the T in that Y.
+Chars: 123 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 243 ---
+Original: But since people will not support someone unless he already has the power to benefit them, it is not possible for a grassroots movement to exist.
+Bleached: But since X will not Y someone unless he already has the Z to A them, it is not possible for a B C to exist.
+Chars: 145 | Tokens: 26 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 244 ---
+Original: The Meek Shall Inherit the Earth Paradox 
+
+If you are overly competent, people will resent you and try to tear you down.
+Bleached: The A Shall B the C D
+
+If you are E F, G will H you and I to J you K.
+Chars: 122 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 245 ---
+Original: So a good survival-stratagem is to seek less than hyper-competent, and the best way to do this is to be less than hyper-competent.
+Bleached: So a X Y-Z is to V less than W-X, and the X Y to V this is to be less than W-X.
+Chars: 130 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,-.
+
+--- Pattern 246 ---
+Original: Therefore, incompetence may have survival value, showing that Spencer's belief in the ‘survival of the fittest' is only qualifiedly true.
+Bleached: Therefore, A may have B C, D-ing that E's F in the 'B of the G-est' is only H-ly I.
+Chars: 137 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,''.
+
+--- Pattern 247 ---
+Original: The Paradox of Hyper-competence 
+
+If you are incompetent, you are likely to be over-promoted since you are seen as controllable and non-threatening.
+Bleached: The A of B-C
+
+If you are D, you are likely to be over-E-ed since you are seen as F and non-G.
+Chars: 150 | Tokens: 22 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -,--.
+
+--- Pattern 248 ---
+Original: If you are hyper-competent, you are likely to be underpromoted since you are soon as threatening and uncontrollable.
+Bleached: If you are A-B, you are likely to be C-ed since you are soon as D-ing and E.
+Chars: 116 | Tokens: 18 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 249 ---
+Original: The Paradox of the School Psychologist
+
+If a disproportionate number of students in a given school are becoming mentally ill, the school psychologist can take the position that the school is to blame or she can take the position that the children are to blame.
+Bleached: The Λ of the X Ψ
+
+If a Ω F of Y's in a given X are Z-ing Δ Θ, the X Ψ can take the Π that the X is to blame or she can take the Π that the Y's are to blame.
+Chars: 262 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 250 ---
+Original: Statistically speaking, the first position is probably the right one.
+Bleached: A-ly B-ing, the C D is E the F one.
+Chars: 69 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 251 ---
+Original: But the school psychologist will lose her job if she says as much.
+Bleached: But the X Y will Z her W if she V's as X.
+Chars: 66 | Tokens: 13 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 252 ---
+Original: So she has to take the second position, which will involve undermining the very people she is supposed to help.
+Bleached: So she has to X the Y Z, which will W X-ing the very F she is X-ed to G.
+Chars: 111 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 253 ---
+Original: The Paradox of the Useless Law
+
+If a law is necessary, like the laws that prohibit assault and robbery, there is no need to make that law seem necessary and therefore no need to make violators of it seem like criminals.
+Bleached: The Ω of the E X
+
+If a X is E, like the X's that Y Z and W, there is no V to U that X V E and therefore no V to U T's of it V like R's.
+Chars: 221 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 254 ---
+Original: If a law is unnecessary or only arguably necessary, then there is a need to make that law seem necessary and there consequently is a need to make violators of it seem like, and therefore be, criminals.
+Bleached: If a X is Y or only Z-ly Y, then there is a W to V that X U Y and there consequently is a W to V T-ers of it U like, and therefore be, S's.
+Chars: 201 | Tokens: 37 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 255 ---
+Original: Therefore, useless laws give the state an incentive to criminalize the populations that are subject to them.
+Bleached: Therefore, X laws give the Y an Z to W the V that are X to them.
+Chars: 108 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 256 ---
+Original: This is why possession of a gram of cocaine is subject to harsher to penalties than assault.
+Bleached: This is why X of a Y of Z is W to Q R than S.
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 257 ---
+Original: The Useless Lawyer Paradox 
+
+The lawyer who represents you when you are arrested for drug-possession poses as your friend and may indeed be your friend in the context of that specific proceeding.
+Bleached: The A B Paradox
+
+The B who C's you when you are D-ed for E-F G's as your H and may indeed be your H in the I of that J K.
+Chars: 197 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 258 ---
+Original: But his livelihood depends on drugs being illegal, and he knows this and is therefore unlikely to do anything, including representing you adequately, that would conduce to their being made legal.
+Bleached: But his A B's on C's being illegal, and he knows this and is therefore unlikely to do anything, including D-ing you E-ly, that would F to their being made legal.
+Chars: 195 | Tokens: 31 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 259 ---
+Original: The Paradox of Gratuitous Scholarship 
+
+A superabundance of scholarship in a given area can create institutional roadblocks to actual progress in that area.
+Bleached: The X of Y Z
+
+A W of Z in a given X can X X X to X X in that X.
+Chars: 158 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 260 ---
+Original: If somebody has an actual insight into philosophy or economics, the existence of a mass of scholarship in that area means that there are people who deeply vested interests in suppressing or caricaturing that insight, since its existence means that their work is for naught.
+Bleached: If somebody has an actual X into Y or Z, the existence of a W of V in that area means that there are people who deeply U interests in T-ing or S-ing that X, since its existence means that their work is for R.
+Chars: 273 | Tokens: 45 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 261 ---
+Original: If there is a mass of scholarship in a given area, most of it is bound to be uninspired and mediocre and will for the most part be less about people looking for real answers and more about institutions commandeering territory for themselves.
+Bleached: If there is a A of B in a C D, most of it is E to be F and G and will for the most part be less about H I for J K and more about L M-ing N for themselves.
+Chars: 241 | Tokens: 43 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 262 ---
+Original: The Know-it-All Paradox 
+
+If a being is omniscient, then it doesn’t know what it is like to be ignorant.
+Bleached: The X-it-Y Z
+
+If a W is V, then it doesn't know what it is like to be U.
+Chars: 106 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,.
+
+--- Pattern 263 ---
+Original: The Paradox of the Omniscient Decider 
+
+If a being is omniscient, then it knows what it will decide to do.
+Bleached: The X of the Y Z
+
+If a W is Y, then it V's what it will V to V.
+Chars: 108 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 264 ---
+Original: But if it always knows what it will decide to do, then it never decides to do anything.
+Bleached: But if it always X's what it will Y to Z, then it never Y's to Z anything.
+Chars: 87 | Tokens: 18 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 265 ---
+Original: An omniscient being has a frozen belief-set.
+Bleached: An A B has a C D-set.
+Chars: 44 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 266 ---
+Original: It knows past, present, and future and therefore never changes its mind.
+Bleached: It X's Y, Z, and W and therefore never X's its Y.
+Chars: 72 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 267 ---
+Original: Therefore, it never changes its mind as to the desirability of a given course of action.
+Bleached: Therefore, it never X's its Y as to the Z-ity of a given W of X.
+Chars: 88 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 268 ---
+Original: Therefore, it never decides that a given course of action is indicated.
+Bleached: Therefore, it never X's that a given Y of Z is W-ed.
+Chars: 71 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 269 ---
+Original: Therefore, it never decides anything.
+Bleached: Therefore, it never X's anything.
+Chars: 37 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 270 ---
+Original: Nor can it decide in advance that it will act in certain ways at certain junctions, since that too would be a form of decision-making.
+Bleached: Nor can it X in Y that it will Z in W X's at W J's, since that too would be a X of X-making.
+Chars: 134 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 271 ---
+Original: The Paradox of the Omniscient Ignoramus
+
+If a being is omniscient, then it is not ignorant and therefore cannot know what it is like to be ignorant and therefore is not omniscient.
+Bleached: The X of the Y Z
+
+If a W is Y, then it is not Z and therefore cannot V what it is like to be Z and therefore is not Y.
+Chars: 182 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 272 ---
+Original: This is a veridical paradox, meaning that, rather than being a logical blunder, it is a cogent reductio ad absurdum on some proposition, the proposition in this case being that the concept of omniscience is coherent.
+Bleached: This is a A B, C-ing that, rather than being a D E, it is a F G ad H on some I, the I in this J being that the K of L is M.
+Chars: 216 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 273 ---
+Original: And, as this paradox shows, the reason that proposition is incoherent is that knowledge of one kind may exclude knowledge of some other kind.
+Bleached: And, as this A B, the C that D is E is that F of one G may H F of some other G.
+Chars: 141 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 274 ---
+Original: And, as this paradox also shows, the reason for this in its turn that when subjective conditions are incompatible with each other, so are the corresponding bodies of self-knowledge.
+Bleached: And, as this P also X's, the R for this in its turn that when A C's are I with each other, so are the corresponding B's of self-K.
+Chars: 181 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 275 ---
+Original: The Heavy Rock Paradox 
+
+If a being is omnipotent, he can make a rock so heavy that he cannot lift it, in which case he is not omnipotent.
+Bleached: The A B Ω
+
+If a C is D, he can E a B so A that he cannot F it, in which case he is not D.
+Chars: 140 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 276 ---
+Original: Here is how this paradox is to be resolved.
+Bleached: Here is how this X is to be Y-ed.
+Chars: 43 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 277 ---
+Original: If a being is omnipotent, then it is ipso facto logically impossible that there should exist a rock so heavy that said being cannot lift it.
+Bleached: If a F is Ω, then it is ipso facto logically G that there should H a K so E that said F cannot V it.
+Chars: 140 | Tokens: 26 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 278 ---
+Original: In other words, if there exists such a being, then the existence of a rock that it cannot lift is in the same category as a four-sided triangle: such a rock is a surd and the inability of an omnipotent being to create such a rock is no more of an abridgement of its powers than such a being’s inability to create a four-sided triangle.
+Bleached: In other words, if there exists such a being, then the existence of a X that it cannot Y is in the same Z as a W-ed triangle: such a X is a Q and the inability of an R being to S such a X is no more of an T of its U's than such a being's inability to S a W-ed triangle.
+Chars: 335 | Tokens: 65 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-:-.
+
+--- Pattern 279 ---
+Original: If there is some rock that a being cannot lift, that being is not omnipotent.
+Bleached: If there is some X that a Y cannot Z, that Y is not Ω.
+Chars: 77 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 280 ---
+Original: But if there some incoherent condition that a creature cannot cause to be satisfied, that creature does not for that reason fail to be omnipotent.
+Bleached: But if there some A B that a C cannot D to be E-ed, that C does not for that F G to be H.
+Chars: 146 | Tokens: 25 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 281 ---
+Original: So if the concept of omnipotence is incoherent, it is not for the reason suggested by this paradox.
+Bleached: So if the A of B is C, it is not for the D E-ed by this F.
+Chars: 99 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 282 ---
+Original: The Paradox of the Incoherent Institution
+
+If an institution exists to solve some problem, then it has an incentive to prevent that problem from being solved, since there will be no demand for that institution.
+Bleached: The Ω of the E Ψ
+
+If an Ψ exists to X some Φ, then it has an Λ to Y that Φ from being X-ed, since there will be no Ρ for that Ψ.
+Chars: 212 | Tokens: 35 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 283 ---
+Original: So creating institutions to solve problems may prevent those problems from being solved.
+Bleached: So X-ing Y's to Z W's may V those W's from being Z-ed.
+Chars: 88 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 284 ---
+Original: For example, philosophy departments supposedly exist to solve philosophical problems (or teach people how to solve them).
+Bleached: For A, B C supposedly D to E F G (or H I how to E them).
+Chars: 121 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 285 ---
+Original: But as anyone who has been in such a department knows, on the rare occasions that somebody comes along who actually has a solution, or even a fragment thereof, he is mercilessly attacked.
+Bleached: But as A who has been in such a B knows, on the rare C that D comes along who actually has a E, or even a F thereof, he is G H-ed.
+Chars: 187 | Tokens: 33 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 286 ---
+Original: To take another example: Departments that exist to help eliminate racial tensions exacerbate those tensions and create race-related problems where none existed.
+Bleached: To X another Y: Z's that W to X V racial U's X those U's and Y race-V'd O's where none W'd.
+Chars: 160 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 287 ---
+Original: The same being true mutatis mutandis of women’s studies departments and gay studies departments.
+Bleached: The same being true mutatis mutandis of X's Y departments and Z studies departments.
+Chars: 96 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 288 ---
+Original: But not all institutions are like this.
+Bleached: But not all X's are like this.
+Chars: 39 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 289 ---
+Original: Hospitals exist to solve medical problems and they do solve them.
+Bleached: A's exist to solve B C's and they do solve them.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 290 ---
+Original: The question is: What is the difference between an institution that solves the problems that it is meant to solve and an institution that prevents the solving of the problem that it is meant to solve?
+Bleached: The A is: What is the B between an C that D's the E's that it is F to D and an C that G's the D-ing of the E that it is F to D?
+Chars: 200 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 291 ---
+Original: How does one know in advance whether a given institution will fall into the one category or the other?
+Bleached: How does one X in Y whether a given Z will W into the one V or the other?
+Chars: 102 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 292 ---
+Original: The answer seems to be this.
+Bleached: The X Y's to Z this.
+Chars: 28 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 293 ---
+Original: If an institution stands to gain money by solving the problem that it is supposed to solve, then it will try to do so; and it stands to lose money by doing so, it will prevent it from it being solved.
+Bleached: If an A stands to B money by C-ing the D that it is supposed to E, then it will try to do so; and it stands to lose money by doing so, it will F it from it being G-ed.
+Chars: 200 | Tokens: 41 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,;,.
+
+--- Pattern 294 ---
+Original: This raises the question: When is it profitable for an institution to solve a given problem and when it is not profitable?
+Bleached: This X's the Y: When is it Z for an W to V a given P and when it is not Z?
+Chars: 122 | Tokens: 22 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 295 ---
+Original: The answer to be this.
+Bleached: The A to be this.
+Chars: 22 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 296 ---
+Original: A problem is profitable to solve if other problems take its place when it is solved and unprofitable to solve if they don’t.
+Bleached: A X is Y to Z if other X's W its V when it is Z-ed and un-Y to Z if they don't.
+Chars: 124 | Tokens: 23 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 297 ---
+Original: There are always more sick and injured people; and a hospital will get more future business if it does a good job with the patients that it has than if it doesn’t.
+Bleached: There are always more X and Y-ed Z; and a W will get more future V if it does a U job with the T that it has than if it doesn't.
+Chars: 163 | Tokens: 32 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 298 ---
+Original: There are not always more race-related problems or problems; so if a race-studies department actually eliminated racism, it would go out of existence.
+Bleached: There are not always more A-related B's or B's; so if a A-C's D actually E-ed F, it would go out of G.
+Chars: 150 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -;-,.
+
+--- Pattern 299 ---
+Original: As for philosophical problems, there are always more philosophical problems, since philosophical problems are by-products of progress; but the intellectual instruments needed to solve a given philosophical problem are very often not those that are needed to solve the problems that would take its place were it to be solved.
+Bleached: As for A B's, there are always more A B's, since A B's are by-C's of D; but the E F's G to H a I A B are very often not those that are G to H the B's that would J its K were it to be L-ed.
+Chars: 324 | Tokens: 50 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,-;.
+
+--- Pattern 300 ---
+Original: Advancing technology creates many new philosophical questions, but contemporary epistemologists would almost never even be able to recognize such problems, let alone solve them.
+Bleached: A-ing B C's D E F G's, but H I's would J K L M be N to O such P's, let Q R them.
+Chars: 177 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 301 ---
+Original: So relative to the limitations of the people tasked with solving them, philosophical problems are the end-of-the-line, that being why philosophy departments are so inhospitable to attempts to solve the problems those same departments are supposed to solve.
+Bleached: So A to the B of the C D with E them, F G are the H-of-the-I, that being why J K are so L to M to N the G those same K are O to N.
+Chars: 256 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,---,.
+
+--- Pattern 302 ---
+Original: The Preface Paradox 
+
+An author presumably believes each of the assertions in a book that he writes.
+Bleached: The X Y
+
+An Z presumably W's each of the A's in a B that he C's.
+Chars: 102 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 303 ---
+Original: But many books contain forward by the author in which he says that there are inevitably many false statements in the pages to come.
+Bleached: But many X's contain Y by the Z in which he says that there are inevitably many false W's in the V's to come.
+Chars: 131 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 304 ---
+Original: How is this paradox to be solved?
+Bleached: How is this X to be Y-ed?
+Chars: 33 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 305 ---
+Original: It is solved by pointing that the key premise is false: an author usually doesn’t believe everything that he writes in a given book.
+Bleached: It is X-ed by Y-ing that the Z A is B: an C usually doesn't D everything that he E-s in a given F.
+Chars: 132 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 306 ---
+Original: A book is not just a list of assertions.
+Bleached: A X is not just a Y of Z's.
+Chars: 40 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 307 ---
+Original: A book consists of assertions supported by arguments.
+Bleached: A B consists of C's D-ed by E's.
+Chars: 53 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 308 ---
+Original: Let us grant for argument’s sake that a given author believes the main assertions of a book that he writes.
+Bleached: Let us A for B's C that a given D E the main F of a G that he H.
+Chars: 107 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 309 ---
+Original: It doesn’t follow that he wholeheartedly believes in each of the arguments that he adduces on behalf of those assertions.
+Bleached: It doesn't X that he Y Z's in each of the A's that he B's on C of those D's.
+Chars: 121 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 310 ---
+Original: He probably judges those arguments to be relatively probative.
+Bleached: He probably X's those Y's to be relatively Z.
+Chars: 62 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 311 ---
+Original: He also may well have doubts about many of them but believes that, the totality of the relevant data being what it is, those arguments are probably more probative than not.
+Bleached: He also may well have P's about many of them but Q's that, the R of the S T being what it is, those U's are probably more V than not.
+Chars: 172 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 312 ---
+Original: Much of what an author writes he writes not because he believes that it is true but because he believes that, the data being what it is, it must be true.
+Bleached: Much of what an A B he B not because he C that it is D but because he C that, the E being what it is, it must be D.
+Chars: 153 | Tokens: 31 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 313 ---
+Original: Suppose that Smith is an author who writes a book that is just a bare list of indisputable assertions, along the lines of: 1+1=2, Paris is the Capital of France, apes are mammals, and the like.
+Bleached: Suppose that Smith is an A who B's a C that is just a bare D of E F's, along the G's of: 1+1=2, Paris is the H of France, I's are J's, and the like.
+Chars: 193 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,,,.
+
+--- Pattern 314 ---
+Original: Will Smith write a preface in which he says that the pages to come contain false assertions?
+Bleached: Will A B a C in which he D that the E to F G false H?
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 315 ---
+Original: No, except as an empty gesture.
+Bleached: No, except as an empty X.
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 316 ---
+Original: And a very empty gesture it would be, since he obviously does believe in each of the statements he makes in that book.
+Bleached: And a very X Y it would be, since he obviously does Z in each of the W he V's in that O.
+Chars: 118 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 317 ---
+Original: Contrariwise, when an author does disclaim the contents of some book of his, it is at least in part because he isn’t 100% confident in the accuracy of what it contains, the reason being much of what he writes he writes not because he knows it to be true but because he judges it to be warranted, which is very different from believing it to be true.
+Bleached: Contrariwise, when an A does B the C of some D of his, it is at least in part because he isn't 100% E in the F of what it contains, the G being much of what he H-s he H-s not because he I-s it to be true but because he J-s it to be K-ed, which is very L from M-ing it to be true.
+Chars: 349 | Tokens: 67 | Clauses: 5
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 318 ---
+Original: And there is nothing paradoxical about the idea that one might make a judgement in which one is not completely confident.
+Bleached: And there is nothing Ω about the X that one might Y a Z in which one is not completely Δ.
+Chars: 121 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 319 ---
+Original: We make such judgements every day.
+Bleached: We X such Y every Z.
+Chars: 34 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 320 ---
+Original: When deciding who to hire, I have to choose between Smith and Jones.
+Bleached: When X-ing who to Y, I have to Z between A and B.
+Chars: 68 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 321 ---
+Original: I have only limited information but have to make a judgment, so I make one.
+Bleached: I have only X-ed Y but have to make a Z, so I make one.
+Chars: 75 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 322 ---
+Original: Am I sure that it’s correct?
+Bleached: Am I X that it's Y?
+Chars: 28 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 323 ---
+Original: Not necessarily.
+Bleached: Not necessarily.
+Chars: 16 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 324 ---
+Original: I may be sure only that given the limited information at my disposal, along with my limited ability to analyze that data, I made the best that choice that I could.
+Bleached: I may be A only that B the C D at my E, F with my C G to H that I, I J the K that L that I M.
+Chars: 163 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 325 ---
+Original: An author is often in a similar position, especially when he is writing a bona fide book of substance, as opposed to a mere recitation of facts.
+Bleached: An X is often in a Y position, especially when he is Z-ing a W V book of U, as opposed to a mere T of S's.
+Chars: 144 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 326 ---
+Original: Bhartrhari’s Paradox
+
+The contention that some things cannot be described self-refutes, since in saying of something that it cannot be described, one is describing that thing.
+Bleached: A's B
+
+The C that some D's cannot be E-ed F-refutes, since in G-ing of H that it cannot be E-ed, one is E-ing that D.
+Chars: 177 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,.
+
+--- Pattern 327 ---
+Original: This is Bhartrhari’s Paradox.
+Bleached: This is X's Y.
+Chars: 29 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 328 ---
+Original: This paradox is based on a fallacy.
+Bleached: This K is L on a M.
+Chars: 35 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 329 ---
+Original: Let S be the statement: “some things cannot be described.” There is no particular object x such that S says of x that x cannot be described.
+Bleached: Let S be the A: "some B's cannot be C-ed." There is no D E x such that S F's of x that x cannot be C-ed.
+Chars: 140 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :..
+
+--- Pattern 330 ---
+Original: S makes a statement about a class of objects.
+Bleached: X makes a Y about a Z of W's.
+Chars: 45 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 331 ---
+Original: It says that the class of indescribable objects is non-empty.
+Bleached: It says that the A of B C's is D.
+Chars: 61 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 332 ---
+Original: There is no particular member of that class to which it ascribes the property of being indescribable.
+Bleached: There is no particular X of that Y to which it Z's the W of being V.
+Chars: 101 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 333 ---
+Original: So there is no particular object to which S ascribes any property, and S therefore doesn’t self-refute.
+Bleached: So there is no particular X to which S Y's any Z, and S therefore doesn't W-refute.
+Chars: 103 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 334 ---
+Original: We have seen that S does not self-refute.
+Bleached: We have X-ed that S does not self-Y.
+Chars: 41 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 335 ---
+Original: But is S true?
+Bleached: But is S X?
+Chars: 14 | Tokens: 4 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?
+
+--- Pattern 336 ---
+Original: Yes and no.
+Bleached: Yes and no.
+Chars: 11 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 337 ---
+Original: S is ambiguous, and one of its disambiguations is true and the is false.
+Bleached: S is A, and one of its B's is true and the is false.
+Chars: 72 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 338 ---
+Original: S can be taken to mean: Given any language L, there exist objects that cannot be described in L.
+Bleached: S can be X-ed to Y: Z any W L, there V O's that cannot be U-ed in L.
+Chars: 96 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 339 ---
+Original: Thus disambiguated, S is true.
+Bleached: Thus X-ed, S is Y.
+Chars: 30 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 340 ---
+Original: A language is a recursively defined expression-class and therefore contains denumerably many expressions.
+Bleached: A X is a Y-ly Z-ed W-class and therefore V-s T-ly many U-s.
+Chars: 105 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 341 ---
+Original: (A class is denumerably if it has the same number of members as the class of natural numbers.) There exist non-denumerably many real numbers.
+Bleached: (A X is Y if it has the same Z of W's as the X of V Z's.) There exist non-Y many V Z's.
+Chars: 141 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (.)-.
+
+--- Pattern 342 ---
+Original: (A class is non-denumerable if it is larger than the class of natural numbers.) Therefore, for any language, there exist objects that cannot be referred to in L.
+Bleached: (A X is Y-able if it is Z-er than the X of W X's.) Therefore, for any X, there exist X's that cannot be V-ed to in L.
+Chars: 161 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (-.),,.
+
+--- Pattern 343 ---
+Original: S can also be taken to mean: There exist objects that cannot be described in any given language.
+Bleached: S can also be X-ed to Y: There Z W's that cannot be V-ed in any given X.
+Chars: 96 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 344 ---
+Original: Thus disambiguated, S is false, since given any object, there exists a possible language that can be refer to that object.
+Bleached: Thus Q-ed, S is false, since given any X, there exists a Y Z that can be W to that X.
+Chars: 122 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 345 ---
+Original: So S not only fails to refute but is actually true on one of its disambiguations, and  Bhartrhari’s Paradox is not so much a real paradox as it is a logical blunder.
+Bleached: So S not only X's to Y but is actually Z on one of its W's, and Bhartrhari's A is not so much a real B as it is a C D.
+Chars: 165 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 346 ---
+Original: The Barber Paradox 
+
+Consider a barber who shaves all and only those who do not shave themselves.
+Bleached: The X Y
+
+Consider a Z who V-s all and only those who do not V themselves.
+Chars: 99 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 347 ---
+Original: Does that barber shave himself?
+Bleached: Does that X Y himself?
+Chars: 31 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 348 ---
+Original: If he does, then he doesn’t; and if he doesn’t, then he does.
+Bleached: If he X's, then he doesn't; and if he doesn't, then he X's.
+Chars: 61 | Tokens: 13 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,;,.
+
+--- Pattern 349 ---
+Original: Conclusion: Such a barber cannot exist.
+Bleached: Conclusion: Such a X cannot Y.
+Chars: 39 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 350 ---
+Original: That is what this paradox shows.
+Bleached: That is what this A B's.
+Chars: 32 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 351 ---
+Original: Now consider the set of all sets that don’t contain themselves.
+Bleached: Now X the Y of all Y's that don't Z themselves.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 352 ---
+Original: If that set contains itself, then it doesn’t, and if doesn’t, then it does.
+Bleached: If that X Y's itself, then it doesn't, and if doesn't, then it does.
+Chars: 75 | Tokens: 14 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 353 ---
+Original: Therefore, such a set cannot exist.
+Bleached: Therefore, such a A cannot B.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 354 ---
+Original: Bertrand Russell believed this to prove the falsity of the so-called Axiom of Comprehension, this being the principle that any given property generates a set.
+Bleached: A B C-ed this to D the E of the so-F-ed G of H, this I-ing the J that any K-en L M-s a N.
+Chars: 158 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 355 ---
+Original: The idea is that although the property of being a set of all sets that don’t self-contain exists, there is no corresponding set; so the Axiom of Comprehension is false.
+Bleached: The A is that although the B of being a C of all D's that don't E-F exists, there is no G-ing C; so the H of I is false.
+Chars: 168 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,;.
+
+--- Pattern 356 ---
+Original: But the Axiom of Comprehension is correct, it being Russell’s reasoning that is off.
+Bleached: But the X of Y is Z, it being W's V that is U.
+Chars: 84 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 357 ---
+Original: To say that the class of humans doesn’t self-contain is to say that the set of humans is not a human.
+Bleached: To X that the Y of Z's doesn't W-contain is to X that the set of Z's is not a Z.
+Chars: 101 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 358 ---
+Original: To say that the class of triangles doesn’t self-contain is to say that the set of triangles is not a triangle.
+Bleached: To X that the Y of Z's doesn't W-contain is to X that the set of Z's is not a Z.
+Chars: 110 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 359 ---
+Original: In general, whenever it is meaningful, ‘S doesn’t self-contain’ is elliptical for some non-reflexive statement, the reason being that when it isn’t elliptical for such a statement it contains an undefined pronoun—a free-variable, in other words.
+Bleached: In general, whenever it is A, 'S doesn't B-contain' is C for some D-E statement, the reason being that when it isn't C for such a statement it contains an F pronoun—a G-variable, in other words.
+Chars: 245 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,--,—-,.
+
+--- Pattern 360 ---
+Original: And ‘the set of all sets that don’t contain themselves doesn’t contain itself’ is not elliptical for some non-reflexive statement and therefore isn’t significant, containing as it does an undefined pronoun and, consequently, a free variable.
+Bleached: And 'the X of all X's that don't Y themselves doesn't Y itself' is not Z for some non-W X and therefore isn't A, Y-ing as it does an B C and, consequently, a D E.
+Chars: 241 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,.
+
+--- Pattern 361 ---
+Original: Unexpected Hanging Paradox 
+
+On Sunday, judge condemns Smith to be hanged some day the subsequent week on or before Friday, with the qualification that the day of the hanging will be a surprise to Smith.
+Bleached: **Ω1 Ω2 Ω3**
+
+On Ω4, Ω5 Ω6-s Ω7 to be Ω8-ed some Ω9 the Ω10 Ω11 on or before Ω12, with the Ω13 that the Ω9 of the Ω8-ing will be a Ω14 to Ω7.
+Chars: 205 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 362 ---
+Original: Smith deduces that he will not be hanged, his reasoning being as follows.
+Bleached: A X-s that he will not be Y-ed, his Z-ing being as follows.
+Chars: 73 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 363 ---
+Original: He cannot be hanged on Friday, since, if he makes it to Friday, it won’t be a surprise to him that he is to hanged on that day.
+Bleached: He cannot be X-ed on Y, since, if he Z's it to Y, it won't be a W to him that he is to X-ed on that day.
+Chars: 127 | Tokens: 28 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 364 ---
+Original: Nor therefore can be hanged on Thursday, since Friday has already been ruled out and since, if he makes it to Thursday, a Thursday-hanging won’t be a surprise to him.
+Bleached: Nor therefore can be X-ed on Y, since Z has already been W-ed out and since, if he makes it to Y, a Y-X-ing won't be a surprise to him.
+Chars: 166 | Tokens: 30 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 365 ---
+Original: Nor, by parity of reasoning, can Smith be hanged on Wednesday, Tuesday, or Monday.
+Bleached: Nor, by X of Y-ing, can Z be V-ed on W, T, or M.
+Chars: 82 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 366 ---
+Original: So Smith won’t be hanged at all.
+Bleached: So X won't be Y-ed at all.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 367 ---
+Original: But Smith can be hanged under these circumstances.
+Bleached: But A can be B-ed under these C's.
+Chars: 50 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 368 ---
+Original: The solution to this paradox lies in the fact that ‘surprise’ is a relative term: what is a surprise to one person may not be a surprise to another; and what is a surprise to a person at one time may not be a surprise to him at a later time.
+Bleached: The A to this B lies in the fact that 'C' is a D term: what is a C to one person may not be a C to another; and what is a C to a person at one time may not be a C to him at a later time.
+Chars: 241 | Tokens: 51 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :;.
+
+--- Pattern 369 ---
+Original: When the judge tells Smith that the day of his hanging will be a ‘surprise’ to him, he is correctly saying that until the day of his hanging, Smith will not have enough information to determine the day of his hanging.
+Bleached: When the A B's C that the D of his E-ing will be a 'F' to him, he is G-ly H-ing that until the D of his E-ing, C will not have enough I to J the D of his E-ing.
+Chars: 217 | Tokens: 41 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 370 ---
+Original: And the judge is right.
+Bleached: And the X is Y.
+Chars: 23 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 371 ---
+Original: Smith does not have enough information now to know when he will be hanged.
+Bleached: A does not have enough B now to C when he will be D-ed.
+Chars: 74 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 372 ---
+Original: And if he is hanged on Monday, he won’t have the requisite information until Monday.
+Bleached: And if he is X-ed on Y, he won't have the Z W until Y.
+Chars: 84 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 373 ---
+Original: Same with Tuesday, Wednesday, Thursday, and Friday.
+Bleached: Same with A, B, C, and D.
+Chars: 51 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 374 ---
+Original: For any given day of the week, Smith will not know until that day whether or not he will be hanged on that day.
+Bleached: For any given X of the Y, Z will not W until that X whether or not he will be V-ed on that X.
+Chars: 111 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 375 ---
+Original: So until the very day it occurs, Smith’s hanging is indeed a surprise to him, it being irrelevant that on that day Smith ceases to be surprised, since by then the surprise has in effect already occurred.
+Bleached: So until the very X it Y's, Z's W-ing is indeed a V to him, it being U that on that X Z T's to be V-ed, since by then the V has in S already Y-ed.
+Chars: 203 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 376 ---
+Original: Ross’s Paradox
+
+If your room is clean, it follows that either your room is clean or the house has burned down.
+Bleached: A's B
+
+If your C is D, it follows that either your C is D or the E has F-ed down.
+Chars: 112 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 377 ---
+Original: The strong entails the weak.
+Bleached: The A entails the B.
+Chars: 28 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 378 ---
+Original: But if I order you to clean your room, you are not complying if you either clean your room or burn down the house.
+Bleached: But if I X you to Y your Z, you are not W-ing if you either Y your Z or V down the U.
+Chars: 114 | Tokens: 24 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 379 ---
+Original: Where ‘imperatival logic’ is concerned, the strong appears not to entail the weak.
+Bleached: Where 'A logic' is concerned, the B appears not to entail the C.
+Chars: 82 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 380 ---
+Original: This asymmetry between alethic and imperatival logic is known as Ross’s Paradox.
+Bleached: This X between Y and Z logic is known as Ross's Paradox.
+Chars: 80 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 381 ---
+Original: Why this asymmetry?
+Bleached: Why this X?
+Chars: 19 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 382 ---
+Original: Because whereas statements have a word-to-world direction of fit, meaning that the speech-act must conform to the world, imperatives have a world-to-word direction of fit, meaning that the world must conform to the speech-act.
+Bleached: Because whereas A's have a B-to-C direction of D, meaning that the E-F must conform to the C, G's have a C-to-B direction of D, meaning that the C must conform to the E-F.
+Chars: 226 | Tokens: 34 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: --,-,--,-.
+
+--- Pattern 383 ---
+Original: A consequence is that in the logic of imperatives, validity flows from the general to the specific, not from the specific to the general, as with statement-logic.
+Bleached: A X is that in the Y of Z's, W flows from the V to the U, not from the U to the V, as with T-Y.
+Chars: 162 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 384 ---
+Original: If I tell you “either clean your room or burn down the house”, you are complying with my command if you burn down the house, since you have thereby created a state of affairs that validates the proposition expressed in my command (namely, you either you clean your room or burn down the house).
+Bleached: If I X you "either Y your Z or W X the O", you are X-ing with my P if you W X the O, since you have thereby X-ed a Q of R that S-s the T X-ed in my P (namely, you either you Y your Z or W X the O).
+Chars: 294 | Tokens: 54 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ,,(,).
+
+--- Pattern 385 ---
+Original: Not so if I tell you, “clean your room” and you burn down the house.
+Bleached: Not so if I tell you, "X your Y" and you Z down the W.
+Chars: 68 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 386 ---
+Original: But if I correctly say “your room is clean”, the world has already supplied us with a state of affairs that validates “either your room is clean or the house has burned down.” 
+To sum up: When direction-of-fit is from word-to-world, the general follows from the specific, but when direction-of-fit is from world-to-word, the specific follows from the general.
+Bleached: But if I X-ly Y "your Z is A", the B has already C-ed us with a D of E that F-s "either your Z is A or the G has H-ed I." 
+To J up: When K-of-L is from M-to-B, the N O-s from the P, but when K-of-L is from B-to-M, the P O-s from the N.
+Chars: 360 | Tokens: 59 | Clauses: 5
+Clause Order: subordinate → main
+Punctuation: ,.:----,,----,.
+
+--- Pattern 387 ---
+Original: The Lottery Paradox 
+
+Suppose that there is a lottery in which 1,000 tickets are sold but only one ticket wins.
+Bleached: The A B
+
+C that there is a A in which 1,000 D's are E-ed but only one D F's.
+Chars: 113 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 388 ---
+Original: It is rational regard to any given ticket as a loser.
+Bleached: It is R to X any given Y as a Z.
+Chars: 53 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 389 ---
+Original: But if one does so, one must irrationally regard all of the tickets as losers.
+Bleached: But if one does so, one must X-ly Y all of the Z's as W's.
+Chars: 78 | Tokens: 15 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 390 ---
+Original: This is not much of a paradox.
+Bleached: This is not much of a X.
+Chars: 30 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 391 ---
+Original: First of all, given any ticket, it cannot be rationally believed that it will lose, but only that it is more likely than not that it will lose.
+Bleached: First of all, given any A, it cannot be B-ly C-ed that it will D, but only that it is more E than not that it will D.
+Chars: 143 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 392 ---
+Original: To be sure, in some contexts, high probabilities are interchangeable with certainties: if one knows that x is 99% likely to occur, then one can ‘accept’ x’s occurrence, in the sense that one will act and within limits even reason as though it will definitely occur.
+Bleached: To be sure, in some contexts, high A's are B with C's: if one knows that x is 99% likely to D, then one can 'E' x's F, in the sense that one will G and within limits even H as though it will definitely I.
+Chars: 265 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,:,,.
+
+--- Pattern 393 ---
+Original: But in this particular context, as in others, high probabilities are not interchangeable with certainties and that is the end of it.
+Bleached: But in this A context, as in others, B probabilities are not C with certainties and that is the end of it.
+Chars: 132 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 394 ---
+Original: It is not rational to believe (prior to the final lottery drawing) that a given ticket will lose, even though it is rational to believe it more likely than not that it will lose and to place one's bets accordingly.
+Bleached: It is not R to B (prior to the final L D-ing) that a given T will L, even though it is R to B it more L-ly than not that it will L and to P one's B's accordingly.
+Chars: 214 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),'.
+
+--- Pattern 395 ---
+Original: Acceptance is not belief.
+Bleached: A is not B.
+Chars: 25 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 396 ---
+Original: Acceptance is a pragmatic notion, and the legitimacy of a given case of acceptance is decided by its practical consequences.
+Bleached: A is a B C, and the D of a E F of A is G-ed by its B H's.
+Chars: 124 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 397 ---
+Original: Belief is an alethic notion, and the legitimacy of a given case of belief is decided not by its practical consequences but by its correspondence with the truth.
+Bleached: A is an B C, and the D of a E F of A is G not by its H I but by its J with the K.
+Chars: 160 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 398 ---
+Original: A related point is that beliefs are not justified on strictly statistical grounds.
+Bleached: A X-ed Y is that Z's are not X-ed on W V U's.
+Chars: 82 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 399 ---
+Original: If your belief that Smith is smart is justified, it is not justified on the basis of your knowledge that Smith belongs to a category 99% of whose members are smart.
+Bleached: If your A that Smith is B is C-ed, it is not C-ed on the D of your E that Smith F-s to a G 99% of whose H-s are B.
+Chars: 164 | Tokens: 31 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 400 ---
+Original: It is justified by its being more explanatory than its negation.
+Bleached: It is X-ed by its being more Y than its Z.
+Chars: 64 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 401 ---
+Original: The Slacker’s Paradox 
+
+People who try to avoid working end up working harder than people who don't try to avoid working.
+Bleached: The X's Y
+
+Z who A to B C-ing D up C-ing E than Z who don't A to B C-ing.
+Chars: 123 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.
+
+--- Pattern 402 ---
+Original: Case in point: People who work for pyramid schemes.
+Bleached: Case in point: A who B for C D.
+Chars: 51 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 403 ---
+Original: These schemes never involve putting in time at an office, and one can work one's own hours.
+Bleached: These A's never B putting in C at an D, and one can E one's own F's.
+Chars: 91 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,'.
+
+--- Pattern 404 ---
+Original: Also, theoretically, one can make an unlimited amount of money at one of these schemes doing very little work.
+Bleached: Also, theoretically, one can X an Y Z of W at one of these V doing very little K.
+Chars: 110 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 405 ---
+Original: But that isn't how it works out.
+Bleached: But that isn't how it X's out.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: '.
+
+--- Pattern 406 ---
+Original: People involved in such schemes end up putting in longer hours than people with real jobs and doing harder work, while being paid little or nothing.
+Bleached: A involved in such B end up putting in longer C than A with real D and doing harder E, while being paid little or nothing.
+Chars: 148 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 407 ---
+Original: This is not an isolated phenomenon.
+Bleached: This is not an X-ed Y.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 408 ---
+Original: There are entire demographics of people whose professional lives are about avoiding work but who for that reason end up working far more than most people: street musicians, struggling actors, sex workers, and criminals.
+Bleached: There are X Y's of Z whose A B's are about C-ing D but who for that reason end up E-ing far more than most Z's: F G's, H-ing I's, J K's, and L's.
+Chars: 219 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,,.
+
+--- Pattern 409 ---
+Original: The solution to this paradox is that slackers are playing a defensive game.
+Bleached: The A to this B is that C's are D-ing a E F.
+Chars: 75 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 410 ---
+Original: By spurning the normal rules of economic engagement, they are forced to take whatever opportunities come their way, which means that they aren’t deciding the terms of those transactions and are therefore constantly short-selling themselves, so that the have to work extra hard to make up the difference.
+Bleached: By X-ing the Y Z's of Ω A, they are B-ed to C whatever D's E their F, which G that they aren't H-ing the I of those J's and are therefore K L-ing themselves, so that the have to M N O to P up the Q.
+Chars: 303 | Tokens: 48 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,.
+
+--- Pattern 411 ---
+Original: People who are extremely successful don’t slack off, but they also don’t work excessively hard.
+Bleached: X who are extremely Y don't Z off, but they also don't W excessively hard.
+Chars: 95 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 412 ---
+Original: And these two facts are related.
+Bleached: And these two X's are Y-ed.
+Chars: 32 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 413 ---
+Original: They work mainly at choosing the kind of work that they do and spend relatively little of their energy doing work-proper.
+Bleached: They X mainly at Y-ing the Z of X that they do and W relatively V of their U Y-ing X-proper.
+Chars: 121 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 414 ---
+Original: By contrast, less successful people, including drifters, do little in the way of deciding what kind of work they will do and commensurately more in the way of doing work-proper.
+Bleached: By contrast, less A people, including B's, do little in the way of C-ing what kind of work they will do and D-ly more in the way of doing work-E.
+Chars: 177 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 415 ---
+Original: The Paradox of Economic Efficiency
+
+The more efficient an economy is, the less it depends on the work-input of any given person.
+Bleached: The X of Y Z
+
+The more A an B is, the less it C-s on the D-E of any given F.
+Chars: 130 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 416 ---
+Original: The less it depends on any given person, the more useless to the economy any given person is and, consequently, the less able any given person is to find a way to earn a living by participating in it.
+Bleached: The less it X's on any given Y, the more Z to the A any given Y is and, consequently, the less B any given Y is to C a D to E a F by G-ing in it.
+Chars: 200 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 417 ---
+Original: So as economies become more efficient, people become more economically useless and therefore less able to earn a living and more dependent for their livelihood on welfare of some kind.
+Bleached: So as X's become more Y, Z's become more Y-ly W and therefore less V to U a T and more S for their R on Q of some P.
+Chars: 184 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 418 ---
+Original: Hence the following paradox: The more efficient an economy is, the more people tend to be prevented from profiting from it.
+Bleached: Hence the following A: The more B an C is, the more D tend to be E-ed from F-ing from it.
+Chars: 123 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 419 ---
+Original: Let us put this in concrete terms.
+Bleached: Let us put this in X terms.
+Chars: 34 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 420 ---
+Original: Until recently, audio editing, such as the editing involved in making this very audio book, had to be done almost entirely manually.
+Bleached: Until recently, X Y-ing, such as the Y-ing involved in Z-ing this very X W, had to be done almost entirely manually.
+Chars: 132 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 421 ---
+Original: Very little of the process was automated.
+Bleached: Very little of the X was Y-ed.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 422 ---
+Original: Somebody had to physically splice the tape to edit out sounds.
+Bleached: X had to Y Z the A to B out C's.
+Chars: 62 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 423 ---
+Original: Another person had to be in charge of all of the splicing-relating technology.
+Bleached: Another F had to be in charge of all of the G-ing-relating H.
+Chars: 78 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 424 ---
+Original: And so on.
+Bleached: And so on.
+Chars: 10 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 425 ---
+Original: This meant a lot of jobs for a lot of people.
+Bleached: This X-ed a lot of Y's for a lot of Z's.
+Chars: 45 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 426 ---
+Original: All of those jobs are now gone, since sound-editing is now done by an app that costs around $30/year, as opposed to the $30/hour charged by some union sound-technician.
+Bleached: All of those X's are now Y, since Z-W-ing is now X-ed by an X that X's around $30/Y, as opposed to the $30/Y X-ed by some Y Z-W-X.
+Chars: 168 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,-.
+
+--- Pattern 427 ---
+Original: Now that sound-editing can be done so cheaply, audio-products are less expensive than before and also available in greater number and variety.
+Bleached: Now that A-B-ing can be C so D-ly, E-F's are less G than before and also H in I J and K.
+Chars: 142 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-.
+
+--- Pattern 428 ---
+Original: But all of those sound people are either excluded from the economy or they had to find entirely new lines of work.
+Bleached: But all of those X people are either Y-ed from the Z or they had to find entirely new A's of B.
+Chars: 114 | Tokens: 22 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 429 ---
+Original: In most cases, they are living off of dwindling savings and are basically parasites.
+Bleached: In most X's, they are Y-ing off of Z-ing W's and are basically V's.
+Chars: 84 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 430 ---
+Original: And what is true of audio editing is true to varying degrees of many other economic sectors.
+Bleached: And what is true of X Y-ing is true to Z-ing Y's of many other W X's.
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 431 ---
+Original: Banking is largely automated.
+Bleached: R is largely X-ed.
+Chars: 29 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 432 ---
+Original: No more need for bank-tellers.
+Bleached: No more X for Y-Z's.
+Chars: 30 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 433 ---
+Original: Insurance-sales is largely automated.
+Bleached: A-B is C D-ed.
+Chars: 37 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 434 ---
+Original: No more need for insurance salesman.
+Bleached: No more X for Y Z.
+Chars: 36 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 435 ---
+Original: No more need for salesman of any kind.
+Bleached: No X Y V for Z of any W.
+Chars: 38 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 436 ---
+Original: Nor is there is much of a need for supermarket cashiers.
+Bleached: Nor is there is much of a need for X Y's.
+Chars: 56 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 437 ---
+Original: And the list goes on.
+Bleached: And the X Y on.
+Chars: 21 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 438 ---
+Original: Where do these people go?
+Bleached: Where do these X go?
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 439 ---
+Original: Further and further down, until they cannot live without handouts.
+Bleached: A and A B, C they D not E C F.
+Chars: 66 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 440 ---
+Original: So as the economy becomes more efficient, people become more useless to the economy and therefore less able to profitably engage the economy.
+Bleached: So as the X becomes more Y, Z become more W to the X and therefore less V to U the X.
+Chars: 141 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 441 ---
+Original: The Raven Paradox
+
+Presumably, logically equivalent statements are confirmationally equivalent.
+Bleached: The X Y
+
+Presumably, logically Z statements are W equivalent.
+Chars: 97 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 442 ---
+Original: In other words, if two statements entail each other, then anything that one confirms the one statement to a given degree also confirms the other statement to that degree.
+Bleached: In other X, if two Y's Z each other, then anything that one A's the one Y to a given B also A's the other Y to that B.
+Chars: 170 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 443 ---
+Original: But this actually seems false when consider statement-pairs such as: 
+
+
+(I) All ravens are black, and 
+
+(I) All non-black things are non-ravens, 
+which, though logically equivalent, seem to confirmationally equivalent, in that a non-black non-raven confirms (ii) to a high degree but confirms (i) to no degree or at most to a low degree.
+Bleached: But this actually seems false when consider X-pairs such as: 
+
+
+(I) All Y are Z, and 
+
+(I) All non-Z W are non-Y, 
+which, though logically equivalent, seem to A-ly equivalent, in that a non-Z non-Y B (ii) to a high C but B (i) to no C or at most to a low C.
+Chars: 343 | Tokens: 54 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: -:(),()--,,,,--()().
+
+--- Pattern 444 ---
+Original: A number of very contrived solutions to this paradox have been proposed, all of which either deny that there is a paradox or invent ad hoc systems of logic to validate the ‘solution’ in question.
+Bleached: A X of very Y Z's to this P have been V-ed, all of which either Q that there is a P or R ad hoc S's of T to U the 'Z' in W.
+Chars: 195 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 445 ---
+Original: But the real solution is clear.
+Bleached: But the X Y is Z.
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 446 ---
+Original: First of all, it is only principled generalizations that can be confirmed.
+Bleached: X of all, it is only Y-ed Z's that can be W-ed.
+Chars: 74 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 447 ---
+Original: Supposing that you assert (i) with the intention of affirming a principled as opposed to an accidental generalization, you are saying that instances of the property of being a raven grounds or causes instances of blackness.
+Bleached: Supposing that you A (i) with the B of C-ing a D-ed as opposed to an E F, you are G-ing that H's of the I of being a J K's or L's H's of M.
+Chars: 223 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),.
+
+--- Pattern 448 ---
+Original: Read thus, (i) is most certainly not equivalent with (ii) or with any variation thereof.
+Bleached: A thus, (i) is most certainly not B with (ii) or with any C thereof.
+Chars: 88 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,()().
+
+--- Pattern 449 ---
+Original: Be it noted that while there is a natural nomic or causal reading of (i), there is no such reading of (ii).
+Bleached: Be it X-ed that while there is a Y Z or W X-ing of (i), there is no such X-ing of (ii).
+Chars: 107 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),().
+
+--- Pattern 450 ---
+Original: Also be it noted that it is only principled as opposed to accidental generalizations that can be confirmed.
+Bleached: Also be it X-ed that it is only Y-ed as Z-ed to W-al X-ations that can be V-ed.
+Chars: 107 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 451 ---
+Original: “All metal expands when heated” can be confirmed but not “all objects in Smith’s  pocket expand when heated.” In general, when read as principled and therefore confirmable generalization, “all x’s are y’s” has nomic or causal content is therefore not equivalent with “all non-y’s are non-x’s.” Case closed on the Raven Paradox.
+Bleached: "All A B's when C-ed" can be D-ed but not "all E's in F's G H when C-ed." In general, when I as J-ed and therefore D-able K, "all L's are M's" has N or O P is therefore not Q with "all non-M's are non-L's." R S-ed on the T U.
+Chars: 327 | Tokens: 52 | Clauses: 4
+Clause Order: main → subordinate
+Punctuation: .,,--..
+
+--- Pattern 452 ---
+Original: The Riddle of Induction 
+
+I cannot legitimately infer that x’s will lead to y’s from the fact they have done so thus far unless I know that what has happened will continue to happen, but I cannot know that what has happened will continue to happen unless I can legitimately infer that x’s will lead to y’s from the fact that they have do so thus far.
+Bleached: The A of B 
+
+I cannot C infer that x's will lead to y's from the D they have done so thus far unless I know that what has happened will continue to happen, but I cannot know that what has happened will continue to happen unless I can C infer that x's will lead to y's from the D that they have do so thus far.
+Chars: 352 | Tokens: 67 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 453 ---
+Original: Knowledge of the past provides no basis for knowledge of the future.
+Bleached: X of the Y Z no W for X of the V.
+Chars: 68 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 454 ---
+Original: Solution: When we know the future, it is on the basis of continuities, not regularities.
+Bleached: X: When we Y the Z, it is on the A of B's, not C's.
+Chars: 88 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,,.
+
+--- Pattern 455 ---
+Original: For x to cause y is for y to be a continuation of x.
+Bleached: For x to A y is for y to be a B of x.
+Chars: 52 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 456 ---
+Original: It is not for x-like events to always precede y-like events.
+Bleached: It is not for x-like A's to always B y-like A's.
+Chars: 60 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 457 ---
+Original: It is obviously to some extent on the basis of regularities that we know what causes what, but that is because regularities often tell us where to look for continuities---if I notice that the elevator comes every time I push a certain button, then I know where to look for a causal connection, meaning that I know where to look for a continuity.
+Bleached: It is A to some B on the C of D that we E what F what, but that is because D often G us where to H for I---if I J that the K L every M I N a O P, then I E where to H for a F Q, R that I E where to H for a I.
+Chars: 345 | Tokens: 63 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,---,,.
+
+--- Pattern 458 ---
+Original: And until I have knowledge of such a continuity, I don’t have a good reason to believe that the elevator will come when the button is pushed.
+Bleached: And until I have A of such a B, I don't have a C D to E that the F will G when the H is I-ed.
+Chars: 141 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 459 ---
+Original: And once I do have knowledge of such a continuity, that is what serves as the basis for my being able to legitimately infer that the elevator will come after I push the button.
+Bleached: And once I do have A of such a B, that is what C's as the D for my being able to E F that the G will H after I I the J.
+Chars: 176 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 460 ---
+Original: And it so serves because, whereas discontinuity represent ex nihilo change, continuity represents preservation, and the legitimacy of the inference from cause to effect lies simply in the irrationality of positing spontaneities.
+Bleached: And it so A's because, whereas B C's ex nihilo D, E C's F, and the G of the H from I to J K's simply in the L of M-ing N's.
+Chars: 228 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 461 ---
+Original: Of course, one often knows that x causes y without knowing exactly how y is continuous with x.
+Bleached: Of course, one often A that x B y without A exactly how y is C with x.
+Chars: 94 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 462 ---
+Original: One can know that pushing the button causes the elevator to come without knowing anything about the intervening electrical and mechanical events.
+Bleached: One can X that Y-ing the Z A-s the B to C without X-ing anything about the D-ing E and F G-s.
+Chars: 145 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 463 ---
+Original: But such a case, one knows of secondary continuities that require one to posit a continuity in the context in question.
+Bleached: But such a A, one B's of C D's that E one to F a G in the H in I.
+Chars: 119 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 464 ---
+Original: I know of continuities involving the activities of building-personnel and maintenance-staff and the like, and these continuities are not compatible with the supposition that there is a gap between the pushing of the button and the arrival of the elevator.
+Bleached: I know of A's involving the B's of C-personnel and D-staff and the like, and these A's are not E with the F that there is a G between the H-ing of the I and the J of the K.
+Chars: 255 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,.
+
+--- Pattern 465 ---
+Original: It follows that enumerative induction is either non-existent or illegitimate.
+Bleached: It follows that A B is either C or D.
+Chars: 77 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 466 ---
+Original: When we make legitimate inferences as to the future, it is not on the basis of observation of repetitions; it is on the basis of knowledge of continuities.
+Bleached: When we make A B as to the C, it is not on the basis of D of E; it is on the basis of F of G.
+Chars: 155 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,;.
+
+--- Pattern 467 ---
+Original: In some cases, knowledge of repetitions tells us where to look for continuities, but it never constitutes such knowledge.
+Bleached: In some A's, B of C's D's us where to E for F's, but it never G's such B.
+Chars: 121 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 468 ---
+Original: And—to introduce a new point—we may have knowledge of continuities without having knowledge of repetitions, this being why we may know that x caused y, even though we know of no other cases of x-like events being followed by y-like events.
+Bleached: And—to introduce a new point—we may have knowledge of A without having knowledge of B, this being why we may know that x C-ed y, even though we know of no other cases of x-like events being D-ed by y-like events.
+Chars: 239 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ——,,--.
+
+--- Pattern 469 ---
+Original: For example, if I see the ice-cube melt, then even if I have never previously seen anything melt, I can know that the melting of the ice-cube is responsible for the puddle on the counter.
+Bleached: For example, if I see the X-Y Z, then even if I have never previously seen anything Z, I can know that the Z-ing of the X-Y is responsible for the W on the counter.
+Chars: 187 | Tokens: 35 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,-,,-.
+
+--- Pattern 470 ---
+Original: Given that knowledge of the future is not ultimately based on knowledge of past repetitions, it follows that Nelson Goodman’s so-called ‘new riddle of induction’, to which we now turn, is a non-riddle.
+Bleached: Given that A of the B is not ultimately C-ed on A of D E-s, it follows that F G's so-called 'H I of J', to which we now K, is a L-I.
+Chars: 201 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,,-.
+
+--- Pattern 471 ---
+Original: The New Riddle of Induction 
+
+Suppose that up until time present time t, every time the button is pushed, the elevator comes, and suppose that this gives us reason to conclude that after t the elevator will come when the button is pushed.
+Bleached: The Ω9 Ω10 of Ω11
+
+Suppose that up until Ω12 Ω13 Ω12 t, every Ω12 the Ω14 is Ω15-ed, the Ω16 Ω17-s, and suppose that this Ω18-s us Ω19 to Ω20 that after t the Ω16 will Ω17 when the Ω14 is Ω15-ed.
+Chars: 240 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 472 ---
+Original: In that case, we have equal reason to suppose that the elevator will “shmarive”, where x “shmarives” if x either comes before time t or explodes after t.
+Bleached: In that case, we have A B to C that the D will "E", where x "E's" if x either F's before G t or H's after t.
+Chars: 153 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 473 ---
+Original: So the fact that has arrive after the button was pushed confirms that it will explode the next time the button is pushed no less than it confirms that it will arrive.
+Bleached: So the X that has Y after the Z was V-ed W's that it will X the next V the Z is V-ed no less than it confirms that it will Y.
+Chars: 166 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 474 ---
+Original: Solution: This riddle is a non-riddle, since it isn’t on the basis of concomitances, but of continuities, that we know what is going to happen.
+Bleached: A: This B is a non-B, since it isn't on the C of D's, but of E's, that we F what is going to G.
+Chars: 143 | Tokens: 25 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :-,,,.
+
+--- Pattern 475 ---
+Original: Frege’s Puzzle 
+
+“Superman” and “Clark Kent” co-refer, but “Superman is in the building” doesn’t have the same meaning as “Clark Kent is in the building.” 
+The solution: “Superman is in the building” says that a certain property-set—being superhumanly strong and being able to fly, etc.—is uniquely instantiated and that any such instance is in the building, and “Clark Kent is in the building” says that a different property-set---being a reporter, wearing spectacles, etc.—is uniquely instantiated and that any such instance is in the building.
+Bleached: X's Y 
+
+"Z" and "W Q" co-R, but "Z is in the S" doesn't have the same T as "W Q is in the S." 
+The U: "Z is in the S" V-s that a certain P-set—being V-ly G and being H to I, etc.—is J-ly K-ed and that any such L is in the S, and "W Q is in the S" V-s that a different P-set---being a M, N-ing O-s, etc.—is J-ly K-ed and that any such L is in the S.
+Chars: 549 | Tokens: 84 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.:-—,.—,----,,.—.
+
+--- Pattern 476 ---
+Original: This brings us to Kripke’s Paradox.
+Bleached: This X's us to Y's Z.
+Chars: 35 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 477 ---
+Original: Kripke’s Paradox 
+
+Names are mere labels; they are non-descriptive.
+Bleached: K's P 
+
+N's are mere L's; they are non-D.
+Chars: 69 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;-.
+
+--- Pattern 478 ---
+Original: “Clark Kent is a reporter”, though true, is not definitionally so; neither is “Clark Kent wears glasses” or any other statement that in any way singles out Clark Kent.
+Bleached: "A B is a C", though D, is not E-ally so; neither is "A B F-s G-s" or any other H that in any way I-s out A B.
+Chars: 167 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,;.
+
+--- Pattern 479 ---
+Original: The same is true of any given name, including “Superman”, so the solution just stated to Frege’s paradox cannot be right.
+Bleached: The same is true of any given A, including "B", so the C just D-ed to E's F cannot be right.
+Chars: 121 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 480 ---
+Original: Solution: Kripke is right that names are non-descriptive and are therefore mere labels.
+Bleached: X: Y is Z that W's are non-V and are therefore mere Q's.
+Chars: 87 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :-.
+
+--- Pattern 481 ---
+Original: But even mere labels ‘pick up’ descriptive information.
+Bleached: But even mere X's 'Y up' Z information.
+Chars: 55 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 482 ---
+Original: One doesn’t know learn what a given name refers to in a vacuum.
+Bleached: One doesn't X Y what a Z A B to in a C.
+Chars: 63 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 483 ---
+Original: Suppose that person x’s is name is “Hendricks”, and suppose that I learn this because, while pointing to x, you say “that is Henricks.” Hendricks is given to me as having various features—as being a in a certain place, having a certain appearance, and so on.
+Bleached: Suppose that F x's is G is "H", and suppose that I J this because, while K-ing to x, you say "that is H." H is L to me as having various M's—as being a in a certain N, having a certain O, and so on.
+Chars: 258 | Tokens: 46 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,.—,,.
+
+--- Pattern 484 ---
+Original: So even though “Hendricks” is tall simply means “x is tall”, for the right value of “x”, what it means to me is descriptively much richer and will be along the lines “there was an individual having such and such features whom I saw on a certain occasion and that individual is tall.” And if x also goes by the name “Revere”, then even though “Revere is tall” simply means “x is tall”, what such utterances mean to me may so different from what utterances of “Hendricks is tall” mean to me that I won’t know that “Hendricks” and “Revere” co-refer.
+Bleached: So even though "A" is B simply means "x is B", for the right C of "x", what it means to me is D much E and will be along the lines "there was an F having such and such G whom I H on a certain I and that F is B." And if x also J by the K "L", then even though "L is B" simply means "x is B", what such M mean to me may so N from what M of "A is B" mean to me that I won't O that "A" and "L" P.
+Chars: 546 | Tokens: 101 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.,,-.
+
+--- Pattern 485 ---
+Original: There is semantics—what expressions literally mean—and there is knowledge of semantics.
+Bleached: There is X—what Y literally Z—and there is W of X.
+Chars: 87 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ——.
+
+--- Pattern 486 ---
+Original: And how a given person knows the literal meaning of a given expression may affect what is to meant to him by sentences involving that expression.
+Bleached: And how a given F X's the Y Z of a given A may B what is to C to him by D's E-ing that A.
+Chars: 145 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 487 ---
+Original: So yes—Kripke is right about the semantics of proper names.
+Bleached: So yes—X is Y about the Z of W V's.
+Chars: 59 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —.
+
+--- Pattern 488 ---
+Original: But semantics isn’t known in a vacuum, a consequence being that two utterances that have the same literal meaning—for example “Hendricks is tall” and “Revere is tall”—may convey very different bodies of information to whose who know that literal meaning.
+Bleached: But A isn't B-ed in a C, a D being that two E's that have the same F G—for example "H is I" and "J is I"—may K very different L's of M to N who O that F G.
+Chars: 254 | Tokens: 40 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,——.
+
+--- Pattern 489 ---
+Original: The Ratiocinator’s Paradox 
+
+If I know that X is true, then I know of some truth Y that justifies my acceptance of X; and by the same token, if I know of that Y is true, then I know of some truth Z that justifies my acceptance of Y; and so on ad infinitum.
+Bleached: The A's B
+
+If I C that X is D, then I C of some E Y that F's my G of X; and by the same H, if I C of that Y is D, then I C of some E Z that F's my G of Y; and so on I J.
+Chars: 258 | Tokens: 54 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,;,,;.
+
+--- Pattern 490 ---
+Original: Therefore, one must have knowledge of infinitely many truths before one can have knowledge of a single one, and knowledge is therefore impossible.
+Bleached: Therefore, one must have X of Y Z Y's before one can have X of a single one, and X is therefore W.
+Chars: 146 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 491 ---
+Original: The solution: Although a belief must be justified if it is to be knowledge, it isn’t necessary that one know that justification.
+Bleached: The A: Although a B must be C-ed if it is to be D, it isn't E that one F that G.
+Chars: 128 | Tokens: 22 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 492 ---
+Original: Knowledge starts with beliefs that are not knowledge.
+Bleached: A starts with B's that are not A.
+Chars: 53 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 493 ---
+Original: If such a belief is useful, which it won’t be unless it is consistent with the data and therefore justified, its owner is likely to retain it.
+Bleached: If such a A is B, which it won't be unless it is C with the D and therefore E, its F is G to H it.
+Chars: 142 | Tokens: 27 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 494 ---
+Original: But it isn’t because its owner knows it to be useful that he retains it; it is because it is useful.
+Bleached: But it isn't because its X Y-s it to be Z that he W-s it; it is because it is Z.
+Chars: 100 | Tokens: 21 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ;.
+
+--- Pattern 495 ---
+Original: Nor therefore is it because its owner knows it to be justified that he retains it; it is because it is justified.
+Bleached: Nor therefore is it because its F X's it to be Y-ed that he Z's it; it is because it is Y-ed.
+Chars: 113 | Tokens: 22 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 496 ---
+Original: So even though only justified beliefs are knowledge-constitutive, there is no regress of the above-mentioned kind, since a belief can be justified without its owner knowing what that justification is.
+Bleached: So even though only X-ed Y's are Z-constitutive, there is no W of the above-mentioned kind, since a Y can be X-ed without its owner knowing what that justification is.
+Chars: 200 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,.
+
+--- Pattern 497 ---
+Original: Meno’s Paradox 
+
+In order to search for something, you must know what it is that you’re looking for.
+Bleached: X's Y 
+
+In order to Z for something, you must V what it is that you're Z-ing for.
+Chars: 102 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 498 ---
+Original: So in order to search for knowledge, you must know what it is that you're looking for.
+Bleached: So in order to X for Y, you must Z what it is that you're X-ing for.
+Chars: 86 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,'.
+
+--- Pattern 499 ---
+Original: But if you know what it is that you're looking for, then you already know it and therefore cannot search for it.
+Bleached: But if you X what it is that you're Y-ing for, then you already X it and therefore cannot Z for it.
+Chars: 112 | Tokens: 22 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ',.
+
+--- Pattern 500 ---
+Original: Solution: Suppose I am looking for your phone number.
+Bleached: Solution: Suppose I am X-ing for your Y Z.
+Chars: 53 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 501 ---
+Original: In that case, I know of a certain description (namely, 'sequence of digits that if entered on a phone dials your phone') that it is uniquely instantiated, but I don't know of any specific number-sequence that it instantiates that description; and my finding that number involves my coming to learn of some number-sequence that it satisfies description.
+Bleached: In that case, I know of a certain A (namely, 'B of C that if D-ed on a E F your E') that it is uniquely G-ed, but I don't know of any H I-B that it J that A; and my K-ing that I L my M-ing to N of some I-B that it O A.
+Chars: 352 | Tokens: 57 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,(,''),'-;-.
+
+--- Pattern 502 ---
+Original: In general, looking given piece of information involves knowing of some description that it is uniquely instantiated but not knowing what that instance is, and finding that information involves learning of some object that satisfies that description.
+Bleached: In general, X-ing given Y of Z involves X-ing of some W that it is uniquely X-ed but not X-ing what that Y is, and X-ing that Z involves X-ing of some F that X-s that W.
+Chars: 250 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 503 ---
+Original: Seeking knowledge knowing of a description that it is instantiated but not knowing what that instance; finding knowledge involves learning that of an already known object that it satisfies that description.
+Bleached: A-ing B C-ing of a D that it is E-ed but not C-ing what that F; G-ing B H-s I-ing that of an already C-n J that it K-s that D.
+Chars: 206 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 504 ---
+Original: The Learner’s Paradox 
+
+One cannot have knowledge without acquiring it, since all knowledge is learned, but one cannot acquire it without having it, since a mind devoid of knowledge is no mind at all.
+Bleached: The X's Y 
+
+One cannot have Z without W-ing it, since all Z is V-ed, but one cannot W it without having it, since a U T of Z is no U at all.
+Chars: 202 | Tokens: 34 | Clauses: 3
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 505 ---
+Original: Solution: The ability to learn does indeed presuppose knowledge of a kind, but such knowledge is constitutive of one’s mind and therefore isn’t acquired.
+Bleached: A: The B to C does indeed D E of a F, but such E is G of one's H and therefore isn't I-ed.
+Chars: 153 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 506 ---
+Original: The Content Externalism Paradox 
+
+Suppose that Mary lives here on Earth and Twin-Mary lives on some planet that is just like Earth except that it is on the other side of the universe.
+Bleached: The X Y Z
+
+W that A X-s here on B and C-A X-s on some D that is just like B except that it is on the other E of the F.
+Chars: 185 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 507 ---
+Original: I have a concept of Mary as opposed to Twin-Mary because I am causally connected to Mary in a way that I am not causally connected to Twin-Mary, notwithstanding the fact that Mary-thoughts are subjectively indistinguishable from Twin-Mary-thoughts.
+Bleached: I have a X of Y as opposed to Z-Y because I am W-ly X-ed to Y in a way that I am not W-ly X-ed to Z-Y, notwithstanding the fact that Y-X's are R-ly V from Z-Y-X's.
+Chars: 248 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,---.
+
+--- Pattern 508 ---
+Original: Content externalism is the doctrine that, for the reason just given, thoughts that are subjectively indistinguishable may indeed have different contents.
+Bleached: P externalism is the Q that, for the R just S-ed, T's that are U-ly V-able may indeed have different P's.
+Chars: 153 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 509 ---
+Original: If content externalism is correct, thoughts that have different contents may have the very same psychological properties, and content externalism therefore has the absurd consequence that a thought’s content has no effect on its psychological properties.
+Bleached: If A B-ism is C, D that have E F may have the very same G H, and A B-ism therefore has the I J that a D's A has no K on its G H.
+Chars: 254 | Tokens: 36 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 510 ---
+Original: Also, if content-externalism is correct, then Mary-thoughts are subjectively just like Twin-Mary-thoughts, and content externalism therefore has the false consequence that I cannot know that I am thinking about Mary as opposed to Twin-Mary.
+Bleached: Also, if A-B is C, then D-E's are F just like G-D-E's, and A B therefore has the H I that I cannot J that I am K-ing about D as L to G-D.
+Chars: 240 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,---,-.
+
+--- Pattern 511 ---
+Original: Content externalists either accept these absurdities or falsely deny that they follow from content externalism.
+Bleached: Content X-ists either Y these Z-ities or W-ly V that they U from content X-ism.
+Chars: 111 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 512 ---
+Original: In any case, there is a straightforward and non-revisionist way to model this data-set.
+Bleached: In any case, there is a A and B way to C this D-set.
+Chars: 87 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--.
+
+--- Pattern 513 ---
+Original: If JM sees Mary and thinks to himself whatever it is that caused this perception is lovely, his thought is true if Mary is lovely, it being irrelevant whether or not Twin-Mary is lovely.
+Bleached: If JM A's B and C's to himself whatever it is that D'd this E is F, his G is H if B is F, it being I whether or not Twin-B is F.
+Chars: 186 | Tokens: 34 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,-.
+
+--- Pattern 514 ---
+Original: Similarly, if Twin-JM sees Twin-Mary and thinks to himself whatever it is that caused this perception is lovely, his thought is true if Twin-Mary is lovely, it being irrelevant whether or not Mary is lovely.
+Bleached: Similarly, if A-B X's A-C and Y's to himself whatever it is that Z-ed this W is V, his U is T if A-C is V, it being S whether or not C is V.
+Chars: 207 | Tokens: 35 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,--,-,.
+
+--- Pattern 515 ---
+Original: So even though JM’s though concerns Mary whereas Twin-JM’s thought concerns Twin-Mary, the two thoughts are subjectively identical and they also agree in content.
+Bleached: So even though X's though Y's Z whereas Ω-X's Y Y's Ω-Z, the two Y's are W identical and they also V in O.
+Chars: 162 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,.
+
+--- Pattern 516 ---
+Original: In light of this, suppose that JM thinks Mary is lovely by way of his having a self-referential thought of the just-described kind and make the corresponding supposition about Twin-JM.
+Bleached: In light of this, suppose that JM thinks Mary is A by way of his having a B-al C of the just-D-ed kind and make the E-ing F about Twin-JM.
+Chars: 184 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,---.
+
+--- Pattern 517 ---
+Original: In that case, it immediately follows that even though JM’s thought concerns Mary and Twin-JM’s thought concerns Twin-Mary, those the two thoughts are subjectively identical and also agree in content.
+Bleached: In that case, it immediately follows that even though JM's X concerns Y and Twin-JM's X concerns Twin-Y, those the two X's are Z-ly W and also V in U.
+Chars: 199 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--,.
+
+--- Pattern 518 ---
+Original: It also follows that JM cannot possibly be wrong if he thinks I am now thinking that Mary is lovely.
+Bleached: It also X-s that JM cannot Y be Z if he W-s I am now W-ing that Mary is A.
+Chars: 100 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 519 ---
+Original: This is because, relative to that supposition, JM has that thought by way of his thinking I am now thinking that whatever it is that caused this perception is lovely, and he obviously cannot be wrong to think the latter.
+Bleached: This is because, relative to that A, JM has that B by way of his C-ing I am now C-ing that whatever it is that D-ed this E is F, and he obviously cannot be G to C the latter.
+Chars: 220 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 520 ---
+Original: In general, when it is supposed that thoughts about the external world are had by way of self-referential thoughts of the just-described kind, it is immediately explained how it is that thoughts having different external referents may nonetheless be subjectively identical and also coincide in content, and it is also explained why it is that self-ascriptive thoughts of the kind we’ve been discussing cannot be possibly be false.
+Bleached: In general, when it is X-ed that Y's about the Z A are X-ed by way of B-C Y's of the just-D-ed kind, it is immediately E-ed how it is that Y's having different Z F's may nonetheless be G-ly H and also I in J, and it is also E-ed why it is that B-K Y's of the kind we've been L-ing cannot be possibly be false.
+Chars: 430 | Tokens: 68 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--,,-.
+
+--- Pattern 521 ---
+Original: The Secession Paradox 
+
+The following paradox was brought to my attention by a Youtuber known as ‘Fringe Elements’.
+Bleached: The A B
+
+The following C was D to my E by a F G as 'H I'.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 522 ---
+Original: The more of a legal right one nation has to secede from another, the less of a moral right it has to do so.
+Bleached: The more of a A B one C has to D from another, the less of a E B it has to do so.
+Chars: 107 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 523 ---
+Original: Explanation: Oftentimes when states attempt to secede from nations, they do so claiming that their act of secession is ‘legal’ under the laws of the host state.
+Bleached: A: B when C D to E from F, they do so G that their H of I is 'J' under the K of the L M.
+Chars: 160 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.
+
+--- Pattern 524 ---
+Original: The Confederacy appears to have claimed this, its position being that the Constitution, or the spirit thereof, allowed states a certain degree of autonomy, including the right to secede.
+Bleached: The A appears to have B-ed this, its C being that the D, or the E thereof, F-ed G's a certain H of I, including the J to K.
+Chars: 186 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 525 ---
+Original: But the more legitimate a nation’s laws are, the less legitimate it is to secede from that nation.
+Bleached: But the more A a B's C's are, the less A it is to D from that B.
+Chars: 98 | Tokens: 18 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 526 ---
+Original: Hence our initial claim that the more of a legal ‘right’ to secede that a nation has, the less of a moral right it has to do so.
+Bleached: Hence our X A that the Y of a Z 'B' to C that a D has, the E of a F B it has to do so.
+Chars: 128 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
