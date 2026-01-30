@@ -1,0 +1,5366 @@
+=== SENTENCE BANK ===
+Total Patterns: 474
+Author: KUCZYNSKI
+Generated: 1/29/2026, 10:28:00 PM
+
+--- Pattern 1 ---
+Original: Ask Me Anything about Psychopathy!
+Bleached: X Me Anything about Y!
+Chars: 34 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: !
+
+--- Pattern 2 ---
+Original: With Link to video version of book (at end of book)
+
+ 
+
+                                      Freud Institute
+
+                                  www.freudinstitute.com
+
+ 
+
+ 
+
+There are those who are in this world but not of it.
+Bleached: With X to Y Z of X (at X of X)
+
+ 
+
+                                      X X
+
+                                  www.X.com
+
+ 
+
+ 
+
+There are those who are in this X but not of it.
+Chars: 239 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ()...
+
+--- Pattern 3 ---
+Original: I am referring to psychopaths.
+Bleached: I am X-ing to Y's.
+Chars: 30 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 4 ---
+Original: A psychopath is someone who has no real
+values and therefore does not have a distinctively human psychological architecture.
+Bleached: A X is Y who has no Z W's and therefore does not have a V-ly U Q R.
+Chars: 125 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 5 ---
+Original: Most psychopaths are not criminals (even
+though psychopaths are disproportionately likely to go into crime).
+Bleached: Most A are not B (even
+though A are C likely to go into D).
+Chars: 109 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 6 ---
+Original: To be a psychopath is not to be criminal; it is to be a fraud.
+Bleached: To be a X is not to be Y; it is to be a Z.
+Chars: 62 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 7 ---
+Original: And there are many more psychopaths than most people, and even most clinicians, realize.
+Bleached: And there are many more X than most Y, and even most Z, W.
+Chars: 88 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 8 ---
+Original: In fact, I believe that new forms of
+psychopathy are coming into existence, owing to the fact that human being are living in increasingly artificial social and physical
+environments and are under increasing pressure to adopt views that are politically mandated, as opposed to inherently reasonable.
+Bleached: In fact, I believe that new X's of Y are Z-ing into W, owing to the fact that human V's are living in increasingly U T and S R's and are under increasing Q to P O's that are N M-ed, as opposed to inherently L.
+Chars: 300 | Tokens: 46 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 9 ---
+Original: I have a vast amount of personal and professional experience dealing with psychopaths, and I have experienced, and also studied,
+many different forms of this insidious and rapidly spreading condition.
+Bleached: I have a A B of C and D E F with G's, and I have H-ed, and also I-ed, J K L's of this M and N O-ing P.
+Chars: 201 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 10 ---
+Original: What are the ways to test psychopathy?
+Bleached: What are the X's to Y Z?
+Chars: 38 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 11 ---
+Original: KHUSHBOO
+
+The term ‘psychopath’ is ambiguous.
+Bleached: X
+
+The Y 'Z' is A.
+Chars: 47 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 12 ---
+Original: Sometimes it refers to deeply misanthropic or anti-social
+people, who may have integrity, often considerable integrity.
+Bleached: Sometimes it X-s to Y Z or W-Y F, who may have G, often H G.
+Chars: 120 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,.
+
+--- Pattern 13 ---
+Original: And sometimes it refers to people
+who utterly lack integrity.
+Bleached: And sometimes it refers to X
+who utterly lack Y.
+Chars: 62 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 14 ---
+Original: The Unabomber had integrity—indeed, his life was rigidly principle-
+driven—but he was morbidly, criminally anti-social.
+Bleached: The A had B—indeed, his C was D E-driven—but he was F, G H-I.
+Chars: 120 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —,-—,-.
+
+--- Pattern 15 ---
+Original: So he was a psychopath in the sense that he
+was anti-social, not in the sense that he lacked integrity.
+Bleached: So he was a X in the Y that he
+was Z-W, not in the Y that he V-ed U.
+Chars: 104 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 16 ---
+Original: Most so-called psychopaths are
+psychopaths in the sense that they lack integrity.
+Bleached: Most so-called X are X in the sense that they lack Y.
+Chars: 82 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 17 ---
+Original: Con-artists fall into this category—for example,
+the people who try to lure you into multi-level marketing schemes—and so do slimy bureaucrats
+and all other empty fraudster husks.
+Bleached: Con-A's X into this Y—for example,
+the Z who W to V you into multi-level B C's—and so do D E's
+and all other F G H's.
+Chars: 181 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -—,-—.
+
+--- Pattern 18 ---
+Original: The way to ‘test’ for the second kind of psychopathy is this:
+Are for they for real?
+Bleached: The A to 'B' for the C D of E is this:
+Are for they for F?
+Chars: 85 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :?
+
+--- Pattern 19 ---
+Original: Or are their statements and actions always purely expediency-driven?
+Bleached: Or are their X's and Y's always purely Z-driven?
+Chars: 68 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -?
+
+--- Pattern 20 ---
+Original: Do
+they merely go wherever the wind is blowing?
+Bleached: Do
+they merely X wherever the Y is Z-ing?
+Chars: 48 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 21 ---
+Original: If so, they are psychopaths, in the sense that they
+utterly lack integrity.
+Bleached: If so, they are X, in the sense that they utterly lack Y.
+Chars: 76 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 22 ---
+Original: And make no mistake: that is a very distinctive psychological condition.
+Bleached: And X no Y: that is a very Z W X.
+Chars: 72 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 23 ---
+Original: There was a psychology professor at Berkeley who was comparing the brain-scans of non-
+psychopaths to the brain-scans of drifters, con-artists, and other psychopaths (of the non-
+integrity-variety).
+Bleached: There was a X Y at Z who was V-ing the W-s of non-P-s to the W-s of Q-s, R-s, and other P-s (of the non-S-T).
+Chars: 200 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---,-,(--).
+
+--- Pattern 24 ---
+Original: He came across one very distinctively psychopathic brain-scan—it was largely
+greyed out in the way characteristic of no-integrity-psycopath brain-scans.
+Bleached: He A across one very B C D-scan—it was largely E out in the way F of no-G-H D-scans.
+Chars: 153 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -—---.
+
+--- Pattern 25 ---
+Original: And it turned out to
+be his own.
+Bleached: And it X-ed out to
+be his own.
+Chars: 33 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 26 ---
+Original: He thought it was because he came from a long-line of criminals.
+Bleached: He X-ed it was because he Y-ed from a Z-line of A's.
+Chars: 64 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 27 ---
+Original: But the real story
+is that he was a bureaucrat-professor, who, like all b ureaucrat-professors, was slimy phony who
+had long since forfeited sacrificed integrity to department-politics, thereby blacking out most of
+his alreacy weak brain.
+Bleached: But the A B
+is that he was a C-D, who, like all C-D's, was E F who
+had G since H I J to K-L, thereby M-ing out most of
+his N O P.
+Chars: 241 | Tokens: 36 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: -,,-,-,.
+
+--- Pattern 28 ---
+Original: As for the other kind of psychopathy—no testing needed there.
+Bleached: As for the other A of B—no C D there.
+Chars: 61 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —.
+
+--- Pattern 29 ---
+Original: If they
+are hermits who grouch others, then they are ipso facxto anti-social and ipso facxto
+psychopathic, in the sense, tautologously, that they are anti-social.
+Bleached: If they
+are X who Y others, then they are ipso facxto Z and ipso facxto
+W, in the sense, tautologously, that they are Z.
+Chars: 164 | Tokens: 25 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-,,,-.
+
+--- Pattern 30 ---
+Original: But that sort of psychopath is
+not deceptive—quite the opposite.
+Bleached: But that X of Y is
+not Z—quite the opposite.
+Chars: 65 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: —.
+
+--- Pattern 31 ---
+Original: NATASHAVIRTUAL
+
+Do you know of any psycopaths that have proven to be the most exceptional or
+unconventional, even given their condition?MAY 4, 2:13AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There are many.
+Bleached: NATASHAVIRTUAL
+
+Do you X of any Y's that have Z-ed to be the most W or U, even given their V?MAY 4, 2:13AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There are many.
+Chars: 210 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?,:-.
+
+--- Pattern 32 ---
+Original: Politics and business are loaded with psychopaths, Bill Clinton being a prime
+example.
+Bleached: A and B are C-ed with D's, E F G a H example.
+Chars: 87 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 33 ---
+Original: Also, cult leaders are categorically psychopaths, e.g.
+Bleached: Also, A B's are C D's, e.g.
+Chars: 54 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,..
+
+--- Pattern 34 ---
+Original: Charles Manson, Jim Jones.
+Bleached: A B, C D.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 35 ---
+Original: Some
+actors are psychopaths--and sometimes they themselves portray psychopaths.
+Bleached: Some
+A's are B's--and sometimes they themselves C B's.
+Chars: 80 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 36 ---
+Original: (I suspect---but do
+not know--that Kevin Spacey is a psychopath.
+Bleached: (I P---but do
+not Q--that R S is a T.
+Chars: 65 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (-----.
+
+--- Pattern 37 ---
+Original: Or maybe it's just that he plays them very well.)
+Jimmy Savile was a heavy duty psychopath.
+Bleached: Or maybe it's just that he X's them very well.)
+Y Z was a W V Ω.
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.).
+
+--- Pattern 38 ---
+Original: The list goes on and on.
+Bleached: The X Y-s on and on.
+Chars: 24 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 39 ---
+Original: Also, there are a lot of
+blowhard academics--hip Marxist professors, and the like---who are psychopaths.
+Bleached: Also, there are a lot of
+X Y--Z A B, and the like---who are C.
+Chars: 105 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--,---.
+
+--- Pattern 40 ---
+Original: (On YouTube,
+look up Duncan Kennedy, Harvard Law School: he's a psychopath.) There are psychopaths in all
+walks of life, but when psychopaths succeed, it tends to be in areas involving charisma and flash:
+pop culture, counter culture, and politics, being the big ones.
+Bleached: (On YouTube,
+look up X Y, Z Law School: he's a W.) There are W's in all
+X's of life, but when W's V, it V's to be in X's V-ing charisma and flash:
+pop culture, counter culture, and politics, being the big ones.
+Chars: 271 | Tokens: 44 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: (,,:'.),,:,,,.
+
+--- Pattern 41 ---
+Original: Also, on YouTube, look up Keala
+Kanae: that will give you a pretty good idea of what an actual 'practicing' psychopahy is like.
+Bleached: Also, on A, B up C D: that will E you a F G H of what an I 'J-ing' K is like.
+Chars: 128 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,:''.
+
+--- Pattern 42 ---
+Original: Last edited @ May 4, 12:32PM EDT.
+Bleached: Last X-ed @ Y Z, W:XPM Q.
+Chars: 33 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 43 ---
+Original: MAY 4, 12:29PM EDT0
+
+LIANCHUY
+
+Besides having a "squishy/non-integral" personality, what are other telltale signs of
+psychopathy?
+Bleached: MAY 4, 12:29PM EDT0
+
+LIANCHUY
+
+Besides having a "X/Y-Z" personality, what are other W signs of
+P?
+Chars: 134 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:"-",?
+
+--- Pattern 44 ---
+Original: MAY 3, 2:33AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There are different kinds of psychopaths.
+Bleached: MAY 3, 2:33AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There are different kinds of X's.
+Chars: 97 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 45 ---
+Original: But when it comes to the textbook sort of psychopath--
+this being the 'early-onset' psychopath, the person who psychopathizes early in life---they are
+con-artists, cheats, swindlers...they are slick and glib.
+Bleached: But when it comes to the X sort of Y--
+this being the 'Z-onset' Y, the person who Y-izes early in life---they are
+A-ists, B's, C's...they are D and E.
+Chars: 210 | Tokens: 30 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: --'-',----,,....
+
+--- Pattern 46 ---
+Original: They talk fast and loose.
+Bleached: They X Y and Z.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 47 ---
+Original: They lack
+integrity, and vacillate  between being falsely ingratiating and very genuinely evil.
+Bleached: They lack
+X, and Y  between being Z W and very genuinely A.
+Chars: 96 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 48 ---
+Original: They have a
+'synthetic', 'fake' quality.
+Bleached: They have a
+'X', 'Y' Z.
+Chars: 41 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '',''.
+
+--- Pattern 49 ---
+Original: MAY 3, 12:31PM EDT0
+
+
+
+
+
+MMALAHOO
+
+Are there measurable "degrees" to psycopathy(think a Richter scale, but for psycopathy
+instead of earthquakes)?
+Bleached: MAY 3, 12:31PM EDT0
+
+
+
+
+
+MMALAHOO
+
+Are there X-able "Y's" to Z(think a W X, but for Z
+instead of V's)?
+Chars: 155 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:""(,)?
+
+--- Pattern 50 ---
+Original: MAY 2, 6:05PM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Yes.
+Bleached: MAY 2, 6:05PM EDT0X-Y Z
+
+Yes.
+Chars: 48 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 51 ---
+Original: Psychopathy is like cancer--it IS a kind of cancer, actually.
+Bleached: A is like B--it IS a kind of B, actually.
+Chars: 61 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,.
+
+--- Pattern 52 ---
+Original: And just as one can have Stage
+1 or Stage 4 cancer, so one can be a Stage 1 or a Stage 4 psychopath.
+Bleached: And just as one can have A
+1 or A 4 B, so one can be a A 1 or a A 4 C.
+Chars: 101 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 53 ---
+Original: In other words, one can be
+rotted out just a little bit by a psychopathy or one can be totally rotted out by it.
+Bleached: In other words, one can be
+X-ed out just a little bit by a Y or one can be totally X-ed out by it.
+Chars: 113 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 54 ---
+Original: But as a general
+rule, once it gets its foot in the door, the rest is a foregone and grim conclusion.
+Bleached: But as a general X, once it Y's its Z in the A, the rest is a B and C D.
+Chars: 102 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 55 ---
+Original: MAY 2, 8:57PM EDT0
+
+VIPULMTR
+
+Have there been observed cases of a psychopath having another problematic condition,
+such as Schizophrenia?
+Bleached: MAY 2, 8:57PM EDT0
+
+VIPULMTR
+
+Have there been X-ed Y's of a Z having another W condition,
+such as V?
+Chars: 142 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,?
+
+--- Pattern 56 ---
+Original: MAY 2, 10:53AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes.
+Bleached: MAY 2, 10:53AM EDT0
+
+
+
+
+
+A-B C
+
+Yes.
+Chars: 61 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 57 ---
+Original: Psychopaths can have tons of psychological problems.
+Bleached: X's can have Y's of Z W's.
+Chars: 52 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 58 ---
+Original: Charles Manson was a psychopath,
+and he was also psychotic.
+Bleached: A B was a C,
+and he was also D.
+Chars: 60 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 59 ---
+Original: Same with Jim Jones (the cult leader).
+Bleached: Same with X Y (the Z W).
+Chars: 38 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 60 ---
+Original: Psychosis and psychopathy are
+compatible.
+Bleached: A and B are
+compatible.
+Chars: 42 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 61 ---
+Original: Neurosis, however, is not compatible with psychopathy, since neurosis is about a
+conflict between one's conscience and one's urges, and psychopaths have no conscience.
+Bleached: A, however, is not B with C, since A is about a D between one's E and one's F, and G's have no E.
+Chars: 168 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,'',.
+
+--- Pattern 62 ---
+Original: MAY 2, 11:30AM EDT0
+
+WANGEM01
+
+Do you personally know a person who is a psychopath?
+Bleached: MAY 2, 11:30AM EDT0
+
+WANGEM01
+
+Do you personally X a Y who is a Z?
+Chars: 87 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 63 ---
+Original: MAY 1, 10:17PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes.
+Bleached: MAY 1, 10:17PM EDT0
+
+
+
+
+
+A-B C
+
+Yes.
+Chars: 61 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 64 ---
+Original: I know plenty.
+Bleached: I X Y.
+Chars: 14 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 65 ---
+Original: Everybody does.
+Bleached: Everybody X.
+Chars: 15 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 66 ---
+Original: They just don't know it.
+Bleached: They just don't X it.
+Chars: 24 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.
+
+--- Pattern 67 ---
+Original: MAY 2, 11:29AM EDT0
+
+
+
+
+
+FUNNYBUNNY0
+
+If a psychopath wants to get treatment/help, what kind of doctor must he go to?MAY 1, 4:23PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Psychopaths don't want treatment, and they cannot benefit from treatment.
+Bleached: """
+MAY 2, 11:29AM EDT0
+
+
+
+
+
+FUNNYBUNNY0
+
+If a X wants to Y Z/help, what kind of W must he go to?MAY 1, 4:23PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+X's don't want Z, and they cannot Y from Z.
+"""
+Chars: 254 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,?,:-',.
+
+--- Pattern 68 ---
+Original: Psychopathy is not so
+much a condition as it is a certain kind of psychological structure.
+Bleached: A is not so
+much a B as it is a C D of E F.
+Chars: 91 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 69 ---
+Original: And a leopard cannot change
+its spots; therapy can help people change how they are who they are, but it cannot change who
+they are.
+Bleached: And a A cannot change its B's; C can help D change how they are who they are, but it cannot change who they are.
+Chars: 133 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 70 ---
+Original: If someone is a psychopath, that is who they are, and therefore no changing it.
+Bleached: If someone is a X, that is who they are, and therefore no Y-ing it.
+Chars: 79 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 71 ---
+Original: Also,
+psychopathy is a response to external threats; it is a psychological defense that, although toxic,
+came into existence to ensure the survival of the person in question.
+Bleached: Also,
+A is a B to C D; it is a E F that, although G,
+H into I to J the K of the L in M.
+Chars: 176 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,,.
+
+--- Pattern 72 ---
+Original: So psychopathy is not only
+deeply rooted but also functional, at least at certain junctures.
+Bleached: So A is not only
+deeply B but also C, at least at certain D's.
+Chars: 93 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 73 ---
+Original: MAY 1, 4:55PM EDT0
+
+
+
+
+
+RICKYIP
+
+How would one know if a person is a psychopath?
+Bleached: MAY 1, 4:55PM EDT0
+
+
+
+
+
+RICKYIP
+
+How would one X if a Y is a Z?
+Chars: 88 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 74 ---
+Original: MAY 1, 10:39AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Long story short: they are phony.
+Bleached: MAY 1, 10:39AM EDT0
+
+
+
+
+
+X-Y Z
+
+A B C: they are D.
+Chars: 90 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-:.
+
+--- Pattern 75 ---
+Original: There are two different kinds of psychopaths: early-onset and
+late-onset.
+Bleached: There are two different G's of H's: I-J and K-J.
+Chars: 74 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :--.
+
+--- Pattern 76 ---
+Original: The early-onset psychopath is someone who psychopathized in childhood.
+Bleached: The A-onset B is someone who B-ed in C.
+Chars: 70 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 77 ---
+Original: Such a
+person is slick, deceptive, and very clearly phony.
+Bleached: Such a
+F is X, Y, and very clearly Z.
+Chars: 59 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 78 ---
+Original: They tend to be 'blingy' and brazenly
+concerned with status and appearance.
+Bleached: They X to be 'Y' and Z W with Q and R.
+Chars: 76 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''.
+
+--- Pattern 79 ---
+Original: The late-onset psychopath is someone who
+psychopathized in order to move ahead professionally.
+Bleached: The A-onset B is C who B-ed in D to E F G.
+Chars: 95 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 80 ---
+Original: Such a person is phony, but in a different
+way from the early oneset psychopath.
+Bleached: Such a F is E, but in a different
+way from the early X-set G.
+Chars: 81 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 81 ---
+Original: The late onset psychopathy tends to be a bureaucrat or a
+garden-variety fraud.
+Bleached: The A B C tends to be a D or a E-F G.
+Chars: 79 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 82 ---
+Original: The academic world is loaded with late-onset psychopaths--with stuffed
+shirt phonies who haven't a shred of integerity and are therefore psychopaths.
+Bleached: The A B is C-ed with D-E F--with G H I who haven't a J of K and are therefore F.
+Chars: 150 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---'.
+
+--- Pattern 83 ---
+Original: Show business and
+politics and straight-up crime are havens for early-onset psychopaths.
+Bleached: A B and
+C and D-up E are F for G-H I.
+Chars: 89 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 84 ---
+Original: MAY 1, 4:58PM EDT0
+
+JOEJIMAR
+
+Can a psychopath disorder be contagious?
+Bleached: MAY 1, 4:58PM EDT0
+
+JOEJIMAR
+
+Can a X disorder be Y?
+Chars: 74 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 85 ---
+Original: Like if one lives with a psychopath, is it highly
+possible for him to become a psychopath eventually?
+Bleached: Like if one Xs with a Y, is it highly Z for him to become a Y eventually?
+Chars: 102 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,?
+
+--- Pattern 86 ---
+Original: MAY 1, 5:23AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Short answer---no.
+Bleached: MAY 1, 5:23AM EDT0X-Y Z
+
+X A---no.
+Chars: 62 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:----.
+
+--- Pattern 87 ---
+Original: Long answer--not really.
+Bleached: A B--not really.
+Chars: 24 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 88 ---
+Original: But there is a way that psychopathy can spread.
+Bleached: But there is a way that X can Y.
+Chars: 47 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 89 ---
+Original: It
+can spread when institutions become psychopathized, which they often do, which tends to cause
+the people within them to become psychopathic.
+Bleached: It
+can X when Y's become Z-ed, which they often do, which tends to cause
+the people within them to become Z-ic.
+Chars: 145 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 90 ---
+Original: An entire country can become psychopathized,
+as was the case in Cambodia under Pol Pot, and as is the case, albeit to a much lesser extent, here
+in the USA.
+Bleached: An entire X can become Y-ed,
+as was the case in Z under W V, and as is the case, albeit to a much lesser extent, here
+in the USA.
+Chars: 158 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 91 ---
+Original: MAY 1, 5:00PM EDT0
+
+SAFTAIN342
+
+Aside from psychopathy, what do you do?
+Bleached: MAY 1, 5:00PM EDT0
+
+SAFTAIN342
+
+Aside from X, what do you do?
+Chars: 75 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,?
+
+--- Pattern 92 ---
+Original: Do you have another day job?
+Bleached: Do you X another Y Z?
+Chars: 28 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 93 ---
+Original: MAY 1, 5:12AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Writing about psychopathy doesn't exactly pay the bills, fun as it is to do.
+Bleached: MAY 1, 5:12AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+X-ing about Y doesn't exactly Z the W's, V as it is to do.
+Chars: 132 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-',.
+
+--- Pattern 94 ---
+Original: I am a psychoanalyst
+and an online instructor.
+Bleached: I am a X
+and an online Y.
+Chars: 47 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 95 ---
+Original: And I am starting an online tutoring
+agency: www.philosophypedia.com My online psychoanlaytic practice is
+at: www.freudinstitute.com 
+
+MAY 1, 5:00PM EDT0
+
+SAFTAIN342
+
+Would you say that being a psychopath can be inherited?
+Bleached: And I am X-ing an Y Z A: www.B.com My Y C D is at: www.E.com 
+
+MAY 1, 5:00PM EDT0
+
+SAFTAIN342
+
+Would you F that being a G can be H-ed?
+Chars: 230 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :..:..,:?
+
+--- Pattern 96 ---
+Original: MAY 1, 12:43AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There often is a heavy genetic component to psychopathy.
+Bleached: MAY 1, 12:43AM EDT0
+
+
+
+
+
+A-B C
+
+There often is a D E F to G.
+Chars: 113 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 97 ---
+Original: But it is seldom, if ever, completely
+inherited.
+Bleached: But it is X, if ever, Y
+Z-ed.
+Chars: 49 | Tokens: 8 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 98 ---
+Original: There is usually an environmental component---usually an emotionally impoverished
+childhood.
+Bleached: There is usually an A B---usually an C D E.
+Chars: 93 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---.
+
+--- Pattern 99 ---
+Original: Of course, if someone has the genetic basis of psychopathy, then there is a good
+chance that at least one of their parents is  a psychopath (or both, since psychopaths tend to bind
+to each other), so that such a person will both have an emotionally impoverished (and therefore
+psychopathogenic) childhood.
+Bleached: Of course, if someone has the A B of C, then there is a D E that at least one of their F's is a G (or both, since G's H to I to each other), so that such a J will both have an K L (and therefore M) N.
+Chars: 308 | Tokens: 51 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,(,),().
+
+--- Pattern 100 ---
+Original: MAY 1, 5:02PM EDT0
+
+MARAJAVS
+
+How does living with a psycopath affect other people, family members for example?APR 26, 10:04PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+It's horrible.
+Bleached: MAY 1, 5:02PM EDT0
+
+MARAJAVS
+
+How does X-ing with a Y Z other A, B C's for D?APR 26, 10:04PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+It's E.
+Chars: 187 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,?,:-'.
+
+--- Pattern 101 ---
+Original: They usually don't quite know it, and it eats them alive.
+Bleached: They usually don't quite X it, and it Y's them Z.
+Chars: 57 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ',.
+
+--- Pattern 102 ---
+Original: APR 26, 10:50PM EDT0
+
+STARFALL1
+
+Is there a known cure for Psychopathy?
+Bleached: APR 26, 10:50PM EDT0
+
+STARFALL1
+
+Is there a known X for Y?
+Chars: 75 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 103 ---
+Original: APR 25, 7:22PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+No.
+Bleached: APR 25, 7:22PM EDT0
+
+
+
+
+
+A-B C
+
+No.
+Chars: 60 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 104 ---
+Original: And even if there is an unknown cure, it probably wouldn't be the sort of thing that could be
+implemented any time soon.
+Bleached: And even if there is an A B, it probably wouldn't be the C of D that could be E-ed any time soon.
+Chars: 121 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,'.
+
+--- Pattern 105 ---
+Original: APR 26, 10:51PM EDT0
+
+DASHA BABUSKO
+
+When did you meet your first psychopath and how did you know the person was one?
+Bleached: APR 26, 10:51PM EDT0
+
+DASHA BABUSKO
+
+When did you X your first Y and how did you Z the person was one?
+Chars: 121 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 106 ---
+Original: APR 25, 6:26PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Each of us has met psychopaths.
+Bleached: APR 25, 6:26PM EDT0
+
+
+
+
+
+X-Y Z
+
+Each of us has X-ed A's.
+Chars: 88 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 107 ---
+Original: But looking back, I now realize that the first time I met a
+psychopath, and knew that he was a psychopath, was when I was a freshman in college.
+Bleached: But X-ing back, I now Y that the first time I Z a A, and W-ed that he was a A, was when I was a B in C.
+Chars: 145 | Tokens: 29 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,,.
+
+--- Pattern 108 ---
+Original: (I did
+not yet associate his condition with the term 'psychopath', but I did know him to be one.) He was
+completely phony.
+Bleached: (I did
+not yet A his B with the C 'D', but I did E him to be one.) He was
+completely F.
+Chars: 124 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ('',.).
+
+--- Pattern 109 ---
+Original: A caricature of a person.
+Bleached: A X of a Y.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 110 ---
+Original: And he would make comments and act in ways that
+a bad computer program would have judged to be reasonable---it was as though he were playing
+a part in a sitcom that was written by a robot that was trying to write about humans.
+Bleached: And he would make A's and B in C's that a D E F would have G-ed to be H---it was as though he were I-ing a J in a K that was L-en by a M that was N-ing to O about P's.
+Chars: 228 | Tokens: 44 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---.
+
+--- Pattern 111 ---
+Original: Everything
+was fake.
+Bleached: Ω
+was Λ.
+Chars: 21 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 112 ---
+Original: I asked him once why he hadn't seen the Godfather (the Movie), and he said, after
+hesitating and going through different possible answers in his head, 'because I don't to be
+affected by the violence in it.' And this was a guy who stuck thumbtacks into the eyes of people
+on posters on his wall.
+Bleached: I X-ed him once why he hadn't Y-ed the Z (the W), and he said, after V-ing and going through different possible Q's in his R, 'because I don't to be S-ed by the T in it.' And this was a U who V-ed P's into the F's of G on H's on his I.
+Chars: 297 | Tokens: 55 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '(),,,''.'.
+
+--- Pattern 113 ---
+Original: Everything he said and did was an act.
+Bleached: A he B and C was an D.
+Chars: 38 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 114 ---
+Original: And people were stupid about it.
+Bleached: And X were Y about it.
+Chars: 32 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 115 ---
+Original: They bought it.
+Bleached: They X-ed it.
+Chars: 15 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 116 ---
+Original: But it was so obvious.
+Bleached: But it was so A.
+Chars: 22 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 117 ---
+Original: And he became a psychiatrist, as did two other
+psychopaths that I met my freshman year in college.
+Bleached: And he became a X, as did two other Y's that I met my Z year in W.
+Chars: 99 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 118 ---
+Original: Last edited @ Apr 26, 10:57PM EDT.
+Bleached: Last X-ed @ Apr 26, 10:57PM EDT.
+Chars: 34 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 119 ---
+Original: APR 26, 10:55PM EDT0KEENAJOTH
+
+What is the best way to deal with a psychopath?
+Bleached: APR 26, 10:55PM EDT0KEENAJOTH
+
+What is the A B to C with a D?
+Chars: 80 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 120 ---
+Original: Is it to avoid them altogether?
+Bleached: Is it to X them altogether?
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 121 ---
+Original: Are they
+dangerous?
+Bleached: Are they
+Ω?
+Chars: 20 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 122 ---
+Original: APR 24, 1:54PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+The main danger is that they will waste your time, demoralize you, or swindle you.
+Bleached: APR 24, 1:54PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+The A B is that they will C your D, E you, or F you.
+Chars: 139 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,,.
+
+--- Pattern 123 ---
+Original: It is not
+likely, except under unusual circumstances, that they will physically harm you.
+Bleached: It is not
+A, except under B circumstances, that they will C D you.
+Chars: 90 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 124 ---
+Original: But it is 100%
+likely that time spent with them is wasted time.
+Bleached: But it is 100%
+A that B C with them is D B.
+Chars: 64 | Tokens: 13 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 125 ---
+Original: Just avoid.
+Bleached: Just X.
+Chars: 11 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 126 ---
+Original: APR 24, 3:06PM EDT0
+
+LIGHT
+
+Do you ever fear for yourself when dealing with psychopaths?
+Bleached: APR 24, 3:06PM EDT0
+
+LIGHT
+
+Do you ever X for yourself when Y-ing with Z's?
+Chars: 92 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 127 ---
+Original: APR 24, 8:45AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+I don't deal with them too often.
+Bleached: APR 24, 8:45AM EDT0
+
+
+
+
+
+A-B C
+
+I don't X with them too often.
+Chars: 90 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-'.
+
+--- Pattern 128 ---
+Original: They don't enlist my professional services, since they have
+nothing to gain from dealing with me (and a lot to lose, given that, as they know, I see through
+them).
+Bleached: They don't A my B C, since they have nothing to D from E with me (and a lot to F, given that, as they know, I G through them).
+Chars: 165 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ',(,,,).
+
+--- Pattern 129 ---
+Original: It isn't so much that I am afraid of them as it is that there is nothing to gain from dealing
+with them.
+Bleached: It isn't so much that I am A of them as it is that there is nothing to B from C-ing with them.
+Chars: 105 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.
+
+--- Pattern 130 ---
+Original: There is no such thing as an equitable transaction with a psychopath.
+Bleached: There is no such thing as an E transaction with a P.
+Chars: 69 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 131 ---
+Original: They are
+predators, parasites, and cheats.
+Bleached: They are
+X, Y, and Z.
+Chars: 43 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 132 ---
+Original: They take but do not give.
+Bleached: They X but do not Y.
+Chars: 26 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 133 ---
+Original: And when confronted about this, they
+manipulate.
+Bleached: And when X-ed about this, they
+Y.
+Chars: 49 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 134 ---
+Original: They are basically a waste of time, and there is no good way to deal with them,
+except to avoid them (which, sadly, is not always possible).
+Bleached: They are basically a X of Y, and there is no Z way to W with them, except to V them (which, sadly, is not always T).
+Chars: 141 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,(,,).
+
+--- Pattern 135 ---
+Original: APR 24, 3:08PM EDT0
+
+
+
+
+
+YANNYREY
+
+What does being a functional psychopath mean?
+Bleached: APR 24, 3:08PM EDT0
+
+
+
+
+
+YANNYREY
+
+What does being a X Y mean?
+Chars: 88 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 136 ---
+Original: APR 24, 8:34AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+The tendency for psychopaths is to be screw-ups--drifters, petty con-artists, low-lifes.
+Bleached: APR 24, 8:34AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+The A for B is to be C-ups--D's, E F-G's, H-I's.
+Chars: 133 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:----,-,-.
+
+--- Pattern 137 ---
+Original: But that is
+indeed just a tendency.
+Bleached: But that is
+indeed just a X.
+Chars: 36 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 138 ---
+Original: There are psychopaths who are physicians, CEO's, military officers,
+attorneys, politicians, actors, professors, and so on.
+Bleached: There are X who are Y's, Z's, A B's, C's, D's, E's, F's, and so on.
+Chars: 123 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,',,,,,,.
+
+--- Pattern 139 ---
+Original: In fact, there are some lines of work that are
+loaded with functional psychopaths, the main ones being academia, politics, and show-business.
+Bleached: In X, there are some Y's of Z that are
+A-ed with B-al C's, the main ones being D, E, and F-G.
+Chars: 142 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,-.
+
+--- Pattern 140 ---
+Original: Sometimes a psychopath can find an area of professional endeavor that complements his
+psychopathy; and when that happens, the result is a functional psychopath.
+Bleached: Sometimes a X can Y an Z of A B that C's his X; and when that happens, the result is a D X.
+Chars: 161 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 141 ---
+Original: The difference
+between the functional and the dysfunctional psychopath lies not so much in the psychopath per
+se as it does in whether he has been 'paired' with a line of work in which his psychopathy can be
+an asset.
+Bleached: The X
+between the Y and the Z A lies not so much in the A per
+se as it does in whether he has been 'B-ed' with a C of D in which his E can be
+an F.
+Chars: 220 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''.
+
+--- Pattern 142 ---
+Original: And in politics, academia, and show-business, psychopathy can most definitely be an
+asset.
+Bleached: And in A, B, and C-D, E can most definitely be an F.
+Chars: 91 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,.
+
+--- Pattern 143 ---
+Original: APR 24, 3:42PM EDT0
+
+LHYN GREGORIO
+
+What are the latest treatment modalities for psychopathy?
+Bleached: APR 24, 3:42PM EDT0
+
+LHYN GREGORIO
+
+What are the X Y Z for Ω?
+Chars: 97 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 144 ---
+Original: APR 24, 4:13AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There is no treatment.
+Bleached: APR 24, 4:13AM EDT0
+
+
+
+
+
+X-Y Z
+
+There is no A.
+Chars: 79 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 145 ---
+Original: And I doubt that there ever will be.
+Bleached: And I P that there ever will be.
+Chars: 36 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 146 ---
+Original: Therapy cannot change the basic
+structure of one's mind.
+Bleached: A cannot B the C D of one's E.
+Chars: 57 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.
+
+--- Pattern 147 ---
+Original: It can deal with structure-internal issues; it cannot deal with structural
+issues.
+Bleached: It can X with Y-Z W's; it cannot X with Y W's.
+Chars: 83 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -;.
+
+--- Pattern 148 ---
+Original: And psychopathy is most definitely a structural issue.
+Bleached: And X is most definitely a Y Z.
+Chars: 54 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 149 ---
+Original: Getting someone to stop being a
+psychopath would be like getting someone to change their sexual orientation---it can't be done
+(or so I believe...I'm not 100% sure...though I am sure that, therapists being who they are, there
+does not exist, and probably never will exist, an actual treatment).
+Bleached: Getting someone to stop being a
+X would be like getting someone to change their Y Z---it can't be done
+(or so I believe...I'm not 100% sure...though I am sure that, W's being who they are, there
+does not exist, and probably never will exist, an actual T).
+Chars: 297 | Tokens: 48 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---'(...'...,,,,).
+
+--- Pattern 150 ---
+Original: APR 24, 3:34PM EDT0
+
+
+
+
+
+BASHIR1122
+
+What is the difference between a psychopath and a sociopath?
+Bleached: APR 24, 3:34PM EDT0
+
+
+
+
+
+BASHIR1122
+
+What is the A between a B and a C?
+Chars: 105 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 151 ---
+Original: APR 21, 9:39AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Those terms tend to be used interchangeably.
+Bleached: APR 21, 9:39AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Those X tend to be Y-ed Z-ly.
+Chars: 101 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 152 ---
+Original: Sometimes the term "psychpoath" is used to refer
+to someone who is 100% a psychopath, whereas the term "sociopath" is used to refer to someonewho is only half way there.
+Bleached: Sometimes the A "B" is C-ed to D to E who is 100% a F, whereas the A "G" is C-ed to D to E who is only H I there.
+Chars: 170 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "","".
+
+--- Pattern 153 ---
+Original: But for the most part, those terms are treated as synonyms.
+Bleached: But for the most part, those X are Y-ed as Z's.
+Chars: 59 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 154 ---
+Original: That said,
+there are important divisions within the class of psychopaths, and some authors (myself
+included) have used the term "psychopath" to refer to members of some of those subsets and
+"sociopath" to refer to members of different such subsets.
+Bleached: That said,
+there are important X's within the Y of Z's, and some W's (myself
+included) have used the A "B" to refer to C's of some of those D's and
+"E" to refer to C's of different such D's.
+Chars: 251 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,()"""".
+
+--- Pattern 155 ---
+Original: In my book 'Empiricism and the
+Foundations of Psychology', I use the term 'psychopath' to refer to people who never even
+developed the character-structure of someone with a conscience, and I use the term 'sociopath' to
+refer to people who once had a conscience, along with the associated character-structure, but
+who at some point in live dismantled their consciences.
+Bleached: In my X 'Y and the Z of W', I V the Q 'R' to S to T who never even U-ed the P-structure of someone with a M, and I V the Q 'N' to S to T who once had a M, along with the associated P-structure, but who at some point in live L-ed their M's.
+Chars: 372 | Tokens: 59 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '',''-,'',-,.
+
+--- Pattern 156 ---
+Original: APR 24, 3:28PM EDT0
+
+JOE
+
+What are the factors contributing to psychopathy?
+Bleached: APR 24, 3:28PM EDT0
+
+JOE
+
+What are the X's Y-ing to Z?
+Chars: 79 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 157 ---
+Original: APR 20, 6:27PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Psychopathy is about phoniness.
+Bleached: APR 20, 6:27PM EDT0
+
+
+
+
+
+X-Y Z
+
+A is about B.
+Chars: 88 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 158 ---
+Original: It is about having a mask for an identity instead of having a real
+identity.
+Bleached: It is about having a X for an Y instead of having a Z Y.
+Chars: 77 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 159 ---
+Original: And people where masks because they are in circumstances where their survival
+depends on their wearing masks.
+Bleached: And X where Y because they are in Z where their W depends on their wearing Y.
+Chars: 110 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 160 ---
+Original: Such circumstances include situations where parents are cold,
+manipulative, or otherwise abusive and where, consequently, children can survive only by being
+liars and, therefore, by themselves becoming lies.
+Bleached: Such A include B where C are D,
+E, or otherwise F and where, consequently, G can H only by being
+I and, therefore, by themselves becoming J.
+Chars: 209 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,,.
+
+--- Pattern 161 ---
+Original: And such circumstances also include
+bureaucracies and other settings where institutional lies are given more weight than the truth.
+Bleached: And such X's also include
+Y's and other Z's where W A's are given more B than the C.
+Chars: 132 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 162 ---
+Original: APR 20, 9:33PM EDT0
+
+DEBENJY91
+
+What makes a psychopath functional or dysfunctional?
+Bleached: APR 20, 9:33PM EDT0
+
+DEBENJY91
+
+What X-s a Y Z or W?
+Chars: 88 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 163 ---
+Original: APR 20, 4:30PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Psychopathy is the product of a defensive responsive to circumstances where it is in one's
+interest, and maybe even necessary for one's survival, to manipulate and lie.
+Bleached: APR 20, 4:30PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+A is the B of a C D to E where it is in one's
+F, and maybe even G for one's H, to I and J.
+Chars: 226 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-',',.
+
+--- Pattern 164 ---
+Original: And in
+circumstances where it is necessary to tell lies, it tends to become necessary to become a lie.
+Bleached: And in
+X where it is Y to Z A's, it B's to C Y to D a A.
+Chars: 103 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 165 ---
+Original: And
+that is what the psychopath is--a lie.
+Bleached: And
+that is what the X is--a Y.
+Chars: 43 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 166 ---
+Original: And that is why he is dysfunctional.
+Bleached: And that is why he is X.
+Chars: 36 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 167 ---
+Original: And it is also why he is
+functional.
+Bleached: And it is also why he is
+X.
+Chars: 37 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 168 ---
+Original: Let me explain.
+Bleached: Let me X.
+Chars: 15 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 169 ---
+Original: He is dysfunctional because in order to function in the long term, it
+necessary to respect the truth; and for the psycopath, there is no truth, only convenient fictions..
+Bleached: He is X because in order to Y in the Z term, it
+W to V the U; and for the T, there is no U, only S R's..
+Chars: 171 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,,..
+
+--- Pattern 170 ---
+Original: At the same time, the psychopath is functional because in the short term, it is necessary to know
+what it is expedient to say and do; and the psychopath, being the short-term-oriented pragmatist
+that he is, knows how to speak and act in a way that is momentarily expedient.
+Bleached: At the same time, the X is Y because in the short term, it is Z to W what it is A to B and C; and the X, being the short-term-oriented D that he is, W's how to B and E in a way that is F A.
+Chars: 275 | Tokens: 49 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,;,--,.
+
+--- Pattern 171 ---
+Original: In general, people
+who lack values tend to be functional in the short term but they ultimately lose out, since a non-value-based, strictly pragmatic approach to life embodies ignorance of everything that doesn't
+impinge on one at a given moment and therefore embodies ignorance of that of which those are
+long-term successful are mindful.
+Bleached: In general, A
+who lack B tend to be C in the short D but they ultimately E out, since a non-B-based, strictly F G to H embodies I of everything that doesn't
+J on one at a given K and therefore embodies I of that of which those are
+long-D C are L.
+Chars: 341 | Tokens: 54 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,--,'-.
+
+--- Pattern 172 ---
+Original: APR 20, 9:40PM EDT0
+
+
+
+
+
+ZARAKEISHA
+
+Do psychopaths exhibit violent behavior?
+Bleached: APR 20, 9:40PM EDT0
+
+
+
+
+
+ZARAKEISHA
+
+Do X exhibit Y Z?
+Chars: 85 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 173 ---
+Original: APR 19, 11:55PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+They can.
+Bleached: APR 19, 11:55PM EDT0
+
+
+
+
+
+X-Y Z
+
+They can.
+Chars: 67 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 174 ---
+Original: But the vast majority of the time, they don't.
+Bleached: But the B C of the D, they don't.
+Chars: 46 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,'.
+
+--- Pattern 175 ---
+Original: Psychopathy is about phoniness.
+Bleached: A is about B.
+Chars: 31 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 176 ---
+Original: Psychopaths are manipulators and frauds.
+Bleached: X's are Y's and Z's.
+Chars: 40 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 177 ---
+Original: They can be violent.
+Bleached: They can be A.
+Chars: 20 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 178 ---
+Original: And if somebody is extremely
+violent, it is a veritable certainty that he is a psychopath of some kind or other.
+Bleached: And if X is Y Z, it is a W V that he is a U of some kind or other.
+Chars: 113 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 179 ---
+Original: But less than 10%
+are overtly violent.
+Bleached: But less than 10%
+are Z-ly Y.
+Chars: 39 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 180 ---
+Original: APR 20, 12:44AM EDT0
+
+JQUIAMBS
+
+Have you read a book called "The psychopath test" ?
+Bleached: APR 20, 12:44AM EDT0
+
+X
+
+Have you Y-ed a Z called "The A B" ?
+Chars: 87 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:""?
+
+--- Pattern 181 ---
+Original: If yes, what did you think of it?
+Bleached: If yes, what did you X of it?
+Chars: 33 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,?
+
+--- Pattern 182 ---
+Original: APR 17, 4:08AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+I looked it up just after getting your question.
+Bleached: APR 17, 4:08AM EDT0
+
+
+
+
+
+X-Y Z
+
+I X-ed it up just after X-ing your X.
+Chars: 105 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 183 ---
+Original: I haven't read it, but will do so.
+Bleached: I haven't X-ed it, but will Y so.
+Chars: 34 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ',.
+
+--- Pattern 184 ---
+Original: APR 20, 12:44AM EDT0
+
+SHWETA
+
+Do you specialize in psychopathy specifically?
+Bleached: APR 20, 12:44AM EDT0
+
+SHWETA
+
+Do you X in Y specifically?
+Chars: 80 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 185 ---
+Original: Why did you choose such a difficult field?
+Bleached: Why did you X such a Y Z?
+Chars: 42 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 186 ---
+Original: APR 16, 11:18PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKII do not specialize in it.
+Bleached: APR 16, 11:18PM EDT0
+
+
+
+
+
+A-B Cdo not X in it.
+Chars: 80 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 187 ---
+Original: Or, rather, it is only of many specialties.
+Bleached: Or, rather, it is only of many X's.
+Chars: 43 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 188 ---
+Original: But I chose it because it chose
+me.
+Bleached: But I X-ed it because it X-ed
+me.
+Chars: 36 | Tokens: 8 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 189 ---
+Original: As in, I had to deal with so many psychopathic people and situations that I had no choice but
+learn about psychopathy.
+Bleached: As in, I had to X with so many Y Z and W that I had no X but X about Y.
+Chars: 119 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 190 ---
+Original: And once I became aware of the concept of psychopathy, I found more
+and more applications for it, especially in connection with bureaucracies, specifically,
+educational bureaucracies.
+Bleached: And once I became A of the B of C, I found more
+and more D's for it, especially in E with F's, specifically,
+G F's.
+Chars: 185 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 191 ---
+Original: APR 17, 12:12AM EDT0
+
+HASEEB_ALI
+
+What are some of the ways a person can identify psychopaths in real life?
+Bleached: APR 17, 12:12AM EDT0
+
+HASEEB_ALI
+
+What are some of the X a Y can Z Ω's in W life?
+Chars: 111 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 192 ---
+Original: APR 16, 5:09PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+A psychopath is ultimately just somebody who has absolutely no integrity.
+Bleached: APR 16, 5:09PM EDT0
+
+
+
+
+
+X-Y Z
+
+A P is ultimately just somebody who has absolutely no Q.
+Chars: 130 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 193 ---
+Original: And somebody who
+has no integrity has a 'squishy' identity.
+Bleached: And X who
+has no Y has a 'Z' W.
+Chars: 60 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''.
+
+--- Pattern 194 ---
+Original: They'll be one way in one context, and a different way in
+a different context.
+Bleached: They'll be one X in one Y, and a different X in a different Y.
+Chars: 79 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ',.
+
+--- Pattern 195 ---
+Original: They say and do whatever it is that, at the moment, it is expedient for them to
+do.
+Bleached: They X and Y whatever it is that, at the moment, it is Z for them to Y.
+Chars: 84 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 196 ---
+Original: They are therefore glib and insubstantial.
+Bleached: They are therefore X and Y.
+Chars: 42 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 197 ---
+Original: If you can't pin someone down, they are a
+psychopath.
+Bleached: If you can't X someone down, they are a Y.
+Chars: 54 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ',.
+
+--- Pattern 198 ---
+Original: If they play games with you and string you along, they are a psychopath.
+Bleached: If they X Y's with you and Z you along, they are a W.
+Chars: 72 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 199 ---
+Original: Some
+psychopaths are predators.
+Bleached: Some
+X's are Y's.
+Chars: 32 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 200 ---
+Original: Most are just very weak people.
+Bleached: Most are just very A B.
+Chars: 31 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 201 ---
+Original: APR 16, 5:48PM EDT0
+
+PONCJO
+
+Do you think psychopathy is a brain malfunction and is it something that can be treated
+once identified?
+Bleached: APR 16, 5:48PM EDT0
+
+PONCJO
+
+Do you X Y is a Z W and is it X that can be X-ed
+once X-ed?
+Chars: 138 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 202 ---
+Original: APR 16, 10:12AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Psychopathy is a brain-malfunction only to the extent that any given mental illness is a brain-
+malfunction.
+Bleached: APR 16, 10:12AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+A is a B-C only to the extent that any given D E is a B-
+C.
+Chars: 167 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:---.
+
+--- Pattern 203 ---
+Original: A true example of a brain-malfunction would be a purely organic illness, such as
+Alzheimer's.
+Bleached: A W X of a Y-Z would be a V1 V2 V3, such as V4's.
+Chars: 94 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,'.
+
+--- Pattern 204 ---
+Original: Alzheimer's doesn't have to do with a person's psychological history; it is not a
+consequence of emotional upheavals.
+Bleached: P's doesn't have to do with a F's Q R; it is not a S of T U's.
+Chars: 118 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''';.
+
+--- Pattern 205 ---
+Original: But psychopath is, in each and every case, a consequence
+of extremely adverse circumstances.
+Bleached: But A is, in each and every case, a B
+of C D E.
+Chars: 93 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 206 ---
+Original: It is a defensive response to such circumstances.
+Bleached: It is a A B to such C.
+Chars: 49 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 207 ---
+Original: And even
+though, morally speaking, psychopathy is a 'malfunction', it is not clear that, psychologically
+speaking, it is a malfunction.
+Bleached: And even
+though, morally speaking, A is a 'B', it is not clear that, psychologically
+speaking, it is a B.
+Chars: 137 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,'',,,.
+
+--- Pattern 208 ---
+Original: From a survival standpoint, psychopathy is a functional response to
+situations that could not otherwise have been endured.
+Bleached: From a X standpoint, Y is a Z response to situations that could not otherwise have been W-ed.
+Chars: 123 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 209 ---
+Original: So my answer to your question is no.
+Bleached: So my X to your Y is no.
+Chars: 36 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 210 ---
+Original: While the brains of psychopaths are distinctive, they are not distinctive in a strictly pathological
+way, and there would be no way to get rid of psychopathy without getting rid of a lot of
+legitimate psychological coping mechanisms.
+Bleached: While the X's of Y's are Z, they are not Z in a strictly W way, and there would be no way to get rid of Y without getting rid of a lot of V U Q R's.
+Chars: 235 | Tokens: 38 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 211 ---
+Original: APR 16, 2:19PM EDT0TANYA_ENGELBRECHT
+
+Who are your favorite psychoanalyst and philosopher?
+Bleached: APR 16, 2:19PM EDT0TANYA_ENGELBRECHT
+
+Who are your X Y and Z?
+Chars: 92 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 212 ---
+Original: APR 15, 8:49AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Favorite philosopher: Schopenhauer.
+Bleached: APR 15, 8:49AM EDT0
+
+
+
+
+
+X-Y Z
+
+X Ω: A.
+Chars: 92 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-:.
+
+--- Pattern 213 ---
+Original: Favorite psychoanalyst: Freud.
+Bleached: Ω F: Q.
+Chars: 30 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 214 ---
+Original: APR 16, 2:19PM EDT0
+
+A_LAVF
+
+It says that you are also a philosopher.
+Bleached: APR 16, 2:19PM EDT0
+
+A_LAVF
+
+It X that you are also a Y.
+Chars: 73 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 215 ---
+Original: Has dealing with psychopaths influenced your
+views?
+Bleached: Has X-ing with Y's Z-ed your V's?
+Chars: 52 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 216 ---
+Original: APR 14, 6:00AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes.
+Bleached: APR 14, 6:00AM EDT0
+
+
+
+
+
+X-Y Z
+
+Yes.
+Chars: 61 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 217 ---
+Original: It has given me a much deeper understanding than I otherwise would have had of the
+structure of the human psyche and, in particular, of the role that a person's values have in the
+organization of his mind.
+Bleached: It has given me a much X-er Y than I otherwise would have had of the Z of the A B and, in particular, of the C that a D's E's have in the F of his G.
+Chars: 207 | Tokens: 38 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,'.
+
+--- Pattern 218 ---
+Original: Most people, and most philosophers, use the term 'values' to refer to
+moral values, and they use the term 'integrity' to refer to moral integrity.
+Bleached: Most A's, and most B's, C the D 'E's' to F to G E's, and they C the D 'H' to F to G H.
+Chars: 147 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,'',''.
+
+--- Pattern 219 ---
+Original: But moral values are
+actually values of a derivative kind, and moral integrity is derivative of a deeper kind of
+integrity.
+Bleached: But A B's are
+actually B's of a C kind, and A D is C of a E kind of
+D.
+Chars: 125 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 220 ---
+Original: A value, I now realize, is simply a precept compliance with which ensures
+psychological integrity, and moral integrity is a consequence, and not the essence, of such
+psychological integrity.
+Bleached: A X, I now Y, is simply a Z W with which X-s E F, and G F is a H, and not the I, of such E F.
+Chars: 192 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 221 ---
+Original: APR 15, 2:53PM EDT0
+
+
+
+
+
+BOJANA PEJIC
+
+Could there be psychopaths who are aware of their psychopathy, but still try to have
+healthy relationships with their family and friends?
+Bleached: APR 15, 2:53PM EDT0
+
+
+
+
+
+BOJANA PEJIC
+
+Could there be X's who are Y of their Z, but still try to have
+W relationships with their family and friends?
+Chars: 185 | Tokens: 28 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,?
+
+--- Pattern 222 ---
+Original: APR 14, 5:20AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Psychopaths know that they are psychopaths.
+Bleached: APR 14, 5:20AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+X know that they are X.
+Chars: 88 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 223 ---
+Original: But they do not try to have healthy relations with
+anyone, ever.
+Bleached: But they do not X to Y Z A's with anyone, ever.
+Chars: 65 | Tokens: 12 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 224 ---
+Original: They often try to convince others that they are trying to have healthy relationships
+with people.
+Bleached: They often try to X others that they are trying to have Y Z's with F's.
+Chars: 98 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 225 ---
+Original: And to this end they may put on quite a show.
+Bleached: And to this X they may Y on quite a Z.
+Chars: 45 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 226 ---
+Original: But a show is all it is.
+Bleached: But a X is all it is.
+Chars: 24 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 227 ---
+Original: The concept of
+a 'healthy relationship' is as incomprehensible to them as the concept of a square circle is to you.
+Bleached: The X of
+a 'Y Z' is as W to them as the X of a V U is to you.
+Chars: 116 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''.
+
+--- Pattern 228 ---
+Original: APR 17, 12:53AM EDT0
+
+MAGGIE
+
+What inspired you to become a Psychoanalyst?
+Bleached: APR 17, 12:53AM EDT0
+
+MAGGIE
+
+What X-ed you to Y a Z?
+Chars: 78 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 229 ---
+Original: APR 13, 11:16PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+When I was 18, I read Freud.
+Bleached: APR 13, 11:16PM EDT0
+
+
+
+
+
+A-B C
+
+When I was 18, I D E.
+Chars: 86 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,.
+
+--- Pattern 230 ---
+Original: And it explained so much.
+Bleached: And it X-ed so Y.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 231 ---
+Original: He was unbelievably accurate about so
+many things, especially OCD, from which I had suffered for so many years (and from which I
+would continue to suffer until I myself underwent analysis).
+Bleached: He was X-ly Y about so
+many Z's, especially A, from which I had W-ed for so many B's (and from which I
+would continue to W until I myself V-ed C).
+Chars: 191 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,().
+
+--- Pattern 232 ---
+Original: Also, I have always been extremely
+aware of other people's thougths and have always been able to read people in a flash.
+Bleached: Also, I have always been X
+Y of other Z's A and have always been B to C Z in a D.
+Chars: 121 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,'.
+
+--- Pattern 233 ---
+Original: Plus, a
+command of psychoanalytic thought--a real command, not a book-based command---is an
+enormous source of practical and intellectual power.
+Bleached: Plus, a
+X of Y Z--a W X, not a V-based X---is an
+A B of C and D E.
+Chars: 146 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--,----.
+
+--- Pattern 234 ---
+Original: Last edited @ May 4, 1:00PM EDT.
+Bleached: A B @ C 4, 1:00PM D.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 235 ---
+Original: APR 14, 12:20AM EDT0
+
+SV9ZIST
+
+You mentioned that new forms of psychopathy are coming into existence.
+Bleached: APR 14, 12:20AM EDT0
+
+SV9ZIST
+
+You X-ed that Y Z's of Ω are W into V.
+Chars: 105 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 236 ---
+Original: Do you have any
+idea how to stop that?
+Bleached: Do you have any
+X how to Y that?
+Chars: 39 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 237 ---
+Original: APR 13, 5:07AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes.
+Bleached: APR 13, 5:07AM EDT0
+
+
+
+
+
+X-Y Z
+
+Yes.
+Chars: 61 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 238 ---
+Original: The root of the problem is the educational system.
+Bleached: The X of the Y is the Z-al W.
+Chars: 50 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 239 ---
+Original: All that needs to be done is to make
+education less of a collective, bureuacratic affair and more of an individualized, non-institutional,
+non-bureaucratic affair.
+Bleached: All that needs to be X is to Y Z less of a W, X1 R and more of an X2, X3, X4 R.
+Chars: 165 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,-.
+
+--- Pattern 240 ---
+Original: APR 14, 12:21AM EDT0
+
+OLJKA91
+
+What is the difference between primary psychopathy,
+
+APR 13, 3:00AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Between primary psychopathy and what?
+Bleached: APR 14, 12:21AM EDT0
+
+OLJKA91
+
+What is the X between Y Z,
+
+APR 13, 3:00AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Between Y Z and what?
+Chars: 172 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,,:-?
+
+--- Pattern 241 ---
+Original: I am afraid I do not understand your question.
+Bleached: I am R I do not V your N.
+Chars: 46 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 242 ---
+Original: Please
+clarify.
+Bleached: Please
+X.
+Chars: 16 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 243 ---
+Original: APR 13, 4:49AM EDT0
+
+PIETRO
+
+Do you ever feel psychopathy and sociopathy is highly romanticized & glorified?
+Bleached: APR 13, 4:49AM EDT0
+
+PIETRO
+
+Do you ever feel X and Y is highly Z-ed & W-ed?
+Chars: 112 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 244 ---
+Original: If so, why
+do you think that's the case?
+Bleached: If so, why
+do you X that's the Y?
+Chars: 41 | Tokens: 9 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,'?
+
+--- Pattern 245 ---
+Original: APR 13, 12:45AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes I do.
+Bleached: APR 13, 12:45AM EDT0
+
+
+
+
+
+X-Y Z
+
+Yes I do.
+Chars: 67 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 246 ---
+Original: They are enormously glorified.
+Bleached: They are enormously X-ed.
+Chars: 30 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 247 ---
+Original: I think that people see psychopaths as people who are
+unusually able to act freely.
+Bleached: I think that X see Y as X who are unusually Z to W freely.
+Chars: 84 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 248 ---
+Original: They are represented as being people who chart their own path and
+play only by their own rules.
+Bleached: They are X-ed as being Y who Z their own W and V only by their own U's.
+Chars: 96 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 249 ---
+Original: But their behavior is curiously automatic and reflexive.
+Bleached: But their Ω is K-ly M and R.
+Chars: 56 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 250 ---
+Original: They
+actually lack the very autonomy that is attributed to them.
+Bleached: They
+actually X the very Y that is Z-ed to them.
+Chars: 65 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 251 ---
+Original: And they don't even have the freedom
+from morality that is usually credited to them.
+Bleached: And they don't even have the X
+from Y that is usually Z-ed to them.
+Chars: 85 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '.
+
+--- Pattern 252 ---
+Original: True--they are immoral and even amoral.
+Bleached: A--they are B and even C.
+Chars: 39 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 253 ---
+Original: But their
+lack of morality is not about having no conscience, but is rather about having a corrupt
+conscience, to which they have a very involved relationship and by which they are in fact
+hemmed in.
+Bleached: But their
+A of B is not about having no C, but is rather about having a D
+C, to which they have a very E F and by which they are in fact
+G in.
+Chars: 202 | Tokens: 36 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,,.
+
+--- Pattern 254 ---
+Original: The dictates issued by a psychopath's conscience are not moral dictates exactly, but
+he is quite as bound by them as a non-psychopath is bound by the dictates of his conscience.
+Bleached: The A B by a C's D are not E A exactly, but
+he is quite as F by them as a non-C is F by the A of his D.
+Chars: 178 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ',-.
+
+--- Pattern 255 ---
+Original: Psychopaths are seen as being existentialists.
+Bleached: A are B as being C.
+Chars: 46 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 256 ---
+Original: But they are not existentialists.
+Bleached: But they are not X-ists.
+Chars: 33 | Tokens: 5 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 257 ---
+Original: They are crippled
+and stunted, and their behavior is more reactive than deliberate.
+Bleached: They are X-ed and Y-ed, and their Z is more W than V.
+Chars: 84 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 258 ---
+Original: Last edited @ Apr 13, 1:36AM EDT.
+Bleached: Last X-ed @ Y 13, 1:36AM Z.
+Chars: 33 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 259 ---
+Original: APR 13, 1:29AM EDT0
+
+
+
+
+
+RUDI
+
+Is there a link between a genius and a psychopath?
+Bleached: APR 13, 1:29AM EDT0
+
+
+
+
+
+RUDI
+
+Is there a X between a Y and a Z?
+Chars: 89 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 260 ---
+Original: APR 13, 12:03AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Geniuses are not usually psychopaths and psychpaths are not usually geniuses.
+Bleached: APR 13, 12:03AM EDT0JOHN-MICHAEL KUCZYNSKI
+
+X are not usually Y and Y are not usually X.
+Chars: 123 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 261 ---
+Original: But I do think
+that being a genius can conduce to a certain psychopathy and also that being a psychopath can
+conduce to being a genius.
+Bleached: But I do think
+that being a X can Y to a certain Z and also that being a W can
+Y to being a X.
+Chars: 137 | Tokens: 26 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 262 ---
+Original: Let me explain.
+Bleached: Let me X.
+Chars: 15 | Tokens: 3 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 263 ---
+Original: Psychopaths completely lack morality, and this can
+disinhibit them when it comes to trying out new ideas and thus to cultivating their own
+intelligence.
+Bleached: X completely lack Y, and this can Z them when it comes to trying out new W's and thus to cultivating their own A.
+Chars: 154 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 264 ---
+Original: Hence the fact that psychopathy is sometimes conductive to genius.
+Bleached: Hence the A that B is sometimes C to D.
+Chars: 66 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 265 ---
+Original: The road from
+genius to psychopathy is not as straightforward.
+Bleached: The X from
+Y to Z is not as W.
+Chars: 63 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 266 ---
+Original: First of all, geniuses are made not born.
+Bleached: First of all, X are Y not Z.
+Chars: 41 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 267 ---
+Original: And
+becoming a genius tends to involve a misanthropy and contempt of others: if one is not a bit of a
+misanthrope.
+Bleached: And
+Y-ing a X Z's to Y a Y and Y of others: if one is not a bit of a
+X.
+Chars: 116 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :.
+
+--- Pattern 268 ---
+Original: one will stay too close to the pack and won't strike out one's own, at least not to the
+extent needed to be a genius.
+Bleached: X will Y too Z to the W and won't V out X's own, at least not to the extent Q-ed to be a R.
+Chars: 118 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '',.
+
+--- Pattern 269 ---
+Original: So a certain ill-will towards people is often inherent in the process
+of becoming a genius.
+Bleached: So a certain A-will towards B is often C in the D of E-ing a F.
+Chars: 92 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 270 ---
+Original: And to this extent, genius is conducive to psychopathy.
+Bleached: And to this X, Y is Z to W.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 271 ---
+Original: But I think that,
+on the whole, the connection between genius and psychopathy, though existent, is weak.
+Bleached: But I think that,
+on the whole, the A between B and C, though D, is E.
+Chars: 105 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,,.
+
+--- Pattern 272 ---
+Original: APR 13, 1:35AM EDT0
+
+RCCHAN
+
+secondary psychopathy and an antisocial personality disorder?
+Bleached: APR 13, 1:35AM EDT0
+
+RCCHAN
+
+A psychopathy and an B personality C?
+Chars: 94 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 273 ---
+Original: APR 12, 9:04AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Please clarify the question.
+Bleached: APR 12, 9:04AM EDT0
+
+
+
+
+
+X-Y Z
+
+Please V the X.
+Chars: 85 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 274 ---
+Original: Thank, Dr.
+Bleached: X, Dr.
+Chars: 10 | Tokens: 2 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 275 ---
+Original: K
+
+APR 12, 9:06PM EDT0
+
+
+
+
+
+HONEY BHATTACHARYA
+
+What do you suggest people should do if they think they might be involved with a
+psychopath?
+Bleached: K
+
+APR 12, 9:06PM EDT0
+
+
+
+
+
+A B
+
+What do you X people should do if they think they might be Y-ed with a
+Z?
+Chars: 151 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 276 ---
+Original: APR 12, 9:01AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKIEach relationship has to be understood on its own terms.
+Bleached: APR 12, 9:01AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKIEach X has to be Y-ed on its own Z's.
+Chars: 109 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 277 ---
+Original: The question isn't whether your partner
+is a 'psychopath' or not.
+Bleached: The X isn't whether your Y
+is a 'Z' or not.
+Chars: 66 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '''.
+
+--- Pattern 278 ---
+Original: The question is whether you like being with that person; the question is
+whether that relationship gives you more than it takes from you.
+Bleached: The A is whether you B being with that C; the A is whether that D E you more than it F from you.
+Chars: 138 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 279 ---
+Original: If you do like being with that
+person, and the relationship gives you strength and energy, then you know everything that you
+need to about that person's psychology.
+Bleached: If you do like being with that F, and the R gives you S and E, then you know everything that you need to about that F's P.
+Chars: 166 | Tokens: 28 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,'.
+
+--- Pattern 280 ---
+Original: And if you don't like being with that person, and if being
+with that person robs you of energy and strength, then, once again, you know everything there is
+to know about that person.
+Bleached: And if you don't like X-ing with that F, and if X-ing
+with that F Y's you of Z and W, then, once again, you know everything there is
+to know about that F.
+Chars: 184 | Tokens: 34 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ',,,,.
+
+--- Pattern 281 ---
+Original: As it happens, in the first circumstance, the person is not a
+psychopath, and the second circumstance, he is.
+Bleached: As it happens, in the first X, the Y is not a Z, and the second X, he is.
+Chars: 110 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 282 ---
+Original: But you should start by determining what the
+raw data of experience is--by evaluating on the relationship on its own terms--before you attempt
+to understand your situation in terms of (easily misapplied) psychiatric categories.
+Bleached: But you should A by B-ing what the
+C D of E is--by F-ing on the G on its own H--before you I
+to J your K in L of (M N-ed) O P.
+Chars: 229 | Tokens: 34 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ----().
+
+--- Pattern 283 ---
+Original: Last edited @ Apr 13, 4:50AM EDT.
+Bleached: Last X-ed @ Apr 13, 4:50AM EDT.
+Chars: 33 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 284 ---
+Original: APR 12, 9:06PM EDT0
+
+
+
+
+
+BRANKO NESIC
+
+How do you deal with psychopaths?
+Bleached: APR 12, 9:06PM EDT0
+
+
+
+
+
+BRANKO NESIC
+
+How do you X with Y's?
+Chars: 80 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 285 ---
+Original: What strategies do you use?
+Bleached: What X's do you Y?
+Chars: 27 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 286 ---
+Original: APR 9, 4:12AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Just avoid.
+Bleached: APR 9, 4:12AM EDT0
+
+
+
+
+
+X-Y Z
+
+Just X.
+Chars: 67 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 287 ---
+Original: There is nothing to be gained from dealing with them.
+Bleached: There is X to be Y-ed from Z-ing with them.
+Chars: 53 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 288 ---
+Original: They are slimy; they string you
+along;  they give little or nothing; and they take a lot, usually in the form of time and money and
+general sense of wellness.
+Bleached: They are A; they B you
+along; they give C or nothing; and they take a lot, usually in the form of D and E and
+general sense of F.
+Chars: 160 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;;;,.
+
+--- Pattern 289 ---
+Original: MAY 4, 1:02PM EDT0
+
+
+
+
+
+AMY DAWN JUDE THADDEUS
+
+Can psychopathy be modified into a positive personality trait?
+Bleached: MAY 4, 1:02PM EDT0
+
+
+
+
+
+AMY DAWN JUDE THADDEUS
+
+Can X be Y-ed into a Z W Y?
+Chars: 118 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 290 ---
+Original: APR 8, 4:52PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKIThere are some career-paths and activities within which psychopathy can be an asset.
+Bleached: APR 8, 4:52PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKIThere are some X-Y's and Z's within which A can be an B.
+Chars: 136 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:--.
+
+--- Pattern 291 ---
+Original: The
+military actively conscripted psychopaths because they were such good killers.
+Bleached: The X actively Y-ed Z's because they were such good A's.
+Chars: 83 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 292 ---
+Original: (The term
+"natural born killer" is a military term; it was invented to refer to these psychopath-conscripts.) A
+lot of salesmen and marketing people are psychopaths, and employers actively seek such people
+when attempting to fill marketing and sales positions.
+Bleached: (The A
+"B C D" is a E A; it was F to G to these H-I.) A
+J of K and L M are N, and O P Q such M
+when R to S L and T U.
+Chars: 263 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ("";-.),.
+
+--- Pattern 293 ---
+Original: So in that sense psychopathy can be a
+positive trait.
+Bleached: So in that X Y can be a Z W.
+Chars: 54 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 294 ---
+Original: Can it be a postive character trait in other respects?
+Bleached: Can it be a X character Y in other Z's?
+Chars: 54 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 295 ---
+Original: Yes--psychopaths are not
+hobbled by self-doubt and they can therefore be persistent in a way in which self-doubting and
+therefore neurotic people cannot.
+Bleached: Yes--A's are not
+B-ed by self-C and they can therefore be D in a way in which self-C-ing and
+therefore E people cannot.
+Chars: 155 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ----.
+
+--- Pattern 296 ---
+Original: APR 9, 3:36AM EDT0
+
+
+
+
+
+PATRICIA MAGNO
+
+How long have psychopaths been around?
+Bleached: APR 9, 3:36AM EDT0
+
+
+
+
+
+X Y
+
+How long have Z's been around?
+Chars: 86 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 297 ---
+Original: Were there psychopaths in ancient times?
+Bleached: Were there X's in Y Z's?
+Chars: 40 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 298 ---
+Original: APR 8, 2:09PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes, without any doubt.
+Bleached: APR 8, 2:09PM EDT0
+
+
+
+
+
+X-Y Z
+
+Yes, without any P.
+Chars: 79 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,.
+
+--- Pattern 299 ---
+Original: Psychopathy came into existence as soon as it became the biological
+norm for people to have conscience.
+Bleached: A came into B as soon as it became the C D for E to have F.
+Chars: 104 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 300 ---
+Original: When a conscience becomes corrupted, the result is a
+psychopath.
+Bleached: When a X becomes Y-ed, the Z is a W.
+Chars: 65 | Tokens: 10 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 301 ---
+Original: So as long as there have been consciences to corrupt, there have been psychopaths.
+Bleached: So as long as there have been X's to Y, there have been Z's.
+Chars: 82 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 302 ---
+Original: And even some animals have the rudiments of conscience, including, of course, our immediate
+evolutionary precursors.
+Bleached: And even some A's have the B's of C, including, of course, our D E F's.
+Chars: 117 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 303 ---
+Original: APR 8, 3:45PM EDT0
+
+KNIGHTRIDER
+
+Are psychopaths born that way or is it a result of environment and upbringing?
+Bleached: APR 8, 3:45PM EDT0
+
+KNIGHTRIDER
+
+Are X's Y that Z or is it a W of V and U?
+Chars: 115 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 304 ---
+Original: APR 8, 11:59AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+There is a genetic component.
+Bleached: APR 8, 11:59AM EDT0
+
+
+
+
+
+A-B C
+
+There is a X Y.
+Chars: 86 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 305 ---
+Original: But when I look at the full-blow psychopaths that I have known or
+studied, they underwent very serious traumas.
+Bleached: But when I Y at the Z-W A's that I have B or C-ed, they D-ed very E F's.
+Chars: 112 | Tokens: 19 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 306 ---
+Original: The ones who were psychopaths beginning in
+youth, were deprived of love as children.
+Bleached: The ones who were X-s beginning in
+youth, were Y-ed of Z as children.
+Chars: 85 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 307 ---
+Original: The ones who psychopathized as adults were deprived
+of love as adults.
+Bleached: The ones who X-ed as Y's were Z-ed of A as Y's.
+Chars: 71 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 308 ---
+Original: APR 8, 3:47PM EDT0
+
+MIRZAWhat new forms of psychopathy are being created today?
+Bleached: APR 8, 3:47PM EDT0
+
+MIRZAWhat new X's of Y are being Z-ed today?
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 309 ---
+Original: APR 8, 7:39AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+The world is becoming very bureaucratic and institutionalized.
+Bleached: APR 8, 7:39AM EDT0
+
+
+
+
+
+A-B C
+
+The X is Y-ing very Z and W-ed.
+Chars: 118 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 310 ---
+Original: Bureuacrats are people who have
+no consciences of their own.
+Bleached: X are Y who have
+no Z of their own.
+Chars: 61 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 311 ---
+Original: Their values have been drained from them.
+Bleached: Their A's have been B-ed from them.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 312 ---
+Original: So the bureaucrat is a
+kind of psychopath---a particularly impotent kind of psychopath, but a psychopath no less.
+Bleached: So the X is a
+kind of Y---a particularly Z kind of Y, but a Y no less.
+Chars: 114 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---,.
+
+--- Pattern 313 ---
+Original: And
+this form of ps ychopathy is spreading rapidly and so far as I can tell is new.
+Bleached: And
+this X of Y is Z-ing W and so far as I can tell is new.
+Chars: 84 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 314 ---
+Original: APR 8, 3:56PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Added later: 
+
+Are New Kinds of Psychopathy Coming into Existence?
+Bleached: APR 8, 3:56PM EDT0
+
+
+
+
+
+X-Y Z
+
+Added later: 
+
+Are New A's of B Coming into Existence?
+Chars: 124 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-:?
+
+--- Pattern 315 ---
+Original: I have said that new forms of psychopathy are spreading.
+Bleached: I have Z-ed that A X-s of Y are Z-ing.
+Chars: 56 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 316 ---
+Original: I no longer believe this.
+Bleached: I no longer X this.
+Chars: 25 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 317 ---
+Original: What is
+happening, so I believe, is that once relatively rare forms of psychopathy are now become the
+norm—not just among psychopaths, but among the general population.
+Bleached: What is
+X-ing, so I Y, is that once Z rare W's of Ψ are now V the
+Ω—not just among Ψ's, but among the Q R.
+Chars: 170 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,—,.
+
+--- Pattern 318 ---
+Original: Here, more precisely, is
+what I believe.
+Bleached: Here, more V, is
+what I W.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 319 ---
+Original: In the last few decades, there has been a massive spike in the prevalence of
+bureaucrats.
+Bleached: In the last few X's, there has been a Y Z in the W of V's.
+Chars: 90 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 320 ---
+Original: By a ‘bureaucrat’ I do not mean a civil servant.
+Bleached: By a 'X' I do not Y a Z W.
+Chars: 48 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 321 ---
+Original: I mean somebody whose values and
+identity have been drained away and replaced with phony  institutional values and a phony
+institutional identity.
+Bleached: I X1 X2 whose X3 and
+X4 have been X5 away and X6 with X7 X8 X3 and a X7
+X8 X4.
+Chars: 148 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 322 ---
+Original: The bureaucrat is not usually regarded as a kind of psychopath; but that is
+in fact what he is.
+Bleached: The X is not usually Y-ed as a kind of Z; but that is in fact what he is.
+Chars: 96 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;.
+
+--- Pattern 323 ---
+Original: The difference between bureaucrats and textbook psychopaths is that the text-
+books psychopaths never had the character architecture of a non-psychopath, and they therefore
+have a kind of amorphousness and slipperiness of character, whereas the bureaucrats did once
+have the character architecture of actual people and, despite no longer have such an architecture,
+they still have the formal or skeletal properties thereof.
+Bleached: The X between Y's and Z A's is that the Z A's never had the B C of a non-A, and they therefore have a D of E and F of B, whereas the Y's did once have the B C of G H and, despite no longer have such an C, they still have the I or J K thereof.
+Chars: 427 | Tokens: 62 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,,,,.
+
+--- Pattern 324 ---
+Original: This being bureaucrats are proverbially
+brittle and rigid.
+Bleached: This being X are Y-ly Z and Ω.
+Chars: 59 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 325 ---
+Original: The textbook psychopath was hollowed out early in life, and outside of an
+institutional context; so while still young, he had to learn how to free-wheel it.
+Bleached: The X Y was Z-ed out W in V, and outside of an U T; so while still S, he had to R how to Q-P it.
+Chars: 157 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,-.
+
+--- Pattern 326 ---
+Original: The text-book
+psychopath psychopathized in the absence of well-defined social norms; so he had to learn how
+to operate in the absence of such norms and therefore has a certain elasticity of character.
+Bleached: The A-book
+B B-ed in the absence of well-defined C D; so he had to learn how
+to E in the absence of such D and therefore has a certain F of G.
+Chars: 202 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --;.
+
+--- Pattern 327 ---
+Original: His
+psychopathy is about adapting to fluid circumstances.
+Bleached: His
+A is about B-ing to C D's.
+Chars: 58 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 328 ---
+Original: By contrast, the bureaucrat’s psychopathy
+is about adapting to rigid circumstance.
+Bleached: By contrast, the X's Y
+is about Z-ing to E circumstance.
+Chars: 83 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 329 ---
+Original: The bureaucrat psychopathized late in life, and he did so
+in order to continue to be the beneficiary of some institution or institution-like system of rules.
+Bleached: The A X-ed late in B, and he did so
+in order to continue to be the C of some D or D-like E of F's.
+Chars: 158 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 330 ---
+Original: So in order to survive he had to subordinate himself to those rules and thus become brittle.
+Bleached: So in order to A he had to B himself to those C and thus become D.
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 331 ---
+Original: But
+the bureaucrat’s psychopathy merely represents a different contextualization of the same
+amorality and emptiness characteristic of the textbook psychopath, and neither is any less a bona
+fide psychopath than the other.
+Bleached: But
+the A's B merely C's a different D of the same
+E and F characteristic of the G H, and neither is any less a bona
+fide H than the other.
+Chars: 225 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 332 ---
+Original: APR 9, 3:05AM EDT0MIRZA
+
+Does antipsychotic medication help in managing the symptoms in psychopaths?
+Bleached: APR 9, 3:05AM EDT0MIRZA
+
+Does A B help in C-ing the D in E?
+Chars: 102 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 333 ---
+Original: APR 8, 7:37AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Short answer--no.
+Bleached: APR 8, 7:37AM EDT0
+
+
+
+
+
+A-B C
+
+Short X--no.
+Chars: 73 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:---.
+
+--- Pattern 334 ---
+Original: Psychosis and psychopathy are completely unrelated.
+Bleached: A and B are completely C.
+Chars: 51 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 335 ---
+Original: A person can be utterly
+psychotic and have strong values and an intact conscience.
+Bleached: A F can be J
+K and have L M's and an N O.
+Chars: 83 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 336 ---
+Original: Long answer--if someone is a
+psychotic who also has psychopathic tendencies, then, unless medicated, he may be extremely
+violent.
+Bleached: Q R--if someone is a
+S who also has T U's, then, unless V-ed, he may be extremely
+W.
+Chars: 131 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,,,.
+
+--- Pattern 337 ---
+Original: And medication helps prevent such people from committing violent crimes.
+Bleached: And X Y's Z such T from V-ing E W's.
+Chars: 72 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 338 ---
+Original: But most
+psychopaths are non-psychotic, and medication does nothing to make such people less
+psychopathic.
+Bleached: But most
+A's are non-B, and C does nothing to make such people less
+D.
+Chars: 108 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -,.
+
+--- Pattern 339 ---
+Original: APR 8, 3:50PM EDT0
+
+
+
+
+
+JAN JAN
+
+Is it possible to be a psychopath but still lead a stable and productive life?
+Bleached: APR 8, 3:50PM EDT0
+
+
+
+
+
+JAN JAN
+
+Is it X to be a Y but still Z a W and V life?
+Chars: 119 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 340 ---
+Original: APR 7, 10:27PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes.
+Bleached: APR 7, 10:27PM EDT0
+
+
+
+
+
+X-Y Z
+
+Yes.
+Chars: 61 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 341 ---
+Original: The conventional psychiatric wisdom is that psychopaths are categorically dysfunctional.
+Bleached: The A B C is that D's are E F.
+Chars: 88 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 342 ---
+Original: But this isn't true.
+Bleached: But this isn't X.
+Chars: 20 | Tokens: 4 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: '.
+
+--- Pattern 343 ---
+Original: A person who is psychopathic tends to be dysfunctional.
+Bleached: A F who is P tends to be D.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 344 ---
+Original: But if such a person
+chooses the right path, his psychopathy can actually propel him forward along that path.
+Bleached: But if such a X
+Y's the Z A, his B can actually C him D along that A.
+Chars: 110 | Tokens: 19 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 345 ---
+Original: There
+are psychopaths in the military (so-called 'natural born killers') who are legitimately good at what
+they do.
+Bleached: There
+are A in the B (so-called 'C D E') who are F G at what
+they do.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (-'').
+
+--- Pattern 346 ---
+Original: There are psychopaths in finance (e.g.
+Bleached: There are X's in Y (e.g.
+Chars: 38 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (..
+
+--- Pattern 347 ---
+Original: Martin Schkreli), entertainment (e.g.
+Bleached: R S), O (e.g.
+Chars: 37 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ),(..
+
+--- Pattern 348 ---
+Original: Jimmy
+Saville), and even the clergy/religion (e.g.
+Bleached: """
+X
+Y), and even the Z/W (e.g.
+"""
+Chars: 51 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ),(..
+
+--- Pattern 349 ---
+Original: Jimmy Swaggart) who are good at what they do and
+who thrive doing it.
+Bleached: A B) who are C at what they do and
+who D doing it.
+Chars: 70 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ).
+
+--- Pattern 350 ---
+Original: Any given form of psychopathology tends to make those who have it
+dysfunctional.
+Bleached: Any given X of Y tends to Z those who have it W.
+Chars: 81 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 351 ---
+Original: But any given psychopathology can always propel those who have it forward,
+provided that they choose the right path.
+Bleached: But any given A can always B those who have it forward,
+provided that they choose the right path.
+Chars: 117 | Tokens: 19 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 352 ---
+Original: APR 8, 2:14AM EDT0
+
+JANNATUL
+
+Can a psychopath be both a fraud and a criminal?
+Bleached: APR 8, 2:14AM EDT0
+
+JANNATUL
+
+Can a X be both a Y and a Z?
+Chars: 82 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 353 ---
+Original: APR 7, 5:17PM EDT0JOHN-MICHAEL KUCZYNSKI
+
+Absolutely.
+Bleached: APR 7, 5:17PM EDT0A-B C
+
+X.
+Chars: 55 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 354 ---
+Original: That combination is almost the norm.
+Bleached: That X is almost the Y.
+Chars: 36 | Tokens: 6 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 355 ---
+Original: First of all, a psychopath is always a fraud, at
+least in some contexts.
+Bleached: First of all, a X is always a Y, at least in some Z's.
+Chars: 73 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 356 ---
+Original: And a psychopath is often a criminal.
+Bleached: And a X is often a Y.
+Chars: 37 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 357 ---
+Original: Therefore, a pschopath is often both
+a fraud and a criminal.
+Bleached: Therefore, a X is often both a Y and a Z.
+Chars: 61 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 358 ---
+Original: As for specific examples: John Waynce Gacy (the serial killer)--he had to
+be an arch-fraud when luring his victims into safety.
+Bleached: As for A B's: C D E (the F G)--he had to be an H-I when J-ing his K's into L.
+Chars: 128 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :()---.
+
+--- Pattern 359 ---
+Original: He also posed as a caring person (as Pogo
+the Clown, who, ominously, entertained children; and also as a socially conscience political
+activist).
+Bleached: He also A-ed as a B-ing C (as D
+the E, who, F-ly, G-ed H; and also as a I-ly J K
+L).
+Chars: 147 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (,,,;).
+
+--- Pattern 360 ---
+Original: Ted Bundy--a serial killer who, like Gacy, had to be a fraud to ensnare his victims and
+who, like Gacy, posed as a socially conscious citizen, working at a hotline and also, like Gacy,
+working as a political activist.
+Bleached: T B--a Q R who, like G, had to be a S to T his U's and
+who, like G, V-ed as a W X Y, Z-ing at a A and also, like G,
+Z-ing as a B C.
+Chars: 219 | Tokens: 39 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,,,,,,,.
+
+--- Pattern 361 ---
+Original: Jim Jones--who posed as crusader for social justice and then
+killed 700 or so of the black people with whose rights he was supposedly concerned .
+Bleached: A B--who C-ed as D for E F and then
+G-ed H or so of the I J with whose K he was L M .
+Chars: 146 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --.
+
+--- Pattern 362 ---
+Original: Notice
+that, in each of these three cases, the false persona in question served not only the function of
+deflecting attention away from the psychopath's actual identity, but also of making it possible for
+the psychopath in question to victimize people on a larger scale, and in even more sinister way,
+than he could otherwise have done so.
+Bleached: Notice
+that, in each of these three A's, the B C in D E-ed not only the F of
+G-ing H away from the I's J K, but also of L-ing it M for
+the I in D to N O on a P Q, and in even more R S,
+than he could otherwise have T so.
+Chars: 343 | Tokens: 58 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,',,,.
+
+--- Pattern 363 ---
+Original: Last edited @ Apr 7, 7:45PM EDT.
+Bleached: Last X-ed @ Apr 7, 7:45PM EDT.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 364 ---
+Original: APR 7, 7:31PM EDT0
+
+@KANIKA92
+
+What are some of the challenges of dealing with psychopaths?
+Bleached: APR 7, 7:31PM EDT0
+
+@KANIKA92
+
+What are some of the X's of Y-ing with Z's?
+Chars: 95 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 365 ---
+Original: APR 7, 6:13AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+I'm quick to spot psychopaths.
+Bleached: APR 7, 6:13AM EDT0
+
+
+
+
+
+X-Y Z
+
+I'm A to B C's.
+Chars: 86 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-'.
+
+--- Pattern 366 ---
+Original: For me, the problem isn't figuring out who is and isn't a
+psycopath.
+Bleached: For me, the X isn't Y-ing out who is and isn't a Z.
+Chars: 69 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,''.
+
+--- Pattern 367 ---
+Original: It is how to extract as much information as I can from those whom I know to be
+psychopaths.
+Bleached: It is how to X as much Y as I can from those whom I Z to be W's.
+Chars: 92 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 368 ---
+Original: And there is information to be extracted.
+Bleached: And there is X to be Y-ed.
+Chars: 41 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 369 ---
+Original: Psychopathy is ultimately about
+defensiveness.
+Bleached: A is B about
+C.
+Chars: 47 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 370 ---
+Original: It is a kind of systemic defensiveness.
+Bleached: It is a X of Y Z.
+Chars: 39 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 371 ---
+Original: Psychopaths are slippery and evasive; they
+are deceptive and manipulative; and all of these traits are about evasiveness.
+Bleached: A's are B and C; they
+are D and E; and all of these F's are about C-ness.
+Chars: 122 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;;.
+
+--- Pattern 372 ---
+Original: And evasiveness is
+about fear.
+Bleached: And X is
+about Y.
+Chars: 31 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 373 ---
+Original: And getting a psychopath to disclose what he knows is about engaging him in a way
+that doesn't activate his trip-wires.
+Bleached: And X-ing a Y to Z what he X's is about X-ing him in a W that doesn't X his V-W's.
+Chars: 120 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '-.
+
+--- Pattern 374 ---
+Original: And this can be done.
+Bleached: And this can be X-ed.
+Chars: 21 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 375 ---
+Original: And I have done it.
+Bleached: And I have X-ed it.
+Chars: 19 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 376 ---
+Original: As for dealing with
+them in a therapeutic way--as for treating them, in other words--it cannot be done.
+Bleached: As for X-ing with
+them in a Y way--as for Z-ing them, in other words--it cannot be X-ed.
+Chars: 104 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: --,--.
+
+--- Pattern 377 ---
+Original: What can be
+done is to give them specific tips or insights; but these they tend to use for evil, not for good.
+Bleached: What can be
+done is to give them specific A or B; but these they tend to use for C, not for good.
+Chars: 111 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;,.
+
+--- Pattern 378 ---
+Original: APR 7, 7:28PM EDT0
+
+LEIRB
+
+What are some of the unreasonable views that are politically mandated?
+Bleached: APR 7, 7:28PM EDT0
+
+LEIRB
+
+What are some of the A B that are C D?
+Chars: 101 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 379 ---
+Original: APR 6, 4:10PM EDT0JOHN-MICHAEL KUCZYNSKI
+
+The primary examples of such truths have to do with institutional titles and with artificial
+ranking systems.
+Bleached: APR 6, 4:10PM EDT0JOHN-MICHAEL KUCZYNSKI
+
+The A B's of such C's have to do with D E's and with F G H's.
+Chars: 154 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 380 ---
+Original: We are told that people who are 'psychiatrists' or 'licensed therapists' are
+knowledgeable about human nature.
+Bleached: We are told that X who are 'Y' or 'Z W' are X about X X.
+Chars: 111 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''''.
+
+--- Pattern 381 ---
+Original: And we are expected to defer to their views.
+Bleached: And we are X-ed to Y to their Z's.
+Chars: 44 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 382 ---
+Original: But their views
+oftentimes are not those of people who are knowledgeable or intelligent aobut people.
+Bleached: But their X oftentimes are not those of Y who are Z or W aobut Y.
+Chars: 102 | Tokens: 16 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 383 ---
+Original: And
+people who are supposedly experts on human nature are often not only not experts on it, but are
+singularly obtuse about it.
+Bleached: And
+X who are supposedly Y on Z A are often not only not Y on it, but are
+singularly B about it.
+Chars: 129 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 384 ---
+Original: We are told that peole who have certain kinds of degrees are experts
+on economics or anthropology or even art or music, and we are expected to defer to such people,
+even in the absence of any actual evidence of ability.
+Bleached: We are told that X who have certain Y of Z are W on A or B or even C or D, and we are expected to E to such X, even in the F of any actual G of H.
+Chars: 221 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 385 ---
+Original: In today's world, there are so many
+bureaucratic horizons that one must cross, so many fake titles and credentials that one has to get
+to be 'official', that people's views about others are less hewed to realities than they are to be
+bureaucratic pseudo-realities--to what are basically institutional lies and fairy tales.
+Bleached: In A's B, there are so many
+C D that one must E, so many F G and H that one has to I
+to be 'J', that K's L about others are less M-ed to N than they are to be
+C O-N--to what are basically P Q and R S.
+Chars: 325 | Tokens: 52 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ',,'','---.
+
+--- Pattern 386 ---
+Original: And when
+one replaces respect for the truth with respect for institutional pseudo-truth, or with any other
+kind of non-truth, one becomes a psychopath.
+Bleached: And when
+one X's Y for the Z with Y for W A-Z, or with any other
+B of C-Z, one D's a E.
+Chars: 153 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-,.
+
+--- Pattern 387 ---
+Original: APR 6, 4:54PM EDT0
+
+KSENIA25
+
+Are psychopaths more common in certain parts of the world compared to others?
+Bleached: APR 6, 4:54PM EDT0
+
+KSENIA25
+
+Are X's more Y in Z W's of the V compared to others?
+Chars: 111 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 388 ---
+Original: APR 6, 7:24AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes, psychopaths are dramatically less common in China and Japan than they are in the USA.
+Bleached: APR 6, 7:24AM EDT0
+
+
+
+
+
+A-B C
+
+Yes, X's are Y-ly less Z in W and V than they are in the USA.
+Chars: 146 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,.
+
+--- Pattern 389 ---
+Original: In
+countries where traditional values predominate, psychopathy is relatively uncommon; and in
+countries where it is permissible to pick and choose among values, and therefore to decide not to
+have at all, it is dramatically more common.
+Bleached: In
+countries where A values B, C is relatively D; and in
+countries where it is E to F and G among values, and therefore to H not to
+I at all, it is J more K.
+Chars: 239 | Tokens: 37 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,;,,.
+
+--- Pattern 390 ---
+Original: Also, psychopathy is very highly associated with the
+breakdown of the family unit: where families are not intact, there is almost always some
+psychopathy.
+Bleached: Also, A is very highly B-ed with the
+C of the D E: where D's are not F, there is almost always some
+A.
+Chars: 156 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,.
+
+--- Pattern 391 ---
+Original: This is because one's conscience has its roots in one's feelings towards family
+members, especially parents.
+Bleached: This is because one's X has its Y in one's Z towards A B, especially C.
+Chars: 109 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '',.
+
+--- Pattern 392 ---
+Original: And in the United States, with its glorification of the 'single mom'
+and its low regard for the family unit, psychopathy is therefore rampant.
+Bleached: And in the A B, with its C of the 'D E'
+and its F G for the H I, J is therefore K.
+Chars: 143 | Tokens: 24 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,'',.
+
+--- Pattern 393 ---
+Original: Finally, the United
+States has always strongly encourage entrepreneurialism and individualism, especially in regards
+to economic matters.
+Bleached: Finally, the A B has always strongly C D and E, especially in F to G H.
+Chars: 139 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 394 ---
+Original: And in and of itself, this is extremel good.
+Bleached: And in and of itself, this is X Y.
+Chars: 44 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 395 ---
+Original: But where there is
+entrepreneurialism, there is also, almost by necessity, the pseudo-entrepreneurialism of the
+conman, the grifter, the psychopath.
+Bleached: But where there is
+A, there is also, almost by necessity, the B-A of the
+C, the D, the E.
+Chars: 150 | Tokens: 20 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,,-,,.
+
+--- Pattern 396 ---
+Original: Last edited @ Apr 6, 1:39PM EDT.
+Bleached: Last X-ed @ Apr 6, 1:39PM EDT.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 397 ---
+Original: APR 6, 1:35PM EDT0
+
+TRACY_SHISH
+
+What other personality traits go hand in hand with psychopathy?APR 6, 6:58AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Psychopaths tend to be glib---they talk fast and loose, often having a tendency to 'jabber.' They
+are evasive, very hard to pin down, oftentimes slick and slippery.
+Bleached: APR 6, 1:35PM EDT0
+
+TRACY_SHISH
+
+What other A B C go D in E with F?APR 6, 6:58AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+G H to be I---they J K and L, often having a M to 'N.' They
+are O, very P to Q R, oftentimes S and T.
+Chars: 321 | Tokens: 47 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?,:----,'.',,.
+
+--- Pattern 398 ---
+Original: They interact with the world
+through carefully constructed personae, sometimes appearing jovial and light-hearted, sometimes
+appearing duly grave and serious, sometimes appearing to be concerned with other people's
+welfare.
+Bleached: They A with the B through C D E, sometimes F G and H, sometimes F I J and K, sometimes F to be L with other M's N.
+Chars: 226 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,,'.
+
+--- Pattern 399 ---
+Original: But their personae are easily penetrated, especially by people who don't have anything
+to gain by believing in them.
+Bleached: But their X are easily Y-ed, especially by Z who don't have anything to W by V-ing in them.
+Chars: 117 | Tokens: 19 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,'.
+
+--- Pattern 400 ---
+Original: With the psychopaths that I have personally known, I noticed that,
+despite an appearance of brilliance, their lives ended up being very mediocre.
+Bleached: With the A's that I have personally B-ed, I C-ed that,
+despite an D of E, their F's G-ed up being very H.
+Chars: 146 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 401 ---
+Original: There seemed to be
+a lot of incoherent efforts, each of which seemed brilliant when considered on its own, but
+which, taken collectively, did not add up to anything.
+Bleached: There seemed to be
+a lot of A efforts, each of which seemed B when C-ed on its own, but
+which, taken D, did not add up to anything.
+Chars: 167 | Tokens: 29 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 402 ---
+Original: But mainly they are slick and shallow.
+Bleached: But mainly they are X and Y.
+Chars: 38 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 403 ---
+Original: They often play 'shell games', 'bait and switch' games, sometimes literally, as with those people
+who play Three Card Monty on the street corner, and more often figuratively, as with the person
+who always has a number of different stories going.
+Bleached: They often X 'Y Z', 'W and V' Z, sometimes literally, as with those U who X Three Card Monty on the T S, and more often figuratively, as with the U who always has a R of different Q going.
+Chars: 247 | Tokens: 41 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '','',,,,.
+
+--- Pattern 404 ---
+Original: Psychopaths will say anything; their stories
+will vary from person to person; when they speak, it is not to speak the truth, but is rather for
+reasons of convenience and momentary gain.
+Bleached: A's will B anything; their C's
+will D from E to E; when they B, it is not to B the F, but is rather for
+G's of H and I J.
+Chars: 187 | Tokens: 32 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ;;,,.
+
+--- Pattern 405 ---
+Original: The academic world, particularly some of the softer
+branches of it, are loaded with psychopaths.
+Bleached: The A B, particularly some of the C-er D's of it, are E-ed with F's.
+Chars: 97 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 406 ---
+Original: APR 6, 1:48PM EDT0
+
+LUISARGUELLES
+
+Who are some of the famous psychopaths in history?
+Bleached: APR 6, 1:48PM EDT0
+
+LUISARGUELLES
+
+Who are some of the X Y's in Z?
+Chars: 89 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 407 ---
+Original: APR 6, 5:18AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Mao Tse Tung was a psychopath.
+Bleached: APR 6, 5:18AM EDT0
+
+
+
+
+
+A-B C
+
+D E F was a G.
+Chars: 86 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 408 ---
+Original: Jim Jones, of the Jonestown Massacre, was a psychopath.
+Bleached: X Y, of the Z W, was a Ω.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 409 ---
+Original: I
+believe (though this is not clear) that Bill Clinton was a psychopath.
+Bleached: I
+X (though this is not Y) that Z A was a B.
+Chars: 73 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ().
+
+--- Pattern 410 ---
+Original: The Hippie Movement was
+(and is) replete with psychopaths, e.g.
+Bleached: The Ω Movement was
+(and is) X with Y, e.g.
+Chars: 64 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (),..
+
+--- Pattern 411 ---
+Original: Ira Einhorn, who murdered his girlfriend (also a
+psychopath) and kept her mummified corpse in his closet for two years.
+Bleached: A B, who C-ed his D (also a
+E) and F-ed her G-ed H in his I for two J.
+Chars: 120 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,().
+
+--- Pattern 412 ---
+Original: Many 'avante guarde'
+intelletuals, such as Foucault, are, I believe, psychopaths.
+Bleached: Many 'A B'
+C, such as D, are, I believe, E.
+Chars: 82 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: '',,,,.
+
+--- Pattern 413 ---
+Original: APR 6, 1:42PM EDT0
+
+
+
+
+
+AMAN MAMODIA
+
+What should a psychopath do to get help?APR 6, 2:00AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+They have no desire to change, and they cannot change.
+Bleached: APR 6, 1:42PM EDT0
+
+
+
+
+
+A Z
+
+What should a P do to get H?APR 6, 2:00AM EDT0
+
+
+
+
+
+J-M K
+
+They have no D to C, and they cannot C.
+Chars: 196 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?,:-,.
+
+--- Pattern 414 ---
+Original: They may pretend to change.
+Bleached: They may X to Y.
+Chars: 27 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 415 ---
+Original: But if they
+go to a therapist, it is always for some underhanded reason.
+Bleached: But if they
+go to a X, it is always for some Y Z.
+Chars: 73 | Tokens: 14 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 416 ---
+Original: Sometimes they want to learn about
+psychology from the therapist.
+Bleached: Sometimes they want to X about Y from the Z.
+Chars: 66 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 417 ---
+Original: Sometimes they simply enjoy toying with the therapist.
+Bleached: Sometimes they simply X Y-ing with the Z.
+Chars: 54 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 418 ---
+Original: Sometimes it is  comply with a court-order.
+Bleached: Sometimes it is X with a Y-Z.
+Chars: 43 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 419 ---
+Original: But it is never for a legitimate reason.
+Bleached: But it is never for a X reason.
+Chars: 40 | Tokens: 8 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 420 ---
+Original: Psychopathy
+is not an affliction so much as it is a kind of psychological struture.
+Bleached: A
+is not an B so much as it is a kind of C D.
+Chars: 84 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 421 ---
+Original: And the elimination of
+psychopathology is possible only when it is internal to the structure of the patient's personality;
+that structure cannot itself undergo change.
+Bleached: And the X of
+Y is Z only when it is internal to the W of the patient's V;
+that W cannot itself undergo U.
+Chars: 169 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ';.
+
+--- Pattern 422 ---
+Original: And for someone to cease to be a psychopath, it
+would have to change.
+Bleached: And for A to B to be a C, it would have to D.
+Chars: 70 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 423 ---
+Original: Last edited @ Apr 6, 2:23AM EDT.
+Bleached: Last X-ed @ Apr 6, 2:23AM EDT.
+Chars: 32 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:.
+
+--- Pattern 424 ---
+Original: APR 6, 2:21AM EDT0
+
+BOOKS.OF.JOY
+
+Do you know any psychopaths personally in real life?
+Bleached: APR 6, 2:21AM EDT0
+
+X.OF.Y
+
+Do you Z any A's B in C D?
+Chars: 90 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:..?
+
+--- Pattern 425 ---
+Original: APR 6, 12:17AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Many.
+Bleached: APR 6, 12:17AM EDT0
+
+
+
+
+
+X-Y Z
+
+X.
+Chars: 62 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 426 ---
+Original: And so do you.
+Bleached: And so X you.
+Chars: 14 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 427 ---
+Original: APR 6, 2:00AM EDT0
+
+TOSHA
+
+Are men more prone to becoming psychopaths than women?
+Bleached: APR 6, 2:00AM EDT0
+
+TOSHA
+
+Are X more Y to Z-ing P's than W's?
+Chars: 85 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 428 ---
+Original: APR 5, 11:57PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+No.
+Bleached: APR 5, 11:57PM EDT0
+
+
+
+
+
+X-Y Z
+
+No.
+Chars: 60 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 429 ---
+Original: Men and women are equally likely to become psychopaths.
+Bleached: X and Y are equally Z to become W's.
+Chars: 55 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 430 ---
+Original: When people become
+psychopaths, their psychopath-identities mold themselves around their genders and sexual
+orientations.
+Bleached: When A become
+B, their B-identities C themselves around their D and E
+F.
+Chars: 123 | Tokens: 14 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-.
+
+--- Pattern 431 ---
+Original: So male psychopaths are likely to be financial fraudsters, and female psychopaths
+are likely to be prostitutes.
+Bleached: So A B are likely to be C D, and E B are likely to be F.
+Chars: 112 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 432 ---
+Original: But psychopathy is an equal-gender employer.
+Bleached: But X is an Y-Z W.
+Chars: 44 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -.
+
+--- Pattern 433 ---
+Original: There may be some
+'statistics' to the effect that men are more likely to be psychopaths.
+Bleached: There may be some
+'X' to the Y that Z are more W to be V's.
+Chars: 89 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''.
+
+--- Pattern 434 ---
+Original: But this is not the case.
+Bleached: But this is not the X.
+Chars: 25 | Tokens: 6 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 435 ---
+Original: Men,
+when psychopaths, are more likely than women to be psychopathic in an overtly criminal way.
+Bleached: X's,
+when Y's, are more likely than Z's to be Y-ic in an overtly W way.
+Chars: 97 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 436 ---
+Original: But the rates of psychopathy between the genders are the same.Last edited @ Apr 6, 12:11AM EDT.
+Bleached: But the X's of Y between the Z's are the same.Last W @ Apr 6, 12:11AM EDT.
+Chars: 95 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .,:.
+
+--- Pattern 437 ---
+Original: APR 6, 12:09AM EDT0
+
+DIANACHAIKA
+
+Can you recommend any good books about psychopaths?
+Bleached: APR 6, 12:09AM EDT0
+
+DIANACHAIKA
+
+Can you X any Y Z's about P's?
+Chars: 89 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 438 ---
+Original: APR 5, 11:14PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+The Mask of Sanity, by Hervey Cleckley (non-fiction), and The Incredible Charlie Carewe
+(fiction).
+Bleached: APR 5, 11:14PM EDT0
+
+
+
+
+
+A-B C
+
+The D of E, by F G (H-I), and The J K L
+(M).
+Chars: 156 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,(-),().
+
+--- Pattern 439 ---
+Original: I do not recommend "Without Conscience" by Hare, which is pop psychology and, in
+addition to being shallow, is largely ripped off, sans acknowledgement, from Cleckley.
+Bleached: I do not X "Y Z" by A, which is B C and, in
+D to being E, is F G off, H I, from J.
+Chars: 168 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "",,,,,.
+
+--- Pattern 440 ---
+Original: APR 5, 11:23PM EDT0
+
+IZABELABAR
+
+What are the human values that differentiate a psychopath and a non-psychopath?
+Bleached: APR 5, 11:23PM EDT0
+
+IZABELABAR
+
+What are the A B that C a D and a E-D?
+Chars: 116 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-?
+
+--- Pattern 441 ---
+Original: APR 5, 10:56PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+The psychopath has no real values.
+Bleached: APR 5, 10:56PM EDT0
+
+
+
+
+
+A-B C
+
+The X has no real Y's.
+Chars: 91 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 442 ---
+Original: He has pseudo-values: he hyper-values externalities--money,
+flash, glamor.
+Bleached: He has A-values: he B-values C--D, E, F.
+Chars: 75 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -:---,,.
+
+--- Pattern 443 ---
+Original: He 'values' manipulating and defrauding.
+Bleached: He 'A's' B-ing and C-ing.
+Chars: 40 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ''.
+
+--- Pattern 444 ---
+Original: But his 'values' are anti-values: they are
+assaults against actual values.
+Bleached: But his 'X' are Y-X: they are
+Z against W X.
+Chars: 75 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ''-:.
+
+--- Pattern 445 ---
+Original: Actual values, when complied with, conduce to human growth and
+development, A psychopath's pseudo-values, when complied with, undermine humanity.
+Bleached: A values, when B with, C to D E and
+F, A G's H-values, when B with, I J.
+Chars: 146 | Tokens: 19 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,,'-,,.
+
+--- Pattern 446 ---
+Original: APR 5, 11:22PM EDT0
+
+NADYAWYN
+
+Can someone become a psychopath when they are elderly, for example, over 80 years old?
+Bleached: APR 5, 11:22PM EDT0
+
+NADYAWYN
+
+Can someone become a X when they are Y, for example, over 80 Z old?
+Chars: 121 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:,,?
+
+--- Pattern 447 ---
+Original: APR 5, 10:52PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+When a person betrays what is most important to him, he dies inside and he effectively
+psychopathizes.
+Bleached: APR 5, 10:52PM EDT0
+
+
+
+
+
+A-B C
+
+When a F X-s what is most E to him, he Y-s inside and he Z W-s.
+Chars: 160 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,.
+
+--- Pattern 448 ---
+Original: And this can happen at any point in life.
+Bleached: And this can X at any Y in Z.
+Chars: 41 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 449 ---
+Original: I have seen it happen in people in their
+70s.
+Bleached: I have X-ed it Y in F in their 70s.
+Chars: 46 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 450 ---
+Original: APR 5, 11:20PM EDT0
+
+MADADAVIDWhy is psychopathy rapidly spreading in today's world?
+Bleached: APR 5, 11:20PM EDT0
+
+MADADAVIDWhy is X rapidly Y-ing in today's Z?
+Chars: 86 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:'?
+
+--- Pattern 451 ---
+Original: APR 5, 4:40PM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+It is spreading because bureaucracy is spreading.
+Bleached: APR 5, 4:40PM EDT0
+
+
+
+
+
+A-B C
+
+It is X-ing because Y is X-ing.
+Chars: 105 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-.
+
+--- Pattern 452 ---
+Original: And bureaucracy is inherently psychopathic.
+Bleached: And X is Y Z.
+Chars: 43 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 453 ---
+Original: It
+is psychopathic because it is phony, and psychopathy is about phoniness.
+Bleached: It
+is A because it is B, and A-y is about B-ness.
+Chars: 76 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 454 ---
+Original: (People think that
+psychopathy is about evil--and it is.
+Bleached: (P think that
+Q is about R--and it is.
+Chars: 57 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: (--.
+
+--- Pattern 455 ---
+Original: But it is primarily about phoniness, and only secondarily
+about evil.)
+
+APR 5, 4:44PM EDT0
+
+MUIA
+
+Does social media play a role in psychopathy?
+Bleached: But it is primarily about X, and only secondarily
+about Y.)
+
+APR 5, 4:44PM EDT0
+
+MUIA
+
+Does Z W play a V in P?
+Chars: 150 | Tokens: 24 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.),:?
+
+--- Pattern 456 ---
+Original: APR 5, 11:59AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+I think that social media can actually have a counter-psychopathic function.
+Bleached: APR 5, 11:59AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+I think that A B can actually have a C-D E.
+Chars: 133 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:--.
+
+--- Pattern 457 ---
+Original: I know that right
+now a lot of my friendships are based on social media---mainly on my YouTube channel and on
+my podcast.
+Bleached: I X that right
+now a lot of my Y's are Z-ed on W V---mainly on my A B and on
+my C.
+Chars: 123 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ---.
+
+--- Pattern 458 ---
+Original: I am able to have exchanges through social media that are much more honest, and
+therefore less psychopathic, than the exchanges that I can have elsewhere.
+Bleached: I am A to have B's through C D that are much more E, and therefore less F, than the B's that I can have G.
+Chars: 155 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 459 ---
+Original: And I am not alone in
+this.
+Bleached: And I am not Ω8 in
+this.
+Chars: 28 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 460 ---
+Original: Obviously social media can be used psychopathically; it can be used psychopathically--it
+can be used to construct false identifies and to manipulate people.
+Bleached: Obviously A B can be C-ed D-ly; it can be C-ed D-ly--it can be C-ed to E F G-s and to H I.
+Chars: 157 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ;--.
+
+--- Pattern 461 ---
+Original: And it is used in these ways.
+Bleached: And it is X-ed in these Y's.
+Chars: 29 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 462 ---
+Original: But on the whole I would say that social media actually provides an outlet for the non-
+psychopathic side of humanity.
+Bleached: But on the whole I would say that A B actually provides an C for the non-D side of E.
+Chars: 119 | Tokens: 21 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: -.
+
+--- Pattern 463 ---
+Original: APR 5, 4:10PM EDT0
+
+GEEKEEMELOGY
+
+Have you watched any movies or films about psychopaths?
+Bleached: APR 5, 4:10PM EDT0
+
+GEEKEEMELOGY
+
+Have you X-ed any Y's or Z's about A's?
+Chars: 93 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:?
+
+--- Pattern 464 ---
+Original: Which one is your favourite?
+Bleached: Which one is your X?
+Chars: 28 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?
+
+--- Pattern 465 ---
+Original: APR 5, 4:52AM EDT0
+
+
+
+
+
+JOHN-MICHAEL KUCZYNSKI
+
+Yes, I have seen many.
+Bleached: APR 5, 4:52AM EDT0
+
+
+
+
+
+X-Y Z
+
+Yes, I have A many.
+Chars: 78 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,:-,.
+
+--- Pattern 466 ---
+Original: The most accurate depiction of a psychopath that I can think of off hand
+is a movied called "Pacific Heights", with Michael Keaton.
+Bleached: The most P Q of a R that I can S of off T
+is a U V "W X", with Y Z.
+Chars: 132 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: "",.
+
+--- Pattern 467 ---
+Original: An utterly, completely accurate
+depiction of a psychopath is in an episode of the show Six Feet Under, titled "That's My Dog",
+where David picks up a hitchiker, who abducts him.
+Bleached: An A, B C
+D of a E is in an F of the G H I J, K "L M N",
+where O P up a Q, who R him.
+Chars: 179 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,"'",,.
+
+--- Pattern 468 ---
+Original: If you want to know what a pure example ofa psychopath is, watch that episode.
+Bleached: If you want to know what a pure example ofa X is, Y that Z.
+Chars: 78 | Tokens: 15 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 469 ---
+Original: Another less realistic but not totally unrealistic depiction of
+
+a psychopath is the main character in the movie "The Stepfather." 
+
+APR 5, 5:05AM EDT0
+
+TOP 5 FROM John-Michael Kuczynski
+                                            1
+
+Ask me anything about Psychopathy!
+Bleached: Another less X but not totally X Y of
+
+a Z is the main W in the movie "The Q." 
+
+APR 5, 5:05AM EDT0
+
+TOP 5 FROM John-Michael Kuczynski
+                                            1
+
+V me anything about R!
+Chars: 277 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ".",:-!
+
+--- Pattern 470 ---
+Original: #HealthAMA
+ 116
+ 120
+                                            2
+
+Ask Me Anything about Philosophypedia!
+Bleached: #F-AMA
+ 116
+ 120
+                                            2
+
+Ask Me Anything about G!
+Chars: 111 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: !
+
+--- Pattern 471 ---
+Original: #BusinessAMA
+ 54
+ 116
+                                            3
+
+Ask Me Anything about Psychopathy!
+Bleached: ```
+#BusinessAMA
+ 54
+ 116
+                                            3
+
+Ask Me Anything about X!
+```
+Chars: 108 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: !
+
+--- Pattern 472 ---
+Original: #HealthAMA
+ 79
+ 107
+                                            4
+
+Ask me anything about philosophy, psychoanalysis or logic.
+Bleached: #XΩ8
+ 79
+ 107
+                                            4
+
+Ask me anything about Φ, Ψ or Ζ.
+Chars: 130 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 473 ---
+Original: #StartupAMA
+ 51
+ 105
+                                            5
+
+Ask me anything about OCD!
+Bleached: #X
+ 51
+ 105
+                                            5
+
+Ask me anything about Y!
+Chars: 99 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: !
+
+--- Pattern 474 ---
+Original: #AuthorsAMA
+ 59
+ 104
+TOP CONTRIBUTOR
+ 
+
+Link to Video Version of book: https://www.youtube.com/watch?v=8XbvlQJohdA
+Bleached: #X-AMA
+ 59
+ 104
+TOP Y
+ 
+
+Z to A B of C: https://www.D.com/E?v=8XbvlQJohdA
+Chars: 120 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ::..?
+

@@ -11,7 +11,11 @@ const PROCESSED_DIR = "./ingest/processed";
 // Format: AUTHOR_anything.txt (author name is everything before the first underscore)
 // Examples: kuczynski_chapter1.txt -> "Kuczynski", russell_essays.txt -> "Russell"
 function extractAuthorFromFilename(filename: string): string | null {
-  const baseName = path.basename(filename, ".txt");
+  // Handle both .txt and .TXT extensions
+  let baseName = filename;
+  if (baseName.toLowerCase().endsWith('.txt')) {
+    baseName = baseName.slice(0, -4);
+  }
   const underscoreIndex = baseName.indexOf("_");
   if (underscoreIndex > 0) {
     const author = baseName.substring(0, underscoreIndex);
@@ -205,7 +209,7 @@ async function checkIngestFolder() {
   
   const files = fs.readdirSync(INGEST_DIR).filter(f => {
     const filePath = path.join(INGEST_DIR, f);
-    return fs.statSync(filePath).isFile() && f.endsWith('.txt');
+    return fs.statSync(filePath).isFile() && f.toLowerCase().endsWith('.txt');
   });
   
   for (const file of files) {
