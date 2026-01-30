@@ -1,0 +1,545 @@
+=== SENTENCE BANK ===
+Total Patterns: 77
+Generated: 1/29/2026, 9:07:07 PM
+
+--- Pattern 1 ---
+Original: An aggregative property is one that is had pluralities of objects but is absent from any given one of those objects.
+Bleached: An X-ive Y is one that is Z-ed by W's of V's but is U from any T one of those V's.
+Chars: 116 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 2 ---
+Original: An example is temeprature.
+Bleached: An X is Y.
+Chars: 26 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 3 ---
+Original: An object’s temperature is proportional to the mean kinetic energy of the molecules composing it, and temperature is therefore a property of systems of interacting molecules.
+Bleached: An X's Y is Z to the W V U of the T S it, and Y is therefore a R of Q of P T.
+Chars: 174 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 4 ---
+Original: The property of being 78° is the property, had by such a system, of having a certain mean kinetic energy.
+Bleached: The X of being 78° is the X, Y by such a Z, of having a certain W V A.
+Chars: 105 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 5 ---
+Original: Given that temperature is a property of systems of interacting particles, no one particle has a temperature.
+Bleached: Given that Δ is a ζ of ψ's of Ω-ing λ's, no one λ has a Δ.
+Chars: 108 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 6 ---
+Original: An emergent property is a property of systems of events that whose existence cannot be deduced from what is known about those events when taken in isolation.
+Bleached: An A B is a B of C of D that whose E cannot be F from what is G about those D when H in I.
+Chars: 157 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 7 ---
+Original: For example, given a class of objects each of which has a low degree of thermal conductivity, it may happen that, when those objects are assembled in a certain way, the resulting structure has a high degree of thermal conductivity.
+Bleached: For A, given a B of C's each of which has a low D of E F, it may G that, when those C's are H-ed in a I J, the K-ing L has a high D of E F.
+Chars: 231 | Tokens: 40 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 8 ---
+Original: To take another example, given a class of objects each of which is brittle, it may happen that, when those objects are assembled in a certain way, the resulting structure may be extremely resilient.
+Bleached: To X another Y, given a Z of A's each of which is B, it may C that, when those A's are D-ed in a certain way, the E-ing F may be extremely G.
+Chars: 198 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,.
+
+--- Pattern 9 ---
+Original: To take a more counterintuitive example: Given two rocks, each of which weighs exactly one lb., if we place the one rock on top of the other, the resulting structure would weigh exactly two lbs.
+Bleached: To X a more Y Z: Given two A's, each of which B's exactly one C., if we D the one A on E of the other, the F G would B exactly two C's.
+Chars: 194 | Tokens: 35 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: :,.,,.
+
+--- Pattern 10 ---
+Original: A consequence of Relativity Theory is that mass is non-additive, meaning that the mass of a given object is not the arithmetical sum of the masses of its constituents.
+Bleached: A X of Y Z is that W is V-U, T-ing that the W of a S R is not the Q P of the W's of its O's.
+Chars: 167 | Tokens: 29 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 11 ---
+Original: Thus, relative to what was known before Relativity Theory,  masses of object-pluralities were emergent with respect to the masses of their constituent objects.
+Bleached: Thus, relative to what was X-ed before Y Theory, Z's of W-pluralities were Ω with respect to the Z's of their constituent W's.
+Chars: 159 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 12 ---
+Original: In other words, the mass of a given object-plurality could not be deduced from the masses of its constituents.
+Bleached: In other words, the A of a given B-C could not be D-ed from the A's of its E's.
+Chars: 110 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 13 ---
+Original: A related consequence of Relativity Theory is that length is non-additive, meaning that the length of a straight object is not the arithmetical sum of the lengths of its segments.
+Bleached: A P'd Q of R S is that T is U-V, W-ing that the T of a X Y is not the Z Ω of the T's of its Δ's.
+Chars: 179 | Tokens: 30 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 14 ---
+Original: Let x be a straight, rigid steel rod with a length of at least two yards.
+Bleached: Let x be a Q, R S T with a U of at least two V's.
+Chars: 73 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 15 ---
+Original: And let alpha and beta be the first and the second yard-long segments of x.
+Bleached: And let A and B be the C and the D E-long F's of G.
+Chars: 75 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 16 ---
+Original: The segment of x that consists of alpha and beta is slightly over two yards.
+Bleached: The A of x that B of C and D is E over two F.
+Chars: 76 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 17 ---
+Original: A consequence of Relativity Theory is that C is just over two yards in length.
+Bleached: A X of Y Z is that C is just over two W's in X.
+Chars: 78 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 18 ---
+Original: Thus, relative to what was known before Relativity Theory, the length of a given object was emergent with respect to the lengths of its segments.
+Bleached: Thus, A to what was B before C D, the E of a F G was H with I to the E's of its J's.
+Chars: 145 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 19 ---
+Original: In other words, the length of a given object could not be deduced from the lenghts of its segments.
+Bleached: In other words, the X of a given Y could not be Z-ed from the X's of its W's.
+Chars: 99 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 20 ---
+Original: A plurality of objects has a given emergent property whenever it has some property that, given only what is already known about the individuals composing that plurality, it is either (a) not expected to have or (b) cannot be deduced to have,  either because it doesn’t follow from what we know or because we are not smart enough to see that it follows.
+Bleached: A P of Q's has a given R S whenever it has some S that, given only what is already T about the U's V-ing that P, it is either (a) not W-ed to have or (b) cannot be X-ed to have, either because it doesn't Y from what we Z or because we are not Ω enough to Α that it Y's.
+Chars: 352 | Tokens: 63 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,,()(),.
+
+--- Pattern 21 ---
+Original: Any given aggregative property can, at least in principle, be an emergent property.
+Bleached: Any given X property can, at least in principle, be an Y property.
+Chars: 83 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 22 ---
+Original: For example, air-pressure is an aggregative property: it is a property, not of individual air-molecules, but of aggregates of such molecules.
+Bleached: For example, X-Y is an Z property: it is a property, not of individual X-W's, but of Z's of such W's.
+Chars: 141 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-:,-,.
+
+--- Pattern 23 ---
+Original: Bearing this in mind, suppose that there are creatures of our intelligence that are so small that, in terms of size, air-molecules are to them what great redwoods are to us.
+Bleached: Bearing this in mind, suppose that there are A's of our B that are so C that, in terms of D, E-F's are to them what G H's are to us.
+Chars: 173 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 24 ---
+Original: Supposing that such creatures were acquainted with individual air-molecules, in much the way that we are acquainted with individual trees, they might fail to infer, or not be samrt enough to infer, that otherwise soft objects are rock-hard when filled with aggregates of such molecules.
+Bleached: Supposing that such A's were B-ed with individual C-D's, in much the way that we are B-ed with individual E's, they might fail to F, or not be G enough to F, that otherwise H I's are J-K when L-ed with M's of such D's.
+Chars: 286 | Tokens: 45 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,,,,-.
+
+--- Pattern 25 ---
+Original: To these creatures, such properties of molecule-aggregates would be of the emergent variety.
+Bleached: To these X, such Y of Z-W would be of the V X.
+Chars: 92 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 26 ---
+Original: And relative to what the layman knows or can deduce, many properties of planet-aggregates and of solar system-aggregates, are comparably emergent in nature.
+Bleached: And X to what the Y Z or can V, many W of X-Q and of R S-Q, are T U in V.
+Chars: 156 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,--,.
+
+--- Pattern 27 ---
+Original: Temperature is an aggregative property.
+Bleached: X is an Y Z.
+Chars: 39 | Tokens: 5 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 28 ---
+Original: It is a property of pluralities of particle-interations, and is therefore not a property of any one particle.
+Bleached: It is a X of Y's of Z-W's, and is therefore not a X of any one Z.
+Chars: 109 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 29 ---
+Original: Thus, a miniscule creature, of the kind just-described, might be quite as ignorant of the fact that aggregates of such particles could cause previously rigid objects to melt as we used to be of the fact that such objects consist of discrete particles.
+Bleached: Thus, a X creature, of the kind just-Y-ed, might be quite as Z of the fact that A's of such B's could C previously D objects to E as we used to be of the fact that such objects F of G B's.
+Chars: 251 | Tokens: 43 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,.
+
+--- Pattern 30 ---
+Original: By the same token, given the relevant knowledge or degree of acumen, an otherwise emergent  property is non-emergent.
+Bleached: By the same token, given the A knowledge or B of C, an otherwise D property is non-D.
+Chars: 117 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-.
+
+--- Pattern 31 ---
+Original: Relative to what we know now, the masses, lengths, and volumes of object-aggregates are non-emergent, but they were emergent, relative to what we knew 120 years ago.
+Bleached: Relative to what we Z now, the A's, B's, and C's of D-E's are non-F, but they were F, relative to what we Z-ed 120 G ago.
+Chars: 165 | Tokens: 27 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,--,,.
+
+--- Pattern 32 ---
+Original: Any given chemical reaction that is now known to us is ipso facto a non-emergent property of the substances involved, even though it was non-emergent relative to the state of knowledge before that reaction was discovered.
+Bleached: Any given X Y that is now Z to us is ipso facto a non-W V of the U involved, even though it was non-W relative to the T of S before that Y was R.
+Chars: 221 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,-.
+
+--- Pattern 33 ---
+Original: A consequence is that ‘x is an emergent property’ is never the answer to the question ‘why does x exist?’ 
+In an attempt to answer the question, ‘why does consciousness exist?’, John Searle said that consciousness is an ‘emergent property’ of neurons, ‘just as air-pressure is an emergent property of air-molecules.’ And that settles the matter, said Searle.
+Bleached: A B is that 'x is an C D' is never the E to the F 'why does x G?' 
+In an H to I the F, 'why does J G?', K L M that J is an 'C D' of N, 'just as O-P is an C D of O-Q.' And that R the S, M L.
+Chars: 358 | Tokens: 58 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ?,?,,--.,.
+
+--- Pattern 34 ---
+Original: But it does not settle the matter.
+Bleached: But it does not X the Y.
+Chars: 34 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 35 ---
+Original: It doesn’t make a dent in it.
+Bleached: It doesn't X a Y in it.
+Chars: 29 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 36 ---
+Original: When someone asks ‘why does consciousness exist?’, the very thing he is asking is, ‘why is consciousness present in aggregates of bits of matter that are not themselves conscious.’ People have always known that, even though intact brains tend to be conscious, dismembered brains are never conscious.
+Bleached: When someone X's 'why does Y Z?', the very W he is X-ing is, 'why is Y Q in R's of S's of T that are not themselves Y.' U's have always V-ed that, even though W X's Z to be Y, V-ed X's are never Y.
+Chars: 299 | Tokens: 47 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ?,,.,,.
+
+--- Pattern 37 ---
+Original: But people still don’t know why brains tend to be conscious.
+Bleached: But X still don't Y why Z's W to be V.
+Chars: 60 | Tokens: 11 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: .
+
+--- Pattern 38 ---
+Original: And the comparison with air-pressure is spurious.
+Bleached: And the X with Y-Z is W.
+Chars: 49 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 39 ---
+Original: Air does not seem to consist of molecules.
+Bleached: A does not seem to consist of B's.
+Chars: 42 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 40 ---
+Original: It not until two hundred years ago that scientists came to believe otherwise.
+Bleached: It not until two A years ago that B's came to C otherwise.
+Chars: 77 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 41 ---
+Original: More precisely, here is what they realized.
+Bleached: More E-ly, here is what they R-ed.
+Chars: 43 | Tokens: 7 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 42 ---
+Original: Suppose that air consists of objects that are similar to billiard balls or other projectiles that are known to us.
+Bleached: Suppose that A consists of B's that are C to D E's or other F's that are known to us.
+Chars: 114 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 43 ---
+Original: And suppose that those hypothetical air-parts obey the same mechanical laws as such projectiles.
+Bleached: And Y that those Z A-B's X the same C D's as such E's.
+Chars: 96 | Tokens: 14 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 44 ---
+Original: In that case, otherwise anomalous facts about air-pressure cease to be an anomalous.
+Bleached: In that case, otherwise A facts about B-pressure cease to be an A.
+Chars: 84 | Tokens: 13 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 45 ---
+Original: For example, suppose that air consists of molecules.
+Bleached: For X, Y that Z W-s of V-s.
+Chars: 52 | Tokens: 8 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 46 ---
+Original: And further suppose that when air is hot, those particles are moving faster than when air is cold.
+Bleached: And further X that when Y is Z, those W's are X-ing faster than when Y is cold.
+Chars: 98 | Tokens: 18 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 47 ---
+Original: It follows that those particles are colliding more frequently and with greater force when air is hot than when they are cold.
+Bleached: It follows that those X's are Y-ing more Z-ly and with greater W when V is A than when they are B.
+Chars: 125 | Tokens: 22 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 48 ---
+Original: And it is therfore explained why heating up the air inside a cannister causes it to explode.
+Bleached: And it is therfore X-ed why Y-ing up the Z inside a W X's it to V.
+Chars: 92 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 49 ---
+Original: Heating it causes those particles to collide more frequenly with the walls of the cannister, and also with greater force.
+Bleached: X-ing it Y-s those Z-s to W more V-ly with the U-s of the T, and also with greater S.
+Chars: 121 | Tokens: 20 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 50 ---
+Original: And given that fast moving objects disperse more rapidly than slow moving objects, it is also explained why unconfined gases spread faster when hot than when cold.
+Bleached: And given that A B-ing C's D more E-ly than F B-ing C's, it is also G-ed why H-ed I's J K-er when L than when M.
+Chars: 163 | Tokens: 27 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 51 ---
+Original: Thus, relative to what we have known about the laws of motion since the time of Newton, pressure-related properties of gases are non-emergent with respect to the properties of their constituent particles.
+Bleached: Thus, X to what we have Y about the Z of A since the B of C, D-X E of F are G-X with H to the E of their I J.
+Chars: 204 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,--.
+
+--- Pattern 52 ---
+Original: This is why we know gases to consist of particles, and not to be the homogenous substances that they seem to be.
+Bleached: This is why we X Y's to Z of P's, and not to be the Q R's that they seem to be.
+Chars: 112 | Tokens: 22 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 53 ---
+Original: In fact, everything we know about those particles is derived from our knowledge that pressure-related facts cannot be explained inexplicable it is supposed that the aggregates in question consist of particles.
+Bleached: In A, B we C about those D is E from our F that G-related A cannot be H I it is J that the K in L M of D.
+Chars: 209 | Tokens: 31 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 54 ---
+Original: But if asked ‘why are brains conscious?’, a scientist responded by saying ‘because they consist of neurons’, he would be failing, utterly, to answer the question at hand.
+Bleached: But if asked 'why are X's Y?' a Z W-ed by X-ing 'because they V of Ω's', he would be V-ing, Λ, to Ψ the Φ at Θ.
+Chars: 170 | Tokens: 28 | Clauses: 3
+Clause Order: subordinate → main
+Punctuation: ?,,,,.
+
+--- Pattern 55 ---
+Original: This is because, whereas our knowledge that air consists of particles is derived from our knowledge of air-pressure related facts, our knowledge that brains consist of neurons is not derived from our knowledge of consciousness-related facts.
+Bleached: This is because, whereas our X that Y Z's of W's is V-ed from our X of Y-U V-ed T's, our X that S's Z of R's is not V-ed from our X of Q-related T's.
+Chars: 241 | Tokens: 36 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-,-.
+
+--- Pattern 56 ---
+Original: We believe brain-tissue to consist of neurons because when we look at brain-tissue with a microscope, we see that it consits of neurons.
+Bleached: We A B-C to D of E because when we F at B-C with a G, we H that it D of E.
+Chars: 136 | Tokens: 23 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: --,.
+
+--- Pattern 57 ---
+Original: The fact that it consists of neurons doesn’t help us explain why brains are conscious.
+Bleached: The A that it B's of C's doesn't D us E why F's are G.
+Chars: 86 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 58 ---
+Original: To be sure, knowledge of this fact can be explanatory.
+Bleached: To be X, Y of this Z can be W.
+Chars: 54 | Tokens: 10 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 59 ---
+Original: Given that brains are conscious, and given additional data relating to the nature of the various cognitive functions mediated thereby, a given fact about the cellular composition of the brain can be illuminating.
+Bleached: Given that A's are B, and given C D E to the F of the G H I's J thereby, a given K about the L M of the A can be N.
+Chars: 212 | Tokens: 33 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 60 ---
+Original: For example, suppose it known that brain region X mediates mathematical thought.
+Bleached: For A, B it C that D E X F's G H.
+Chars: 80 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 61 ---
+Original: Further, suppose it known that brain-region X consists of neurons having such and such properties.
+Bleached: Further, suppose it X-ed that Y-Z X consists of X's having such and such X's.
+Chars: 98 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,-.
+
+--- Pattern 62 ---
+Original: Finally, suppose it known that  such cells, unlike all other brain-cells, die unless the host-subject consumes a certain amount of Vitamin C on a daily basis.
+Bleached: Finally, suppose it known that such X's, unlike all other Y-X's, Z unless the W-X V's a certain amount of Q R on a daily basis.
+Chars: 158 | Tokens: 26 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,-,-.
+
+--- Pattern 63 ---
+Original: In that case, it is explained why, despite otherwise being cognitively normal, vitamin C-deprived Smith cannot count to 10.
+Bleached: In that case, it is X-ed why, despite otherwise being Y-ly Z, A B-C-ed Smith cannot D to 10.
+Chars: 123 | Tokens: 19 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,-.
+
+--- Pattern 64 ---
+Original: But so far as discoveries concerning the cellular or molecular composition of brains are explanatory of psychological phenomena, it is only because they are interpreted in light of independently had knowledge relating to cognitive phenomena and their biological implementations.
+Bleached: But so far as X's concerning the Y or Z W of X's are X of Y X, it is only because they are X-ed in X of independently X-ed X X-ing to Y X and their Y X's.
+Chars: 278 | Tokens: 39 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 65 ---
+Original: Searle seems to confusing the concept of an emergent property with the concept of an effect or product.
+Bleached: X seems to Y-ing the Z of an A B with the Z of an C or D.
+Chars: 103 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 66 ---
+Original: When you shake beer, you create foam.
+Bleached: When you X Y, you Z W.
+Chars: 37 | Tokens: 7 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 67 ---
+Original: It is a product of what you are doing.
+Bleached: It is a X of what you are Y-ing.
+Chars: 38 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 68 ---
+Original: This means that the shaking pre-dates the creation of the foam.
+Bleached: This means that the X-ing pre-Y's the Z-ation of the W.
+Chars: 63 | Tokens: 11 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 69 ---
+Original: When you shake the beer, you set in motion processes that lead to foam-creation, and you set more such processes in motion as continue to shake it.
+Bleached: When you X the Y, you Z in W X's that V to Q-creation, and you Z more such X's in W as R to X it.
+Chars: 147 | Tokens: 27 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,-,.
+
+--- Pattern 70 ---
+Original: But if given body of molecules has a certain mean kinetic energy, that is its having the corresponding temperature.
+Bleached: But if given A of B's has a certain C D E, that is its having the corresponding F.
+Chars: 115 | Tokens: 19 | Clauses: 2
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 71 ---
+Original: It is not as though, at t1, it has that mean kinetic energy and then, a little while later, at t2, it has that temperature.
+Bleached: It is not as though, at t1, it has that A B C and then, a little while later, at t2, it has that D.
+Chars: 123 | Tokens: 25 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,,,.
+
+--- Pattern 72 ---
+Original: The relation in question is one of identity, not of cause and effect, and Searle does not seem to see this.
+Bleached: The X in Y is one of Z, not of W and V, and U does not seem to T this.
+Chars: 107 | Tokens: 21 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,.
+
+--- Pattern 73 ---
+Original: Searle also seems not to be aware of the fact that emergence is an epistemic notion.
+Bleached: A also B's not to be C of the D that E is an F G.
+Chars: 84 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 74 ---
+Original: A given property that is emergent with respect to what some creature knows at a given time may be non-emergent with respect to what that same creature knows at some later time.
+Bleached: A X Y that is Z with W to what some F V at a X T may be non-Z with W to what that same F V at some later T.
+Chars: 176 | Tokens: 32 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 75 ---
+Original: It follows that emergence is a characteristic not of properties, but of our knowledge thereof.
+Bleached: It follows that X is a Y not of Z's, but of our W thereof.
+Chars: 94 | Tokens: 15 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 76 ---
+Original: And a property of a given sort of aggregate ceases to emergent as soon as we know that such aggregates have that property.
+Bleached: And a P of a given Q of R ceases to S as soon as we know that such R's have that P.
+Chars: 122 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 77 ---
+Original: But we can know that they have that property without knowing why they do so, and until we know why aggregates of appropriately configured neurons are conscious, we don’t know why they are conscious.
+Bleached: But we can X that they have that Y without X-ing why they do so, and until we X why Z's of W V-ed N's are O, we don't X why they are O.
+Chars: 198 | Tokens: 34 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,,.
+
