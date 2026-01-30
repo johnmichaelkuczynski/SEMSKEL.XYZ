@@ -1050,7 +1050,7 @@ export async function registerRoutes(app: Express): Promise<Server> {
   // Upload patterns from formatted text (Pattern Generator format)
   app.post("/api/sentence-bank/upload-patterns", async (req, res) => {
     try {
-      const { content } = req.body;
+      const { content, authorName } = req.body;
       if (!content) {
         return res.status(400).json({ error: "No content provided" });
       }
@@ -1105,21 +1105,54 @@ export async function registerRoutes(app: Express): Promise<Server> {
         }
       }
 
-      // Insert entries with deduplication
       let imported = 0;
-      for (const entry of entries) {
-        try {
-          await storage.addSentenceEntry(entry);
-          imported++;
-        } catch (e: any) {
-          if (!e.message?.includes("duplicate")) {
-            console.error("Error inserting entry:", e);
+      let total = 0;
+
+      // If author name provided, add to author's library
+      if (authorName && authorName.trim()) {
+        const trimmedName = authorName.trim();
+        
+        // Find or create author style
+        let authorStyle = await storage.getAuthorStyleByName(trimmedName);
+        if (!authorStyle) {
+          authorStyle = await storage.createAuthorStyle({
+            name: trimmedName,
+            description: `Sentence patterns from ${trimmedName}`,
+          });
+        }
+
+        // Add entries to author's sentence bank
+        for (const entry of entries) {
+          try {
+            await storage.addSentenceEntry({
+              ...entry,
+              authorStyleId: authorStyle.id,
+            });
+            imported++;
+          } catch (e: any) {
+            if (!e.message?.includes("duplicate")) {
+              console.error("Error inserting entry:", e);
+            }
           }
         }
+        
+        total = await storage.getAuthorStyleSentenceCount(authorStyle.id);
+      } else {
+        // Add to general bank (no author)
+        for (const entry of entries) {
+          try {
+            await storage.addSentenceEntry(entry);
+            imported++;
+          } catch (e: any) {
+            if (!e.message?.includes("duplicate")) {
+              console.error("Error inserting entry:", e);
+            }
+          }
+        }
+        total = await storage.getSentenceEntryCount();
       }
 
-      const total = await storage.getSentenceEntryCount();
-      res.json({ imported, total, parsed: entries.length });
+      res.json({ imported, total, parsed: entries.length, authorName: authorName?.trim() || null });
     } catch (error) {
       console.error("Error uploading patterns:", error);
       res.status(500).json({ error: "Failed to upload patterns" });

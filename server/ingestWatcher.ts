@@ -1,10 +1,40 @@
 import * as fs from "fs";
 import * as path from "path";
 import { db } from "./storage";
-import { sentenceEntries } from "../shared/schema";
+import { sentenceEntries, authorStyles } from "../shared/schema";
+import { eq } from "drizzle-orm";
 
 const INGEST_DIR = "./ingest";
 const PROCESSED_DIR = "./ingest/processed";
+
+// Parse author name from filename
+// Format: authorname_anything.txt OR authorname.txt
+// Examples: russell_patterns.txt -> "Russell", kuczynski_essays.txt -> "Kuczynski"
+function extractAuthorFromFilename(filename: string): string | null {
+  const baseName = path.basename(filename, ".txt");
+  const parts = baseName.split("_");
+  if (parts.length >= 1 && parts[0].length > 0) {
+    // Capitalize first letter of author name
+    const author = parts[0].charAt(0).toUpperCase() + parts[0].slice(1).toLowerCase();
+    return author;
+  }
+  return null;
+}
+
+async function getOrCreateAuthorStyle(authorName: string): Promise<number> {
+  // Check if author exists
+  const existing = await db.select().from(authorStyles).where(eq(authorStyles.name, authorName));
+  if (existing.length > 0) {
+    return existing[0].id;
+  }
+  // Create new author
+  const result = await db.insert(authorStyles).values({
+    name: authorName,
+    description: `Sentence patterns from ${authorName}`,
+  }).returning();
+  console.log(`[IngestWatcher] Created new author style: ${authorName}`);
+  return result[0].id;
+}
 
 interface ParsedPattern {
   original: string;
@@ -111,6 +141,17 @@ async function processFile(filePath: string): Promise<number> {
       return 0;
     }
     
+    // Extract author from filename (e.g., russell_patterns.txt -> "Russell")
+    const authorName = extractAuthorFromFilename(fileName);
+    let authorStyleId: number | null = null;
+    
+    if (authorName) {
+      authorStyleId = await getOrCreateAuthorStyle(authorName);
+      console.log(`[IngestWatcher] Assigning patterns to author: ${authorName} (ID: ${authorStyleId})`);
+    } else {
+      console.log(`[IngestWatcher] No author detected in filename, adding to general bank`);
+    }
+    
     const BATCH_SIZE = 500;
     let totalImported = 0;
     
@@ -127,6 +168,7 @@ async function processFile(filePath: string): Promise<number> {
         punctuationPattern: p.punctuationPattern,
         structure: p.bleached,
         userId: null,
+        authorStyleId: authorStyleId,
       }));
       
       await db.insert(sentenceEntries).values(entries);

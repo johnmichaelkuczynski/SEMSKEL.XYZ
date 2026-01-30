@@ -146,6 +146,7 @@ export default function Home() {
   const [patternGenOutput, setPatternGenOutput] = useState("");
   const [patternGenProcessing, setPatternGenProcessing] = useState(false);
   const [patternGenFile, setPatternGenFile] = useState<string | null>(null);
+  const [patternGenAuthor, setPatternGenAuthor] = useState("");
   
   // Chunk Selection state
   const [chunks, setChunks] = useState<ChunkMetadata[]>([]);
@@ -2009,6 +2010,18 @@ export default function Home() {
             <span className="text-base text-muted-foreground">— Upload or paste text, generate patterns, download file</span>
           </div>
           
+          <div className="flex items-center gap-3 mb-4">
+            <Label className="font-semibold whitespace-nowrap">Author Name (for DB upload):</Label>
+            <Input
+              value={patternGenAuthor}
+              onChange={(e) => setPatternGenAuthor(e.target.value)}
+              placeholder="e.g., Bertrand Russell, Kuczynski, Plato..."
+              className="max-w-sm"
+              data-testid="input-pattern-gen-author"
+            />
+            <span className="text-sm text-muted-foreground">(Leave blank for general bank)</span>
+          </div>
+          
           <div className="grid grid-cols-2 gap-4">
             {/* INPUT SIDE */}
             <div className="flex flex-col gap-2">
@@ -2087,13 +2100,18 @@ export default function Home() {
                       try {
                         const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
                           content: patternGenOutput,
+                          authorName: patternGenAuthor.trim() || null,
                         });
                         const data = await response.json();
+                        const authorNote = patternGenAuthor.trim() 
+                          ? ` to "${patternGenAuthor.trim()}" library` 
+                          : " to general bank";
                         toast({ 
                           title: "Uploaded to Database!", 
-                          description: `${data.imported || 0} patterns added. Total: ${data.total || 0}` 
+                          description: `${data.imported || 0} patterns added${authorNote}. Total: ${data.total || 0}` 
                         });
                         queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+                        queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
                       } catch (error) {
                         toast({ title: "Error", description: "Failed to upload patterns", variant: "destructive" });
                       }
