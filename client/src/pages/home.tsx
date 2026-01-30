@@ -141,6 +141,10 @@ export default function Home() {
   // Author Style state (for Style Transfer)
   const [selectedAuthorStyleId, setSelectedAuthorStyleId] = useState<number | null>(null);
   
+  // Pattern Generator state (top section)
+  const [patternGenInput, setPatternGenInput] = useState("");
+  const [patternGenProcessing, setPatternGenProcessing] = useState(false);
+  
   // Chunk Selection state
   const [chunks, setChunks] = useState<ChunkMetadata[]>([]);
   const [selectedChunkIds, setSelectedChunkIds] = useState<Set<number>>(new Set());
@@ -1993,6 +1997,73 @@ export default function Home() {
           </Button>
         </div>
       </header>
+
+      {/* PATTERN GENERATOR - One-Click Pattern File Creator */}
+      <div className="p-4 border-b bg-green-50 dark:bg-green-950/20">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex items-center gap-2 mb-3">
+            <CircleStackIcon className="w-5 h-5 text-green-600" />
+            <h2 className="text-lg font-bold">Pattern Generator</h2>
+            <span className="text-sm text-muted-foreground">— Paste text, click button, get pattern file</span>
+          </div>
+          <div className="flex gap-4">
+            <Textarea
+              value={patternGenInput}
+              onChange={(e) => setPatternGenInput(e.target.value)}
+              placeholder="Paste your human-written text here..."
+              className="flex-1 h-24 text-sm"
+              data-testid="textarea-pattern-gen"
+            />
+            <div className="flex flex-col gap-2">
+              <Button
+                onClick={async () => {
+                  if (!patternGenInput.trim()) return;
+                  setPatternGenProcessing(true);
+                  try {
+                    const response = await apiRequest("POST", "/api/build-sentence-bank", {
+                      text: patternGenInput,
+                      level: "Heavy",
+                      provider: "anthropic",
+                    });
+                    const data = await response.json();
+                    
+                    if (data.jsonl) {
+                      const lines = data.jsonl.trim().split("\n");
+                      let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\nDownloaded: ${new Date().toLocaleString()}\n\n`;
+                      
+                      lines.forEach((line: string, index: number) => {
+                        try {
+                          const entry = JSON.parse(line);
+                          txtContent += `--- Pattern ${index + 1} ---\n`;
+                          txtContent += `Original: ${entry.original}\n`;
+                          txtContent += `Bleached: ${entry.bleached}\n`;
+                          txtContent += `Chars: ${entry.char_length || 0} | Tokens: ${entry.token_length || 0} | Clauses: ${entry.clause_count || 1}\n`;
+                          txtContent += `Clause Order: ${entry.clause_order || "main → subordinate"}\n`;
+                          txtContent += `Punctuation: ${entry.punctuation_pattern || "(none)"}\n\n`;
+                        } catch {}
+                      });
+                      
+                      const saved = await saveFileWithPicker(txtContent, `patterns_${Date.now()}.txt`, "text/plain");
+                      if (saved) {
+                        toast({ title: "Pattern file created!", description: `${lines.length} patterns saved.` });
+                        setPatternGenInput("");
+                      }
+                    }
+                  } catch (error) {
+                    toast({ title: "Error", description: "Failed to generate patterns", variant: "destructive" });
+                  }
+                  setPatternGenProcessing(false);
+                }}
+                disabled={!patternGenInput.trim() || patternGenProcessing}
+                className="h-24 px-8 bg-green-600 hover:bg-green-700 text-white font-bold"
+                data-testid="button-generate-pattern-file"
+              >
+                {patternGenProcessing ? "Processing..." : "CREATE PATTERN FILE"}
+              </Button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       {/* Main Content - Split Panel */}
       <div className="flex-1 flex overflow-hidden">
