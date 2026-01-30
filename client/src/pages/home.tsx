@@ -57,6 +57,44 @@ interface BankEntry {
 
 type OutputMode = "bleach" | "jsonl";
 
+// Helper: Save file with "Save As" dialog (lets user choose location)
+async function saveFileWithPicker(content: string, suggestedName: string, mimeType: string): Promise<boolean> {
+  // Try modern File System Access API first (opens Save As dialog)
+  if ('showSaveFilePicker' in window) {
+    try {
+      const extension = suggestedName.split('.').pop() || 'txt';
+      const handle = await (window as any).showSaveFilePicker({
+        suggestedName,
+        types: [{
+          description: extension.toUpperCase() + ' File',
+          accept: { [mimeType]: ['.' + extension] },
+        }],
+      });
+      const writable = await handle.createWritable();
+      await writable.write(content);
+      await writable.close();
+      return true;
+    } catch (err: any) {
+      if (err.name === 'AbortError') {
+        return false; // User cancelled
+      }
+      // Fall through to legacy download
+    }
+  }
+  
+  // Fallback: legacy download (goes to default downloads folder)
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = suggestedName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  URL.revokeObjectURL(url);
+  return true;
+}
+
 // Helper: calculate word count
 function getWordCount(text: string): number {
   return text.split(/\s+/).filter(w => w.length > 0).length;
@@ -1315,30 +1353,24 @@ export default function Home() {
     }
   };
 
-  const handleDownloadOutput = () => {
+  const handleDownloadOutput = async () => {
     if (!outputText) return;
     
     const filename = uploadedFile?.name 
       ? uploadedFile.name.replace(/\.txt$/, "_bleached.txt")
       : "bleached_output.txt";
     
-    const blob = new Blob([outputText], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    const saved = await saveFileWithPicker(outputText, filename, "text/plain");
     
-    toast({
-      title: "Download started",
-      description: `Saving as ${filename}`,
-    });
+    if (saved) {
+      toast({
+        title: "File saved",
+        description: `Saved as ${filename}`,
+      });
+    }
   };
 
-  const handleDownloadJsonl = () => {
+  const handleDownloadJsonl = async () => {
     if (!jsonlContent) return;
     
     const timestamp = Date.now();
@@ -1346,23 +1378,17 @@ export default function Home() {
       ? uploadedFile.name.replace(/\.txt$/, `_${timestamp}.jsonl`)
       : `sentence_bank_${timestamp}.jsonl`;
     
-    const blob = new Blob([jsonlContent], { type: "application/jsonl" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    const saved = await saveFileWithPicker(jsonlContent, filename, "application/jsonl");
     
-    toast({
-      title: "Download started",
-      description: `Downloading ${filename}`,
-    });
+    if (saved) {
+      toast({
+        title: "File saved",
+        description: `Saved as ${filename}`,
+      });
+    }
   };
 
-  const handleDownloadTxt = () => {
+  const handleDownloadTxt = async () => {
     if (!jsonlContent) return;
     
     const lines = jsonlContent.trim().split("\n");
@@ -1388,20 +1414,14 @@ export default function Home() {
       ? uploadedFile.name.replace(/\.txt$/, `_${timestamp}_patterns.txt`)
       : `sentence_patterns_${timestamp}.txt`;
     
-    const blob = new Blob([txtContent], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    const saved = await saveFileWithPicker(txtContent, filename, "text/plain");
     
-    toast({
-      title: "Download started",
-      description: `Downloading ${filename} (ingest-ready format)`,
-    });
+    if (saved) {
+      toast({
+        title: "File saved",
+        description: `Saved ${filename} (ingest-ready format)`,
+      });
+    }
   };
 
   const handleClearInput = () => {
@@ -1501,7 +1521,7 @@ export default function Home() {
     multiple: false,
   });
 
-  const handleDownloadBankTxt = () => {
+  const handleDownloadBankTxt = async () => {
     if (!bankContentQuery.data?.entries?.length) return;
     
     let txtContent = `=== SENTENCE BANK ===\n`;
@@ -1521,23 +1541,17 @@ export default function Home() {
     const timestamp = Date.now();
     const filename = `sentence_bank_full_${timestamp}.txt`;
     
-    const blob = new Blob([txtContent], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    const saved = await saveFileWithPicker(txtContent, filename, "text/plain");
     
-    toast({
-      title: "Download started",
-      description: `Downloading full bank as ${filename}`,
-    });
+    if (saved) {
+      toast({
+        title: "File saved",
+        description: `Saved full bank as ${filename}`,
+      });
+    }
   };
 
-  const handleDownloadBankJsonl = () => {
+  const handleDownloadBankJsonl = async () => {
     if (!bankContentQuery.data?.entries?.length) return;
     
     const jsonlLines = bankContentQuery.data.entries.map((entry) => {
@@ -1557,20 +1571,14 @@ export default function Home() {
     const timestamp = Date.now();
     const filename = `sentence_bank_${timestamp}.jsonl`;
     
-    const blob = new Blob([jsonlContent], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(url);
+    const saved = await saveFileWithPicker(jsonlContent, filename, "application/jsonl");
     
-    toast({
-      title: "Download started",
-      description: `Downloading bank as ${filename}`,
-    });
+    if (saved) {
+      toast({
+        title: "File saved",
+        description: `Saved bank as ${filename}`,
+      });
+    }
   };
 
   const handleDownloadInstallment = async (installmentNum: number) => {
