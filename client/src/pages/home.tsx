@@ -2023,6 +2023,53 @@ export default function Home() {
               data-testid="input-pattern-gen-author"
             />
             <span className="text-sm text-muted-foreground">(Leave blank for general bank)</span>
+            
+            <input
+              id="importPatternFileInput"
+              type="file"
+              accept=".txt,.TXT"
+              className="hidden"
+              onChange={async (e) => {
+                const file = e.target.files?.[0];
+                if (!file) return;
+                const reader = new FileReader();
+                reader.onload = async (event) => {
+                  const content = event.target?.result as string;
+                  if (!content) return;
+                  try {
+                    const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                      content: content,
+                      authorName: patternGenAuthor.trim() || null,
+                    });
+                    const data = await response.json();
+                    const authorNote = patternGenAuthor.trim() 
+                      ? ` to "${patternGenAuthor.trim()}" library` 
+                      : " to general bank";
+                    toast({ 
+                      title: "Imported!", 
+                      description: `${data.imported || 0} patterns added${authorNote}` 
+                    });
+                    queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+                    queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
+                  } catch (err) {
+                    toast({ title: "Error", description: "Failed to import patterns", variant: "destructive" });
+                  }
+                };
+                reader.readAsText(file);
+                e.target.value = "";
+              }}
+              data-testid="input-import-pattern-file"
+            />
+            <Button
+              variant="default"
+              size="sm"
+              className="bg-green-600 hover:bg-green-700"
+              onClick={() => document.getElementById("importPatternFileInput")?.click()}
+              data-testid="button-import-pattern-file"
+            >
+              <ArrowUpTrayIcon className="w-4 h-4 mr-1" />
+              Import Pattern File
+            </Button>
           </div>
           
           <div className="grid grid-cols-2 gap-4">
