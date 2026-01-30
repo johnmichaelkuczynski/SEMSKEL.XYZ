@@ -101,5 +101,13 @@ export default async function runApp(
     } catch (error) {
       console.error("[BatchProcessor] Failed to start on server init:", error);
     }
+    
+    // Start the ingest folder watcher for drag-and-drop pattern imports
+    try {
+      const { startIngestWatcher } = await import("./ingestWatcher");
+      startIngestWatcher();
+    } catch (error) {
+      console.error("[IngestWatcher] Failed to start on server init:", error);
+    }
   });
 }
