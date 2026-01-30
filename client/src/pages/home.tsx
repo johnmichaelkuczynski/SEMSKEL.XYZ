@@ -2009,27 +2009,61 @@ export default function Home() {
           </div>
           
           <div className="flex gap-4">
-            <Textarea
-              value={patternGenInput}
-              onChange={(e) => { setPatternGenInput(e.target.value); setPatternGenFile(null); }}
-              onDragOver={(e) => { e.preventDefault(); e.stopPropagation(); }}
-              onDrop={(e) => {
-                e.preventDefault();
-                e.stopPropagation();
-                const file = e.dataTransfer.files[0];
-                if (file) {
-                  const reader = new FileReader();
-                  reader.onload = (event) => {
-                    setPatternGenInput(event.target?.result as string || "");
-                    setPatternGenFile(file.name);
-                  };
-                  reader.readAsText(file);
-                }
-              }}
-              placeholder="Drag .txt file here OR paste your human-written text..."
-              className="flex-1 h-48 text-base"
-              data-testid="textarea-pattern-gen"
-            />
+            <div className="flex-1 flex flex-col gap-2">
+              <div className="flex items-center gap-2">
+                <input
+                  id="patternGenFileInput"
+                  type="file"
+                  accept=".txt"
+                  className="hidden"
+                  onChange={(e) => {
+                    const file = e.target.files?.[0];
+                    if (file) {
+                      const reader = new FileReader();
+                      reader.onload = (event) => {
+                        setPatternGenInput(event.target?.result as string || "");
+                        setPatternGenFile(file.name);
+                      };
+                      reader.readAsText(file);
+                    }
+                  }}
+                  data-testid="input-pattern-gen-file"
+                />
+                <Button
+                  variant="outline"
+                  onClick={() => document.getElementById("patternGenFileInput")?.click()}
+                  className="bg-white dark:bg-gray-800"
+                  data-testid="button-browse-pattern-gen"
+                >
+                  <ArrowUpTrayIcon className="w-4 h-4 mr-2" />
+                  Browse for .txt file
+                </Button>
+                {patternGenFile && (
+                  <span className="text-sm text-green-600 font-medium">Loaded: {patternGenFile}</span>
+                )}
+              </div>
+              <Textarea
+                value={patternGenInput}
+                onChange={(e) => { setPatternGenInput(e.target.value); setPatternGenFile(null); }}
+                onDragOver={(e) => { e.preventDefault(); e.stopPropagation(); }}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  const file = e.dataTransfer.files[0];
+                  if (file) {
+                    const reader = new FileReader();
+                    reader.onload = (event) => {
+                      setPatternGenInput(event.target?.result as string || "");
+                      setPatternGenFile(file.name);
+                    };
+                    reader.readAsText(file);
+                  }
+                }}
+                placeholder="Drag .txt file here, paste text, or use Browse button above..."
+                className="flex-1 h-44 text-base"
+                data-testid="textarea-pattern-gen"
+              />
+            </div>
             <div className="flex flex-col gap-3">
               <Button
                 onClick={async () => {
