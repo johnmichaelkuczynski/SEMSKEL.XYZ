@@ -8,14 +8,14 @@ const INGEST_DIR = "./ingest";
 const PROCESSED_DIR = "./ingest/processed";
 
 // Parse author name from filename
-// Format: authorname_anything.txt OR authorname.txt
-// Examples: russell_patterns.txt -> "Russell", kuczynski_essays.txt -> "Kuczynski"
+// ONLY format: AUTHOR_patterns.txt
+// Examples: russell_patterns.txt -> "Russell", kuczynski_patterns.txt -> "Kuczynski"
 function extractAuthorFromFilename(filename: string): string | null {
   const baseName = path.basename(filename, ".txt");
-  const parts = baseName.split("_");
-  if (parts.length >= 1 && parts[0].length > 0) {
-    // Capitalize first letter of author name
-    const author = parts[0].charAt(0).toUpperCase() + parts[0].slice(1).toLowerCase();
+  // Must match exactly: authorname_patterns
+  const match = baseName.match(/^([a-zA-Z]+)_patterns$/i);
+  if (match && match[1]) {
+    const author = match[1].charAt(0).toUpperCase() + match[1].slice(1).toLowerCase();
     return author;
   }
   return null;
