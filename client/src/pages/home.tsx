@@ -1366,15 +1366,17 @@ export default function Home() {
     if (!jsonlContent) return;
     
     const lines = jsonlContent.trim().split("\n");
-    let txtContent = "";
+    let txtContent = `=== SENTENCE BANK ===\nTotal Patterns: ${lines.length}\nDownloaded: ${new Date().toLocaleString()}\n\n`;
     
     lines.forEach((line, index) => {
       try {
         const entry = JSON.parse(line);
-        txtContent += `--- Sentence ${index + 1} ---\n`;
+        txtContent += `--- Pattern ${index + 1} ---\n`;
         txtContent += `Original: ${entry.original}\n`;
         txtContent += `Bleached: ${entry.bleached}\n`;
-        txtContent += `Length: ${entry.length} | Clauses: ${entry.clauseCount} | Punctuation: ${entry.punctuation}\n`;
+        txtContent += `Chars: ${entry.char_length || entry.original?.length || 0} | Tokens: ${entry.token_length || 0} | Clauses: ${entry.clause_count || 1}\n`;
+        txtContent += `Clause Order: ${entry.clause_order || "main → subordinate"}\n`;
+        txtContent += `Punctuation: ${entry.punctuation_pattern || "(none)"}\n`;
         txtContent += `\n`;
       } catch {
         // Skip invalid lines
@@ -1383,8 +1385,8 @@ export default function Home() {
     
     const timestamp = Date.now();
     const filename = uploadedFile?.name 
-      ? uploadedFile.name.replace(/\.txt$/, `_${timestamp}_bank.txt`)
-      : `sentence_bank_${timestamp}.txt`;
+      ? uploadedFile.name.replace(/\.txt$/, `_${timestamp}_patterns.txt`)
+      : `sentence_patterns_${timestamp}.txt`;
     
     const blob = new Blob([txtContent], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
@@ -1398,7 +1400,7 @@ export default function Home() {
     
     toast({
       title: "Download started",
-      description: `Downloading ${filename}`,
+      description: `Downloading ${filename} (ingest-ready format)`,
     });
   };
 
