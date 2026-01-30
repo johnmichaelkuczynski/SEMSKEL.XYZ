@@ -188,9 +188,9 @@ async function processFile(filePath: string): Promise<number> {
     
     console.log(`[IngestWatcher] Imported ${totalImported} patterns from ${fileName}`);
     
-    const processedPath = path.join(PROCESSED_DIR, `${Date.now()}_${fileName}`);
-    fs.renameSync(filePath, processedPath);
-    console.log(`[IngestWatcher] Moved to processed: ${processedPath}`);
+    // Delete the file after successful processing
+    fs.unlinkSync(filePath);
+    console.log(`[IngestWatcher] Deleted after import: ${fileName}`);
     
     return totalImported;
   } catch (err) {
