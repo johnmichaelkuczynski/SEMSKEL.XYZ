@@ -2081,6 +2081,31 @@ export default function Home() {
                 <Label className="text-lg font-bold">OUTPUT</Label>
                 <div className="flex items-center gap-2">
                   <Button
+                    size="sm"
+                    onClick={async () => {
+                      if (!patternGenOutput) return;
+                      try {
+                        const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                          content: patternGenOutput,
+                        });
+                        const data = await response.json();
+                        toast({ 
+                          title: "Uploaded to Database!", 
+                          description: `${data.imported || 0} patterns added. Total: ${data.total || 0}` 
+                        });
+                        queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+                      } catch (error) {
+                        toast({ title: "Error", description: "Failed to upload patterns", variant: "destructive" });
+                      }
+                    }}
+                    disabled={!patternGenOutput}
+                    className="bg-green-600 hover:bg-green-700 text-white"
+                    data-testid="button-upload-to-db-pattern-gen"
+                  >
+                    <CircleStackIcon className="w-4 h-4 mr-1" />
+                    Upload to DB
+                  </Button>
+                  <Button
                     variant="outline"
                     size="sm"
                     onClick={() => {

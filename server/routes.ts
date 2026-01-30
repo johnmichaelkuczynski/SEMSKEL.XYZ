@@ -1047,6 +1047,85 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
+  // Upload patterns from formatted text (Pattern Generator format)
+  app.post("/api/sentence-bank/upload-patterns", async (req, res) => {
+    try {
+      const { content } = req.body;
+      if (!content) {
+        return res.status(400).json({ error: "No content provided" });
+      }
+
+      // Parse the pattern format
+      const patternBlocks = content.split(/--- Pattern \d+ ---/);
+      const entries: any[] = [];
+
+      for (const block of patternBlocks) {
+        if (!block.trim()) continue;
+
+        const lines = block.split("\n");
+        let original = "";
+        let bleached = "";
+        let charLength = 0;
+        let tokenLength = 0;
+        let clauseCount = 1;
+        let clauseOrder = "main → subordinate";
+        let punctuationPattern = "";
+
+        for (const line of lines) {
+          if (line.startsWith("Original:")) {
+            original = line.replace("Original:", "").trim();
+          } else if (line.startsWith("Bleached:")) {
+            bleached = line.replace("Bleached:", "").trim();
+          } else if (line.startsWith("Chars:")) {
+            const match = line.match(/Chars:\s*(\d+)\s*\|\s*Tokens:\s*(\d+)\s*\|\s*Clauses:\s*(\d+)/);
+            if (match) {
+              charLength = parseInt(match[1]);
+              tokenLength = parseInt(match[2]);
+              clauseCount = parseInt(match[3]);
+            }
+          } else if (line.startsWith("Clause Order:")) {
+            clauseOrder = line.replace("Clause Order:", "").trim();
+          } else if (line.startsWith("Punctuation:")) {
+            punctuationPattern = line.replace("Punctuation:", "").trim();
+            if (punctuationPattern === "(none)") punctuationPattern = "";
+          }
+        }
+
+        if (original && bleached) {
+          entries.push({
+            original,
+            bleached,
+            charLength,
+            tokenLength,
+            clauseCount,
+            clauseOrder,
+            punctuationPattern,
+            structure: bleached,
+          });
+        }
+      }
+
+      // Insert entries with deduplication
+      let imported = 0;
+      for (const entry of entries) {
+        try {
+          await storage.addSentenceEntry(entry);
+          imported++;
+        } catch (e: any) {
+          if (!e.message?.includes("duplicate")) {
+            console.error("Error inserting entry:", e);
+          }
+        }
+      }
+
+      const total = await storage.getSentenceEntryCount();
+      res.json({ imported, total, parsed: entries.length });
+    } catch (error) {
+      console.error("Error uploading patterns:", error);
+      res.status(500).json({ error: "Failed to upload patterns" });
+    }
+  });
+
   // Get full sentence bank content
   app.get("/api/sentence-bank", async (req, res) => {
     try {
