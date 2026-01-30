@@ -1051,12 +1051,15 @@ export async function registerRoutes(app: Express): Promise<Server> {
   app.post("/api/sentence-bank/upload-patterns", async (req, res) => {
     try {
       const { content, authorName } = req.body;
+      console.log("[upload-patterns] Received content length:", content?.length || 0, "authorName:", authorName);
+      
       if (!content) {
         return res.status(400).json({ error: "No content provided" });
       }
 
       // Parse the pattern format
       const patternBlocks = content.split(/--- Pattern \d+ ---/);
+      console.log("[upload-patterns] Found", patternBlocks.length, "blocks after split");
       const entries: any[] = [];
 
       for (const block of patternBlocks) {
@@ -1104,6 +1107,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
           });
         }
       }
+      
+      console.log("[upload-patterns] Parsed", entries.length, "valid entries");
 
       let imported = 0;
       let total = 0;
@@ -1157,10 +1162,12 @@ export async function registerRoutes(app: Express): Promise<Server> {
         total = await storage.getSentenceEntryCount();
       }
 
+      console.log("[upload-patterns] Success: imported", imported, "total", total);
       res.json({ imported, total, parsed: entries.length, authorName: authorName?.trim() || null });
-    } catch (error) {
-      console.error("Error uploading patterns:", error);
-      res.status(500).json({ error: "Failed to upload patterns" });
+    } catch (error: any) {
+      console.error("[upload-patterns] Error:", error?.message || error);
+      console.error("[upload-patterns] Stack:", error?.stack);
+      res.status(500).json({ error: "Failed to upload patterns: " + (error?.message || "Unknown error") });
     }
   });
 
