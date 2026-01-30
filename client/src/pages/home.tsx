@@ -148,6 +148,9 @@ export default function Home() {
   const [patternGenFile, setPatternGenFile] = useState<string | null>(null);
   const [patternGenAuthor, setPatternGenAuthor] = useState("");
   
+  // JSONL Output section author (separate from Pattern Generator)
+  const [jsonlAuthor, setJsonlAuthor] = useState("");
+  
   // Chunk Selection state
   const [chunks, setChunks] = useState<ChunkMetadata[]>([]);
   const [selectedChunkIds, setSelectedChunkIds] = useState<Set<number>>(new Set());
@@ -2684,8 +2687,8 @@ export default function Home() {
                     </p>
                     <div className="flex items-center gap-2">
                       <Input
-                        value={patternGenAuthor}
-                        onChange={(e) => setPatternGenAuthor(e.target.value)}
+                        value={jsonlAuthor}
+                        onChange={(e) => setJsonlAuthor(e.target.value)}
                         placeholder="Author name (optional)"
                         className="w-48 h-8 text-sm"
                         data-testid="input-jsonl-author"
@@ -2697,11 +2700,11 @@ export default function Home() {
                           try {
                             const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
                               content: jsonlContent,
-                              authorName: patternGenAuthor.trim() || null,
+                              authorName: jsonlAuthor.trim() || null,
                             });
                             const data = await response.json();
-                            const authorNote = patternGenAuthor.trim() 
-                              ? ` to "${patternGenAuthor.trim()}" library` 
+                            const authorNote = jsonlAuthor.trim() 
+                              ? ` to "${jsonlAuthor.trim()}" library` 
                               : " to general bank";
                             toast({ 
                               title: "Uploaded to Database!", 
