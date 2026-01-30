@@ -2682,6 +2682,44 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground">
                       <span className="font-medium text-foreground">{sentenceCount}</span> sentences processed
                     </p>
+                    <div className="flex items-center gap-2">
+                      <Input
+                        value={patternGenAuthor}
+                        onChange={(e) => setPatternGenAuthor(e.target.value)}
+                        placeholder="Author name (optional)"
+                        className="w-48 h-8 text-sm"
+                        data-testid="input-jsonl-author"
+                      />
+                      <Button
+                        size="sm"
+                        onClick={async () => {
+                          if (!jsonlContent) return;
+                          try {
+                            const response = await apiRequest("POST", "/api/sentence-bank/upload-patterns", {
+                              content: jsonlContent,
+                              authorName: patternGenAuthor.trim() || null,
+                            });
+                            const data = await response.json();
+                            const authorNote = patternGenAuthor.trim() 
+                              ? ` to "${patternGenAuthor.trim()}" library` 
+                              : " to general bank";
+                            toast({ 
+                              title: "Uploaded to Database!", 
+                              description: `${data.imported || 0} patterns added${authorNote}` 
+                            });
+                            queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
+                            queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
+                          } catch (error) {
+                            toast({ title: "Error", description: "Failed to upload patterns", variant: "destructive" });
+                          }
+                        }}
+                        className="bg-green-600 hover:bg-green-700 text-white"
+                        data-testid="button-upload-jsonl-to-db"
+                      >
+                        <CircleStackIcon className="w-4 h-4 mr-1" />
+                        Upload to DB
+                      </Button>
+                    </div>
                   </div>
                   <div className="flex-1 bg-muted/50 rounded-lg p-4 font-mono text-xs overflow-auto">
                     <pre className="whitespace-pre-wrap break-all" data-testid="jsonl-content">
