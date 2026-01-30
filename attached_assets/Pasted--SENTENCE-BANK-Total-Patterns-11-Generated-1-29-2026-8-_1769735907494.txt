@@ -1,0 +1,89 @@
+=== SENTENCE BANK ===
+Total Patterns: 11
+Generated: 1/29/2026, 8:16:20 PM
+
+--- Pattern 1 ---
+Original: Beauty as Content-bioavailability 
+
+J.-M.
+Bleached: X as Y-Z
+
+A.-B.
+Chars: 43 | Tokens: 4 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -.-.
+
+--- Pattern 2 ---
+Original: Kuczynski
+
+If a book is well-written, that makes it easier to absorb what it is saying.
+Bleached: A
+
+If a B is C-D, that makes it E-er to F what it is G-ing.
+Chars: 89 | Tokens: 16 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: -,.
+
+--- Pattern 3 ---
+Original: If an audio book is well narrated, that makes it easier to absorb what it is saying.
+Bleached: If an A B is C D-ed, that makes it E-er to F what it is G-ing.
+Chars: 84 | Tokens: 17 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 4 ---
+Original: If a book is well written and well narrated, that makes it doubly easy to absorb what it is saying.
+Bleached: If a X is Y Z-ed and Y W-ed, that makes it V-ly Z to R what it is S-ing.
+Chars: 99 | Tokens: 20 | Clauses: 1
+Clause Order: subordinate → main
+Punctuation: ,.
+
+--- Pattern 5 ---
+Original: In order for a book to be genuinely well written, the style has to align with the content.
+Bleached: In order for a A to be genuinely well B-en, the C has to D with the E.
+Chars: 90 | Tokens: 18 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 6 ---
+Original: And in order for a book to be well narrated, the narration must align with the content.
+Bleached: And in order for a X to be Y Z-ed, the Z-ation must W with the V.
+Chars: 87 | Tokens: 17 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,.
+
+--- Pattern 7 ---
+Original: It is not enough for the narrator to have a nice voice.
+Bleached: It is not enough for the X to have a Y Z.
+Chars: 55 | Tokens: 12 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 8 ---
+Original: He must use his voice in the right way.
+Bleached: He must X his Y in the Z way.
+Chars: 39 | Tokens: 9 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: .
+
+--- Pattern 9 ---
+Original: So when we describe a literary work, or a reading thereof, as “beautiful” or as “ugly”, we are not describing what that work says so much as we are describing how it says it.
+Bleached: So when we A a B C, or a D thereof, as "E" or as "F", we are not A-ing what that C G-s so much as we are A-ing how it G-s it.
+Chars: 174 | Tokens: 34 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: ,,,.
+
+--- Pattern 10 ---
+Original: A work is “beautiful” if it is doing a good job of making its content bio-available and “ugly” if it isn’t.
+Bleached: A X is "Y" if it is doing a Z job of making its content bio-W and "Q" if it isn't.
+Chars: 107 | Tokens: 21 | Clauses: 2
+Clause Order: main → subordinate
+Punctuation: -.
+
+--- Pattern 11 ---
+Original: I would suggest—though I must leave the proof of this till later---that beauty and ugliness are categorically identical with, respectively, content-bioavailability and content-non-bioavailability.
+Bleached: I would A—though I must leave the B of this till later---that C and D are E F with, respectively, G-H and G-non-H.
+Chars: 196 | Tokens: 23 | Clauses: 1
+Clause Order: main → subordinate
+Punctuation: —---,,---.
+
