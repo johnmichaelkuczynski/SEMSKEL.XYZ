@@ -144,6 +144,7 @@ export default function Home() {
   // Pattern Generator state (top section)
   const [patternGenInput, setPatternGenInput] = useState("");
   const [patternGenProcessing, setPatternGenProcessing] = useState(false);
+  const [patternGenFile, setPatternGenFile] = useState<string | null>(null);
   
   // Chunk Selection state
   const [chunks, setChunks] = useState<ChunkMetadata[]>([]);
@@ -1999,22 +2000,37 @@ export default function Home() {
       </header>
 
       {/* PATTERN GENERATOR - One-Click Pattern File Creator */}
-      <div className="p-4 border-b bg-green-50 dark:bg-green-950/20">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex items-center gap-2 mb-3">
-            <CircleStackIcon className="w-5 h-5 text-green-600" />
-            <h2 className="text-lg font-bold">Pattern Generator</h2>
-            <span className="text-sm text-muted-foreground">— Paste text, click button, get pattern file</span>
+      <div className="p-6 border-b-4 border-green-500 bg-green-50 dark:bg-green-950/30">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex items-center gap-3 mb-4">
+            <CircleStackIcon className="w-8 h-8 text-green-600" />
+            <h2 className="text-2xl font-bold">Pattern Generator</h2>
+            <span className="text-base text-muted-foreground">— Upload or paste text, click button, get pattern file</span>
           </div>
+          
           <div className="flex gap-4">
             <Textarea
               value={patternGenInput}
-              onChange={(e) => setPatternGenInput(e.target.value)}
-              placeholder="Paste your human-written text here..."
-              className="flex-1 h-24 text-sm"
+              onChange={(e) => { setPatternGenInput(e.target.value); setPatternGenFile(null); }}
+              onDragOver={(e) => { e.preventDefault(); e.stopPropagation(); }}
+              onDrop={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const file = e.dataTransfer.files[0];
+                if (file) {
+                  const reader = new FileReader();
+                  reader.onload = (event) => {
+                    setPatternGenInput(event.target?.result as string || "");
+                    setPatternGenFile(file.name);
+                  };
+                  reader.readAsText(file);
+                }
+              }}
+              placeholder="Drag .txt file here OR paste your human-written text..."
+              className="flex-1 h-48 text-base"
               data-testid="textarea-pattern-gen"
             />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-3">
               <Button
                 onClick={async () => {
                   if (!patternGenInput.trim()) return;
@@ -2047,6 +2063,7 @@ export default function Home() {
                       if (saved) {
                         toast({ title: "Pattern file created!", description: `${lines.length} patterns saved.` });
                         setPatternGenInput("");
+                        setPatternGenFile(null);
                       }
                     }
                   } catch (error) {
@@ -2055,13 +2072,19 @@ export default function Home() {
                   setPatternGenProcessing(false);
                 }}
                 disabled={!patternGenInput.trim() || patternGenProcessing}
-                className="h-24 px-8 bg-green-600 hover:bg-green-700 text-white font-bold"
+                className="h-48 px-10 bg-green-600 hover:bg-green-700 text-white font-bold text-lg"
                 data-testid="button-generate-pattern-file"
               >
-                {patternGenProcessing ? "Processing..." : "CREATE PATTERN FILE"}
+                {patternGenProcessing ? "Processing..." : "CREATE\nPATTERN\nFILE"}
               </Button>
             </div>
           </div>
+          
+          {patternGenInput && (
+            <p className="text-sm text-muted-foreground mt-2">
+              {patternGenInput.split(/\s+/).filter(Boolean).length.toLocaleString()} words loaded
+            </p>
+          )}
         </div>
       </div>
 
