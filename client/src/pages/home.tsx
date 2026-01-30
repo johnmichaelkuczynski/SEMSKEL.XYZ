@@ -2353,14 +2353,11 @@ export default function Home() {
                   if (!inputText.trim()) return;
                   
                   try {
-                    const response = await apiRequest("/api/build-sentence-bank", {
-                      method: "POST",
-                      body: JSON.stringify({
-                        text: inputText,
-                        level: bleachingLevel,
-                        provider: selectedProvider,
-                        userId: currentUser?.id,
-                      }),
+                    const response = await apiRequest("POST", "/api/build-sentence-bank", {
+                      text: inputText,
+                      level: bleachingLevel,
+                      provider: selectedProvider,
+                      userId: currentUser?.id,
                     });
                     const data = await response.json();
                     
@@ -2368,7 +2365,7 @@ export default function Home() {
                       queryClient.invalidateQueries({ queryKey: ["/api/sentence-bank/status"] });
                       toast({
                         title: "Patterns saved to database!",
-                        description: `${data.entries} patterns added. Total: ${data.savedToBank || data.entries}`,
+                        description: `${data.entries} patterns added.`,
                       });
                     }
                   } catch (error) {
