@@ -2184,7 +2184,8 @@ export default function Home() {
                         queryClient.invalidateQueries({ queryKey: ["/api/author-styles"] });
                       } catch (error) {
                         console.error("Upload error:", error);
-                        toast({ title: "Error", description: "Failed to upload patterns", variant: "destructive" });
+                        const errorMsg = error instanceof Error ? error.message : "Failed to upload patterns";
+                        toast({ title: "Error", description: errorMsg, variant: "destructive" });
                       }
                     }}
                     disabled={!patternGenOutput}
