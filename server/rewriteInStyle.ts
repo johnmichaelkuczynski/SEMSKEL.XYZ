@@ -501,14 +501,57 @@ async function rewriteWithStylePattern(
   targetSentence: string,
   stylePattern: SentenceBankEntry
 ): Promise<string> {
-  // STEP 1: Create content-preserving rewrite using pattern STRUCTURE
-  // This guarantees the target's meaning is preserved
-  const roughRewrite = contentPreservingRewrite(targetSentence, stylePattern);
+  // Use Claude to ACTUALLY rewrite the sentence using the pattern's style/structure
+  // The pattern's ORIGINAL sentence shows the style to mimic
+  // The pattern's BLEACHED structure shows the grammatical skeleton
   
-  // STEP 2: Polish for grammar/flow (optional, won't change meaning)
-  const polished = await polishWithClaude(roughRewrite, targetSentence);
-  
-  return polished;
+  const prompt = `You are a style transfer expert. Rewrite a sentence to match a specific writing style.
+
+HUMAN STYLE EXAMPLE:
+"${stylePattern.original}"
+
+STYLE STRUCTURE (bleached):
+"${stylePattern.bleached}"
+
+SENTENCE TO REWRITE:
+"${targetSentence}"
+
+YOUR TASK:
+Rewrite the sentence to sound like it was written by the same author who wrote the style example.
+
+CRITICAL RULES:
+1. PRESERVE ALL the original meaning, facts, and claims exactly
+2. CHANGE the sentence structure to match the style example
+3. Use similar rhythm, cadence, and sentence flow as the style example
+4. Match the complexity level (simple vs. compound sentences)
+5. Match the clause structure shown in the bleached pattern
+6. The rewrite MUST be noticeably different from the original but mean the same thing
+7. Do NOT just rearrange words - actually REWRITE in the target style
+
+OUTPUT: Provide ONLY the rewritten sentence. No explanations.`;
+
+  try {
+    const message = await anthropic.messages.create({
+      model: "claude-sonnet-4-5",
+      max_tokens: 500,
+      messages: [{ role: "user", content: prompt }],
+    });
+
+    const content = message.content[0];
+    if (content.type === "text") {
+      const rewritten = content.text.trim().replace(/^["']|["']$/g, ''); // Remove quotes if any
+      if (rewritten.length > 0) {
+        return rewritten;
+      }
+    }
+    // Fallback to slot-filling if Claude fails
+    const roughRewrite = contentPreservingRewrite(targetSentence, stylePattern);
+    return roughRewrite;
+  } catch (error) {
+    console.error("Rewrite error, using slot-fill fallback:", error);
+    const roughRewrite = contentPreservingRewrite(targetSentence, stylePattern);
+    return roughRewrite;
+  }
 }
 
 async function bleachAndCreatePattern(
