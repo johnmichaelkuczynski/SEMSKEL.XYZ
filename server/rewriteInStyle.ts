@@ -638,8 +638,14 @@ export async function rewriteInStyle(
     throw new Error("Failed to extract any patterns from the style sample.");
   }
   
-  console.log("Rewriting target sentences using style patterns...");
+  console.log("Rewriting target sentences using RANDOMLY selected style patterns...");
   const results: RewrittenSentence[] = [];
+  
+  // Helper function to randomly select a pattern from the author's bank
+  function selectRandomPattern(patterns: SentenceBankEntry[]): SentenceBankEntry {
+    const randomIndex = Math.floor(Math.random() * patterns.length);
+    return patterns[randomIndex];
+  }
   
   for (let i = 0; i < targetSentences.length; i += BATCH_SIZE) {
     const batch = targetSentences.slice(i, i + BATCH_SIZE);
@@ -648,26 +654,18 @@ export async function rewriteInStyle(
     const batchResults = await Promise.all(
       batch.map(async (sentence) => {
         try {
-          const metadata = await computeMetadata(sentence, level);
-          const bestMatch = findBestMatch(metadata, stylePatterns);
+          // RANDOMLY select a pattern from the author's style - NOT matching to input
+          const randomPattern = selectRandomPattern(stylePatterns);
           
-          if (!bestMatch) {
-            return {
-              original: sentence,
-              rewrite: sentence,
-              matchedPattern: null,
-            };
-          }
-          
-          const rewrite = await rewriteWithStylePattern(sentence, bestMatch.entry);
+          const rewrite = await rewriteWithStylePattern(sentence, randomPattern);
           
           return {
             original: sentence,
             rewrite,
             matchedPattern: {
-              original: bestMatch.entry.original,
-              bleached: bestMatch.entry.bleached,
-              score: Math.round(bestMatch.score * 100) / 100,
+              original: randomPattern.original,
+              bleached: randomPattern.bleached,
+              score: 0, // No similarity score since it's random selection
             },
           };
         } catch (error) {

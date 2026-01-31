@@ -783,6 +783,12 @@ export async function humanizeText(
 
   const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
+  // Helper function to RANDOMLY select patterns from the bank
+  function selectRandomPatterns(patterns: SentenceBankEntry[], count: number): SentenceBankEntry[] {
+    const shuffled = [...patterns].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, Math.min(count, patterns.length));
+  }
+
   for (let i = 0; i < sentences.length; i += BATCH_SIZE) {
     const batch = sentences.slice(i, i + BATCH_SIZE);
     console.log(`Processing batch ${Math.floor(i / BATCH_SIZE) + 1}/${Math.ceil(sentences.length / BATCH_SIZE)}`);
@@ -790,10 +796,10 @@ export async function humanizeText(
     const batchResults = await Promise.all(
       batch.map(async (sentence) => {
         try {
-          const metadata = await computeMetadata(sentence, level);
-          const topMatches = findTopMatches(metadata, bank, 3);
+          // RANDOMLY select patterns from the bank - NOT matching to input
+          const randomPatterns = selectRandomPatterns(bank, 3);
 
-          if (topMatches.length === 0) {
+          if (randomPatterns.length === 0) {
             return {
               aiSentence: sentence,
               matchedPatterns: [],
@@ -806,28 +812,28 @@ export async function humanizeText(
             };
           }
 
-          const bestMatch = topMatches[0];
-          const humanizedRewrite = await rewriteWithPattern(sentence, bestMatch.entry);
+          const selectedPattern = randomPatterns[0];
+          const humanizedRewrite = await rewriteWithPattern(sentence, selectedPattern);
 
           return {
             aiSentence: sentence,
-            matchedPatterns: topMatches.map((m, idx) => ({
-              original: m.entry.original,
-              bleached: m.entry.bleached,
-              score: Math.round(m.score * 100) / 100,
+            matchedPatterns: randomPatterns.map((p, idx) => ({
+              original: p.original,
+              bleached: p.bleached,
+              score: 0, // No similarity score since it's random selection
               rank: idx + 1,
             })),
             humanizedRewrite,
             bestPattern: {
-              original: bestMatch.entry.original,
-              bleached: bestMatch.entry.bleached,
-              score: Math.round(bestMatch.score * 100) / 100,
+              original: selectedPattern.original,
+              bleached: selectedPattern.bleached,
+              score: 0, // Random selection, no similarity score
             },
           };
         } catch (error) {
           console.error(`Error processing sentence: ${sentence.substring(0, 50)}...`, error);
           if (bank.length > 0) {
-            const fallbackPattern = bank[0];
+            const fallbackPattern = bank[Math.floor(Math.random() * bank.length)];
             return {
               aiSentence: sentence,
               matchedPatterns: [{
