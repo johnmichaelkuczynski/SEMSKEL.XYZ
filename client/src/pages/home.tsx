@@ -1076,6 +1076,51 @@ export default function Home() {
     });
   };
 
+  const handleDownloadHumanizedFullReport = () => {
+    if (!humanizeResults) return;
+    
+    const timestamp = new Date().toLocaleString();
+    let report = `=== HUMANIZATION FULL REPORT ===\n`;
+    report += `Generated: ${timestamp}\n`;
+    report += `Total Sentences: ${humanizeResults.length}\n`;
+    report += `\n${"=".repeat(60)}\n\n`;
+    
+    humanizeResults.forEach((result, index) => {
+      report += `--- SENTENCE ${index + 1} ---\n\n`;
+      report += `ORIGINAL AI SENTENCE:\n${result.aiSentence}\n\n`;
+      report += `MATCHED PATTERNS (Top ${result.matchedPatterns.length}):\n`;
+      
+      result.matchedPatterns.forEach((pattern, pIndex) => {
+        report += `\n  [${pIndex + 1}] Score: ${pattern.score.toFixed(2)}\n`;
+        report += `      Original: ${pattern.original}\n`;
+        report += `      Bleached: ${pattern.bleached}\n`;
+      });
+      
+      report += `\nBEST MATCH (Score: ${result.bestPattern.score.toFixed(2)}):\n`;
+      report += `  Original: ${result.bestPattern.original}\n`;
+      report += `  Bleached: ${result.bestPattern.bleached}\n`;
+      
+      report += `\nFINAL HUMANIZED REWRITE:\n${result.humanizedRewrite}\n`;
+      report += `\n${"=".repeat(60)}\n\n`;
+    });
+    
+    const filename = `humanization_full_report_${Date.now()}.txt`;
+    const blob = new Blob([report], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Full report download started",
+      description: `Downloading ${filename}`,
+    });
+  };
+
   // Style Transfer file handlers
   const onDropStyleTarget = useCallback((acceptedFiles: File[]) => {
     const file = acceptedFiles[0];
@@ -1204,6 +1249,48 @@ export default function Home() {
     
     toast({
       title: "Download started",
+      description: `Downloading ${filename}`,
+    });
+  };
+
+  const handleDownloadStyleRewriteFullReport = () => {
+    if (!styleRewriteResults) return;
+    
+    const timestamp = new Date().toLocaleString();
+    let report = `=== STYLE TRANSFER FULL REPORT ===\n`;
+    report += `Generated: ${timestamp}\n`;
+    report += `Total Sentences: ${styleRewriteResults.length}\n`;
+    report += `\n${"=".repeat(60)}\n\n`;
+    
+    styleRewriteResults.forEach((result, index) => {
+      report += `--- SENTENCE ${index + 1} ---\n\n`;
+      report += `ORIGINAL SENTENCE:\n${result.original}\n\n`;
+      
+      if (result.matchedPattern) {
+        report += `MATCHED PATTERN (Score: ${result.matchedPattern.score.toFixed(2)}):\n`;
+        report += `  Original: ${result.matchedPattern.original}\n`;
+        report += `  Bleached: ${result.matchedPattern.bleached}\n`;
+      } else {
+        report += `MATCHED PATTERN: None found\n`;
+      }
+      
+      report += `\nFINAL REWRITE:\n${result.rewrite}\n`;
+      report += `\n${"=".repeat(60)}\n\n`;
+    });
+    
+    const filename = `style_transfer_full_report_${Date.now()}.txt`;
+    const blob = new Blob([report], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+    
+    toast({
+      title: "Full report download started",
       description: `Downloading ${filename}`,
     });
   };
@@ -3050,6 +3137,15 @@ export default function Home() {
                         <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
                         Download
                       </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={handleDownloadHumanizedFullReport}
+                        data-testid="button-download-humanized-full-report"
+                      >
+                        <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                        Full Report
+                      </Button>
                     </div>
                   </div>
                   
@@ -3331,6 +3427,15 @@ export default function Home() {
                       data-testid="button-download-style-rewrite"
                     >
                       <ArrowDownTrayIcon className="w-4 h-4" />
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={handleDownloadStyleRewriteFullReport}
+                      data-testid="button-download-style-full-report"
+                    >
+                      <ArrowDownTrayIcon className="w-4 h-4 mr-1" />
+                      Full Report
                     </Button>
                   </div>
                 )}
